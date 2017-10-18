@@ -1,6 +1,7 @@
 
 const version = process.argv[2] || require('../package.json').target
 const fs = require('fs')
+const path = require('path')
 const cheerio = require('cheerio')
 const raml = fs.readFileSync(`src/${version}/main.raml`).toString()
 const html = fs.readFileSync(`src/${version}/main.html`, 'utf8') // beautify main.html before reading, single line too long
@@ -22,11 +23,13 @@ raml.split('\n')
 
         const schema = $(`#${id}`).find('code').html()
 
-        fs.writeFile(fileName, schema, 'utf8', (err) => {
+        const location = path.join(['../dist/', fileName])
+
+        fs.writeFile(location, schema, 'utf8', (err) => {
             if (err) {
                 throw new Error(err)
             } else {
-                console.log(`Description file is generated: ${outputLocation}`)
+                console.log(`Description file is generated: ${location}`)
             }
         })
     }, raml)
