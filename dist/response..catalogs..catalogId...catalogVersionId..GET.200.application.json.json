@@ -1,0 +1,65 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "CatalogVersionWsDTO",
+  "type": "object",
+  "properties":
+  {
+    "categories":
+    {
+      "type": "array",
+      "items":
+      {
+        "$ref": "#/definitions/CategoryHierarchyWsDTO"
+      }
+    },
+    "id":
+    {
+      "type": "string"
+    },
+    "lastModified":
+    {
+      "type": "string"
+    },
+    "name":
+    {
+      "type": "string"
+    },
+    "url":
+    {
+      "type": "string"
+    }
+  },
+  "definitions":
+  {
+    "CategoryHierarchyWsDTO":
+    {
+      "properties":
+      {
+        "subcategories":
+        {
+          "type": "array",
+          "items":
+          {
+            "$ref": "#/definitions/CategoryHierarchyWsDTO"
+          }
+        },
+        "id":
+        {
+          "type": "string"
+        },
+        "lastModified":
+        {
+          "type": "string"
+        },
+        "name":
+        {
+          "type": "string"
+        },
+        "url":
+        {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

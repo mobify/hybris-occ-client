@@ -23,7 +23,7 @@ raml.split('\n')
 
         const schema = $(`#${id}`).find('code').html()
 
-        const location = path.join(['../dist/', fileName])
+        const location = path.join('dist/', fileName)
 
         fs.writeFile(location, schema, 'utf8', (err) => {
             if (err) {

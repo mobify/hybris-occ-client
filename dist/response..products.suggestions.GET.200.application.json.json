@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "SuggestionListWsDTO",
+  "type": "object",
+  "properties":
+  {
+    "suggestions":
+    {
+      "type": "array",
+      "items":
+      {
+        "$ref": "#/definitions/SuggestionWsDTO"
+      }
+    }
+  },
+  "definitions":
+  {
+    "SuggestionWsDTO":
+    {
+      "properties":
+      {
+        "value":
+        {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

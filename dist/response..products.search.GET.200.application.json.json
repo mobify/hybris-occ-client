@@ -1,0 +1,1111 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "ProductSearchPageWsDTO",
+  "type": "object",
+  "description": "POJO containing the result page for product search.",
+  "properties":
+  {
+    "freeTextSearch":
+    {
+      "type": "string"
+    },
+    "categoryCode":
+    {
+      "type": "string"
+    },
+    "keywordRedirectUrl":
+    {
+      "type": "string"
+    },
+    "spellingSuggestion":
+    {
+      "$ref": "#/definitions/SpellingSuggestionWsDTO"
+    },
+    "products":
+    {
+      "type": "array",
+      "items":
+      {
+        "$ref": "#/definitions/ProductWsDTO"
+      }
+    },
+    "sorts":
+    {
+      "type": "array",
+      "items":
+      {
+        "$ref": "#/definitions/SortWsDTO"
+      }
+    },
+    "pagination":
+    {
+      "$ref": "#/definitions/PaginationWsDTO"
+    },
+    "currentQuery":
+    {
+      "$ref": "#/definitions/SearchStateWsDTO"
+    },
+    "breadcrumbs":
+    {
+      "type": "array",
+      "items":
+      {
+        "$ref": "#/definitions/BreadcrumbWsDTO"
+      }
+    },
+    "facets":
+    {
+      "type": "array",
+      "items":
+      {
+        "$ref": "#/definitions/FacetWsDTO"
+      }
+    }
+  },
+  "definitions":
+  {
+    "SpellingSuggestionWsDTO":
+    {
+      "properties":
+      {
+        "suggestion":
+        {
+          "type": "string"
+        },
+        "query":
+        {
+          "type": "string"
+        }
+      }
+    },
+    "ProductWsDTO":
+    {
+      "properties":
+      {
+        "code":
+        {
+          "type": "string"
+        },
+        "name":
+        {
+          "type": "string"
+        },
+        "url":
+        {
+          "type": "string"
+        },
+        "description":
+        {
+          "type": "string"
+        },
+        "purchasable":
+        {
+          "type": "boolean"
+        },
+        "stock":
+        {
+          "$ref": "#/definitions/StockWsDTO"
+        },
+        "futureStocks":
+        {
+          "type": "array",
+          "items":
+          {
+            "$ref": "#/definitions/FutureStockWsDTO"
+          }
+        },
+        "availableForPickup":
+        {
+          "type": "boolean"
+        },
+        "averageRating":
+        {
+          "type": "number"
+        },
+        "numberOfReviews":
+        {
+          "type": "number"
+        },
+        "summary":
+        {
+          "type": "string"
+        },
+        "manufacturer":
+        {
+          "type": "string"
+        },
+        "variantType":
+        {
+          "type": "string"
+        },
+        "price":
+        {
+          "$ref": "#/definitions/PriceWsDTO"
+        },
+        "baseProduct":
+        {
+          "type": "string"
+        },
+        "images":
+        {
+          "type": "array",
+          "items":
+          {
+            "$ref": "#/definitions/ImageWsDTO"
+          }
+        },
+        "categories":
+        {
+          "type": "array",
+          "items":
+          {
+            "$ref": "#/definitions/CategoryWsDTO"
+          }
+        },
+        "reviews":
+        {
+          "type": "array",
+          "items":
+          {
+            "$ref": "#/definitions/ReviewWsDTO"
+          }
+        },
+        "classifications":
+        {
+          "type": "array",
+          "items":
+          {
+            "$ref": "#/definitions/ClassificationWsDTO"
+          }
+        },
+        "potentialPromotions":
+        {
+          "type": "array",
+          "items":
+          {
+            "$ref": "#/definitions/PromotionWsDTO"
+          }
+        },
+        "variantOptions":
+        {
+          "type": "array",
+          "items":
+          {
+            "$ref": "#/definitions/VariantOptionWsDTO"
+          }
+        },
+        "baseOptions":
+        {
+          "type": "array",
+          "items":
+          {
+            "$ref": "#/definitions/BaseOptionWsDTO"
+          }
+        },
+        "volumePricesFlag":
+        {
+          "type": "boolean"
+        },
+        "volumePrices":
+        {
+          "type": "array",
+          "items":
+          {
+            "$ref": "#/definitions/PriceWsDTO"
+          }
+        },
+        "productReferences":
+        {
+          "type": "array",
+          "items":
+          {
+            "$ref": "#/definitions/ProductReferenceWsDTO"
+          }
+        },
+        "variantMatrix":
+        {
+          "type": "array",
+          "items":
+          {
+            "$ref": "#/definitions/VariantMatrixElementWsDTO"
+          }
+        },
+        "priceRange":
+        {
+          "$ref": "#/definitions/PriceRangeWsDTO"
+        },
+        "multidimensional":
+        {
+          "type": "boolean"
+        }
+      }
+    },
+    "SortWsDTO":
+    {
+      "properties":
+      {
+        "code":
+        {
+          "type": "string"
+        },
+        "name":
+        {
+          "type": "string"
+        },
+        "selected":
+        {
+          "type": "boolean"
+        }
+      }
+    },
+    "PaginationWsDTO":
+    {
+      "properties":
+      {
+        "totalPages":
+        {
+          "description": "The total number of pages. This is the number of pages, each of pageSize, required to display the totalResults.",
+          "type": "number"
+        },
+        "totalResults":
+        {
+          "description": "The total number of matched results across all pages.",
+          "type": "number"
+        },
+        "pageSize":
+        {
+          "description": "The number of results per page. A page may have less results if there are less than a full page of results, only on the last page in the results.",
+          "type": "number"
+        },
+        "currentPage":
+        {
+          "description": "The current page number. The first page is number zero (0), the second page is number one (1), and so on.",
+          "type": "number"
+        },
+        "sort":
+        {
+          "description": "The selected sort code.",
+          "type": "string"
+        }
+      }
+    },
+    "SearchStateWsDTO":
+    {
+      "properties":
+      {
+        "url":
+        {
+          "type": "string"
+        },
+        "query":
+        {
+          "$ref": "#/definitions/SearchQueryWsDTO"
+        }
+      }
+    },
+    "BreadcrumbWsDTO":
+    {
+      "properties":
+      {
+        "facetCode":
+        {
+          "type": "string"
+        },
+        "facetName":
+        {
+          "type": "string"
+        },
+        "facetValueCode":
+        {
+          "type": "string"
+        },
+        "facetValueName":
+        {
+          "type": "string"
+        },
+        "removeQuery":
+        {
+          "$ref": "#/definitions/SearchStateWsDTO"
+        },
+        "truncateQuery":
+        {
+          "$ref": "#/definitions/SearchStateWsDTO"
+        }
+      }
+    },
+    "FacetWsDTO":
+    {
+      "properties":
+      {
+        "name":
+        {
+          "type": "string"
+        },
+        "priority":
+        {
+          "type": "number"
+        },
+        "category":
+        {
+          "type": "boolean"
+        },
+        "multiSelect":
+        {
+          "type": "boolean"
+        },
+        "visible":
+        {
+          "type": "boolean"
+        },
+        "topValues":
+        {
+          "type": "array",
+          "items":
+          {
+            "$ref": "#/definitions/FacetValueWsDTO"
+          }
+        },
+        "values":
+        {
+          "type": "array",
+          "items":
+          {
+            "$ref": "#/definitions/FacetValueWsDTO"
+          }
+        }
+      }
+    },
+    "StockWsDTO":
+    {
+      "properties":
+      {
+        "stockLevelStatus":
+        {
+          "type": "string"
+        },
+        "stockLevel":
+        {
+          "type": "number"
+        }
+      }
+    },
+    "FutureStockWsDTO":
+    {
+      "properties":
+      {
+        "stock":
+        {
+          "$ref": "#/definitions/StockWsDTO"
+        },
+        "date":
+        {
+          "type": "string"
+        },
+        "formattedDate":
+        {
+          "type": "string"
+        }
+      }
+    },
+    "PriceWsDTO":
+    {
+      "properties":
+      {
+        "currencyIso":
+        {
+          "type": "string"
+        },
+        "value":
+        {
+          "type": "number"
+        },
+        "priceType":
+        {
+          "type": "string"
+        },
+        "formattedValue":
+        {
+          "type": "string"
+        },
+        "minQuantity":
+        {
+          "type": "number"
+        },
+        "maxQuantity":
+        {
+          "type": "number"
+        }
+      }
+    },
+    "ImageWsDTO":
+    {
+      "properties":
+      {
+        "imageType":
+        {
+          "type": "string"
+        },
+        "format":
+        {
+          "type": "string"
+        },
+        "url":
+        {
+          "type": "string"
+        },
+        "altText":
+        {
+          "type": "string"
+        },
+        "galleryIndex":
+        {
+          "type": "number"
+        }
+      }
+    },
+    "CategoryWsDTO":
+    {
+      "properties":
+      {
+        "code":
+        {
+          "type": "string"
+        },
+        "url":
+        {
+          "type": "string"
+        },
+        "image":
+        {
+          "$ref": "#/definitions/ImageWsDTO"
+        }
+      }
+    },
+    "ReviewWsDTO":
+    {
+      "properties":
+      {
+        "id":
+        {
+          "type": "string"
+        },
+        "headline":
+        {
+          "type": "string"
+        },
+        "comment":
+        {
+          "type": "string"
+        },
+        "rating":
+        {
+          "type": "number"
+        },
+        "date":
+        {
+          "type": "string"
+        },
+        "alias":
+        {
+          "type": "string"
+        },
+        "principal":
+        {
+          "$ref": "#/definitions/UserWsDTO"
+        }
+      }
+    },
+    "ClassificationWsDTO":
+    {
+      "properties":
+      {
+        "code":
+        {
+          "type": "string"
+        },
+        "name":
+        {
+          "type": "string"
+        },
+        "features":
+        {
+          "type": "array",
+          "items":
+          {
+            "$ref": "#/definitions/FeatureWsDTO"
+          }
+        }
+      }
+    },
+    "PromotionWsDTO":
+    {
+      "properties":
+      {
+        "code":
+        {
+          "type": "string"
+        },
+        "title":
+        {
+          "type": "string"
+        },
+        "promotionType":
+        {
+          "type": "string"
+        },
+        "startDate":
+        {
+          "type": "string"
+        },
+        "endDate":
+        {
+          "type": "string"
+        },
+        "description":
+        {
+          "type": "string"
+        },
+        "couldFireMessages":
+        {
+          "type": "array",
+          "items":
+          {
+            "type": "string"
+          }
+        },
+        "firedMessages":
+        {
+          "type": "array",
+          "items":
+          {
+            "type": "string"
+          }
+        },
+        "productBanner":
+        {
+          "$ref": "#/definitions/ImageWsDTO"
+        },
+        "enabled":
+        {
+          "type": "boolean"
+        },
+        "priority":
+        {
+          "type": "number"
+        },
+        "promotionGroup":
+        {
+          "type": "string"
+        },
+        "restrictions":
+        {
+          "type": "array",
+          "items":
+          {
+            "$ref": "#/definitions/PromotionRestrictionWsDTO"
+          }
+        }
+      }
+    },
+    "VariantOptionWsDTO":
+    {
+      "properties":
+      {
+        "code":
+        {
+          "type": "string"
+        },
+        "stock":
+        {
+          "$ref": "#/definitions/StockWsDTO"
+        },
+        "url":
+        {
+          "type": "string"
+        },
+        "priceData":
+        {
+          "$ref": "#/definitions/PriceWsDTO"
+        },
+        "variantOptionQualifiers":
+        {
+          "type": "array",
+          "items":
+          {
+            "$ref": "#/definitions/VariantOptionQualifierWsDTO"
+          }
+        }
+      }
+    },
+    "BaseOptionWsDTO":
+    {
+      "properties":
+      {
+        "variantType":
+        {
+          "type": "string"
+        },
+        "options":
+        {
+          "type": "array",
+          "items":
+          {
+            "$ref": "#/definitions/VariantOptionWsDTO"
+          }
+        },
+        "selected":
+        {
+          "$ref": "#/definitions/VariantOptionWsDTO"
+        }
+      }
+    },
+    "ProductReferenceWsDTO":
+    {
+      "properties":
+      {
+        "preselected":
+        {
+          "type": "boolean"
+        },
+        "referenceType":
+        {
+          "type": "string"
+        },
+        "description":
+        {
+          "type": "string"
+        },
+        "quantity":
+        {
+          "type": "number"
+        },
+        "target":
+        {
+          "$ref": "#/definitions/ProductWsDTO"
+        }
+      }
+    },
+    "VariantMatrixElementWsDTO":
+    {
+      "properties":
+      {
+        "variantValueCategory":
+        {
+          "$ref": "#/definitions/VariantValueCategoryWsDTO"
+        },
+        "parentVariantCategory":
+        {
+          "$ref": "#/definitions/VariantCategoryWsDTO"
+        },
+        "variantOption":
+        {
+          "$ref": "#/definitions/VariantOptionWsDTO"
+        },
+        "elements":
+        {
+          "type": "array",
+          "items":
+          {
+            "$ref": "#/definitions/VariantMatrixElementWsDTO"
+          }
+        },
+        "isLeaf":
+        {
+          "type": "boolean"
+        }
+      }
+    },
+    "PriceRangeWsDTO":
+    {
+      "properties":
+      {
+        "maxPrice":
+        {
+          "$ref": "#/definitions/PriceWsDTO"
+        },
+        "minPrice":
+        {
+          "$ref": "#/definitions/PriceWsDTO"
+        }
+      }
+    },
+    "SearchQueryWsDTO":
+    {
+      "properties":
+      {
+        "value":
+        {
+          "type": "string"
+        }
+      }
+    },
+    "FacetValueWsDTO":
+    {
+      "properties":
+      {
+        "name":
+        {
+          "type": "string"
+        },
+        "count":
+        {
+          "type": "number"
+        },
+        "query":
+        {
+          "$ref": "#/definitions/SearchStateWsDTO"
+        },
+        "selected":
+        {
+          "type": "boolean"
+        }
+      }
+    },
+    "UserWsDTO":
+    {
+      "properties":
+      {
+        "defaultAddress":
+        {
+          "$ref": "#/definitions/AddressWsDTO"
+        },
+        "titleCode":
+        {
+          "type": "string"
+        },
+        "title":
+        {
+          "type": "string"
+        },
+        "firstName":
+        {
+          "type": "string"
+        },
+        "lastName":
+        {
+          "type": "string"
+        },
+        "currency":
+        {
+          "$ref": "#/definitions/CurrencyWsDTO"
+        },
+        "language":
+        {
+          "$ref": "#/definitions/LanguageWsDTO"
+        },
+        "displayUid":
+        {
+          "type": "string"
+        },
+        "uid":
+        {
+          "type": "string"
+        },
+        "name":
+        {
+          "type": "string"
+        }
+      }
+    },
+    "FeatureWsDTO":
+    {
+      "properties":
+      {
+        "code":
+        {
+          "type": "string"
+        },
+        "name":
+        {
+          "type": "string"
+        },
+        "description":
+        {
+          "type": "string"
+        },
+        "type":
+        {
+          "type": "string"
+        },
+        "range":
+        {
+          "type": "boolean"
+        },
+        "comparable":
+        {
+          "type": "boolean"
+        },
+        "featureUnit":
+        {
+          "$ref": "#/definitions/FeatureUnitWsDTO"
+        },
+        "featureValues":
+        {
+          "type": "array",
+          "items":
+          {
+            "$ref": "#/definitions/FeatureValueWsDTO"
+          }
+        }
+      }
+    },
+    "PromotionRestrictionWsDTO":
+    {
+      "properties":
+      {
+        "restrictionType":
+        {
+          "type": "string"
+        },
+        "description":
+        {
+          "type": "string"
+        }
+      }
+    },
+    "VariantOptionQualifierWsDTO":
+    {
+      "properties":
+      {
+        "qualifier":
+        {
+          "type": "string"
+        },
+        "name":
+        {
+          "type": "string"
+        },
+        "value":
+        {
+          "type": "string"
+        },
+        "image":
+        {
+          "$ref": "#/definitions/ImageWsDTO"
+        }
+      }
+    },
+    "VariantValueCategoryWsDTO":
+    {
+      "properties":
+      {
+        "name":
+        {
+          "type": "string"
+        },
+        "sequence":
+        {
+          "type": "number"
+        },
+        "superCategories":
+        {
+          "type": "array",
+          "items":
+          {
+            "$ref": "#/definitions/VariantCategoryWsDTO"
+          }
+        }
+      }
+    },
+    "VariantCategoryWsDTO":
+    {
+      "properties":
+      {
+        "name":
+        {
+          "type": "string"
+        },
+        "hasImage":
+        {
+          "type": "boolean"
+        },
+        "priority":
+        {
+          "type": "number"
+        }
+      }
+    },
+    "AddressWsDTO":
+    {
+      "properties":
+      {
+        "id":
+        {
+          "type": "string"
+        },
+        "title":
+        {
+          "type": "string"
+        },
+        "titleCode":
+        {
+          "type": "string"
+        },
+        "firstName":
+        {
+          "type": "string"
+        },
+        "lastName":
+        {
+          "type": "string"
+        },
+        "companyName":
+        {
+          "type": "string"
+        },
+        "line1":
+        {
+          "type": "string"
+        },
+        "line2":
+        {
+          "type": "string"
+        },
+        "town":
+        {
+          "type": "string"
+        },
+        "region":
+        {
+          "$ref": "#/definitions/RegionWsDTO"
+        },
+        "postalCode":
+        {
+          "type": "string"
+        },
+        "phone":
+        {
+          "type": "string"
+        },
+        "email":
+        {
+          "type": "string"
+        },
+        "country":
+        {
+          "$ref": "#/definitions/CountryWsDTO"
+        },
+        "shippingAddress":
+        {
+          "type": "boolean"
+        },
+        "visibleInAddressBook":
+        {
+          "type": "boolean"
+        },
+        "formattedAddress":
+        {
+          "type": "string"
+        }
+      }
+    },
+    "CurrencyWsDTO":
+    {
+      "properties":
+      {
+        "isocode":
+        {
+          "type": "string"
+        },
+        "name":
+        {
+          "type": "string"
+        },
+        "active":
+        {
+          "type": "boolean"
+        },
+        "symbol":
+        {
+          "type": "string"
+        }
+      }
+    },
+    "LanguageWsDTO":
+    {
+      "properties":
+      {
+        "isocode":
+        {
+          "type": "string"
+        },
+        "name":
+        {
+          "type": "string"
+        },
+        "nativeName":
+        {
+          "type": "string"
+        },
+        "active":
+        {
+          "type": "boolean"
+        }
+      }
+    },
+    "FeatureUnitWsDTO":
+    {
+      "properties":
+      {
+        "symbol":
+        {
+          "type": "string"
+        },
+        "name":
+        {
+          "type": "string"
+        },
+        "unitType":
+        {
+          "type": "string"
+        }
+      }
+    },
+    "FeatureValueWsDTO":
+    {
+      "properties":
+      {
+        "value":
+        {
+          "type": "string"
+        }
+      }
+    },
+    "RegionWsDTO":
+    {
+      "properties":
+      {
+        "isocode":
+        {
+          "type": "string"
+        },
+        "isocodeShort":
+        {
+          "type": "string"
+        },
+        "countryIso":
+        {
+          "type": "string"
+        },
+        "name":
+        {
+          "type": "string"
+        }
+      }
+    },
+    "CountryWsDTO":
+    {
+      "properties":
+      {
+        "isocode":
+        {
+          "type": "string"
+        },
+        "name":
+        {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

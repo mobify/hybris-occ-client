@@ -1,0 +1,71 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "DeliveryModeListWsDTO",
+  "type": "object",
+  "properties":
+  {
+    "deliveryModes":
+    {
+      "type": "array",
+      "items":
+      {
+        "$ref": "#/definitions/DeliveryModeWsDTO"
+      }
+    }
+  },
+  "definitions":
+  {
+    "DeliveryModeWsDTO":
+    {
+      "properties":
+      {
+        "code":
+        {
+          "type": "string"
+        },
+        "name":
+        {
+          "type": "string"
+        },
+        "description":
+        {
+          "type": "string"
+        },
+        "deliveryCost":
+        {
+          "$ref": "#/definitions/PriceWsDTO"
+        }
+      }
+    },
+    "PriceWsDTO":
+    {
+      "properties":
+      {
+        "currencyIso":
+        {
+          "type": "string"
+        },
+        "value":
+        {
+          "type": "number"
+        },
+        "priceType":
+        {
+          "type": "string"
+        },
+        "formattedValue":
+        {
+          "type": "string"
+        },
+        "minQuantity":
+        {
+          "type": "number"
+        },
+        "maxQuantity":
+        {
+          "type": "number"
+        }
+      }
+    }
+  }
+}

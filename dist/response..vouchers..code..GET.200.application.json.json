@@ -1,0 +1,103 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "VoucherWsDTO",
+  "type": "object",
+  "properties":
+  {
+    "code":
+    {
+      "type": "string"
+    },
+    "voucherCode":
+    {
+      "type": "string"
+    },
+    "name":
+    {
+      "type": "string"
+    },
+    "description":
+    {
+      "type": "string"
+    },
+    "value":
+    {
+      "type": "number"
+    },
+    "valueFormatted":
+    {
+      "type": "string"
+    },
+    "valueString":
+    {
+      "type": "string"
+    },
+    "freeShipping":
+    {
+      "type": "boolean"
+    },
+    "currency":
+    {
+      "$ref": "#/definitions/CurrencyWsDTO"
+    },
+    "appliedValue":
+    {
+      "$ref": "#/definitions/PriceWsDTO"
+    }
+  },
+  "definitions":
+  {
+    "CurrencyWsDTO":
+    {
+      "properties":
+      {
+        "isocode":
+        {
+          "type": "string"
+        },
+        "name":
+        {
+          "type": "string"
+        },
+        "active":
+        {
+          "type": "boolean"
+        },
+        "symbol":
+        {
+          "type": "string"
+        }
+      }
+    },
+    "PriceWsDTO":
+    {
+      "properties":
+      {
+        "currencyIso":
+        {
+          "type": "string"
+        },
+        "value":
+        {
+          "type": "number"
+        },
+        "priceType":
+        {
+          "type": "string"
+        },
+        "formattedValue":
+        {
+          "type": "string"
+        },
+        "minQuantity":
+        {
+          "type": "number"
+        },
+        "maxQuantity":
+        {
+          "type": "number"
+        }
+      }
+    }
+  }
+}
