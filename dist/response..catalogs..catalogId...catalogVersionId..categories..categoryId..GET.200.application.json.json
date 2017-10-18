@@ -9,7 +9,7 @@
       "type": "array",
       "items":
       {
-        "$ref": "#/definitions/CategoryHierarchyWsDTO"
+        "$ref": "#"
       }
     },
     "id":

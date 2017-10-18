@@ -21,8 +21,16 @@ raml.split('\n')
             .replace(/\./g, '_')
             .replace(method, method.toLowerCase())
 
-        const schema = $(`#${id}`).find('code').html()
+        let schema = $(`#${id}`).find('code')
+            .html()
+            
+        const title = JSON.parse(schema).title
 
+        // Fix a bug from source file provided by Hybris
+        // if a property of the schema is refering to itself
+        // change ref to '#'
+        schema = schema.replace(`#/definitions/${title}`, '#')
+        
         const location = path.join('dist/', fileName)
 
         fs.writeFile(location, schema, 'utf8', (err) => {

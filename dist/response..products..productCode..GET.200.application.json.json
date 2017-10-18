@@ -469,7 +469,7 @@
         },
         "target":
         {
-          "$ref": "#/definitions/ProductWsDTO"
+          "$ref": "#"
         }
       }
     },
