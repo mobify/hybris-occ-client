@@ -1,0 +1,42 @@
+# Occ.OrderWsDTOModel
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**created** | **String** |  | [optional] 
+**status** | **String** |  | [optional] 
+**statusDisplay** | **String** |  | [optional] 
+**guestCustomer** | **Boolean** |  | [optional] 
+**consignments** | [**[ConsignmentWsDTOModel]**](ConsignmentWsDTOModel.md) |  | [optional] 
+**deliveryStatus** | **String** |  | [optional] 
+**deliveryStatusDisplay** | **String** |  | [optional] 
+**unconsignedEntries** | [**[OrderEntryWsDTOModel]**](OrderEntryWsDTOModel.md) |  | [optional] 
+**code** | **String** |  | [optional] 
+**net** | **Boolean** |  | [optional] 
+**totalPriceWithTax** | [**PriceWsDTOModel**](PriceWsDTOModel.md) |  | [optional] 
+**totalPrice** | [**PriceWsDTOModel**](PriceWsDTOModel.md) |  | [optional] 
+**totalTax** | [**PriceWsDTOModel**](PriceWsDTOModel.md) |  | [optional] 
+**subTotal** | [**PriceWsDTOModel**](PriceWsDTOModel.md) |  | [optional] 
+**deliveryCost** | [**PriceWsDTOModel**](PriceWsDTOModel.md) |  | [optional] 
+**entries** | [**[OrderEntryWsDTOModel]**](OrderEntryWsDTOModel.md) |  | [optional] 
+**totalItems** | **Number** |  | [optional] 
+**deliveryMode** | [**DeliveryModeWsDTOModel**](DeliveryModeWsDTOModel.md) |  | [optional] 
+**deliveryAddress** | [**AddressWsDTOModel**](AddressWsDTOModel.md) |  | [optional] 
+**paymentInfo** | [**PaymentDetailsWsDTOModel**](PaymentDetailsWsDTOModel.md) |  | [optional] 
+**appliedOrderPromotions** | [**[PromotionResultWsDTOModel]**](PromotionResultWsDTOModel.md) |  | [optional] 
+**appliedProductPromotions** | [**[PromotionResultWsDTOModel]**](PromotionResultWsDTOModel.md) |  | [optional] 
+**productDiscounts** | [**PriceWsDTOModel**](PriceWsDTOModel.md) |  | [optional] 
+**orderDiscounts** | [**PriceWsDTOModel**](PriceWsDTOModel.md) |  | [optional] 
+**totalDiscounts** | [**PriceWsDTOModel**](PriceWsDTOModel.md) |  | [optional] 
+**site** | **String** |  | [optional] 
+**store** | **String** |  | [optional] 
+**guid** | **String** |  | [optional] 
+**calculated** | **Boolean** |  | [optional] 
+**appliedVouchers** | [**[VoucherWsDTOModel]**](VoucherWsDTOModel.md) |  | [optional] 
+**user** | [**PrincipalWsDTOModel**](PrincipalWsDTOModel.md) |  | [optional] 
+**pickupOrderGroups** | [**[PickupOrderEntryGroupWsDTOModel]**](PickupOrderEntryGroupWsDTOModel.md) |  | [optional] 
+**deliveryOrderGroups** | [**[DeliveryOrderEntryGroupWsDTOModel]**](DeliveryOrderEntryGroupWsDTOModel.md) |  | [optional] 
+**pickupItemsQuantity** | **Number** |  | [optional] 
+**deliveryItemsQuantity** | **Number** |  | [optional] 
+
+
