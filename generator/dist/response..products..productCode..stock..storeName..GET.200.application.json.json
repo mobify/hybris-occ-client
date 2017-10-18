@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "StockWsDTO",
+  "type": "object",
+  "properties":
+  {
+    "stockLevelStatus":
+    {
+      "type": "string"
+    },
+    "stockLevel":
+    {
+      "type": "number"
+    }
+  },
+  "definitions":
+  {
+  
+  }
+}

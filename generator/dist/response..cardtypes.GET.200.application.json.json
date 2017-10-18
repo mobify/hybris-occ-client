@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "CardTypeListWsDTO",
+  "type": "object",
+  "properties":
+  {
+    "cardTypes":
+    {
+      "type": "array",
+      "items":
+      {
+        "$ref": "#/definitions/CardTypeWsDTO"
+      }
+    }
+  },
+  "definitions":
+  {
+    "CardTypeWsDTO":
+    {
+      "properties":
+      {
+        "code":
+        {
+          "type": "string"
+        },
+        "name":
+        {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

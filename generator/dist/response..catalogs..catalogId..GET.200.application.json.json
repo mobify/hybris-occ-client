@@ -1,0 +1,95 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "CatalogWsDTO",
+  "type": "object",
+  "properties":
+  {
+    "catalogVersions":
+    {
+      "type": "array",
+      "items":
+      {
+        "$ref": "#/definitions/CatalogVersionWsDTO"
+      }
+    },
+    "id":
+    {
+      "type": "string"
+    },
+    "lastModified":
+    {
+      "type": "string"
+    },
+    "name":
+    {
+      "type": "string"
+    },
+    "url":
+    {
+      "type": "string"
+    }
+  },
+  "definitions":
+  {
+    "CatalogVersionWsDTO":
+    {
+      "properties":
+      {
+        "categories":
+        {
+          "type": "array",
+          "items":
+          {
+            "$ref": "#/definitions/CategoryHierarchyWsDTO"
+          }
+        },
+        "id":
+        {
+          "type": "string"
+        },
+        "lastModified":
+        {
+          "type": "string"
+        },
+        "name":
+        {
+          "type": "string"
+        },
+        "url":
+        {
+          "type": "string"
+        }
+      }
+    },
+    "CategoryHierarchyWsDTO":
+    {
+      "properties":
+      {
+        "subcategories":
+        {
+          "type": "array",
+          "items":
+          {
+            "$ref": "#/definitions/CategoryHierarchyWsDTO"
+          }
+        },
+        "id":
+        {
+          "type": "string"
+        },
+        "lastModified":
+        {
+          "type": "string"
+        },
+        "name":
+        {
+          "type": "string"
+        },
+        "url":
+        {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

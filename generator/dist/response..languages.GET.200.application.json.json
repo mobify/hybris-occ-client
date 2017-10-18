@@ -1,0 +1,41 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "LanguageListWsDTO",
+  "type": "object",
+  "properties":
+  {
+    "languages":
+    {
+      "type": "array",
+      "items":
+      {
+        "$ref": "#/definitions/LanguageWsDTO"
+      }
+    }
+  },
+  "definitions":
+  {
+    "LanguageWsDTO":
+    {
+      "properties":
+      {
+        "isocode":
+        {
+          "type": "string"
+        },
+        "name":
+        {
+          "type": "string"
+        },
+        "nativeName":
+        {
+          "type": "string"
+        },
+        "active":
+        {
+          "type": "boolean"
+        }
+      }
+    }
+  }
+}

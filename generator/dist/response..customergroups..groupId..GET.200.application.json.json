@@ -1,0 +1,53 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "UserGroupWsDTO",
+  "type": "object",
+  "properties":
+  {
+    "members":
+    {
+      "type": "array",
+      "items":
+      {
+        "$ref": "#/definitions/PrincipalWsDTO"
+      }
+    },
+    "subGroups":
+    {
+      "type": "array",
+      "items":
+      {
+        "$ref": "#"
+      }
+    },
+    "membersCount":
+    {
+      "type": "number"
+    },
+    "uid":
+    {
+      "type": "string"
+    },
+    "name":
+    {
+      "type": "string"
+    }
+  },
+  "definitions":
+  {
+    "PrincipalWsDTO":
+    {
+      "properties":
+      {
+        "uid":
+        {
+          "type": "string"
+        },
+        "name":
+        {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

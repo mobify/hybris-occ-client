@@ -1,0 +1,201 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "PaymentDetailsListWsDTO",
+  "type": "object",
+  "properties":
+  {
+    "payments":
+    {
+      "type": "array",
+      "items":
+      {
+        "$ref": "#/definitions/PaymentDetailsWsDTO"
+      }
+    }
+  },
+  "definitions":
+  {
+    "PaymentDetailsWsDTO":
+    {
+      "properties":
+      {
+        "id":
+        {
+          "type": "string"
+        },
+        "accountHolderName":
+        {
+          "type": "string"
+        },
+        "cardType":
+        {
+          "$ref": "#/definitions/CardTypeWsDTO"
+        },
+        "cardNumber":
+        {
+          "type": "string"
+        },
+        "startMonth":
+        {
+          "type": "string"
+        },
+        "startYear":
+        {
+          "type": "string"
+        },
+        "expiryMonth":
+        {
+          "type": "string"
+        },
+        "expiryYear":
+        {
+          "type": "string"
+        },
+        "issueNumber":
+        {
+          "type": "string"
+        },
+        "subscriptionId":
+        {
+          "type": "string"
+        },
+        "saved":
+        {
+          "type": "boolean"
+        },
+        "defaultPayment":
+        {
+          "type": "boolean"
+        },
+        "billingAddress":
+        {
+          "$ref": "#/definitions/AddressWsDTO"
+        }
+      }
+    },
+    "CardTypeWsDTO":
+    {
+      "properties":
+      {
+        "code":
+        {
+          "type": "string"
+        },
+        "name":
+        {
+          "type": "string"
+        }
+      }
+    },
+    "AddressWsDTO":
+    {
+      "properties":
+      {
+        "id":
+        {
+          "type": "string"
+        },
+        "title":
+        {
+          "type": "string"
+        },
+        "titleCode":
+        {
+          "type": "string"
+        },
+        "firstName":
+        {
+          "type": "string"
+        },
+        "lastName":
+        {
+          "type": "string"
+        },
+        "companyName":
+        {
+          "type": "string"
+        },
+        "line1":
+        {
+          "type": "string"
+        },
+        "line2":
+        {
+          "type": "string"
+        },
+        "town":
+        {
+          "type": "string"
+        },
+        "region":
+        {
+          "$ref": "#/definitions/RegionWsDTO"
+        },
+        "postalCode":
+        {
+          "type": "string"
+        },
+        "phone":
+        {
+          "type": "string"
+        },
+        "email":
+        {
+          "type": "string"
+        },
+        "country":
+        {
+          "$ref": "#/definitions/CountryWsDTO"
+        },
+        "shippingAddress":
+        {
+          "type": "boolean"
+        },
+        "visibleInAddressBook":
+        {
+          "type": "boolean"
+        },
+        "formattedAddress":
+        {
+          "type": "string"
+        }
+      }
+    },
+    "RegionWsDTO":
+    {
+      "properties":
+      {
+        "isocode":
+        {
+          "type": "string"
+        },
+        "isocodeShort":
+        {
+          "type": "string"
+        },
+        "countryIso":
+        {
+          "type": "string"
+        },
+        "name":
+        {
+          "type": "string"
+        }
+      }
+    },
+    "CountryWsDTO":
+    {
+      "properties":
+      {
+        "isocode":
+        {
+          "type": "string"
+        },
+        "name":
+        {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,253 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "ReviewListWsDTO",
+  "type": "object",
+  "properties":
+  {
+    "reviews":
+    {
+      "type": "array",
+      "items":
+      {
+        "$ref": "#/definitions/ReviewWsDTO"
+      }
+    }
+  },
+  "definitions":
+  {
+    "ReviewWsDTO":
+    {
+      "properties":
+      {
+        "id":
+        {
+          "type": "string"
+        },
+        "headline":
+        {
+          "type": "string"
+        },
+        "comment":
+        {
+          "type": "string"
+        },
+        "rating":
+        {
+          "type": "number"
+        },
+        "date":
+        {
+          "type": "string"
+        },
+        "alias":
+        {
+          "type": "string"
+        },
+        "principal":
+        {
+          "$ref": "#/definitions/UserWsDTO"
+        }
+      }
+    },
+    "UserWsDTO":
+    {
+      "properties":
+      {
+        "defaultAddress":
+        {
+          "$ref": "#/definitions/AddressWsDTO"
+        },
+        "titleCode":
+        {
+          "type": "string"
+        },
+        "title":
+        {
+          "type": "string"
+        },
+        "firstName":
+        {
+          "type": "string"
+        },
+        "lastName":
+        {
+          "type": "string"
+        },
+        "currency":
+        {
+          "$ref": "#/definitions/CurrencyWsDTO"
+        },
+        "language":
+        {
+          "$ref": "#/definitions/LanguageWsDTO"
+        },
+        "displayUid":
+        {
+          "type": "string"
+        },
+        "uid":
+        {
+          "type": "string"
+        },
+        "name":
+        {
+          "type": "string"
+        }
+      }
+    },
+    "AddressWsDTO":
+    {
+      "properties":
+      {
+        "id":
+        {
+          "type": "string"
+        },
+        "title":
+        {
+          "type": "string"
+        },
+        "titleCode":
+        {
+          "type": "string"
+        },
+        "firstName":
+        {
+          "type": "string"
+        },
+        "lastName":
+        {
+          "type": "string"
+        },
+        "companyName":
+        {
+          "type": "string"
+        },
+        "line1":
+        {
+          "type": "string"
+        },
+        "line2":
+        {
+          "type": "string"
+        },
+        "town":
+        {
+          "type": "string"
+        },
+        "region":
+        {
+          "$ref": "#/definitions/RegionWsDTO"
+        },
+        "postalCode":
+        {
+          "type": "string"
+        },
+        "phone":
+        {
+          "type": "string"
+        },
+        "email":
+        {
+          "type": "string"
+        },
+        "country":
+        {
+          "$ref": "#/definitions/CountryWsDTO"
+        },
+        "shippingAddress":
+        {
+          "type": "boolean"
+        },
+        "visibleInAddressBook":
+        {
+          "type": "boolean"
+        },
+        "formattedAddress":
+        {
+          "type": "string"
+        }
+      }
+    },
+    "CurrencyWsDTO":
+    {
+      "properties":
+      {
+        "isocode":
+        {
+          "type": "string"
+        },
+        "name":
+        {
+          "type": "string"
+        },
+        "active":
+        {
+          "type": "boolean"
+        },
+        "symbol":
+        {
+          "type": "string"
+        }
+      }
+    },
+    "LanguageWsDTO":
+    {
+      "properties":
+      {
+        "isocode":
+        {
+          "type": "string"
+        },
+        "name":
+        {
+          "type": "string"
+        },
+        "nativeName":
+        {
+          "type": "string"
+        },
+        "active":
+        {
+          "type": "boolean"
+        }
+      }
+    },
+    "RegionWsDTO":
+    {
+      "properties":
+      {
+        "isocode":
+        {
+          "type": "string"
+        },
+        "isocodeShort":
+        {
+          "type": "string"
+        },
+        "countryIso":
+        {
+          "type": "string"
+        },
+        "name":
+        {
+          "type": "string"
+        }
+      }
+    },
+    "CountryWsDTO":
+    {
+      "properties":
+      {
+        "isocode":
+        {
+          "type": "string"
+        },
+        "name":
+        {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

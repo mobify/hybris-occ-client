@@ -1,0 +1,83 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "UserGroupListWsDTO",
+  "type": "object",
+  "properties":
+  {
+    "userGroups":
+    {
+      "type": "array",
+      "items":
+      {
+        "$ref": "#/definitions/UserGroupWsDTO"
+      }
+    },
+    "totalNumber":
+    {
+      "type": "number"
+    },
+    "pageSize":
+    {
+      "type": "number"
+    },
+    "numberOfPages":
+    {
+      "type": "number"
+    },
+    "currentPage":
+    {
+      "type": "number"
+    }
+  },
+  "definitions":
+  {
+    "UserGroupWsDTO":
+    {
+      "properties":
+      {
+        "members":
+        {
+          "type": "array",
+          "items":
+          {
+            "$ref": "#/definitions/PrincipalWsDTO"
+          }
+        },
+        "subGroups":
+        {
+          "type": "array",
+          "items":
+          {
+            "$ref": "#/definitions/UserGroupWsDTO"
+          }
+        },
+        "membersCount":
+        {
+          "type": "number"
+        },
+        "uid":
+        {
+          "type": "string"
+        },
+        "name":
+        {
+          "type": "string"
+        }
+      }
+    },
+    "PrincipalWsDTO":
+    {
+      "properties":
+      {
+        "uid":
+        {
+          "type": "string"
+        },
+        "name":
+        {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
