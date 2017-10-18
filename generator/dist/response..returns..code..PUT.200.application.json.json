@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "ReturnRequestModificationWsDTO",
+  "type": "object",
+  "properties":
+  {
+    "serialVersionUID":
+    {
+      "description": "Default serialVersionUID value.",
+      "type": "long"
+    },
+    "returnEntries":
+    {
+      "type": "array",
+      "items":
+      {
+        "$ref": "#/definitions/ReturnEntryModificationWsDTO"
+      }
+    },
+    "refundDeliveryCost":
+    {
+      "type": "boolean"
+    }
+  },
+  "definitions":
+  {
+    "ReturnEntryModificationWsDTO":
+    {
+      "properties":
+      {
+        "serialVersionUID":
+        {
+          "description": "Default serialVersionUID value.",
+          "type": "long"
+        },
+        "productCode":
+        {
+          "type": "string"
+        },
+        "deliveryModeCode":
+        {
+          "type": "string"
+        },
+        "refundAmount":
+        {
+          "type": "number"
+        }
+      }
+    }
+  }
+}

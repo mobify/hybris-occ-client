@@ -1,0 +1,82 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "FraudReportListWsDTO",
+  "type": "object",
+  "properties":
+  {
+    "serialVersionUID":
+    {
+      "description": "Default serialVersionUID value.",
+      "type": "long"
+    },
+    "reports":
+    {
+      "type": "array",
+      "items":
+      {
+        "$ref": "#/definitions/FraudReportWsDTO"
+      }
+    }
+  },
+  "definitions":
+  {
+    "FraudReportWsDTO":
+    {
+      "properties":
+      {
+        "serialVersionUID":
+        {
+          "description": "Default serialVersionUID value.",
+          "type": "long"
+        },
+        "explanation":
+        {
+          "type": "string"
+        },
+        "fraudSymptomScorings":
+        {
+          "type": "array",
+          "items":
+          {
+            "$ref": "#/definitions/FraudSymptomScoringsWsDTO"
+          }
+        },
+        "provider":
+        {
+          "type": "string"
+        },
+        "status":
+        {
+          "type": "string"
+        },
+        "timestamp":
+        {
+          "type": "string"
+        }
+      }
+    },
+    "FraudSymptomScoringsWsDTO":
+    {
+      "properties":
+      {
+        "serialVersionUID":
+        {
+          "description": "Default serialVersionUID value.",
+          "type": "long"
+        },
+        "explanation":
+        {
+          "type": "string"
+        },
+        "name":
+        {
+          "type": "string"
+        },
+        "score":
+        {
+          "type": "number"
+        }
+      }
+    }
+  }
+}

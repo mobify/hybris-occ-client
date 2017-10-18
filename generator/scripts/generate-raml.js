@@ -5,11 +5,15 @@ const path = require('path')
 const cheerio = require('cheerio')
 const raml = fs.readFileSync(`src/${version}/main.raml`).toString()
 const html = fs.readFileSync(`src/${version}/main.html`, 'utf8') // beautify main.html before reading, single line too long
+const orderhtml = fs.readFileSync(`src/${version}/order.html`, 'utf8') // beautify main.html before reading, single line too long
 const $ = cheerio.load(html, {decodeEntities: false})
-
-// const outputLocation = `${version}-output.raml`
+const $order = cheerio.load(orderhtml, {decodeEntities: false})
 
 const pattern = /(?:request|response)\.(\..*(GET|POST|PUT|PATCH|DELETE))\./
+
+//combine HTMLs
+//NOTE: RAML files are manually combined
+$('.container').append($order('.container').html())
 
 raml.split('\n')
     .filter((line) => pattern.test(line))
@@ -21,9 +25,9 @@ raml.split('\n')
             .replace(/\./g, '_')
             .replace(method, method.toLowerCase())
 
-        let schema = $(`#${id}`).find('code')
-            .html()
-            
+        let schema = $(`#${id}`).find('code').html() 
+            || $(`#${id.slice(1)}`).find('code').html()
+
         const title = JSON.parse(schema).title
 
         // Fix a bug from source file provided by Hybris
@@ -41,4 +45,3 @@ raml.split('\n')
             }
         })
     }, raml)
-

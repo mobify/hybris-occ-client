@@ -1,0 +1,55 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "OrderCancelRequestWsDTO",
+  "type": "object",
+  "properties":
+  {
+    "serialVersionUID":
+    {
+      "description": "Default serialVersionUID value.",
+      "type": "long"
+    },
+    "entries":
+    {
+      "type": "array",
+      "items":
+      {
+        "$ref": "#/definitions/OrderCancelEntryWsDTO"
+      }
+    },
+    "userId":
+    {
+      "type": "string"
+    }
+  },
+  "definitions":
+  {
+    "OrderCancelEntryWsDTO":
+    {
+      "properties":
+      {
+        "serialVersionUID":
+        {
+          "description": "Default serialVersionUID value.",
+          "type": "long"
+        },
+        "orderEntryNumber":
+        {
+          "type": "string"
+        },
+        "cancelQuantity":
+        {
+          "type": "number"
+        },
+        "notes":
+        {
+          "type": "string"
+        },
+        "cancelReason":
+        {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

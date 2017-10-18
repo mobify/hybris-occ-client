@@ -1,0 +1,2008 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "ReturnRequestWsDTO",
+  "type": "object",
+  "properties":
+  {
+    "serialVersionUID":
+    {
+      "description": "Default serialVersionUID value.",
+      "type": "long"
+    },
+    "code":
+    {
+      "type": "string"
+    },
+    "rma":
+    {
+      "type": "string"
+    },
+    "status":
+    {
+      "type": "string"
+    },
+    "order":
+    {
+      "$ref": "#/definitions/OrderWsDTO"
+    },
+    "deliveryCost":
+    {
+      "$ref": "#/definitions/PriceWsDTO"
+    },
+    "returnEntries":
+    {
+      "type": "array",
+      "items":
+      {
+        "$ref": "#/definitions/ReturnEntryWsDTO"
+      }
+    },
+    "refundDeliveryCost":
+    {
+      "type": "boolean"
+    }
+  },
+  "definitions":
+  {
+    "OrderWsDTO":
+    {
+      "properties":
+      {
+        "created":
+        {
+          "type": "string"
+        },
+        "status":
+        {
+          "type": "string"
+        },
+        "statusDisplay":
+        {
+          "type": "string"
+        },
+        "guestCustomer":
+        {
+          "type": "boolean"
+        },
+        "consignments":
+        {
+          "type": "array",
+          "items":
+          {
+            "$ref": "#/definitions/ConsignmentWsDTO"
+          }
+        },
+        "deliveryStatus":
+        {
+          "type": "string"
+        },
+        "deliveryStatusDisplay":
+        {
+          "type": "string"
+        },
+        "unconsignedEntries":
+        {
+          "type": "array",
+          "items":
+          {
+            "$ref": "#/definitions/OrderEntryWsDTO"
+          }
+        },
+        "paymentAddress":
+        {
+          "$ref": "#/definitions/AddressWsDTO"
+        },
+        "serialVersionUID":
+        {
+          "description": "Default serialVersionUID value.",
+          "type": "long"
+        },
+        "code":
+        {
+          "type": "string"
+        },
+        "net":
+        {
+          "type": "boolean"
+        },
+        "totalPriceWithTax":
+        {
+          "$ref": "#/definitions/PriceWsDTO"
+        },
+        "totalPrice":
+        {
+          "$ref": "#/definitions/PriceWsDTO"
+        },
+        "totalTax":
+        {
+          "$ref": "#/definitions/PriceWsDTO"
+        },
+        "subTotal":
+        {
+          "$ref": "#/definitions/PriceWsDTO"
+        },
+        "deliveryCost":
+        {
+          "$ref": "#/definitions/PriceWsDTO"
+        },
+        "entries":
+        {
+          "type": "array",
+          "items":
+          {
+            "$ref": "#/definitions/OrderEntryWsDTO"
+          }
+        },
+        "totalItems":
+        {
+          "type": "number"
+        },
+        "deliveryMode":
+        {
+          "$ref": "#/definitions/DeliveryModeWsDTO"
+        },
+        "deliveryAddress":
+        {
+          "$ref": "#/definitions/AddressWsDTO"
+        },
+        "paymentInfo":
+        {
+          "$ref": "#/definitions/PaymentDetailsWsDTO"
+        },
+        "appliedOrderPromotions":
+        {
+          "type": "array",
+          "items":
+          {
+            "$ref": "#/definitions/PromotionResultWsDTO"
+          }
+        },
+        "appliedProductPromotions":
+        {
+          "type": "array",
+          "items":
+          {
+            "$ref": "#/definitions/PromotionResultWsDTO"
+          }
+        },
+        "productDiscounts":
+        {
+          "$ref": "#/definitions/PriceWsDTO"
+        },
+        "orderDiscounts":
+        {
+          "$ref": "#/definitions/PriceWsDTO"
+        },
+        "totalDiscounts":
+        {
+          "$ref": "#/definitions/PriceWsDTO"
+        },
+        "site":
+        {
+          "type": "string"
+        },
+        "store":
+        {
+          "type": "string"
+        },
+        "guid":
+        {
+          "type": "string"
+        },
+        "calculated":
+        {
+          "type": "boolean"
+        },
+        "appliedVouchers":
+        {
+          "type": "array",
+          "items":
+          {
+            "$ref": "#/definitions/VoucherWsDTO"
+          }
+        },
+        "user":
+        {
+          "$ref": "#/definitions/PrincipalWsDTO"
+        },
+        "pickupOrderGroups":
+        {
+          "type": "array",
+          "items":
+          {
+            "$ref": "#/definitions/PickupOrderEntryGroupWsDTO"
+          }
+        },
+        "deliveryOrderGroups":
+        {
+          "type": "array",
+          "items":
+          {
+            "$ref": "#/definitions/DeliveryOrderEntryGroupWsDTO"
+          }
+        },
+        "pickupItemsQuantity":
+        {
+          "type": "number"
+        },
+        "deliveryItemsQuantity":
+        {
+          "type": "number"
+        }
+      }
+    },
+    "PriceWsDTO":
+    {
+      "properties":
+      {
+        "serialVersionUID":
+        {
+          "description": "Default serialVersionUID value.",
+          "type": "long"
+        },
+        "currencyIso":
+        {
+          "type": "string"
+        },
+        "value":
+        {
+          "type": "number"
+        },
+        "priceType":
+        {
+          "type": "string"
+        },
+        "formattedValue":
+        {
+          "type": "string"
+        },
+        "minQuantity":
+        {
+          "type": "number"
+        },
+        "maxQuantity":
+        {
+          "type": "number"
+        }
+      }
+    },
+    "ReturnEntryWsDTO":
+    {
+      "properties":
+      {
+        "serialVersionUID":
+        {
+          "description": "Default serialVersionUID value.",
+          "type": "long"
+        },
+        "expectedQuantity":
+        {
+          "type": "number"
+        },
+        "receivedQuantity":
+        {
+          "type": "number"
+        },
+        "reachedDate":
+        {
+          "type": "string"
+        },
+        "orderEntry":
+        {
+          "$ref": "#/definitions/OrderEntryWsDTO"
+        },
+        "notes":
+        {
+          "type": "string"
+        },
+        "action":
+        {
+          "type": "string"
+        },
+        "refundReason":
+        {
+          "type": "string"
+        },
+        "replacementReason":
+        {
+          "type": "string"
+        },
+        "refundAmount":
+        {
+          "$ref": "#/definitions/PriceWsDTO"
+        },
+        "refundedDate":
+        {
+          "type": "string"
+        }
+      }
+    },
+    "ConsignmentWsDTO":
+    {
+      "properties":
+      {
+        "serialVersionUID":
+        {
+          "description": "Default serialVersionUID value.",
+          "type": "long"
+        },
+        "code":
+        {
+          "type": "string"
+        },
+        "trackingID":
+        {
+          "type": "string"
+        },
+        "status":
+        {
+          "type": "string"
+        },
+        "statusDate":
+        {
+          "type": "string"
+        },
+        "entries":
+        {
+          "type": "array",
+          "items":
+          {
+            "$ref": "#/definitions/ConsignmentEntryWsDTO"
+          }
+        },
+        "shippingAddress":
+        {
+          "$ref": "#/definitions/AddressWsDTO"
+        },
+        "deliveryPointOfService":
+        {
+          "$ref": "#/definitions/PointOfServiceWsDTO"
+        },
+        "orderCode":
+        {
+          "type": "string"
+        },
+        "shippingDate":
+        {
+          "type": "string"
+        },
+        "deliveryMode":
+        {
+          "$ref": "#/definitions/DeliveryModeWsDTO"
+        },
+        "warehouseCode":
+        {
+          "type": "string"
+        },
+        "packagingInfo":
+        {
+          "$ref": "#/definitions/PackagingInfoWsDTO"
+        }
+      }
+    },
+    "OrderEntryWsDTO":
+    {
+      "properties":
+      {
+        "serialVersionUID":
+        {
+          "description": "Default serialVersionUID value.",
+          "type": "long"
+        },
+        "entryNumber":
+        {
+          "type": "number"
+        },
+        "quantity":
+        {
+          "type": "number"
+        },
+        "basePrice":
+        {
+          "$ref": "#/definitions/PriceWsDTO"
+        },
+        "totalPrice":
+        {
+          "$ref": "#/definitions/PriceWsDTO"
+        },
+        "product":
+        {
+          "$ref": "#/definitions/ProductWsDTO"
+        },
+        "updateable":
+        {
+          "type": "boolean"
+        },
+        "deliveryMode":
+        {
+          "$ref": "#/definitions/DeliveryModeWsDTO"
+        },
+        "deliveryPointOfService":
+        {
+          "$ref": "#/definitions/PointOfServiceWsDTO"
+        },
+        "url":
+        {
+          "type": "string"
+        },
+        "quantityAllocated":
+        {
+          "type": "number"
+        },
+        "quantityUnallocated":
+        {
+          "type": "number"
+        },
+        "quantityCancelled":
+        {
+          "type": "number"
+        },
+        "quantityPending":
+        {
+          "type": "number"
+        },
+        "quantityShipped":
+        {
+          "type": "number"
+        },
+        "quantityReturned":
+        {
+          "type": "number"
+        }
+      }
+    },
+    "AddressWsDTO":
+    {
+      "properties":
+      {
+        "serialVersionUID":
+        {
+          "description": "Default serialVersionUID value.",
+          "type": "long"
+        },
+        "id":
+        {
+          "type": "string"
+        },
+        "title":
+        {
+          "type": "string"
+        },
+        "titleCode":
+        {
+          "type": "string"
+        },
+        "firstName":
+        {
+          "type": "string"
+        },
+        "lastName":
+        {
+          "type": "string"
+        },
+        "companyName":
+        {
+          "type": "string"
+        },
+        "line1":
+        {
+          "type": "string"
+        },
+        "line2":
+        {
+          "type": "string"
+        },
+        "town":
+        {
+          "type": "string"
+        },
+        "region":
+        {
+          "$ref": "#/definitions/RegionWsDTO"
+        },
+        "postalCode":
+        {
+          "type": "string"
+        },
+        "phone":
+        {
+          "type": "string"
+        },
+        "email":
+        {
+          "type": "string"
+        },
+        "country":
+        {
+          "$ref": "#/definitions/CountryWsDTO"
+        },
+        "shippingAddress":
+        {
+          "type": "boolean"
+        },
+        "visibleInAddressBook":
+        {
+          "type": "boolean"
+        },
+        "formattedAddress":
+        {
+          "type": "string"
+        }
+      }
+    },
+    "DeliveryModeWsDTO":
+    {
+      "properties":
+      {
+        "serialVersionUID":
+        {
+          "description": "Default serialVersionUID value.",
+          "type": "long"
+        },
+        "code":
+        {
+          "type": "string"
+        },
+        "name":
+        {
+          "type": "string"
+        },
+        "description":
+        {
+          "type": "string"
+        },
+        "deliveryCost":
+        {
+          "$ref": "#/definitions/PriceWsDTO"
+        }
+      }
+    },
+    "PaymentDetailsWsDTO":
+    {
+      "properties":
+      {
+        "serialVersionUID":
+        {
+          "description": "Default serialVersionUID value.",
+          "type": "long"
+        },
+        "id":
+        {
+          "type": "string"
+        },
+        "accountHolderName":
+        {
+          "type": "string"
+        },
+        "cardType":
+        {
+          "$ref": "#/definitions/CardTypeWsDTO"
+        },
+        "cardNumber":
+        {
+          "type": "string"
+        },
+        "startMonth":
+        {
+          "type": "string"
+        },
+        "startYear":
+        {
+          "type": "string"
+        },
+        "expiryMonth":
+        {
+          "type": "string"
+        },
+        "expiryYear":
+        {
+          "type": "string"
+        },
+        "issueNumber":
+        {
+          "type": "string"
+        },
+        "subscriptionId":
+        {
+          "type": "string"
+        },
+        "saved":
+        {
+          "type": "boolean"
+        },
+        "defaultPayment":
+        {
+          "type": "boolean"
+        },
+        "billingAddress":
+        {
+          "$ref": "#/definitions/AddressWsDTO"
+        }
+      }
+    },
+    "PromotionResultWsDTO":
+    {
+      "properties":
+      {
+        "serialVersionUID":
+        {
+          "description": "Default serialVersionUID value.",
+          "type": "long"
+        },
+        "description":
+        {
+          "type": "string"
+        },
+        "promotion":
+        {
+          "$ref": "#/definitions/PromotionWsDTO"
+        },
+        "consumedEntries":
+        {
+          "type": "array",
+          "items":
+          {
+            "$ref": "#/definitions/PromotionOrderEntryConsumedWsDTO"
+          }
+        }
+      }
+    },
+    "VoucherWsDTO":
+    {
+      "properties":
+      {
+        "serialVersionUID":
+        {
+          "description": "Default serialVersionUID value.",
+          "type": "long"
+        },
+        "code":
+        {
+          "type": "string"
+        },
+        "voucherCode":
+        {
+          "type": "string"
+        },
+        "name":
+        {
+          "type": "string"
+        },
+        "description":
+        {
+          "type": "string"
+        },
+        "value":
+        {
+          "type": "number"
+        },
+        "valueFormatted":
+        {
+          "type": "string"
+        },
+        "valueString":
+        {
+          "type": "string"
+        },
+        "freeShipping":
+        {
+          "type": "boolean"
+        },
+        "currency":
+        {
+          "$ref": "#/definitions/CurrencyWsDTO"
+        },
+        "appliedValue":
+        {
+          "$ref": "#/definitions/PriceWsDTO"
+        }
+      }
+    },
+    "PrincipalWsDTO":
+    {
+      "properties":
+      {
+        "serialVersionUID":
+        {
+          "description": "Default serialVersionUID value.",
+          "type": "long"
+        },
+        "uid":
+        {
+          "type": "string"
+        },
+        "name":
+        {
+          "type": "string"
+        }
+      }
+    },
+    "PickupOrderEntryGroupWsDTO":
+    {
+      "properties":
+      {
+        "deliveryPointOfService":
+        {
+          "$ref": "#/definitions/PointOfServiceWsDTO"
+        },
+        "distance":
+        {
+          "type": "number"
+        },
+        "serialVersionUID":
+        {
+          "description": "Default serialVersionUID value.",
+          "type": "long"
+        },
+        "totalPriceWithTax":
+        {
+          "$ref": "#/definitions/PriceWsDTO"
+        },
+        "entries":
+        {
+          "type": "array",
+          "items":
+          {
+            "$ref": "#/definitions/OrderEntryWsDTO"
+          }
+        },
+        "quantity":
+        {
+          "type": "number"
+        }
+      }
+    },
+    "DeliveryOrderEntryGroupWsDTO":
+    {
+      "properties":
+      {
+        "deliveryAddress":
+        {
+          "$ref": "#/definitions/AddressWsDTO"
+        },
+        "serialVersionUID":
+        {
+          "description": "Default serialVersionUID value.",
+          "type": "long"
+        },
+        "totalPriceWithTax":
+        {
+          "$ref": "#/definitions/PriceWsDTO"
+        },
+        "entries":
+        {
+          "type": "array",
+          "items":
+          {
+            "$ref": "#/definitions/OrderEntryWsDTO"
+          }
+        },
+        "quantity":
+        {
+          "type": "number"
+        }
+      }
+    },
+    "ConsignmentEntryWsDTO":
+    {
+      "properties":
+      {
+        "serialVersionUID":
+        {
+          "description": "Default serialVersionUID value.",
+          "type": "long"
+        },
+        "orderEntry":
+        {
+          "$ref": "#/definitions/OrderEntryWsDTO"
+        },
+        "quantity":
+        {
+          "type": "number"
+        },
+        "shippedQuantity":
+        {
+          "type": "number"
+        },
+        "quantityDeclined":
+        {
+          "type": "number"
+        },
+        "quantityPending":
+        {
+          "type": "number"
+        },
+        "quantityShipped":
+        {
+          "type": "number"
+        }
+      }
+    },
+    "PointOfServiceWsDTO":
+    {
+      "properties":
+      {
+        "serialVersionUID":
+        {
+          "description": "Default serialVersionUID value.",
+          "type": "long"
+        },
+        "name":
+        {
+          "type": "string"
+        },
+        "displayName":
+        {
+          "type": "string"
+        },
+        "url":
+        {
+          "type": "string"
+        },
+        "description":
+        {
+          "type": "string"
+        },
+        "openingHours":
+        {
+          "$ref": "#/definitions/OpeningScheduleWsDTO"
+        },
+        "storeContent":
+        {
+          "type": "string"
+        },
+        "features":
+        {
+          "type": "object"
+        },
+        "geoPoint":
+        {
+          "$ref": "#/definitions/GeoPointWsDTO"
+        },
+        "formattedDistance":
+        {
+          "type": "string"
+        },
+        "distanceKm":
+        {
+          "type": "number"
+        },
+        "mapIcon":
+        {
+          "$ref": "#/definitions/ImageWsDTO"
+        },
+        "address":
+        {
+          "$ref": "#/definitions/AddressWsDTO"
+        },
+        "storeImages":
+        {
+          "type": "array",
+          "items":
+          {
+            "$ref": "#/definitions/ImageWsDTO"
+          }
+        },
+        "warehouseCodes":
+        {
+          "type": "array",
+          "items":
+          {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "PackagingInfoWsDTO":
+    {
+      "properties":
+      {
+        "serialVersionUID":
+        {
+          "description": "Default serialVersionUID value.",
+          "type": "long"
+        },
+        "width":
+        {
+          "type": "string"
+        },
+        "height":
+        {
+          "type": "string"
+        },
+        "length":
+        {
+          "type": "string"
+        },
+        "grossWeight":
+        {
+          "type": "string"
+        },
+        "insuredValue":
+        {
+          "type": "string"
+        },
+        "dimensionUnit":
+        {
+          "type": "string"
+        },
+        "weightUnit":
+        {
+          "type": "string"
+        }
+      }
+    },
+    "ProductWsDTO":
+    {
+      "properties":
+      {
+        "serialVersionUID":
+        {
+          "description": "Default serialVersionUID value.",
+          "type": "long"
+        },
+        "code":
+        {
+          "type": "string"
+        },
+        "name":
+        {
+          "type": "string"
+        },
+        "url":
+        {
+          "type": "string"
+        },
+        "description":
+        {
+          "type": "string"
+        },
+        "purchasable":
+        {
+          "type": "boolean"
+        },
+        "stock":
+        {
+          "$ref": "#/definitions/StockWsDTO"
+        },
+        "futureStocks":
+        {
+          "type": "array",
+          "items":
+          {
+            "$ref": "#/definitions/FutureStockWsDTO"
+          }
+        },
+        "availableForPickup":
+        {
+          "type": "boolean"
+        },
+        "averageRating":
+        {
+          "type": "number"
+        },
+        "numberOfReviews":
+        {
+          "type": "number"
+        },
+        "summary":
+        {
+          "type": "string"
+        },
+        "manufacturer":
+        {
+          "type": "string"
+        },
+        "variantType":
+        {
+          "type": "string"
+        },
+        "price":
+        {
+          "$ref": "#/definitions/PriceWsDTO"
+        },
+        "baseProduct":
+        {
+          "type": "string"
+        },
+        "images":
+        {
+          "type": "array",
+          "items":
+          {
+            "$ref": "#/definitions/ImageWsDTO"
+          }
+        },
+        "categories":
+        {
+          "type": "array",
+          "items":
+          {
+            "$ref": "#/definitions/CategoryWsDTO"
+          }
+        },
+        "reviews":
+        {
+          "type": "array",
+          "items":
+          {
+            "$ref": "#/definitions/ReviewWsDTO"
+          }
+        },
+        "classifications":
+        {
+          "type": "array",
+          "items":
+          {
+            "$ref": "#/definitions/ClassificationWsDTO"
+          }
+        },
+        "potentialPromotions":
+        {
+          "type": "array",
+          "items":
+          {
+            "$ref": "#/definitions/PromotionWsDTO"
+          }
+        },
+        "variantOptions":
+        {
+          "type": "array",
+          "items":
+          {
+            "$ref": "#/definitions/VariantOptionWsDTO"
+          }
+        },
+        "baseOptions":
+        {
+          "type": "array",
+          "items":
+          {
+            "$ref": "#/definitions/BaseOptionWsDTO"
+          }
+        },
+        "volumePricesFlag":
+        {
+          "type": "boolean"
+        },
+        "volumePrices":
+        {
+          "type": "array",
+          "items":
+          {
+            "$ref": "#/definitions/PriceWsDTO"
+          }
+        },
+        "productReferences":
+        {
+          "type": "array",
+          "items":
+          {
+            "$ref": "#/definitions/ProductReferenceWsDTO"
+          }
+        },
+        "variantMatrix":
+        {
+          "type": "array",
+          "items":
+          {
+            "$ref": "#/definitions/VariantMatrixElementWsDTO"
+          }
+        },
+        "priceRange":
+        {
+          "$ref": "#/definitions/PriceRangeWsDTO"
+        },
+        "multidimensional":
+        {
+          "type": "boolean"
+        }
+      }
+    },
+    "RegionWsDTO":
+    {
+      "properties":
+      {
+        "serialVersionUID":
+        {
+          "description": "Default serialVersionUID value.",
+          "type": "long"
+        },
+        "isocode":
+        {
+          "type": "string"
+        },
+        "isocodeShort":
+        {
+          "type": "string"
+        },
+        "countryIso":
+        {
+          "type": "string"
+        },
+        "name":
+        {
+          "type": "string"
+        }
+      }
+    },
+    "CountryWsDTO":
+    {
+      "properties":
+      {
+        "serialVersionUID":
+        {
+          "description": "Default serialVersionUID value.",
+          "type": "long"
+        },
+        "isocode":
+        {
+          "type": "string"
+        },
+        "name":
+        {
+          "type": "string"
+        }
+      }
+    },
+    "CardTypeWsDTO":
+    {
+      "properties":
+      {
+        "serialVersionUID":
+        {
+          "description": "Default serialVersionUID value.",
+          "type": "long"
+        },
+        "code":
+        {
+          "type": "string"
+        },
+        "name":
+        {
+          "type": "string"
+        }
+      }
+    },
+    "PromotionWsDTO":
+    {
+      "properties":
+      {
+        "serialVersionUID":
+        {
+          "description": "Default serialVersionUID value.",
+          "type": "long"
+        },
+        "code":
+        {
+          "type": "string"
+        },
+        "title":
+        {
+          "type": "string"
+        },
+        "promotionType":
+        {
+          "type": "string"
+        },
+        "startDate":
+        {
+          "type": "string"
+        },
+        "endDate":
+        {
+          "type": "string"
+        },
+        "description":
+        {
+          "type": "string"
+        },
+        "couldFireMessages":
+        {
+          "type": "array",
+          "items":
+          {
+            "type": "string"
+          }
+        },
+        "firedMessages":
+        {
+          "type": "array",
+          "items":
+          {
+            "type": "string"
+          }
+        },
+        "productBanner":
+        {
+          "$ref": "#/definitions/ImageWsDTO"
+        },
+        "enabled":
+        {
+          "type": "boolean"
+        },
+        "priority":
+        {
+          "type": "number"
+        },
+        "promotionGroup":
+        {
+          "type": "string"
+        },
+        "restrictions":
+        {
+          "type": "array",
+          "items":
+          {
+            "$ref": "#/definitions/PromotionRestrictionWsDTO"
+          }
+        }
+      }
+    },
+    "PromotionOrderEntryConsumedWsDTO":
+    {
+      "properties":
+      {
+        "serialVersionUID":
+        {
+          "description": "Default serialVersionUID value.",
+          "type": "long"
+        },
+        "code":
+        {
+          "type": "string"
+        },
+        "adjustedUnitPrice":
+        {
+          "type": "number"
+        },
+        "orderEntryNumber":
+        {
+          "type": "number"
+        },
+        "quantity":
+        {
+          "type": "number"
+        }
+      }
+    },
+    "CurrencyWsDTO":
+    {
+      "properties":
+      {
+        "serialVersionUID":
+        {
+          "description": "Default serialVersionUID value.",
+          "type": "long"
+        },
+        "isocode":
+        {
+          "type": "string"
+        },
+        "name":
+        {
+          "type": "string"
+        },
+        "active":
+        {
+          "type": "boolean"
+        },
+        "symbol":
+        {
+          "type": "string"
+        }
+      }
+    },
+    "OpeningScheduleWsDTO":
+    {
+      "properties":
+      {
+        "serialVersionUID":
+        {
+          "description": "Default serialVersionUID value.",
+          "type": "long"
+        },
+        "name":
+        {
+          "type": "string"
+        },
+        "code":
+        {
+          "type": "string"
+        },
+        "weekDayOpeningList":
+        {
+          "type": "array",
+          "items":
+          {
+            "$ref": "#/definitions/WeekdayOpeningDayWsDTO"
+          }
+        },
+        "specialDayOpeningList":
+        {
+          "type": "array",
+          "items":
+          {
+            "$ref": "#/definitions/SpecialOpeningDayWsDTO"
+          }
+        }
+      }
+    },
+    "GeoPointWsDTO":
+    {
+      "properties":
+      {
+        "serialVersionUID":
+        {
+          "description": "Default serialVersionUID value.",
+          "type": "long"
+        },
+        "latitude":
+        {
+          "type": "number"
+        },
+        "longitude":
+        {
+          "type": "number"
+        }
+      }
+    },
+    "ImageWsDTO":
+    {
+      "properties":
+      {
+        "serialVersionUID":
+        {
+          "description": "Default serialVersionUID value.",
+          "type": "long"
+        },
+        "imageType":
+        {
+          "type": "string"
+        },
+        "format":
+        {
+          "type": "string"
+        },
+        "url":
+        {
+          "type": "string"
+        },
+        "altText":
+        {
+          "type": "string"
+        },
+        "galleryIndex":
+        {
+          "type": "number"
+        }
+      }
+    },
+    "StockWsDTO":
+    {
+      "properties":
+      {
+        "serialVersionUID":
+        {
+          "description": "Default serialVersionUID value.",
+          "type": "long"
+        },
+        "stockLevelStatus":
+        {
+          "type": "string"
+        },
+        "stockLevel":
+        {
+          "type": "number"
+        }
+      }
+    },
+    "FutureStockWsDTO":
+    {
+      "properties":
+      {
+        "serialVersionUID":
+        {
+          "description": "Default serialVersionUID value.",
+          "type": "long"
+        },
+        "stock":
+        {
+          "$ref": "#/definitions/StockWsDTO"
+        },
+        "date":
+        {
+          "type": "string"
+        },
+        "formattedDate":
+        {
+          "type": "string"
+        }
+      }
+    },
+    "CategoryWsDTO":
+    {
+      "properties":
+      {
+        "serialVersionUID":
+        {
+          "description": "Default serialVersionUID value.",
+          "type": "long"
+        },
+        "code":
+        {
+          "type": "string"
+        },
+        "url":
+        {
+          "type": "string"
+        },
+        "image":
+        {
+          "$ref": "#/definitions/ImageWsDTO"
+        }
+      }
+    },
+    "ReviewWsDTO":
+    {
+      "properties":
+      {
+        "serialVersionUID":
+        {
+          "description": "Default serialVersionUID value.",
+          "type": "long"
+        },
+        "id":
+        {
+          "type": "string"
+        },
+        "headline":
+        {
+          "type": "string"
+        },
+        "comment":
+        {
+          "type": "string"
+        },
+        "rating":
+        {
+          "type": "number"
+        },
+        "date":
+        {
+          "type": "string"
+        },
+        "alias":
+        {
+          "type": "string"
+        },
+        "principal":
+        {
+          "$ref": "#/definitions/UserWsDTO"
+        }
+      }
+    },
+    "ClassificationWsDTO":
+    {
+      "properties":
+      {
+        "serialVersionUID":
+        {
+          "description": "Default serialVersionUID value.",
+          "type": "long"
+        },
+        "code":
+        {
+          "type": "string"
+        },
+        "name":
+        {
+          "type": "string"
+        },
+        "features":
+        {
+          "type": "array",
+          "items":
+          {
+            "$ref": "#/definitions/FeatureWsDTO"
+          }
+        }
+      }
+    },
+    "VariantOptionWsDTO":
+    {
+      "properties":
+      {
+        "serialVersionUID":
+        {
+          "description": "Default serialVersionUID value.",
+          "type": "long"
+        },
+        "code":
+        {
+          "type": "string"
+        },
+        "stock":
+        {
+          "$ref": "#/definitions/StockWsDTO"
+        },
+        "url":
+        {
+          "type": "string"
+        },
+        "priceData":
+        {
+          "$ref": "#/definitions/PriceWsDTO"
+        },
+        "variantOptionQualifiers":
+        {
+          "type": "array",
+          "items":
+          {
+            "$ref": "#/definitions/VariantOptionQualifierWsDTO"
+          }
+        }
+      }
+    },
+    "BaseOptionWsDTO":
+    {
+      "properties":
+      {
+        "serialVersionUID":
+        {
+          "description": "Default serialVersionUID value.",
+          "type": "long"
+        },
+        "variantType":
+        {
+          "type": "string"
+        },
+        "options":
+        {
+          "type": "array",
+          "items":
+          {
+            "$ref": "#/definitions/VariantOptionWsDTO"
+          }
+        },
+        "selected":
+        {
+          "$ref": "#/definitions/VariantOptionWsDTO"
+        }
+      }
+    },
+    "ProductReferenceWsDTO":
+    {
+      "properties":
+      {
+        "preselected":
+        {
+          "type": "boolean"
+        },
+        "serialVersionUID":
+        {
+          "description": "Default serialVersionUID value.",
+          "type": "long"
+        },
+        "referenceType":
+        {
+          "type": "string"
+        },
+        "description":
+        {
+          "type": "string"
+        },
+        "quantity":
+        {
+          "type": "number"
+        },
+        "target":
+        {
+          "$ref": "#/definitions/ProductWsDTO"
+        }
+      }
+    },
+    "VariantMatrixElementWsDTO":
+    {
+      "properties":
+      {
+        "serialVersionUID":
+        {
+          "description": "Default serialVersionUID value.",
+          "type": "long"
+        },
+        "variantValueCategory":
+        {
+          "$ref": "#/definitions/VariantValueCategoryWsDTO"
+        },
+        "parentVariantCategory":
+        {
+          "$ref": "#/definitions/VariantCategoryWsDTO"
+        },
+        "variantOption":
+        {
+          "$ref": "#/definitions/VariantOptionWsDTO"
+        },
+        "elements":
+        {
+          "type": "array",
+          "items":
+          {
+            "$ref": "#/definitions/VariantMatrixElementWsDTO"
+          }
+        },
+        "isLeaf":
+        {
+          "type": "boolean"
+        }
+      }
+    },
+    "PriceRangeWsDTO":
+    {
+      "properties":
+      {
+        "serialVersionUID":
+        {
+          "description": "Default serialVersionUID value.",
+          "type": "long"
+        },
+        "maxPrice":
+        {
+          "$ref": "#/definitions/PriceWsDTO"
+        },
+        "minPrice":
+        {
+          "$ref": "#/definitions/PriceWsDTO"
+        }
+      }
+    },
+    "PromotionRestrictionWsDTO":
+    {
+      "properties":
+      {
+        "serialVersionUID":
+        {
+          "description": "Default serialVersionUID value.",
+          "type": "long"
+        },
+        "restrictionType":
+        {
+          "type": "string"
+        },
+        "description":
+        {
+          "type": "string"
+        }
+      }
+    },
+    "WeekdayOpeningDayWsDTO":
+    {
+      "properties":
+      {
+        "weekDay":
+        {
+          "type": "string"
+        },
+        "closed":
+        {
+          "type": "boolean"
+        },
+        "serialVersionUID":
+        {
+          "description": "Default serialVersionUID value.",
+          "type": "long"
+        },
+        "openingTime":
+        {
+          "$ref": "#/definitions/TimeWsDTO"
+        },
+        "closingTime":
+        {
+          "$ref": "#/definitions/TimeWsDTO"
+        }
+      }
+    },
+    "SpecialOpeningDayWsDTO":
+    {
+      "properties":
+      {
+        "date":
+        {
+          "type": "string"
+        },
+        "formattedDate":
+        {
+          "type": "string"
+        },
+        "closed":
+        {
+          "type": "boolean"
+        },
+        "name":
+        {
+          "type": "string"
+        },
+        "comment":
+        {
+          "type": "string"
+        },
+        "serialVersionUID":
+        {
+          "description": "Default serialVersionUID value.",
+          "type": "long"
+        },
+        "openingTime":
+        {
+          "$ref": "#/definitions/TimeWsDTO"
+        },
+        "closingTime":
+        {
+          "$ref": "#/definitions/TimeWsDTO"
+        }
+      }
+    },
+    "UserWsDTO":
+    {
+      "properties":
+      {
+        "defaultAddress":
+        {
+          "$ref": "#/definitions/AddressWsDTO"
+        },
+        "titleCode":
+        {
+          "type": "string"
+        },
+        "title":
+        {
+          "type": "string"
+        },
+        "firstName":
+        {
+          "type": "string"
+        },
+        "lastName":
+        {
+          "type": "string"
+        },
+        "currency":
+        {
+          "$ref": "#/definitions/CurrencyWsDTO"
+        },
+        "language":
+        {
+          "$ref": "#/definitions/LanguageWsDTO"
+        },
+        "displayUid":
+        {
+          "type": "string"
+        },
+        "serialVersionUID":
+        {
+          "description": "Default serialVersionUID value.",
+          "type": "long"
+        },
+        "uid":
+        {
+          "type": "string"
+        },
+        "name":
+        {
+          "type": "string"
+        }
+      }
+    },
+    "FeatureWsDTO":
+    {
+      "properties":
+      {
+        "serialVersionUID":
+        {
+          "description": "Default serialVersionUID value.",
+          "type": "long"
+        },
+        "code":
+        {
+          "type": "string"
+        },
+        "name":
+        {
+          "type": "string"
+        },
+        "description":
+        {
+          "type": "string"
+        },
+        "type":
+        {
+          "type": "string"
+        },
+        "range":
+        {
+          "type": "boolean"
+        },
+        "comparable":
+        {
+          "type": "boolean"
+        },
+        "featureUnit":
+        {
+          "$ref": "#/definitions/FeatureUnitWsDTO"
+        },
+        "featureValues":
+        {
+          "type": "array",
+          "items":
+          {
+            "$ref": "#/definitions/FeatureValueWsDTO"
+          }
+        }
+      }
+    },
+    "VariantOptionQualifierWsDTO":
+    {
+      "properties":
+      {
+        "serialVersionUID":
+        {
+          "description": "Default serialVersionUID value.",
+          "type": "long"
+        },
+        "qualifier":
+        {
+          "type": "string"
+        },
+        "name":
+        {
+          "type": "string"
+        },
+        "value":
+        {
+          "type": "string"
+        },
+        "image":
+        {
+          "$ref": "#/definitions/ImageWsDTO"
+        }
+      }
+    },
+    "VariantValueCategoryWsDTO":
+    {
+      "properties":
+      {
+        "serialVersionUID":
+        {
+          "description": "Default serialVersionUID value.",
+          "type": "long"
+        },
+        "name":
+        {
+          "type": "string"
+        },
+        "sequence":
+        {
+          "type": "number"
+        },
+        "superCategories":
+        {
+          "type": "array",
+          "items":
+          {
+            "$ref": "#/definitions/VariantCategoryWsDTO"
+          }
+        }
+      }
+    },
+    "VariantCategoryWsDTO":
+    {
+      "properties":
+      {
+        "serialVersionUID":
+        {
+          "description": "Default serialVersionUID value.",
+          "type": "long"
+        },
+        "name":
+        {
+          "type": "string"
+        },
+        "hasImage":
+        {
+          "type": "boolean"
+        },
+        "priority":
+        {
+          "type": "number"
+        }
+      }
+    },
+    "TimeWsDTO":
+    {
+      "properties":
+      {
+        "serialVersionUID":
+        {
+          "description": "Default serialVersionUID value.",
+          "type": "long"
+        },
+        "hour":
+        {
+          "type": "string"
+        },
+        "minute":
+        {
+          "type": "string"
+        },
+        "formattedHour":
+        {
+          "type": "string"
+        }
+      }
+    },
+    "LanguageWsDTO":
+    {
+      "properties":
+      {
+        "serialVersionUID":
+        {
+          "description": "Default serialVersionUID value.",
+          "type": "long"
+        },
+        "isocode":
+        {
+          "type": "string"
+        },
+        "name":
+        {
+          "type": "string"
+        },
+        "nativeName":
+        {
+          "type": "string"
+        },
+        "active":
+        {
+          "type": "boolean"
+        }
+      }
+    },
+    "FeatureUnitWsDTO":
+    {
+      "properties":
+      {
+        "serialVersionUID":
+        {
+          "description": "Default serialVersionUID value.",
+          "type": "long"
+        },
+        "symbol":
+        {
+          "type": "string"
+        },
+        "name":
+        {
+          "type": "string"
+        },
+        "unitType":
+        {
+          "type": "string"
+        }
+      }
+    },
+    "FeatureValueWsDTO":
+    {
+      "properties":
+      {
+        "serialVersionUID":
+        {
+          "description": "Default serialVersionUID value.",
+          "type": "long"
+        },
+        "value":
+        {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

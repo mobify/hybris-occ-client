@@ -1,0 +1,319 @@
+#%RAML 0.8
+---
+title: SAP Hybris Commerce Order Management
+baseUri: http://api-example.hybris.com/rest/v2/{baseSiteId}
+version: v2
+baseUriParameters:
+  baseSiteId:
+    description: Id of the base site.
+mediaType: application/json
+securitySchemes:
+    - OAuth2:
+        description: |
+            OCC supports OAuth 2.0 for authenticating all API requests.
+        type: OAuth 2.0
+        describedBy:
+            headers:
+                Authorization:
+                    description: |
+                       Used to send a valid OAuth 2 access token. Do not use.
+                       with the "access_token" query string parameter.
+                    type: string
+            queryParameters:
+                access_token:
+                    description: |
+                       Used to send a valid OAuth 2 access token. Do not use together with.
+                       the "Authorization" header
+                    type: string
+            responses:
+                401:
+                    description: |
+                        Bad or expired token. This can happen if the user or OCC
+                        revoked or expired an access token. To fix, you should re-
+                        authenticate the user.
+                403:
+                    description: |
+                        Bad OAuth request (wrong consumer key, bad nonce, expired
+                        timestamp...). Unfortunately, re-authenticating the user won't help here.
+        settings:
+          authorizationUri: http://api-example.hybris.com/rest/authorizationserver/authorize
+          accessTokenUri: http://api-example.hybris.com/rest/authorizationserver/token
+          authorizationGrants: [ code, token ]
+schemas: 
+- response./orders.GET.200.application/json: !include response..orders.GET.200.application.json.json
+- request./orders.POST.application/json: !include request..orders.POST.application.json.json
+- response./orders.POST.201.application/json: !include response..orders.POST.201.application.json.json
+- response./orders/cancel-reasons.GET.200.application/json: !include response..orders.cancel.reasons.GET.200.application.json.json
+- response./orders/status/{orderStatuses}.GET.200.application/json: !include response..orders.status..orderStatuses..GET.200.application.json.json
+- response./orders/statuses.GET.200.application/json: !include response..orders.statuses.GET.200.application.json.json
+- response./orders/{code}.GET.200.application/json: !include response..orders..code..GET.200.application.json.json
+- request./orders/{code}/cancel.POST.application/json: !include request..orders..code..cancel.POST.application.json.json
+- response./orders/{code}/entries.GET.200.application/json: !include response..orders..code..entries.GET.200.application.json.json
+- response./orders/{code}/entries/{entryNumber}.GET.200.application/json: !include response..orders..code..entries..entryNumber..GET.200.application.json.json
+- response./orders/{code}/fraud-reports.GET.200.application/json: !include response..orders..code..fraud.reports.GET.200.application.json.json
+- response./returns.GET.200.application/json: !include response..returns.GET.200.application.json.json
+- request./returns.POST.application/json: !include request..returns.POST.application.json.json
+- response./returns.POST.201.application/json: !include response..returns.POST.201.application.json.json
+- response./returns/actions.GET.200.application/json: !include response..returns.actions.GET.200.application.json.json
+- request./returns/cancel.POST.application/json: !include request..returns.cancel.POST.application.json.json
+- response./returns/cancel-reasons.GET.200.application/json: !include response..returns.cancel.reasons.GET.200.application.json.json
+- response./returns/refund-reasons.GET.200.application/json: !include response..returns.refund.reasons.GET.200.application.json.json
+- response./returns/status/{returnStatuses}.GET.200.application/json: !include response..returns.status..returnStatuses..GET.200.application.json.json
+- response./returns/statuses.GET.200.application/json: !include response..returns.statuses.GET.200.application.json.json
+- response./returns/{code}.GET.200.application/json: !include response..returns..code..GET.200.application.json.json
+- request./returns/{code}.PUT.application/json: !include request..returns..code..PUT.application.json.json
+- response./returns/{code}.PUT.200.application/json: !include response..returns..code..PUT.200.application.json.json
+- response./returns/{code}/entries.GET.200.application/json: !include response..returns..code..entries.GET.200.application.json.json
+/orders:
+  get:
+    #java method: de.hybris.platform.ordermanagementwebservices.controllers.order.OmsOrdersController.getOrders(String, int, int, String)
+    description: |
+      Request to get all orders in the system
+    responses:
+      200:
+        body:
+          application/json:
+            schema: response./orders.GET.200.application/json
+  post:
+    #java method: de.hybris.platform.ordermanagementwebservices.controllers.order.OmsOrdersController.submitOrder(OrderRequestWsDTO, String)
+    description: |
+      Request to submit order in the system
+    body:
+      application/json:
+        schema: request./orders.POST.application/json
+    responses:
+      201:
+        body:
+          application/json:
+            schema: response./orders.POST.201.application/json
+  /cancel-reasons:
+    get:
+      #java method: de.hybris.platform.ordermanagementwebservices.controllers.order.OmsOrdersController.getCancelReason()
+      description: |
+        Request to get all @link:CancelReason in the system
+      responses:
+        200:
+          body:
+            application/json:
+              schema: response./orders/cancel-reasons.GET.200.application/json
+  /status:
+    /{orderStatuses}:
+      get:
+        #java method: de.hybris.platform.ordermanagementwebservices.controllers.order.OmsOrdersController.getOrdersByStatus(String, String, int, int, String)
+        description: |
+          Request to get all orders with certain order status(es)
+        responses:
+          200:
+            body:
+              application/json:
+                schema: response./orders/status/{orderStatuses}.GET.200.application/json
+  /statuses:
+    get:
+      #java method: de.hybris.platform.ordermanagementwebservices.controllers.order.OmsOrdersController.getOrderStatuses()
+      description: |
+        Request to get all @link:OrderStatus in the system
+      responses:
+        200:
+          body:
+            application/json:
+              schema: response./orders/statuses.GET.200.application/json
+  /{code}:
+    get:
+      #java method: de.hybris.platform.ordermanagementwebservices.controllers.order.OmsOrdersController.getOrderForCode(String, String)
+      description: |
+        Request to get an order by code
+      responses:
+        200:
+          body:
+            application/json:
+              schema: response./orders/{code}.GET.200.application/json
+    /cancel:
+      post:
+        #java method: de.hybris.platform.ordermanagementwebservices.controllers.order.OmsOrdersController.createCancelRequest(OrderCancelRequestWsDTO, String)
+        description: |
+          Request to create order cancellation in the system
+        body:
+          application/json:
+            schema: request./orders/{code}/cancel.POST.application/json
+        responses:
+          200:
+    /entries:
+      get:
+        #java method: de.hybris.platform.ordermanagementwebservices.controllers.order.OmsOrdersController.getOrderEntriesForOrderCode(String, String, int, int, String)
+        description: |
+          Request to get orderEntries for the given @link:de.hybris.platform.core.model.order.OrderModel#CODE
+        responses:
+          200:
+            body:
+              application/json:
+                schema: response./orders/{code}/entries.GET.200.application/json
+      /{entryNumber}:
+        get:
+          #java method: de.hybris.platform.ordermanagementwebservices.controllers.order.OmsOrdersController.getOrderEntryForOrderCodeAndEntryNumber(String, String, String)
+          description: |
+            Request to get orderEntry for the given @link:de.hybris.platform.core.model.order.OrderModel#CODE and @link:de.hybris.platform.core.model.order.OrderEntryModel#ENTRYNUMBER
+          responses:
+            200:
+              body:
+                application/json:
+                  schema: response./orders/{code}/entries/{entryNumber}.GET.200.application/json
+    /fraud-reports:
+      get:
+        #java method: de.hybris.platform.ordermanagementwebservices.controllers.order.OmsOrdersController.getOrderFraudReports(String, String)
+        description: |
+          Request to get fraud reports for a certain order
+        responses:
+          200:
+            body:
+              application/json:
+                schema: response./orders/{code}/fraud-reports.GET.200.application/json
+      /approve:
+        post:
+          #java method: de.hybris.platform.ordermanagementwebservices.controllers.order.OmsOrdersController.approvePotentiallyFraudulentOrder(String)
+          description: |
+            Request to approve a potentially fraudulent order
+          responses:
+            200:
+      /reject:
+        post:
+          #java method: de.hybris.platform.ordermanagementwebservices.controllers.order.OmsOrdersController.rejectPotentiallyFraudulentOrder(String)
+          description: |
+            Request to reject a potentially fraudulent order
+          responses:
+            200:
+/returns:
+  get:
+    #java method: de.hybris.platform.ordermanagementwebservices.controllers.returns.OmsReturnsController.getReturns(String, int, int, String)
+    description: |
+      Request to get paged returns in the system
+    responses:
+      200:
+        body:
+          application/json:
+            schema: response./returns.GET.200.application/json
+  post:
+    #java method: de.hybris.platform.ordermanagementwebservices.controllers.returns.OmsReturnsController.createReturnRequest(ReturnRequestWsDTO, String)
+    description: |
+      Request to create return in the system
+    body:
+      application/json:
+        schema: request./returns.POST.application/json
+    responses:
+      201:
+        body:
+          application/json:
+            schema: response./returns.POST.201.application/json
+  /actions:
+    get:
+      #java method: de.hybris.platform.ordermanagementwebservices.controllers.returns.OmsReturnsController.getReturnActions()
+      description: |
+        Request to get return actions
+      responses:
+        200:
+          body:
+            application/json:
+              schema: response./returns/actions.GET.200.application/json
+  /cancel:
+    post:
+      #java method: de.hybris.platform.ordermanagementwebservices.controllers.returns.OmsReturnsController.cancelReturnRequest(CancelReturnRequestWsDTO)
+      description: |
+        Request to cancel a @link:de.hybris.platform.returns.model.ReturnRequestModel.
+      body:
+        application/json:
+          schema: request./returns/cancel.POST.application/json
+      responses:
+        200:
+  /cancel-reasons:
+    get:
+      #java method: de.hybris.platform.ordermanagementwebservices.controllers.returns.OmsReturnsController.getReturnsCancellationReasons()
+      description: |
+        Request to get return cancellation reasons
+      responses:
+        200:
+          body:
+            application/json:
+              schema: response./returns/cancel-reasons.GET.200.application/json
+  /refund-reasons:
+    get:
+      #java method: de.hybris.platform.ordermanagementwebservices.controllers.returns.OmsReturnsController.getRefundReasons()
+      description: |
+        Request to get refund reasons
+      responses:
+        200:
+          body:
+            application/json:
+              schema: response./returns/refund-reasons.GET.200.application/json
+  /status:
+    /{returnStatuses}:
+      get:
+        #java method: de.hybris.platform.ordermanagementwebservices.controllers.returns.OmsReturnsController.getReturnsByStatus(String, String, int, int, String)
+        description: |
+          Request to get paged returns with certain return status(s)
+        responses:
+          200:
+            body:
+              application/json:
+                schema: response./returns/status/{returnStatuses}.GET.200.application/json
+  /statuses:
+    get:
+      #java method: de.hybris.platform.ordermanagementwebservices.controllers.returns.OmsReturnsController.getReturnStatuses()
+      description: |
+        Request to get all @link:ReturnStatus in the system
+      responses:
+        200:
+          body:
+            application/json:
+              schema: response./returns/statuses.GET.200.application/json
+  /{code}:
+    get:
+      #java method: de.hybris.platform.ordermanagementwebservices.controllers.returns.OmsReturnsController.getReturnForReturnCode(String, String)
+      description: |
+        Request to get ReturnRequest by its code
+      responses:
+        200:
+          body:
+            application/json:
+              schema: response./returns/{code}.GET.200.application/json
+    put:
+      #java method: de.hybris.platform.ordermanagementwebservices.controllers.returns.OmsReturnsController.updateReturnByReturnCode(ReturnRequestModificationWsDTO, String, String)
+      description: |
+        Request to update ReturnRequest by its code
+      body:
+        application/json:
+          schema: request./returns/{code}.PUT.application/json
+      responses:
+        200:
+          body:
+            application/json:
+              schema: response./returns/{code}.PUT.200.application/json
+    /approve:
+      post:
+        #java method: de.hybris.platform.ordermanagementwebservices.controllers.returns.OmsReturnsController.approveReturnRequest(String)
+        description: |
+          Request to approve Return Request
+        responses:
+          200:
+    /entries:
+      get:
+        #java method: de.hybris.platform.ordermanagementwebservices.controllers.returns.OmsReturnsController.getReturnEntriesForOrderCode(String, String, int, int, String)
+        description: |
+          Request to get returnEntries for the given @link:de.hybris.platform.returns.model.ReturnRequestModel#CODE
+        responses:
+          200:
+            body:
+              application/json:
+                schema: response./returns/{code}/entries.GET.200.application/json
+    /reverse-payment:
+      post:
+        #java method: de.hybris.platform.ordermanagementwebservices.controllers.returns.OmsReturnsController.requestManualPaymentReversalForReturnRequest(String)
+        description: |
+          Request to reverse payment manually.
+        responses:
+          200:
+    /reverse-tax:
+      post:
+        #java method: de.hybris.platform.ordermanagementwebservices.controllers.returns.OmsReturnsController.requestManualTaxReversalForReturnRequest(String)
+        description: |
+          Request to reverse tax manually.
+        responses:
+          200:

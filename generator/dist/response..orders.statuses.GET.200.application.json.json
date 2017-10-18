@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "OrderStatusListWsDTO",
+  "type": "object",
+  "properties":
+  {
+    "serialVersionUID":
+    {
+      "description": "Default serialVersionUID value.",
+      "type": "long"
+    },
+    "statuses":
+    {
+      "type": "array",
+      "items":
+      {
+        "type": "string"
+      }
+    }
+  },
+  "definitions":
+  {
+  
+  }
+}
