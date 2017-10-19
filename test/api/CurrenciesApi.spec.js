@@ -26,6 +26,7 @@
   'use strict';
 
   var instance;
+  const currencies = Occ.default.currencies
 
   beforeEach(function() {
     instance = new Occ.default.CurrenciesApi();
@@ -50,12 +51,12 @@
   describe('CurrenciesApi', function() {
     describe('currencies', function() {
       it('should call currencies successfully', function(done) {
-        //uncomment below and update the code to test currencies
-        //instance.currencies(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
+        instance.currencies()
+          .then((res) => {
+            console.log(res)
+            expect(res.currencies[0]).to.eql(currencies);
+            done();
+          })
       });
     });
   });

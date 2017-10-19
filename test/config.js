@@ -8,7 +8,7 @@ const testWrapper = (occ) => {
     occ.catalogName = 'Apparel Product Catalog'
     occ.catalogId = 'apparelProductCatalog'
     occ.catalogVersionId = 'staged'
-
+    occ.currencies = { isocode: 'GBP', name: 'Pound', active: false, symbol: '£' }
     return occ
 }
 
