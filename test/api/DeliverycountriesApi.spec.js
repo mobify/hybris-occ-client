@@ -26,6 +26,7 @@
   'use strict';
 
   var instance;
+  const deliveryCountries = Occ.default.deliveryCountries
 
   beforeEach(function() {
     instance = new Occ.default.DeliverycountriesApi();
@@ -50,12 +51,11 @@
   describe('DeliverycountriesApi', function() {
     describe('deliverycountries', function() {
       it('should call deliverycountries successfully', function(done) {
-        //uncomment below and update the code to test deliverycountries
-        //instance.deliverycountries(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
+        instance.deliverycountries()
+          .then((res) => {
+            expect(res.countries).to.eql(deliveryCountries);
+            done();
+          })
       });
     });
   });
