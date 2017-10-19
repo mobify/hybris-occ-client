@@ -26,6 +26,7 @@
   'use strict';
 
   var instance;
+  const languages = Occ.default.languages
 
   beforeEach(function() {
     instance = new Occ.default.LanguagesApi();
@@ -55,7 +56,12 @@
         //  if (error) throw error;
         //expect().to.be();
         //});
-        done();
+        instance.languages()
+          .then((res) => {
+            console.log(res)
+            expect(res.languages).to.eql(languages);
+            done();
+          })
       });
     });
   });

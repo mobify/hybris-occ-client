@@ -14,31 +14,37 @@ const testWrapper = (occ) => {
         active: false,
         symbol: '£'
     }
-    occ.deliveryCountries = [ {
+    occ.deliveryCountries = [{
             isocode: 'CA',
             name: 'Canada'
         },
-         {
+        {
             isocode: 'GG',
             name: 'Guernsey'
         },
-         {
+        {
             isocode: 'IM',
             name: 'Isle of Man'
         },
-         {
+        {
             isocode: 'JE',
             name: 'Jersey'
         },
-         {
+        {
             isocode: 'GB',
             name: 'United Kingdom'
         },
-         {
+        {
             isocode: 'US',
             name: 'United States'
         }
     ]
+    occ.languages = [{
+        isocode: 'en',
+        name: 'English',
+        nativeName: 'English',
+        active: true
+    }]
 
     return occ
 }
