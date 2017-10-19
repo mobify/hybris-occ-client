@@ -51,14 +51,8 @@
   describe('LanguagesApi', function() {
     describe('languages', function() {
       it('should call languages successfully', function(done) {
-        //uncomment below and update the code to test languages
-        //instance.languages(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
         instance.languages()
           .then((res) => {
-            console.log(res)
             expect(res.languages).to.eql(languages);
             done();
           })
