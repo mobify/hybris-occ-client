@@ -55,7 +55,14 @@
         //  if (error) throw error;
         //expect().to.be();
         //});
-        done();
+        instance.productsByProductCode('123')
+          .then((res) => {
+            console.log(res)
+            // expect(res.languages).to.eql(languages);
+            done();
+          }).catch((err) => {
+            console.log(err)
+          })
       });
     });
     describe('productsExpressupdate', function() {

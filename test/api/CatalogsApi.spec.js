@@ -72,32 +72,20 @@
     });
     describe('catalogsByCatalogIdAndCatalogVersionId', function() {
       it('should call catalogsByCatalogIdAndCatalogVersionId successfully', function(done) {
-        // Test instance does not implement versions
-        // instance.catalogsByCatalogIdAndCatalogVersionId(catalogId, '')
-        //   .then((res) => {
-        //     console.log(res)
-        //     expect(res.name).to.be(catalogName);
-        //     done();
-        //   })
-        //   .catch((err) => {
-        //     console.log(err)
-        //   })
-        done();
+        instance.catalogsByCatalogIdAndCatalogVersionId(catalogId, catalogVersionId)
+          .then((res) => {
+            expect(res.id).to.be(catalogVersionId);
+            done();
+          })
       });
     });
     describe('catalogsCategoriesCategoryIdByCatalogId', function() {
       it('should call catalogsCategoriesCategoryIdByCatalogId successfully', function(done) {
-        // Test instance does not implement versions
-        // instance.catalogsByCatalogIdAndCatalogVersionId(catalogId, '')
-        //   .then((res) => {
-        //     console.log(res)
-        //     expect(res.name).to.be(catalogName);
-        //     done();
-        //   })
-        //   .catch((err) => {
-        //     console.log(err)
-        //   })
-        done();
+        instance.catalogsByCatalogIdAndCatalogVersionId(catalogId, catalogVersionId)
+          .then((res) => {
+            expect(res.id).to.be(catalogVersionId);
+            done();
+          })
       });
     });
   });
