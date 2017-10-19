@@ -50,7 +50,6 @@
   describe('CardtypesApi', function() {
     describe('cardtypes', function() {
       it('should call cardtypes successfully', function(done) {
-        //uncomment below and update the code to test cardtypes
         instance.cardtypes()
           .then((res) => {
             expect(res).to.have.property('cardTypes');
