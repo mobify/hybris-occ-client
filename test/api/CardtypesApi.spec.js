@@ -14,10 +14,10 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD.
-    define(['expect.js', '../../src/index'], factory);
+    define(['expect.js', '../config'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    factory(require('expect.js'), require('../../src/index'));
+    factory(require('expect.js'), require('../config'));
   } else {
     // Browser globals (root is window)
     factory(root.expect, root.Occ);
@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new Occ.CardtypesApi();
+    instance = new Occ.default.CardtypesApi();
   });
 
   var getProperty = function(object, getter, property) {
@@ -51,11 +51,11 @@
     describe('cardtypes', function() {
       it('should call cardtypes successfully', function(done) {
         //uncomment below and update the code to test cardtypes
-        //instance.cardtypes(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
+        instance.cardtypes()
+          .then((res) => {
+            expect(res).to.have.property('cardTypes');
+            done();
+          })
       });
     });
   });
