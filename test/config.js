@@ -121,6 +121,31 @@ const testWrapper = (occ) => {
             }
         ]
     }
+    occ.titles = [{
+            code: 'mr',
+            name: 'Mr.'
+        },
+        {
+            code: 'ms',
+            name: 'Ms.'
+        },
+        {
+            code: 'miss',
+            name: 'Miss'
+        },
+        {
+            code: 'mrs',
+            name: 'Mrs.'
+        },
+        {
+            code: 'dr',
+            name: 'Dr.'
+        },
+        {
+            code: 'rev',
+            name: 'Rev.'
+        }
+    ]
 
     return occ
 }

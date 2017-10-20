@@ -101,11 +101,6 @@
     });
     describe('productsReviewsByProductCode1', function () {
       it('should call productsReviewsByProductCode1 successfully', function (done) {
-        //uncomment below and update the code to test productsReviewsByProductCode1
-        //instance.productsReviewsByProductCode1(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
         instance.productsReviewsByProductCode1(sampleProduct.code, 'Mobify QA review: I love this product!')
           .then((res) => {
             console.dir(res)

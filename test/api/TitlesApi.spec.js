@@ -26,6 +26,7 @@
   'use strict';
 
   var instance;
+  const { titles } = Occ.default
 
   beforeEach(function() {
     instance = new Occ.default.TitlesApi();
@@ -50,12 +51,11 @@
   describe('TitlesApi', function() {
     describe('titles', function() {
       it('should call titles successfully', function(done) {
-        //uncomment below and update the code to test titles
-        //instance.titles(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
+        instance.titles()
+          .then((res) => {
+            expect(res.titles).to.eql(titles);
+            done();
+          })
       });
     });
   });
