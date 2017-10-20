@@ -100,6 +100,7 @@ const testWrapper = (occ) => {
         name: 'London School',
         stockLevelStatus: 'inStock',
         stockLevel: 16,
+        geoPoint: { latitude: 51.513779, longitude: -0.1167 }
     }
     occ.productSuggestion = {
         term: 'h',
