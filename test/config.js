@@ -45,6 +45,82 @@ const testWrapper = (occ) => {
         nativeName: 'English',
         active: true
     }]
+    occ.sampleProduct = {
+        name: 'BT Airhole Helgasons Facemask tiedie LXL',
+        code: '300515779',
+    }
+    occ.search = {
+        'query': 'BT Airhole Helgasons Facemask tiedie LXL',
+        'pageSize': '20',
+        'sort': '',
+        'currentPage': '',
+        'fields': 'FULL'
+    }
+    occ.searchResults = {
+        freeTextSearch: 'BT Airhole Helgasons Facemask tiedie LXL',
+        products: [{
+            code: '300515779',
+            name: 'BT Airhole Helgasons Facemask tiedie LXL',
+            url: '/Categories/Accessories/Bandanas/BT-Airhole-Helgasons-Facemask/p/300515779',
+            baseProduct: '111160'
+        }],
+        sorts: [{
+                code: 'relevance',
+                name: 'Relevance',
+                selected: true
+            },
+            {
+                code: 'topRated',
+                name: 'Top Rated',
+                selected: false
+            },
+            {
+                code: 'name-asc',
+                name: 'Name (ascending)',
+                selected: false
+            },
+            {
+                code: 'name-desc',
+                name: 'Name (descending)',
+                selected: false
+            },
+            {
+                code: 'price-asc',
+                name: 'Price (lowest first)',
+                selected: false
+            },
+            {
+                code: 'price-desc',
+                name: 'Price (highest first)',
+                selected: false
+            }
+        ]
+    }
+    occ.store = {
+        name: 'London School',
+        stockLevelStatus: 'inStock',
+        stockLevel: 16,
+    }
+    occ.productSuggestion = {
+        term: 'h',
+        max: 10,
+        answer: [{
+                value: 'helmet'
+            },
+            {
+                value: 'heather'
+            },
+            {
+                value: 'helm'
+            },
+            {
+                value: 'her'
+            },
+            {
+                value: 'honey'
+            }
+        ]
+    }
 
     return occ
 }
