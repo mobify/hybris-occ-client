@@ -37,6 +37,7 @@
 
     beforeEach(function () {
       instance = new Occ.default.ProductsApi();
+      // instance.apiClient.authentications.auth.accessToken = '35d2fe9d-c20a-4206-9919-d8b7702aa068'
     });
 
   var getProperty = function (object, getter, property) {

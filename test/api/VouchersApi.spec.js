@@ -27,8 +27,15 @@
 
   var instance;
 
-  beforeEach(function() {
+  beforeEach(function(done) {
     instance = new Occ.default.VouchersApi();
+    Occ.default.ApiClient.instance.requestAccessToken()
+      .then(done)
+  });
+  
+  afterEach(function(done) {
+    Occ.default.ApiClient.instance.clearAccessToken()
+    done();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,12 +57,12 @@
   describe('VouchersApi', function() {
     describe('vouchersByCode', function() {
       it('should call vouchersByCode successfully', function(done) {
-        //uncomment below and update the code to test vouchersByCode
-        //instance.vouchersByCode(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
+        const code = 'MAGIC'
+        instance.vouchersByCode(code)
+          .then((res) => {
+            expect(res.code).to.equal(code);
+            done();
+          })
       });
     });
   });

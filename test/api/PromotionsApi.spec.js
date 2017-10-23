@@ -26,6 +26,7 @@
   'use strict';
 
   var instance;
+  const {promotion} = Occ.default
 
   beforeEach(function() {
     instance = new Occ.default.PromotionsApi();
@@ -50,22 +51,20 @@
   describe('PromotionsApi', function() {
     describe('promotions', function() {
       it('should call promotions successfully', function(done) {
-        //uncomment below and update the code to test promotions
-        //instance.promotions(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
+        instance.promotions({promotionGroup: promotion.group, type: 'all'})
+          .then((res) => {
+            expect(res).to.have.property('promotions');
+            done();
+          })
       });
     });
     describe('promotionsByCode', function() {
       it('should call promotionsByCode successfully', function(done) {
-        //uncomment below and update the code to test promotionsByCode
-        //instance.promotionsByCode(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
+        instance.promotionsByCode(promotion.code)
+          .then((res) => {
+            expect(res.code).to.equal(promotion.code);
+            done();
+          })
       });
     });
   });

@@ -26,6 +26,7 @@
   'use strict';
 
   var instance;
+  const {user, address} = Occ.default
 
   beforeEach(function() {
     instance = new Occ.default.UsersApi();
@@ -50,12 +51,16 @@
   describe('UsersApi', function() {
     describe('users', function() {
       it('should call users successfully', function(done) {
-        //uncomment below and update the code to test users
-        //instance.users(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
+        // console.log(user)
+        // instance.users(user)
+        //   .then((res) => {
+        //     console.dir(res)
+        //     // expect(res).to.have.property('cardTypes');
+        //     done();
+        //   })
+        //   .catch((err) => {
+        //     console.log(err)
+        //   })
       });
     });
     describe('usersAddressesByUserId', function() {
@@ -65,7 +70,14 @@
         //  if (error) throw error;
         //expect().to.be();
         //});
-        done();
+        instance.usersAddressesByUserId(user.login)
+          .then((res) => {
+            expect(res).to.have.property('addresses')
+            done();
+          })
+          .catch((err) => {
+            console.log(err)
+          })
       });
     });
     describe('usersAddressesByUserId1', function() {
@@ -75,7 +87,15 @@
         //  if (error) throw error;
         //expect().to.be();
         //});
-        done();
+        instance.usersAddressesByUserId1(user.login, address)
+          .then((res) => {
+            console.dir(res)
+            expect(res).to.have.property('addresses')
+            done();
+          })
+          .catch((err) => {
+            console.log(err)
+          })
       });
     });
     describe('usersAddressesByUserIdAndAddressId', function() {

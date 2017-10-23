@@ -1,9 +1,10 @@
 import * as OCC from '../src/index'
 
 const testWrapper = (occ) => {
-    // TODO: implement base site support in occ class
-    occ.baseSite = 'apparel-uk'
-    occ.ApiClient.instance.basePath = `https://hybris.merlinspotions.com/rest/v2/${occ.baseSite}`
+    const baseSite = 'apparel-uk'
+    const basePath = `https://hybris.merlinspotions.com/rest/v2/${baseSite}`
+    const authorizationUrl = 'https://hybris.merlinspotions.com/authorizationserver/oauth/token'
+    occ.ApiClient.instance = new occ.ApiClient(basePath, authorizationUrl)
 
     occ.catalogName = 'Apparel Product Catalog'
     occ.catalogId = 'apparelProductCatalog'
@@ -147,6 +148,60 @@ const testWrapper = (occ) => {
             name: 'Rev.'
         }
     ]
+    occ.order = {
+        code: '00001700',
+        status: 'COMPLETED',
+        guestCustomer: true,
+        deliveryStatus: 'SHIPPED',
+        fields: [
+            'totalPriceWithTax',
+            'totalPrice',
+            'totalTax',
+            'subTotal',
+            'deliveryCost',
+            'entries',
+            'totalItems',
+            'deliveryMode',
+            'deliveryAddress',
+            'paymentInfo',
+            'appliedOrderPromotions',
+            'appliedProductPromotions',
+            'productDiscounts',
+            'orderDiscounts',
+            'totalDiscounts',
+            'site',
+            'guid',
+            'calculated',
+            'appliedVouchers',
+            'user',
+            'deliveryOrderGroups',
+        ]
+    }
+    occ.promotion = {
+        group: 'apparelUKPromoGrp',
+        code: 'mobify_promotion_test'
+    }
+    occ.user = {
+        firstName: 'Mobify',
+        lastName: 'automation',
+        titleCode: occ.titles[0].code,
+        login: 'mobifyautomation@mobify.com',
+        password: 'Passw0rd!',
+    }
+    occ.address = {
+        firstName: 'Mobify',
+        lastName: 'automation',
+        titleCode: occ.titles[0].code,
+        line1:'725 Granville Street, Suite #420',
+        line2:'',
+        postalCode:'V3J 7T5',
+        town:'Vancouver',
+        'country.isocode':'CA',
+        phone:'(777) 777-7777',
+        companyName:'',
+        id:'',
+        defaultAddress:false
+    }
 
     return occ
 }

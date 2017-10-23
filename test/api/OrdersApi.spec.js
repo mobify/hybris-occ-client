@@ -26,6 +26,7 @@
   'use strict';
 
   var instance;
+  const { order } = Occ.default
 
   beforeEach(function() {
     instance = new Occ.default.OrdersApi();
@@ -50,12 +51,17 @@
   describe('OrdersApi', function() {
     describe('ordersByCode', function() {
       it('should call ordersByCode successfully', function(done) {
-        //uncomment below and update the code to test ordersByCode
-        //instance.ordersByCode(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
+        instance.ordersByCode(order.code)
+          .then((res) => {
+            expect(res.code).to.equal(order.code);
+            expect(res.status).to.equal(order.status);
+            expect(res.guestCustomer).to.equal(order.guestCustomer);
+            expect(res.deliveryStatus).to.equal(order.deliveryStatus);
+            order.fields.forEach((element) => {
+              expect(res).to.have.property(element);
+            }, this);
+            done();
+          })
       });
     });
   });

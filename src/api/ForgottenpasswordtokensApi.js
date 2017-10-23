@@ -59,7 +59,7 @@ export default class ForgottenpasswordtokensApi {
       let authNames = ['auth'];
       let contentTypes = ['application/x-www-form-urlencoded'];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = 'string';
 
       return this.apiClient.callApi(
         '/forgottenpasswordtokens', 'POST',

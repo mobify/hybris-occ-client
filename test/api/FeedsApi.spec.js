@@ -50,12 +50,12 @@
   describe('FeedsApi', function() {
     describe('feedsOrdersStatusfeed', function() {
       it('should call feedsOrdersStatusfeed successfully', function(done) {
-        //uncomment below and update the code to test feedsOrdersStatusfeed
-        //instance.feedsOrdersStatusfeed(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
+        const timestamp = '2017-07-23T17:00:00Z'
+        instance.feedsOrdersStatusfeed({timestamp})
+          .then((res) => {
+            expect(res).to.have.property('orderStatusUpdateElements');
+            done();
+          })
       });
     });
   });
