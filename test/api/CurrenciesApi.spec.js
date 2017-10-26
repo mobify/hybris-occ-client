@@ -53,7 +53,6 @@
       it('should call currencies successfully', function(done) {
         instance.currencies()
           .then((res) => {
-            console.log(res)
             expect(res.currencies[0]).to.eql(currencies);
             done();
           })

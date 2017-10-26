@@ -50,6 +50,12 @@ const testWrapper = (occ) => {
         name: 'BT Airhole Helgasons Facemask tiedie LXL',
         code: '300515779',
     }
+    occ.productReview = {
+        alias: 'Mobify',
+        headline: 'Mobify Review',
+        comment: 'Mobify comment',
+        rating: 5
+    }
     occ.search = {
         'query': 'BT Airhole Helgasons Facemask tiedie LXL',
         'pageSize': '20',
@@ -181,14 +187,17 @@ const testWrapper = (occ) => {
         group: 'apparelUKPromoGrp',
         code: 'mobify_promotion_test'
     }
-    occ.user = {
+
+    occ.user = occ.UserSignUpWsDTOModel.constructFromObject({
         firstName: 'Mobify',
-        lastName: 'automation',
+        lastName: 'Automation',
         titleCode: occ.titles[0].code,
-        login: 'mobifyautomation@mobify.com',
+        uid: 'mobifyautomation@mobify.com',
         password: 'Passw0rd!',
-    }
-    occ.address = {
+    })
+        
+
+    occ.address = occ.AddressWsDTO296Model.constructFromObject({
         firstName: 'Mobify',
         lastName: 'automation',
         titleCode: occ.titles[0].code,
@@ -196,13 +205,22 @@ const testWrapper = (occ) => {
         line2:'',
         postalCode:'V3J 7T5',
         town:'Vancouver',
-        'country.isocode':'CA',
+        country:{
+            isocode: 'CA'
+        },
         phone:'(777) 777-7777',
         companyName:'',
-        id:'',
         defaultAddress:false
-    }
+    })
 
+    occ.payment = {
+        billingAddress: occ.address,
+        cardType: {code: 'visa'},
+        cardNumber: '4111111111111111',
+        accountHolderName: 'Mobify',
+        expiryYear: '2020',
+        expiryMonth: '12',
+    }
     return occ
 }
 

@@ -26,6 +26,17 @@
   'use strict';
 
   var instance;
+  const {user} = Occ.default
+
+  before((done) => {
+    Occ.default.ApiClient.instance.requestAccessToken()
+      .then(done)
+  })
+
+  after((done) => {
+    Occ.default.ApiClient.instance.clearAccessToken()
+    done();
+  })
 
   beforeEach(function() {
     instance = new Occ.default.ForgottenpasswordtokensApi();
@@ -55,7 +66,10 @@
         //  if (error) throw error;
         //expect().to.be();
         //});
-        done();
+        instance.forgottenpasswordtokens({userId: user.uid})
+          .then((res) => {
+            done();
+          })
       });
     });
   });

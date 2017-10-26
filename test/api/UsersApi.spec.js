@@ -26,9 +26,27 @@
   'use strict';
 
   var instance;
-  const {user, address} = Occ.default
+  const {user, address, titles, sampleProduct, payment} = Occ.default
+  const entryNumber = 0
+  var addressId
+  var cartId
+  var orderEntry
+
+  before((done) => {
+    Occ.default.ApiClient.instance.requestAccessToken()
+      .then(done)
+  })
+
+  after((done) => {
+    Occ.default.ApiClient.instance.clearAccessToken()
+    done();
+  })
 
   beforeEach(function() {
+    instance = new Occ.default.UsersApi();
+  });
+
+  afterEach(function() {
     instance = new Occ.default.UsersApi();
   });
 
@@ -49,365 +67,477 @@
   }
 
   describe('UsersApi', function() {
+    // create user
     describe('users', function() {
       it('should call users successfully', function(done) {
-        // console.log(user)
-        // instance.users(user)
-        //   .then((res) => {
-        //     console.dir(res)
-        //     // expect(res).to.have.property('cardTypes');
-        //     done();
-        //   })
-        //   .catch((err) => {
-        //     console.log(err)
-        //   })
-      });
-    });
-    describe('usersAddressesByUserId', function() {
-      it('should call usersAddressesByUserId successfully', function(done) {
-        //uncomment below and update the code to test usersAddressesByUserId
-        //instance.usersAddressesByUserId(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        instance.usersAddressesByUserId(user.login)
-          .then((res) => {
-            expect(res).to.have.property('addresses')
-            done();
-          })
+        instance.users(user)
+          .then(done)
           .catch((err) => {
-            console.log(err)
+            const error = JSON.parse(err.response.text).errors[0].type;
+            if (error === "DuplicateUidError") done();
           })
       });
     });
+
+    // post user address
     describe('usersAddressesByUserId1', function() {
       it('should call usersAddressesByUserId1 successfully', function(done) {
-        //uncomment below and update the code to test usersAddressesByUserId1
-        //instance.usersAddressesByUserId1(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        instance.usersAddressesByUserId1(user.login, address)
+        instance.usersAddressesByUserId1(user.uid, address)
           .then((res) => {
-            console.dir(res)
-            expect(res).to.have.property('addresses')
+            expect(res.firstName).to.equal(user.firstName)
             done();
           })
-          .catch((err) => {
-            console.log(err)
+      });
+    });
+
+    // verify user address
+    describe('usersAddressesVerificationByUserId', function() {
+      it('should call usersAddressesVerificationByUserId successfully', function(done) {
+        instance.usersAddressesVerificationByUserId(user.uid, address)
+          .then(() => done())
+      });
+    });
+
+    // get user address
+    describe('usersAddressesByUserId', function() {
+      it('should call usersAddressesByUserId successfully', function(done) {
+        instance.usersAddressesByUserId(user.uid)
+          .then((res) => {
+            expect(res).to.have.property('addresses')
+            addressId = res.addresses[0].id
+            done();
           })
       });
     });
+
+    // GET 
     describe('usersAddressesByUserIdAndAddressId', function() {
       it('should call usersAddressesByUserIdAndAddressId successfully', function(done) {
-        //uncomment below and update the code to test usersAddressesByUserIdAndAddressId
-        //instance.usersAddressesByUserIdAndAddressId(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
+        instance.usersAddressesByUserIdAndAddressId(user.uid, addressId)
+          .then((res) => {
+            expect(res.id).to.be.equal(addressId)
+            done();
+          })
       });
     });
+
+    // PUT
     describe('usersAddressesByUserIdAndAddressId1', function() {
       it('should call usersAddressesByUserIdAndAddressId1 successfully', function(done) {
-        //uncomment below and update the code to test usersAddressesByUserIdAndAddressId1
-        //instance.usersAddressesByUserIdAndAddressId1(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
+        address.line2 = 'PUT'
+        instance.usersAddressesByUserIdAndAddressId1(user.uid, addressId, address)
+          .then(() => instance.usersAddressesByUserIdAndAddressId(user.uid, addressId))
+          .then((res) => {
+            expect(res.line2).to.equal('PUT')
+            done();
+          })
       });
     });
+
+    // PATCH
     describe('usersAddressesByUserIdAndAddressId2', function() {
       it('should call usersAddressesByUserIdAndAddressId2 successfully', function(done) {
-        //uncomment below and update the code to test usersAddressesByUserIdAndAddressId2
-        //instance.usersAddressesByUserIdAndAddressId2(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
+        address.line2 = 'PATCH'
+        instance.usersAddressesByUserIdAndAddressId2(user.uid, addressId, {line2: 'PATCH'})
+          .then(() => instance.usersAddressesByUserIdAndAddressId(user.uid, addressId))
+          .then((res) => {
+            expect(res.line2).to.equal('PATCH')
+            done();
+          })
       });
     });
-    describe('usersAddressesByUserIdAndAddressId3', function() {
-      it('should call usersAddressesByUserIdAndAddressId3 successfully', function(done) {
-        //uncomment below and update the code to test usersAddressesByUserIdAndAddressId3
-        //instance.usersAddressesByUserIdAndAddressId3(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('usersAddressesVerificationByUserId', function() {
-      it('should call usersAddressesVerificationByUserId successfully', function(done) {
-        //uncomment below and update the code to test usersAddressesVerificationByUserId
-        //instance.usersAddressesVerificationByUserId(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
+
+    // GET
     describe('usersByUserId', function() {
       it('should call usersByUserId successfully', function(done) {
-        //uncomment below and update the code to test usersByUserId
-        //instance.usersByUserId(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
+        instance.usersByUserId(user.uid)
+          .then((res) => {
+            expect(res.uid).to.equal(user.uid);
+            done();
+          })
       });
     });
+
+    // PUT
     describe('usersByUserId1', function() {
       it('should call usersByUserId1 successfully', function(done) {
-        //uncomment below and update the code to test usersByUserId1
-        //instance.usersByUserId1(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
+        user.titleCode = titles[1].code
+        instance.usersByUserId1(user.uid, user)
+          .then(() => instance.usersByUserId(user.uid))
+          .then((res) => {
+            expect(res.titleCode).to.equal(titles[1].code);
+            done();
+          })
       });
     });
+
+    // PATCH
     describe('usersByUserId2', function() {
       it('should call usersByUserId2 successfully', function(done) {
-        //uncomment below and update the code to test usersByUserId2
-        //instance.usersByUserId2(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
+        instance.usersByUserId2(user.uid, {titleCode: titles[2].code})
+          .then(() => instance.usersByUserId(user.uid))
+          .then((res) => {
+            expect(res.titleCode).to.equal(titles[2].code);
+            done();
+          })
       });
     });
-    describe('usersByUserId3', function() {
-      it('should call usersByUserId3 successfully', function(done) {
-        //uncomment below and update the code to test usersByUserId3
-        //instance.usersByUserId3(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('usersCartsAddressesDeliveryByUserId', function() {
-      it('should call usersCartsAddressesDeliveryByUserId successfully', function(done) {
-        //uncomment below and update the code to test usersCartsAddressesDeliveryByUserId
-        //instance.usersCartsAddressesDeliveryByUserId(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('usersCartsAddressesDeliveryByUserId1', function() {
-      it('should call usersCartsAddressesDeliveryByUserId1 successfully', function(done) {
-        //uncomment below and update the code to test usersCartsAddressesDeliveryByUserId1
-        //instance.usersCartsAddressesDeliveryByUserId1(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('usersCartsAddressesDeliveryByUserId2', function() {
-      it('should call usersCartsAddressesDeliveryByUserId2 successfully', function(done) {
-        //uncomment below and update the code to test usersCartsAddressesDeliveryByUserId2
-        //instance.usersCartsAddressesDeliveryByUserId2(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('usersCartsByUserId', function() {
-      it('should call usersCartsByUserId successfully', function(done) {
-        //uncomment below and update the code to test usersCartsByUserId
-        //instance.usersCartsByUserId(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
+
+    // POST, create cart by user id
     describe('usersCartsByUserId1', function() {
       it('should call usersCartsByUserId1 successfully', function(done) {
-        //uncomment below and update the code to test usersCartsByUserId1
-        //instance.usersCartsByUserId1(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
+        instance.usersCartsByUserId1(user.uid)
+          .then((res) => {
+            expect(res).to.have.property('code')
+            cartId = res.code
+            done();
+          })
       });
     });
-    describe('usersCartsByUserIdAndCartId', function() {
-      it('should call usersCartsByUserIdAndCartId successfully', function(done) {
-        //uncomment below and update the code to test usersCartsByUserIdAndCartId
-        //instance.usersCartsByUserIdAndCartId(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('usersCartsByUserIdAndCartId1', function() {
-      it('should call usersCartsByUserIdAndCartId1 successfully', function(done) {
-        //uncomment below and update the code to test usersCartsByUserIdAndCartId1
-        //instance.usersCartsByUserIdAndCartId1(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('usersCartsClonesavedcartByUserId', function() {
-      it('should call usersCartsClonesavedcartByUserId successfully', function(done) {
-        //uncomment below and update the code to test usersCartsClonesavedcartByUserId
-        //instance.usersCartsClonesavedcartByUserId(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('usersCartsDeliverymodeByUserIdAndCartId', function() {
-      it('should call usersCartsDeliverymodeByUserIdAndCartId successfully', function(done) {
-        //uncomment below and update the code to test usersCartsDeliverymodeByUserIdAndCartId
-        //instance.usersCartsDeliverymodeByUserIdAndCartId(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('usersCartsDeliverymodeByUserIdAndCartId1', function() {
-      it('should call usersCartsDeliverymodeByUserIdAndCartId1 successfully', function(done) {
-        //uncomment below and update the code to test usersCartsDeliverymodeByUserIdAndCartId1
-        //instance.usersCartsDeliverymodeByUserIdAndCartId1(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('usersCartsDeliverymodeByUserIdAndCartId2', function() {
-      it('should call usersCartsDeliverymodeByUserIdAndCartId2 successfully', function(done) {
-        //uncomment below and update the code to test usersCartsDeliverymodeByUserIdAndCartId2
-        //instance.usersCartsDeliverymodeByUserIdAndCartId2(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('usersCartsDeliverymodesByUserIdAndCartId', function() {
-      it('should call usersCartsDeliverymodesByUserIdAndCartId successfully', function(done) {
-        //uncomment below and update the code to test usersCartsDeliverymodesByUserIdAndCartId
-        //instance.usersCartsDeliverymodesByUserIdAndCartId(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('usersCartsEmailByUserIdAndCartId', function() {
-      it('should call usersCartsEmailByUserIdAndCartId successfully', function(done) {
-        //uncomment below and update the code to test usersCartsEmailByUserIdAndCartId
-        //instance.usersCartsEmailByUserIdAndCartId(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('usersCartsEntriesByUserIdAndCartId', function() {
-      it('should call usersCartsEntriesByUserIdAndCartId successfully', function(done) {
-        //uncomment below and update the code to test usersCartsEntriesByUserIdAndCartId
-        //instance.usersCartsEntriesByUserIdAndCartId(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
+
+    // POST, add entries to the cart
     describe('usersCartsEntriesByUserIdAndCartId1', function() {
       it('should call usersCartsEntriesByUserIdAndCartId1 successfully', function(done) {
-        //uncomment below and update the code to test usersCartsEntriesByUserIdAndCartId1
-        //instance.usersCartsEntriesByUserIdAndCartId1(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
+        instance.usersCartsEntriesByUserIdAndCartId1(user.uid,
+          cartId,
+          {product:{code: sampleProduct.code}, qty: 1}
+        )
+          .then((res) => {
+            expect(res).to.have.property('product')
+            done();
+          })
       });
     });
+
+    // GET, entries in the cart
+    describe('usersCartsEntriesByUserIdAndCartId', function() {
+      it('should call usersCartsEntriesByUserIdAndCartId successfully', function(done) {
+        instance.usersCartsEntriesByUserIdAndCartId(user.uid, cartId)
+          .then((res) => {
+            expect(res.orderEntries[entryNumber].product.code).to.equal(sampleProduct.code)
+            orderEntry = res.orderEntries[entryNumber]
+            done();
+          })
+      });
+    });
+
+    // GET, entry details 
     describe('usersCartsEntriesEntryNumberByUserId', function() {
       it('should call usersCartsEntriesEntryNumberByUserId successfully', function(done) {
-        //uncomment below and update the code to test usersCartsEntriesEntryNumberByUserId
-        //instance.usersCartsEntriesEntryNumberByUserId(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
+        instance.usersCartsEntriesEntryNumberByUserId(user.uid, cartId, entryNumber)
+          .then((res) => {
+            expect(res).to.eql(orderEntry)
+            done();
+          })
       });
     });
+
+    // PUT, update entry, clear fields that is not in req body
     describe('usersCartsEntriesEntryNumberByUserId1', function() {
       it('should call usersCartsEntriesEntryNumberByUserId1 successfully', function(done) {
-        //uncomment below and update the code to test usersCartsEntriesEntryNumberByUserId1
-        //instance.usersCartsEntriesEntryNumberByUserId1(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
+        const updatedQuantity = 2
+        orderEntry.quantity = updatedQuantity
+        instance.usersCartsEntriesEntryNumberByUserId1(user.uid, cartId, entryNumber, orderEntry)
+          .then((res) => {
+            expect(res.quantity).to.equal(updatedQuantity)
+            done();
+          })
       });
     });
+
+    // PATCH, update entry with certain fields
     describe('usersCartsEntriesEntryNumberByUserId2', function() {
       it('should call usersCartsEntriesEntryNumberByUserId2 successfully', function(done) {
-        //uncomment below and update the code to test usersCartsEntriesEntryNumberByUserId2
-        //instance.usersCartsEntriesEntryNumberByUserId2(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
+        const updatedQuantity = 3
+        instance.usersCartsEntriesEntryNumberByUserId2(user.uid, cartId, entryNumber, {quantity: 3})
+          .then((res) => {
+            expect(res.quantity).to.equal(updatedQuantity)
+            done();
+          })
       });
     });
-    describe('usersCartsEntriesEntryNumberByUserId3', function() {
-      it('should call usersCartsEntriesEntryNumberByUserId3 successfully', function(done) {
-        //uncomment below and update the code to test usersCartsEntriesEntryNumberByUserId3
-        //instance.usersCartsEntriesEntryNumberByUserId3(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
+    
+    // POST apply voucher
+    describe('usersCartsVouchersByUserIdAndCartId1', function() {
+      it('should call usersCartsVouchersByUserIdAndCartId1 successfully', function(done) {
+        instance.usersCartsVouchersByUserIdAndCartId1(user.uid, cartId, 'MAGIC')
+          .then((res) => {
+            done();
+          })
       });
     });
+    
+    
+    // GET applied voucher
+    describe('usersCartsVouchersByUserIdAndCartId', function() {
+      it('should call usersCartsVouchersByUserIdAndCartId successfully', function(done) {
+        instance.usersCartsVouchersByUserIdAndCartId(user.uid, cartId)
+          .then((res) => {
+            expect(res).to.have.property('vouchers')
+            done();
+          })
+      });
+    });
+
+    // DELETE apply voucher
+    describe('usersCartsVouchersVoucherIdByUserId', function() {
+      it('should call usersCartsVouchersVoucherIdByUserId successfully', function(done) {
+        instance.usersCartsVouchersVoucherIdByUserId(user.uid, cartId, 'MAGIC')
+          .then((res) => {
+            done();
+          })
+      });
+    });
+
+    // // PUT Assigns an email to the guest cart
+    // describe('usersCartsEmailByUserIdAndCartId', function() {
+    //   it('should call usersCartsEmailByUserIdAndCartId successfully', function(done) {
+    //     instance.usersCartsEmailByUserIdAndCartId(user.uid, cartId, {email: user.uid})
+    //       .then((res) => {
+    //         console.log(res)
+    //         // expect(res).to.have.property('deliveryCost')
+    //         // expect(res.code).to.equal('standard-gross')
+    //         done();
+    //       })
+    //   });
+    // });
+
+    // GET, all carts by user id
+    describe('usersCartsByUserId', function() {
+      it('should call usersCartsByUserId successfully', function(done) {
+        instance.usersCartsByUserId(user.uid)
+          .then((res) => {
+            expect(res.carts[0].code).to.equal(cartId)
+            done();
+          })
+      });
+    });
+
+    // GET, cart by user id and cart id
+    describe('usersCartsByUserIdAndCartId', function() {
+      it('should call usersCartsByUserIdAndCartId successfully', function(done) {
+        instance.usersCartsByUserIdAndCartId(user.uid, cartId)
+          .then((res) => {
+            expect(res.code).to.equal(cartId)
+            done();
+          })
+      });
+    });
+
     describe('usersCartsFlagForDeletionByUserId', function() {
       it('should call usersCartsFlagForDeletionByUserId successfully', function(done) {
-        //uncomment below and update the code to test usersCartsFlagForDeletionByUserId
-        //instance.usersCartsFlagForDeletionByUserId(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
+        instance.usersCartsFlagForDeletionByUserId(user.uid, cartId)
+          .then((res) => {
+            expect(res).to.have.property('savedCartData')
+            done();
+          })
       });
     });
-    describe('usersCartsPaymentdetailsByUserId', function() {
-      it('should call usersCartsPaymentdetailsByUserId successfully', function(done) {
-        //uncomment below and update the code to test usersCartsPaymentdetailsByUserId
-        //instance.usersCartsPaymentdetailsByUserId(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
+
+    // POST create and assign delivery address to cart
+    describe('usersCartsAddressesDeliveryByUserId', function() {
+      it('should call usersCartsAddressesDeliveryByUserId successfully', function(done) {
+        instance.usersCartsAddressesDeliveryByUserId(user.uid, cartId, address)
+          .then((res) => {
+            expect(res.firstName).to.equal(user.firstName)
+            done();
+          })
       });
     });
-    describe('usersCartsPaymentdetailsByUserId1', function() {
-      it('should call usersCartsPaymentdetailsByUserId1 successfully', function(done) {
-        //uncomment below and update the code to test usersCartsPaymentdetailsByUserId1
-        //instance.usersCartsPaymentdetailsByUserId1(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
+
+    // GET all delivery modes for cart
+    describe('usersCartsDeliverymodesByUserIdAndCartId', function() {
+      it('should call usersCartsDeliverymodesByUserIdAndCartId successfully', function(done) {
+        instance.usersCartsDeliverymodesByUserIdAndCartId(user.uid, cartId)
+          .then((res) => {
+            expect(res).to.have.property('deliveryModes')
+            done();
+          })
       });
     });
+
+    // PUT set delivery mode to cart
+    describe('usersCartsDeliverymodeByUserIdAndCartId1', function() {
+      it('should call usersCartsDeliverymodeByUserIdAndCartId1 successfully', function(done) {
+        instance.usersCartsDeliverymodeByUserIdAndCartId1(user.uid, cartId, 'standard-gross')
+          .then((res) => {
+            console.log(res)
+            done();
+          })
+          .catch((err)=>console.log(err))
+      });
+    });
+
+    // GET selected delivery mode of cart
+    describe('usersCartsDeliverymodeByUserIdAndCartId', function() {
+      it('should call usersCartsDeliverymodeByUserIdAndCartId successfully', function(done) {
+        instance.usersCartsDeliverymodeByUserIdAndCartId(user.uid, cartId)
+          .then((res) => {
+            expect(res).to.have.property('deliveryCost')
+            expect(res.code).to.equal('standard-gross')
+            done();
+          })
+      });
+    });
+    
+    // PUT assign delivery address to cart
+    describe('usersCartsAddressesDeliveryByUserId1', function() {
+      it('should call usersCartsAddressesDeliveryByUserId1 successfully', function(done) {
+        instance.usersCartsAddressesDeliveryByUserId1(user.uid, cartId, addressId)
+          .then(done)
+          .catch((err)=>console.log(err))
+      });
+    });
+
+    // // POST new credit card add to cart
+    // // payment info is invalid?
+    // describe('usersCartsPaymentdetailsByUserId', function() {
+    //   it('should call usersCartsPaymentdetailsByUserId successfully', function(done) {
+    //     instance.usersCartsPaymentdetailsByUserId(user.uid, cartId, payment)
+    //       .then((res) => {
+    //         console.log(res)
+    //         expect(res.quantity).to.equal(updatedQuantity)
+    //         done();
+    //       })
+    //       .catch((err)=>console.log(err))
+    //   });
+    // });
+
+    // // PUT set payment details
+    // describe('usersCartsPaymentdetailsByUserId1', function() {
+    //   it('should call usersCartsPaymentdetailsByUserId1 successfully', function(done) {
+    //     //uncomment below and update the code to test usersCartsPaymentdetailsByUserId1
+    //     //instance.usersCartsPaymentdetailsByUserId1(function(error) {
+    //     //  if (error) throw error;
+    //     //expect().to.be();
+    //     //});
+    //     done();
+    //   });
+    // });
+
+    // // POST post order
+    // describe('usersOrdersByUserId2', function() {
+    //   it('should call usersOrdersByUserId2 successfully', function(done) {
+    //     //uncomment below and update the code to test usersOrdersByUserId2
+    //     //instance.usersOrdersByUserId2(function(error) {
+    //     //  if (error) throw error;
+    //     //expect().to.be();
+    //     //});
+    //     done();
+    //   });
+    // });
+
+    // // GET user order history
+    // describe('usersOrdersByUserId1', function() {
+    //   it('should call usersOrdersByUserId1 successfully', function(done) {
+    //     //uncomment below and update the code to test usersOrdersByUserId1
+    //     //instance.usersOrdersByUserId1(function(error) {
+    //     //  if (error) throw error;
+    //     //expect().to.be();
+    //     //});
+    //     done();
+    //   });
+    // });
+
+    // // GET order detail
+    // describe('usersOrdersByUserIdAndCode', function() {
+    //   it('should call usersOrdersByUserIdAndCode successfully', function(done) {
+    //     //uncomment below and update the code to test usersOrdersByUserIdAndCode
+    //     //instance.usersOrdersByUserIdAndCode(function(error) {
+    //     //  if (error) throw error;
+    //     //expect().to.be();
+    //     //});
+    //     done();
+    //   });
+    // });
+
+    // DELETE, delete cart entry
+    describe('usersCartsEntriesEntryNumberByUserId3', function() {
+      it('should call usersCartsEntriesEntryNumberByUserId3 successfully', function(done) {
+        instance.usersCartsEntriesEntryNumberByUserId3(user.uid, cartId, entryNumber)
+          .then((res) => {
+            done();
+          })
+      });
+    });
+
+    // DELETE delivery address from cart
+    describe('usersCartsAddressesDeliveryByUserId2', function() {
+      it('should call usersCartsAddressesDeliveryByUserId2 successfully', function(done) {
+        instance.usersCartsAddressesDeliveryByUserId2(user.uid, cartId)
+          .then(done)
+      });
+    });
+    
+
+    // // POST clone a cart
+    // // TODO: fix 'cannot clone a saved cart'
+    // describe('usersCartsClonesavedcartByUserId', function() {
+    //   it('should call usersCartsClonesavedcartByUserId successfully', function(done) {
+    //     instance.usersCartsClonesavedcartByUserId(user.uid, '00002110')
+    //       .then((res) => {
+    //         console.log(res)
+    //         console.log(cartId)
+    //         // expect(res.firstName).to.equal(user.firstName)
+    //         done();
+    //       })
+    //       .catch((err)=>console.log(err))
+    //   });
+    // });
+
+    // DELETE cart delivery mode
+    describe('usersCartsDeliverymodeByUserIdAndCartId2', function() {
+      it('should call usersCartsDeliverymodeByUserIdAndCartId2 successfully', function(done) {
+        instance.usersCartsDeliverymodeByUserIdAndCartId2(user.uid, cartId)
+          .then(done)
+      });
+    });
+
+    // DELETE cart
+    describe('usersCartsByUserIdAndCartId1', function() {
+      it('should call usersCartsByUserIdAndCartId1 successfully', function(done) {
+        instance.usersCartsByUserIdAndCartId1(user.uid, cartId)
+          .then((res) => {
+            // expect(res.carts[0].guid).to.equal(cartId)
+            done();
+          })
+      });
+    });
+    
+    // DELETE user address by address id
+    describe('usersAddressesByUserIdAndAddressId3', function() {
+      it('should call usersAddressesByUserIdAndAddressId3 successfully', function(done) {
+        instance.usersAddressesByUserIdAndAddressId3(user.uid, addressId)
+          .then(() => instance.usersAddressesByUserIdAndAddressId(user.uid, addressId))
+          .catch((err) => {
+            const error = JSON.parse(err.response.text).errors[0]
+            const message = `Address with given id: \'${addressId}\' doesn\'t exist or belong to another user`
+            if (JSON.parse(err.response.text).errors[0].message === message) done();
+          })
+      });
+    });
+
+    // PUT update user password
+    describe('usersPasswordByUserId', function() {
+      it('should call usersPasswordByUserId successfully', function(done) {
+        instance.usersPasswordByUserId(user.uid, {_new: user.password, old: `${user.password}!`})
+          .then((res) => {
+            done();
+          })
+      });
+    });
+
+    // DELETE user by user if
+    describe('usersByUserId3', function() {
+      it('should call usersByUserId3 successfully', function(done) {
+        instance.usersByUserId3(user.uid)
+          .then(() => instance.usersByUserId(user.uid))
+          .then((res) => {
+            done();
+          })
+      });
+    });
+  
     describe('usersCartsPromotionsByUserIdAndCartId', function() {
       it('should call usersCartsPromotionsByUserIdAndCartId successfully', function(done) {
         //uncomment below and update the code to test usersCartsPromotionsByUserIdAndCartId
@@ -478,36 +608,8 @@
         done();
       });
     });
-    describe('usersCartsVouchersByUserIdAndCartId', function() {
-      it('should call usersCartsVouchersByUserIdAndCartId successfully', function(done) {
-        //uncomment below and update the code to test usersCartsVouchersByUserIdAndCartId
-        //instance.usersCartsVouchersByUserIdAndCartId(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('usersCartsVouchersByUserIdAndCartId1', function() {
-      it('should call usersCartsVouchersByUserIdAndCartId1 successfully', function(done) {
-        //uncomment below and update the code to test usersCartsVouchersByUserIdAndCartId1
-        //instance.usersCartsVouchersByUserIdAndCartId1(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('usersCartsVouchersVoucherIdByUserId', function() {
-      it('should call usersCartsVouchersVoucherIdByUserId successfully', function(done) {
-        //uncomment below and update the code to test usersCartsVouchersVoucherIdByUserId
-        //instance.usersCartsVouchersVoucherIdByUserId(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
+    
+    
     describe('usersCustomergroupsByUserId', function() {
       it('should call usersCustomergroupsByUserId successfully', function(done) {
         //uncomment below and update the code to test usersCustomergroupsByUserId
@@ -528,96 +630,57 @@
         done();
       });
     });
-    describe('usersOrdersByUserId1', function() {
-      it('should call usersOrdersByUserId1 successfully', function(done) {
-        //uncomment below and update the code to test usersOrdersByUserId1
-        //instance.usersOrdersByUserId1(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('usersOrdersByUserId2', function() {
-      it('should call usersOrdersByUserId2 successfully', function(done) {
-        //uncomment below and update the code to test usersOrdersByUserId2
-        //instance.usersOrdersByUserId2(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('usersOrdersByUserIdAndCode', function() {
-      it('should call usersOrdersByUserIdAndCode successfully', function(done) {
-        //uncomment below and update the code to test usersOrdersByUserIdAndCode
-        //instance.usersOrdersByUserIdAndCode(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('usersPasswordByUserId', function() {
-      it('should call usersPasswordByUserId successfully', function(done) {
-        //uncomment below and update the code to test usersPasswordByUserId
-        //instance.usersPasswordByUserId(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('usersPaymentdetailsByUserId', function() {
-      it('should call usersPaymentdetailsByUserId successfully', function(done) {
-        //uncomment below and update the code to test usersPaymentdetailsByUserId
-        //instance.usersPaymentdetailsByUserId(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('usersPaymentdetailsByUserId1', function() {
-      it('should call usersPaymentdetailsByUserId1 successfully', function(done) {
-        //uncomment below and update the code to test usersPaymentdetailsByUserId1
-        //instance.usersPaymentdetailsByUserId1(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('usersPaymentdetailsByUserId2', function() {
-      it('should call usersPaymentdetailsByUserId2 successfully', function(done) {
-        //uncomment below and update the code to test usersPaymentdetailsByUserId2
-        //instance.usersPaymentdetailsByUserId2(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('usersPaymentdetailsByUserId3', function() {
-      it('should call usersPaymentdetailsByUserId3 successfully', function(done) {
-        //uncomment below and update the code to test usersPaymentdetailsByUserId3
-        //instance.usersPaymentdetailsByUserId3(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('usersPaymentdetailsByUserId4', function() {
-      it('should call usersPaymentdetailsByUserId4 successfully', function(done) {
-        //uncomment below and update the code to test usersPaymentdetailsByUserId4
-        //instance.usersPaymentdetailsByUserId4(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
+
+    // describe('usersPaymentdetailsByUserId', function() {
+    //   it('should call usersPaymentdetailsByUserId successfully', function(done) {
+    //     //uncomment below and update the code to test usersPaymentdetailsByUserId
+    //     //instance.usersPaymentdetailsByUserId(function(error) {
+    //     //  if (error) throw error;
+    //     //expect().to.be();
+    //     //});
+    //     done();
+    //   });
+    // });
+    // describe('usersPaymentdetailsByUserId1', function() {
+    //   it('should call usersPaymentdetailsByUserId1 successfully', function(done) {
+    //     //uncomment below and update the code to test usersPaymentdetailsByUserId1
+    //     //instance.usersPaymentdetailsByUserId1(function(error) {
+    //     //  if (error) throw error;
+    //     //expect().to.be();
+    //     //});
+    //     done();
+    //   });
+    // });
+    // describe('usersPaymentdetailsByUserId2', function() {
+    //   it('should call usersPaymentdetailsByUserId2 successfully', function(done) {
+    //     //uncomment below and update the code to test usersPaymentdetailsByUserId2
+    //     //instance.usersPaymentdetailsByUserId2(function(error) {
+    //     //  if (error) throw error;
+    //     //expect().to.be();
+    //     //});
+    //     done();
+    //   });
+    // });
+    // describe('usersPaymentdetailsByUserId3', function() {
+    //   it('should call usersPaymentdetailsByUserId3 successfully', function(done) {
+    //     //uncomment below and update the code to test usersPaymentdetailsByUserId3
+    //     //instance.usersPaymentdetailsByUserId3(function(error) {
+    //     //  if (error) throw error;
+    //     //expect().to.be();
+    //     //});
+    //     done();
+    //   });
+    // });
+    // describe('usersPaymentdetailsByUserId4', function() {
+    //   it('should call usersPaymentdetailsByUserId4 successfully', function(done) {
+    //     //uncomment below and update the code to test usersPaymentdetailsByUserId4
+    //     //instance.usersPaymentdetailsByUserId4(function(error) {
+    //     //  if (error) throw error;
+    //     //expect().to.be();
+    //     //});
+    //     done();
+    //   });
+    // });
   });
 
 }));
