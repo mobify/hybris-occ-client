@@ -101,7 +101,7 @@ export default class StoresApi {
      * @param {String} opts.longitude Coordinate that specifies the east-west position of a point on the Earth&#39;s surface.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/StoreFinderSearchPageWsDTOModel}
      */
-    stores1(opts) {
+    getStores(opts) {
       return this.stores1WithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;
@@ -110,7 +110,7 @@ export default class StoresApi {
 
 
     /**
-     * StoresByStoreId
+     * getStore
      * Returns store location based on its unique name. 
      * @param {String} storeId Store identifier (currently store name)
      * @param {Object} opts Optional parameters
@@ -123,7 +123,7 @@ export default class StoresApi {
 
       // verify the required parameter 'storeId' is set
       if (storeId === undefined || storeId === null) {
-        throw new Error("Missing the required parameter 'storeId' when calling storesByStoreId");
+        throw new Error("Missing the required parameter 'storeId' when calling getStore");
       }
 
 
@@ -151,14 +151,14 @@ export default class StoresApi {
     }
 
     /**
-     * StoresByStoreId
+     * getStore
      * Returns store location based on its unique name. 
      * @param {String} storeId Store identifier (currently store name)
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/PointOfServiceWsDTOModel}
      */
-    storesByStoreId(storeId, opts) {
+    getStore(storeId, opts) {
       return this.storesByStoreIdWithHttpInfo(storeId, opts)
         .then(function(response_and_data) {
           return response_and_data.data;

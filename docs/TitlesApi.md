@@ -4,16 +4,16 @@ All URIs are relative to *http://api-example.hybris.com/rest/v2/DefaultParameter
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**titles**](TitlesApi.md#titles) | **GET** /titles | Titles
+[**getTitles**](TitlesApi.md#getTitles) | **GET** /titles | getTitles
 
 
-<a name="titles"></a>
-# **titles**
-> TitleListWsDTOModel titles(opts)
+<a name="getTitles"></a>
+# **getTitles**
+> TitleListWsDTOModel getTitles(opts)
 
-Titles
+getTitles
 
-Lists all localized titles. 
+Lists all localized getTitles. 
 
 ### Example
 ```javascript
@@ -29,7 +29,7 @@ let apiInstance = new Occ.TitlesApi();
 let opts = { 
   'fields': "fields_example" // String | Response configuration (list of fields, which should be returned in response)
 };
-apiInstance.titles(opts).then((data) => {
+apiInstance.getTitles(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);

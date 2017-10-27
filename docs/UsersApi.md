@@ -4,9 +4,9 @@ All URIs are relative to *http://api-example.hybris.com/rest/v2/DefaultParameter
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**users**](UsersApi.md#users) | **POST** /users | Users
-[**usersAddressesByUserId**](UsersApi.md#usersAddressesByUserId) | **GET** /users/{userId}/addresses | UsersAddressesByUserId
-[**usersAddressesByUserId1**](UsersApi.md#usersAddressesByUserId1) | **POST** /users/{userId}/addresses | UsersAddressesByUserId
+[**postUsers**](UsersApi.md#postUsers) | **POST** /users | postUsers
+[**getUserAddresses**](UsersApi.md#getUserAddresses) | **GET** /users/{userId}/addresses | getUserAddresses
+[**usersAddressesByUserId1**](UsersApi.md#usersAddressesByUserId1) | **POST** /users/{userId}/addresses | getUserAddresses
 [**usersAddressesByUserIdAndAddressId**](UsersApi.md#usersAddressesByUserIdAndAddressId) | **GET** /users/{userId}/addresses/{addressId} | UsersAddressesByUserIdAndAddressId
 [**usersAddressesByUserIdAndAddressId1**](UsersApi.md#usersAddressesByUserIdAndAddressId1) | **PUT** /users/{userId}/addresses/{addressId} | UsersAddressesByUserIdAndAddressId
 [**usersAddressesByUserIdAndAddressId2**](UsersApi.md#usersAddressesByUserIdAndAddressId2) | **PATCH** /users/{userId}/addresses/{addressId} | UsersAddressesByUserIdAndAddressId
@@ -61,9 +61,9 @@ Method | HTTP request | Description
 [**usersPaymentdetailsByUserId4**](UsersApi.md#usersPaymentdetailsByUserId4) | **GET** /users/{userId}/paymentdetails | UsersPaymentdetailsByUserId
 
 
-<a name="users"></a>
-# **users**
-> users(body)
+<a name="postUsers"></a>
+# **postUsers**
+> postUsers(body)
 
 Users
 
@@ -82,7 +82,7 @@ let apiInstance = new Occ.UsersApi();
 
 let body = new Occ.UserSignUpWsDTOModel(); // UserSignUpWsDTOModel | 
 
-apiInstance.users(body).then(() => {
+apiInstance.postUsers(body).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -109,11 +109,11 @@ null (empty response body)
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="usersAddressesByUserId"></a>
-# **usersAddressesByUserId**
-> AddressListWsDTOModel usersAddressesByUserId(userId, opts)
+<a name="getUserAddresses"></a>
+# **getUserAddresses**
+> AddressListWsDTOModel getUserAddresses(userId, opts)
 
-UsersAddressesByUserId
+getUserAddresses
 
 Returns customer&#39;s addresses.  Security: Permitted for trusted clients, customers and customer managers. Trusted client or customer manager is able to impersonate as any other user and access data on their behalf. 
 
@@ -133,7 +133,7 @@ let userId = "userId_example"; // String | User identifier or one of the literal
 let opts = { 
   'fields': "fields_example" // String | Response configuration (list of fields, which should be returned in the response)
 };
-apiInstance.usersAddressesByUserId(userId, opts).then((data) => {
+apiInstance.getUserAddresses(userId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -165,7 +165,7 @@ Name | Type | Description  | Notes
 # **usersAddressesByUserId1**
 > AddressWsDTO296Model usersAddressesByUserId1(userId, body, opts)
 
-UsersAddressesByUserId
+getUserAddresses
 
 Creates a new address.  Security: Permitted for customers, guests, customer managers or trusted client. Trusted client or customer manager is able to impersonate as any other user and access data on their behalf. 
 

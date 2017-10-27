@@ -49,18 +49,18 @@
   }
 
   describe('PromotionsApi', function() {
-    describe('promotions', function() {
-      it('should call promotions successfully', function(done) {
-        instance.promotions({promotionGroup: promotion.group, type: 'all'})
+    describe('getPromotions', function() {
+      it('should call getPromotions successfully', function(done) {
+        instance.getPromotions({promotionGroup: promotion.group, type: 'all'})
           .then((res) => {
             expect(res).to.have.property('promotions');
             done();
           })
       });
     });
-    describe('promotionsByCode', function() {
-      it('should call promotionsByCode successfully', function(done) {
-        instance.promotionsByCode(promotion.code)
+    describe('getPromotion', function() {
+      it('should call getPromotion successfully', function(done) {
+        instance.getPromotion(promotion.code)
           .then((res) => {
             expect(res.code).to.equal(promotion.code);
             done();

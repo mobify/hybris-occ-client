@@ -49,18 +49,18 @@
   }
 
   describe('StoresApi', function() {
-    describe('stores1', function() {
-      it('should call stores1 successfully', function(done) {
-        instance.stores1({query: store.name})
+    describe('getStores', function() {
+      it('should call getStores successfully', function(done) {
+        instance.getStores({query: store.name})
           .then((res) => {
             expect(res.stores[0].name).to.equal(store.name);
             done();
           })
       });
     });
-    describe('storesByStoreId', function() {
-      it('should call storesByStoreId successfully', function(done) {
-        instance.storesByStoreId(store.name)
+    describe('getStore', function() {
+      it('should call getStore successfully', function(done) {
+        instance.getStore(store.name)
           .then((res) => {
             expect(res.geoPoint).to.eql(store.geoPoint);
             done();

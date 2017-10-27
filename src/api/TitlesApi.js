@@ -36,7 +36,7 @@ export default class TitlesApi {
 
 
     /**
-     * Titles
+     * getTitles
      * Lists all localized titles. 
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
@@ -70,13 +70,13 @@ export default class TitlesApi {
     }
 
     /**
-     * Titles
-     * Lists all localized titles. 
+     * getTitles
+     * Lists all localized getTitles. 
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/TitleListWsDTOModel}
      */
-    titles(opts) {
+    getTitles(opts) {
       return this.titlesWithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;

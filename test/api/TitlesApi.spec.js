@@ -49,9 +49,9 @@
   }
 
   describe('TitlesApi', function() {
-    describe('titles', function() {
-      it('should call titles successfully', function(done) {
-        instance.titles()
+    describe('getTitles', function() {
+      it('should call getTitles successfully', function(done) {
+        instance.getTitles()
           .then((res) => {
             expect(res.titles).to.eql(titles);
             done();

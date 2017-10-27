@@ -68,9 +68,9 @@
 
   describe('UsersApi', function() {
     // create user
-    describe('users', function() {
-      it('should call users successfully', function(done) {
-        instance.users(user)
+    describe('postUsers', function() {
+      it('should call postUsers successfully', function(done) {
+        instance.postUsers(user)
           .then(done)
           .catch((err) => {
             const error = JSON.parse(err.response.text).errors[0].type;
@@ -99,9 +99,9 @@
     });
 
     // get user address
-    describe('usersAddressesByUserId', function() {
-      it('should call usersAddressesByUserId successfully', function(done) {
-        instance.usersAddressesByUserId(user.uid)
+    describe('getUserAddresses', function() {
+      it('should call getUserAddresses successfully', function(done) {
+        instance.getUserAddresses(user.uid)
           .then((res) => {
             expect(res).to.have.property('addresses')
             addressId = res.addresses[0].id

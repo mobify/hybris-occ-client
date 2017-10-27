@@ -57,7 +57,7 @@ export default class UsersApi {
 
 
     /**
-     * Users
+     * postUsers
      * Registers a customer. The following two sets of parameters are available: &lt;ul&gt; &lt;li&gt;First set is used to register a customer. In this case the required parameters are: login, password, firstName, lastName, titleCode.&lt;/li&gt; &lt;li&gt;Second set is used to convert a guest to a customer. In this case the required parameters are: guid, password. &lt;/li&gt; &lt;ul&gt;  Security: Permitted only for customer managers, clients or trusted clients. 
      * @param {module:models/UserSignUpWsDTOModel} body 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
@@ -67,7 +67,7 @@ export default class UsersApi {
 
       // verify the required parameter 'body' is set
       if (body === undefined || body === null) {
-        throw new Error("Missing the required parameter 'body' when calling users");
+        throw new Error("Missing the required parameter 'body' when calling postUsers");
       }
 
 
@@ -93,12 +93,12 @@ export default class UsersApi {
     }
 
     /**
-     * Users
+     * postUsers
      * Registers a customer. The following two sets of parameters are available: &lt;ul&gt; &lt;li&gt;First set is used to register a customer. In this case the required parameters are: login, password, firstName, lastName, titleCode.&lt;/li&gt; &lt;li&gt;Second set is used to convert a guest to a customer. In this case the required parameters are: guid, password. &lt;/li&gt; &lt;ul&gt;  Security: Permitted only for customer managers, clients or trusted clients. 
      * @param {module:models/UserSignUpWsDTOModel} body 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    users(body) {
+    postUsers(body) {
       return this.usersWithHttpInfo(body)
         .then(function(response_and_data) {
           return response_and_data.data;
@@ -107,7 +107,7 @@ export default class UsersApi {
 
 
     /**
-     * UsersAddressesByUserId
+     * getUserAddresses
      * Returns customer&#39;s addresses.  Security: Permitted for trusted clients, customers and customer managers. Trusted client or customer manager is able to impersonate as any other user and access data on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {Object} opts Optional parameters
@@ -120,7 +120,7 @@ export default class UsersApi {
 
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling usersAddressesByUserId");
+        throw new Error("Missing the required parameter 'userId' when calling getUserAddresses");
       }
 
 
@@ -148,14 +148,14 @@ export default class UsersApi {
     }
 
     /**
-     * UsersAddressesByUserId
+     * getUserAddresses
      * Returns customer&#39;s addresses.  Security: Permitted for trusted clients, customers and customer managers. Trusted client or customer manager is able to impersonate as any other user and access data on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in the response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/AddressListWsDTOModel}
      */
-    usersAddressesByUserId(userId, opts) {
+    getUserAddresses(userId, opts) {
       return this.usersAddressesByUserIdWithHttpInfo(userId, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
