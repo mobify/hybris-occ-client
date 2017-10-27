@@ -57,24 +57,24 @@
   }
 
   describe('ProductsApi', function () {
-    describe('productsByProductCode', function () {
-      it('should call productsByProductCode successfully', function (done) {
-        instance.productsByProductCode(sampleProduct.code)
+    describe('getProduct', function () {
+      it('should call getProduct successfully', function (done) {
+        instance.getProduct(sampleProduct.code)
           .then((res) => {
             expect(res.name).to.equal(sampleProduct.name);
             done();
           })
       });
     });
-    describe('productsExpressupdate', function () {
-      it('should call productsExpressupdate successfully', function (done) {
+    describe('getProductExpressupdate', function () {
+      it('should call getProductExpressupdate successfully', function (done) {
         // unsupported
         done();
       });
     });
-    describe('productsReferencesByProductCode', function () {
-      it('should call productsReferencesByProductCode successfully', function (done) {
-        // instance.productsReferencesByProductCode(sampleProduct.code, {referenceType: 'a'})
+    describe('getProductReferences', function () {
+      it('should call getProductReferences successfully', function (done) {
+        // instance.getProductReferences(sampleProduct.code, {referenceType: 'a'})
         //   .then((res) => {
         //     done();
         //   })
@@ -84,27 +84,27 @@
           done();
       });
     });
-    describe('productsReviewsByProductCode', function () {
-      it('should call productsReviewsByProductCode successfully', function (done) {
-        instance.productsReviewsByProductCode(sampleProduct.code)
+    describe('getProductReviews', function () {
+      it('should call getProductReviews successfully', function (done) {
+        instance.getProductReviews(sampleProduct.code)
           .then((res) => {
             expect(res).to.have.property('reviews');
             done();
           })
       });
     });
-    describe('productsReviewsByProductCode1', function () {
-      it('should call productsReviewsByProductCode1 successfully', function (done) {
-        instance.productsReviewsByProductCode1(sampleProduct.code, productReview)
+    describe('postProductReview', function () {
+      it('should call postProductReview successfully', function (done) {
+        instance.postProductReview(sampleProduct.code, productReview)
           .then((res) => {
             expect(res.headline).to.equal(productReview.headline);
             done();
           })
       });
     });
-    describe('productsSearch1', function () {
-      it('should call productsSearch1 successfully', function (done) {
-        instance.productsSearch1(search)
+    describe('getProductSearch', function () {
+      it('should call getProductSearch successfully', function (done) {
+        instance.getProductSearch(search)
           .then((res) => {
             expect(res.freeTextSearch).to.equal(searchResults.freeTextSearch);
             expect(res.sorts).to.eql(searchResults.sorts);
@@ -113,9 +113,9 @@
           })
       });
     });
-    describe('productsStockByProductCode1', function () {
-      it('should call productsStockByProductCode1 successfully', function (done) {
-        instance.productsStockByProductCode1(sampleProduct.code, {location: store.name})
+    describe('getProductStock', function () {
+      it('should call getProductStock successfully', function (done) {
+        instance.getProductStock(sampleProduct.code, {location: store.name})
           .then((res) => {
             expect(res.stores[0].name).to.equal(store.name);
             expect(res.product.code).to.equal(sampleProduct.code);
@@ -123,9 +123,9 @@
           })
       });
     });
-    describe('productsStockByProductCodeAndStoreName', function () {
-      it('should call productsStockByProductCodeAndStoreName successfully', function (done) {
-        instance.productsStockByProductCodeAndStoreName(sampleProduct.code, store.name)
+    describe('getProductsStockByProductCodeAndStoreName', function () {
+      it('should call getProductsStockByProductCodeAndStoreName successfully', function (done) {
+        instance.getProductsStockByProductCodeAndStoreName(sampleProduct.code, store.name)
           .then((res) => {
             expect(res.stockLevelStatus).to.equal(store.stockLevelStatus);
             expect(res.stockLevel).to.equal(store.stockLevel);
@@ -133,9 +133,9 @@
           })
       });
     });
-    describe('productsSuggestions', function () {
-      it('should call productsSuggestions successfully', function (done) {
-        instance.productsSuggestions(productSuggestion.max, productSuggestion.term)
+    describe('getProductSuggestions', function () {
+      it('should call getProductSuggestions successfully', function (done) {
+        instance.getProductSuggestions(productSuggestion.max, productSuggestion.term)
           .then((res) => {
             expect(res.suggestions).to.eql(productSuggestion.answer);
             done();

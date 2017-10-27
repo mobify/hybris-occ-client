@@ -48,10 +48,10 @@
   }
 
   describe('FeedsApi', function() {
-    describe('feedsOrdersStatusfeed', function() {
-      it('should call feedsOrdersStatusfeed successfully', function(done) {
+    describe('getOrdersStatusfeed', function() {
+      it('should call getOrdersStatusfeed successfully', function(done) {
         const timestamp = '2017-07-23T17:00:00Z'
-        instance.feedsOrdersStatusfeed({timestamp})
+        instance.getOrdersStatusfeed({timestamp})
           .then((res) => {
             expect(res).to.have.property('orderStatusUpdateElements');
             done();

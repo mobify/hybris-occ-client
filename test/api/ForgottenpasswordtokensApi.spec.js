@@ -59,14 +59,14 @@
   }
 
   describe('ForgottenpasswordtokensApi', function() {
-    describe('forgottenpasswordtokens', function() {
-      it('should call forgottenpasswordtokens successfully', function(done) {
-        //uncomment below and update the code to test forgottenpasswordtokens
-        //instance.forgottenpasswordtokens(function(error) {
+    describe('', function() {
+      it('should call  successfully', function(done) {
+        //uncomment below and update the code to test 
+        //instance.(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
-        instance.forgottenpasswordtokens({userId: user.uid})
+        instance.({userId: user.uid})
           .then((res) => {
             done();
           })

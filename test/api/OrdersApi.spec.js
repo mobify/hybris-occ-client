@@ -49,9 +49,9 @@
   }
 
   describe('OrdersApi', function() {
-    describe('ordersByCode', function() {
-      it('should call ordersByCode successfully', function(done) {
-        instance.ordersByCode(order.code)
+    describe('getOrder', function() {
+      it('should call getOrder successfully', function(done) {
+        instance.getOrder(order.code)
           .then((res) => {
             expect(res.code).to.equal(order.code);
             expect(res.status).to.equal(order.status);

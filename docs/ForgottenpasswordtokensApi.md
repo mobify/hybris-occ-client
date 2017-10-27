@@ -4,14 +4,14 @@ All URIs are relative to *http://api-example.hybris.com/rest/v2/DefaultParameter
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**forgottenpasswordtokens**](ForgottenpasswordtokensApi.md#forgottenpasswordtokens) | **POST** /forgottenpasswordtokens | Forgottenpasswordtokens
+[****](ForgottenpasswordtokensApi.md#) | **POST** / | 
 
 
-<a name="forgottenpasswordtokens"></a>
-# **forgottenpasswordtokens**
-> forgottenpasswordtokens(opts)
+<a name=""></a>
+# ****
+> (opts)
 
-Forgottenpasswordtokens
+
 
 Generates a token to restore customer&#39;s forgotten password.  Security: Allowed only for client or trusted client 
 
@@ -29,7 +29,7 @@ let apiInstance = new Occ.ForgottenpasswordtokensApi();
 let opts = { 
   'userId': "userId_example" // String | Customer's user id. Customer user id is case insensitive.
 };
-apiInstance.forgottenpasswordtokens(opts).then(() => {
+apiInstance.(opts).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);

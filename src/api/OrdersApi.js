@@ -36,7 +36,7 @@ export default class OrdersApi {
 
 
     /**
-     * OrdersByCode
+     * getOrder
      * Returns details of a specific order based on order GUID (Globally Unique Identifier) or order CODE. The response contains a detailed order information.  Security: Allowed only for trusted client 
      * @param {String} code Order GUID (Globally Unique Identifier) or order CODE
      * @param {Object} opts Optional parameters
@@ -49,7 +49,7 @@ export default class OrdersApi {
 
       // verify the required parameter 'code' is set
       if (code === undefined || code === null) {
-        throw new Error("Missing the required parameter 'code' when calling ordersByCode");
+        throw new Error("Missing the required parameter 'code' when calling getOrder");
       }
 
 
@@ -77,14 +77,14 @@ export default class OrdersApi {
     }
 
     /**
-     * OrdersByCode
+     * getOrder
      * Returns details of a specific order based on order GUID (Globally Unique Identifier) or order CODE. The response contains a detailed order information.  Security: Allowed only for trusted client 
      * @param {String} code Order GUID (Globally Unique Identifier) or order CODE
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/OrderWsDTOModel}
      */
-    ordersByCode(code, opts) {
+    getOrder(code, opts) {
       return this.ordersByCodeWithHttpInfo(code, opts)
         .then(function(response_and_data) {
           return response_and_data.data;

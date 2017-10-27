@@ -49,9 +49,9 @@
   }
 
   describe('LanguagesApi', function() {
-    describe('languages', function() {
-      it('should call languages successfully', function(done) {
-        instance.languages()
+    describe('getLanguages', function() {
+      it('should call getLanguages successfully', function(done) {
+        instance.getLanguages()
           .then((res) => {
             expect(res.languages).to.eql(languages);
             done();

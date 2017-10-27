@@ -36,7 +36,7 @@ export default class DeliverycountriesApi {
 
 
     /**
-     * Deliverycountries
+     * getDeliverycountries
      * Lists all supported delivery countries for the current store. The list is sorted alphabetically. 
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
@@ -70,13 +70,13 @@ export default class DeliverycountriesApi {
     }
 
     /**
-     * Deliverycountries
+     * getDeliverycountries
      * Lists all supported delivery countries for the current store. The list is sorted alphabetically. 
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/CountryListWsDTOModel}
      */
-    deliverycountries(opts) {
+    getDeliverycountries(opts) {
       return this.deliverycountriesWithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;

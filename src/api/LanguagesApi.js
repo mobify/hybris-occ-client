@@ -36,7 +36,7 @@ export default class LanguagesApi {
 
 
     /**
-     * Languages
+     * getLanguages
      * Lists all available languages (all languages used for a particular store). If the list of languages for a base store is empty, a list of all languages available in the system will be returned. 
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
@@ -70,13 +70,13 @@ export default class LanguagesApi {
     }
 
     /**
-     * Languages
+     * getLanguages
      * Lists all available languages (all languages used for a particular store). If the list of languages for a base store is empty, a list of all languages available in the system will be returned. 
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/LanguageListWsDTOModel}
      */
-    languages(opts) {
+    getLanguages(opts) {
       return this.languagesWithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;
