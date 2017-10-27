@@ -79,7 +79,7 @@ export default class CatalogsApi {
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/CatalogListWsDTOModel}
      */
-    catalogs(opts) {
+    getCatalogs(opts) {
       return this.catalogsWithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;
@@ -88,7 +88,7 @@ export default class CatalogsApi {
 
 
     /**
-     * CatalogsByCatalogId
+     * getCatalog
      * Returns a information about a catalog based on its ID, along with versions defined for the current base store. 
      * @param {String} catalogId Catalog identifier
      * @param {Object} opts Optional parameters
@@ -101,7 +101,7 @@ export default class CatalogsApi {
 
       // verify the required parameter 'catalogId' is set
       if (catalogId === undefined || catalogId === null) {
-        throw new Error("Missing the required parameter 'catalogId' when calling catalogsByCatalogId");
+        throw new Error("Missing the required parameter 'catalogId' when calling getCatalog");
       }
 
 
@@ -129,14 +129,14 @@ export default class CatalogsApi {
     }
 
     /**
-     * CatalogsByCatalogId
+     * getCatalog
      * Returns a information about a catalog based on its ID, along with versions defined for the current base store. 
      * @param {String} catalogId Catalog identifier
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/CatalogWsDTOModel}
      */
-    catalogsByCatalogId(catalogId, opts) {
+    getCatalog(catalogId, opts) {
       return this.catalogsByCatalogIdWithHttpInfo(catalogId, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
@@ -159,12 +159,12 @@ export default class CatalogsApi {
 
       // verify the required parameter 'catalogId' is set
       if (catalogId === undefined || catalogId === null) {
-        throw new Error("Missing the required parameter 'catalogId' when calling catalogsByCatalogIdAndCatalogVersionId");
+        throw new Error("Missing the required parameter 'catalogId' when calling getCatalogsByCatalogIdAndCatalogVersionId");
       }
 
       // verify the required parameter 'catalogVersionId' is set
       if (catalogVersionId === undefined || catalogVersionId === null) {
-        throw new Error("Missing the required parameter 'catalogVersionId' when calling catalogsByCatalogIdAndCatalogVersionId");
+        throw new Error("Missing the required parameter 'catalogVersionId' when calling getCatalogsByCatalogIdAndCatalogVersionId");
       }
 
 
@@ -201,7 +201,7 @@ export default class CatalogsApi {
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/CatalogVersionWsDTOModel}
      */
-    catalogsByCatalogIdAndCatalogVersionId(catalogId, catalogVersionId, opts) {
+    getCatalogsByCatalogIdAndCatalogVersionId(catalogId, catalogVersionId, opts) {
       return this.catalogsByCatalogIdAndCatalogVersionIdWithHttpInfo(catalogId, catalogVersionId, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
@@ -210,7 +210,7 @@ export default class CatalogsApi {
 
 
     /**
-     * CatalogsCategoriesCategoryIdByCatalogId
+     * getCategory
      * Returns information about category that exists in a catalog version available for the current base store. 
      * @param {String} catalogId Catalog identifier
      * @param {String} catalogVersionId Catalog version identifier
@@ -227,17 +227,17 @@ export default class CatalogsApi {
 
       // verify the required parameter 'catalogId' is set
       if (catalogId === undefined || catalogId === null) {
-        throw new Error("Missing the required parameter 'catalogId' when calling catalogsCategoriesCategoryIdByCatalogId");
+        throw new Error("Missing the required parameter 'catalogId' when calling getCategory");
       }
 
       // verify the required parameter 'catalogVersionId' is set
       if (catalogVersionId === undefined || catalogVersionId === null) {
-        throw new Error("Missing the required parameter 'catalogVersionId' when calling catalogsCategoriesCategoryIdByCatalogId");
+        throw new Error("Missing the required parameter 'catalogVersionId' when calling getCategory");
       }
 
       // verify the required parameter 'categoryId' is set
       if (categoryId === undefined || categoryId === null) {
-        throw new Error("Missing the required parameter 'categoryId' when calling catalogsCategoriesCategoryIdByCatalogId");
+        throw new Error("Missing the required parameter 'categoryId' when calling getCategory");
       }
 
 
@@ -269,7 +269,7 @@ export default class CatalogsApi {
     }
 
     /**
-     * CatalogsCategoriesCategoryIdByCatalogId
+     * getCategory
      * Returns information about category that exists in a catalog version available for the current base store. 
      * @param {String} catalogId Catalog identifier
      * @param {String} catalogVersionId Catalog version identifier
@@ -280,7 +280,7 @@ export default class CatalogsApi {
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/CategoryHierarchyWsDTOModel}
      */
-    catalogsCategoriesCategoryIdByCatalogId(catalogId, catalogVersionId, categoryId, opts) {
+    getCategory(catalogId, catalogVersionId, categoryId, opts) {
       return this.catalogsCategoriesCategoryIdByCatalogIdWithHttpInfo(catalogId, catalogVersionId, categoryId, opts)
         .then(function(response_and_data) {
           return response_and_data.data;

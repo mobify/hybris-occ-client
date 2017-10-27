@@ -39,7 +39,7 @@ export default class CustomergroupsApi {
 
 
     /**
-     * Customergroups
+     * getCustomergroups
      * Returns all customer groups that are direct subgroups of a customergroup.  Security: Permitted only for customer managers 
      * @param {Object} opts Optional parameters
      * @param {String} opts.pageSize Number of customer group returned in one page
@@ -77,7 +77,7 @@ export default class CustomergroupsApi {
     }
 
     /**
-     * Customergroups
+     * getCustomergroups
      * Returns all customer groups that are direct subgroups of a customergroup.  Security: Permitted only for customer managers 
      * @param {Object} opts Optional parameters
      * @param {String} opts.pageSize Number of customer group returned in one page
@@ -85,7 +85,7 @@ export default class CustomergroupsApi {
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/UserGroupListWsDTOModel}
      */
-    customergroups(opts) {
+    getCustomergroups(opts) {
       return this.customergroupsWithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;
@@ -104,7 +104,7 @@ export default class CustomergroupsApi {
 
       // verify the required parameter 'body' is set
       if (body === undefined || body === null) {
-        throw new Error("Missing the required parameter 'body' when calling customergroups1");
+        throw new Error("Missing the required parameter 'body' when calling postCustomergroup");
       }
 
 
@@ -135,7 +135,7 @@ export default class CustomergroupsApi {
      * @param {module:models/UserGroupWsDTOModel} body 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    customergroups1(body) {
+    postCustomergroup(body) {
       return this.customergroups1WithHttpInfo(body)
         .then(function(response_and_data) {
           return response_and_data.data;
@@ -144,7 +144,7 @@ export default class CustomergroupsApi {
 
 
     /**
-     * CustomergroupsByGroupId
+     * getCustomergroup
      * Returns a customer group with a specific groupId.  Security: Permitted only for customer managers 
      * @param {String} groupId Group identifier
      * @param {Object} opts Optional parameters
@@ -157,7 +157,7 @@ export default class CustomergroupsApi {
 
       // verify the required parameter 'groupId' is set
       if (groupId === undefined || groupId === null) {
-        throw new Error("Missing the required parameter 'groupId' when calling customergroupsByGroupId");
+        throw new Error("Missing the required parameter 'groupId' when calling getCustomergroup");
       }
 
 
@@ -185,14 +185,14 @@ export default class CustomergroupsApi {
     }
 
     /**
-     * CustomergroupsByGroupId
+     * getCustomergroup
      * Returns a customer group with a specific groupId.  Security: Permitted only for customer managers 
      * @param {String} groupId Group identifier
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/UserGroupWsDTO17Model}
      */
-    customergroupsByGroupId(groupId, opts) {
+    getCustomergroup(groupId, opts) {
       return this.customergroupsByGroupIdWithHttpInfo(groupId, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
@@ -201,7 +201,7 @@ export default class CustomergroupsApi {
 
 
     /**
-     * CustomergroupsMembersByGroupId
+     * putCustomergroupsMembers
      * Sets members for a user group. The list of existing members is overwritten with a new one.  Security: Permitted only for customer managers 
      * @param {String} groupId Group identifier
      * @param {module:models/MemberListWsDTOModel} body 
@@ -212,12 +212,12 @@ export default class CustomergroupsApi {
 
       // verify the required parameter 'groupId' is set
       if (groupId === undefined || groupId === null) {
-        throw new Error("Missing the required parameter 'groupId' when calling customergroupsMembersByGroupId");
+        throw new Error("Missing the required parameter 'groupId' when calling putCustomergroupsMembers");
       }
 
       // verify the required parameter 'body' is set
       if (body === undefined || body === null) {
-        throw new Error("Missing the required parameter 'body' when calling customergroupsMembersByGroupId");
+        throw new Error("Missing the required parameter 'body' when calling putCustomergroupsMembers");
       }
 
 
@@ -244,13 +244,13 @@ export default class CustomergroupsApi {
     }
 
     /**
-     * CustomergroupsMembersByGroupId
+     * putCustomergroupsMembers
      * Sets members for a user group. The list of existing members is overwritten with a new one.  Security: Permitted only for customer managers 
      * @param {String} groupId Group identifier
      * @param {module:models/MemberListWsDTOModel} body 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    customergroupsMembersByGroupId(groupId, body) {
+    putCustomergroupsMembers(groupId, body) {
       return this.customergroupsMembersByGroupIdWithHttpInfo(groupId, body)
         .then(function(response_and_data) {
           return response_and_data.data;
@@ -259,7 +259,7 @@ export default class CustomergroupsApi {
 
 
     /**
-     * CustomergroupsMembersByGroupId
+     * patchCustomergroupsMembers
      * Assigns user(s) to a customer group.  Security: Permitted only for customer managers 
      * @param {String} groupId Group identifier
      * @param {module:models/MemberListWsDTOModel} body 
@@ -270,12 +270,12 @@ export default class CustomergroupsApi {
 
       // verify the required parameter 'groupId' is set
       if (groupId === undefined || groupId === null) {
-        throw new Error("Missing the required parameter 'groupId' when calling customergroupsMembersByGroupId1");
+        throw new Error("Missing the required parameter 'groupId' when calling patchCustomergroupsMembers");
       }
 
       // verify the required parameter 'body' is set
       if (body === undefined || body === null) {
-        throw new Error("Missing the required parameter 'body' when calling customergroupsMembersByGroupId1");
+        throw new Error("Missing the required parameter 'body' when calling patchCustomergroupsMembers");
       }
 
 
@@ -302,13 +302,13 @@ export default class CustomergroupsApi {
     }
 
     /**
-     * CustomergroupsMembersByGroupId
+     * patchCustomergroupsMembers
      * Assigns user(s) to a customer group.  Security: Permitted only for customer managers 
      * @param {String} groupId Group identifier
      * @param {module:models/MemberListWsDTOModel} body 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    customergroupsMembersByGroupId1(groupId, body) {
+    patchCustomergroupsMembers(groupId, body) {
       return this.customergroupsMembersByGroupId1WithHttpInfo(groupId, body)
         .then(function(response_and_data) {
           return response_and_data.data;
@@ -317,7 +317,7 @@ export default class CustomergroupsApi {
 
 
     /**
-     * CustomergroupsMembersByGroupIdAndUserId
+     * deleteCustomergroupsMember
      * Removes user from a customer group.  Security: Permitted only for customer managers 
      * @param {String} groupId Group identifier
      * @param {String} userId User identifier
@@ -328,12 +328,12 @@ export default class CustomergroupsApi {
 
       // verify the required parameter 'groupId' is set
       if (groupId === undefined || groupId === null) {
-        throw new Error("Missing the required parameter 'groupId' when calling customergroupsMembersByGroupIdAndUserId");
+        throw new Error("Missing the required parameter 'groupId' when calling deleteCustomergroupsMember");
       }
 
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling customergroupsMembersByGroupIdAndUserId");
+        throw new Error("Missing the required parameter 'userId' when calling deleteCustomergroupsMember");
       }
 
 
@@ -361,13 +361,13 @@ export default class CustomergroupsApi {
     }
 
     /**
-     * CustomergroupsMembersByGroupIdAndUserId
+     * deleteCustomergroupsMember
      * Removes user from a customer group.  Security: Permitted only for customer managers 
      * @param {String} groupId Group identifier
      * @param {String} userId User identifier
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    customergroupsMembersByGroupIdAndUserId(groupId, userId) {
+    deleteCustomergroupsMember(groupId, userId) {
       return this.customergroupsMembersByGroupIdAndUserIdWithHttpInfo(groupId, userId)
         .then(function(response_and_data) {
           return response_and_data.data;

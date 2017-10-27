@@ -4,7 +4,7 @@ All URIs are relative to *http://api-example.hybris.com/rest/v2/DefaultParameter
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**currencies**](CurrenciesApi.md#currencies) | **GET** /currencies | Currencies
+[**getCurrencies**](CurrenciesApi.md#getCurrencies) | **GET** /currencies | getCurrencies
 
 
 <a name="currencies"></a>
@@ -29,7 +29,7 @@ let apiInstance = new Occ.CurrenciesApi();
 let opts = { 
   'fields': "fields_example" // String | Response configuration (list of fields, which should be returned in response)
 };
-apiInstance.currencies(opts).then((data) => {
+apiInstance.getCurrencies(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);

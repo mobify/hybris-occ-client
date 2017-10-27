@@ -49,11 +49,10 @@
   }
 
   describe('CatalogsApi', function() {
-    describe('catalogs', function() {
-      it('should call catalogs successfully', function(done) {
-        instance.catalogs()
+    describe('getCatalogs', function() {
+      it('should call getCatalogs successfully', function(done) {
+        instance.getCatalogs()
           .then((res) => {
-            // console.log(res.catalogs[0].catalogVersions[0])
             expect(res).to.have.property('catalogs');
             expect(res.catalogs).to.be.an('array');
             expect(res.catalogs.length).to.be.ok();
@@ -61,27 +60,27 @@
           })
       });
     });
-    describe('catalogsByCatalogId', function() {
-      it('should call catalogsByCatalogId successfully', function(done) {
-        instance.catalogsByCatalogId(catalogId)
+    describe('getCatalog', function() {
+      it('should call getCatalog successfully', function(done) {
+        instance.getCatalog(catalogId)
           .then((res) => {
             expect(res.name).to.be(catalogName);
             done();
           })
       });
     });
-    describe('catalogsByCatalogIdAndCatalogVersionId', function() {
-      it('should call catalogsByCatalogIdAndCatalogVersionId successfully', function(done) {
-        instance.catalogsByCatalogIdAndCatalogVersionId(catalogId, catalogVersionId)
+    describe('getCatalogsByCatalogIdAndCatalogVersionId', function() {
+      it('should call getCatalogsByCatalogIdAndCatalogVersionId successfully', function(done) {
+        instance.getCatalogsByCatalogIdAndCatalogVersionId(catalogId, catalogVersionId)
           .then((res) => {
             expect(res.id).to.be(catalogVersionId);
             done();
           })
       });
     });
-    describe('catalogsCategoriesCategoryIdByCatalogId', function() {
-      it('should call catalogsCategoriesCategoryIdByCatalogId successfully', function(done) {
-        instance.catalogsByCatalogIdAndCatalogVersionId(catalogId, catalogVersionId)
+    describe('getCategory', function() {
+      it('should call getCategory successfully', function(done) {
+        instance.getCatalogsByCatalogIdAndCatalogVersionId(catalogId, catalogVersionId)
           .then((res) => {
             expect(res.id).to.be(catalogVersionId);
             done();

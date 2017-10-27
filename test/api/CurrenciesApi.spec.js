@@ -49,9 +49,9 @@
   }
 
   describe('CurrenciesApi', function() {
-    describe('currencies', function() {
-      it('should call currencies successfully', function(done) {
-        instance.currencies()
+    describe('getCurrencies', function() {
+      it('should call getCurrencies successfully', function(done) {
+        instance.getCurrencies()
           .then((res) => {
             expect(res.currencies[0]).to.eql(currencies);
             done();

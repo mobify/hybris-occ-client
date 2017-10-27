@@ -96,18 +96,18 @@ All URIs are relative to *http://api-example.hybris.com/rest/v2/DefaultParameter
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*Occ.CardtypesApi* | [**getCardtypes**](docs/CardtypesApi.md#cardtypes) | **GET** /cardtypes | Cardtypes
-*Occ.CatalogsApi* | [**getCatalogs**](docs/CatalogsApi.md#catalogs) | **GET** /catalogs | Catalogs
-*Occ.CatalogsApi* | [**getCatalog**](docs/CatalogsApi.md#catalogsByCatalogId) | **GET** /catalogs/{catalogId} | CatalogsByCatalogId
-*Occ.CatalogsApi* | [**getCatalogsByCatalogIdAndCatalogVersionId**](docs/CatalogsApi.md#catalogsByCatalogIdAndCatalogVersionId) | **GET** /catalogs/{catalogId}/{catalogVersionId} | CatalogsByCatalogIdAndCatalogVersionId
-*Occ.CatalogsApi* | [**getCategory**](docs/CatalogsApi.md#catalogsCategoriesCategoryIdByCatalogId) | **GET** /catalogs/{catalogId}/{catalogVersionId}/categories/{categoryId} | CatalogsCategoriesCategoryIdByCatalogId
-*Occ.CurrenciesApi* | [**getCurrencies**](docs/CurrenciesApi.md#currencies) | **GET** /currencies | Currencies
-*Occ.CustomergroupsApi* | [**getCustomergroups**](docs/CustomergroupsApi.md#customergroups) | **GET** /customergroups | Customergroups
-*Occ.CustomergroupsApi* | [**postCustomergroup**](docs/CustomergroupsApi.md#customergroups1) | **POST** /customergroups | Customergroups
-*Occ.CustomergroupsApi* | [**getCustomergroup**](docs/CustomergroupsApi.md#customergroupsByGroupId) | **GET** /customergroups/{groupId} | CustomergroupsByGroupId
-*Occ.CustomergroupsApi* | [**putCustomergroupsMembers**](docs/CustomergroupsApi.md#customergroupsMembersByGroupId) | **PUT** /customergroups/{groupId}/members | CustomergroupsMembersByGroupId
-*Occ.CustomergroupsApi* | [**patchCustomergroupsMembers**](docs/CustomergroupsApi.md#customergroupsMembersByGroupId1) | **PATCH** /customergroups/{groupId}/members | CustomergroupsMembersByGroupId
-*Occ.CustomergroupsApi* | [**deleteCustomergroupsMember**](docs/CustomergroupsApi.md#customergroupsMembersByGroupIdAndUserId) | **DELETE** /customergroups/{groupId}/members/{userId} | CustomergroupsMembersByGroupIdAndUserId
+*Occ.CardtypesApi* | [**getCardtypes**](docs/CardtypesApi.md#getCardtypes) | **GET** /cardtypes | getCardtypes
+*Occ.CatalogsApi* | [**getCatalogs**](docs/CatalogsApi.md#getCatalogs) | **GET** /catalogs | getCatalogs
+*Occ.CatalogsApi* | [**getCatalog**](docs/CatalogsApi.md#getCatalog) | **GET** /catalogs/{catalogId} | getCatalog
+*Occ.CatalogsApi* | [**getCatalogsByCatalogIdAndCatalogVersionId**](docs/CatalogsApi.md#getCatalogsByCatalogIdAndCatalogVersionId) | **GET** /catalogs/{catalogId}/{catalogVersionId} | CatalogsByCatalogIdAndCatalogVersionId
+*Occ.CatalogsApi* | [**getCategory**](docs/CatalogsApi.md#getCategory) | **GET** /catalogs/{catalogId}/{catalogVersionId}/categories/{categoryId} | getCategory
+*Occ.CurrenciesApi* | [**getCurrencies**](docs/CurrenciesApi.md#currencies) | **GET** /currencies | getCurrencies
+*Occ.CustomergroupsApi* | [**getCustomergroups**](docs/CustomergroupsApi.md#getCustomergroups) | **GET** /customergroups | getCustomergroups
+*Occ.CustomergroupsApi* | [**postCustomergroup**](docs/CustomergroupsApi.md#postCustomergroup) | **POST** /customergroups | Customergroups
+*Occ.CustomergroupsApi* | [**getCustomergroup**](docs/CustomergroupsApi.md#getCustomergroup) | **GET** /customergroups/{groupId} | getCustomergroup
+*Occ.CustomergroupsApi* | [**putCustomergroupsMembers**](docs/CustomergroupsApi.md#putCustomergroupsMembers) | **PUT** /customergroups/{groupId}/members | putCustomergroupsMembers
+*Occ.CustomergroupsApi* | [**patchCustomergroupsMembers**](docs/CustomergroupsApi.md#patchCustomergroupsMembers) | **PATCH** /customergroups/{groupId}/members | patchCustomergroupsMembers
+*Occ.CustomergroupsApi* | [**deleteCustomergroupsMember**](docs/CustomergroupsApi.md#deleteCustomergroupsMember) | **DELETE** /customergroups/{groupId}/members/{userId} | deleteCustomergroupsMember
 *Occ.DeliverycountriesApi* | [**getDeliverycountries**](docs/DeliverycountriesApi.md#deliverycountries) | **GET** /deliverycountries | Deliverycountries
 *Occ.ExportApi* | [**exportProducts**](docs/ExportApi.md#exportProducts) | **GET** /export/products | ExportProducts
 *Occ.FeedsApi* | [**getOrdersStatusfeed**](docs/FeedsApi.md#feedsOrdersStatusfeed) | **GET** /feeds/orders/statusfeed | FeedsOrdersStatusfeed
