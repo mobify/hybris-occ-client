@@ -59,14 +59,9 @@
   }
 
   describe('ForgottenpasswordtokensApi', function() {
-    describe('', function() {
-      it('should call  successfully', function(done) {
-        //uncomment below and update the code to test 
-        //instance.(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        instance.({userId: user.uid})
+    describe('postForgottenPasswordToken', function() {
+      it('should call postForgottenPasswordToken successfully', function(done) {
+        instance.postForgottenPasswordToken({userId: user.uid})
           .then((res) => {
             done();
           })

@@ -178,12 +178,12 @@ export default class UsersApi {
 
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling usersAddressesByUserId1");
+        throw new Error("Missing the required parameter 'userId' when calling postUserAddress");
       }
 
       // verify the required parameter 'body' is set
       if (body === undefined || body === null) {
-        throw new Error("Missing the required parameter 'body' when calling usersAddressesByUserId1");
+        throw new Error("Missing the required parameter 'body' when calling postUserAddress");
       }
 
 
@@ -219,7 +219,7 @@ export default class UsersApi {
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in the response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/AddressWsDTO296Model}
      */
-    usersAddressesByUserId1(userId, body, opts) {
+    postUserAddress(userId, body, opts) {
       return this.usersAddressesByUserId1WithHttpInfo(userId, body, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
@@ -228,7 +228,7 @@ export default class UsersApi {
 
 
     /**
-     * UsersAddressesByUserIdAndAddressId
+     * getUserAddress
      * Returns detailed information about address with a given id.  Security: Permitted for customers, guests, customer managers or trusted client. Trusted client or customer manager is able to impersonate as any other user and access data on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} addressId Address identifier
@@ -242,12 +242,12 @@ export default class UsersApi {
 
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling usersAddressesByUserIdAndAddressId");
+        throw new Error("Missing the required parameter 'userId' when calling getUserAddress");
       }
 
       // verify the required parameter 'addressId' is set
       if (addressId === undefined || addressId === null) {
-        throw new Error("Missing the required parameter 'addressId' when calling usersAddressesByUserIdAndAddressId");
+        throw new Error("Missing the required parameter 'addressId' when calling getUserAddress");
       }
 
 
@@ -276,7 +276,7 @@ export default class UsersApi {
     }
 
     /**
-     * UsersAddressesByUserIdAndAddressId
+     * getUserAddress
      * Returns detailed information about address with a given id.  Security: Permitted for customers, guests, customer managers or trusted client. Trusted client or customer manager is able to impersonate as any other user and access data on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} addressId Address identifier
@@ -284,7 +284,7 @@ export default class UsersApi {
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in the response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/AddressWsDTOModel}
      */
-    usersAddressesByUserIdAndAddressId(userId, addressId, opts) {
+    getUserAddress(userId, addressId, opts) {
       return this.usersAddressesByUserIdAndAddressIdWithHttpInfo(userId, addressId, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
@@ -293,7 +293,7 @@ export default class UsersApi {
 
 
     /**
-     * UsersAddressesByUserIdAndAddressId
+     * getUserAddress
      * Updates the address. Attributes not provided in the request will be defined again (set to null or default).  Security: Permitted for customers, guests, customer managers or trusted client. Trusted client or customer manager is able to impersonate as any other user and access data on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} addressId Address identifier
@@ -305,17 +305,17 @@ export default class UsersApi {
 
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling usersAddressesByUserIdAndAddressId1");
+        throw new Error("Missing the required parameter 'userId' when calling putUserAddress");
       }
 
       // verify the required parameter 'addressId' is set
       if (addressId === undefined || addressId === null) {
-        throw new Error("Missing the required parameter 'addressId' when calling usersAddressesByUserIdAndAddressId1");
+        throw new Error("Missing the required parameter 'addressId' when calling putUserAddress");
       }
 
       // verify the required parameter 'body' is set
       if (body === undefined || body === null) {
-        throw new Error("Missing the required parameter 'body' when calling usersAddressesByUserIdAndAddressId1");
+        throw new Error("Missing the required parameter 'body' when calling putUserAddress");
       }
 
 
@@ -343,14 +343,14 @@ export default class UsersApi {
     }
 
     /**
-     * UsersAddressesByUserIdAndAddressId
+     * getUserAddress
      * Updates the address. Attributes not provided in the request will be defined again (set to null or default).  Security: Permitted for customers, guests, customer managers or trusted client. Trusted client or customer manager is able to impersonate as any other user and access data on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} addressId Address identifier
      * @param {module:models/AddressWsDTO296Model} body 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    usersAddressesByUserIdAndAddressId1(userId, addressId, body) {
+    putUserAddress(userId, addressId, body) {
       return this.usersAddressesByUserIdAndAddressId1WithHttpInfo(userId, addressId, body)
         .then(function(response_and_data) {
           return response_and_data.data;
@@ -359,7 +359,7 @@ export default class UsersApi {
 
 
     /**
-     * UsersAddressesByUserIdAndAddressId
+     * getUserAddress
      * Updates the address. Only attributes provided in the request body will be changed.  Security: Permitted for customers, guests, customer managers or trusted client. Trusted client or customer manager is able to impersonate as any other user and access data on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} addressId Address identifier
@@ -371,17 +371,17 @@ export default class UsersApi {
 
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling usersAddressesByUserIdAndAddressId2");
+        throw new Error("Missing the required parameter 'userId' when calling patchUserAddress");
       }
 
       // verify the required parameter 'addressId' is set
       if (addressId === undefined || addressId === null) {
-        throw new Error("Missing the required parameter 'addressId' when calling usersAddressesByUserIdAndAddressId2");
+        throw new Error("Missing the required parameter 'addressId' when calling patchUserAddress");
       }
 
       // verify the required parameter 'body' is set
       if (body === undefined || body === null) {
-        throw new Error("Missing the required parameter 'body' when calling usersAddressesByUserIdAndAddressId2");
+        throw new Error("Missing the required parameter 'body' when calling patchUserAddress");
       }
 
 
@@ -409,14 +409,14 @@ export default class UsersApi {
     }
 
     /**
-     * UsersAddressesByUserIdAndAddressId
+     * getUserAddress
      * Updates the address. Only attributes provided in the request body will be changed.  Security: Permitted for customers, guests, customer managers or trusted client. Trusted client or customer manager is able to impersonate as any other user and access data on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} addressId Address identifier
      * @param {module:models/AddressWsDTO296Model} body 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    usersAddressesByUserIdAndAddressId2(userId, addressId, body) {
+    patchUserAddress(userId, addressId, body) {
       return this.usersAddressesByUserIdAndAddressId2WithHttpInfo(userId, addressId, body)
         .then(function(response_and_data) {
           return response_and_data.data;
@@ -425,7 +425,7 @@ export default class UsersApi {
 
 
     /**
-     * UsersAddressesByUserIdAndAddressId
+     * getUserAddress
      * Removes customer&#39;s address.  Security: Permitted for customers, guests, customer managers or trusted client. Trusted client or customer manager is able to impersonate as any other user and access data on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} addressId Address identifier
@@ -436,12 +436,12 @@ export default class UsersApi {
 
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling usersAddressesByUserIdAndAddressId3");
+        throw new Error("Missing the required parameter 'userId' when calling deleteUserAddress");
       }
 
       // verify the required parameter 'addressId' is set
       if (addressId === undefined || addressId === null) {
-        throw new Error("Missing the required parameter 'addressId' when calling usersAddressesByUserIdAndAddressId3");
+        throw new Error("Missing the required parameter 'addressId' when calling deleteUserAddress");
       }
 
 
@@ -469,13 +469,13 @@ export default class UsersApi {
     }
 
     /**
-     * UsersAddressesByUserIdAndAddressId
+     * getUserAddress
      * Removes customer&#39;s address.  Security: Permitted for customers, guests, customer managers or trusted client. Trusted client or customer manager is able to impersonate as any other user and access data on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} addressId Address identifier
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    usersAddressesByUserIdAndAddressId3(userId, addressId) {
+    deleteUserAddress(userId, addressId) {
       return this.usersAddressesByUserIdAndAddressId3WithHttpInfo(userId, addressId)
         .then(function(response_and_data) {
           return response_and_data.data;
@@ -484,7 +484,7 @@ export default class UsersApi {
 
 
     /**
-     * UsersAddressesVerificationByUserId
+     * postUserAddressesVerification
      * Verifies address  Security: Permitted for customers, guests, customer managers or trusted client. Trusted client or customer manager is able to impersonate as any other user and access data on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {module:models/AddressWsDTO296Model} body 
@@ -498,12 +498,12 @@ export default class UsersApi {
 
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling usersAddressesVerificationByUserId");
+        throw new Error("Missing the required parameter 'userId' when calling postUserAddressesVerification");
       }
 
       // verify the required parameter 'body' is set
       if (body === undefined || body === null) {
-        throw new Error("Missing the required parameter 'body' when calling usersAddressesVerificationByUserId");
+        throw new Error("Missing the required parameter 'body' when calling postUserAddressesVerification");
       }
 
 
@@ -531,7 +531,7 @@ export default class UsersApi {
     }
 
     /**
-     * UsersAddressesVerificationByUserId
+     * postUserAddressesVerification
      * Verifies address  Security: Permitted for customers, guests, customer managers or trusted client. Trusted client or customer manager is able to impersonate as any other user and access data on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {module:models/AddressWsDTO296Model} body 
@@ -539,7 +539,7 @@ export default class UsersApi {
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in the response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/AddressWsDTO296Model}
      */
-    usersAddressesVerificationByUserId(userId, body, opts) {
+    postUserAddressesVerification(userId, body, opts) {
       return this.usersAddressesVerificationByUserIdWithHttpInfo(userId, body, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
@@ -548,7 +548,7 @@ export default class UsersApi {
 
 
     /**
-     * UsersByUserId
+     * getUser
      * Returns customer profile.  Security: Permitted for clients, customers and customer managers 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {Object} opts Optional parameters
@@ -561,7 +561,7 @@ export default class UsersApi {
 
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling usersByUserId");
+        throw new Error("Missing the required parameter 'userId' when calling getUser");
       }
 
 
@@ -589,14 +589,14 @@ export default class UsersApi {
     }
 
     /**
-     * UsersByUserId
+     * getUser
      * Returns customer profile.  Security: Permitted for clients, customers and customer managers 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in the response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/UserWsDTOModel}
      */
-    usersByUserId(userId, opts) {
+    getUser(userId, opts) {
       return this.usersByUserIdWithHttpInfo(userId, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
@@ -605,7 +605,7 @@ export default class UsersApi {
 
 
     /**
-     * UsersByUserId
+     * getUser
      * Updates customer profile. Attributes not provided in the request body will be defined again (set to null or default).  Security: Permitted for trusted clients, customers and customer managers. Trusted client or customer manager is able to impersonate as any other user and change profile on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {module:models/UserWsDTO286Model} body 
@@ -616,12 +616,12 @@ export default class UsersApi {
 
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling usersByUserId1");
+        throw new Error("Missing the required parameter 'userId' when calling putUser");
       }
 
       // verify the required parameter 'body' is set
       if (body === undefined || body === null) {
-        throw new Error("Missing the required parameter 'body' when calling usersByUserId1");
+        throw new Error("Missing the required parameter 'body' when calling putUser");
       }
 
 
@@ -648,13 +648,13 @@ export default class UsersApi {
     }
 
     /**
-     * UsersByUserId
+     * getUser
      * Updates customer profile. Attributes not provided in the request body will be defined again (set to null or default).  Security: Permitted for trusted clients, customers and customer managers. Trusted client or customer manager is able to impersonate as any other user and change profile on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {module:models/UserWsDTO286Model} body 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    usersByUserId1(userId, body) {
+    putUser(userId, body) {
       return this.usersByUserId1WithHttpInfo(userId, body)
         .then(function(response_and_data) {
           return response_and_data.data;
@@ -663,7 +663,7 @@ export default class UsersApi {
 
 
     /**
-     * UsersByUserId
+     * getUser
      * Updates customer profile. Only attributes provided in the request body will be changed.  Security: Permitted for trusted clients, customers and customer managers. Trusted client or customer manager is able to impersonate as any other user and change profile on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {module:models/UserWsDTO286Model} body 
@@ -674,12 +674,12 @@ export default class UsersApi {
 
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling usersByUserId2");
+        throw new Error("Missing the required parameter 'userId' when calling patchUser");
       }
 
       // verify the required parameter 'body' is set
       if (body === undefined || body === null) {
-        throw new Error("Missing the required parameter 'body' when calling usersByUserId2");
+        throw new Error("Missing the required parameter 'body' when calling patchUser");
       }
 
 
@@ -706,13 +706,13 @@ export default class UsersApi {
     }
 
     /**
-     * UsersByUserId
+     * getUser
      * Updates customer profile. Only attributes provided in the request body will be changed.  Security: Permitted for trusted clients, customers and customer managers. Trusted client or customer manager is able to impersonate as any other user and change profile on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {module:models/UserWsDTO286Model} body 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    usersByUserId2(userId, body) {
+    patchUser(userId, body) {
       return this.usersByUserId2WithHttpInfo(userId, body)
         .then(function(response_and_data) {
           return response_and_data.data;
@@ -721,7 +721,7 @@ export default class UsersApi {
 
 
     /**
-     * UsersByUserId
+     * getUser
      * Removes customer profile.  Security: Permitted for trusted clients, customers and customer managers. Trusted client is able to impersonate as any other user and deactivate profile on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
@@ -731,7 +731,7 @@ export default class UsersApi {
 
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling usersByUserId3");
+        throw new Error("Missing the required parameter 'userId' when calling deleteUser");
       }
 
 
@@ -758,12 +758,12 @@ export default class UsersApi {
     }
 
     /**
-     * UsersByUserId
+     * getUser
      * Removes customer profile.  Security: Permitted for trusted clients, customers and customer managers. Trusted client is able to impersonate as any other user and deactivate profile on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    usersByUserId3(userId) {
+    deleteUser(userId) {
       return this.usersByUserId3WithHttpInfo(userId)
         .then(function(response_and_data) {
           return response_and_data.data;
@@ -772,7 +772,7 @@ export default class UsersApi {
 
 
     /**
-     * UsersCartsAddressesDeliveryByUserId
+     * postCartDeliveryAddress
      * Creates an address and assigns it to the cart as the delivery address.  Security: Anonymous user may access cart by its guid. Customer may access only own cart by its id. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
@@ -787,17 +787,17 @@ export default class UsersApi {
 
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling usersCartsAddressesDeliveryByUserId");
+        throw new Error("Missing the required parameter 'userId' when calling postCartDeliveryAddress");
       }
 
       // verify the required parameter 'cartId' is set
       if (cartId === undefined || cartId === null) {
-        throw new Error("Missing the required parameter 'cartId' when calling usersCartsAddressesDeliveryByUserId");
+        throw new Error("Missing the required parameter 'cartId' when calling postCartDeliveryAddress");
       }
 
       // verify the required parameter 'body' is set
       if (body === undefined || body === null) {
-        throw new Error("Missing the required parameter 'body' when calling usersCartsAddressesDeliveryByUserId");
+        throw new Error("Missing the required parameter 'body' when calling postCartDeliveryAddress");
       }
 
 
@@ -826,7 +826,7 @@ export default class UsersApi {
     }
 
     /**
-     * UsersCartsAddressesDeliveryByUserId
+     * postCartDeliveryAddress
      * Creates an address and assigns it to the cart as the delivery address.  Security: Anonymous user may access cart by its guid. Customer may access only own cart by its id. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
@@ -835,7 +835,7 @@ export default class UsersApi {
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/AddressWsDTO296Model}
      */
-    usersCartsAddressesDeliveryByUserId(userId, cartId, body, opts) {
+    postCartDeliveryAddress(userId, cartId, body, opts) {
       return this.usersCartsAddressesDeliveryByUserIdWithHttpInfo(userId, cartId, body, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
@@ -844,7 +844,7 @@ export default class UsersApi {
 
 
     /**
-     * UsersCartsAddressesDeliveryByUserId
+     * postCartDeliveryAddress
      * Sets a delivery address for the cart. The address country must be placed among the delivery countries of the current base store.  Security: Permitted only for customers, guests, customer managers or trusted clients. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
@@ -856,17 +856,17 @@ export default class UsersApi {
 
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling usersCartsAddressesDeliveryByUserId1");
+        throw new Error("Missing the required parameter 'userId' when calling putCartDeliveryAddress");
       }
 
       // verify the required parameter 'cartId' is set
       if (cartId === undefined || cartId === null) {
-        throw new Error("Missing the required parameter 'cartId' when calling usersCartsAddressesDeliveryByUserId1");
+        throw new Error("Missing the required parameter 'cartId' when calling putCartDeliveryAddress");
       }
 
       // verify the required parameter 'addressId' is set
       if (addressId === undefined || addressId === null) {
-        throw new Error("Missing the required parameter 'addressId' when calling usersCartsAddressesDeliveryByUserId1");
+        throw new Error("Missing the required parameter 'addressId' when calling putCartDeliveryAddress");
       }
 
 
@@ -895,14 +895,14 @@ export default class UsersApi {
     }
 
     /**
-     * UsersCartsAddressesDeliveryByUserId
+     * postCartDeliveryAddress
      * Sets a delivery address for the cart. The address country must be placed among the delivery countries of the current base store.  Security: Permitted only for customers, guests, customer managers or trusted clients. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
      * @param {String} addressId Address identifier
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    usersCartsAddressesDeliveryByUserId1(userId, cartId, addressId) {
+    putCartDeliveryAddress(userId, cartId, addressId) {
       return this.usersCartsAddressesDeliveryByUserId1WithHttpInfo(userId, cartId, addressId)
         .then(function(response_and_data) {
           return response_and_data.data;
@@ -911,7 +911,7 @@ export default class UsersApi {
 
 
     /**
-     * UsersCartsAddressesDeliveryByUserId
+     * postCartDeliveryAddress
      * Removes the delivery address from the cart.  Security: Permitted only for customers, guests, customer managers or trusted clients. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
@@ -922,12 +922,12 @@ export default class UsersApi {
 
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling usersCartsAddressesDeliveryByUserId2");
+        throw new Error("Missing the required parameter 'userId' when calling deleteCartDeliveryAddress");
       }
 
       // verify the required parameter 'cartId' is set
       if (cartId === undefined || cartId === null) {
-        throw new Error("Missing the required parameter 'cartId' when calling usersCartsAddressesDeliveryByUserId2");
+        throw new Error("Missing the required parameter 'cartId' when calling deleteCartDeliveryAddress");
       }
 
 
@@ -955,13 +955,13 @@ export default class UsersApi {
     }
 
     /**
-     * UsersCartsAddressesDeliveryByUserId
+     * postCartDeliveryAddress
      * Removes the delivery address from the cart.  Security: Permitted only for customers, guests, customer managers or trusted clients. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    usersCartsAddressesDeliveryByUserId2(userId, cartId) {
+    deleteCartDeliveryAddress(userId, cartId) {
       return this.usersCartsAddressesDeliveryByUserId2WithHttpInfo(userId, cartId)
         .then(function(response_and_data) {
           return response_and_data.data;
@@ -970,7 +970,7 @@ export default class UsersApi {
 
 
     /**
-     * UsersCartsByUserId
+     * getCarts
      * Lists all customer carts.  Security: Permitted only for non-anonymous users. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {Object} opts Optional parameters
@@ -983,7 +983,7 @@ export default class UsersApi {
 
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling usersCartsByUserId");
+        throw new Error("Missing the required parameter 'userId' when calling getCarts");
       }
 
 
@@ -1011,14 +1011,14 @@ export default class UsersApi {
     }
 
     /**
-     * UsersCartsByUserId
+     * getCarts
      * Lists all customer carts.  Security: Permitted only for non-anonymous users. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response).
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/CartListWsDTOModel}
      */
-    usersCartsByUserId(userId, opts) {
+    getCarts(userId, opts) {
       return this.usersCartsByUserIdWithHttpInfo(userId, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
@@ -1027,7 +1027,7 @@ export default class UsersApi {
 
 
     /**
-     * UsersCartsByUserId
+     * getCarts
      * Creates a new cart or restores an anonymous cart as a user&#39;s cart (if an old Cart Id is given in the request)  Security: Cart may be created by everybody. Restoring anonymous carts is permitted only for non anonymous users. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {Object} opts Optional parameters
@@ -1042,7 +1042,7 @@ export default class UsersApi {
 
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling usersCartsByUserId1");
+        throw new Error("Missing the required parameter 'userId' when calling postCart");
       }
 
 
@@ -1072,7 +1072,7 @@ export default class UsersApi {
     }
 
     /**
-     * UsersCartsByUserId
+     * getCarts
      * Creates a new cart or restores an anonymous cart as a user&#39;s cart (if an old Cart Id is given in the request)  Security: Cart may be created by everybody. Restoring anonymous carts is permitted only for non anonymous users. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {Object} opts Optional parameters
@@ -1081,7 +1081,7 @@ export default class UsersApi {
      * @param {String} opts.oldCartId Anonymous cart GUID
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/CartWsDTOModel}
      */
-    usersCartsByUserId1(userId, opts) {
+    postCart(userId, opts) {
       return this.usersCartsByUserId1WithHttpInfo(userId, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
@@ -1090,7 +1090,7 @@ export default class UsersApi {
 
 
     /**
-     * UsersCartsByUserIdAndCartId
+     * getCart
      * Returns the cart with a given identifier.  Security: Anonymous user may access cart by its guid. Customer may access only own cart by its id. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
@@ -1104,12 +1104,12 @@ export default class UsersApi {
 
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling usersCartsByUserIdAndCartId");
+        throw new Error("Missing the required parameter 'userId' when calling getCart");
       }
 
       // verify the required parameter 'cartId' is set
       if (cartId === undefined || cartId === null) {
-        throw new Error("Missing the required parameter 'cartId' when calling usersCartsByUserIdAndCartId");
+        throw new Error("Missing the required parameter 'cartId' when calling getCart");
       }
 
 
@@ -1138,7 +1138,7 @@ export default class UsersApi {
     }
 
     /**
-     * UsersCartsByUserIdAndCartId
+     * getCart
      * Returns the cart with a given identifier.  Security: Anonymous user may access cart by its guid. Customer may access only own cart by its id. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
@@ -1146,7 +1146,7 @@ export default class UsersApi {
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/CartWsDTOModel}
      */
-    usersCartsByUserIdAndCartId(userId, cartId, opts) {
+    getCart(userId, cartId, opts) {
       return this.usersCartsByUserIdAndCartIdWithHttpInfo(userId, cartId, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
@@ -1155,7 +1155,7 @@ export default class UsersApi {
 
 
     /**
-     * UsersCartsByUserIdAndCartId
+     * getCart
      * Deletes a cart with a given cart id.  Security: Anonymous user may access cart by its guid. Customer may access only own cart by its id. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
@@ -1166,12 +1166,12 @@ export default class UsersApi {
 
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling usersCartsByUserIdAndCartId1");
+        throw new Error("Missing the required parameter 'userId' when calling deleteCart");
       }
 
       // verify the required parameter 'cartId' is set
       if (cartId === undefined || cartId === null) {
-        throw new Error("Missing the required parameter 'cartId' when calling usersCartsByUserIdAndCartId1");
+        throw new Error("Missing the required parameter 'cartId' when calling deleteCart");
       }
 
 
@@ -1199,13 +1199,13 @@ export default class UsersApi {
     }
 
     /**
-     * UsersCartsByUserIdAndCartId
+     * getCart
      * Deletes a cart with a given cart id.  Security: Anonymous user may access cart by its guid. Customer may access only own cart by its id. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    usersCartsByUserIdAndCartId1(userId, cartId) {
+    deleteCart(userId, cartId) {
       return this.usersCartsByUserIdAndCartId1WithHttpInfo(userId, cartId)
         .then(function(response_and_data) {
           return response_and_data.data;
@@ -1214,7 +1214,7 @@ export default class UsersApi {
 
 
     /**
-     * UsersCartsClonesavedcartByUserId
+     * postCartClonesavedcart
      * Explicitly clones a cart 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
@@ -1230,12 +1230,12 @@ export default class UsersApi {
 
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling usersCartsClonesavedcartByUserId");
+        throw new Error("Missing the required parameter 'userId' when calling postCartClonesavedcart");
       }
 
       // verify the required parameter 'cartId' is set
       if (cartId === undefined || cartId === null) {
-        throw new Error("Missing the required parameter 'cartId' when calling usersCartsClonesavedcartByUserId");
+        throw new Error("Missing the required parameter 'cartId' when calling postCartClonesavedcart");
       }
 
 
@@ -1266,7 +1266,7 @@ export default class UsersApi {
     }
 
     /**
-     * UsersCartsClonesavedcartByUserId
+     * postCartClonesavedcart
      * Explicitly clones a cart 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
@@ -1276,7 +1276,7 @@ export default class UsersApi {
      * @param {String} opts.description the description that should be applied to the cloned cart
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/SaveCartResultWsDTOModel}
      */
-    usersCartsClonesavedcartByUserId(userId, cartId, opts) {
+    postCartClonesavedcart(userId, cartId, opts) {
       return this.usersCartsClonesavedcartByUserIdWithHttpInfo(userId, cartId, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
@@ -1285,7 +1285,7 @@ export default class UsersApi {
 
 
     /**
-     * UsersCartsDeliverymodeByUserIdAndCartId
+     * getCartDeliverymode
      * Returns the delivery mode selected for the cart.  Security: Permitted only for customers, guests, customer managers or trusted clients. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
@@ -1299,12 +1299,12 @@ export default class UsersApi {
 
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling usersCartsDeliverymodeByUserIdAndCartId");
+        throw new Error("Missing the required parameter 'userId' when calling getCartDeliverymode");
       }
 
       // verify the required parameter 'cartId' is set
       if (cartId === undefined || cartId === null) {
-        throw new Error("Missing the required parameter 'cartId' when calling usersCartsDeliverymodeByUserIdAndCartId");
+        throw new Error("Missing the required parameter 'cartId' when calling getCartDeliverymode");
       }
 
 
@@ -1333,7 +1333,7 @@ export default class UsersApi {
     }
 
     /**
-     * UsersCartsDeliverymodeByUserIdAndCartId
+     * getCartDeliverymode
      * Returns the delivery mode selected for the cart.  Security: Permitted only for customers, guests, customer managers or trusted clients. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
@@ -1341,7 +1341,7 @@ export default class UsersApi {
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/DeliveryModeWsDTOModel}
      */
-    usersCartsDeliverymodeByUserIdAndCartId(userId, cartId, opts) {
+    getCartDeliverymode(userId, cartId, opts) {
       return this.usersCartsDeliverymodeByUserIdAndCartIdWithHttpInfo(userId, cartId, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
@@ -1350,7 +1350,7 @@ export default class UsersApi {
 
 
     /**
-     * UsersCartsDeliverymodeByUserIdAndCartId
+     * getCartDeliverymode
      * Sets the delivery mode with a given identifier for the cart.  Security: Permitted only for customers, guests, customer managers or trusted clients. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
@@ -1362,17 +1362,17 @@ export default class UsersApi {
 
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling usersCartsDeliverymodeByUserIdAndCartId1");
+        throw new Error("Missing the required parameter 'userId' when calling putCartDeliverymode");
       }
 
       // verify the required parameter 'cartId' is set
       if (cartId === undefined || cartId === null) {
-        throw new Error("Missing the required parameter 'cartId' when calling usersCartsDeliverymodeByUserIdAndCartId1");
+        throw new Error("Missing the required parameter 'cartId' when calling putCartDeliverymode");
       }
 
       // verify the required parameter 'deliveryModeId' is set
       if (deliveryModeId === undefined || deliveryModeId === null) {
-        throw new Error("Missing the required parameter 'deliveryModeId' when calling usersCartsDeliverymodeByUserIdAndCartId1");
+        throw new Error("Missing the required parameter 'deliveryModeId' when calling putCartDeliverymode");
       }
 
 
@@ -1401,14 +1401,14 @@ export default class UsersApi {
     }
 
     /**
-     * UsersCartsDeliverymodeByUserIdAndCartId
+     * getCartDeliverymode
      * Sets the delivery mode with a given identifier for the cart.  Security: Permitted only for customers, guests, customer managers or trusted clients. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
      * @param {String} deliveryModeId Delivery mode identifier (code)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    usersCartsDeliverymodeByUserIdAndCartId1(userId, cartId, deliveryModeId) {
+    putCartDeliverymode(userId, cartId, deliveryModeId) {
       return this.usersCartsDeliverymodeByUserIdAndCartId1WithHttpInfo(userId, cartId, deliveryModeId)
         .then(function(response_and_data) {
           return response_and_data.data;
@@ -1417,7 +1417,7 @@ export default class UsersApi {
 
 
     /**
-     * UsersCartsDeliverymodeByUserIdAndCartId
+     * getCartDeliverymode
      * Removes the delivery mode from the cart.  Security: Permitted only for customers, guests, customer managers or trusted clients. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
@@ -1428,12 +1428,12 @@ export default class UsersApi {
 
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling usersCartsDeliverymodeByUserIdAndCartId2");
+        throw new Error("Missing the required parameter 'userId' when calling deleteCartDeliverymode");
       }
 
       // verify the required parameter 'cartId' is set
       if (cartId === undefined || cartId === null) {
-        throw new Error("Missing the required parameter 'cartId' when calling usersCartsDeliverymodeByUserIdAndCartId2");
+        throw new Error("Missing the required parameter 'cartId' when calling deleteCartDeliverymode");
       }
 
 
@@ -1461,13 +1461,13 @@ export default class UsersApi {
     }
 
     /**
-     * UsersCartsDeliverymodeByUserIdAndCartId
+     * getCartDeliverymode
      * Removes the delivery mode from the cart.  Security: Permitted only for customers, guests, customer managers or trusted clients. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    usersCartsDeliverymodeByUserIdAndCartId2(userId, cartId) {
+    deleteCartDeliverymode(userId, cartId) {
       return this.usersCartsDeliverymodeByUserIdAndCartId2WithHttpInfo(userId, cartId)
         .then(function(response_and_data) {
           return response_and_data.data;
@@ -1476,7 +1476,7 @@ export default class UsersApi {
 
 
     /**
-     * UsersCartsDeliverymodesByUserIdAndCartId
+     * getCartDeliverymodes
      * Returns all delivery modes supported for the current base store and cart delivery address. A delivery address must be set for the cart, otherwise an empty list will be returned.  Security: Permitted only for customers, guests, customer managers or trusted clients. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
@@ -1490,12 +1490,12 @@ export default class UsersApi {
 
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling usersCartsDeliverymodesByUserIdAndCartId");
+        throw new Error("Missing the required parameter 'userId' when calling getCartDeliverymodes");
       }
 
       // verify the required parameter 'cartId' is set
       if (cartId === undefined || cartId === null) {
-        throw new Error("Missing the required parameter 'cartId' when calling usersCartsDeliverymodesByUserIdAndCartId");
+        throw new Error("Missing the required parameter 'cartId' when calling getCartDeliverymodes");
       }
 
 
@@ -1524,7 +1524,7 @@ export default class UsersApi {
     }
 
     /**
-     * UsersCartsDeliverymodesByUserIdAndCartId
+     * getCartDeliverymodes
      * Returns all delivery modes supported for the current base store and cart delivery address. A delivery address must be set for the cart, otherwise an empty list will be returned.  Security: Permitted only for customers, guests, customer managers or trusted clients. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
@@ -1532,7 +1532,7 @@ export default class UsersApi {
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/DeliveryModeListWsDTOModel}
      */
-    usersCartsDeliverymodesByUserIdAndCartId(userId, cartId, opts) {
+    getCartDeliverymodes(userId, cartId, opts) {
       return this.usersCartsDeliverymodesByUserIdAndCartIdWithHttpInfo(userId, cartId, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
@@ -1541,7 +1541,7 @@ export default class UsersApi {
 
 
     /**
-     * UsersCartsEmailByUserIdAndCartId
+     * putCartEmail
      * Assigns an email to the cart. This step is required to make a guest checkout.  Security: Permitted only for client or trusted client 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
@@ -1555,12 +1555,12 @@ export default class UsersApi {
 
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling usersCartsEmailByUserIdAndCartId");
+        throw new Error("Missing the required parameter 'userId' when calling putCartEmail");
       }
 
       // verify the required parameter 'cartId' is set
       if (cartId === undefined || cartId === null) {
-        throw new Error("Missing the required parameter 'cartId' when calling usersCartsEmailByUserIdAndCartId");
+        throw new Error("Missing the required parameter 'cartId' when calling putCartEmail");
       }
 
 
@@ -1589,7 +1589,7 @@ export default class UsersApi {
     }
 
     /**
-     * UsersCartsEmailByUserIdAndCartId
+     * putCartEmail
      * Assigns an email to the cart. This step is required to make a guest checkout.  Security: Permitted only for client or trusted client 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
@@ -1597,7 +1597,7 @@ export default class UsersApi {
      * @param {String} opts.email Email of the guest user. It will be used during checkout process
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    usersCartsEmailByUserIdAndCartId(userId, cartId, opts) {
+    putCartEmail(userId, cartId, opts) {
       return this.usersCartsEmailByUserIdAndCartIdWithHttpInfo(userId, cartId, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
@@ -1606,7 +1606,7 @@ export default class UsersApi {
 
 
     /**
-     * UsersCartsEntriesByUserIdAndCartId
+     * getCartEntries
      * Returns cart entries.  Security: Anonymous user may access cart by its guid. Customer may access only own cart by its id. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
@@ -1620,12 +1620,12 @@ export default class UsersApi {
 
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling usersCartsEntriesByUserIdAndCartId");
+        throw new Error("Missing the required parameter 'userId' when calling getCartEntries");
       }
 
       // verify the required parameter 'cartId' is set
       if (cartId === undefined || cartId === null) {
-        throw new Error("Missing the required parameter 'cartId' when calling usersCartsEntriesByUserIdAndCartId");
+        throw new Error("Missing the required parameter 'cartId' when calling getCartEntries");
       }
 
 
@@ -1654,7 +1654,7 @@ export default class UsersApi {
     }
 
     /**
-     * UsersCartsEntriesByUserIdAndCartId
+     * getCartEntries
      * Returns cart entries.  Security: Anonymous user may access cart by its guid. Customer may access only own cart by its id. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
@@ -1662,7 +1662,7 @@ export default class UsersApi {
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/OrderEntryListWsDTOModel}
      */
-    usersCartsEntriesByUserIdAndCartId(userId, cartId, opts) {
+    getCartEntries(userId, cartId, opts) {
       return this.usersCartsEntriesByUserIdAndCartIdWithHttpInfo(userId, cartId, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
@@ -1671,7 +1671,7 @@ export default class UsersApi {
 
 
     /**
-     * UsersCartsEntriesByUserIdAndCartId
+     * getCartEntries
      * Adds a product to the cart.  Security: Anonymous user may access cart by its guid. Customer may access only own cart by its id. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
@@ -1686,17 +1686,17 @@ export default class UsersApi {
 
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling usersCartsEntriesByUserIdAndCartId1");
+        throw new Error("Missing the required parameter 'userId' when calling postCartEntries");
       }
 
       // verify the required parameter 'cartId' is set
       if (cartId === undefined || cartId === null) {
-        throw new Error("Missing the required parameter 'cartId' when calling usersCartsEntriesByUserIdAndCartId1");
+        throw new Error("Missing the required parameter 'cartId' when calling postCartEntries");
       }
 
       // verify the required parameter 'body' is set
       if (body === undefined || body === null) {
-        throw new Error("Missing the required parameter 'body' when calling usersCartsEntriesByUserIdAndCartId1");
+        throw new Error("Missing the required parameter 'body' when calling postCartEntries");
       }
 
 
@@ -1725,7 +1725,7 @@ export default class UsersApi {
     }
 
     /**
-     * UsersCartsEntriesByUserIdAndCartId
+     * getCartEntries
      * Adds a product to the cart.  Security: Anonymous user may access cart by its guid. Customer may access only own cart by its id. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
@@ -1734,7 +1734,7 @@ export default class UsersApi {
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/OrderEntryWsDTO542Model}
      */
-    usersCartsEntriesByUserIdAndCartId1(userId, cartId, body, opts) {
+    postCartEntries(userId, cartId, body, opts) {
       return this.usersCartsEntriesByUserIdAndCartId1WithHttpInfo(userId, cartId, body, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
@@ -1743,7 +1743,7 @@ export default class UsersApi {
 
 
     /**
-     * UsersCartsEntriesEntryNumberByUserId
+     * getCartEntry
      * Returns the details of the cart entries.  Security: Anonymous user may access cart by its guid. Customer may access only own cart by its id. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
@@ -1758,17 +1758,17 @@ export default class UsersApi {
 
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling usersCartsEntriesEntryNumberByUserId");
+        throw new Error("Missing the required parameter 'userId' when calling getCartEntry");
       }
 
       // verify the required parameter 'cartId' is set
       if (cartId === undefined || cartId === null) {
-        throw new Error("Missing the required parameter 'cartId' when calling usersCartsEntriesEntryNumberByUserId");
+        throw new Error("Missing the required parameter 'cartId' when calling getCartEntry");
       }
 
       // verify the required parameter 'entryNumber' is set
       if (entryNumber === undefined || entryNumber === null) {
-        throw new Error("Missing the required parameter 'entryNumber' when calling usersCartsEntriesEntryNumberByUserId");
+        throw new Error("Missing the required parameter 'entryNumber' when calling getCartEntry");
       }
 
 
@@ -1798,7 +1798,7 @@ export default class UsersApi {
     }
 
     /**
-     * UsersCartsEntriesEntryNumberByUserId
+     * getCartEntry
      * Returns the details of the cart entries.  Security: Anonymous user may access cart by its guid. Customer may access only own cart by its id. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
@@ -1807,7 +1807,7 @@ export default class UsersApi {
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/OrderEntryWsDTOModel}
      */
-    usersCartsEntriesEntryNumberByUserId(userId, cartId, entryNumber, opts) {
+    getCartEntry(userId, cartId, entryNumber, opts) {
       return this.usersCartsEntriesEntryNumberByUserIdWithHttpInfo(userId, cartId, entryNumber, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
@@ -1816,7 +1816,7 @@ export default class UsersApi {
 
 
     /**
-     * UsersCartsEntriesEntryNumberByUserId
+     * getCartEntry
      * Updates the quantity of a single cart entry and details of the store where the cart entry will be picked. Attributes not provided in request will be defined again (set to null or default)  Security: Anonymous user may access cart by its guid. Customer may access only own cart by its id. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
@@ -1832,22 +1832,22 @@ export default class UsersApi {
 
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling usersCartsEntriesEntryNumberByUserId1");
+        throw new Error("Missing the required parameter 'userId' when calling putCartEntry");
       }
 
       // verify the required parameter 'cartId' is set
       if (cartId === undefined || cartId === null) {
-        throw new Error("Missing the required parameter 'cartId' when calling usersCartsEntriesEntryNumberByUserId1");
+        throw new Error("Missing the required parameter 'cartId' when calling putCartEntry");
       }
 
       // verify the required parameter 'entryNumber' is set
       if (entryNumber === undefined || entryNumber === null) {
-        throw new Error("Missing the required parameter 'entryNumber' when calling usersCartsEntriesEntryNumberByUserId1");
+        throw new Error("Missing the required parameter 'entryNumber' when calling putCartEntry");
       }
 
       // verify the required parameter 'body' is set
       if (body === undefined || body === null) {
-        throw new Error("Missing the required parameter 'body' when calling usersCartsEntriesEntryNumberByUserId1");
+        throw new Error("Missing the required parameter 'body' when calling putCartEntry");
       }
 
 
@@ -1877,7 +1877,7 @@ export default class UsersApi {
     }
 
     /**
-     * UsersCartsEntriesEntryNumberByUserId
+     * getCartEntry
      * Updates the quantity of a single cart entry and details of the store where the cart entry will be picked. Attributes not provided in request will be defined again (set to null or default)  Security: Anonymous user may access cart by its guid. Customer may access only own cart by its id. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
@@ -1887,7 +1887,7 @@ export default class UsersApi {
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/OrderEntryWsDTO542Model}
      */
-    usersCartsEntriesEntryNumberByUserId1(userId, cartId, entryNumber, body, opts) {
+    putCartEntry(userId, cartId, entryNumber, body, opts) {
       return this.usersCartsEntriesEntryNumberByUserId1WithHttpInfo(userId, cartId, entryNumber, body, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
@@ -1896,7 +1896,7 @@ export default class UsersApi {
 
 
     /**
-     * UsersCartsEntriesEntryNumberByUserId
+     * getCartEntry
      * Updates the quantity of a single cart entry and details of the store where the cart entry will be picked.  Security: Anonymous user may access cart by its guid. Customer may access only own cart by its id. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
@@ -1912,22 +1912,22 @@ export default class UsersApi {
 
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling usersCartsEntriesEntryNumberByUserId2");
+        throw new Error("Missing the required parameter 'userId' when calling patchCartEntry");
       }
 
       // verify the required parameter 'cartId' is set
       if (cartId === undefined || cartId === null) {
-        throw new Error("Missing the required parameter 'cartId' when calling usersCartsEntriesEntryNumberByUserId2");
+        throw new Error("Missing the required parameter 'cartId' when calling patchCartEntry");
       }
 
       // verify the required parameter 'entryNumber' is set
       if (entryNumber === undefined || entryNumber === null) {
-        throw new Error("Missing the required parameter 'entryNumber' when calling usersCartsEntriesEntryNumberByUserId2");
+        throw new Error("Missing the required parameter 'entryNumber' when calling patchCartEntry");
       }
 
       // verify the required parameter 'body' is set
       if (body === undefined || body === null) {
-        throw new Error("Missing the required parameter 'body' when calling usersCartsEntriesEntryNumberByUserId2");
+        throw new Error("Missing the required parameter 'body' when calling patchCartEntry");
       }
 
 
@@ -1957,7 +1957,7 @@ export default class UsersApi {
     }
 
     /**
-     * UsersCartsEntriesEntryNumberByUserId
+     * getCartEntry
      * Updates the quantity of a single cart entry and details of the store where the cart entry will be picked.  Security: Anonymous user may access cart by its guid. Customer may access only own cart by its id. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
@@ -1967,7 +1967,7 @@ export default class UsersApi {
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/OrderEntryWsDTO542Model}
      */
-    usersCartsEntriesEntryNumberByUserId2(userId, cartId, entryNumber, body, opts) {
+    patchCartEntry(userId, cartId, entryNumber, body, opts) {
       return this.usersCartsEntriesEntryNumberByUserId2WithHttpInfo(userId, cartId, entryNumber, body, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
@@ -1976,7 +1976,7 @@ export default class UsersApi {
 
 
     /**
-     * UsersCartsEntriesEntryNumberByUserId
+     * getCartEntry
      * Deletes cart entry.  Security: Anonymous user may access cart by its guid. Customer may access only own cart by its id. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
@@ -1988,17 +1988,17 @@ export default class UsersApi {
 
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling usersCartsEntriesEntryNumberByUserId3");
+        throw new Error("Missing the required parameter 'userId' when calling deleteCartEntry");
       }
 
       // verify the required parameter 'cartId' is set
       if (cartId === undefined || cartId === null) {
-        throw new Error("Missing the required parameter 'cartId' when calling usersCartsEntriesEntryNumberByUserId3");
+        throw new Error("Missing the required parameter 'cartId' when calling deleteCartEntry");
       }
 
       // verify the required parameter 'entryNumber' is set
       if (entryNumber === undefined || entryNumber === null) {
-        throw new Error("Missing the required parameter 'entryNumber' when calling usersCartsEntriesEntryNumberByUserId3");
+        throw new Error("Missing the required parameter 'entryNumber' when calling deleteCartEntry");
       }
 
 
@@ -2027,14 +2027,14 @@ export default class UsersApi {
     }
 
     /**
-     * UsersCartsEntriesEntryNumberByUserId
+     * getCartEntry
      * Deletes cart entry.  Security: Anonymous user may access cart by its guid. Customer may access only own cart by its id. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
      * @param {String} entryNumber Entry number. Zero-based numbering.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    usersCartsEntriesEntryNumberByUserId3(userId, cartId, entryNumber) {
+    deleteCartEntry(userId, cartId, entryNumber) {
       return this.usersCartsEntriesEntryNumberByUserId3WithHttpInfo(userId, cartId, entryNumber)
         .then(function(response_and_data) {
           return response_and_data.data;
@@ -2043,7 +2043,7 @@ export default class UsersApi {
 
 
     /**
-     * UsersCartsFlagForDeletionByUserId
+     * patchCartFlagForDeletion
      * Flags a cart for deletion (the cart doesn&#39;t have corresponding save cart attributes anymore). The cart is not actually deleted from the database. But with the removal of the saved cart attributes, this cart will be taken care of by the cart removal job just like any other cart. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
@@ -2057,12 +2057,12 @@ export default class UsersApi {
 
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling usersCartsFlagForDeletionByUserId");
+        throw new Error("Missing the required parameter 'userId' when calling patchCartFlagForDeletion");
       }
 
       // verify the required parameter 'cartId' is set
       if (cartId === undefined || cartId === null) {
-        throw new Error("Missing the required parameter 'cartId' when calling usersCartsFlagForDeletionByUserId");
+        throw new Error("Missing the required parameter 'cartId' when calling patchCartFlagForDeletion");
       }
 
 
@@ -2091,7 +2091,7 @@ export default class UsersApi {
     }
 
     /**
-     * UsersCartsFlagForDeletionByUserId
+     * patchCartFlagForDeletion
      * Flags a cart for deletion (the cart doesn&#39;t have corresponding save cart attributes anymore). The cart is not actually deleted from the database. But with the removal of the saved cart attributes, this cart will be taken care of by the cart removal job just like any other cart. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
@@ -2099,7 +2099,7 @@ export default class UsersApi {
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/SaveCartResultWsDTOModel}
      */
-    usersCartsFlagForDeletionByUserId(userId, cartId, opts) {
+    patchCartFlagForDeletion(userId, cartId, opts) {
       return this.usersCartsFlagForDeletionByUserIdWithHttpInfo(userId, cartId, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
@@ -2108,7 +2108,7 @@ export default class UsersApi {
 
 
     /**
-     * UsersCartsPaymentdetailsByUserId
+     * postCartPaymentdetail
      * Defines details of a new credit card payment details and assigns the payment to the cart.  Security: Permitted only for customers, guests, customer managers or trusted clients. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
@@ -2123,17 +2123,17 @@ export default class UsersApi {
 
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling usersCartsPaymentdetailsByUserId");
+        throw new Error("Missing the required parameter 'userId' when calling postCartPaymentdetail");
       }
 
       // verify the required parameter 'cartId' is set
       if (cartId === undefined || cartId === null) {
-        throw new Error("Missing the required parameter 'cartId' when calling usersCartsPaymentdetailsByUserId");
+        throw new Error("Missing the required parameter 'cartId' when calling postCartPaymentdetail");
       }
 
       // verify the required parameter 'body' is set
       if (body === undefined || body === null) {
-        throw new Error("Missing the required parameter 'body' when calling usersCartsPaymentdetailsByUserId");
+        throw new Error("Missing the required parameter 'body' when calling postCartPaymentdetail");
       }
 
 
@@ -2162,7 +2162,7 @@ export default class UsersApi {
     }
 
     /**
-     * UsersCartsPaymentdetailsByUserId
+     * postCartPaymentdetail
      * Defines details of a new credit card payment details and assigns the payment to the cart.  Security: Permitted only for customers, guests, customer managers or trusted clients. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
@@ -2171,7 +2171,7 @@ export default class UsersApi {
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/PaymentDetailsWsDTO640Model}
      */
-    usersCartsPaymentdetailsByUserId(userId, cartId, body, opts) {
+    postCartPaymentdetail(userId, cartId, body, opts) {
       return this.usersCartsPaymentdetailsByUserIdWithHttpInfo(userId, cartId, body, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
@@ -2180,7 +2180,7 @@ export default class UsersApi {
 
 
     /**
-     * UsersCartsPaymentdetailsByUserId
+     * postCartPaymentdetail
      * Sets credit card payment details for the cart.  Security: Permitted only for customers, guests, customer managers or trusted clients. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
@@ -2192,17 +2192,17 @@ export default class UsersApi {
 
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling usersCartsPaymentdetailsByUserId1");
+        throw new Error("Missing the required parameter 'userId' when calling putCartPaymentdetail");
       }
 
       // verify the required parameter 'cartId' is set
       if (cartId === undefined || cartId === null) {
-        throw new Error("Missing the required parameter 'cartId' when calling usersCartsPaymentdetailsByUserId1");
+        throw new Error("Missing the required parameter 'cartId' when calling putCartPaymentdetail");
       }
 
       // verify the required parameter 'paymentDetailsId' is set
       if (paymentDetailsId === undefined || paymentDetailsId === null) {
-        throw new Error("Missing the required parameter 'paymentDetailsId' when calling usersCartsPaymentdetailsByUserId1");
+        throw new Error("Missing the required parameter 'paymentDetailsId' when calling putCartPaymentdetail");
       }
 
 
@@ -2231,14 +2231,14 @@ export default class UsersApi {
     }
 
     /**
-     * UsersCartsPaymentdetailsByUserId
+     * postCartPaymentdetail
      * Sets credit card payment details for the cart.  Security: Permitted only for customers, guests, customer managers or trusted clients. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
      * @param {String} paymentDetailsId Payment details identifier
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    usersCartsPaymentdetailsByUserId1(userId, cartId, paymentDetailsId) {
+    putCartPaymentdetail(userId, cartId, paymentDetailsId) {
       return this.usersCartsPaymentdetailsByUserId1WithHttpInfo(userId, cartId, paymentDetailsId)
         .then(function(response_and_data) {
           return response_and_data.data;
@@ -2247,7 +2247,7 @@ export default class UsersApi {
 
 
     /**
-     * UsersCartsPromotionsByUserIdAndCartId
+     * getCartPromotions
      * Return information about promotions applied on cart. Requests pertaining to promotions have been developed for the previous version of promotions and vouchers and therefore some of them are currently not compatible with the new promotion engine.  Security: Permitted only for non anonymous users or clients. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
@@ -2261,12 +2261,12 @@ export default class UsersApi {
 
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling usersCartsPromotionsByUserIdAndCartId");
+        throw new Error("Missing the required parameter 'userId' when calling getCartPromotions");
       }
 
       // verify the required parameter 'cartId' is set
       if (cartId === undefined || cartId === null) {
-        throw new Error("Missing the required parameter 'cartId' when calling usersCartsPromotionsByUserIdAndCartId");
+        throw new Error("Missing the required parameter 'cartId' when calling getCartPromotions");
       }
 
 
@@ -2295,7 +2295,7 @@ export default class UsersApi {
     }
 
     /**
-     * UsersCartsPromotionsByUserIdAndCartId
+     * getCartPromotions
      * Return information about promotions applied on cart. Requests pertaining to promotions have been developed for the previous version of promotions and vouchers and therefore some of them are currently not compatible with the new promotion engine.  Security: Permitted only for non anonymous users or clients. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
@@ -2303,7 +2303,7 @@ export default class UsersApi {
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/PromotionResultListWsDTOModel}
      */
-    usersCartsPromotionsByUserIdAndCartId(userId, cartId, opts) {
+    getCartPromotions(userId, cartId, opts) {
       return this.usersCartsPromotionsByUserIdAndCartIdWithHttpInfo(userId, cartId, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
@@ -2312,7 +2312,7 @@ export default class UsersApi {
 
 
     /**
-     * UsersCartsPromotionsByUserIdAndCartId
+     * getCartPromotions
      * Enables the promotion for the order based on the promotionId defined for the cart. Requests pertaining to promotions have been developed for the previous version of promotions and vouchers and therefore some of them are currently not compatible with the new promotion engine.  Security: Anonymous user may access cart by its guid. Customer may access only own cart by its id. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
@@ -2324,17 +2324,17 @@ export default class UsersApi {
 
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling usersCartsPromotionsByUserIdAndCartId1");
+        throw new Error("Missing the required parameter 'userId' when calling postCartPromotion");
       }
 
       // verify the required parameter 'cartId' is set
       if (cartId === undefined || cartId === null) {
-        throw new Error("Missing the required parameter 'cartId' when calling usersCartsPromotionsByUserIdAndCartId1");
+        throw new Error("Missing the required parameter 'cartId' when calling postCartPromotion");
       }
 
       // verify the required parameter 'promotionId' is set
       if (promotionId === undefined || promotionId === null) {
-        throw new Error("Missing the required parameter 'promotionId' when calling usersCartsPromotionsByUserIdAndCartId1");
+        throw new Error("Missing the required parameter 'promotionId' when calling postCartPromotion");
       }
 
 
@@ -2363,14 +2363,14 @@ export default class UsersApi {
     }
 
     /**
-     * UsersCartsPromotionsByUserIdAndCartId
+     * getCartPromotions
      * Enables the promotion for the order based on the promotionId defined for the cart. Requests pertaining to promotions have been developed for the previous version of promotions and vouchers and therefore some of them are currently not compatible with the new promotion engine.  Security: Anonymous user may access cart by its guid. Customer may access only own cart by its id. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
      * @param {String} promotionId Promotion identifier
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    usersCartsPromotionsByUserIdAndCartId1(userId, cartId, promotionId) {
+    postCartPromotion(userId, cartId, promotionId) {
       return this.usersCartsPromotionsByUserIdAndCartId1WithHttpInfo(userId, cartId, promotionId)
         .then(function(response_and_data) {
           return response_and_data.data;
@@ -2379,7 +2379,7 @@ export default class UsersApi {
 
 
     /**
-     * UsersCartsPromotionsPromotionIdByUserId
+     * getCartPromotion
      * Return information about promotion with given id, applied on cart. Requests pertaining to promotions have been developed for the previous version of promotions and vouchers and therefore some of them are currently not compatible with the new promotion engine.  Security: Permitted only for non anonymous users or clients. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
@@ -2394,17 +2394,17 @@ export default class UsersApi {
 
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling usersCartsPromotionsPromotionIdByUserId");
+        throw new Error("Missing the required parameter 'userId' when calling getCartPromotion");
       }
 
       // verify the required parameter 'cartId' is set
       if (cartId === undefined || cartId === null) {
-        throw new Error("Missing the required parameter 'cartId' when calling usersCartsPromotionsPromotionIdByUserId");
+        throw new Error("Missing the required parameter 'cartId' when calling getCartPromotion");
       }
 
       // verify the required parameter 'promotionId' is set
       if (promotionId === undefined || promotionId === null) {
-        throw new Error("Missing the required parameter 'promotionId' when calling usersCartsPromotionsPromotionIdByUserId");
+        throw new Error("Missing the required parameter 'promotionId' when calling getCartPromotion");
       }
 
 
@@ -2434,7 +2434,7 @@ export default class UsersApi {
     }
 
     /**
-     * UsersCartsPromotionsPromotionIdByUserId
+     * getCartPromotion
      * Return information about promotion with given id, applied on cart. Requests pertaining to promotions have been developed for the previous version of promotions and vouchers and therefore some of them are currently not compatible with the new promotion engine.  Security: Permitted only for non anonymous users or clients. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
@@ -2443,7 +2443,7 @@ export default class UsersApi {
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/PromotionResultListWsDTOModel}
      */
-    usersCartsPromotionsPromotionIdByUserId(userId, cartId, promotionId, opts) {
+    getCartPromotion(userId, cartId, promotionId, opts) {
       return this.usersCartsPromotionsPromotionIdByUserIdWithHttpInfo(userId, cartId, promotionId, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
@@ -2452,7 +2452,7 @@ export default class UsersApi {
 
 
     /**
-     * UsersCartsPromotionsPromotionIdByUserId
+     * getCartPromotion
      * Disables the promotion for the order based on the promotionId defined for the cart. Requests pertaining to promotions have been developed for the previous version of promotions and vouchers and therefore some of them are currently not compatible with the new promotion engine.  Security: Permitted only for trusted clients 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
@@ -2464,17 +2464,17 @@ export default class UsersApi {
 
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling usersCartsPromotionsPromotionIdByUserId1");
+        throw new Error("Missing the required parameter 'userId' when calling deleteCartPromotion");
       }
 
       // verify the required parameter 'cartId' is set
       if (cartId === undefined || cartId === null) {
-        throw new Error("Missing the required parameter 'cartId' when calling usersCartsPromotionsPromotionIdByUserId1");
+        throw new Error("Missing the required parameter 'cartId' when calling deleteCartPromotion");
       }
 
       // verify the required parameter 'promotionId' is set
       if (promotionId === undefined || promotionId === null) {
-        throw new Error("Missing the required parameter 'promotionId' when calling usersCartsPromotionsPromotionIdByUserId1");
+        throw new Error("Missing the required parameter 'promotionId' when calling deleteCartPromotion");
       }
 
 
@@ -2503,14 +2503,14 @@ export default class UsersApi {
     }
 
     /**
-     * UsersCartsPromotionsPromotionIdByUserId
+     * getCartPromotion
      * Disables the promotion for the order based on the promotionId defined for the cart. Requests pertaining to promotions have been developed for the previous version of promotions and vouchers and therefore some of them are currently not compatible with the new promotion engine.  Security: Permitted only for trusted clients 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
      * @param {String} promotionId Promotion identifier (code)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    usersCartsPromotionsPromotionIdByUserId1(userId, cartId, promotionId) {
+    deleteCartPromotion(userId, cartId, promotionId) {
       return this.usersCartsPromotionsPromotionIdByUserId1WithHttpInfo(userId, cartId, promotionId)
         .then(function(response_and_data) {
           return response_and_data.data;
@@ -2519,7 +2519,7 @@ export default class UsersApi {
 
 
     /**
-     * UsersCartsRestoresavedcartByUserId
+     * patchCartRestoresavedcart
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/SaveCartResultWsDTOModel} and HTTP response
@@ -2529,12 +2529,12 @@ export default class UsersApi {
 
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling usersCartsRestoresavedcartByUserId");
+        throw new Error("Missing the required parameter 'userId' when calling patchCartRestoresavedcart");
       }
 
       // verify the required parameter 'cartId' is set
       if (cartId === undefined || cartId === null) {
-        throw new Error("Missing the required parameter 'cartId' when calling usersCartsRestoresavedcartByUserId");
+        throw new Error("Missing the required parameter 'cartId' when calling patchCartRestoresavedcart");
       }
 
 
@@ -2562,12 +2562,12 @@ export default class UsersApi {
     }
 
     /**
-     * UsersCartsRestoresavedcartByUserId
+     * patchCartRestoresavedcart
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/SaveCartResultWsDTOModel}
      */
-    usersCartsRestoresavedcartByUserId(userId, cartId) {
+    patchCartRestoresavedcart(userId, cartId) {
       return this.usersCartsRestoresavedcartByUserIdWithHttpInfo(userId, cartId)
         .then(function(response_and_data) {
           return response_and_data.data;
@@ -2576,7 +2576,7 @@ export default class UsersApi {
 
 
     /**
-     * UsersCartsSaveByUserIdAndCartId
+     * patchSavedCart
      * Explicitly saves a cart 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
@@ -2592,12 +2592,12 @@ export default class UsersApi {
 
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling usersCartsSaveByUserIdAndCartId");
+        throw new Error("Missing the required parameter 'userId' when calling patchSavedCart");
       }
 
       // verify the required parameter 'cartId' is set
       if (cartId === undefined || cartId === null) {
-        throw new Error("Missing the required parameter 'cartId' when calling usersCartsSaveByUserIdAndCartId");
+        throw new Error("Missing the required parameter 'cartId' when calling patchSavedCart");
       }
 
 
@@ -2628,7 +2628,7 @@ export default class UsersApi {
     }
 
     /**
-     * UsersCartsSaveByUserIdAndCartId
+     * patchSavedCart
      * Explicitly saves a cart 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
@@ -2638,7 +2638,7 @@ export default class UsersApi {
      * @param {String} opts.saveCartDescription the description that should be applied to the saved cart
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/SaveCartResultWsDTOModel}
      */
-    usersCartsSaveByUserIdAndCartId(userId, cartId, opts) {
+    patchSavedCart(userId, cartId, opts) {
       return this.usersCartsSaveByUserIdAndCartIdWithHttpInfo(userId, cartId, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
@@ -2647,7 +2647,7 @@ export default class UsersApi {
 
 
     /**
-     * UsersCartsSavedcartByUserIdAndCartId
+     * getSavedCart
      * Returns saved cart by it id for authenticated user 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
@@ -2661,12 +2661,12 @@ export default class UsersApi {
 
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling usersCartsSavedcartByUserIdAndCartId");
+        throw new Error("Missing the required parameter 'userId' when calling getSavedCart");
       }
 
       // verify the required parameter 'cartId' is set
       if (cartId === undefined || cartId === null) {
-        throw new Error("Missing the required parameter 'cartId' when calling usersCartsSavedcartByUserIdAndCartId");
+        throw new Error("Missing the required parameter 'cartId' when calling getSavedCart");
       }
 
 
@@ -2695,7 +2695,7 @@ export default class UsersApi {
     }
 
     /**
-     * UsersCartsSavedcartByUserIdAndCartId
+     * getSavedCart
      * Returns saved cart by it id for authenticated user 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
@@ -2703,7 +2703,7 @@ export default class UsersApi {
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/SaveCartResultWsDTOModel}
      */
-    usersCartsSavedcartByUserIdAndCartId(userId, cartId, opts) {
+    getSavedCart(userId, cartId, opts) {
       return this.usersCartsSavedcartByUserIdAndCartIdWithHttpInfo(userId, cartId, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
@@ -2712,7 +2712,7 @@ export default class UsersApi {
 
 
     /**
-     * UsersCartsVouchersByUserIdAndCartId
+     * getCartVouchers
      * Returns list of vouchers applied to the cart.  Security: Permitted only for non anonymous users or clients. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
@@ -2726,12 +2726,12 @@ export default class UsersApi {
 
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling usersCartsVouchersByUserIdAndCartId");
+        throw new Error("Missing the required parameter 'userId' when calling getCartVouchers");
       }
 
       // verify the required parameter 'cartId' is set
       if (cartId === undefined || cartId === null) {
-        throw new Error("Missing the required parameter 'cartId' when calling usersCartsVouchersByUserIdAndCartId");
+        throw new Error("Missing the required parameter 'cartId' when calling getCartVouchers");
       }
 
 
@@ -2760,7 +2760,7 @@ export default class UsersApi {
     }
 
     /**
-     * UsersCartsVouchersByUserIdAndCartId
+     * getCartVouchers
      * Returns list of vouchers applied to the cart.  Security: Permitted only for non anonymous users or clients. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
@@ -2768,7 +2768,7 @@ export default class UsersApi {
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/VoucherListWsDTOModel}
      */
-    usersCartsVouchersByUserIdAndCartId(userId, cartId, opts) {
+    getCartVouchers(userId, cartId, opts) {
       return this.usersCartsVouchersByUserIdAndCartIdWithHttpInfo(userId, cartId, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
@@ -2777,7 +2777,7 @@ export default class UsersApi {
 
 
     /**
-     * UsersCartsVouchersByUserIdAndCartId
+     * getCartVouchers
      * Applies a voucher based on the voucherId defined for the cart.  Security: Permitted only for non anonymous users or clients. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
@@ -2789,17 +2789,17 @@ export default class UsersApi {
 
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling usersCartsVouchersByUserIdAndCartId1");
+        throw new Error("Missing the required parameter 'userId' when calling postCartVoucher");
       }
 
       // verify the required parameter 'cartId' is set
       if (cartId === undefined || cartId === null) {
-        throw new Error("Missing the required parameter 'cartId' when calling usersCartsVouchersByUserIdAndCartId1");
+        throw new Error("Missing the required parameter 'cartId' when calling postCartVoucher");
       }
 
       // verify the required parameter 'voucherId' is set
       if (voucherId === undefined || voucherId === null) {
-        throw new Error("Missing the required parameter 'voucherId' when calling usersCartsVouchersByUserIdAndCartId1");
+        throw new Error("Missing the required parameter 'voucherId' when calling postCartVoucher");
       }
 
 
@@ -2828,14 +2828,14 @@ export default class UsersApi {
     }
 
     /**
-     * UsersCartsVouchersByUserIdAndCartId
+     * getCartVouchers
      * Applies a voucher based on the voucherId defined for the cart.  Security: Permitted only for non anonymous users or clients. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
      * @param {String} voucherId Voucher identifier
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    usersCartsVouchersByUserIdAndCartId1(userId, cartId, voucherId) {
+    postCartVoucher(userId, cartId, voucherId) {
       return this.usersCartsVouchersByUserIdAndCartId1WithHttpInfo(userId, cartId, voucherId)
         .then(function(response_and_data) {
           return response_and_data.data;
@@ -2844,7 +2844,7 @@ export default class UsersApi {
 
 
     /**
-     * UsersCartsVouchersVoucherIdByUserId
+     * deleteCartVouchers
      * Removes a voucher based on the voucherId defined for the current cart.  Security: Permitted only for non anonymous users or clients. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
@@ -2856,17 +2856,17 @@ export default class UsersApi {
 
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling usersCartsVouchersVoucherIdByUserId");
+        throw new Error("Missing the required parameter 'userId' when calling deleteCartVouchers");
       }
 
       // verify the required parameter 'cartId' is set
       if (cartId === undefined || cartId === null) {
-        throw new Error("Missing the required parameter 'cartId' when calling usersCartsVouchersVoucherIdByUserId");
+        throw new Error("Missing the required parameter 'cartId' when calling deleteCartVouchers");
       }
 
       // verify the required parameter 'voucherId' is set
       if (voucherId === undefined || voucherId === null) {
-        throw new Error("Missing the required parameter 'voucherId' when calling usersCartsVouchersVoucherIdByUserId");
+        throw new Error("Missing the required parameter 'voucherId' when calling deleteCartVouchers");
       }
 
 
@@ -2895,14 +2895,14 @@ export default class UsersApi {
     }
 
     /**
-     * UsersCartsVouchersVoucherIdByUserId
+     * deleteCartVouchers
      * Removes a voucher based on the voucherId defined for the current cart.  Security: Permitted only for non anonymous users or clients. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
      * @param {String} voucherId Voucher identifier (code)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    usersCartsVouchersVoucherIdByUserId(userId, cartId, voucherId) {
+    deleteCartVouchers(userId, cartId, voucherId) {
       return this.usersCartsVouchersVoucherIdByUserIdWithHttpInfo(userId, cartId, voucherId)
         .then(function(response_and_data) {
           return response_and_data.data;
@@ -2911,7 +2911,7 @@ export default class UsersApi {
 
 
     /**
-     * UsersCustomergroupsByUserId
+     * getCustomergroups
      * Returns all customer groups of a customer.  Security: Permitted for customers, customer managers or trusted client. Trusted client or customer manager is able to impersonate as any other user and access data on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {Object} opts Optional parameters
@@ -2924,7 +2924,7 @@ export default class UsersApi {
 
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling usersCustomergroupsByUserId");
+        throw new Error("Missing the required parameter 'userId' when calling getCustomergroups");
       }
 
 
@@ -2952,14 +2952,14 @@ export default class UsersApi {
     }
 
     /**
-     * UsersCustomergroupsByUserId
+     * getCustomergroups
      * Returns all customer groups of a customer.  Security: Permitted for customers, customer managers or trusted client. Trusted client or customer manager is able to impersonate as any other user and access data on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in the response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/UserGroupListWsDTOModel}
      */
-    usersCustomergroupsByUserId(userId, opts) {
+    getCustomergroups(userId, opts) {
       return this.usersCustomergroupsByUserIdWithHttpInfo(userId, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
@@ -2968,7 +2968,7 @@ export default class UsersApi {
 
 
     /**
-     * UsersLoginByUserId
+     * putLogin
      * Changes customer&#39;s login.  Security: Permitted for trusted clients, customers and customer managers. Trusted client or customer manager is able to impersonate as any other user and change login on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {Object} opts Optional parameters
@@ -2982,7 +2982,7 @@ export default class UsersApi {
 
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling usersLoginByUserId");
+        throw new Error("Missing the required parameter 'userId' when calling putLogin");
       }
 
 
@@ -3011,7 +3011,7 @@ export default class UsersApi {
     }
 
     /**
-     * UsersLoginByUserId
+     * putLogin
      * Changes customer&#39;s login.  Security: Permitted for trusted clients, customers and customer managers. Trusted client or customer manager is able to impersonate as any other user and change login on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {Object} opts Optional parameters
@@ -3019,7 +3019,7 @@ export default class UsersApi {
      * @param {String} opts.newLogin Customer&#39;s new login. Customer login is case insensitive.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    usersLoginByUserId(userId, opts) {
+    putLogin(userId, opts) {
       return this.usersLoginByUserIdWithHttpInfo(userId, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
@@ -3045,7 +3045,7 @@ export default class UsersApi {
 
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling usersOrdersByUserId1");
+        throw new Error("Missing the required parameter 'userId' when calling getOrders");
       }
 
 
@@ -3088,7 +3088,7 @@ export default class UsersApi {
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/OrderHistoryListWsDTOModel}
      */
-    usersOrdersByUserId1(userId, opts) {
+    getOrders(userId, opts) {
       return this.usersOrdersByUserId1WithHttpInfo(userId, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
@@ -3112,12 +3112,12 @@ export default class UsersApi {
 
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling usersOrdersByUserId2");
+        throw new Error("Missing the required parameter 'userId' when calling postOrder");
       }
 
       // verify the required parameter 'cartId' is set
       if (cartId === undefined || cartId === null) {
-        throw new Error("Missing the required parameter 'cartId' when calling usersOrdersByUserId2");
+        throw new Error("Missing the required parameter 'cartId' when calling postOrder");
       }
 
 
@@ -3156,7 +3156,7 @@ export default class UsersApi {
      * @param {String} opts.securityCode CCV security code.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/OrderWsDTOModel}
      */
-    usersOrdersByUserId2(userId, cartId, opts) {
+    postOrder(userId, cartId, opts) {
       return this.usersOrdersByUserId2WithHttpInfo(userId, cartId, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
@@ -3165,7 +3165,7 @@ export default class UsersApi {
 
 
     /**
-     * UsersOrdersByUserIdAndCode
+     * getOrder
      * Returns specific order details based on a specific order code. The response contains detailed order information.  Security: Allowed only for customers, customer managers, clients or trusted clients. Trusted client is able to impersonate as any customer and access their orders. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} code Order GUID (Globally Unique Identifier) or order CODE
@@ -3179,12 +3179,12 @@ export default class UsersApi {
 
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling usersOrdersByUserIdAndCode");
+        throw new Error("Missing the required parameter 'userId' when calling getOrder");
       }
 
       // verify the required parameter 'code' is set
       if (code === undefined || code === null) {
-        throw new Error("Missing the required parameter 'code' when calling usersOrdersByUserIdAndCode");
+        throw new Error("Missing the required parameter 'code' when calling getOrder");
       }
 
 
@@ -3213,7 +3213,7 @@ export default class UsersApi {
     }
 
     /**
-     * UsersOrdersByUserIdAndCode
+     * getOrder
      * Returns specific order details based on a specific order code. The response contains detailed order information.  Security: Allowed only for customers, customer managers, clients or trusted clients. Trusted client is able to impersonate as any customer and access their orders. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} code Order GUID (Globally Unique Identifier) or order CODE
@@ -3221,7 +3221,7 @@ export default class UsersApi {
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/OrderWsDTOModel}
      */
-    usersOrdersByUserIdAndCode(userId, code, opts) {
+    getOrder(userId, code, opts) {
       return this.usersOrdersByUserIdAndCodeWithHttpInfo(userId, code, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
@@ -3230,7 +3230,7 @@ export default class UsersApi {
 
 
     /**
-     * UsersPasswordByUserId
+     * putPassword
      * Changes customer&#39;s password.  Security: Permitted for trusted clients, customers and customer managers. Trusted client or customer manager may change someone&#39;s else password without knowing the old one. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {Object} opts Optional parameters
@@ -3244,7 +3244,7 @@ export default class UsersApi {
 
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling usersPasswordByUserId");
+        throw new Error("Missing the required parameter 'userId' when calling putPassword");
       }
 
 
@@ -3273,7 +3273,7 @@ export default class UsersApi {
     }
 
     /**
-     * UsersPasswordByUserId
+     * putPassword
      * Changes customer&#39;s password.  Security: Permitted for trusted clients, customers and customer managers. Trusted client or customer manager may change someone&#39;s else password without knowing the old one. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {Object} opts Optional parameters
@@ -3281,7 +3281,7 @@ export default class UsersApi {
      * @param {String} opts.old Old password. Required only for ROLE_CUSTOMERGROUP
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    usersPasswordByUserId(userId, opts) {
+    putPassword(userId, opts) {
       return this.usersPasswordByUserIdWithHttpInfo(userId, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
@@ -3290,7 +3290,7 @@ export default class UsersApi {
 
 
     /**
-     * UsersPaymentdetailsByUserId
+     * getPaymentdetail
      * Returns customer&#39;s credit card payment details for a given id.  Security: Permitted for customers, customer managers or trusted client. Trusted client or customer manager is able to impersonate as any other user and access data on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} paymentDetailsId - Payment details identifier
@@ -3304,12 +3304,12 @@ export default class UsersApi {
 
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling usersPaymentdetailsByUserId");
+        throw new Error("Missing the required parameter 'userId' when calling getPaymentdetail");
       }
 
       // verify the required parameter 'paymentDetailsId' is set
       if (paymentDetailsId === undefined || paymentDetailsId === null) {
-        throw new Error("Missing the required parameter 'paymentDetailsId' when calling usersPaymentdetailsByUserId");
+        throw new Error("Missing the required parameter 'paymentDetailsId' when calling getPaymentdetail");
       }
 
 
@@ -3338,7 +3338,7 @@ export default class UsersApi {
     }
 
     /**
-     * UsersPaymentdetailsByUserId
+     * getPaymentdetail
      * Returns customer&#39;s credit card payment details for a given id.  Security: Permitted for customers, customer managers or trusted client. Trusted client or customer manager is able to impersonate as any other user and access data on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} paymentDetailsId - Payment details identifier
@@ -3346,7 +3346,7 @@ export default class UsersApi {
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in the response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/PaymentDetailsWsDTOModel}
      */
-    usersPaymentdetailsByUserId(userId, paymentDetailsId, opts) {
+    getPaymentdetail(userId, paymentDetailsId, opts) {
       return this.usersPaymentdetailsByUserIdWithHttpInfo(userId, paymentDetailsId, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
@@ -3355,7 +3355,7 @@ export default class UsersApi {
 
 
     /**
-     * UsersPaymentdetailsByUserId
+     * getPaymentdetail
      * Updates existing customer&#39;s credit card payment info based on the payment info ID. Attributes not given in request will be defined again (set to null or default).  Security: Permitted for customers, customer managers or trusted client. Trusted client or customer manager is able to impersonate as any other user and access data on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} paymentDetailsId - Payment details identifier
@@ -3367,17 +3367,17 @@ export default class UsersApi {
 
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling usersPaymentdetailsByUserId1");
+        throw new Error("Missing the required parameter 'userId' when calling putPaymentdetail");
       }
 
       // verify the required parameter 'paymentDetailsId' is set
       if (paymentDetailsId === undefined || paymentDetailsId === null) {
-        throw new Error("Missing the required parameter 'paymentDetailsId' when calling usersPaymentdetailsByUserId1");
+        throw new Error("Missing the required parameter 'paymentDetailsId' when calling putPaymentdetail");
       }
 
       // verify the required parameter 'body' is set
       if (body === undefined || body === null) {
-        throw new Error("Missing the required parameter 'body' when calling usersPaymentdetailsByUserId1");
+        throw new Error("Missing the required parameter 'body' when calling putPaymentdetail");
       }
 
 
@@ -3405,14 +3405,14 @@ export default class UsersApi {
     }
 
     /**
-     * UsersPaymentdetailsByUserId
+     * getPaymentdetail
      * Updates existing customer&#39;s credit card payment info based on the payment info ID. Attributes not given in request will be defined again (set to null or default).  Security: Permitted for customers, customer managers or trusted client. Trusted client or customer manager is able to impersonate as any other user and access data on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} paymentDetailsId - Payment details identifier
      * @param {module:models/PaymentDetailsWsDTO640Model} body 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    usersPaymentdetailsByUserId1(userId, paymentDetailsId, body) {
+    putPaymentdetail(userId, paymentDetailsId, body) {
       return this.usersPaymentdetailsByUserId1WithHttpInfo(userId, paymentDetailsId, body)
         .then(function(response_and_data) {
           return response_and_data.data;
@@ -3421,7 +3421,7 @@ export default class UsersApi {
 
 
     /**
-     * UsersPaymentdetailsByUserId
+     * getPaymentdetail
      * Updates existing customer&#39;s credit card payment details based on its ID. Only attributes given in request will be changed.  Security: Permitted for customers, customer managers or trusted client. Trusted client or customer manager is able to impersonate as any other user and access data on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} paymentDetailsId - Payment details identifier
@@ -3433,17 +3433,17 @@ export default class UsersApi {
 
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling usersPaymentdetailsByUserId2");
+        throw new Error("Missing the required parameter 'userId' when calling patchPaymentdetail");
       }
 
       // verify the required parameter 'paymentDetailsId' is set
       if (paymentDetailsId === undefined || paymentDetailsId === null) {
-        throw new Error("Missing the required parameter 'paymentDetailsId' when calling usersPaymentdetailsByUserId2");
+        throw new Error("Missing the required parameter 'paymentDetailsId' when calling patchPaymentdetail");
       }
 
       // verify the required parameter 'body' is set
       if (body === undefined || body === null) {
-        throw new Error("Missing the required parameter 'body' when calling usersPaymentdetailsByUserId2");
+        throw new Error("Missing the required parameter 'body' when calling patchPaymentdetail");
       }
 
 
@@ -3471,14 +3471,14 @@ export default class UsersApi {
     }
 
     /**
-     * UsersPaymentdetailsByUserId
+     * getPaymentdetail
      * Updates existing customer&#39;s credit card payment details based on its ID. Only attributes given in request will be changed.  Security: Permitted for customers, customer managers or trusted client. Trusted client or customer manager is able to impersonate as any other user and access data on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} paymentDetailsId - Payment details identifier
      * @param {module:models/PaymentDetailsWsDTO640Model} body 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    usersPaymentdetailsByUserId2(userId, paymentDetailsId, body) {
+    patchPaymentdetail(userId, paymentDetailsId, body) {
       return this.usersPaymentdetailsByUserId2WithHttpInfo(userId, paymentDetailsId, body)
         .then(function(response_and_data) {
           return response_and_data.data;
@@ -3487,7 +3487,7 @@ export default class UsersApi {
 
 
     /**
-     * UsersPaymentdetailsByUserId
+     * getPaymentdetail
      * Removes customer&#39;s credit card payment details based on its ID.  Security: Permitted for customers, customer managers or trusted client. Trusted client or customer manager is able to impersonate as any other user and access data on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} paymentDetailsId - Payment details identifier
@@ -3498,12 +3498,12 @@ export default class UsersApi {
 
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling usersPaymentdetailsByUserId3");
+        throw new Error("Missing the required parameter 'userId' when calling deletePaymentdetail");
       }
 
       // verify the required parameter 'paymentDetailsId' is set
       if (paymentDetailsId === undefined || paymentDetailsId === null) {
-        throw new Error("Missing the required parameter 'paymentDetailsId' when calling usersPaymentdetailsByUserId3");
+        throw new Error("Missing the required parameter 'paymentDetailsId' when calling deletePaymentdetail");
       }
 
 
@@ -3531,13 +3531,13 @@ export default class UsersApi {
     }
 
     /**
-     * UsersPaymentdetailsByUserId
+     * getPaymentdetail
      * Removes customer&#39;s credit card payment details based on its ID.  Security: Permitted for customers, customer managers or trusted client. Trusted client or customer manager is able to impersonate as any other user and access data on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} paymentDetailsId - Payment details identifier
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    usersPaymentdetailsByUserId3(userId, paymentDetailsId) {
+    deletePaymentdetail(userId, paymentDetailsId) {
       return this.usersPaymentdetailsByUserId3WithHttpInfo(userId, paymentDetailsId)
         .then(function(response_and_data) {
           return response_and_data.data;
@@ -3546,7 +3546,7 @@ export default class UsersApi {
 
 
     /**
-     * UsersPaymentdetailsByUserId
+     * getPaymentdetail
      * Return customer&#39;s credit card payment details list.  Security: Permitted for customers, customer managers or trusted client. Trusted client or customer manager is able to impersonate as any other user and access data on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {Object} opts Optional parameters
@@ -3560,7 +3560,7 @@ export default class UsersApi {
 
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling usersPaymentdetailsByUserId4");
+        throw new Error("Missing the required parameter 'userId' when calling getPaymentdetails");
       }
 
 
@@ -3589,7 +3589,7 @@ export default class UsersApi {
     }
 
     /**
-     * UsersPaymentdetailsByUserId
+     * getPaymentdetail
      * Return customer&#39;s credit card payment details list.  Security: Permitted for customers, customer managers or trusted client. Trusted client or customer manager is able to impersonate as any other user and access data on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {Object} opts Optional parameters
@@ -3597,7 +3597,7 @@ export default class UsersApi {
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in the response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/PaymentDetailsListWsDTOModel}
      */
-    usersPaymentdetailsByUserId4(userId, opts) {
+    getPaymentdetails(userId, opts) {
       return this.usersPaymentdetailsByUserId4WithHttpInfo(userId, opts)
         .then(function(response_and_data) {
           return response_and_data.data;

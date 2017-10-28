@@ -4,14 +4,14 @@ All URIs are relative to *http://api-example.hybris.com/rest/v2/DefaultParameter
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**vouchersByCode**](VouchersApi.md#vouchersByCode) | **GET** /vouchers/{code} | VouchersByCode
+[**getVoucher**](VouchersApi.md#getVoucher) | **GET** /vouchers/{code} | getVoucher
 
 
-<a name="vouchersByCode"></a>
-# **vouchersByCode**
-> VoucherWsDTOModel vouchersByCode(code, opts)
+<a name="getVoucher"></a>
+# **getVoucher**
+> VoucherWsDTOModel getVoucher(code, opts)
 
-VouchersByCode
+getVoucher
 
 Returns details of a single voucher according to a voucher code.  Security: Permitted only for trusted client 
 
@@ -31,7 +31,7 @@ let code = "code_example"; // String | Voucher identifier (code)
 let opts = { 
   'fields': "fields_example" // String | Response configuration (list of fields, which should be returned in response)
 };
-apiInstance.vouchersByCode(code, opts).then((data) => {
+apiInstance.getVoucher(code, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);

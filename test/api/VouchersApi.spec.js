@@ -55,10 +55,10 @@
   }
 
   describe('VouchersApi', function() {
-    describe('vouchersByCode', function() {
-      it('should call vouchersByCode successfully', function(done) {
+    describe('getVoucher', function() {
+      it('should call getVoucher successfully', function(done) {
         const code = 'MAGIC'
-        instance.vouchersByCode(code)
+        instance.getVoucher(code)
           .then((res) => {
             expect(res.code).to.equal(code);
             done();
