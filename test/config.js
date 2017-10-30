@@ -1,9 +1,8 @@
 import * as OCC from '../src/index'
+import {baseSite, baseUrl, authorizationUrl} from './config.json'
 
 const testWrapper = (occ) => {
-    const baseSite = 'apparel-uk'
-    const basePath = `https://hybris.merlinspotions.com/rest/v2/${baseSite}`
-    const authorizationUrl = 'https://hybris.merlinspotions.com/authorizationserver/oauth/token'
+    const basePath = `${baseUrl}/${baseSite}`
     occ.ApiClient.instance = new occ.ApiClient(basePath, authorizationUrl)
 
     occ.catalogName = 'Apparel Product Catalog'
