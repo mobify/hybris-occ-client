@@ -1,5 +1,6 @@
 ## To be released
 - Added tests for most of the endpoints [#1](https://github.com/mobify/hybris-api-js-client/pull/1)
+    - Renamed methods so they are more intuitive
     - Upgraded Mocha version to 4.0.1
     - Added requestAccessToken and clearAccessToken utilities
     - Added tests and an wrapper function testWrapper that injects the valid testing data
