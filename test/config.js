@@ -215,11 +215,12 @@ const testWrapper = (occ) => {
 
     occ.payment = {
         billingAddress: occ.address,
-        cardType: {code: 'visa'},
+        cardType: {code: 'visa', name: 'Visa'},
         cardNumber: '4111111111111111',
-        accountHolderName: 'Mobify',
+        accountHolderName: 'Mobify Automation',
         expiryYear: '2020',
         expiryMonth: '12',
+        save: 'true'
     }
     return occ
 }

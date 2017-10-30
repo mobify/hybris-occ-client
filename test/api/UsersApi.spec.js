@@ -393,6 +393,7 @@
     // // payment info is invalid?
     // describe('postCartPaymentdetail', function() {
     //   it('should call postCartPaymentdetail successfully', function(done) {
+    //     console.log(payment)
     //     instance.postCartPaymentdetail(user.uid, cartId, payment)
     //       .then((res) => {
     //         console.log(res)
@@ -427,17 +428,17 @@
     //   });
     // });
 
-    // // GET user order history
-    // describe('getOrders', function() {
-    //   it('should call getOrders successfully', function(done) {
-    //     //uncomment below and update the code to test getOrders
-    //     //instance.getOrders(function(error) {
-    //     //  if (error) throw error;
-    //     //expect().to.be();
-    //     //});
-    //     done();
-    //   });
-    // });
+    // GET user order history
+    describe('getOrders', function() {
+      it('should call getOrders successfully', function(done) {
+        instance.getOrders(user.uid)
+          .then((res) => {
+            expect(res).to.have.property('orders')
+            done();
+          })
+          .catch((err)=>console.log(err))
+      });
+    });
 
     // // GET order detail
     // describe('getOrder', function() {
