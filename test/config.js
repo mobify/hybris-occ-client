@@ -6,8 +6,11 @@ const testWrapper = (occ) => {
     if (process.env.CIRCLE) {
         const basePath = `${process.env.baseUrl}/${process.env.baseSite}`
         occ.ApiClient.instance = new occ.ApiClient(basePath, process.env.authorizationUrl)
-    } else {
+    } if (require('./config.json')) {
+        const config = require('./config.json')
         occ.ApiClient.instance = new occ.ApiClient(`${config.baseUrl}/${config.baseSite}`, config.authorizationUrl) 
+    } else {
+        throw new Error('Config.json is missing!')
     }
 
     occ.catalogName = 'Apparel Product Catalog'
