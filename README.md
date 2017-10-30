@@ -10,7 +10,7 @@ npm install hybris-api-js-client --save
 
 ## Testing
 
-Because Hybris OCC is not public available, you need to have a running instance that you can test against. In test folder, there is a file `example.config.json` that has the example configuration for your environment. Simply create a file `config.json`, and fill out the required fields.
+Because Hybris OCC is not public available, you need to have a running instance that you can test against. In test folder, there is a file `example.env.json` that has the example configuration for your environment. Simply create a file `env.json`, and fill out the required fields.
 
 Example:
 ```json

@@ -1,9 +1,8 @@
 import * as OCC from '../src/index'
 
 const testWrapper = (occ) => {
-    console.log(process.env)
     try {
-        const config = require('./config.json')
+        const config = require('./env.json')
         occ.ApiClient.instance = new occ.ApiClient(`${config.baseUrl}/${config.baseSite}`, config.authorizationUrl) 
     } catch (err) {
         if (process.env.CIRCLE) {
