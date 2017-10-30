@@ -2,7 +2,7 @@
   "name": "occ",
   "version": "0.0.1",
   "description": "Hybris OCC API JavaScript Client library",
-  "license": "See license in file: LICENSE",
+  "license": "SEE LICENSE IN LICENSE",
   "main": "src/index.js",
   "scripts": {
     "test": "mocha --compilers js:babel-core/register $(find test -name '*Api.spec.js')"
