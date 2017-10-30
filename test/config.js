@@ -3,14 +3,16 @@ import config from './config.json'
 
 const testWrapper = (occ) => {
     console.log(process.env)
-    if (process.env.CIRCLE) {
-        const basePath = `${process.env.baseUrl}/${process.env.baseSite}`
-        occ.ApiClient.instance = new occ.ApiClient(basePath, process.env.authorizationUrl)
-    } if (require('./config.json')) {
+    try {
         const config = require('./config.json')
         occ.ApiClient.instance = new occ.ApiClient(`${config.baseUrl}/${config.baseSite}`, config.authorizationUrl) 
-    } else {
-        throw new Error('Config.json is missing!')
+    } catch (err) {
+        if (process.env.CIRCLE) {
+            const basePath = `${process.env.baseUrl}/${process.env.baseSite}`
+            occ.ApiClient.instance = new occ.ApiClient(basePath, process.env.authorizationUrl)
+        } else {
+            throw new Error(err)
+        }
     }
 
     occ.catalogName = 'Apparel Product Catalog'
