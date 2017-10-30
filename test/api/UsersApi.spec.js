@@ -389,6 +389,17 @@
       });
     });
 
+    describe('getCartPromotions', function() {
+      it('should call getCartPromotions successfully', function(done) {
+        instance.getCartPromotions(user.uid, cartId)
+          .then((res) => {
+            expect(res).to.have.property('promotions')
+            done();
+          })
+          .catch((err)=>console.log(err))
+      });
+    });
+
     // // POST new credit card add to cart
     // // payment info is invalid?
     // describe('postCartPaymentdetail', function() {
@@ -539,16 +550,7 @@
       });
     });
   
-    describe('getCartPromotions', function() {
-      it('should call getCartPromotions successfully', function(done) {
-        //uncomment below and update the code to test getCartPromotions
-        //instance.getCartPromotions(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
+    
     describe('postCartPromotion', function() {
       it('should call postCartPromotion successfully', function(done) {
         //uncomment below and update the code to test postCartPromotion
