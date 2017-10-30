@@ -193,6 +193,7 @@ const testWrapper = (occ) => {
         lastName: 'Automation',
         titleCode: occ.titles[0].code,
         uid: 'mobifyautomation@mobify.com',
+        uid2: 'mobifyautomation2@mobify.com',
         password: 'Passw0rd!',
     })
         
@@ -201,12 +202,12 @@ const testWrapper = (occ) => {
         firstName: 'Mobify',
         lastName: 'automation',
         titleCode: occ.titles[0].code,
-        line1:'725 Granville Street, Suite #420',
+        line1:'West Road',
         line2:'',
-        postalCode:'V3J 7T5',
-        town:'Vancouver',
+        postalCode:'CB3 9DR',
+        town:'Cambridge',
         country:{
-            isocode: 'CA'
+            isocode: 'GB'
         },
         phone:'(777) 777-7777',
         companyName:'',
@@ -220,7 +221,7 @@ const testWrapper = (occ) => {
         accountHolderName: 'Mobify Automation',
         expiryYear: '2020',
         expiryMonth: '12',
-        save: 'true'
+        securityCode: '111'
     }
     return occ
 }

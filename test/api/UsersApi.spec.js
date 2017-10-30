@@ -361,7 +361,6 @@
       it('should call putCartDeliverymode successfully', function(done) {
         instance.putCartDeliverymode(user.uid, cartId, 'standard-gross')
           .then((res) => {
-            console.log(res)
             done();
           })
           .catch((err)=>console.log(err))
@@ -435,7 +434,13 @@
     //     //  if (error) throw error;
     //     //expect().to.be();
     //     //});
-    //     done();
+    //     instance.postOrder(user.uid, cartId, {securityCode: payment.securityCode})
+    //       .then((res) => {
+    //         console.log(res)
+    //         // expect(res).to.have.property('orders')
+    //         done();
+    //       })
+    //       .catch((err)=>console.log(err))
     //   });
     // });
 
