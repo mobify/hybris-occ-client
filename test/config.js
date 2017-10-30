@@ -1,5 +1,4 @@
 import * as OCC from '../src/index'
-import config from './config.json'
 
 const testWrapper = (occ) => {
     console.log(process.env)
