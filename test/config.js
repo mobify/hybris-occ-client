@@ -1,9 +1,13 @@
 import * as OCC from '../src/index'
-import {baseSite, baseUrl, authorizationUrl} from './config.json'
+import config from './config.json'
 
 const testWrapper = (occ) => {
-    const basePath = `${baseUrl}/${baseSite}`
-    occ.ApiClient.instance = new occ.ApiClient(basePath, authorizationUrl)
+    if (process.env.CIRCLE) {
+        const basePath = `${process.env.baseUrl}/${process.env.baseSite}`
+        occ.ApiClient.instance = new occ.ApiClient(basePath, process.env.authorizationUrl)
+    } else {
+        occ.ApiClient.instance = new occ.ApiClient(`${config.baseUrl}/${config.baseSite}`, config.authorizationUrl) 
+    }
 
     occ.catalogName = 'Apparel Product Catalog'
     occ.catalogId = 'apparelProductCatalog'
