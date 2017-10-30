@@ -2,6 +2,7 @@ import * as OCC from '../src/index'
 import config from './config.json'
 
 const testWrapper = (occ) => {
+    console.log(process.env)
     if (process.env.CIRCLE) {
         const basePath = `${process.env.baseUrl}/${process.env.baseSite}`
         occ.ApiClient.instance = new occ.ApiClient(basePath, process.env.authorizationUrl)
