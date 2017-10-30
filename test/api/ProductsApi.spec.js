@@ -74,6 +74,7 @@
     });
     describe('getProductReferences', function () {
       it('should call getProductReferences successfully', function (done) {
+        // Need information: referenceType enum
         // instance.getProductReferences(sampleProduct.code, {referenceType: 'a'})
         //   .then((res) => {
         //     done();
