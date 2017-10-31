@@ -37,9 +37,8 @@
       .then(done)
   })
 
-  after((done) => {
+  after(() => {
     Occ.default.ApiClient.instance.clearAccessToken()
-    done();
   })
 
   beforeEach(function() {
@@ -345,9 +344,9 @@
     });
 
     // GET all delivery modes for cart
-    describe('getCartDeliverymodes', function() {
-      it('should call getCartDeliverymodes successfully', function(done) {
-        instance.getCartDeliverymodes(user.uid, cartId)
+    describe('getCartDeliveryModes', function() {
+      it('should call getCartDeliveryModes successfully', function(done) {
+        instance.getCartDeliveryModes(user.uid, cartId)
           .then((res) => {
             expect(res).to.have.property('deliveryModes')
             done();
@@ -356,9 +355,9 @@
     });
 
     // PUT set delivery mode to cart
-    describe('putCartDeliverymode', function() {
-      it('should call putCartDeliverymode successfully', function(done) {
-        instance.putCartDeliverymode(user.uid, cartId, 'standard-gross')
+    describe('putCartDeliveryMode', function() {
+      it('should call putCartDeliveryMode successfully', function(done) {
+        instance.putCartDeliveryMode(user.uid, cartId, 'standard-gross')
           .then((res) => {
             done();
           })
@@ -367,9 +366,9 @@
     });
 
     // GET selected delivery mode of cart
-    describe('getCartDeliverymode', function() {
-      it('should call getCartDeliverymode successfully', function(done) {
-        instance.getCartDeliverymode(user.uid, cartId)
+    describe('getCartDeliveryMode', function() {
+      it('should call getCartDeliveryMode successfully', function(done) {
+        instance.getCartDeliveryMode(user.uid, cartId)
           .then((res) => {
             expect(res).to.have.property('deliveryCost')
             expect(res.code).to.equal('standard-gross')
@@ -400,10 +399,10 @@
 
     // // POST new credit card add to cart
     // // payment info is invalid?
-    // describe('postCartPaymentdetail', function() {
-    //   it('should call postCartPaymentdetail successfully', function(done) {
+    // describe('postCartPaymentDetail', function() {
+    //   it('should call postCartPaymentDetail successfully', function(done) {
     //     console.log(payment)
-    //     instance.postCartPaymentdetail(user.uid, cartId, payment)
+    //     instance.postCartPaymentDetail(user.uid, cartId, payment)
     //       .then((res) => {
     //         console.log(res)
     //         expect(res.quantity).to.equal(updatedQuantity)
@@ -414,10 +413,10 @@
     // });
 
     // // PUT set payment details
-    // describe('putCartPaymentdetail', function() {
-    //   it('should call putCartPaymentdetail successfully', function(done) {
-    //     //uncomment below and update the code to test putCartPaymentdetail
-    //     //instance.putCartPaymentdetail(function(error) {
+    // describe('putCartPaymentDetail', function() {
+    //   it('should call putCartPaymentDetail successfully', function(done) {
+    //     //uncomment below and update the code to test putCartPaymentDetail
+    //     //instance.putCartPaymentDetail(function(error) {
     //     //  if (error) throw error;
     //     //expect().to.be();
     //     //});
@@ -487,9 +486,9 @@
     
     // // POST clone a cart
     // // TODO: fix 'cannot clone a saved cart'
-    // describe('postCartClonesavedcart', function() {
-    //   it('should call postCartClonesavedcart successfully', function(done) {
-    //     instance.postCartClonesavedcart(user.uid, '00002110')
+    // describe('postCartCloneSavedcart', function() {
+    //   it('should call postCartCloneSavedcart successfully', function(done) {
+    //     instance.postCartCloneSavedcart(user.uid, '00002110')
     //       .then((res) => {
     //         console.log(res)
     //         console.log(cartId)
@@ -501,9 +500,9 @@
     // });
 
     // DELETE cart delivery mode
-    describe('deleteCartDeliverymode', function() {
-      it('should call deleteCartDeliverymode successfully', function(done) {
-        instance.deleteCartDeliverymode(user.uid, cartId)
+    describe('deleteCartDeliveryMode', function() {
+      it('should call deleteCartDeliveryMode successfully', function(done) {
+        instance.deleteCartDeliveryMode(user.uid, cartId)
           .then(done)
       });
     });
@@ -583,10 +582,10 @@
         done();
       });
     });
-    describe('patchCartRestoresavedcart', function() {
-      it('should call patchCartRestoresavedcart successfully', function(done) {
-        //uncomment below and update the code to test patchCartRestoresavedcart
-        //instance.patchCartRestoresavedcart(function(error) {
+    describe('patchCartRestoreSavedCart', function() {
+      it('should call patchCartRestoreSavedCart successfully', function(done) {
+        //uncomment below and update the code to test patchCartRestoreSavedCart
+        //instance.patchCartRestoreSavedCart(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -614,10 +613,10 @@
       });
     });
     
-    describe('getCustomergroups', function() {
-      it('should call getCustomergroups successfully', function(done) {
-        //uncomment below and update the code to test getCustomergroups
-        //instance.getCustomergroups(function(error) {
+    describe('getCustomerGroups', function() {
+      it('should call getCustomerGroups successfully', function(done) {
+        //uncomment below and update the code to test getCustomerGroups
+        //instance.getCustomerGroups(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -635,50 +634,50 @@
       });
     });
 
-    // describe('getPaymentdetail', function() {
-    //   it('should call getPaymentdetail successfully', function(done) {
-    //     //uncomment below and update the code to test getPaymentdetail
-    //     //instance.getPaymentdetail(function(error) {
+    // describe('getPaymentDetail', function() {
+    //   it('should call getPaymentDetail successfully', function(done) {
+    //     //uncomment below and update the code to test getPaymentDetail
+    //     //instance.getPaymentDetail(function(error) {
     //     //  if (error) throw error;
     //     //expect().to.be();
     //     //});
     //     done();
     //   });
     // });
-    // describe('putPaymentdetail', function() {
-    //   it('should call putPaymentdetail successfully', function(done) {
-    //     //uncomment below and update the code to test putPaymentdetail
-    //     //instance.putPaymentdetail(function(error) {
+    // describe('putPaymentDetail', function() {
+    //   it('should call putPaymentDetail successfully', function(done) {
+    //     //uncomment below and update the code to test putPaymentDetail
+    //     //instance.putPaymentDetail(function(error) {
     //     //  if (error) throw error;
     //     //expect().to.be();
     //     //});
     //     done();
     //   });
     // });
-    // describe('patchPaymentdetail', function() {
-    //   it('should call patchPaymentdetail successfully', function(done) {
-    //     //uncomment below and update the code to test patchPaymentdetail
-    //     //instance.patchPaymentdetail(function(error) {
+    // describe('patchPaymentDetail', function() {
+    //   it('should call patchPaymentDetail successfully', function(done) {
+    //     //uncomment below and update the code to test patchPaymentDetail
+    //     //instance.patchPaymentDetail(function(error) {
     //     //  if (error) throw error;
     //     //expect().to.be();
     //     //});
     //     done();
     //   });
     // });
-    // describe('deletePaymentdetail', function() {
-    //   it('should call deletePaymentdetail successfully', function(done) {
-    //     //uncomment below and update the code to test deletePaymentdetail
-    //     //instance.deletePaymentdetail(function(error) {
+    // describe('deletePaymentDetail', function() {
+    //   it('should call deletePaymentDetail successfully', function(done) {
+    //     //uncomment below and update the code to test deletePaymentDetail
+    //     //instance.deletePaymentDetail(function(error) {
     //     //  if (error) throw error;
     //     //expect().to.be();
     //     //});
     //     done();
     //   });
     // });
-    // describe('getPaymentdetails', function() {
-    //   it('should call getPaymentdetails successfully', function(done) {
-    //     //uncomment below and update the code to test getPaymentdetails
-    //     //instance.getPaymentdetails(function(error) {
+    // describe('getPaymentDetails', function() {
+    //   it('should call getPaymentDetails successfully', function(done) {
+    //     //uncomment below and update the code to test getPaymentDetails
+    //     //instance.getPaymentDetails(function(error) {
     //     //  if (error) throw error;
     //     //expect().to.be();
     //     //});

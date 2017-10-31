@@ -1,5 +1,5 @@
 {
-  "name": "occ",
+  "name": "hybris-occ-client",
   "version": "0.0.1",
   "description": "Hybris OCC API JavaScript Client library",
   "license": "SEE LICENSE IN LICENSE",

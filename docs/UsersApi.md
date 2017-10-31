@@ -23,11 +23,11 @@ Method | HTTP request | Description
 [**postCart**](UsersApi.md#postCart) | **POST** /users/{userId}/carts | getCarts
 [**getCart**](UsersApi.md#getCart) | **GET** /users/{userId}/carts/{cartId} | getCart
 [**deleteCart**](UsersApi.md#deleteCart) | **DELETE** /users/{userId}/carts/{cartId} | getCart
-[**postCartClonesavedcart**](UsersApi.md#postCartClonesavedcart) | **POST** /users/{userId}/carts/{cartId}/clonesavedcart | postCartClonesavedcart
-[**getCartDeliverymode**](UsersApi.md#getCartDeliverymode) | **GET** /users/{userId}/carts/{cartId}/deliverymode | getCartDeliverymode
-[**putCartDeliverymode**](UsersApi.md#putCartDeliverymode) | **PUT** /users/{userId}/carts/{cartId}/deliverymode | getCartDeliverymode
-[**deleteCartDeliverymode**](UsersApi.md#deleteCartDeliverymode) | **DELETE** /users/{userId}/carts/{cartId}/deliverymode | getCartDeliverymode
-[**getCartDeliverymodes**](UsersApi.md#getCartDeliverymodes) | **GET** /users/{userId}/carts/{cartId}/deliverymodes | getCartDeliverymodes
+[**postCartCloneSavedcart**](UsersApi.md#postCartCloneSavedcart) | **POST** /users/{userId}/carts/{cartId}/clonesavedcart | postCartCloneSavedcart
+[**getCartDeliveryMode**](UsersApi.md#getCartDeliveryMode) | **GET** /users/{userId}/carts/{cartId}/deliverymode | getCartDeliveryMode
+[**putCartDeliveryMode**](UsersApi.md#putCartDeliveryMode) | **PUT** /users/{userId}/carts/{cartId}/deliverymode | getCartDeliveryMode
+[**deleteCartDeliveryMode**](UsersApi.md#deleteCartDeliveryMode) | **DELETE** /users/{userId}/carts/{cartId}/deliverymode | getCartDeliveryMode
+[**getCartDeliveryModes**](UsersApi.md#getCartDeliveryModes) | **GET** /users/{userId}/carts/{cartId}/deliverymodes | getCartDeliveryModes
 [**putCartEmail**](UsersApi.md#putCartEmail) | **PUT** /users/{userId}/carts/{cartId}/email | putCartEmail
 [**getCartEntries**](UsersApi.md#getCartEntries) | **GET** /users/{userId}/carts/{cartId}/entries | getCartEntries
 [**postCartEntries**](UsersApi.md#postCartEntries) | **POST** /users/{userId}/carts/{cartId}/entries | getCartEntries
@@ -36,29 +36,29 @@ Method | HTTP request | Description
 [**patchCartEntry**](UsersApi.md#patchCartEntry) | **PATCH** /users/{userId}/carts/{cartId}/entries/{entryNumber} | getCartEntry
 [**deleteCartEntry**](UsersApi.md#deleteCartEntry) | **DELETE** /users/{userId}/carts/{cartId}/entries/{entryNumber} | getCartEntry
 [**patchCartFlagForDeletion**](UsersApi.md#patchCartFlagForDeletion) | **PATCH** /users/{userId}/carts/{cartId}/flagForDeletion | patchCartFlagForDeletion
-[**postCartPaymentdetail**](UsersApi.md#postCartPaymentdetail) | **POST** /users/{userId}/carts/{cartId}/paymentdetails | postCartPaymentdetail
-[**putCartPaymentdetail**](UsersApi.md#putCartPaymentdetail) | **PUT** /users/{userId}/carts/{cartId}/paymentdetails | postCartPaymentdetail
+[**postCartPaymentDetail**](UsersApi.md#postCartPaymentDetail) | **POST** /users/{userId}/carts/{cartId}/paymentdetails | postCartPaymentDetail
+[**putCartPaymentDetail**](UsersApi.md#putCartPaymentDetail) | **PUT** /users/{userId}/carts/{cartId}/paymentdetails | postCartPaymentDetail
 [**getCartPromotions**](UsersApi.md#getCartPromotions) | **GET** /users/{userId}/carts/{cartId}/promotions | getCartPromotions
 [**postCartPromotion**](UsersApi.md#postCartPromotion) | **POST** /users/{userId}/carts/{cartId}/promotions | getCartPromotions
 [**getCartPromotion**](UsersApi.md#getCartPromotion) | **GET** /users/{userId}/carts/{cartId}/promotions/{promotionId} | getCartPromotion
 [**deleteCartPromotion**](UsersApi.md#deleteCartPromotion) | **DELETE** /users/{userId}/carts/{cartId}/promotions/{promotionId} | getCartPromotion
-[**patchCartRestoresavedcart**](UsersApi.md#patchCartRestoresavedcart) | **PATCH** /users/{userId}/carts/{cartId}/restoresavedcart | patchCartRestoresavedcart
+[**patchCartRestoreSavedCart**](UsersApi.md#patchCartRestoreSavedCart) | **PATCH** /users/{userId}/carts/{cartId}/restoresavedcart | patchCartRestoreSavedCart
 [**patchSavedCart**](UsersApi.md#patchSavedCart) | **PATCH** /users/{userId}/carts/{cartId}/save | patchSavedCart
 [**getSavedCart**](UsersApi.md#getSavedCart) | **GET** /users/{userId}/carts/{cartId}/savedcart | getSavedCart
 [**getCartVouchers**](UsersApi.md#getCartVouchers) | **GET** /users/{userId}/carts/{cartId}/vouchers | getCartVouchers
 [**postCartVoucher**](UsersApi.md#postCartVoucher) | **POST** /users/{userId}/carts/{cartId}/vouchers | getCartVouchers
 [**deleteCartVouchers**](UsersApi.md#deleteCartVouchers) | **DELETE** /users/{userId}/carts/{cartId}/vouchers/{voucherId} | deleteCartVouchers
-[**getCustomergroups**](UsersApi.md#getCustomergroups) | **GET** /users/{userId}/customergroups | getCustomergroups
+[**getCustomerGroups**](UsersApi.md#getCustomerGroups) | **GET** /users/{userId}/customergroups | getCustomerGroups
 [**putLogin**](UsersApi.md#putLogin) | **PUT** /users/{userId}/login | putLogin
 [**getOrders**](UsersApi.md#getOrders) | **GET** /users/{userId}/orders | UsersOrdersByUserId
 [**postOrder**](UsersApi.md#postOrder) | **POST** /users/{userId}/orders | UsersOrdersByUserId
 [**getOrder**](UsersApi.md#getOrder) | **GET** /users/{userId}/orders/{code} | getOrder
 [**putPassword**](UsersApi.md#putPassword) | **PUT** /users/{userId}/password | putPassword
-[**getPaymentdetail**](UsersApi.md#getPaymentdetail) | **GET** /users/{userId}/paymentdetails/{paymentDetailsId} | getPaymentdetail
-[**putPaymentdetail**](UsersApi.md#putPaymentdetail) | **PUT** /users/{userId}/paymentdetails/{paymentDetailsId} | getPaymentdetail
-[**patchPaymentdetail**](UsersApi.md#patchPaymentdetail) | **PATCH** /users/{userId}/paymentdetails/{paymentDetailsId} | getPaymentdetail
-[**deletePaymentdetail**](UsersApi.md#deletePaymentdetail) | **DELETE** /users/{userId}/paymentdetails/{paymentDetailsId} | getPaymentdetail
-[**getPaymentdetails**](UsersApi.md#getPaymentdetails) | **GET** /users/{userId}/paymentdetails | getPaymentdetail
+[**getPaymentDetail**](UsersApi.md#getPaymentDetail) | **GET** /users/{userId}/paymentdetails/{paymentDetailsId} | getPaymentDetail
+[**putPaymentDetail**](UsersApi.md#putPaymentDetail) | **PUT** /users/{userId}/paymentdetails/{paymentDetailsId} | getPaymentDetail
+[**patchPaymentDetail**](UsersApi.md#patchPaymentDetail) | **PATCH** /users/{userId}/paymentdetails/{paymentDetailsId} | getPaymentDetail
+[**deletePaymentDetail**](UsersApi.md#deletePaymentDetail) | **DELETE** /users/{userId}/paymentdetails/{paymentDetailsId} | getPaymentDetail
+[**getPaymentDetails**](UsersApi.md#getPaymentDetails) | **GET** /users/{userId}/paymentdetails | getPaymentDetail
 
 
 <a name="postUsers"></a>
@@ -1064,11 +1064,11 @@ null (empty response body)
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="postCartClonesavedcart"></a>
-# **postCartClonesavedcart**
-> SaveCartResultWsDTO postCartClonesavedcart(userId, cartId, opts)
+<a name="postCartCloneSavedcart"></a>
+# **postCartCloneSavedcart**
+> SaveCartResultWsDTO postCartCloneSavedcart(userId, cartId, opts)
 
-postCartClonesavedcart
+postCartCloneSavedcart
 
 Explicitly clones a cart 
 
@@ -1092,7 +1092,7 @@ let opts = {
   'name': "name_example", // String | the name that should be applied to the cloned cart
   'description': "description_example" // String | the description that should be applied to the cloned cart
 };
-apiInstance.postCartClonesavedcart(userId, cartId, opts).then((data) => {
+apiInstance.postCartCloneSavedcart(userId, cartId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -1123,11 +1123,11 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: application/json
 
-<a name="getCartDeliverymode"></a>
-# **getCartDeliverymode**
-> DeliveryModeWsDTO getCartDeliverymode(userId, cartId, opts)
+<a name="getCartDeliveryMode"></a>
+# **getCartDeliveryMode**
+> DeliveryModeWsDTO getCartDeliveryMode(userId, cartId, opts)
 
-getCartDeliverymode
+getCartDeliveryMode
 
 Returns the delivery mode selected for the cart.  Security: Permitted only for customers, guests, customer managers or trusted clients. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
 
@@ -1149,7 +1149,7 @@ let cartId = "cartId_example"; // String | Cart identifier <ul> <li>cart code fo
 let opts = { 
   'fields': "fields_example" // String | Response configuration (list of fields, which should be returned in response)
 };
-apiInstance.getCartDeliverymode(userId, cartId, opts).then((data) => {
+apiInstance.getCartDeliveryMode(userId, cartId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -1178,11 +1178,11 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="putCartDeliverymode"></a>
-# **putCartDeliverymode**
-> putCartDeliverymode(userId, cartId, deliveryModeId)
+<a name="putCartDeliveryMode"></a>
+# **putCartDeliveryMode**
+> putCartDeliveryMode(userId, cartId, deliveryModeId)
 
-getCartDeliverymode
+getCartDeliveryMode
 
 Sets the delivery mode with a given identifier for the cart.  Security: Permitted only for customers, guests, customer managers or trusted clients. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
 
@@ -1203,7 +1203,7 @@ let cartId = "cartId_example"; // String | Cart identifier <ul> <li>cart code fo
 
 let deliveryModeId = "deliveryModeId_example"; // String | Delivery mode identifier (code)
 
-apiInstance.putCartDeliverymode(userId, cartId, deliveryModeId).then(() => {
+apiInstance.putCartDeliveryMode(userId, cartId, deliveryModeId).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -1232,11 +1232,11 @@ null (empty response body)
  - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: application/json
 
-<a name="deleteCartDeliverymode"></a>
-# **deleteCartDeliverymode**
-> deleteCartDeliverymode(userId, cartId)
+<a name="deleteCartDeliveryMode"></a>
+# **deleteCartDeliveryMode**
+> deleteCartDeliveryMode(userId, cartId)
 
-getCartDeliverymode
+getCartDeliveryMode
 
 Removes the delivery mode from the cart.  Security: Permitted only for customers, guests, customer managers or trusted clients. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
 
@@ -1255,7 +1255,7 @@ let userId = "userId_example"; // String | User identifier or one of the literal
 
 let cartId = "cartId_example"; // String | Cart identifier <ul> <li>cart code for logged in user</li> <li>cart guid for anonymous user</li> <li>'current' for the last modified cart</li> </ul>
 
-apiInstance.deleteCartDeliverymode(userId, cartId).then(() => {
+apiInstance.deleteCartDeliveryMode(userId, cartId).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -1283,11 +1283,11 @@ null (empty response body)
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="getCartDeliverymodes"></a>
-# **getCartDeliverymodes**
-> DeliveryModeListWsDTO getCartDeliverymodes(userId, cartId, opts)
+<a name="getCartDeliveryModes"></a>
+# **getCartDeliveryModes**
+> DeliveryModeListWsDTO getCartDeliveryModes(userId, cartId, opts)
 
-getCartDeliverymodes
+getCartDeliveryModes
 
 Returns all delivery modes supported for the current base store and cart delivery address. A delivery address must be set for the cart, otherwise an empty list will be returned.  Security: Permitted only for customers, guests, customer managers or trusted clients. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
 
@@ -1309,7 +1309,7 @@ let cartId = "cartId_example"; // String | Cart identifier <ul> <li>cart code fo
 let opts = { 
   'fields': "fields_example" // String | Response configuration (list of fields, which should be returned in response)
 };
-apiInstance.getCartDeliverymodes(userId, cartId, opts).then((data) => {
+apiInstance.getCartDeliveryModes(userId, cartId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -1795,11 +1795,11 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="postCartPaymentdetail"></a>
-# **postCartPaymentdetail**
-> PaymentDetailsWsDTO640 postCartPaymentdetail(userId, cartId, body, opts)
+<a name="postCartPaymentDetail"></a>
+# **postCartPaymentDetail**
+> PaymentDetailsWsDTO640 postCartPaymentDetail(userId, cartId, body, opts)
 
-postCartPaymentdetail
+postCartPaymentDetail
 
 Defines details of a new credit card payment details and assigns the payment to the cart.  Security: Permitted only for customers, guests, customer managers or trusted clients. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
 
@@ -1823,7 +1823,7 @@ let body = new Occ.PaymentDetailsWsDTO640(); // PaymentDetailsWsDTO640 |
 let opts = { 
   'fields': "fields_example" // String | Response configuration (list of fields, which should be returned in response)
 };
-apiInstance.postCartPaymentdetail(userId, cartId, body, opts).then((data) => {
+apiInstance.postCartPaymentDetail(userId, cartId, body, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -1853,11 +1853,11 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="putCartPaymentdetail"></a>
-# **putCartPaymentdetail**
-> putCartPaymentdetail(userId, cartId, paymentDetailsId)
+<a name="putCartPaymentDetail"></a>
+# **putCartPaymentDetail**
+> putCartPaymentDetail(userId, cartId, paymentDetailsId)
 
-postCartPaymentdetail
+postCartPaymentDetail
 
 Sets credit card payment details for the cart.  Security: Permitted only for customers, guests, customer managers or trusted clients. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
 
@@ -1878,7 +1878,7 @@ let cartId = "cartId_example"; // String | Cart identifier <ul> <li>cart code fo
 
 let paymentDetailsId = "paymentDetailsId_example"; // String | Payment details identifier
 
-apiInstance.putCartPaymentdetail(userId, cartId, paymentDetailsId).then(() => {
+apiInstance.putCartPaymentDetail(userId, cartId, paymentDetailsId).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -2128,11 +2128,11 @@ null (empty response body)
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="patchCartRestoresavedcart"></a>
-# **patchCartRestoresavedcart**
-> SaveCartResultWsDTO patchCartRestoresavedcart(userId, cartId)
+<a name="patchCartRestoreSavedCart"></a>
+# **patchCartRestoreSavedCart**
+> SaveCartResultWsDTO patchCartRestoreSavedCart(userId, cartId)
 
-patchCartRestoresavedcart
+patchCartRestoreSavedCart
 
 ### Example
 ```javascript
@@ -2149,7 +2149,7 @@ let userId = "userId_example"; // String | User identifier or one of the literal
 
 let cartId = "cartId_example"; // String | Cart identifier <ul> <li>cart code for logged in user</li> <li>cart guid for anonymous user</li> <li>'current' for the last modified cart</li> </ul>
 
-apiInstance.patchCartRestoresavedcart(userId, cartId).then((data) => {
+apiInstance.patchCartRestoreSavedCart(userId, cartId).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -2454,11 +2454,11 @@ null (empty response body)
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="getCustomergroups"></a>
-# **getCustomergroups**
-> UserGroupListWsDTO getCustomergroups(userId, opts)
+<a name="getCustomerGroups"></a>
+# **getCustomerGroups**
+> UserGroupListWsDTO getCustomerGroups(userId, opts)
 
-getCustomergroups
+getCustomerGroups
 
 Returns all customer groups of a customer.  Security: Permitted for customers, customer managers or trusted client. Trusted client or customer manager is able to impersonate as any other user and access data on their behalf. 
 
@@ -2478,7 +2478,7 @@ let userId = "userId_example"; // String | User identifier or one of the literal
 let opts = { 
   'fields': "fields_example" // String | Response configuration (list of fields, which should be returned in the response)
 };
-apiInstance.getCustomergroups(userId, opts).then((data) => {
+apiInstance.getCustomerGroups(userId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -2786,11 +2786,11 @@ null (empty response body)
  - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: application/json
 
-<a name="getPaymentdetail"></a>
-# **getPaymentdetail**
-> PaymentDetailsWsDTO getPaymentdetail(userId, paymentDetailsId, opts)
+<a name="getPaymentDetail"></a>
+# **getPaymentDetail**
+> PaymentDetailsWsDTO getPaymentDetail(userId, paymentDetailsId, opts)
 
-getPaymentdetail
+getPaymentDetail
 
 Returns customer&#39;s credit card payment details for a given id.  Security: Permitted for customers, customer managers or trusted client. Trusted client or customer manager is able to impersonate as any other user and access data on their behalf. 
 
@@ -2812,7 +2812,7 @@ let paymentDetailsId = "paymentDetailsId_example"; // String | - Payment details
 let opts = { 
   'fields': "fields_example" // String | Response configuration (list of fields, which should be returned in the response)
 };
-apiInstance.getPaymentdetail(userId, paymentDetailsId, opts).then((data) => {
+apiInstance.getPaymentDetail(userId, paymentDetailsId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -2841,11 +2841,11 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="putPaymentdetail"></a>
-# **putPaymentdetail**
-> putPaymentdetail(userId, paymentDetailsId, body)
+<a name="putPaymentDetail"></a>
+# **putPaymentDetail**
+> putPaymentDetail(userId, paymentDetailsId, body)
 
-getPaymentdetail
+getPaymentDetail
 
 Updates existing customer&#39;s credit card payment info based on the payment info ID. Attributes not given in request will be defined again (set to null or default).  Security: Permitted for customers, customer managers or trusted client. Trusted client or customer manager is able to impersonate as any other user and access data on their behalf. 
 
@@ -2866,7 +2866,7 @@ let paymentDetailsId = "paymentDetailsId_example"; // String | - Payment details
 
 let body = new Occ.PaymentDetailsWsDTO640(); // PaymentDetailsWsDTO640 | 
 
-apiInstance.putPaymentdetail(userId, paymentDetailsId, body).then(() => {
+apiInstance.putPaymentDetail(userId, paymentDetailsId, body).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -2895,11 +2895,11 @@ null (empty response body)
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="patchPaymentdetail"></a>
-# **patchPaymentdetail**
-> patchPaymentdetail(userId, paymentDetailsId, body)
+<a name="patchPaymentDetail"></a>
+# **patchPaymentDetail**
+> patchPaymentDetail(userId, paymentDetailsId, body)
 
-getPaymentdetail
+getPaymentDetail
 
 Updates existing customer&#39;s credit card payment details based on its ID. Only attributes given in request will be changed.  Security: Permitted for customers, customer managers or trusted client. Trusted client or customer manager is able to impersonate as any other user and access data on their behalf. 
 
@@ -2920,7 +2920,7 @@ let paymentDetailsId = "paymentDetailsId_example"; // String | - Payment details
 
 let body = new Occ.PaymentDetailsWsDTO640(); // PaymentDetailsWsDTO640 | 
 
-apiInstance.patchPaymentdetail(userId, paymentDetailsId, body).then(() => {
+apiInstance.patchPaymentDetail(userId, paymentDetailsId, body).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -2949,11 +2949,11 @@ null (empty response body)
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="deletePaymentdetail"></a>
-# **deletePaymentdetail**
-> deletePaymentdetail(userId, paymentDetailsId)
+<a name="deletePaymentDetail"></a>
+# **deletePaymentDetail**
+> deletePaymentDetail(userId, paymentDetailsId)
 
-getPaymentdetail
+getPaymentDetail
 
 Removes customer&#39;s credit card payment details based on its ID.  Security: Permitted for customers, customer managers or trusted client. Trusted client or customer manager is able to impersonate as any other user and access data on their behalf. 
 
@@ -2972,7 +2972,7 @@ let userId = "userId_example"; // String | User identifier or one of the literal
 
 let paymentDetailsId = "paymentDetailsId_example"; // String | - Payment details identifier
 
-apiInstance.deletePaymentdetail(userId, paymentDetailsId).then(() => {
+apiInstance.deletePaymentDetail(userId, paymentDetailsId).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -3000,11 +3000,11 @@ null (empty response body)
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="getPaymentdetails"></a>
-# **getPaymentdetails**
-> PaymentDetailsListWsDTO getPaymentdetails(userId, opts)
+<a name="getPaymentDetails"></a>
+# **getPaymentDetails**
+> PaymentDetailsListWsDTO getPaymentDetails(userId, opts)
 
-getPaymentdetail
+getPaymentDetail
 
 Return customer&#39;s credit card payment details list.  Security: Permitted for customers, customer managers or trusted client. Trusted client or customer manager is able to impersonate as any other user and access data on their behalf. 
 
@@ -3025,7 +3025,7 @@ let opts = {
   'saved': "saved_example", // String | Type of payment details
   'fields': "fields_example" // String | Response configuration (list of fields, which should be returned in the response)
 };
-apiInstance.getPaymentdetails(userId, opts).then((data) => {
+apiInstance.getPaymentDetails(userId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
