@@ -11,7 +11,6 @@
  *
  */
 
-
 import superagent from "superagent";
 import querystring from "querystring";
 
@@ -28,20 +27,23 @@ import querystring from "querystring";
 * @class
 */
 export default class ApiClient {
-    constructor(basePath, authorizationUrl) {
+    constructor(
+        basePath = 'http://api-example.hybris.com/rest/v2/DefaultParameterValue',
+        authorizationUrl = 'http://api-example.hybris.com/rest/authorizationserver/authorize'
+    ) {
         /**
          * The base URL against which to resolve every API call's (relative) path.
          * @type {String}
          * @default http://api-example.hybris.com/rest/v2/DefaultParameterValue/
          */
-        this.basePath = basePath || 'http://api-example.hybris.com/rest/v2/DefaultParameterValue/'.replace(/\/+$/, '');
+        this.basePath = basePath.replace(/\/+$/, '');
 
         /**
          * The authorization URL that grant user with oauth2 access token
          * @type {String}
          * @default http://api-example.hybris.com/rest/authorizationserver/authorize
          */
-        this.authorizationUrl = authorizationUrl || 'http://api-example.hybris.com/rest/authorizationserver/authorize';
+        this.authorizationUrl = authorizationUrl;
 
         /**
          * The authentication methods to be included for all API calls.
@@ -357,8 +359,6 @@ export default class ApiClient {
         return ApiClient.convertToType(data, returnType);
     }
 
-    
-
     /**
     * Invokes the REST service using the supplied settings and parameters.
     * @param {String} path The base URL to invoke.
@@ -466,7 +466,6 @@ export default class ApiClient {
             });
         });
 
-        
     }
 
     /**
