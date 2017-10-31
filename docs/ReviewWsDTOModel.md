@@ -1,4 +1,4 @@
-# Occ.ReviewWsDTOModel
+# Occ.ReviewWsDTO
 
 ## Properties
 Name | Type | Description | Notes
@@ -9,6 +9,6 @@ Name | Type | Description | Notes
 **rating** | **Number** |  | [optional] 
 **_date** | **String** |  | [optional] 
 **alias** | **String** |  | [optional] 
-**principal** | [**UserWsDTOModel**](UserWsDTOModel.md) |  | [optional] 
+**principal** | [**UserWsDTO**](UserWsDTO.md) |  | [optional] 
 
 

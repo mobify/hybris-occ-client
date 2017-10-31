@@ -1,4 +1,4 @@
-# Occ.CardTypeWsDTOModel
+# Occ.CardTypeWsDTO
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Occ.TimeWsDTOModel
+# Occ.TimeWsDTO
 
 ## Properties
 Name | Type | Description | Notes

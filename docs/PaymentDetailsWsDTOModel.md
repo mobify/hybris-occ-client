@@ -1,11 +1,11 @@
-# Occ.PaymentDetailsWsDTOModel
+# Occ.PaymentDetailsWsDTO
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** |  | [optional] 
 **accountHolderName** | **String** |  | [optional] 
-**cardType** | [**CardTypeWsDTOModel**](CardTypeWsDTOModel.md) |  | [optional] 
+**cardType** | [**CardTypeWsDTO**](CardTypeWsDTO.md) |  | [optional] 
 **cardNumber** | **String** |  | [optional] 
 **startMonth** | **String** |  | [optional] 
 **startYear** | **String** |  | [optional] 
@@ -15,6 +15,6 @@ Name | Type | Description | Notes
 **subscriptionId** | **String** |  | [optional] 
 **saved** | **Boolean** |  | [optional] 
 **defaultPayment** | **Boolean** |  | [optional] 
-**billingAddress** | [**AddressWsDTOModel**](AddressWsDTOModel.md) |  | [optional] 
+**billingAddress** | [**AddressWsDTO**](AddressWsDTO.md) |  | [optional] 
 
 

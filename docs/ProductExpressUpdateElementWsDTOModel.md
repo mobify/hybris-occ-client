@@ -1,4 +1,4 @@
-# Occ.ProductExpressUpdateElementWsDTOModel
+# Occ.ProductExpressUpdateElementWsDTO
 
 ## Properties
 Name | Type | Description | Notes

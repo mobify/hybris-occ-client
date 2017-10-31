@@ -1,8 +1,8 @@
-# Occ.CatalogListWsDTOModel
+# Occ.CatalogListWsDTO
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**catalogs** | [**[CatalogWsDTOModel]**](CatalogWsDTOModel.md) |  | [optional] 
+**catalogs** | [**[CatalogWsDTO]**](CatalogWsDTO.md) |  | [optional] 
 
 

@@ -1,8 +1,8 @@
-# Occ.CartListWsDTOModel
+# Occ.CartListWsDTO
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**carts** | [**[CartWsDTOModel]**](CartWsDTOModel.md) |  | [optional] 
+**carts** | [**[CartWsDTO]**](CartWsDTO.md) |  | [optional] 
 
 

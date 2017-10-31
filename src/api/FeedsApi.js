@@ -12,7 +12,7 @@
  */
 
 import ApiClient from "../ApiClient";
-import OrderStatusUpdateElementListWsDTOModel from '../models/OrderStatusUpdateElementListWsDTOModel';
+import OrderStatusUpdateElementListWsDTO from '../models/OrderStatusUpdateElementListWsDTO';
 
 /**
 * Feeds service.
@@ -38,7 +38,7 @@ export default class FeedsApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
      * @param {String} opts.timestamp Only items newer than the given parameter are retrieved. This parameter should be in RFC-8601 format.
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/OrderStatusUpdateElementListWsDTOModel} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/OrderStatusUpdateElementListWsDTO} and HTTP response
      */
     feedsOrdersStatusfeedWithHttpInfo(opts) {
       opts = opts || {};
@@ -58,7 +58,7 @@ export default class FeedsApi {
       let authNames = ['auth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = OrderStatusUpdateElementListWsDTOModel;
+      let returnType = OrderStatusUpdateElementListWsDTO;
 
       return this.apiClient.callApi(
         '/feeds/orders/statusfeed', 'GET',
@@ -73,7 +73,7 @@ export default class FeedsApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
      * @param {String} opts.timestamp Only items newer than the given parameter are retrieved. This parameter should be in RFC-8601 format.
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/OrderStatusUpdateElementListWsDTOModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/OrderStatusUpdateElementListWsDTO}
      */
     getOrdersStatusfeed(opts) {
       return this.feedsOrdersStatusfeedWithHttpInfo(opts)

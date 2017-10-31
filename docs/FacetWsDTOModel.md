@@ -1,4 +1,4 @@
-# Occ.FacetWsDTOModel
+# Occ.FacetWsDTO
 
 ## Properties
 Name | Type | Description | Notes
@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **category** | **Boolean** |  | [optional] 
 **multiSelect** | **Boolean** |  | [optional] 
 **visible** | **Boolean** |  | [optional] 
-**topValues** | [**[FacetValueWsDTOModel]**](FacetValueWsDTOModel.md) |  | [optional] 
-**values** | [**[FacetValueWsDTOModel]**](FacetValueWsDTOModel.md) |  | [optional] 
+**topValues** | [**[FacetValueWsDTO]**](FacetValueWsDTO.md) |  | [optional] 
+**values** | [**[FacetValueWsDTO]**](FacetValueWsDTO.md) |  | [optional] 
 
 

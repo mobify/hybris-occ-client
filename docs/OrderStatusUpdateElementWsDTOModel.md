@@ -1,4 +1,4 @@
-# Occ.OrderStatusUpdateElementWsDTOModel
+# Occ.OrderStatusUpdateElementWsDTO
 
 ## Properties
 Name | Type | Description | Notes

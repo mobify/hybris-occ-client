@@ -1,4 +1,4 @@
-# Occ.PromotionWsDTOModel
+# Occ.PromotionWsDTO
 
 ## Properties
 Name | Type | Description | Notes
@@ -11,10 +11,10 @@ Name | Type | Description | Notes
 **description** | **String** |  | [optional] 
 **couldFireMessages** | **[String]** |  | [optional] 
 **firedMessages** | **[String]** |  | [optional] 
-**productBanner** | [**ImageWsDTOModel**](ImageWsDTOModel.md) |  | [optional] 
+**productBanner** | [**ImageWsDTO**](ImageWsDTO.md) |  | [optional] 
 **enabled** | **Boolean** |  | [optional] 
 **priority** | **Number** |  | [optional] 
 **promotionGroup** | **String** |  | [optional] 
-**restrictions** | [**[PromotionRestrictionWsDTOModel]**](PromotionRestrictionWsDTOModel.md) |  | [optional] 
+**restrictions** | [**[PromotionRestrictionWsDTO]**](PromotionRestrictionWsDTO.md) |  | [optional] 
 
 

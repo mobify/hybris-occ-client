@@ -1,4 +1,4 @@
-# Occ.RegionWsDTOModel
+# Occ.RegionWsDTO
 
 ## Properties
 Name | Type | Description | Notes

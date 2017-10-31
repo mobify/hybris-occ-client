@@ -1,4 +1,4 @@
-# Occ.RegionModel
+# Occ.Region
 
 ## Properties
 Name | Type | Description | Notes

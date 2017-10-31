@@ -1,4 +1,4 @@
-# Occ.SortWsDTOModel
+# Occ.SortWsDTO
 
 ## Properties
 Name | Type | Description | Notes

@@ -12,10 +12,10 @@
  */
 
 import ApiClient from "../ApiClient";
-import CatalogListWsDTOModel from '../models/CatalogListWsDTOModel';
-import CatalogVersionWsDTOModel from '../models/CatalogVersionWsDTOModel';
-import CatalogWsDTOModel from '../models/CatalogWsDTOModel';
-import CategoryHierarchyWsDTOModel from '../models/CategoryHierarchyWsDTOModel';
+import CatalogListWsDTO from '../models/CatalogListWsDTO';
+import CatalogVersionWsDTO from '../models/CatalogVersionWsDTO';
+import CatalogWsDTO from '../models/CatalogWsDTO';
+import CategoryHierarchyWsDTO from '../models/CategoryHierarchyWsDTO';
 
 /**
 * Catalogs service.
@@ -40,7 +40,7 @@ export default class CatalogsApi {
      * Returns all catalogs with versions defined for the base store. 
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/CatalogListWsDTOModel} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/CatalogListWsDTO} and HTTP response
      */
     catalogsWithHttpInfo(opts) {
       opts = opts || {};
@@ -59,7 +59,7 @@ export default class CatalogsApi {
       let authNames = ['auth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = CatalogListWsDTOModel;
+      let returnType = CatalogListWsDTO;
 
       return this.apiClient.callApi(
         '/catalogs', 'GET',
@@ -73,7 +73,7 @@ export default class CatalogsApi {
      * Returns all catalogs with versions defined for the base store. 
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/CatalogListWsDTOModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/CatalogListWsDTO}
      */
     getCatalogs(opts) {
       return this.catalogsWithHttpInfo(opts)
@@ -88,7 +88,7 @@ export default class CatalogsApi {
      * @param {String} catalogId Catalog identifier
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/CatalogWsDTOModel} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/CatalogWsDTO} and HTTP response
      */
     catalogsByCatalogIdWithHttpInfo(catalogId, opts) {
       opts = opts || {};
@@ -113,7 +113,7 @@ export default class CatalogsApi {
       let authNames = ['auth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = CatalogWsDTOModel;
+      let returnType = CatalogWsDTO;
 
       return this.apiClient.callApi(
         '/catalogs/{catalogId}', 'GET',
@@ -128,7 +128,7 @@ export default class CatalogsApi {
      * @param {String} catalogId Catalog identifier
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/CatalogWsDTOModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/CatalogWsDTO}
      */
     getCatalog(catalogId, opts) {
       return this.catalogsByCatalogIdWithHttpInfo(catalogId, opts)
@@ -144,7 +144,7 @@ export default class CatalogsApi {
      * @param {String} catalogVersionId Catalog version identifier
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/CatalogVersionWsDTOModel} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/CatalogVersionWsDTO} and HTTP response
      */
     catalogsByCatalogIdAndCatalogVersionIdWithHttpInfo(catalogId, catalogVersionId, opts) {
       opts = opts || {};
@@ -175,7 +175,7 @@ export default class CatalogsApi {
       let authNames = ['auth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = CatalogVersionWsDTOModel;
+      let returnType = CatalogVersionWsDTO;
 
       return this.apiClient.callApi(
         '/catalogs/{catalogId}/{catalogVersionId}', 'GET',
@@ -191,7 +191,7 @@ export default class CatalogsApi {
      * @param {String} catalogVersionId Catalog version identifier
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/CatalogVersionWsDTOModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/CatalogVersionWsDTO}
      */
     getCatalogsByCatalogIdAndCatalogVersionId(catalogId, catalogVersionId, opts) {
       return this.catalogsByCatalogIdAndCatalogVersionIdWithHttpInfo(catalogId, catalogVersionId, opts)
@@ -210,7 +210,7 @@ export default class CatalogsApi {
      * @param {String} opts.pageSize The number of results returned per page.
      * @param {String} opts.currentPage The current result page requested.
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/CategoryHierarchyWsDTOModel} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/CategoryHierarchyWsDTO} and HTTP response
      */
     catalogsCategoriesCategoryIdByCatalogIdWithHttpInfo(catalogId, catalogVersionId, categoryId, opts) {
       opts = opts || {};
@@ -249,7 +249,7 @@ export default class CatalogsApi {
       let authNames = ['auth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = CategoryHierarchyWsDTOModel;
+      let returnType = CategoryHierarchyWsDTO;
 
       return this.apiClient.callApi(
         '/catalogs/{catalogId}/{catalogVersionId}/categories/{categoryId}', 'GET',
@@ -268,7 +268,7 @@ export default class CatalogsApi {
      * @param {String} opts.pageSize The number of results returned per page.
      * @param {String} opts.currentPage The current result page requested.
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/CategoryHierarchyWsDTOModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/CategoryHierarchyWsDTO}
      */
     getCategory(catalogId, catalogVersionId, categoryId, opts) {
       return this.catalogsCategoriesCategoryIdByCatalogIdWithHttpInfo(catalogId, catalogVersionId, categoryId, opts)

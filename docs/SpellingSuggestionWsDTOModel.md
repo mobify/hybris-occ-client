@@ -1,4 +1,4 @@
-# Occ.SpellingSuggestionWsDTOModel
+# Occ.SpellingSuggestionWsDTO
 
 ## Properties
 Name | Type | Description | Notes

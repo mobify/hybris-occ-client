@@ -1,4 +1,4 @@
-# Occ.GeoPointWsDTOModel
+# Occ.GeoPointWsDTO
 
 ## Properties
 Name | Type | Description | Notes

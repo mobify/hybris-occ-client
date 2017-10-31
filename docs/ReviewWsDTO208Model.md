@@ -1,4 +1,4 @@
-# Occ.ReviewWsDTO208Model
+# Occ.ReviewWsDTO208
 
 ## Properties
 Name | Type | Description | Notes

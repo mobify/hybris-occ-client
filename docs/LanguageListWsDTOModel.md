@@ -1,8 +1,8 @@
-# Occ.LanguageListWsDTOModel
+# Occ.LanguageListWsDTO
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**languages** | [**[LanguageWsDTOModel]**](LanguageWsDTOModel.md) |  | [optional] 
+**languages** | [**[LanguageWsDTO]**](LanguageWsDTO.md) |  | [optional] 
 
 

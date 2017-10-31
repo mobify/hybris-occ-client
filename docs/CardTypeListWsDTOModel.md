@@ -1,8 +1,8 @@
-# Occ.CardTypeListWsDTOModel
+# Occ.CardTypeListWsDTO
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**cardTypes** | [**[CardTypeWsDTOModel]**](CardTypeWsDTOModel.md) |  | [optional] 
+**cardTypes** | [**[CardTypeWsDTO]**](CardTypeWsDTO.md) |  | [optional] 
 
 

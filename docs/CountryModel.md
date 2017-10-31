@@ -1,4 +1,4 @@
-# Occ.CountryModel
+# Occ.Country
 
 ## Properties
 Name | Type | Description | Notes

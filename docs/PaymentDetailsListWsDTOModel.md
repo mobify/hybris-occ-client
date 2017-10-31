@@ -1,8 +1,8 @@
-# Occ.PaymentDetailsListWsDTOModel
+# Occ.PaymentDetailsListWsDTO
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**payments** | [**[PaymentDetailsWsDTOModel]**](PaymentDetailsWsDTOModel.md) |  | [optional] 
+**payments** | [**[PaymentDetailsWsDTO]**](PaymentDetailsWsDTO.md) |  | [optional] 
 
 

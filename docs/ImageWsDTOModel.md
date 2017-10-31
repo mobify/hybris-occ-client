@@ -1,4 +1,4 @@
-# Occ.ImageWsDTOModel
+# Occ.ImageWsDTO
 
 ## Properties
 Name | Type | Description | Notes

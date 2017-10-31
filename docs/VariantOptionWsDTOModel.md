@@ -1,12 +1,12 @@
-# Occ.VariantOptionWsDTOModel
+# Occ.VariantOptionWsDTO
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **code** | **String** |  | [optional] 
-**stock** | [**StockWsDTOModel**](StockWsDTOModel.md) |  | [optional] 
+**stock** | [**StockWsDTO**](StockWsDTO.md) |  | [optional] 
 **url** | **String** |  | [optional] 
-**priceData** | [**PriceWsDTOModel**](PriceWsDTOModel.md) |  | [optional] 
-**variantOptionQualifiers** | [**[VariantOptionQualifierWsDTOModel]**](VariantOptionQualifierWsDTOModel.md) |  | [optional] 
+**priceData** | [**PriceWsDTO**](PriceWsDTO.md) |  | [optional] 
+**variantOptionQualifiers** | [**[VariantOptionQualifierWsDTO]**](VariantOptionQualifierWsDTO.md) |  | [optional] 
 
 

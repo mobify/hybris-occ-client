@@ -1,4 +1,4 @@
-# Occ.VariantOptionQualifierWsDTOModel
+# Occ.VariantOptionQualifierWsDTO
 
 ## Properties
 Name | Type | Description | Notes
@@ -6,6 +6,6 @@ Name | Type | Description | Notes
 **qualifier** | **String** |  | [optional] 
 **name** | **String** |  | [optional] 
 **value** | **String** |  | [optional] 
-**image** | [**ImageWsDTOModel**](ImageWsDTOModel.md) |  | [optional] 
+**image** | [**ImageWsDTO**](ImageWsDTO.md) |  | [optional] 
 
 

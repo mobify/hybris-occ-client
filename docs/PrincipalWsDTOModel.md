@@ -1,4 +1,4 @@
-# Occ.PrincipalWsDTOModel
+# Occ.PrincipalWsDTO
 
 ## Properties
 Name | Type | Description | Notes

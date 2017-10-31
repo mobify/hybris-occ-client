@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="getOrder"></a>
 # **getOrder**
-> OrderWsDTOModel getOrder(code, opts)
+> OrderWsDTO getOrder(code, opts)
 
 getOrder
 
@@ -48,7 +48,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**OrderWsDTOModel**](OrderWsDTOModel.md)
+[**OrderWsDTO**](OrderWsDTO.md)
 
 ### Authorization
 

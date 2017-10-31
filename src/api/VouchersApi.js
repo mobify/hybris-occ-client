@@ -12,7 +12,7 @@
  */
 
 import ApiClient from "../ApiClient";
-import VoucherWsDTOModel from '../models/VoucherWsDTOModel';
+import VoucherWsDTO from '../models/VoucherWsDTO';
 
 /**
 * Vouchers service.
@@ -38,7 +38,7 @@ export default class VouchersApi {
      * @param {String} code Voucher identifier (code)
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/VoucherWsDTOModel} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/VoucherWsDTO} and HTTP response
      */
     vouchersByCodeWithHttpInfo(code, opts) {
       opts = opts || {};
@@ -63,7 +63,7 @@ export default class VouchersApi {
       let authNames = ['auth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = VoucherWsDTOModel;
+      let returnType = VoucherWsDTO;
 
       return this.apiClient.callApi(
         '/vouchers/{code}', 'GET',
@@ -78,7 +78,7 @@ export default class VouchersApi {
      * @param {String} code Voucher identifier (code)
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/VoucherWsDTOModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/VoucherWsDTO}
      */
     getVoucher(code, opts) {
       return this.vouchersByCodeWithHttpInfo(code, opts)

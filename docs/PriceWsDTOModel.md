@@ -1,4 +1,4 @@
-# Occ.PriceWsDTOModel
+# Occ.PriceWsDTO
 
 ## Properties
 Name | Type | Description | Notes

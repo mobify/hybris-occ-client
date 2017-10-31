@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 <a name="customergroups"></a>
 # **customergroups**
-> UserGroupListWsDTOModel customergroups(opts)
+> UserGroupListWsDTO customergroups(opts)
 
 Customergroups
 
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**UserGroupListWsDTOModel**](UserGroupListWsDTOModel.md)
+[**UserGroupListWsDTO**](UserGroupListWsDTO.md)
 
 ### Authorization
 
@@ -84,7 +84,7 @@ auth.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new Occ.CustomergroupsApi();
 
-let body = new Occ.UserGroupWsDTOModel(); // UserGroupWsDTOModel | 
+let body = new Occ.UserGroupWsDTO(); // UserGroupWsDTO | 
 
 apiInstance.postCustomergroup(body).then(() => {
   console.log('API called successfully.');
@@ -98,7 +98,7 @@ apiInstance.postCustomergroup(body).then(() => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**UserGroupWsDTOModel**](UserGroupWsDTOModel.md)|  | 
+ **body** | [**UserGroupWsDTO**](UserGroupWsDTO.md)|  | 
 
 ### Return type
 
@@ -115,7 +115,7 @@ null (empty response body)
 
 <a name="getCustomergroup"></a>
 # **getCustomergroup**
-> UserGroupWsDTO17Model getCustomergroup(groupId, opts)
+> UserGroupWsDTO17 getCustomergroup(groupId, opts)
 
 getCustomergroup
 
@@ -154,7 +154,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**UserGroupWsDTO17Model**](UserGroupWsDTO17Model.md)
+[**UserGroupWsDTO17**](UserGroupWsDTO17.md)
 
 ### Authorization
 
@@ -186,7 +186,7 @@ let apiInstance = new Occ.CustomergroupsApi();
 
 let groupId = "groupId_example"; // String | Group identifier
 
-let body = new Occ.MemberListWsDTOModel(); // MemberListWsDTOModel | 
+let body = new Occ.MemberListWsDTO(); // MemberListWsDTO | 
 
 apiInstance.putCustomergroupsMembers(groupId, body).then(() => {
   console.log('API called successfully.');
@@ -201,7 +201,7 @@ apiInstance.putCustomergroupsMembers(groupId, body).then(() => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **groupId** | **String**| Group identifier | 
- **body** | [**MemberListWsDTOModel**](MemberListWsDTOModel.md)|  | 
+ **body** | [**MemberListWsDTO**](MemberListWsDTO.md)|  | 
 
 ### Return type
 
@@ -237,7 +237,7 @@ let apiInstance = new Occ.CustomergroupsApi();
 
 let groupId = "groupId_example"; // String | Group identifier
 
-let body = new Occ.MemberListWsDTOModel(); // MemberListWsDTOModel | 
+let body = new Occ.MemberListWsDTO(); // MemberListWsDTO | 
 
 apiInstance.patchCustomergroupsMembers(groupId, body).then(() => {
   console.log('API called successfully.');
@@ -252,7 +252,7 @@ apiInstance.patchCustomergroupsMembers(groupId, body).then(() => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **groupId** | **String**| Group identifier | 
- **body** | [**MemberListWsDTOModel**](MemberListWsDTOModel.md)|  | 
+ **body** | [**MemberListWsDTO**](MemberListWsDTO.md)|  | 
 
 ### Return type
 

@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="promotions"></a>
 # **promotions**
-> PromotionListWsDTOModel promotions(opts)
+> PromotionListWsDTO promotions(opts)
 
 Promotions
 
@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PromotionListWsDTOModel**](PromotionListWsDTOModel.md)
+[**PromotionListWsDTO**](PromotionListWsDTO.md)
 
 ### Authorization
 
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 <a name="getPromotion"></a>
 # **getPromotion**
-> PromotionWsDTOModel getPromotion(code, opts)
+> PromotionWsDTO getPromotion(code, opts)
 
 getPromotion
 
@@ -102,7 +102,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PromotionWsDTOModel**](PromotionWsDTOModel.md)
+[**PromotionWsDTO**](PromotionWsDTO.md)
 
 ### Authorization
 

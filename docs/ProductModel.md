@@ -1,4 +1,4 @@
-# Occ.ProductModel
+# Occ.Product
 
 ## Properties
 Name | Type | Description | Notes

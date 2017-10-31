@@ -12,7 +12,7 @@
  */
 
 import ApiClient from "../ApiClient";
-import CountryListWsDTOModel from '../models/CountryListWsDTOModel';
+import CountryListWsDTO from '../models/CountryListWsDTO';
 
 /**
 * Deliverycountries service.
@@ -37,7 +37,7 @@ export default class DeliverycountriesApi {
      * Lists all supported delivery countries for the current store. The list is sorted alphabetically. 
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/CountryListWsDTOModel} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/CountryListWsDTO} and HTTP response
      */
     deliverycountriesWithHttpInfo(opts) {
       opts = opts || {};
@@ -56,7 +56,7 @@ export default class DeliverycountriesApi {
       let authNames = ['auth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = CountryListWsDTOModel;
+      let returnType = CountryListWsDTO;
 
       return this.apiClient.callApi(
         '/deliverycountries', 'GET',
@@ -70,7 +70,7 @@ export default class DeliverycountriesApi {
      * Lists all supported delivery countries for the current store. The list is sorted alphabetically. 
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/CountryListWsDTOModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/CountryListWsDTO}
      */
     getDeliverycountries(opts) {
       return this.deliverycountriesWithHttpInfo(opts)

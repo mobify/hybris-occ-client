@@ -1,4 +1,4 @@
-# Occ.MemberModel
+# Occ.Member
 
 ## Properties
 Name | Type | Description | Notes

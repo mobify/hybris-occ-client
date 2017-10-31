@@ -1,4 +1,4 @@
-# Occ.VariantCategoryWsDTOModel
+# Occ.VariantCategoryWsDTO
 
 ## Properties
 Name | Type | Description | Notes

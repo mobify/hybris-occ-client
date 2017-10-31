@@ -1,8 +1,8 @@
-# Occ.CountryListWsDTOModel
+# Occ.CountryListWsDTO
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**countries** | [**[CountryWsDTOModel]**](CountryWsDTOModel.md) |  | [optional] 
+**countries** | [**[CountryWsDTO]**](CountryWsDTO.md) |  | [optional] 
 
 

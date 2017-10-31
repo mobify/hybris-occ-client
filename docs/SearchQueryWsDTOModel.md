@@ -1,4 +1,4 @@
-# Occ.SearchQueryWsDTOModel
+# Occ.SearchQueryWsDTO
 
 ## Properties
 Name | Type | Description | Notes

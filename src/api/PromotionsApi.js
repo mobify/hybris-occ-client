@@ -12,8 +12,8 @@
  */
 
 import ApiClient from "../ApiClient";
-import PromotionListWsDTOModel from '../models/PromotionListWsDTOModel';
-import PromotionWsDTOModel from '../models/PromotionWsDTOModel';
+import PromotionListWsDTO from '../models/PromotionListWsDTO';
+import PromotionWsDTO from '../models/PromotionWsDTO';
 
 /**
 * Promotions service.
@@ -40,7 +40,7 @@ export default class PromotionsApi {
      * @param {String} opts.promotionGroup Only promotions from this group are returned
      * @param {String} opts.type Defines what type of promotions should be returned. Values supported for that parameter are: &lt;ul&gt; &lt;li&gt;all: All available promotions are returned&lt;/li&gt; &lt;li&gt;product: Only product promotions are returned&lt;/li&gt; &lt;li&gt;order: Only order promotions are returned&lt;/li&gt; &lt;/ul&gt;
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/PromotionListWsDTOModel} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/PromotionListWsDTO} and HTTP response
      */
     promotionsWithHttpInfo(opts) {
       opts = opts || {};
@@ -61,7 +61,7 @@ export default class PromotionsApi {
       let authNames = ['auth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = PromotionListWsDTOModel;
+      let returnType = PromotionListWsDTO;
 
       return this.apiClient.callApi(
         '/promotions', 'GET',
@@ -77,7 +77,7 @@ export default class PromotionsApi {
      * @param {String} opts.promotionGroup Only promotions from this group are returned
      * @param {String} opts.type Defines what type of promotions should be returned. Values supported for that parameter are: &lt;ul&gt; &lt;li&gt;all: All available promotions are returned&lt;/li&gt; &lt;li&gt;product: Only product promotions are returned&lt;/li&gt; &lt;li&gt;order: Only order promotions are returned&lt;/li&gt; &lt;/ul&gt;
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/PromotionListWsDTOModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/PromotionListWsDTO}
      */
     getPromotions(opts) {
       return this.promotionsWithHttpInfo(opts)
@@ -92,7 +92,7 @@ export default class PromotionsApi {
      * @param {String} code Promotion identifier (code)
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/PromotionWsDTOModel} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/PromotionWsDTO} and HTTP response
      */
     promotionsByCodeWithHttpInfo(code, opts) {
       opts = opts || {};
@@ -117,7 +117,7 @@ export default class PromotionsApi {
       let authNames = ['auth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = PromotionWsDTOModel;
+      let returnType = PromotionWsDTO;
 
       return this.apiClient.callApi(
         '/promotions/{code}', 'GET',
@@ -132,7 +132,7 @@ export default class PromotionsApi {
      * @param {String} code Promotion identifier (code)
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/PromotionWsDTOModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/PromotionWsDTO}
      */
     getPromotion(code, opts) {
       return this.promotionsByCodeWithHttpInfo(code, opts)

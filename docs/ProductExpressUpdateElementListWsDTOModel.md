@@ -1,8 +1,8 @@
-# Occ.ProductExpressUpdateElementListWsDTOModel
+# Occ.ProductExpressUpdateElementListWsDTO
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**productExpressUpdateElements** | [**[ProductExpressUpdateElementWsDTOModel]**](ProductExpressUpdateElementWsDTOModel.md) |  | [optional] 
+**productExpressUpdateElements** | [**[ProductExpressUpdateElementWsDTO]**](ProductExpressUpdateElementWsDTO.md) |  | [optional] 
 
 

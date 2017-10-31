@@ -1,10 +1,10 @@
-# Occ.OrderHistoryListWsDTOModel
+# Occ.OrderHistoryListWsDTO
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**orders** | [**[OrderHistoryWsDTOModel]**](OrderHistoryWsDTOModel.md) |  | [optional] 
-**sorts** | [**[SortWsDTOModel]**](SortWsDTOModel.md) |  | [optional] 
-**pagination** | [**PaginationWsDTOModel**](PaginationWsDTOModel.md) |  | [optional] 
+**orders** | [**[OrderHistoryWsDTO]**](OrderHistoryWsDTO.md) |  | [optional] 
+**sorts** | [**[SortWsDTO]**](SortWsDTO.md) |  | [optional] 
+**pagination** | [**PaginationWsDTO**](PaginationWsDTO.md) |  | [optional] 
 
 

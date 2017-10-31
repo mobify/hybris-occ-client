@@ -1,4 +1,4 @@
-# Occ.PromotionOrderEntryConsumedWsDTOModel
+# Occ.PromotionOrderEntryConsumedWsDTO
 
 ## Properties
 Name | Type | Description | Notes

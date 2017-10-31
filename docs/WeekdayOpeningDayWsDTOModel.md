@@ -1,11 +1,11 @@
-# Occ.WeekdayOpeningDayWsDTOModel
+# Occ.WeekdayOpeningDayWsDTO
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **weekDay** | **String** |  | [optional] 
 **closed** | **Boolean** |  | [optional] 
-**openingTime** | [**TimeWsDTOModel**](TimeWsDTOModel.md) |  | [optional] 
-**closingTime** | [**TimeWsDTOModel**](TimeWsDTOModel.md) |  | [optional] 
+**openingTime** | [**TimeWsDTO**](TimeWsDTO.md) |  | [optional] 
+**closingTime** | [**TimeWsDTO**](TimeWsDTO.md) |  | [optional] 
 
 

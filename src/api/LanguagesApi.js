@@ -12,7 +12,7 @@
  */
 
 import ApiClient from "../ApiClient";
-import LanguageListWsDTOModel from '../models/LanguageListWsDTOModel';
+import LanguageListWsDTO from '../models/LanguageListWsDTO';
 
 /**
 * Languages service.
@@ -37,7 +37,7 @@ export default class LanguagesApi {
      * Lists all available languages (all languages used for a particular store). If the list of languages for a base store is empty, a list of all languages available in the system will be returned. 
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/LanguageListWsDTOModel} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/LanguageListWsDTO} and HTTP response
      */
     languagesWithHttpInfo(opts) {
       opts = opts || {};
@@ -56,7 +56,7 @@ export default class LanguagesApi {
       let authNames = ['auth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = LanguageListWsDTOModel;
+      let returnType = LanguageListWsDTO;
 
       return this.apiClient.callApi(
         '/languages', 'GET',
@@ -70,7 +70,7 @@ export default class LanguagesApi {
      * Lists all available languages (all languages used for a particular store). If the list of languages for a base store is empty, a list of all languages available in the system will be returned. 
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/LanguageListWsDTOModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/LanguageListWsDTO}
      */
     getLanguages(opts) {
       return this.languagesWithHttpInfo(opts)

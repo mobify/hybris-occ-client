@@ -1,4 +1,4 @@
-# Occ.ProductReferenceWsDTOModel
+# Occ.ProductReferenceWsDTO
 
 ## Properties
 Name | Type | Description | Notes
@@ -7,6 +7,6 @@ Name | Type | Description | Notes
 **referenceType** | **String** |  | [optional] 
 **description** | **String** |  | [optional] 
 **quantity** | **Number** |  | [optional] 
-**target** | [**ProductWsDTOModel**](ProductWsDTOModel.md) |  | [optional] 
+**target** | [**ProductWsDTO**](ProductWsDTO.md) |  | [optional] 
 
 

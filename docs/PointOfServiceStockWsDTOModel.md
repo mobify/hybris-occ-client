@@ -1,21 +1,21 @@
-# Occ.PointOfServiceStockWsDTOModel
+# Occ.PointOfServiceStockWsDTO
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**stockInfo** | [**StockWsDTOModel**](StockWsDTOModel.md) |  | [optional] 
+**stockInfo** | [**StockWsDTO**](StockWsDTO.md) |  | [optional] 
 **name** | **String** |  | [optional] 
 **displayName** | **String** |  | [optional] 
 **url** | **String** |  | [optional] 
 **description** | **String** |  | [optional] 
-**openingHours** | [**OpeningScheduleWsDTOModel**](OpeningScheduleWsDTOModel.md) |  | [optional] 
+**openingHours** | [**OpeningScheduleWsDTO**](OpeningScheduleWsDTO.md) |  | [optional] 
 **storeContent** | **String** |  | [optional] 
 **features** | **Object** |  | [optional] 
-**geoPoint** | [**GeoPointWsDTOModel**](GeoPointWsDTOModel.md) |  | [optional] 
+**geoPoint** | [**GeoPointWsDTO**](GeoPointWsDTO.md) |  | [optional] 
 **formattedDistance** | **String** |  | [optional] 
 **distanceKm** | **Number** |  | [optional] 
-**mapIcon** | [**ImageWsDTOModel**](ImageWsDTOModel.md) |  | [optional] 
-**address** | [**AddressWsDTOModel**](AddressWsDTOModel.md) |  | [optional] 
-**storeImages** | [**[ImageWsDTOModel]**](ImageWsDTOModel.md) |  | [optional] 
+**mapIcon** | [**ImageWsDTO**](ImageWsDTO.md) |  | [optional] 
+**address** | [**AddressWsDTO**](AddressWsDTO.md) |  | [optional] 
+**storeImages** | [**[ImageWsDTO]**](ImageWsDTO.md) |  | [optional] 
 
 

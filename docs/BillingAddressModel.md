@@ -1,4 +1,4 @@
-# Occ.BillingAddressModel
+# Occ.BillingAddress
 
 ## Properties
 Name | Type | Description | Notes
@@ -9,8 +9,8 @@ Name | Type | Description | Notes
 **line1** | **String** |  | [optional] 
 **line2** | **String** |  | [optional] 
 **town** | **String** |  | [optional] 
-**region** | [**RegionModel**](RegionModel.md) |  | [optional] 
+**region** | [**Region**](Region.md) |  | [optional] 
 **postalCode** | **String** |  | [optional] 
-**country** | [**CountryModel**](CountryModel.md) |  | [optional] 
+**country** | [**Country**](Country.md) |  | [optional] 
 
 

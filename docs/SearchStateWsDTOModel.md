@@ -1,9 +1,9 @@
-# Occ.SearchStateWsDTOModel
+# Occ.SearchStateWsDTO
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **url** | **String** |  | [optional] 
-**query** | [**SearchQueryWsDTOModel**](SearchQueryWsDTOModel.md) |  | [optional] 
+**query** | [**SearchQueryWsDTO**](SearchQueryWsDTO.md) |  | [optional] 
 
 

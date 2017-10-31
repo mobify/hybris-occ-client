@@ -1,4 +1,4 @@
-# Occ.FeatureWsDTOModel
+# Occ.FeatureWsDTO
 
 ## Properties
 Name | Type | Description | Notes
@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **type** | **String** |  | [optional] 
 **range** | **Boolean** |  | [optional] 
 **comparable** | **Boolean** |  | [optional] 
-**featureUnit** | [**FeatureUnitWsDTOModel**](FeatureUnitWsDTOModel.md) |  | [optional] 
-**featureValues** | [**[FeatureValueWsDTOModel]**](FeatureValueWsDTOModel.md) |  | [optional] 
+**featureUnit** | [**FeatureUnitWsDTO**](FeatureUnitWsDTO.md) |  | [optional] 
+**featureValues** | [**[FeatureValueWsDTO]**](FeatureValueWsDTO.md) |  | [optional] 
 
 

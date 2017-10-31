@@ -1,12 +1,12 @@
-# Occ.PickupOrderEntryGroupWsDTOModel
+# Occ.PickupOrderEntryGroupWsDTO
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**deliveryPointOfService** | [**PointOfServiceWsDTOModel**](PointOfServiceWsDTOModel.md) |  | [optional] 
+**deliveryPointOfService** | [**PointOfServiceWsDTO**](PointOfServiceWsDTO.md) |  | [optional] 
 **distance** | **Number** |  | [optional] 
-**totalPriceWithTax** | [**PriceWsDTOModel**](PriceWsDTOModel.md) |  | [optional] 
-**entries** | [**[OrderEntryWsDTOModel]**](OrderEntryWsDTOModel.md) |  | [optional] 
+**totalPriceWithTax** | [**PriceWsDTO**](PriceWsDTO.md) |  | [optional] 
+**entries** | [**[OrderEntryWsDTO]**](OrderEntryWsDTO.md) |  | [optional] 
 **quantity** | **Number** |  | [optional] 
 
 

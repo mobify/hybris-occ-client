@@ -1,8 +1,8 @@
-# Occ.TitleListWsDTOModel
+# Occ.TitleListWsDTO
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**titles** | [**[TitleWsDTOModel]**](TitleWsDTOModel.md) |  | [optional] 
+**titles** | [**[TitleWsDTO]**](TitleWsDTO.md) |  | [optional] 
 
 

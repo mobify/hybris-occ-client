@@ -1,4 +1,4 @@
-# Occ.PromotionRestrictionWsDTOModel
+# Occ.PromotionRestrictionWsDTO
 
 ## Properties
 Name | Type | Description | Notes

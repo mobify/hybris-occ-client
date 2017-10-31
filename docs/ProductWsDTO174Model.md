@@ -1,4 +1,4 @@
-# Occ.ProductWsDTO174Model
+# Occ.ProductWsDTO174
 
 ## Properties
 Name | Type | Description | Notes
@@ -8,28 +8,28 @@ Name | Type | Description | Notes
 **url** | **String** |  | [optional] 
 **description** | **String** |  | [optional] 
 **purchasable** | **Boolean** |  | [optional] 
-**stock** | [**StockWsDTOModel**](StockWsDTOModel.md) |  | [optional] 
-**futureStocks** | [**[FutureStockWsDTOModel]**](FutureStockWsDTOModel.md) |  | [optional] 
+**stock** | [**StockWsDTO**](StockWsDTO.md) |  | [optional] 
+**futureStocks** | [**[FutureStockWsDTO]**](FutureStockWsDTO.md) |  | [optional] 
 **availableForPickup** | **Boolean** |  | [optional] 
 **averageRating** | **Number** |  | [optional] 
 **numberOfReviews** | **Number** |  | [optional] 
 **summary** | **String** |  | [optional] 
 **manufacturer** | **String** |  | [optional] 
 **variantType** | **String** |  | [optional] 
-**price** | [**PriceWsDTOModel**](PriceWsDTOModel.md) |  | [optional] 
+**price** | [**PriceWsDTO**](PriceWsDTO.md) |  | [optional] 
 **baseProduct** | **String** |  | [optional] 
-**images** | [**[ImageWsDTOModel]**](ImageWsDTOModel.md) |  | [optional] 
-**categories** | [**[CategoryWsDTOModel]**](CategoryWsDTOModel.md) |  | [optional] 
-**reviews** | [**[ReviewWsDTOModel]**](ReviewWsDTOModel.md) |  | [optional] 
-**classifications** | [**[ClassificationWsDTOModel]**](ClassificationWsDTOModel.md) |  | [optional] 
-**potentialPromotions** | [**[PromotionWsDTOModel]**](PromotionWsDTOModel.md) |  | [optional] 
-**variantOptions** | [**[VariantOptionWsDTOModel]**](VariantOptionWsDTOModel.md) |  | [optional] 
-**baseOptions** | [**[BaseOptionWsDTOModel]**](BaseOptionWsDTOModel.md) |  | [optional] 
+**images** | [**[ImageWsDTO]**](ImageWsDTO.md) |  | [optional] 
+**categories** | [**[CategoryWsDTO]**](CategoryWsDTO.md) |  | [optional] 
+**reviews** | [**[ReviewWsDTO]**](ReviewWsDTO.md) |  | [optional] 
+**classifications** | [**[ClassificationWsDTO]**](ClassificationWsDTO.md) |  | [optional] 
+**potentialPromotions** | [**[PromotionWsDTO]**](PromotionWsDTO.md) |  | [optional] 
+**variantOptions** | [**[VariantOptionWsDTO]**](VariantOptionWsDTO.md) |  | [optional] 
+**baseOptions** | [**[BaseOptionWsDTO]**](BaseOptionWsDTO.md) |  | [optional] 
 **volumePricesFlag** | **Boolean** |  | [optional] 
-**volumePrices** | [**[PriceWsDTOModel]**](PriceWsDTOModel.md) |  | [optional] 
-**productReferences** | [**[ProductReferenceWsDTO173Model]**](ProductReferenceWsDTO173Model.md) |  | [optional] 
-**variantMatrix** | [**[VariantMatrixElementWsDTOModel]**](VariantMatrixElementWsDTOModel.md) |  | [optional] 
-**priceRange** | [**PriceRangeWsDTOModel**](PriceRangeWsDTOModel.md) |  | [optional] 
+**volumePrices** | [**[PriceWsDTO]**](PriceWsDTO.md) |  | [optional] 
+**productReferences** | [**[ProductReferenceWsDTO173]**](ProductReferenceWsDTO173.md) |  | [optional] 
+**variantMatrix** | [**[VariantMatrixElementWsDTO]**](VariantMatrixElementWsDTO.md) |  | [optional] 
+**priceRange** | [**PriceRangeWsDTO**](PriceRangeWsDTO.md) |  | [optional] 
 **multidimensional** | **Boolean** |  | [optional] 
 
 

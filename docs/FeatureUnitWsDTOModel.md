@@ -1,4 +1,4 @@
-# Occ.FeatureUnitWsDTOModel
+# Occ.FeatureUnitWsDTO
 
 ## Properties
 Name | Type | Description | Notes

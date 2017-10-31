@@ -1,8 +1,8 @@
-# Occ.AddressListWsDTOModel
+# Occ.AddressListWsDTO
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**addresses** | [**[AddressWsDTOModel]**](AddressWsDTOModel.md) |  | [optional] 
+**addresses** | [**[AddressWsDTO]**](AddressWsDTO.md) |  | [optional] 
 
 

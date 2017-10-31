@@ -1,8 +1,8 @@
-# Occ.MemberListWsDTOModel
+# Occ.MemberListWsDTO
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**members** | [**[MemberModel]**](MemberModel.md) |  | [optional] 
+**members** | [**[Member]**](Member.md) |  | [optional] 
 
 

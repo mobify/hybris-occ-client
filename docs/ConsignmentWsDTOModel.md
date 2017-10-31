@@ -1,4 +1,4 @@
-# Occ.ConsignmentWsDTOModel
+# Occ.ConsignmentWsDTO
 
 ## Properties
 Name | Type | Description | Notes
@@ -7,8 +7,8 @@ Name | Type | Description | Notes
 **trackingID** | **String** |  | [optional] 
 **status** | **String** |  | [optional] 
 **statusDate** | **String** |  | [optional] 
-**entries** | [**[ConsignmentEntryWsDTOModel]**](ConsignmentEntryWsDTOModel.md) |  | [optional] 
-**shippingAddress** | [**AddressWsDTOModel**](AddressWsDTOModel.md) |  | [optional] 
-**deliveryPointOfService** | [**PointOfServiceWsDTOModel**](PointOfServiceWsDTOModel.md) |  | [optional] 
+**entries** | [**[ConsignmentEntryWsDTO]**](ConsignmentEntryWsDTO.md) |  | [optional] 
+**shippingAddress** | [**AddressWsDTO**](AddressWsDTO.md) |  | [optional] 
+**deliveryPointOfService** | [**PointOfServiceWsDTO**](PointOfServiceWsDTO.md) |  | [optional] 
 
 

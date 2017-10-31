@@ -1,9 +1,9 @@
-# Occ.FutureStockWsDTOModel
+# Occ.FutureStockWsDTO
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**stock** | [**StockWsDTOModel**](StockWsDTOModel.md) |  | [optional] 
+**stock** | [**StockWsDTO**](StockWsDTO.md) |  | [optional] 
 **_date** | **String** |  | [optional] 
 **formattedDate** | **String** |  | [optional] 
 

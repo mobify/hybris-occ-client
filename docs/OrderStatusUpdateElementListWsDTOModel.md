@@ -1,8 +1,8 @@
-# Occ.OrderStatusUpdateElementListWsDTOModel
+# Occ.OrderStatusUpdateElementListWsDTO
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**orderStatusUpdateElements** | [**[OrderStatusUpdateElementWsDTOModel]**](OrderStatusUpdateElementWsDTOModel.md) |  | [optional] 
+**orderStatusUpdateElements** | [**[OrderStatusUpdateElementWsDTO]**](OrderStatusUpdateElementWsDTO.md) |  | [optional] 
 
 

@@ -1,8 +1,8 @@
-# Occ.UserGroupWsDTO17Model
+# Occ.UserGroupWsDTO17
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**members** | [**[PrincipalWsDTOModel]**](PrincipalWsDTOModel.md) |  | [optional] 
+**members** | [**[PrincipalWsDTO]**](PrincipalWsDTO.md) |  | [optional] 
 
 

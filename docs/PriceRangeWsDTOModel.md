@@ -1,9 +1,9 @@
-# Occ.PriceRangeWsDTOModel
+# Occ.PriceRangeWsDTO
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**maxPrice** | [**PriceWsDTOModel**](PriceWsDTOModel.md) |  | [optional] 
-**minPrice** | [**PriceWsDTOModel**](PriceWsDTOModel.md) |  | [optional] 
+**maxPrice** | [**PriceWsDTO**](PriceWsDTO.md) |  | [optional] 
+**minPrice** | [**PriceWsDTO**](PriceWsDTO.md) |  | [optional] 
 
 

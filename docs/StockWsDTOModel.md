@@ -1,4 +1,4 @@
-# Occ.StockWsDTOModel
+# Occ.StockWsDTO
 
 ## Properties
 Name | Type | Description | Notes

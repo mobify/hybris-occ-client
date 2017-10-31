@@ -12,10 +12,10 @@
  */
 
 import ApiClient from "../ApiClient";
-import MemberListWsDTOModel from '../models/MemberListWsDTOModel';
-import UserGroupListWsDTOModel from '../models/UserGroupListWsDTOModel';
-import UserGroupWsDTO17Model from '../models/UserGroupWsDTO17Model';
-import UserGroupWsDTOModel from '../models/UserGroupWsDTOModel';
+import MemberListWsDTO from '../models/MemberListWsDTO';
+import UserGroupListWsDTO from '../models/UserGroupListWsDTO';
+import UserGroupWsDTO17 from '../models/UserGroupWsDTO17';
+import UserGroupWsDTO from '../models/UserGroupWsDTO';
 
 /**
 * Customergroups service.
@@ -42,7 +42,7 @@ export default class CustomergroupsApi {
      * @param {String} opts.pageSize Number of customer group returned in one page
      * @param {String} opts.currentPage Current page number (starts with 0)
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/UserGroupListWsDTOModel} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/UserGroupListWsDTO} and HTTP response
      */
     customergroupsWithHttpInfo(opts) {
       opts = opts || {};
@@ -63,7 +63,7 @@ export default class CustomergroupsApi {
       let authNames = ['auth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = UserGroupListWsDTOModel;
+      let returnType = UserGroupListWsDTO;
 
       return this.apiClient.callApi(
         '/customergroups', 'GET',
@@ -79,7 +79,7 @@ export default class CustomergroupsApi {
      * @param {String} opts.pageSize Number of customer group returned in one page
      * @param {String} opts.currentPage Current page number (starts with 0)
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/UserGroupListWsDTOModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/UserGroupListWsDTO}
      */
     getCustomergroups(opts) {
       return this.customergroupsWithHttpInfo(opts)
@@ -91,7 +91,7 @@ export default class CustomergroupsApi {
     /**
      * Customergroups
      * Creates a new customer group that is a direct subgroup of a customergroup.  Security: Permitted only for customer managers 
-     * @param {module:models/UserGroupWsDTOModel} body 
+     * @param {module:models/UserGroupWsDTO} body 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
     customergroups1WithHttpInfo(body) {
@@ -126,7 +126,7 @@ export default class CustomergroupsApi {
     /**
      * Customergroups
      * Creates a new customer group that is a direct subgroup of a customergroup.  Security: Permitted only for customer managers 
-     * @param {module:models/UserGroupWsDTOModel} body 
+     * @param {module:models/UserGroupWsDTO} body 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     postCustomergroup(body) {
@@ -142,7 +142,7 @@ export default class CustomergroupsApi {
      * @param {String} groupId Group identifier
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/UserGroupWsDTO17Model} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/UserGroupWsDTO17} and HTTP response
      */
     customergroupsByGroupIdWithHttpInfo(groupId, opts) {
       opts = opts || {};
@@ -167,7 +167,7 @@ export default class CustomergroupsApi {
       let authNames = ['auth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = UserGroupWsDTO17Model;
+      let returnType = UserGroupWsDTO17;
 
       return this.apiClient.callApi(
         '/customergroups/{groupId}', 'GET',
@@ -182,7 +182,7 @@ export default class CustomergroupsApi {
      * @param {String} groupId Group identifier
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/UserGroupWsDTO17Model}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/UserGroupWsDTO17}
      */
     getCustomergroup(groupId, opts) {
       return this.customergroupsByGroupIdWithHttpInfo(groupId, opts)
@@ -195,7 +195,7 @@ export default class CustomergroupsApi {
      * putCustomergroupsMembers
      * Sets members for a user group. The list of existing members is overwritten with a new one.  Security: Permitted only for customer managers 
      * @param {String} groupId Group identifier
-     * @param {module:models/MemberListWsDTOModel} body 
+     * @param {module:models/MemberListWsDTO} body 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
     customergroupsMembersByGroupIdWithHttpInfo(groupId, body) {
@@ -237,7 +237,7 @@ export default class CustomergroupsApi {
      * putCustomergroupsMembers
      * Sets members for a user group. The list of existing members is overwritten with a new one.  Security: Permitted only for customer managers 
      * @param {String} groupId Group identifier
-     * @param {module:models/MemberListWsDTOModel} body 
+     * @param {module:models/MemberListWsDTO} body 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     putCustomergroupsMembers(groupId, body) {
@@ -251,7 +251,7 @@ export default class CustomergroupsApi {
      * patchCustomergroupsMembers
      * Assigns user(s) to a customer group.  Security: Permitted only for customer managers 
      * @param {String} groupId Group identifier
-     * @param {module:models/MemberListWsDTOModel} body 
+     * @param {module:models/MemberListWsDTO} body 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
     customergroupsMembersByGroupId1WithHttpInfo(groupId, body) {
@@ -293,7 +293,7 @@ export default class CustomergroupsApi {
      * patchCustomergroupsMembers
      * Assigns user(s) to a customer group.  Security: Permitted only for customer managers 
      * @param {String} groupId Group identifier
-     * @param {module:models/MemberListWsDTOModel} body 
+     * @param {module:models/MemberListWsDTO} body 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     patchCustomergroupsMembers(groupId, body) {

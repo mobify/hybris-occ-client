@@ -1,10 +1,10 @@
-# Occ.BaseOptionWsDTOModel
+# Occ.BaseOptionWsDTO
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **variantType** | **String** |  | [optional] 
-**options** | [**[VariantOptionWsDTOModel]**](VariantOptionWsDTOModel.md) |  | [optional] 
-**selected** | [**VariantOptionWsDTOModel**](VariantOptionWsDTOModel.md) |  | [optional] 
+**options** | [**[VariantOptionWsDTO]**](VariantOptionWsDTO.md) |  | [optional] 
+**selected** | [**VariantOptionWsDTO**](VariantOptionWsDTO.md) |  | [optional] 
 
 

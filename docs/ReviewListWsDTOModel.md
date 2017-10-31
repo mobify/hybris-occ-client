@@ -1,8 +1,8 @@
-# Occ.ReviewListWsDTOModel
+# Occ.ReviewListWsDTO
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**reviews** | [**[ReviewWsDTOModel]**](ReviewWsDTOModel.md) |  | [optional] 
+**reviews** | [**[ReviewWsDTO]**](ReviewWsDTO.md) |  | [optional] 
 
 

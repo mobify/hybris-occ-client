@@ -1,4 +1,4 @@
-# Occ.AddressWsDTOModel
+# Occ.AddressWsDTO
 
 ## Properties
 Name | Type | Description | Notes
@@ -12,11 +12,11 @@ Name | Type | Description | Notes
 **line1** | **String** |  | [optional] 
 **line2** | **String** |  | [optional] 
 **town** | **String** |  | [optional] 
-**region** | [**RegionWsDTOModel**](RegionWsDTOModel.md) |  | [optional] 
+**region** | [**RegionWsDTO**](RegionWsDTO.md) |  | [optional] 
 **postalCode** | **String** |  | [optional] 
 **phone** | **String** |  | [optional] 
 **email** | **String** |  | [optional] 
-**country** | [**CountryWsDTOModel**](CountryWsDTOModel.md) |  | [optional] 
+**country** | [**CountryWsDTO**](CountryWsDTO.md) |  | [optional] 
 **shippingAddress** | **Boolean** |  | [optional] 
 **visibleInAddressBook** | **Boolean** |  | [optional] 
 **formattedAddress** | **String** |  | [optional] 

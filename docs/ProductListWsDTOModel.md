@@ -1,9 +1,9 @@
-# Occ.ProductListWsDTOModel
+# Occ.ProductListWsDTO
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**products** | [**[ProductWsDTOModel]**](ProductWsDTOModel.md) |  | [optional] 
+**products** | [**[ProductWsDTO]**](ProductWsDTO.md) |  | [optional] 
 **catalog** | **String** |  | [optional] 
 **version** | **String** |  | [optional] 
 **totalProductCount** | **Number** |  | [optional] 

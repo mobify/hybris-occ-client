@@ -1,10 +1,10 @@
-# Occ.PromotionResultWsDTOModel
+# Occ.PromotionResultWsDTO
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **description** | **String** |  | [optional] 
-**promotion** | [**PromotionWsDTOModel**](PromotionWsDTOModel.md) |  | [optional] 
-**consumedEntries** | [**[PromotionOrderEntryConsumedWsDTOModel]**](PromotionOrderEntryConsumedWsDTOModel.md) |  | [optional] 
+**promotion** | [**PromotionWsDTO**](PromotionWsDTO.md) |  | [optional] 
+**consumedEntries** | [**[PromotionOrderEntryConsumedWsDTO]**](PromotionOrderEntryConsumedWsDTO.md) |  | [optional] 
 
 

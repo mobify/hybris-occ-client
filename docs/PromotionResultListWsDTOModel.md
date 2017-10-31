@@ -1,8 +1,8 @@
-# Occ.PromotionResultListWsDTOModel
+# Occ.PromotionResultListWsDTO
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**promotions** | [**[PromotionResultWsDTOModel]**](PromotionResultWsDTOModel.md) |  | [optional] 
+**promotions** | [**[PromotionResultWsDTO]**](PromotionResultWsDTO.md) |  | [optional] 
 
 

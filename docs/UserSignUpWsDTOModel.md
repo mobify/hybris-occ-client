@@ -1,4 +1,4 @@
-# Occ.UserSignUpWsDTOModel
+# Occ.UserSignUpWsDTO
 
 ## Properties
 Name | Type | Description | Notes

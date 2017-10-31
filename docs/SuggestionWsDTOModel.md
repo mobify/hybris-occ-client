@@ -1,4 +1,4 @@
-# Occ.SuggestionWsDTOModel
+# Occ.SuggestionWsDTO
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,10 +1,10 @@
-# Occ.VariantValueCategoryWsDTOModel
+# Occ.VariantValueCategoryWsDTO
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **String** |  | [optional] 
 **sequence** | **Number** |  | [optional] 
-**superCategories** | [**[VariantCategoryWsDTOModel]**](VariantCategoryWsDTOModel.md) |  | [optional] 
+**superCategories** | [**[VariantCategoryWsDTO]**](VariantCategoryWsDTO.md) |  | [optional] 
 
 

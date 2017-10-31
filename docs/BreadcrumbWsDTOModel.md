@@ -1,4 +1,4 @@
-# Occ.BreadcrumbWsDTOModel
+# Occ.BreadcrumbWsDTO
 
 ## Properties
 Name | Type | Description | Notes
@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **facetName** | **String** |  | [optional] 
 **facetValueCode** | **String** |  | [optional] 
 **facetValueName** | **String** |  | [optional] 
-**removeQuery** | [**SearchStateWsDTOModel**](SearchStateWsDTOModel.md) |  | [optional] 
-**truncateQuery** | [**SearchStateWsDTOModel**](SearchStateWsDTOModel.md) |  | [optional] 
+**removeQuery** | [**SearchStateWsDTO**](SearchStateWsDTO.md) |  | [optional] 
+**truncateQuery** | [**SearchStateWsDTO**](SearchStateWsDTO.md) |  | [optional] 
 
 

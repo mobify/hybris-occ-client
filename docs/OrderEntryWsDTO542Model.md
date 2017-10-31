@@ -1,10 +1,10 @@
-# Occ.OrderEntryWsDTO542Model
+# Occ.OrderEntryWsDTO542
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **quantity** | **Number** |  | [optional] 
-**product** | [**ProductModel**](ProductModel.md) |  | [optional] 
-**deliveryPointOfService** | [**DeliveryPointOfServiceModel**](DeliveryPointOfServiceModel.md) |  | [optional] 
+**product** | [**Product**](Product.md) |  | [optional] 
+**deliveryPointOfService** | [**DeliveryPointOfService**](DeliveryPointOfService.md) |  | [optional] 
 
 

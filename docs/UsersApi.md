@@ -80,7 +80,7 @@ auth.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new Occ.UsersApi();
 
-let body = new Occ.UserSignUpWsDTOModel(); // UserSignUpWsDTOModel | 
+let body = new Occ.UserSignUpWsDTO(); // UserSignUpWsDTO | 
 
 apiInstance.postUsers(body).then(() => {
   console.log('API called successfully.');
@@ -94,7 +94,7 @@ apiInstance.postUsers(body).then(() => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**UserSignUpWsDTOModel**](UserSignUpWsDTOModel.md)|  | 
+ **body** | [**UserSignUpWsDTO**](UserSignUpWsDTO.md)|  | 
 
 ### Return type
 
@@ -111,7 +111,7 @@ null (empty response body)
 
 <a name="getUserAddresses"></a>
 # **getUserAddresses**
-> AddressListWsDTOModel getUserAddresses(userId, opts)
+> AddressListWsDTO getUserAddresses(userId, opts)
 
 getUserAddresses
 
@@ -150,7 +150,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AddressListWsDTOModel**](AddressListWsDTOModel.md)
+[**AddressListWsDTO**](AddressListWsDTO.md)
 
 ### Authorization
 
@@ -163,7 +163,7 @@ Name | Type | Description  | Notes
 
 <a name="postUserAddress"></a>
 # **postUserAddress**
-> AddressWsDTO296Model postUserAddress(userId, body, opts)
+> AddressWsDTO296 postUserAddress(userId, body, opts)
 
 getUserAddresses
 
@@ -182,7 +182,7 @@ let apiInstance = new Occ.UsersApi();
 
 let userId = "userId_example"; // String | User identifier or one of the literals below : <ul> <li>'current' for currently authenticated user</li> <li>'anonymous' for anonymous user</li> </ul>
 
-let body = new Occ.AddressWsDTO296Model(); // AddressWsDTO296Model | 
+let body = new Occ.AddressWsDTO296(); // AddressWsDTO296 | 
 
 let opts = { 
   'fields': "fields_example" // String | Response configuration (list of fields, which should be returned in the response)
@@ -200,12 +200,12 @@ apiInstance.postUserAddress(userId, body, opts).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **userId** | **String**| User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt; | 
- **body** | [**AddressWsDTO296Model**](AddressWsDTO296Model.md)|  | 
+ **body** | [**AddressWsDTO296**](AddressWsDTO296.md)|  | 
  **fields** | **String**| Response configuration (list of fields, which should be returned in the response) | [optional] 
 
 ### Return type
 
-[**AddressWsDTO296Model**](AddressWsDTO296Model.md)
+[**AddressWsDTO296**](AddressWsDTO296.md)
 
 ### Authorization
 
@@ -218,7 +218,7 @@ Name | Type | Description  | Notes
 
 <a name="getUserAddress"></a>
 # **getUserAddress**
-> AddressWsDTOModel getUserAddress(userId, addressId, opts)
+> AddressWsDTO getUserAddress(userId, addressId, opts)
 
 getUserAddress
 
@@ -260,7 +260,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AddressWsDTOModel**](AddressWsDTOModel.md)
+[**AddressWsDTO**](AddressWsDTO.md)
 
 ### Authorization
 
@@ -294,7 +294,7 @@ let userId = "userId_example"; // String | User identifier or one of the literal
 
 let addressId = "addressId_example"; // String | Address identifier
 
-let body = new Occ.AddressWsDTO296Model(); // AddressWsDTO296Model | 
+let body = new Occ.AddressWsDTO296(); // AddressWsDTO296 | 
 
 apiInstance.putUserAddress(userId, addressId, body).then(() => {
   console.log('API called successfully.');
@@ -310,7 +310,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **userId** | **String**| User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt; | 
  **addressId** | **String**| Address identifier | 
- **body** | [**AddressWsDTO296Model**](AddressWsDTO296Model.md)|  | 
+ **body** | [**AddressWsDTO296**](AddressWsDTO296.md)|  | 
 
 ### Return type
 
@@ -348,7 +348,7 @@ let userId = "userId_example"; // String | User identifier or one of the literal
 
 let addressId = "addressId_example"; // String | Address identifier
 
-let body = new Occ.AddressWsDTO296Model(); // AddressWsDTO296Model | 
+let body = new Occ.AddressWsDTO296(); // AddressWsDTO296 | 
 
 apiInstance.patchUserAddress(userId, addressId, body).then(() => {
   console.log('API called successfully.');
@@ -364,7 +364,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **userId** | **String**| User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt; | 
  **addressId** | **String**| Address identifier | 
- **body** | [**AddressWsDTO296Model**](AddressWsDTO296Model.md)|  | 
+ **body** | [**AddressWsDTO296**](AddressWsDTO296.md)|  | 
 
 ### Return type
 
@@ -432,7 +432,7 @@ null (empty response body)
 
 <a name="postUserAddressesVerification"></a>
 # **postUserAddressesVerification**
-> AddressWsDTO296Model postUserAddressesVerification(userId, body, opts)
+> AddressWsDTO296 postUserAddressesVerification(userId, body, opts)
 
 postUserAddressesVerification
 
@@ -451,7 +451,7 @@ let apiInstance = new Occ.UsersApi();
 
 let userId = "userId_example"; // String | User identifier or one of the literals below : <ul> <li>'current' for currently authenticated user</li> <li>'anonymous' for anonymous user</li> </ul>
 
-let body = new Occ.AddressWsDTO296Model(); // AddressWsDTO296Model | 
+let body = new Occ.AddressWsDTO296(); // AddressWsDTO296 | 
 
 let opts = { 
   'fields': "fields_example" // String | Response configuration (list of fields, which should be returned in the response)
@@ -469,12 +469,12 @@ apiInstance.postUserAddressesVerification(userId, body, opts).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **userId** | **String**| User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt; | 
- **body** | [**AddressWsDTO296Model**](AddressWsDTO296Model.md)|  | 
+ **body** | [**AddressWsDTO296**](AddressWsDTO296.md)|  | 
  **fields** | **String**| Response configuration (list of fields, which should be returned in the response) | [optional] 
 
 ### Return type
 
-[**AddressWsDTO296Model**](AddressWsDTO296Model.md)
+[**AddressWsDTO296**](AddressWsDTO296.md)
 
 ### Authorization
 
@@ -487,7 +487,7 @@ Name | Type | Description  | Notes
 
 <a name="getUser"></a>
 # **getUser**
-> UserWsDTOModel getUser(userId, opts)
+> UserWsDTO getUser(userId, opts)
 
 getUser
 
@@ -526,7 +526,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**UserWsDTOModel**](UserWsDTOModel.md)
+[**UserWsDTO**](UserWsDTO.md)
 
 ### Authorization
 
@@ -558,7 +558,7 @@ let apiInstance = new Occ.UsersApi();
 
 let userId = "userId_example"; // String | User identifier or one of the literals below : <ul> <li>'current' for currently authenticated user</li> <li>'anonymous' for anonymous user</li> </ul>
 
-let body = new Occ.UserWsDTO286Model(); // UserWsDTO286Model | 
+let body = new Occ.UserWsDTO286(); // UserWsDTO286 | 
 
 apiInstance.putUser(userId, body).then(() => {
   console.log('API called successfully.');
@@ -573,7 +573,7 @@ apiInstance.putUser(userId, body).then(() => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **userId** | **String**| User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt; | 
- **body** | [**UserWsDTO286Model**](UserWsDTO286Model.md)|  | 
+ **body** | [**UserWsDTO286**](UserWsDTO286.md)|  | 
 
 ### Return type
 
@@ -609,7 +609,7 @@ let apiInstance = new Occ.UsersApi();
 
 let userId = "userId_example"; // String | User identifier or one of the literals below : <ul> <li>'current' for currently authenticated user</li> <li>'anonymous' for anonymous user</li> </ul>
 
-let body = new Occ.UserWsDTO286Model(); // UserWsDTO286Model | 
+let body = new Occ.UserWsDTO286(); // UserWsDTO286 | 
 
 apiInstance.patchUser(userId, body).then(() => {
   console.log('API called successfully.');
@@ -624,7 +624,7 @@ apiInstance.patchUser(userId, body).then(() => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **userId** | **String**| User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt; | 
- **body** | [**UserWsDTO286Model**](UserWsDTO286Model.md)|  | 
+ **body** | [**UserWsDTO286**](UserWsDTO286.md)|  | 
 
 ### Return type
 
@@ -689,7 +689,7 @@ null (empty response body)
 
 <a name="postCartDeliveryAddress"></a>
 # **postCartDeliveryAddress**
-> AddressWsDTO296Model postCartDeliveryAddress(userId, cartId, body, opts)
+> AddressWsDTO296 postCartDeliveryAddress(userId, cartId, body, opts)
 
 postCartDeliveryAddress
 
@@ -710,7 +710,7 @@ let userId = "userId_example"; // String | User identifier or one of the literal
 
 let cartId = "cartId_example"; // String | Cart identifier <ul> <li>cart code for logged in user</li> <li>cart guid for anonymous user</li> <li>'current' for the last modified cart</li> </ul>
 
-let body = new Occ.AddressWsDTO296Model(); // AddressWsDTO296Model | 
+let body = new Occ.AddressWsDTO296(); // AddressWsDTO296 | 
 
 let opts = { 
   'fields': "fields_example" // String | Response configuration (list of fields, which should be returned in response)
@@ -729,12 +729,12 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **userId** | **String**| User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt; | 
  **cartId** | **String**| Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt; | 
- **body** | [**AddressWsDTO296Model**](AddressWsDTO296Model.md)|  | 
+ **body** | [**AddressWsDTO296**](AddressWsDTO296.md)|  | 
  **fields** | **String**| Response configuration (list of fields, which should be returned in response) | [optional] 
 
 ### Return type
 
-[**AddressWsDTO296Model**](AddressWsDTO296Model.md)
+[**AddressWsDTO296**](AddressWsDTO296.md)
 
 ### Authorization
 
@@ -852,7 +852,7 @@ null (empty response body)
 
 <a name="getCarts"></a>
 # **getCarts**
-> CartListWsDTOModel getCarts(userId, opts)
+> CartListWsDTO getCarts(userId, opts)
 
 getCarts
 
@@ -891,7 +891,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CartListWsDTOModel**](CartListWsDTOModel.md)
+[**CartListWsDTO**](CartListWsDTO.md)
 
 ### Authorization
 
@@ -904,7 +904,7 @@ Name | Type | Description  | Notes
 
 <a name="postCart"></a>
 # **postCart**
-> CartWsDTOModel postCart(userId, opts)
+> CartWsDTO postCart(userId, opts)
 
 getCarts
 
@@ -947,7 +947,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CartWsDTOModel**](CartWsDTOModel.md)
+[**CartWsDTO**](CartWsDTO.md)
 
 ### Authorization
 
@@ -960,7 +960,7 @@ Name | Type | Description  | Notes
 
 <a name="getCart"></a>
 # **getCart**
-> CartWsDTOModel getCart(userId, cartId, opts)
+> CartWsDTO getCart(userId, cartId, opts)
 
 getCart
 
@@ -1002,7 +1002,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CartWsDTOModel**](CartWsDTOModel.md)
+[**CartWsDTO**](CartWsDTO.md)
 
 ### Authorization
 
@@ -1066,7 +1066,7 @@ null (empty response body)
 
 <a name="postCartClonesavedcart"></a>
 # **postCartClonesavedcart**
-> SaveCartResultWsDTOModel postCartClonesavedcart(userId, cartId, opts)
+> SaveCartResultWsDTO postCartClonesavedcart(userId, cartId, opts)
 
 postCartClonesavedcart
 
@@ -1112,7 +1112,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SaveCartResultWsDTOModel**](SaveCartResultWsDTOModel.md)
+[**SaveCartResultWsDTO**](SaveCartResultWsDTO.md)
 
 ### Authorization
 
@@ -1125,7 +1125,7 @@ Name | Type | Description  | Notes
 
 <a name="getCartDeliverymode"></a>
 # **getCartDeliverymode**
-> DeliveryModeWsDTOModel getCartDeliverymode(userId, cartId, opts)
+> DeliveryModeWsDTO getCartDeliverymode(userId, cartId, opts)
 
 getCartDeliverymode
 
@@ -1167,7 +1167,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DeliveryModeWsDTOModel**](DeliveryModeWsDTOModel.md)
+[**DeliveryModeWsDTO**](DeliveryModeWsDTO.md)
 
 ### Authorization
 
@@ -1285,7 +1285,7 @@ null (empty response body)
 
 <a name="getCartDeliverymodes"></a>
 # **getCartDeliverymodes**
-> DeliveryModeListWsDTOModel getCartDeliverymodes(userId, cartId, opts)
+> DeliveryModeListWsDTO getCartDeliverymodes(userId, cartId, opts)
 
 getCartDeliverymodes
 
@@ -1327,7 +1327,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DeliveryModeListWsDTOModel**](DeliveryModeListWsDTOModel.md)
+[**DeliveryModeListWsDTO**](DeliveryModeListWsDTO.md)
 
 ### Authorization
 
@@ -1395,7 +1395,7 @@ null (empty response body)
 
 <a name="getCartEntries"></a>
 # **getCartEntries**
-> OrderEntryListWsDTOModel getCartEntries(userId, cartId, opts)
+> OrderEntryListWsDTO getCartEntries(userId, cartId, opts)
 
 getCartEntries
 
@@ -1437,7 +1437,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**OrderEntryListWsDTOModel**](OrderEntryListWsDTOModel.md)
+[**OrderEntryListWsDTO**](OrderEntryListWsDTO.md)
 
 ### Authorization
 
@@ -1450,7 +1450,7 @@ Name | Type | Description  | Notes
 
 <a name="postCartEntries"></a>
 # **postCartEntries**
-> OrderEntryWsDTO542Model postCartEntries(userId, cartId, body, opts)
+> OrderEntryWsDTO542 postCartEntries(userId, cartId, body, opts)
 
 getCartEntries
 
@@ -1471,7 +1471,7 @@ let userId = "userId_example"; // String | User identifier or one of the literal
 
 let cartId = "cartId_example"; // String | Cart identifier <ul> <li>cart code for logged in user</li> <li>cart guid for anonymous user</li> <li>'current' for the last modified cart</li> </ul>
 
-let body = new Occ.OrderEntryWsDTO542Model(); // OrderEntryWsDTO542Model | 
+let body = new Occ.OrderEntryWsDTO542(); // OrderEntryWsDTO542 | 
 
 let opts = { 
   'fields': "fields_example" // String | Response configuration (list of fields, which should be returned in response)
@@ -1490,12 +1490,12 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **userId** | **String**| User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt; | 
  **cartId** | **String**| Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt; | 
- **body** | [**OrderEntryWsDTO542Model**](OrderEntryWsDTO542Model.md)|  | 
+ **body** | [**OrderEntryWsDTO542**](OrderEntryWsDTO542.md)|  | 
  **fields** | **String**| Response configuration (list of fields, which should be returned in response) | [optional] 
 
 ### Return type
 
-[**OrderEntryWsDTO542Model**](OrderEntryWsDTO542Model.md)
+[**OrderEntryWsDTO542**](OrderEntryWsDTO542.md)
 
 ### Authorization
 
@@ -1508,7 +1508,7 @@ Name | Type | Description  | Notes
 
 <a name="getCartEntry"></a>
 # **getCartEntry**
-> OrderEntryWsDTOModel getCartEntry(userId, cartId, entryNumber, opts)
+> OrderEntryWsDTO getCartEntry(userId, cartId, entryNumber, opts)
 
 getCartEntry
 
@@ -1553,7 +1553,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**OrderEntryWsDTOModel**](OrderEntryWsDTOModel.md)
+[**OrderEntryWsDTO**](OrderEntryWsDTO.md)
 
 ### Authorization
 
@@ -1566,7 +1566,7 @@ Name | Type | Description  | Notes
 
 <a name="putCartEntry"></a>
 # **putCartEntry**
-> OrderEntryWsDTO542Model putCartEntry(userId, cartId, entryNumber, body, opts)
+> OrderEntryWsDTO542 putCartEntry(userId, cartId, entryNumber, body, opts)
 
 getCartEntry
 
@@ -1589,7 +1589,7 @@ let cartId = "cartId_example"; // String | Cart identifier <ul> <li>cart code fo
 
 let entryNumber = "entryNumber_example"; // String | Entry number. Zero-based numbering.
 
-let body = new Occ.OrderEntryWsDTO542Model(); // OrderEntryWsDTO542Model | 
+let body = new Occ.OrderEntryWsDTO542(); // OrderEntryWsDTO542 | 
 
 let opts = { 
   'fields': "fields_example" // String | Response configuration (list of fields, which should be returned in response)
@@ -1609,12 +1609,12 @@ Name | Type | Description  | Notes
  **userId** | **String**| User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt; | 
  **cartId** | **String**| Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt; | 
  **entryNumber** | **String**| Entry number. Zero-based numbering. | 
- **body** | [**OrderEntryWsDTO542Model**](OrderEntryWsDTO542Model.md)|  | 
+ **body** | [**OrderEntryWsDTO542**](OrderEntryWsDTO542.md)|  | 
  **fields** | **String**| Response configuration (list of fields, which should be returned in response) | [optional] 
 
 ### Return type
 
-[**OrderEntryWsDTO542Model**](OrderEntryWsDTO542Model.md)
+[**OrderEntryWsDTO542**](OrderEntryWsDTO542.md)
 
 ### Authorization
 
@@ -1627,7 +1627,7 @@ Name | Type | Description  | Notes
 
 <a name="patchCartEntry"></a>
 # **patchCartEntry**
-> OrderEntryWsDTO542Model patchCartEntry(userId, cartId, entryNumber, body, opts)
+> OrderEntryWsDTO542 patchCartEntry(userId, cartId, entryNumber, body, opts)
 
 getCartEntry
 
@@ -1650,7 +1650,7 @@ let cartId = "cartId_example"; // String | Cart identifier <ul> <li>cart code fo
 
 let entryNumber = "entryNumber_example"; // String | Entry number. Zero-based numbering.
 
-let body = new Occ.OrderEntryWsDTO542Model(); // OrderEntryWsDTO542Model | 
+let body = new Occ.OrderEntryWsDTO542(); // OrderEntryWsDTO542 | 
 
 let opts = { 
   'fields': "fields_example" // String | Response configuration (list of fields, which should be returned in response)
@@ -1670,12 +1670,12 @@ Name | Type | Description  | Notes
  **userId** | **String**| User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt; | 
  **cartId** | **String**| Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt; | 
  **entryNumber** | **String**| Entry number. Zero-based numbering. | 
- **body** | [**OrderEntryWsDTO542Model**](OrderEntryWsDTO542Model.md)|  | 
+ **body** | [**OrderEntryWsDTO542**](OrderEntryWsDTO542.md)|  | 
  **fields** | **String**| Response configuration (list of fields, which should be returned in response) | [optional] 
 
 ### Return type
 
-[**OrderEntryWsDTO542Model**](OrderEntryWsDTO542Model.md)
+[**OrderEntryWsDTO542**](OrderEntryWsDTO542.md)
 
 ### Authorization
 
@@ -1742,7 +1742,7 @@ null (empty response body)
 
 <a name="patchCartFlagForDeletion"></a>
 # **patchCartFlagForDeletion**
-> SaveCartResultWsDTOModel patchCartFlagForDeletion(userId, cartId, opts)
+> SaveCartResultWsDTO patchCartFlagForDeletion(userId, cartId, opts)
 
 patchCartFlagForDeletion
 
@@ -1784,7 +1784,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SaveCartResultWsDTOModel**](SaveCartResultWsDTOModel.md)
+[**SaveCartResultWsDTO**](SaveCartResultWsDTO.md)
 
 ### Authorization
 
@@ -1797,7 +1797,7 @@ Name | Type | Description  | Notes
 
 <a name="postCartPaymentdetail"></a>
 # **postCartPaymentdetail**
-> PaymentDetailsWsDTO640Model postCartPaymentdetail(userId, cartId, body, opts)
+> PaymentDetailsWsDTO640 postCartPaymentdetail(userId, cartId, body, opts)
 
 postCartPaymentdetail
 
@@ -1818,7 +1818,7 @@ let userId = "userId_example"; // String | User identifier or one of the literal
 
 let cartId = "cartId_example"; // String | Cart identifier <ul> <li>cart code for logged in user</li> <li>cart guid for anonymous user</li> <li>'current' for the last modified cart</li> </ul>
 
-let body = new Occ.PaymentDetailsWsDTO640Model(); // PaymentDetailsWsDTO640Model | 
+let body = new Occ.PaymentDetailsWsDTO640(); // PaymentDetailsWsDTO640 | 
 
 let opts = { 
   'fields': "fields_example" // String | Response configuration (list of fields, which should be returned in response)
@@ -1837,12 +1837,12 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **userId** | **String**| User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt; | 
  **cartId** | **String**| Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt; | 
- **body** | [**PaymentDetailsWsDTO640Model**](PaymentDetailsWsDTO640Model.md)|  | 
+ **body** | [**PaymentDetailsWsDTO640**](PaymentDetailsWsDTO640.md)|  | 
  **fields** | **String**| Response configuration (list of fields, which should be returned in response) | [optional] 
 
 ### Return type
 
-[**PaymentDetailsWsDTO640Model**](PaymentDetailsWsDTO640Model.md)
+[**PaymentDetailsWsDTO640**](PaymentDetailsWsDTO640.md)
 
 ### Authorization
 
@@ -1909,7 +1909,7 @@ null (empty response body)
 
 <a name="getCartPromotions"></a>
 # **getCartPromotions**
-> PromotionResultListWsDTOModel getCartPromotions(userId, cartId, opts)
+> PromotionResultListWsDTO getCartPromotions(userId, cartId, opts)
 
 getCartPromotions
 
@@ -1951,7 +1951,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PromotionResultListWsDTOModel**](PromotionResultListWsDTOModel.md)
+[**PromotionResultListWsDTO**](PromotionResultListWsDTO.md)
 
 ### Authorization
 
@@ -2018,7 +2018,7 @@ null (empty response body)
 
 <a name="getCartPromotion"></a>
 # **getCartPromotion**
-> PromotionResultListWsDTOModel getCartPromotion(userId, cartId, promotionId, opts)
+> PromotionResultListWsDTO getCartPromotion(userId, cartId, promotionId, opts)
 
 getCartPromotion
 
@@ -2063,7 +2063,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PromotionResultListWsDTOModel**](PromotionResultListWsDTOModel.md)
+[**PromotionResultListWsDTO**](PromotionResultListWsDTO.md)
 
 ### Authorization
 
@@ -2130,7 +2130,7 @@ null (empty response body)
 
 <a name="patchCartRestoresavedcart"></a>
 # **patchCartRestoresavedcart**
-> SaveCartResultWsDTOModel patchCartRestoresavedcart(userId, cartId)
+> SaveCartResultWsDTO patchCartRestoresavedcart(userId, cartId)
 
 patchCartRestoresavedcart
 
@@ -2166,7 +2166,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SaveCartResultWsDTOModel**](SaveCartResultWsDTOModel.md)
+[**SaveCartResultWsDTO**](SaveCartResultWsDTO.md)
 
 ### Authorization
 
@@ -2179,7 +2179,7 @@ Name | Type | Description  | Notes
 
 <a name="patchSavedCart"></a>
 # **patchSavedCart**
-> SaveCartResultWsDTOModel patchSavedCart(userId, cartId, opts)
+> SaveCartResultWsDTO patchSavedCart(userId, cartId, opts)
 
 patchSavedCart
 
@@ -2225,7 +2225,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SaveCartResultWsDTOModel**](SaveCartResultWsDTOModel.md)
+[**SaveCartResultWsDTO**](SaveCartResultWsDTO.md)
 
 ### Authorization
 
@@ -2238,7 +2238,7 @@ Name | Type | Description  | Notes
 
 <a name="getSavedCart"></a>
 # **getSavedCart**
-> SaveCartResultWsDTOModel getSavedCart(userId, cartId, opts)
+> SaveCartResultWsDTO getSavedCart(userId, cartId, opts)
 
 getSavedCart
 
@@ -2280,7 +2280,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SaveCartResultWsDTOModel**](SaveCartResultWsDTOModel.md)
+[**SaveCartResultWsDTO**](SaveCartResultWsDTO.md)
 
 ### Authorization
 
@@ -2293,7 +2293,7 @@ Name | Type | Description  | Notes
 
 <a name="getCartVouchers"></a>
 # **getCartVouchers**
-> VoucherListWsDTOModel getCartVouchers(userId, cartId, opts)
+> VoucherListWsDTO getCartVouchers(userId, cartId, opts)
 
 getCartVouchers
 
@@ -2335,7 +2335,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VoucherListWsDTOModel**](VoucherListWsDTOModel.md)
+[**VoucherListWsDTO**](VoucherListWsDTO.md)
 
 ### Authorization
 
@@ -2456,7 +2456,7 @@ null (empty response body)
 
 <a name="getCustomergroups"></a>
 # **getCustomergroups**
-> UserGroupListWsDTOModel getCustomergroups(userId, opts)
+> UserGroupListWsDTO getCustomergroups(userId, opts)
 
 getCustomergroups
 
@@ -2495,7 +2495,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**UserGroupListWsDTOModel**](UserGroupListWsDTOModel.md)
+[**UserGroupListWsDTO**](UserGroupListWsDTO.md)
 
 ### Authorization
 
@@ -2562,7 +2562,7 @@ null (empty response body)
 
 <a name="getOrders"></a>
 # **getOrders**
-> OrderHistoryListWsDTOModel getOrders(userId, opts)
+> OrderHistoryListWsDTO getOrders(userId, opts)
 
 UsersOrdersByUserId
 
@@ -2609,7 +2609,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**OrderHistoryListWsDTOModel**](OrderHistoryListWsDTOModel.md)
+[**OrderHistoryListWsDTO**](OrderHistoryListWsDTO.md)
 
 ### Authorization
 
@@ -2622,7 +2622,7 @@ Name | Type | Description  | Notes
 
 <a name="postOrder"></a>
 # **postOrder**
-> OrderWsDTOModel postOrder(userId, cartId, opts)
+> OrderWsDTO postOrder(userId, cartId, opts)
 
 UsersOrdersByUserId
 
@@ -2666,7 +2666,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**OrderWsDTOModel**](OrderWsDTOModel.md)
+[**OrderWsDTO**](OrderWsDTO.md)
 
 ### Authorization
 
@@ -2679,7 +2679,7 @@ Name | Type | Description  | Notes
 
 <a name="getOrder"></a>
 # **getOrder**
-> OrderWsDTOModel getOrder(userId, code, opts)
+> OrderWsDTO getOrder(userId, code, opts)
 
 getOrder
 
@@ -2721,7 +2721,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**OrderWsDTOModel**](OrderWsDTOModel.md)
+[**OrderWsDTO**](OrderWsDTO.md)
 
 ### Authorization
 
@@ -2788,7 +2788,7 @@ null (empty response body)
 
 <a name="getPaymentdetail"></a>
 # **getPaymentdetail**
-> PaymentDetailsWsDTOModel getPaymentdetail(userId, paymentDetailsId, opts)
+> PaymentDetailsWsDTO getPaymentdetail(userId, paymentDetailsId, opts)
 
 getPaymentdetail
 
@@ -2830,7 +2830,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PaymentDetailsWsDTOModel**](PaymentDetailsWsDTOModel.md)
+[**PaymentDetailsWsDTO**](PaymentDetailsWsDTO.md)
 
 ### Authorization
 
@@ -2864,7 +2864,7 @@ let userId = "userId_example"; // String | User identifier or one of the literal
 
 let paymentDetailsId = "paymentDetailsId_example"; // String | - Payment details identifier
 
-let body = new Occ.PaymentDetailsWsDTO640Model(); // PaymentDetailsWsDTO640Model | 
+let body = new Occ.PaymentDetailsWsDTO640(); // PaymentDetailsWsDTO640 | 
 
 apiInstance.putPaymentdetail(userId, paymentDetailsId, body).then(() => {
   console.log('API called successfully.');
@@ -2880,7 +2880,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **userId** | **String**| User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt; | 
  **paymentDetailsId** | **String**| - Payment details identifier | 
- **body** | [**PaymentDetailsWsDTO640Model**](PaymentDetailsWsDTO640Model.md)|  | 
+ **body** | [**PaymentDetailsWsDTO640**](PaymentDetailsWsDTO640.md)|  | 
 
 ### Return type
 
@@ -2918,7 +2918,7 @@ let userId = "userId_example"; // String | User identifier or one of the literal
 
 let paymentDetailsId = "paymentDetailsId_example"; // String | - Payment details identifier
 
-let body = new Occ.PaymentDetailsWsDTO640Model(); // PaymentDetailsWsDTO640Model | 
+let body = new Occ.PaymentDetailsWsDTO640(); // PaymentDetailsWsDTO640 | 
 
 apiInstance.patchPaymentdetail(userId, paymentDetailsId, body).then(() => {
   console.log('API called successfully.');
@@ -2934,7 +2934,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **userId** | **String**| User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt; | 
  **paymentDetailsId** | **String**| - Payment details identifier | 
- **body** | [**PaymentDetailsWsDTO640Model**](PaymentDetailsWsDTO640Model.md)|  | 
+ **body** | [**PaymentDetailsWsDTO640**](PaymentDetailsWsDTO640.md)|  | 
 
 ### Return type
 
@@ -3002,7 +3002,7 @@ null (empty response body)
 
 <a name="getPaymentdetails"></a>
 # **getPaymentdetails**
-> PaymentDetailsListWsDTOModel getPaymentdetails(userId, opts)
+> PaymentDetailsListWsDTO getPaymentdetails(userId, opts)
 
 getPaymentdetail
 
@@ -3043,7 +3043,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PaymentDetailsListWsDTOModel**](PaymentDetailsListWsDTOModel.md)
+[**PaymentDetailsListWsDTO**](PaymentDetailsListWsDTO.md)
 
 ### Authorization
 

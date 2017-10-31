@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="getStores"></a>
 # **getStores**
-> StoreFinderSearchPageWsDTOModel getStores(opts)
+> StoreFinderSearchPageWsDTO getStores(opts)
 
 Stores
 
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**StoreFinderSearchPageWsDTOModel**](StoreFinderSearchPageWsDTOModel.md)
+[**StoreFinderSearchPageWsDTO**](StoreFinderSearchPageWsDTO.md)
 
 ### Authorization
 
@@ -75,7 +75,7 @@ Name | Type | Description  | Notes
 
 <a name="getStore"></a>
 # **getStore**
-> PointOfServiceWsDTOModel getStore(storeId, opts)
+> PointOfServiceWsDTO getStore(storeId, opts)
 
 getStore
 
@@ -114,7 +114,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PointOfServiceWsDTOModel**](PointOfServiceWsDTOModel.md)
+[**PointOfServiceWsDTO**](PointOfServiceWsDTO.md)
 
 ### Authorization
 

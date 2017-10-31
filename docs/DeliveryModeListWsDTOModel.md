@@ -1,8 +1,8 @@
-# Occ.DeliveryModeListWsDTOModel
+# Occ.DeliveryModeListWsDTO
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**deliveryModes** | [**[DeliveryModeWsDTOModel]**](DeliveryModeWsDTOModel.md) |  | [optional] 
+**deliveryModes** | [**[DeliveryModeWsDTO]**](DeliveryModeWsDTO.md) |  | [optional] 
 
 

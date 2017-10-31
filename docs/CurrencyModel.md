@@ -1,4 +1,4 @@
-# Occ.CurrencyModel
+# Occ.Currency
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Occ.PaginationWsDTOModel
+# Occ.PaginationWsDTO
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Occ.VoucherWsDTOModel
+# Occ.VoucherWsDTO
 
 ## Properties
 Name | Type | Description | Notes
@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **valueFormatted** | **String** |  | [optional] 
 **valueString** | **String** |  | [optional] 
 **freeShipping** | **Boolean** |  | [optional] 
-**currency** | [**CurrencyWsDTOModel**](CurrencyWsDTOModel.md) |  | [optional] 
-**appliedValue** | [**PriceWsDTOModel**](PriceWsDTOModel.md) |  | [optional] 
+**currency** | [**CurrencyWsDTO**](CurrencyWsDTO.md) |  | [optional] 
+**appliedValue** | [**PriceWsDTO**](PriceWsDTO.md) |  | [optional] 
 
 

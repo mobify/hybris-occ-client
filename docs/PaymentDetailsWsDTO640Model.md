@@ -1,4 +1,4 @@
-# Occ.PaymentDetailsWsDTO640Model
+# Occ.PaymentDetailsWsDTO640
 
 ## Properties
 Name | Type | Description | Notes
@@ -13,6 +13,6 @@ Name | Type | Description | Notes
 **issueNumber** | **String** |  | [optional] 
 **subscriptionId** | **String** |  | [optional] 
 **saved** | **Boolean** |  | [optional] 
-**billingAddress** | [**BillingAddressModel**](BillingAddressModel.md) |  | [optional] 
+**billingAddress** | [**BillingAddress**](BillingAddress.md) |  | [optional] 
 
 

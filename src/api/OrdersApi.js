@@ -12,7 +12,7 @@
  */
 
 import ApiClient from "../ApiClient";
-import OrderWsDTOModel from '../models/OrderWsDTOModel';
+import OrderWsDTO from '../models/OrderWsDTO';
 
 /**
 * Orders service.
@@ -38,7 +38,7 @@ export default class OrdersApi {
      * @param {String} code Order GUID (Globally Unique Identifier) or order CODE
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/OrderWsDTOModel} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/OrderWsDTO} and HTTP response
      */
     ordersByCodeWithHttpInfo(code, opts) {
       opts = opts || {};
@@ -63,7 +63,7 @@ export default class OrdersApi {
       let authNames = ['auth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = OrderWsDTOModel;
+      let returnType = OrderWsDTO;
 
       return this.apiClient.callApi(
         '/orders/{code}', 'GET',
@@ -78,7 +78,7 @@ export default class OrdersApi {
      * @param {String} code Order GUID (Globally Unique Identifier) or order CODE
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/OrderWsDTOModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/OrderWsDTO}
      */
     getOrder(code, opts) {
       return this.ordersByCodeWithHttpInfo(code, opts)

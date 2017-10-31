@@ -1,8 +1,8 @@
-# Occ.VoucherListWsDTOModel
+# Occ.VoucherListWsDTO
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**vouchers** | [**[VoucherWsDTOModel]**](VoucherWsDTOModel.md) |  | [optional] 
+**vouchers** | [**[VoucherWsDTO]**](VoucherWsDTO.md) |  | [optional] 
 
 

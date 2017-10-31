@@ -1,4 +1,4 @@
-# Occ.DeliveryModeWsDTOModel
+# Occ.DeliveryModeWsDTO
 
 ## Properties
 Name | Type | Description | Notes
@@ -6,6 +6,6 @@ Name | Type | Description | Notes
 **code** | **String** |  | [optional] 
 **name** | **String** |  | [optional] 
 **description** | **String** |  | [optional] 
-**deliveryCost** | [**PriceWsDTOModel**](PriceWsDTOModel.md) |  | [optional] 
+**deliveryCost** | [**PriceWsDTO**](PriceWsDTO.md) |  | [optional] 
 
 

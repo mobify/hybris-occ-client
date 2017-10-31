@@ -16,7 +16,7 @@ const testWrapper = (occ) => {
     occ.catalogName = 'Apparel Product Catalog'
     occ.catalogId = 'apparelProductCatalog'
     occ.catalogVersionId = 'Online'
-    occ.currencies = occ.CurrencyWsDTOModel.constructFromObject({
+    occ.currencies = occ.CurrencyWsDTO.constructFromObject({
         isocode: 'GBP',
         name: 'Pound',
         active: false,
@@ -47,7 +47,7 @@ const testWrapper = (occ) => {
             name: 'United States'
         }
     ]
-    occ.languages = occ.LanguageWsDTOModel.constructFromObject({
+    occ.languages = occ.LanguageWsDTO.constructFromObject({
         isocode: 'en',
         name: 'English',
         nativeName: 'English',
@@ -195,7 +195,7 @@ const testWrapper = (occ) => {
         code: 'mobify_promotion_test'
     }
 
-    occ.user = occ.UserSignUpWsDTOModel.constructFromObject({
+    occ.user = occ.UserSignUpWsDTO.constructFromObject({
         firstName: 'Mobify',
         lastName: 'Automation',
         titleCode: occ.titles[0].code,
@@ -203,7 +203,7 @@ const testWrapper = (occ) => {
         password: 'Passw0rd!',
     })
         
-    occ.address = occ.AddressWsDTO296Model.constructFromObject({
+    occ.address = occ.AddressWsDTO296.constructFromObject({
         firstName: 'Mobify',
         lastName: 'automation',
         titleCode: occ.titles[0].code,
@@ -219,7 +219,7 @@ const testWrapper = (occ) => {
         defaultAddress:true
     })
 
-    occ.payment = occ.PaymentDetailsWsDTOModel.constructFromObject({
+    occ.payment = occ.PaymentDetailsWsDTO.constructFromObject({
         id: '',
         billingAddress: occ.address,
         cardType: {code: 'visa', name: 'Visa'},

@@ -12,7 +12,7 @@
  */
 
 import ApiClient from "../ApiClient";
-import TitleListWsDTOModel from '../models/TitleListWsDTOModel';
+import TitleListWsDTO from '../models/TitleListWsDTO';
 
 /**
 * Titles service.
@@ -37,7 +37,7 @@ export default class TitlesApi {
      * Lists all localized titles. 
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/TitleListWsDTOModel} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/TitleListWsDTO} and HTTP response
      */
     titlesWithHttpInfo(opts) {
       opts = opts || {};
@@ -56,7 +56,7 @@ export default class TitlesApi {
       let authNames = ['auth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = TitleListWsDTOModel;
+      let returnType = TitleListWsDTO;
 
       return this.apiClient.callApi(
         '/titles', 'GET',
@@ -70,7 +70,7 @@ export default class TitlesApi {
      * Lists all localized getTitles. 
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/TitleListWsDTOModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/TitleListWsDTO}
      */
     getTitles(opts) {
       return this.titlesWithHttpInfo(opts)

@@ -1,4 +1,4 @@
-# Occ.DeliveryPointOfServiceModel
+# Occ.DeliveryPointOfService
 
 ## Properties
 Name | Type | Description | Notes

@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 <a name="getProduct"></a>
 # **getProduct**
-> ProductWsDTOModel getProduct(productCode, opts)
+> ProductWsDTO getProduct(productCode, opts)
 
 getProduct
 
@@ -56,7 +56,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProductWsDTOModel**](ProductWsDTOModel.md)
+[**ProductWsDTO**](ProductWsDTO.md)
 
 ### Authorization
 
@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 
 <a name="getProductExpressupdate"></a>
 # **getProductExpressupdate**
-> ProductExpressUpdateElementListWsDTOModel getProductExpressupdate(opts)
+> ProductExpressUpdateElementListWsDTO getProductExpressupdate(opts)
 
 getProductExpressupdate
 
@@ -109,7 +109,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProductExpressUpdateElementListWsDTOModel**](ProductExpressUpdateElementListWsDTOModel.md)
+[**ProductExpressUpdateElementListWsDTO**](ProductExpressUpdateElementListWsDTO.md)
 
 ### Authorization
 
@@ -122,7 +122,7 @@ Name | Type | Description  | Notes
 
 <a name="getProductReferences"></a>
 # **getProductReferences**
-> ProductReferenceListWsDTOModel getProductReferences(productCode, opts)
+> ProductReferenceListWsDTO getProductReferences(productCode, opts)
 
 getProductReferences
 
@@ -165,7 +165,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProductReferenceListWsDTOModel**](ProductReferenceListWsDTOModel.md)
+[**ProductReferenceListWsDTO**](ProductReferenceListWsDTO.md)
 
 ### Authorization
 
@@ -178,7 +178,7 @@ Name | Type | Description  | Notes
 
 <a name="getProductReviews"></a>
 # **getProductReviews**
-> ReviewListWsDTOModel getProductReviews(productCode)
+> ReviewListWsDTO getProductReviews(productCode)
 
 getProductReviews
 
@@ -213,7 +213,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ReviewListWsDTOModel**](ReviewListWsDTOModel.md)
+[**ReviewListWsDTO**](ReviewListWsDTO.md)
 
 ### Authorization
 
@@ -226,7 +226,7 @@ Name | Type | Description  | Notes
 
 <a name="postProductReview"></a>
 # **postProductReview**
-> ReviewWsDTO208Model postProductReview(productCode, body, opts)
+> ReviewWsDTO208 postProductReview(productCode, body, opts)
 
 getProductReviews
 
@@ -245,7 +245,7 @@ let apiInstance = new Occ.ProductsApi();
 
 let productCode = "productCode_example"; // String | Product identifier
 
-let body = new Occ.ReviewWsDTO208Model(); // ReviewWsDTO208Model | 
+let body = new Occ.ReviewWsDTO208(); // ReviewWsDTO208 | 
 
 let opts = { 
   'fields': "fields_example" // String | Response configuration (list of fields, which should be returned in response)
@@ -263,12 +263,12 @@ apiInstance.postProductReview(productCode, body, opts).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **productCode** | **String**| Product identifier | 
- **body** | [**ReviewWsDTO208Model**](ReviewWsDTO208Model.md)|  | 
+ **body** | [**ReviewWsDTO208**](ReviewWsDTO208.md)|  | 
  **fields** | **String**| Response configuration (list of fields, which should be returned in response) | [optional] 
 
 ### Return type
 
-[**ReviewWsDTO208Model**](ReviewWsDTO208Model.md)
+[**ReviewWsDTO208**](ReviewWsDTO208.md)
 
 ### Authorization
 
@@ -281,7 +281,7 @@ Name | Type | Description  | Notes
 
 <a name="getProductSearch"></a>
 # **getProductSearch**
-> ProductSearchPageWsDTOModel getProductSearch(opts)
+> ProductSearchPageWsDTO getProductSearch(opts)
 
 ProductsSearch
 
@@ -325,7 +325,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProductSearchPageWsDTOModel**](ProductSearchPageWsDTOModel.md)
+[**ProductSearchPageWsDTO**](ProductSearchPageWsDTO.md)
 
 ### Authorization
 
@@ -338,7 +338,7 @@ Name | Type | Description  | Notes
 
 <a name="getProductStock"></a>
 # **getProductStock**
-> StoreFinderStockSearchPageWsDTOModel getProductStock(productCode, opts)
+> StoreFinderStockSearchPageWsDTO getProductStock(productCode, opts)
 
 ProductsStockByProductCode
 
@@ -387,7 +387,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**StoreFinderStockSearchPageWsDTOModel**](StoreFinderStockSearchPageWsDTOModel.md)
+[**StoreFinderStockSearchPageWsDTO**](StoreFinderStockSearchPageWsDTO.md)
 
 ### Authorization
 
@@ -400,7 +400,7 @@ Name | Type | Description  | Notes
 
 <a name="getProductsStockByProductCodeAndStoreName"></a>
 # **getProductsStockByProductCodeAndStoreName**
-> StockWsDTOModel getProductsStockByProductCodeAndStoreName(productCode, storeName, opts)
+> StockWsDTO getProductsStockByProductCodeAndStoreName(productCode, storeName, opts)
 
 getProductsStockByProductCodeAndStoreName
 
@@ -442,7 +442,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**StockWsDTOModel**](StockWsDTOModel.md)
+[**StockWsDTO**](StockWsDTO.md)
 
 ### Authorization
 
@@ -455,7 +455,7 @@ Name | Type | Description  | Notes
 
 <a name="getProductSuggestions"></a>
 # **getProductSuggestions**
-> SuggestionListWsDTOModel getProductSuggestions(max, term, opts)
+> SuggestionListWsDTO getProductSuggestions(max, term, opts)
 
 getProductSuggestions
 
@@ -497,7 +497,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SuggestionListWsDTOModel**](SuggestionListWsDTOModel.md)
+[**SuggestionListWsDTO**](SuggestionListWsDTO.md)
 
 ### Authorization
 

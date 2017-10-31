@@ -1,8 +1,8 @@
-# Occ.SuggestionListWsDTOModel
+# Occ.SuggestionListWsDTO
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**suggestions** | [**[SuggestionWsDTOModel]**](SuggestionWsDTOModel.md) |  | [optional] 
+**suggestions** | [**[SuggestionWsDTO]**](SuggestionWsDTO.md) |  | [optional] 
 
 

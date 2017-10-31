@@ -12,7 +12,7 @@
  */
 
 import ApiClient from "../ApiClient";
-import CurrencyListWsDTOModel from '../models/CurrencyListWsDTOModel';
+import CurrencyListWsDTO from '../models/CurrencyListWsDTO';
 
 /**
 * Currencies service.
@@ -37,7 +37,7 @@ export default class CurrenciesApi {
      * Lists all available currencies (all usable currencies for the current store).If the list of currencies for stores is empty, a list of all currencies available in the system is returned. 
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/CurrencyListWsDTOModel} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/CurrencyListWsDTO} and HTTP response
      */
     currenciesWithHttpInfo(opts) {
       opts = opts || {};
@@ -56,7 +56,7 @@ export default class CurrenciesApi {
       let authNames = ['auth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = CurrencyListWsDTOModel;
+      let returnType = CurrencyListWsDTO;
 
       return this.apiClient.callApi(
         '/currencies', 'GET',
@@ -70,7 +70,7 @@ export default class CurrenciesApi {
      * Lists all available currencies (all usable currencies for the current store).If the list of currencies for stores is empty, a list of all currencies available in the system is returned. 
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/CurrencyListWsDTOModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/CurrencyListWsDTO}
      */
     getCurrencies(opts) {
       return this.currenciesWithHttpInfo(opts)

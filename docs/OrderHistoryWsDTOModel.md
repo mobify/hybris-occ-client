@@ -1,4 +1,4 @@
-# Occ.OrderHistoryWsDTOModel
+# Occ.OrderHistoryWsDTO
 
 ## Properties
 Name | Type | Description | Notes
@@ -8,6 +8,6 @@ Name | Type | Description | Notes
 **statusDisplay** | **String** |  | [optional] 
 **placed** | **String** |  | [optional] 
 **guid** | **String** |  | [optional] 
-**total** | [**PriceWsDTOModel**](PriceWsDTOModel.md) |  | [optional] 
+**total** | [**PriceWsDTO**](PriceWsDTO.md) |  | [optional] 
 
 

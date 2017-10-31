@@ -1,4 +1,4 @@
-# Occ.LanguageModel
+# Occ.Language
 
 ## Properties
 Name | Type | Description | Notes

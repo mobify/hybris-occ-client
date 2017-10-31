@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="languages"></a>
 # **languages**
-> LanguageListWsDTOModel languages(opts)
+> LanguageListWsDTO languages(opts)
 
 Languages
 
@@ -45,7 +45,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LanguageListWsDTOModel**](LanguageListWsDTOModel.md)
+[**LanguageListWsDTO**](LanguageListWsDTO.md)
 
 ### Authorization
 

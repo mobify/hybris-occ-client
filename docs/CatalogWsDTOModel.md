@@ -1,9 +1,9 @@
-# Occ.CatalogWsDTOModel
+# Occ.CatalogWsDTO
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**catalogVersions** | [**[CatalogVersionWsDTOModel]**](CatalogVersionWsDTOModel.md) |  | [optional] 
+**catalogVersions** | [**[CatalogVersionWsDTO]**](CatalogVersionWsDTO.md) |  | [optional] 
 **id** | **String** |  | [optional] 
 **lastModified** | **String** |  | [optional] 
 **name** | **String** |  | [optional] 

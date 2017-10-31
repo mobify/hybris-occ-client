@@ -1,4 +1,4 @@
-# Occ.SpecialOpeningDayWsDTOModel
+# Occ.SpecialOpeningDayWsDTO
 
 ## Properties
 Name | Type | Description | Notes
@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **closed** | **Boolean** |  | [optional] 
 **name** | **String** |  | [optional] 
 **comment** | **String** |  | [optional] 
-**openingTime** | [**TimeWsDTOModel**](TimeWsDTOModel.md) |  | [optional] 
-**closingTime** | [**TimeWsDTOModel**](TimeWsDTOModel.md) |  | [optional] 
+**openingTime** | [**TimeWsDTO**](TimeWsDTO.md) |  | [optional] 
+**closingTime** | [**TimeWsDTO**](TimeWsDTO.md) |  | [optional] 
 
 

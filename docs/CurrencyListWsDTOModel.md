@@ -1,8 +1,8 @@
-# Occ.CurrencyListWsDTOModel
+# Occ.CurrencyListWsDTO
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**currencies** | [**[CurrencyWsDTOModel]**](CurrencyWsDTOModel.md) |  | [optional] 
+**currencies** | [**[CurrencyWsDTO]**](CurrencyWsDTO.md) |  | [optional] 
 
 

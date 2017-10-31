@@ -1,11 +1,11 @@
-# Occ.StoreFinderSearchPageWsDTOModel
+# Occ.StoreFinderSearchPageWsDTO
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**stores** | [**[PointOfServiceWsDTOModel]**](PointOfServiceWsDTOModel.md) |  | [optional] 
-**sorts** | [**[SortWsDTOModel]**](SortWsDTOModel.md) |  | [optional] 
-**pagination** | [**PaginationWsDTOModel**](PaginationWsDTOModel.md) |  | [optional] 
+**stores** | [**[PointOfServiceWsDTO]**](PointOfServiceWsDTO.md) |  | [optional] 
+**sorts** | [**[SortWsDTO]**](SortWsDTO.md) |  | [optional] 
+**pagination** | [**PaginationWsDTO**](PaginationWsDTO.md) |  | [optional] 
 **locationText** | **String** |  | [optional] 
 **sourceLatitude** | **Number** |  | [optional] 
 **sourceLongitude** | **Number** |  | [optional] 

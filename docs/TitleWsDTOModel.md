@@ -1,4 +1,4 @@
-# Occ.TitleWsDTOModel
+# Occ.TitleWsDTO
 
 ## Properties
 Name | Type | Description | Notes

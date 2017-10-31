@@ -12,7 +12,7 @@
  */
 
 import ApiClient from "../ApiClient";
-import ProductListWsDTOModel from '../models/ProductListWsDTOModel';
+import ProductListWsDTO from '../models/ProductListWsDTO';
 
 /**
 * Export service.
@@ -42,7 +42,7 @@ export default class ExportApi {
      * @param {String} opts.currentPage The current result page requested.
      * @param {String} opts.version Catalog version. Must be provided along with catalog.
      * @param {String} opts.timestamp When this parameter is set, only products modified after given time will be returned.This parameter should be in RFC-8601 format.
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/ProductListWsDTOModel} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/ProductListWsDTO} and HTTP response
      */
     exportProductsWithHttpInfo(opts) {
       opts = opts || {};
@@ -66,7 +66,7 @@ export default class ExportApi {
       let authNames = ['auth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = ProductListWsDTOModel;
+      let returnType = ProductListWsDTO;
 
       return this.apiClient.callApi(
         '/export/products', 'GET',
@@ -85,7 +85,7 @@ export default class ExportApi {
      * @param {String} opts.currentPage The current result page requested.
      * @param {String} opts.version Catalog version. Must be provided along with catalog.
      * @param {String} opts.timestamp When this parameter is set, only products modified after given time will be returned.This parameter should be in RFC-8601 format.
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/ProductListWsDTOModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/ProductListWsDTO}
      */
     exportProducts(opts) {
       return this.exportProductsWithHttpInfo(opts)

@@ -1,4 +1,4 @@
-# Occ.CountryWsDTOModel
+# Occ.CountryWsDTO
 
 ## Properties
 Name | Type | Description | Notes

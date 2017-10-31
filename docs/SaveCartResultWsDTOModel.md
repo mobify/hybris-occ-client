@@ -1,8 +1,8 @@
-# Occ.SaveCartResultWsDTOModel
+# Occ.SaveCartResultWsDTO
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**savedCartData** | [**CartWsDTOModel**](CartWsDTOModel.md) |  | [optional] 
+**savedCartData** | [**CartWsDTO**](CartWsDTO.md) |  | [optional] 
 
 

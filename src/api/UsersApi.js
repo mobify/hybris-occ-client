@@ -12,28 +12,28 @@
  */
 
 import ApiClient from "../ApiClient";
-import AddressListWsDTOModel from '../models/AddressListWsDTOModel';
-import AddressWsDTO296Model from '../models/AddressWsDTO296Model';
-import AddressWsDTOModel from '../models/AddressWsDTOModel';
-import CartListWsDTOModel from '../models/CartListWsDTOModel';
-import CartWsDTOModel from '../models/CartWsDTOModel';
-import DeliveryModeListWsDTOModel from '../models/DeliveryModeListWsDTOModel';
-import DeliveryModeWsDTOModel from '../models/DeliveryModeWsDTOModel';
-import OrderEntryListWsDTOModel from '../models/OrderEntryListWsDTOModel';
-import OrderEntryWsDTO542Model from '../models/OrderEntryWsDTO542Model';
-import OrderEntryWsDTOModel from '../models/OrderEntryWsDTOModel';
-import OrderHistoryListWsDTOModel from '../models/OrderHistoryListWsDTOModel';
-import OrderWsDTOModel from '../models/OrderWsDTOModel';
-import PaymentDetailsListWsDTOModel from '../models/PaymentDetailsListWsDTOModel';
-import PaymentDetailsWsDTO640Model from '../models/PaymentDetailsWsDTO640Model';
-import PaymentDetailsWsDTOModel from '../models/PaymentDetailsWsDTOModel';
-import PromotionResultListWsDTOModel from '../models/PromotionResultListWsDTOModel';
-import SaveCartResultWsDTOModel from '../models/SaveCartResultWsDTOModel';
-import UserGroupListWsDTOModel from '../models/UserGroupListWsDTOModel';
-import UserSignUpWsDTOModel from '../models/UserSignUpWsDTOModel';
-import UserWsDTO286Model from '../models/UserWsDTO286Model';
-import UserWsDTOModel from '../models/UserWsDTOModel';
-import VoucherListWsDTOModel from '../models/VoucherListWsDTOModel';
+import AddressListWsDTO from '../models/AddressListWsDTO';
+import AddressWsDTO296 from '../models/AddressWsDTO296';
+import AddressWsDTO from '../models/AddressWsDTO';
+import CartListWsDTO from '../models/CartListWsDTO';
+import CartWsDTO from '../models/CartWsDTO';
+import DeliveryModeListWsDTO from '../models/DeliveryModeListWsDTO';
+import DeliveryModeWsDTO from '../models/DeliveryModeWsDTO';
+import OrderEntryListWsDTO from '../models/OrderEntryListWsDTO';
+import OrderEntryWsDTO542 from '../models/OrderEntryWsDTO542';
+import OrderEntryWsDTO from '../models/OrderEntryWsDTO';
+import OrderHistoryListWsDTO from '../models/OrderHistoryListWsDTO';
+import OrderWsDTO from '../models/OrderWsDTO';
+import PaymentDetailsListWsDTO from '../models/PaymentDetailsListWsDTO';
+import PaymentDetailsWsDTO640 from '../models/PaymentDetailsWsDTO640';
+import PaymentDetailsWsDTO from '../models/PaymentDetailsWsDTO';
+import PromotionResultListWsDTO from '../models/PromotionResultListWsDTO';
+import SaveCartResultWsDTO from '../models/SaveCartResultWsDTO';
+import UserGroupListWsDTO from '../models/UserGroupListWsDTO';
+import UserSignUpWsDTO from '../models/UserSignUpWsDTO';
+import UserWsDTO286 from '../models/UserWsDTO286';
+import UserWsDTO from '../models/UserWsDTO';
+import VoucherListWsDTO from '../models/VoucherListWsDTO';
 
 /**
 * Users service.
@@ -56,7 +56,7 @@ export default class UsersApi {
     /**
      * postUsers
      * Registers a customer. The following two sets of parameters are available: &lt;ul&gt; &lt;li&gt;First set is used to register a customer. In this case the required parameters are: login, password, firstName, lastName, titleCode.&lt;/li&gt; &lt;li&gt;Second set is used to convert a guest to a customer. In this case the required parameters are: guid, password. &lt;/li&gt; &lt;ul&gt;  Security: Permitted only for customer managers, clients or trusted clients. 
-     * @param {module:models/UserSignUpWsDTOModel} body 
+     * @param {module:models/UserSignUpWsDTO} body 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
     usersWithHttpInfo(body) {
@@ -91,7 +91,7 @@ export default class UsersApi {
     /**
      * postUsers
      * Registers a customer. The following two sets of parameters are available: &lt;ul&gt; &lt;li&gt;First set is used to register a customer. In this case the required parameters are: login, password, firstName, lastName, titleCode.&lt;/li&gt; &lt;li&gt;Second set is used to convert a guest to a customer. In this case the required parameters are: guid, password. &lt;/li&gt; &lt;ul&gt;  Security: Permitted only for customer managers, clients or trusted clients. 
-     * @param {module:models/UserSignUpWsDTOModel} body 
+     * @param {module:models/UserSignUpWsDTO} body 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     postUsers(body) {
@@ -107,7 +107,7 @@ export default class UsersApi {
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in the response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/AddressListWsDTOModel} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/AddressListWsDTO} and HTTP response
      */
     usersAddressesByUserIdWithHttpInfo(userId, opts) {
       opts = opts || {};
@@ -132,7 +132,7 @@ export default class UsersApi {
       let authNames = ['auth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = AddressListWsDTOModel;
+      let returnType = AddressListWsDTO;
 
       return this.apiClient.callApi(
         '/users/{userId}/addresses', 'GET',
@@ -147,7 +147,7 @@ export default class UsersApi {
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in the response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/AddressListWsDTOModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/AddressListWsDTO}
      */
     getUserAddresses(userId, opts) {
       return this.usersAddressesByUserIdWithHttpInfo(userId, opts)
@@ -160,10 +160,10 @@ export default class UsersApi {
      * UsersAddressesByUserId
      * Creates a new address.  Security: Permitted for customers, guests, customer managers or trusted client. Trusted client or customer manager is able to impersonate as any other user and access data on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
-     * @param {module:models/AddressWsDTO296Model} body 
+     * @param {module:models/AddressWsDTO296} body 
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in the response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/AddressWsDTO296Model} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/AddressWsDTO296} and HTTP response
      */
     usersAddressesByUserId1WithHttpInfo(userId, body, opts) {
       opts = opts || {};
@@ -193,7 +193,7 @@ export default class UsersApi {
       let authNames = ['auth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = AddressWsDTO296Model;
+      let returnType = AddressWsDTO296;
 
       return this.apiClient.callApi(
         '/users/{userId}/addresses', 'POST',
@@ -206,10 +206,10 @@ export default class UsersApi {
      * UsersAddressesByUserId
      * Creates a new address.  Security: Permitted for customers, guests, customer managers or trusted client. Trusted client or customer manager is able to impersonate as any other user and access data on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
-     * @param {module:models/AddressWsDTO296Model} body 
+     * @param {module:models/AddressWsDTO296} body 
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in the response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/AddressWsDTO296Model}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/AddressWsDTO296}
      */
     postUserAddress(userId, body, opts) {
       return this.usersAddressesByUserId1WithHttpInfo(userId, body, opts)
@@ -225,7 +225,7 @@ export default class UsersApi {
      * @param {String} addressId Address identifier
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in the response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/AddressWsDTOModel} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/AddressWsDTO} and HTTP response
      */
     usersAddressesByUserIdAndAddressIdWithHttpInfo(userId, addressId, opts) {
       opts = opts || {};
@@ -256,7 +256,7 @@ export default class UsersApi {
       let authNames = ['auth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = AddressWsDTOModel;
+      let returnType = AddressWsDTO;
 
       return this.apiClient.callApi(
         '/users/{userId}/addresses/{addressId}', 'GET',
@@ -272,7 +272,7 @@ export default class UsersApi {
      * @param {String} addressId Address identifier
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in the response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/AddressWsDTOModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/AddressWsDTO}
      */
     getUserAddress(userId, addressId, opts) {
       return this.usersAddressesByUserIdAndAddressIdWithHttpInfo(userId, addressId, opts)
@@ -286,7 +286,7 @@ export default class UsersApi {
      * Updates the address. Attributes not provided in the request will be defined again (set to null or default).  Security: Permitted for customers, guests, customer managers or trusted client. Trusted client or customer manager is able to impersonate as any other user and access data on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} addressId Address identifier
-     * @param {module:models/AddressWsDTO296Model} body 
+     * @param {module:models/AddressWsDTO296} body 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
     usersAddressesByUserIdAndAddressId1WithHttpInfo(userId, addressId, body) {
@@ -335,7 +335,7 @@ export default class UsersApi {
      * Updates the address. Attributes not provided in the request will be defined again (set to null or default).  Security: Permitted for customers, guests, customer managers or trusted client. Trusted client or customer manager is able to impersonate as any other user and access data on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} addressId Address identifier
-     * @param {module:models/AddressWsDTO296Model} body 
+     * @param {module:models/AddressWsDTO296} body 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     putUserAddress(userId, addressId, body) {
@@ -350,7 +350,7 @@ export default class UsersApi {
      * Updates the address. Only attributes provided in the request body will be changed.  Security: Permitted for customers, guests, customer managers or trusted client. Trusted client or customer manager is able to impersonate as any other user and access data on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} addressId Address identifier
-     * @param {module:models/AddressWsDTO296Model} body 
+     * @param {module:models/AddressWsDTO296} body 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
     usersAddressesByUserIdAndAddressId2WithHttpInfo(userId, addressId, body) {
@@ -399,7 +399,7 @@ export default class UsersApi {
      * Updates the address. Only attributes provided in the request body will be changed.  Security: Permitted for customers, guests, customer managers or trusted client. Trusted client or customer manager is able to impersonate as any other user and access data on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} addressId Address identifier
-     * @param {module:models/AddressWsDTO296Model} body 
+     * @param {module:models/AddressWsDTO296} body 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     patchUserAddress(userId, addressId, body) {
@@ -470,10 +470,10 @@ export default class UsersApi {
      * postUserAddressesVerification
      * Verifies address  Security: Permitted for customers, guests, customer managers or trusted client. Trusted client or customer manager is able to impersonate as any other user and access data on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
-     * @param {module:models/AddressWsDTO296Model} body 
+     * @param {module:models/AddressWsDTO296} body 
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in the response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/AddressWsDTO296Model} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/AddressWsDTO296} and HTTP response
      */
     usersAddressesVerificationByUserIdWithHttpInfo(userId, body, opts) {
       opts = opts || {};
@@ -503,7 +503,7 @@ export default class UsersApi {
       let authNames = ['auth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = AddressWsDTO296Model;
+      let returnType = AddressWsDTO296;
 
       return this.apiClient.callApi(
         '/users/{userId}/addresses/verification', 'POST',
@@ -516,10 +516,10 @@ export default class UsersApi {
      * postUserAddressesVerification
      * Verifies address  Security: Permitted for customers, guests, customer managers or trusted client. Trusted client or customer manager is able to impersonate as any other user and access data on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
-     * @param {module:models/AddressWsDTO296Model} body 
+     * @param {module:models/AddressWsDTO296} body 
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in the response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/AddressWsDTO296Model}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/AddressWsDTO296}
      */
     postUserAddressesVerification(userId, body, opts) {
       return this.usersAddressesVerificationByUserIdWithHttpInfo(userId, body, opts)
@@ -534,7 +534,7 @@ export default class UsersApi {
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in the response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/UserWsDTOModel} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/UserWsDTO} and HTTP response
      */
     usersByUserIdWithHttpInfo(userId, opts) {
       opts = opts || {};
@@ -559,7 +559,7 @@ export default class UsersApi {
       let authNames = ['auth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = UserWsDTOModel;
+      let returnType = UserWsDTO;
 
       return this.apiClient.callApi(
         '/users/{userId}', 'GET',
@@ -574,7 +574,7 @@ export default class UsersApi {
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in the response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/UserWsDTOModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/UserWsDTO}
      */
     getUser(userId, opts) {
       return this.usersByUserIdWithHttpInfo(userId, opts)
@@ -587,7 +587,7 @@ export default class UsersApi {
      * getUser
      * Updates customer profile. Attributes not provided in the request body will be defined again (set to null or default).  Security: Permitted for trusted clients, customers and customer managers. Trusted client or customer manager is able to impersonate as any other user and change profile on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
-     * @param {module:models/UserWsDTO286Model} body 
+     * @param {module:models/UserWsDTO286} body 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
     usersByUserId1WithHttpInfo(userId, body) {
@@ -629,7 +629,7 @@ export default class UsersApi {
      * getUser
      * Updates customer profile. Attributes not provided in the request body will be defined again (set to null or default).  Security: Permitted for trusted clients, customers and customer managers. Trusted client or customer manager is able to impersonate as any other user and change profile on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
-     * @param {module:models/UserWsDTO286Model} body 
+     * @param {module:models/UserWsDTO286} body 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     putUser(userId, body) {
@@ -643,7 +643,7 @@ export default class UsersApi {
      * getUser
      * Updates customer profile. Only attributes provided in the request body will be changed.  Security: Permitted for trusted clients, customers and customer managers. Trusted client or customer manager is able to impersonate as any other user and change profile on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
-     * @param {module:models/UserWsDTO286Model} body 
+     * @param {module:models/UserWsDTO286} body 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
     usersByUserId2WithHttpInfo(userId, body) {
@@ -685,7 +685,7 @@ export default class UsersApi {
      * getUser
      * Updates customer profile. Only attributes provided in the request body will be changed.  Security: Permitted for trusted clients, customers and customer managers. Trusted client or customer manager is able to impersonate as any other user and change profile on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
-     * @param {module:models/UserWsDTO286Model} body 
+     * @param {module:models/UserWsDTO286} body 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     patchUser(userId, body) {
@@ -749,10 +749,10 @@ export default class UsersApi {
      * Creates an address and assigns it to the cart as the delivery address.  Security: Anonymous user may access cart by its guid. Customer may access only own cart by its id. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
-     * @param {module:models/AddressWsDTO296Model} body 
+     * @param {module:models/AddressWsDTO296} body 
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/AddressWsDTO296Model} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/AddressWsDTO296} and HTTP response
      */
     usersCartsAddressesDeliveryByUserIdWithHttpInfo(userId, cartId, body, opts) {
       opts = opts || {};
@@ -788,7 +788,7 @@ export default class UsersApi {
       let authNames = ['auth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = AddressWsDTO296Model;
+      let returnType = AddressWsDTO296;
 
       return this.apiClient.callApi(
         '/users/{userId}/carts/{cartId}/addresses/delivery', 'POST',
@@ -802,10 +802,10 @@ export default class UsersApi {
      * Creates an address and assigns it to the cart as the delivery address.  Security: Anonymous user may access cart by its guid. Customer may access only own cart by its id. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
-     * @param {module:models/AddressWsDTO296Model} body 
+     * @param {module:models/AddressWsDTO296} body 
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/AddressWsDTO296Model}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/AddressWsDTO296}
      */
     postCartDeliveryAddress(userId, cartId, body, opts) {
       return this.usersCartsAddressesDeliveryByUserIdWithHttpInfo(userId, cartId, body, opts)
@@ -942,7 +942,7 @@ export default class UsersApi {
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response).
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/CartListWsDTOModel} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/CartListWsDTO} and HTTP response
      */
     usersCartsByUserIdWithHttpInfo(userId, opts) {
       opts = opts || {};
@@ -967,7 +967,7 @@ export default class UsersApi {
       let authNames = ['auth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = CartListWsDTOModel;
+      let returnType = CartListWsDTO;
 
       return this.apiClient.callApi(
         '/users/{userId}/carts', 'GET',
@@ -982,7 +982,7 @@ export default class UsersApi {
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response).
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/CartListWsDTOModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/CartListWsDTO}
      */
     getCarts(userId, opts) {
       return this.usersCartsByUserIdWithHttpInfo(userId, opts)
@@ -999,7 +999,7 @@ export default class UsersApi {
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
      * @param {String} opts.toMergeCartGuid User&#39;s cart GUID to merge anonymous cart to
      * @param {String} opts.oldCartId Anonymous cart GUID
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/CartWsDTOModel} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/CartWsDTO} and HTTP response
      */
     usersCartsByUserId1WithHttpInfo(userId, opts) {
       opts = opts || {};
@@ -1026,7 +1026,7 @@ export default class UsersApi {
       let authNames = ['auth'];
       let contentTypes = ['application/x-www-form-urlencoded'];
       let accepts = ['application/json'];
-      let returnType = CartWsDTOModel;
+      let returnType = CartWsDTO;
 
       return this.apiClient.callApi(
         '/users/{userId}/carts', 'POST',
@@ -1043,7 +1043,7 @@ export default class UsersApi {
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
      * @param {String} opts.toMergeCartGuid User&#39;s cart GUID to merge anonymous cart to
      * @param {String} opts.oldCartId Anonymous cart GUID
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/CartWsDTOModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/CartWsDTO}
      */
     postCart(userId, opts) {
       return this.usersCartsByUserId1WithHttpInfo(userId, opts)
@@ -1059,7 +1059,7 @@ export default class UsersApi {
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/CartWsDTOModel} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/CartWsDTO} and HTTP response
      */
     usersCartsByUserIdAndCartIdWithHttpInfo(userId, cartId, opts) {
       opts = opts || {};
@@ -1090,7 +1090,7 @@ export default class UsersApi {
       let authNames = ['auth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = CartWsDTOModel;
+      let returnType = CartWsDTO;
 
       return this.apiClient.callApi(
         '/users/{userId}/carts/{cartId}', 'GET',
@@ -1106,7 +1106,7 @@ export default class UsersApi {
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/CartWsDTOModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/CartWsDTO}
      */
     getCart(userId, cartId, opts) {
       return this.usersCartsByUserIdAndCartIdWithHttpInfo(userId, cartId, opts)
@@ -1181,7 +1181,7 @@ export default class UsersApi {
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
      * @param {String} opts.name the name that should be applied to the cloned cart
      * @param {String} opts.description the description that should be applied to the cloned cart
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/SaveCartResultWsDTOModel} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/SaveCartResultWsDTO} and HTTP response
      */
     usersCartsClonesavedcartByUserIdWithHttpInfo(userId, cartId, opts) {
       opts = opts || {};
@@ -1214,7 +1214,7 @@ export default class UsersApi {
       let authNames = ['auth'];
       let contentTypes = ['application/x-www-form-urlencoded'];
       let accepts = ['application/json'];
-      let returnType = SaveCartResultWsDTOModel;
+      let returnType = SaveCartResultWsDTO;
 
       return this.apiClient.callApi(
         '/users/{userId}/carts/{cartId}/clonesavedcart', 'POST',
@@ -1232,7 +1232,7 @@ export default class UsersApi {
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
      * @param {String} opts.name the name that should be applied to the cloned cart
      * @param {String} opts.description the description that should be applied to the cloned cart
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/SaveCartResultWsDTOModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/SaveCartResultWsDTO}
      */
     postCartClonesavedcart(userId, cartId, opts) {
       return this.usersCartsClonesavedcartByUserIdWithHttpInfo(userId, cartId, opts)
@@ -1248,7 +1248,7 @@ export default class UsersApi {
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/DeliveryModeWsDTOModel} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/DeliveryModeWsDTO} and HTTP response
      */
     usersCartsDeliverymodeByUserIdAndCartIdWithHttpInfo(userId, cartId, opts) {
       opts = opts || {};
@@ -1279,7 +1279,7 @@ export default class UsersApi {
       let authNames = ['auth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = DeliveryModeWsDTOModel;
+      let returnType = DeliveryModeWsDTO;
 
       return this.apiClient.callApi(
         '/users/{userId}/carts/{cartId}/deliverymode', 'GET',
@@ -1295,7 +1295,7 @@ export default class UsersApi {
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/DeliveryModeWsDTOModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/DeliveryModeWsDTO}
      */
     getCartDeliverymode(userId, cartId, opts) {
       return this.usersCartsDeliverymodeByUserIdAndCartIdWithHttpInfo(userId, cartId, opts)
@@ -1433,7 +1433,7 @@ export default class UsersApi {
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/DeliveryModeListWsDTOModel} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/DeliveryModeListWsDTO} and HTTP response
      */
     usersCartsDeliverymodesByUserIdAndCartIdWithHttpInfo(userId, cartId, opts) {
       opts = opts || {};
@@ -1464,7 +1464,7 @@ export default class UsersApi {
       let authNames = ['auth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = DeliveryModeListWsDTOModel;
+      let returnType = DeliveryModeListWsDTO;
 
       return this.apiClient.callApi(
         '/users/{userId}/carts/{cartId}/deliverymodes', 'GET',
@@ -1480,7 +1480,7 @@ export default class UsersApi {
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/DeliveryModeListWsDTOModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/DeliveryModeListWsDTO}
      */
     getCartDeliverymodes(userId, cartId, opts) {
       return this.usersCartsDeliverymodesByUserIdAndCartIdWithHttpInfo(userId, cartId, opts)
@@ -1559,7 +1559,7 @@ export default class UsersApi {
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/OrderEntryListWsDTOModel} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/OrderEntryListWsDTO} and HTTP response
      */
     usersCartsEntriesByUserIdAndCartIdWithHttpInfo(userId, cartId, opts) {
       opts = opts || {};
@@ -1590,7 +1590,7 @@ export default class UsersApi {
       let authNames = ['auth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = OrderEntryListWsDTOModel;
+      let returnType = OrderEntryListWsDTO;
 
       return this.apiClient.callApi(
         '/users/{userId}/carts/{cartId}/entries', 'GET',
@@ -1606,7 +1606,7 @@ export default class UsersApi {
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/OrderEntryListWsDTOModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/OrderEntryListWsDTO}
      */
     getCartEntries(userId, cartId, opts) {
       return this.usersCartsEntriesByUserIdAndCartIdWithHttpInfo(userId, cartId, opts)
@@ -1620,10 +1620,10 @@ export default class UsersApi {
      * Adds a product to the cart.  Security: Anonymous user may access cart by its guid. Customer may access only own cart by its id. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
-     * @param {module:models/OrderEntryWsDTO542Model} body 
+     * @param {module:models/OrderEntryWsDTO542} body 
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/OrderEntryWsDTO542Model} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/OrderEntryWsDTO542} and HTTP response
      */
     usersCartsEntriesByUserIdAndCartId1WithHttpInfo(userId, cartId, body, opts) {
       opts = opts || {};
@@ -1659,7 +1659,7 @@ export default class UsersApi {
       let authNames = ['auth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = OrderEntryWsDTO542Model;
+      let returnType = OrderEntryWsDTO542;
 
       return this.apiClient.callApi(
         '/users/{userId}/carts/{cartId}/entries', 'POST',
@@ -1673,10 +1673,10 @@ export default class UsersApi {
      * Adds a product to the cart.  Security: Anonymous user may access cart by its guid. Customer may access only own cart by its id. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
-     * @param {module:models/OrderEntryWsDTO542Model} body 
+     * @param {module:models/OrderEntryWsDTO542} body 
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/OrderEntryWsDTO542Model}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/OrderEntryWsDTO542}
      */
     postCartEntries(userId, cartId, body, opts) {
       return this.usersCartsEntriesByUserIdAndCartId1WithHttpInfo(userId, cartId, body, opts)
@@ -1693,7 +1693,7 @@ export default class UsersApi {
      * @param {String} entryNumber Entry number. Zero-based numbering.
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/OrderEntryWsDTOModel} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/OrderEntryWsDTO} and HTTP response
      */
     usersCartsEntriesEntryNumberByUserIdWithHttpInfo(userId, cartId, entryNumber, opts) {
       opts = opts || {};
@@ -1730,7 +1730,7 @@ export default class UsersApi {
       let authNames = ['auth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = OrderEntryWsDTOModel;
+      let returnType = OrderEntryWsDTO;
 
       return this.apiClient.callApi(
         '/users/{userId}/carts/{cartId}/entries/{entryNumber}', 'GET',
@@ -1747,7 +1747,7 @@ export default class UsersApi {
      * @param {String} entryNumber Entry number. Zero-based numbering.
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/OrderEntryWsDTOModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/OrderEntryWsDTO}
      */
     getCartEntry(userId, cartId, entryNumber, opts) {
       return this.usersCartsEntriesEntryNumberByUserIdWithHttpInfo(userId, cartId, entryNumber, opts)
@@ -1762,10 +1762,10 @@ export default class UsersApi {
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
      * @param {String} entryNumber Entry number. Zero-based numbering.
-     * @param {module:models/OrderEntryWsDTO542Model} body 
+     * @param {module:models/OrderEntryWsDTO542} body 
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/OrderEntryWsDTO542Model} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/OrderEntryWsDTO542} and HTTP response
      */
     usersCartsEntriesEntryNumberByUserId1WithHttpInfo(userId, cartId, entryNumber, body, opts) {
       opts = opts || {};
@@ -1807,7 +1807,7 @@ export default class UsersApi {
       let authNames = ['auth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = OrderEntryWsDTO542Model;
+      let returnType = OrderEntryWsDTO542;
 
       return this.apiClient.callApi(
         '/users/{userId}/carts/{cartId}/entries/{entryNumber}', 'PUT',
@@ -1822,10 +1822,10 @@ export default class UsersApi {
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
      * @param {String} entryNumber Entry number. Zero-based numbering.
-     * @param {module:models/OrderEntryWsDTO542Model} body 
+     * @param {module:models/OrderEntryWsDTO542} body 
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/OrderEntryWsDTO542Model}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/OrderEntryWsDTO542}
      */
     putCartEntry(userId, cartId, entryNumber, body, opts) {
       return this.usersCartsEntriesEntryNumberByUserId1WithHttpInfo(userId, cartId, entryNumber, body, opts)
@@ -1840,10 +1840,10 @@ export default class UsersApi {
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
      * @param {String} entryNumber Entry number. Zero-based numbering.
-     * @param {module:models/OrderEntryWsDTO542Model} body 
+     * @param {module:models/OrderEntryWsDTO542} body 
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/OrderEntryWsDTO542Model} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/OrderEntryWsDTO542} and HTTP response
      */
     usersCartsEntriesEntryNumberByUserId2WithHttpInfo(userId, cartId, entryNumber, body, opts) {
       opts = opts || {};
@@ -1885,7 +1885,7 @@ export default class UsersApi {
       let authNames = ['auth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = OrderEntryWsDTO542Model;
+      let returnType = OrderEntryWsDTO542;
 
       return this.apiClient.callApi(
         '/users/{userId}/carts/{cartId}/entries/{entryNumber}', 'PATCH',
@@ -1900,10 +1900,10 @@ export default class UsersApi {
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
      * @param {String} entryNumber Entry number. Zero-based numbering.
-     * @param {module:models/OrderEntryWsDTO542Model} body 
+     * @param {module:models/OrderEntryWsDTO542} body 
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/OrderEntryWsDTO542Model}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/OrderEntryWsDTO542}
      */
     patchCartEntry(userId, cartId, entryNumber, body, opts) {
       return this.usersCartsEntriesEntryNumberByUserId2WithHttpInfo(userId, cartId, entryNumber, body, opts)
@@ -1984,7 +1984,7 @@ export default class UsersApi {
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/SaveCartResultWsDTOModel} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/SaveCartResultWsDTO} and HTTP response
      */
     usersCartsFlagForDeletionByUserIdWithHttpInfo(userId, cartId, opts) {
       opts = opts || {};
@@ -2015,7 +2015,7 @@ export default class UsersApi {
       let authNames = ['auth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = SaveCartResultWsDTOModel;
+      let returnType = SaveCartResultWsDTO;
 
       return this.apiClient.callApi(
         '/users/{userId}/carts/{cartId}/flagForDeletion', 'PATCH',
@@ -2031,7 +2031,7 @@ export default class UsersApi {
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/SaveCartResultWsDTOModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/SaveCartResultWsDTO}
      */
     patchCartFlagForDeletion(userId, cartId, opts) {
       return this.usersCartsFlagForDeletionByUserIdWithHttpInfo(userId, cartId, opts)
@@ -2045,10 +2045,10 @@ export default class UsersApi {
      * Defines details of a new credit card payment details and assigns the payment to the cart.  Security: Permitted only for customers, guests, customer managers or trusted clients. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
-     * @param {module:models/PaymentDetailsWsDTO640Model} body 
+     * @param {module:models/PaymentDetailsWsDTO640} body 
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/PaymentDetailsWsDTO640Model} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/PaymentDetailsWsDTO640} and HTTP response
      */
     usersCartsPaymentdetailsByUserIdWithHttpInfo(userId, cartId, body, opts) {
       opts = opts || {};
@@ -2084,7 +2084,7 @@ export default class UsersApi {
       let authNames = ['auth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = PaymentDetailsWsDTO640Model;
+      let returnType = PaymentDetailsWsDTO640;
 
       return this.apiClient.callApi(
         '/users/{userId}/carts/{cartId}/paymentdetails', 'POST',
@@ -2098,10 +2098,10 @@ export default class UsersApi {
      * Defines details of a new credit card payment details and assigns the payment to the cart.  Security: Permitted only for customers, guests, customer managers or trusted clients. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
-     * @param {module:models/PaymentDetailsWsDTO640Model} body 
+     * @param {module:models/PaymentDetailsWsDTO640} body 
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/PaymentDetailsWsDTO640Model}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/PaymentDetailsWsDTO640}
      */
     postCartPaymentdetail(userId, cartId, body, opts) {
       return this.usersCartsPaymentdetailsByUserIdWithHttpInfo(userId, cartId, body, opts)
@@ -2182,7 +2182,7 @@ export default class UsersApi {
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/PromotionResultListWsDTOModel} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/PromotionResultListWsDTO} and HTTP response
      */
     usersCartsPromotionsByUserIdAndCartIdWithHttpInfo(userId, cartId, opts) {
       opts = opts || {};
@@ -2213,7 +2213,7 @@ export default class UsersApi {
       let authNames = ['auth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = PromotionResultListWsDTOModel;
+      let returnType = PromotionResultListWsDTO;
 
       return this.apiClient.callApi(
         '/users/{userId}/carts/{cartId}/promotions', 'GET',
@@ -2229,7 +2229,7 @@ export default class UsersApi {
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/PromotionResultListWsDTOModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/PromotionResultListWsDTO}
      */
     getCartPromotions(userId, cartId, opts) {
       return this.usersCartsPromotionsByUserIdAndCartIdWithHttpInfo(userId, cartId, opts)
@@ -2311,7 +2311,7 @@ export default class UsersApi {
      * @param {String} promotionId Promotion identifier (code)
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/PromotionResultListWsDTOModel} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/PromotionResultListWsDTO} and HTTP response
      */
     usersCartsPromotionsPromotionIdByUserIdWithHttpInfo(userId, cartId, promotionId, opts) {
       opts = opts || {};
@@ -2348,7 +2348,7 @@ export default class UsersApi {
       let authNames = ['auth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = PromotionResultListWsDTOModel;
+      let returnType = PromotionResultListWsDTO;
 
       return this.apiClient.callApi(
         '/users/{userId}/carts/{cartId}/promotions/{promotionId}', 'GET',
@@ -2365,7 +2365,7 @@ export default class UsersApi {
      * @param {String} promotionId Promotion identifier (code)
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/PromotionResultListWsDTOModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/PromotionResultListWsDTO}
      */
     getCartPromotion(userId, cartId, promotionId, opts) {
       return this.usersCartsPromotionsPromotionIdByUserIdWithHttpInfo(userId, cartId, promotionId, opts)
@@ -2443,7 +2443,7 @@ export default class UsersApi {
      * patchCartRestoresavedcart
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/SaveCartResultWsDTOModel} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/SaveCartResultWsDTO} and HTTP response
      */
     usersCartsRestoresavedcartByUserIdWithHttpInfo(userId, cartId) {
       let postBody = null;
@@ -2472,7 +2472,7 @@ export default class UsersApi {
       let authNames = ['auth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = SaveCartResultWsDTOModel;
+      let returnType = SaveCartResultWsDTO;
 
       return this.apiClient.callApi(
         '/users/{userId}/carts/{cartId}/restoresavedcart', 'PATCH',
@@ -2485,7 +2485,7 @@ export default class UsersApi {
      * patchCartRestoresavedcart
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/SaveCartResultWsDTOModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/SaveCartResultWsDTO}
      */
     patchCartRestoresavedcart(userId, cartId) {
       return this.usersCartsRestoresavedcartByUserIdWithHttpInfo(userId, cartId)
@@ -2503,7 +2503,7 @@ export default class UsersApi {
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
      * @param {String} opts.saveCartName the name that should be applied to the saved cart
      * @param {String} opts.saveCartDescription the description that should be applied to the saved cart
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/SaveCartResultWsDTOModel} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/SaveCartResultWsDTO} and HTTP response
      */
     usersCartsSaveByUserIdAndCartIdWithHttpInfo(userId, cartId, opts) {
       opts = opts || {};
@@ -2536,7 +2536,7 @@ export default class UsersApi {
       let authNames = ['auth'];
       let contentTypes = ['application/x-www-form-urlencoded'];
       let accepts = ['application/json'];
-      let returnType = SaveCartResultWsDTOModel;
+      let returnType = SaveCartResultWsDTO;
 
       return this.apiClient.callApi(
         '/users/{userId}/carts/{cartId}/save', 'PATCH',
@@ -2554,7 +2554,7 @@ export default class UsersApi {
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
      * @param {String} opts.saveCartName the name that should be applied to the saved cart
      * @param {String} opts.saveCartDescription the description that should be applied to the saved cart
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/SaveCartResultWsDTOModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/SaveCartResultWsDTO}
      */
     patchSavedCart(userId, cartId, opts) {
       return this.usersCartsSaveByUserIdAndCartIdWithHttpInfo(userId, cartId, opts)
@@ -2570,7 +2570,7 @@ export default class UsersApi {
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/SaveCartResultWsDTOModel} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/SaveCartResultWsDTO} and HTTP response
      */
     usersCartsSavedcartByUserIdAndCartIdWithHttpInfo(userId, cartId, opts) {
       opts = opts || {};
@@ -2601,7 +2601,7 @@ export default class UsersApi {
       let authNames = ['auth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = SaveCartResultWsDTOModel;
+      let returnType = SaveCartResultWsDTO;
 
       return this.apiClient.callApi(
         '/users/{userId}/carts/{cartId}/savedcart', 'GET',
@@ -2617,7 +2617,7 @@ export default class UsersApi {
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/SaveCartResultWsDTOModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/SaveCartResultWsDTO}
      */
     getSavedCart(userId, cartId, opts) {
       return this.usersCartsSavedcartByUserIdAndCartIdWithHttpInfo(userId, cartId, opts)
@@ -2633,7 +2633,7 @@ export default class UsersApi {
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/VoucherListWsDTOModel} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/VoucherListWsDTO} and HTTP response
      */
     usersCartsVouchersByUserIdAndCartIdWithHttpInfo(userId, cartId, opts) {
       opts = opts || {};
@@ -2664,7 +2664,7 @@ export default class UsersApi {
       let authNames = ['auth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = VoucherListWsDTOModel;
+      let returnType = VoucherListWsDTO;
 
       return this.apiClient.callApi(
         '/users/{userId}/carts/{cartId}/vouchers', 'GET',
@@ -2680,7 +2680,7 @@ export default class UsersApi {
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/VoucherListWsDTOModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/VoucherListWsDTO}
      */
     getCartVouchers(userId, cartId, opts) {
       return this.usersCartsVouchersByUserIdAndCartIdWithHttpInfo(userId, cartId, opts)
@@ -2825,7 +2825,7 @@ export default class UsersApi {
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in the response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/UserGroupListWsDTOModel} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/UserGroupListWsDTO} and HTTP response
      */
     usersCustomergroupsByUserIdWithHttpInfo(userId, opts) {
       opts = opts || {};
@@ -2850,7 +2850,7 @@ export default class UsersApi {
       let authNames = ['auth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = UserGroupListWsDTOModel;
+      let returnType = UserGroupListWsDTO;
 
       return this.apiClient.callApi(
         '/users/{userId}/customergroups', 'GET',
@@ -2865,7 +2865,7 @@ export default class UsersApi {
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in the response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/UserGroupListWsDTOModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/UserGroupListWsDTO}
      */
     getCustomergroups(userId, opts) {
       return this.usersCustomergroupsByUserIdWithHttpInfo(userId, opts)
@@ -2942,7 +2942,7 @@ export default class UsersApi {
      * @param {String} opts.sort Sorting method applied to the return results.
      * @param {String} opts.currentPage The current result page requested.
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/OrderHistoryListWsDTOModel} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/OrderHistoryListWsDTO} and HTTP response
      */
     usersOrdersByUserId1WithHttpInfo(userId, opts) {
       opts = opts || {};
@@ -2971,7 +2971,7 @@ export default class UsersApi {
       let authNames = ['auth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = OrderHistoryListWsDTOModel;
+      let returnType = OrderHistoryListWsDTO;
 
       return this.apiClient.callApi(
         '/users/{userId}/orders', 'GET',
@@ -2990,7 +2990,7 @@ export default class UsersApi {
      * @param {String} opts.sort Sorting method applied to the return results.
      * @param {String} opts.currentPage The current result page requested.
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/OrderHistoryListWsDTOModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/OrderHistoryListWsDTO}
      */
     getOrders(userId, opts) {
       return this.usersOrdersByUserId1WithHttpInfo(userId, opts)
@@ -3007,7 +3007,7 @@ export default class UsersApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
      * @param {String} opts.securityCode CCV security code.
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/OrderWsDTOModel} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/OrderWsDTO} and HTTP response
      */
     usersOrdersByUserId2WithHttpInfo(userId, cartId, opts) {
       opts = opts || {};
@@ -3039,7 +3039,7 @@ export default class UsersApi {
       let authNames = ['auth'];
       let contentTypes = ['application/x-www-form-urlencoded'];
       let accepts = ['application/json'];
-      let returnType = OrderWsDTOModel;
+      let returnType = OrderWsDTO;
 
       return this.apiClient.callApi(
         '/users/{userId}/orders', 'POST',
@@ -3056,7 +3056,7 @@ export default class UsersApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
      * @param {String} opts.securityCode CCV security code.
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/OrderWsDTOModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/OrderWsDTO}
      */
     postOrder(userId, cartId, opts) {
       return this.usersOrdersByUserId2WithHttpInfo(userId, cartId, opts)
@@ -3072,7 +3072,7 @@ export default class UsersApi {
      * @param {String} code Order GUID (Globally Unique Identifier) or order CODE
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/OrderWsDTOModel} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/OrderWsDTO} and HTTP response
      */
     usersOrdersByUserIdAndCodeWithHttpInfo(userId, code, opts) {
       opts = opts || {};
@@ -3103,7 +3103,7 @@ export default class UsersApi {
       let authNames = ['auth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = OrderWsDTOModel;
+      let returnType = OrderWsDTO;
 
       return this.apiClient.callApi(
         '/users/{userId}/orders/{code}', 'GET',
@@ -3119,7 +3119,7 @@ export default class UsersApi {
      * @param {String} code Order GUID (Globally Unique Identifier) or order CODE
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/OrderWsDTOModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/OrderWsDTO}
      */
     getOrder(userId, code, opts) {
       return this.usersOrdersByUserIdAndCodeWithHttpInfo(userId, code, opts)
@@ -3193,7 +3193,7 @@ export default class UsersApi {
      * @param {String} paymentDetailsId - Payment details identifier
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in the response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/PaymentDetailsWsDTOModel} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/PaymentDetailsWsDTO} and HTTP response
      */
     usersPaymentdetailsByUserIdWithHttpInfo(userId, paymentDetailsId, opts) {
       opts = opts || {};
@@ -3224,7 +3224,7 @@ export default class UsersApi {
       let authNames = ['auth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = PaymentDetailsWsDTOModel;
+      let returnType = PaymentDetailsWsDTO;
 
       return this.apiClient.callApi(
         '/users/{userId}/paymentdetails/{paymentDetailsId}', 'GET',
@@ -3240,7 +3240,7 @@ export default class UsersApi {
      * @param {String} paymentDetailsId - Payment details identifier
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in the response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/PaymentDetailsWsDTOModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/PaymentDetailsWsDTO}
      */
     getPaymentdetail(userId, paymentDetailsId, opts) {
       return this.usersPaymentdetailsByUserIdWithHttpInfo(userId, paymentDetailsId, opts)
@@ -3254,7 +3254,7 @@ export default class UsersApi {
      * Updates existing customer&#39;s credit card payment info based on the payment info ID. Attributes not given in request will be defined again (set to null or default).  Security: Permitted for customers, customer managers or trusted client. Trusted client or customer manager is able to impersonate as any other user and access data on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} paymentDetailsId - Payment details identifier
-     * @param {module:models/PaymentDetailsWsDTO640Model} body 
+     * @param {module:models/PaymentDetailsWsDTO640} body 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
     usersPaymentdetailsByUserId1WithHttpInfo(userId, paymentDetailsId, body) {
@@ -3303,7 +3303,7 @@ export default class UsersApi {
      * Updates existing customer&#39;s credit card payment info based on the payment info ID. Attributes not given in request will be defined again (set to null or default).  Security: Permitted for customers, customer managers or trusted client. Trusted client or customer manager is able to impersonate as any other user and access data on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} paymentDetailsId - Payment details identifier
-     * @param {module:models/PaymentDetailsWsDTO640Model} body 
+     * @param {module:models/PaymentDetailsWsDTO640} body 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     putPaymentdetail(userId, paymentDetailsId, body) {
@@ -3318,7 +3318,7 @@ export default class UsersApi {
      * Updates existing customer&#39;s credit card payment details based on its ID. Only attributes given in request will be changed.  Security: Permitted for customers, customer managers or trusted client. Trusted client or customer manager is able to impersonate as any other user and access data on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} paymentDetailsId - Payment details identifier
-     * @param {module:models/PaymentDetailsWsDTO640Model} body 
+     * @param {module:models/PaymentDetailsWsDTO640} body 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
     usersPaymentdetailsByUserId2WithHttpInfo(userId, paymentDetailsId, body) {
@@ -3367,7 +3367,7 @@ export default class UsersApi {
      * Updates existing customer&#39;s credit card payment details based on its ID. Only attributes given in request will be changed.  Security: Permitted for customers, customer managers or trusted client. Trusted client or customer manager is able to impersonate as any other user and access data on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} paymentDetailsId - Payment details identifier
-     * @param {module:models/PaymentDetailsWsDTO640Model} body 
+     * @param {module:models/PaymentDetailsWsDTO640} body 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     patchPaymentdetail(userId, paymentDetailsId, body) {
@@ -3441,7 +3441,7 @@ export default class UsersApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.saved Type of payment details
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in the response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/PaymentDetailsListWsDTOModel} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/PaymentDetailsListWsDTO} and HTTP response
      */
     usersPaymentdetailsByUserId4WithHttpInfo(userId, opts) {
       opts = opts || {};
@@ -3467,7 +3467,7 @@ export default class UsersApi {
       let authNames = ['auth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = PaymentDetailsListWsDTOModel;
+      let returnType = PaymentDetailsListWsDTO;
 
       return this.apiClient.callApi(
         '/users/{userId}/paymentdetails', 'GET',
@@ -3483,7 +3483,7 @@ export default class UsersApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.saved Type of payment details
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in the response)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/PaymentDetailsListWsDTOModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/PaymentDetailsListWsDTO}
      */
     getPaymentdetails(userId, opts) {
       return this.usersPaymentdetailsByUserId4WithHttpInfo(userId, opts)
