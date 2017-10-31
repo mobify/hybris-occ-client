@@ -53,7 +53,7 @@
       it('should call getLanguages successfully', function(done) {
         instance.getLanguages()
           .then((res) => {
-            expect(res.languages).to.eql(languages);
+            expect(res.languages[0]).to.eql(languages);
             done();
           })
       });

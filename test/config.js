@@ -16,12 +16,12 @@ const testWrapper = (occ) => {
     occ.catalogName = 'Apparel Product Catalog'
     occ.catalogId = 'apparelProductCatalog'
     occ.catalogVersionId = 'Online'
-    occ.currencies = {
+    occ.currencies = occ.CurrencyWsDTOModel.constructFromObject({
         isocode: 'GBP',
         name: 'Pound',
         active: false,
         symbol: '£'
-    }
+    })
     occ.deliveryCountries = [{
             isocode: 'CA',
             name: 'Canada'
@@ -47,12 +47,12 @@ const testWrapper = (occ) => {
             name: 'United States'
         }
     ]
-    occ.languages = [{
+    occ.languages = occ.LanguageWsDTOModel.constructFromObject({
         isocode: 'en',
         name: 'English',
         nativeName: 'English',
         active: true
-    }]
+    })
     occ.sampleProduct = {
         name: 'BT Airhole Helgasons Facemask tiedie LXL',
         code: '300515779',
@@ -199,8 +199,7 @@ const testWrapper = (occ) => {
         firstName: 'Mobify',
         lastName: 'Automation',
         titleCode: occ.titles[0].code,
-        uid: 'mobifyautomation@mobify.com',
-        uid2: 'mobifyautomation2@mobify.com',
+        uid: 'mobifyautomation2@mobify.com',
         password: 'Passw0rd!',
     })
         
@@ -209,27 +208,34 @@ const testWrapper = (occ) => {
         firstName: 'Mobify',
         lastName: 'automation',
         titleCode: occ.titles[0].code,
-        line1:'West Road',
+        line1:'70 Queen Street',
         line2:'',
-        postalCode:'CB3 9DR',
-        town:'Cambridge',
+        postalCode:'G51 2QU',
+        town:'Cardiff',
         country:{
             isocode: 'GB'
         },
         phone:'(777) 777-7777',
         companyName:'',
-        defaultAddress:false
+        defaultAddress:true
     })
 
-    occ.payment = {
+    occ.payment = occ.PaymentDetailsWsDTOModel.constructFromObject({
+        id: '',
         billingAddress: occ.address,
         cardType: {code: 'visa', name: 'Visa'},
         cardNumber: '4111111111111111',
         accountHolderName: 'Mobify Automation',
+        startMonth: '',
+        startYear: '',
+        issueNumber: '',
+        subscriptionId: '',
+        saved: true,
+        defaultPayment: true,
         expiryYear: '2020',
         expiryMonth: '12',
         securityCode: '111'
-    }
+    })
     return occ
 }
 
