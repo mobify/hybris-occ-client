@@ -9,7 +9,7 @@ const testWrapper = (occ) => {
             const basePath = `${process.env.baseUrl}/${process.env.baseSite}`
             occ.ApiClient.instance = new occ.ApiClient(basePath, process.env.authorizationUrl)
         } else {
-            throw new Error('Cannot find env.json, is the file missing in the test directory?')
+            throw 'Cannot find env.json, is the file missing in the test directory?'
         }
     }
 
@@ -203,7 +203,6 @@ const testWrapper = (occ) => {
         password: 'Passw0rd!',
     })
         
-
     occ.address = occ.AddressWsDTO296Model.constructFromObject({
         firstName: 'Mobify',
         lastName: 'automation',
