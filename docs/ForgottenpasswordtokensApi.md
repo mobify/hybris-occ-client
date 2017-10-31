@@ -7,9 +7,9 @@ Method | HTTP request | Description
 [****](ForgottenpasswordtokensApi.md#) | **POST** / | 
 
 
-<a name=""></a>
-# ****
-> (opts)
+<a name="postForgottenPasswordToken"></a>
+# **** postForgottenPasswordToken
+> postForgottenPasswordToken(opts)
 
 
 
@@ -29,7 +29,7 @@ let apiInstance = new Occ.ForgottenpasswordtokensApi();
 let opts = { 
   'userId': "userId_example" // String | Customer's user id. Customer user id is case insensitive.
 };
-apiInstance.(opts).then(() => {
+apiInstance.postForgottenPasswordToken(opts).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
