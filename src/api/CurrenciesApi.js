@@ -11,7 +11,6 @@
  *
  */
 
-
 import ApiClient from "../ApiClient";
 import CurrencyListWsDTOModel from '../models/CurrencyListWsDTOModel';
 
@@ -33,8 +32,6 @@ export default class CurrenciesApi {
         this.apiClient = apiClient || ApiClient.instance;
     }
 
-
-
     /**
      * getCurrencies
      * Lists all available currencies (all usable currencies for the current store).If the list of currencies for stores is empty, a list of all currencies available in the system is returned. 
@@ -45,7 +42,6 @@ export default class CurrenciesApi {
     currenciesWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = null;
-
 
       let pathParams = {
       };
@@ -82,6 +78,5 @@ export default class CurrenciesApi {
           return response_and_data.data;
         });
     }
-
 
 }

@@ -11,7 +11,6 @@
  *
  */
 
-
 import ApiClient from "../ApiClient";
 import MemberListWsDTOModel from '../models/MemberListWsDTOModel';
 import UserGroupListWsDTOModel from '../models/UserGroupListWsDTOModel';
@@ -36,8 +35,6 @@ export default class CustomergroupsApi {
         this.apiClient = apiClient || ApiClient.instance;
     }
 
-
-
     /**
      * getCustomergroups
      * Returns all customer groups that are direct subgroups of a customergroup.  Security: Permitted only for customer managers 
@@ -50,7 +47,6 @@ export default class CustomergroupsApi {
     customergroupsWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = null;
-
 
       let pathParams = {
       };
@@ -92,7 +88,6 @@ export default class CustomergroupsApi {
         });
     }
 
-
     /**
      * Customergroups
      * Creates a new customer group that is a direct subgroup of a customergroup.  Security: Permitted only for customer managers 
@@ -106,7 +101,6 @@ export default class CustomergroupsApi {
       if (body === undefined || body === null) {
         throw new Error("Missing the required parameter 'body' when calling postCustomergroup");
       }
-
 
       let pathParams = {
       };
@@ -142,7 +136,6 @@ export default class CustomergroupsApi {
         });
     }
 
-
     /**
      * getCustomergroup
      * Returns a customer group with a specific groupId.  Security: Permitted only for customer managers 
@@ -159,7 +152,6 @@ export default class CustomergroupsApi {
       if (groupId === undefined || groupId === null) {
         throw new Error("Missing the required parameter 'groupId' when calling getCustomergroup");
       }
-
 
       let pathParams = {
         'groupId': groupId
@@ -199,7 +191,6 @@ export default class CustomergroupsApi {
         });
     }
 
-
     /**
      * putCustomergroupsMembers
      * Sets members for a user group. The list of existing members is overwritten with a new one.  Security: Permitted only for customer managers 
@@ -219,7 +210,6 @@ export default class CustomergroupsApi {
       if (body === undefined || body === null) {
         throw new Error("Missing the required parameter 'body' when calling putCustomergroupsMembers");
       }
-
 
       let pathParams = {
         'groupId': groupId
@@ -257,7 +247,6 @@ export default class CustomergroupsApi {
         });
     }
 
-
     /**
      * patchCustomergroupsMembers
      * Assigns user(s) to a customer group.  Security: Permitted only for customer managers 
@@ -277,7 +266,6 @@ export default class CustomergroupsApi {
       if (body === undefined || body === null) {
         throw new Error("Missing the required parameter 'body' when calling patchCustomergroupsMembers");
       }
-
 
       let pathParams = {
         'groupId': groupId
@@ -315,7 +303,6 @@ export default class CustomergroupsApi {
         });
     }
 
-
     /**
      * deleteCustomergroupsMember
      * Removes user from a customer group.  Security: Permitted only for customer managers 
@@ -335,7 +322,6 @@ export default class CustomergroupsApi {
       if (userId === undefined || userId === null) {
         throw new Error("Missing the required parameter 'userId' when calling deleteCustomergroupsMember");
       }
-
 
       let pathParams = {
         'groupId': groupId,
@@ -373,6 +359,5 @@ export default class CustomergroupsApi {
           return response_and_data.data;
         });
     }
-
 
 }

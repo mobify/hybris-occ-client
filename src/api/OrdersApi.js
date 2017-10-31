@@ -11,7 +11,6 @@
  *
  */
 
-
 import ApiClient from "../ApiClient";
 import OrderWsDTOModel from '../models/OrderWsDTOModel';
 
@@ -33,8 +32,6 @@ export default class OrdersApi {
         this.apiClient = apiClient || ApiClient.instance;
     }
 
-
-
     /**
      * getOrder
      * Returns details of a specific order based on order GUID (Globally Unique Identifier) or order CODE. The response contains a detailed order information.  Security: Allowed only for trusted client 
@@ -51,7 +48,6 @@ export default class OrdersApi {
       if (code === undefined || code === null) {
         throw new Error("Missing the required parameter 'code' when calling getOrder");
       }
-
 
       let pathParams = {
         'code': code
@@ -90,6 +86,5 @@ export default class OrdersApi {
           return response_and_data.data;
         });
     }
-
 
 }

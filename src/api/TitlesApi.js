@@ -11,7 +11,6 @@
  *
  */
 
-
 import ApiClient from "../ApiClient";
 import TitleListWsDTOModel from '../models/TitleListWsDTOModel';
 
@@ -33,8 +32,6 @@ export default class TitlesApi {
         this.apiClient = apiClient || ApiClient.instance;
     }
 
-
-
     /**
      * getTitles
      * Lists all localized titles. 
@@ -45,7 +42,6 @@ export default class TitlesApi {
     titlesWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = null;
-
 
       let pathParams = {
       };
@@ -82,6 +78,5 @@ export default class TitlesApi {
           return response_and_data.data;
         });
     }
-
 
 }

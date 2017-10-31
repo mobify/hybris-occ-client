@@ -11,7 +11,6 @@
  *
  */
 
-
 import ApiClient from "../ApiClient";
 import CardTypeListWsDTOModel from '../models/CardTypeListWsDTOModel';
 
@@ -33,8 +32,6 @@ export default class CardtypesApi {
         this.apiClient = apiClient || ApiClient.instance;
     }
 
-
-
     /**
      * Cardtypes
      * Lists supported payment card types. 
@@ -45,7 +42,6 @@ export default class CardtypesApi {
     cardtypesWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = null;
-
 
       let pathParams = {
       };
@@ -82,6 +78,5 @@ export default class CardtypesApi {
           return response_and_data.data;
         });
     }
-
 
 }

@@ -11,7 +11,6 @@
  *
  */
 
-
 import ApiClient from "../ApiClient";
 import ProductExpressUpdateElementListWsDTOModel from '../models/ProductExpressUpdateElementListWsDTOModel';
 import ProductReferenceListWsDTOModel from '../models/ProductReferenceListWsDTOModel';
@@ -41,8 +40,6 @@ export default class ProductsApi {
         this.apiClient = apiClient || ApiClient.instance;
     }
 
-
-
     /**
      * getProduct
      * Returns details of a single product according to a product code. 
@@ -59,7 +56,6 @@ export default class ProductsApi {
       if (productCode === undefined || productCode === null) {
         throw new Error("Missing the required parameter 'productCode' when calling getProduct");
       }
-
 
       let pathParams = {
         'productCode': productCode
@@ -99,7 +95,6 @@ export default class ProductsApi {
         });
     }
 
-
     /**
      * getProductExpressupdate
      * Returns products added to the express update feed. Returns only elements updated after the provided timestamp.The queue is cleared using a defined cronjob.  Security: Permitted only for trusted client 
@@ -112,7 +107,6 @@ export default class ProductsApi {
     productsExpressupdateWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = null;
-
 
       let pathParams = {
       };
@@ -154,7 +148,6 @@ export default class ProductsApi {
         });
     }
 
-
     /**
      * getProductReferences
      * Returns references for a product with a given product code. Reference type specifies which references to return.  Security: Permitted only for trusted client 
@@ -173,7 +166,6 @@ export default class ProductsApi {
       if (productCode === undefined || productCode === null) {
         throw new Error("Missing the required parameter 'productCode' when calling getProductReferences");
       }
-
 
       let pathParams = {
         'productCode': productCode
@@ -217,7 +209,6 @@ export default class ProductsApi {
         });
     }
 
-
     /**
      * getProductReviews
      * Returns the reviews for a product with a given product code. 
@@ -231,7 +222,6 @@ export default class ProductsApi {
       if (productCode === undefined || productCode === null) {
         throw new Error("Missing the required parameter 'productCode' when calling getProductReviews");
       }
-
 
       let pathParams = {
         'productCode': productCode
@@ -268,7 +258,6 @@ export default class ProductsApi {
         });
     }
 
-
     /**
      * postProductReview
      * Creates a new customer review as an anonymous user. 
@@ -291,7 +280,6 @@ export default class ProductsApi {
       if (body === undefined || body === null) {
         throw new Error("Missing the required parameter 'body' when calling postProductReview");
       }
-
 
       let pathParams = {
         'productCode': productCode
@@ -332,7 +320,6 @@ export default class ProductsApi {
         });
     }
 
-
     /**
      * ProductsSearch
      * Returns a list of products and additional data such as: available facets, available sorting and pagination options. It can include spelling suggestions.To make spelling suggestions work you need to: &lt;ul&gt; &lt;li&gt;Make sure enableSpellCheck on the SearchQuery is set to true. By default it should be already set to true. &lt;/li&gt; &lt;li&gt;Have indexed properties configured to be used for spellchecking.&lt;/li&gt; &lt;/ul&gt; 
@@ -347,7 +334,6 @@ export default class ProductsApi {
     productsSearch1WithHttpInfo(opts) {
       opts = opts || {};
       let postBody = null;
-
 
       let pathParams = {
       };
@@ -393,7 +379,6 @@ export default class ProductsApi {
         });
     }
 
-
     /**
      * ProductsStockByProductCode
      * Returns product&#39;s stock levels sorted by distance from specific location passed by free-text parameter or longitude and latitude parameters. The following two sets of parameters are available: &lt;ul&gt; &lt;li&gt;location (required), currentPage (optional), pageSize (optional) or&lt;/li&gt;&gt; &lt;li&gt;longitude (required), latitude (required), currentPage (optional), pageSize(optional).&lt;/li&gt; &lt;/ul&gt; 
@@ -415,7 +400,6 @@ export default class ProductsApi {
       if (productCode === undefined || productCode === null) {
         throw new Error("Missing the required parameter 'productCode' when calling getProductStock");
       }
-
 
       let pathParams = {
         'productCode': productCode
@@ -465,7 +449,6 @@ export default class ProductsApi {
         });
     }
 
-
     /**
      * getProductsStockByProductCodeAndStoreName
      * Returns product&#39;s stock level for a particular store (POS). 
@@ -488,7 +471,6 @@ export default class ProductsApi {
       if (storeName === undefined || storeName === null) {
         throw new Error("Missing the required parameter 'storeName' when calling getProductsStockByProductCodeAndStoreName");
       }
-
 
       let pathParams = {
         'productCode': productCode,
@@ -530,7 +512,6 @@ export default class ProductsApi {
         });
     }
 
-
     /**
      * getProductSuggestions
      * Returns a list of all available suggestions related to a given term and limits the results to a specific value of the max parameter. 
@@ -553,7 +534,6 @@ export default class ProductsApi {
       if (term === undefined || term === null) {
         throw new Error("Missing the required parameter 'term' when calling getProductSuggestions");
       }
-
 
       let pathParams = {
       };
@@ -594,6 +574,5 @@ export default class ProductsApi {
           return response_and_data.data;
         });
     }
-
 
 }

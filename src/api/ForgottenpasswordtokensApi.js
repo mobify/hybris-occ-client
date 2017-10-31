@@ -11,7 +11,6 @@
  *
  */
 
-
 import ApiClient from "../ApiClient";
 
 /**
@@ -32,8 +31,6 @@ export default class ForgottenpasswordtokensApi {
         this.apiClient = apiClient || ApiClient.instance;
     }
 
-
-
     /**
      * postForgottenPasswordToken
      * Generates a token to restore customer&#39;s forgotten password.  Security: Allowed only for client or trusted client 
@@ -44,7 +41,6 @@ export default class ForgottenpasswordtokensApi {
     forgottenpasswordtokensWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = null;
-
 
       let pathParams = {
       };
@@ -81,6 +77,5 @@ export default class ForgottenpasswordtokensApi {
           return response_and_data.data;
         });
     }
-
 
 }

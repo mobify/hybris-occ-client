@@ -11,7 +11,6 @@
  *
  */
 
-
 import ApiClient from "../ApiClient";
 import VoucherWsDTOModel from '../models/VoucherWsDTOModel';
 
@@ -33,8 +32,6 @@ export default class VouchersApi {
         this.apiClient = apiClient || ApiClient.instance;
     }
 
-
-
     /**
      * getVoucher
      * Returns details of a single voucher according to a voucher code.  Security: Permitted only for trusted client 
@@ -51,7 +48,6 @@ export default class VouchersApi {
       if (code === undefined || code === null) {
         throw new Error("Missing the required parameter 'code' when calling getVoucher");
       }
-
 
       let pathParams = {
         'code': code
@@ -90,6 +86,5 @@ export default class VouchersApi {
           return response_and_data.data;
         });
     }
-
 
 }

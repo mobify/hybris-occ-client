@@ -11,7 +11,6 @@
  *
  */
 
-
 import superagent from "superagent";
 import querystring from "querystring";
 
@@ -357,8 +356,6 @@ export default class ApiClient {
         return ApiClient.convertToType(data, returnType);
     }
 
-    
-
     /**
     * Invokes the REST service using the supplied settings and parameters.
     * @param {String} path The base URL to invoke.
@@ -466,7 +463,6 @@ export default class ApiClient {
             });
         });
 
-        
     }
 
     /**

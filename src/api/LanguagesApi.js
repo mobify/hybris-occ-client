@@ -11,7 +11,6 @@
  *
  */
 
-
 import ApiClient from "../ApiClient";
 import LanguageListWsDTOModel from '../models/LanguageListWsDTOModel';
 
@@ -33,8 +32,6 @@ export default class LanguagesApi {
         this.apiClient = apiClient || ApiClient.instance;
     }
 
-
-
     /**
      * getLanguages
      * Lists all available languages (all languages used for a particular store). If the list of languages for a base store is empty, a list of all languages available in the system will be returned. 
@@ -45,7 +42,6 @@ export default class LanguagesApi {
     languagesWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = null;
-
 
       let pathParams = {
       };
@@ -82,6 +78,5 @@ export default class LanguagesApi {
           return response_and_data.data;
         });
     }
-
 
 }

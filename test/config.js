@@ -203,7 +203,6 @@ const testWrapper = (occ) => {
         password: 'Passw0rd!',
     })
         
-
     occ.address = occ.AddressWsDTO296Model.constructFromObject({
         firstName: 'Mobify',
         lastName: 'automation',

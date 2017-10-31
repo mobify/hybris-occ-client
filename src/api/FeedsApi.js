@@ -11,7 +11,6 @@
  *
  */
 
-
 import ApiClient from "../ApiClient";
 import OrderStatusUpdateElementListWsDTOModel from '../models/OrderStatusUpdateElementListWsDTOModel';
 
@@ -33,8 +32,6 @@ export default class FeedsApi {
         this.apiClient = apiClient || ApiClient.instance;
     }
 
-
-
     /**
      * getOrdersStatusfeed
      * Returns the orders the status has changed for. Returns only the elements from the current baseSite, updated after the provided timestamp.  Security: Allowed only for trusted client 
@@ -46,7 +43,6 @@ export default class FeedsApi {
     feedsOrdersStatusfeedWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = null;
-
 
       let pathParams = {
       };
@@ -85,6 +81,5 @@ export default class FeedsApi {
           return response_and_data.data;
         });
     }
-
 
 }

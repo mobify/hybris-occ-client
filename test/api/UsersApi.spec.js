@@ -267,7 +267,6 @@
       });
     });
     
-    
     // GET applied voucher
     describe('getCartVouchers', function() {
       it('should call getCartVouchers successfully', function(done) {
@@ -486,7 +485,6 @@
       });
     });
     
-
     // // POST clone a cart
     // // TODO: fix 'cannot clone a saved cart'
     // describe('postCartClonesavedcart', function() {
@@ -555,7 +553,6 @@
       });
     });
   
-    
     describe('postCartPromotion', function() {
       it('should call postCartPromotion successfully', function(done) {
         //uncomment below and update the code to test postCartPromotion
@@ -616,7 +613,6 @@
         done();
       });
     });
-    
     
     describe('getCustomergroups', function() {
       it('should call getCustomergroups successfully', function(done) {

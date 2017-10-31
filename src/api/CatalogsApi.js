@@ -11,7 +11,6 @@
  *
  */
 
-
 import ApiClient from "../ApiClient";
 import CatalogListWsDTOModel from '../models/CatalogListWsDTOModel';
 import CatalogVersionWsDTOModel from '../models/CatalogVersionWsDTOModel';
@@ -36,8 +35,6 @@ export default class CatalogsApi {
         this.apiClient = apiClient || ApiClient.instance;
     }
 
-
-
     /**
      * Catalogs
      * Returns all catalogs with versions defined for the base store. 
@@ -48,7 +45,6 @@ export default class CatalogsApi {
     catalogsWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = null;
-
 
       let pathParams = {
       };
@@ -86,7 +82,6 @@ export default class CatalogsApi {
         });
     }
 
-
     /**
      * getCatalog
      * Returns a information about a catalog based on its ID, along with versions defined for the current base store. 
@@ -103,7 +98,6 @@ export default class CatalogsApi {
       if (catalogId === undefined || catalogId === null) {
         throw new Error("Missing the required parameter 'catalogId' when calling getCatalog");
       }
-
 
       let pathParams = {
         'catalogId': catalogId
@@ -143,7 +137,6 @@ export default class CatalogsApi {
         });
     }
 
-
     /**
      * CatalogsByCatalogIdAndCatalogVersionId
      * Returns information about catalog version that exists for the current base store. 
@@ -166,7 +159,6 @@ export default class CatalogsApi {
       if (catalogVersionId === undefined || catalogVersionId === null) {
         throw new Error("Missing the required parameter 'catalogVersionId' when calling getCatalogsByCatalogIdAndCatalogVersionId");
       }
-
 
       let pathParams = {
         'catalogId': catalogId,
@@ -208,7 +200,6 @@ export default class CatalogsApi {
         });
     }
 
-
     /**
      * getCategory
      * Returns information about category that exists in a catalog version available for the current base store. 
@@ -239,7 +230,6 @@ export default class CatalogsApi {
       if (categoryId === undefined || categoryId === null) {
         throw new Error("Missing the required parameter 'categoryId' when calling getCategory");
       }
-
 
       let pathParams = {
         'catalogId': catalogId,
@@ -286,6 +276,5 @@ export default class CatalogsApi {
           return response_and_data.data;
         });
     }
-
 
 }

@@ -11,7 +11,6 @@
  *
  */
 
-
 import ApiClient from "../ApiClient";
 import ProductListWsDTOModel from '../models/ProductListWsDTOModel';
 
@@ -33,8 +32,6 @@ export default class ExportApi {
         this.apiClient = apiClient || ApiClient.instance;
     }
 
-
-
     /**
      * ExportProducts
      * Used for product export. Depending on the timestamp parameter, it can return all products or only products modified after the given time.  Security: Allowed only for trusted client 
@@ -50,7 +47,6 @@ export default class ExportApi {
     exportProductsWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = null;
-
 
       let pathParams = {
       };
@@ -97,6 +93,5 @@ export default class ExportApi {
           return response_and_data.data;
         });
     }
-
 
 }

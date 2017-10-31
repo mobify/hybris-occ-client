@@ -11,7 +11,6 @@
  *
  */
 
-
 import ApiClient from "../ApiClient";
 import AddressListWsDTOModel from '../models/AddressListWsDTOModel';
 import AddressWsDTO296Model from '../models/AddressWsDTO296Model';
@@ -54,8 +53,6 @@ export default class UsersApi {
         this.apiClient = apiClient || ApiClient.instance;
     }
 
-
-
     /**
      * postUsers
      * Registers a customer. The following two sets of parameters are available: &lt;ul&gt; &lt;li&gt;First set is used to register a customer. In this case the required parameters are: login, password, firstName, lastName, titleCode.&lt;/li&gt; &lt;li&gt;Second set is used to convert a guest to a customer. In this case the required parameters are: guid, password. &lt;/li&gt; &lt;ul&gt;  Security: Permitted only for customer managers, clients or trusted clients. 
@@ -69,7 +66,6 @@ export default class UsersApi {
       if (body === undefined || body === null) {
         throw new Error("Missing the required parameter 'body' when calling postUsers");
       }
-
 
       let pathParams = {
       };
@@ -105,7 +101,6 @@ export default class UsersApi {
         });
     }
 
-
     /**
      * getUserAddresses
      * Returns customer&#39;s addresses.  Security: Permitted for trusted clients, customers and customer managers. Trusted client or customer manager is able to impersonate as any other user and access data on their behalf. 
@@ -122,7 +117,6 @@ export default class UsersApi {
       if (userId === undefined || userId === null) {
         throw new Error("Missing the required parameter 'userId' when calling getUserAddresses");
       }
-
 
       let pathParams = {
         'userId': userId
@@ -162,7 +156,6 @@ export default class UsersApi {
         });
     }
 
-
     /**
      * UsersAddressesByUserId
      * Creates a new address.  Security: Permitted for customers, guests, customer managers or trusted client. Trusted client or customer manager is able to impersonate as any other user and access data on their behalf. 
@@ -185,7 +178,6 @@ export default class UsersApi {
       if (body === undefined || body === null) {
         throw new Error("Missing the required parameter 'body' when calling postUserAddress");
       }
-
 
       let pathParams = {
         'userId': userId
@@ -226,7 +218,6 @@ export default class UsersApi {
         });
     }
 
-
     /**
      * getUserAddress
      * Returns detailed information about address with a given id.  Security: Permitted for customers, guests, customer managers or trusted client. Trusted client or customer manager is able to impersonate as any other user and access data on their behalf. 
@@ -249,7 +240,6 @@ export default class UsersApi {
       if (addressId === undefined || addressId === null) {
         throw new Error("Missing the required parameter 'addressId' when calling getUserAddress");
       }
-
 
       let pathParams = {
         'userId': userId,
@@ -291,7 +281,6 @@ export default class UsersApi {
         });
     }
 
-
     /**
      * getUserAddress
      * Updates the address. Attributes not provided in the request will be defined again (set to null or default).  Security: Permitted for customers, guests, customer managers or trusted client. Trusted client or customer manager is able to impersonate as any other user and access data on their behalf. 
@@ -317,7 +306,6 @@ export default class UsersApi {
       if (body === undefined || body === null) {
         throw new Error("Missing the required parameter 'body' when calling putUserAddress");
       }
-
 
       let pathParams = {
         'userId': userId,
@@ -357,7 +345,6 @@ export default class UsersApi {
         });
     }
 
-
     /**
      * getUserAddress
      * Updates the address. Only attributes provided in the request body will be changed.  Security: Permitted for customers, guests, customer managers or trusted client. Trusted client or customer manager is able to impersonate as any other user and access data on their behalf. 
@@ -383,7 +370,6 @@ export default class UsersApi {
       if (body === undefined || body === null) {
         throw new Error("Missing the required parameter 'body' when calling patchUserAddress");
       }
-
 
       let pathParams = {
         'userId': userId,
@@ -423,7 +409,6 @@ export default class UsersApi {
         });
     }
 
-
     /**
      * getUserAddress
      * Removes customer&#39;s address.  Security: Permitted for customers, guests, customer managers or trusted client. Trusted client or customer manager is able to impersonate as any other user and access data on their behalf. 
@@ -443,7 +428,6 @@ export default class UsersApi {
       if (addressId === undefined || addressId === null) {
         throw new Error("Missing the required parameter 'addressId' when calling deleteUserAddress");
       }
-
 
       let pathParams = {
         'userId': userId,
@@ -482,7 +466,6 @@ export default class UsersApi {
         });
     }
 
-
     /**
      * postUserAddressesVerification
      * Verifies address  Security: Permitted for customers, guests, customer managers or trusted client. Trusted client or customer manager is able to impersonate as any other user and access data on their behalf. 
@@ -505,7 +488,6 @@ export default class UsersApi {
       if (body === undefined || body === null) {
         throw new Error("Missing the required parameter 'body' when calling postUserAddressesVerification");
       }
-
 
       let pathParams = {
         'userId': userId
@@ -546,7 +528,6 @@ export default class UsersApi {
         });
     }
 
-
     /**
      * getUser
      * Returns customer profile.  Security: Permitted for clients, customers and customer managers 
@@ -563,7 +544,6 @@ export default class UsersApi {
       if (userId === undefined || userId === null) {
         throw new Error("Missing the required parameter 'userId' when calling getUser");
       }
-
 
       let pathParams = {
         'userId': userId
@@ -603,7 +583,6 @@ export default class UsersApi {
         });
     }
 
-
     /**
      * getUser
      * Updates customer profile. Attributes not provided in the request body will be defined again (set to null or default).  Security: Permitted for trusted clients, customers and customer managers. Trusted client or customer manager is able to impersonate as any other user and change profile on their behalf. 
@@ -623,7 +602,6 @@ export default class UsersApi {
       if (body === undefined || body === null) {
         throw new Error("Missing the required parameter 'body' when calling putUser");
       }
-
 
       let pathParams = {
         'userId': userId
@@ -661,7 +639,6 @@ export default class UsersApi {
         });
     }
 
-
     /**
      * getUser
      * Updates customer profile. Only attributes provided in the request body will be changed.  Security: Permitted for trusted clients, customers and customer managers. Trusted client or customer manager is able to impersonate as any other user and change profile on their behalf. 
@@ -681,7 +658,6 @@ export default class UsersApi {
       if (body === undefined || body === null) {
         throw new Error("Missing the required parameter 'body' when calling patchUser");
       }
-
 
       let pathParams = {
         'userId': userId
@@ -719,7 +695,6 @@ export default class UsersApi {
         });
     }
 
-
     /**
      * getUser
      * Removes customer profile.  Security: Permitted for trusted clients, customers and customer managers. Trusted client is able to impersonate as any other user and deactivate profile on their behalf. 
@@ -733,7 +708,6 @@ export default class UsersApi {
       if (userId === undefined || userId === null) {
         throw new Error("Missing the required parameter 'userId' when calling deleteUser");
       }
-
 
       let pathParams = {
         'userId': userId
@@ -770,7 +744,6 @@ export default class UsersApi {
         });
     }
 
-
     /**
      * postCartDeliveryAddress
      * Creates an address and assigns it to the cart as the delivery address.  Security: Anonymous user may access cart by its guid. Customer may access only own cart by its id. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
@@ -799,7 +772,6 @@ export default class UsersApi {
       if (body === undefined || body === null) {
         throw new Error("Missing the required parameter 'body' when calling postCartDeliveryAddress");
       }
-
 
       let pathParams = {
         'userId': userId,
@@ -842,7 +814,6 @@ export default class UsersApi {
         });
     }
 
-
     /**
      * postCartDeliveryAddress
      * Sets a delivery address for the cart. The address country must be placed among the delivery countries of the current base store.  Security: Permitted only for customers, guests, customer managers or trusted clients. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
@@ -868,7 +839,6 @@ export default class UsersApi {
       if (addressId === undefined || addressId === null) {
         throw new Error("Missing the required parameter 'addressId' when calling putCartDeliveryAddress");
       }
-
 
       let pathParams = {
         'userId': userId,
@@ -909,7 +879,6 @@ export default class UsersApi {
         });
     }
 
-
     /**
      * postCartDeliveryAddress
      * Removes the delivery address from the cart.  Security: Permitted only for customers, guests, customer managers or trusted clients. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
@@ -929,7 +898,6 @@ export default class UsersApi {
       if (cartId === undefined || cartId === null) {
         throw new Error("Missing the required parameter 'cartId' when calling deleteCartDeliveryAddress");
       }
-
 
       let pathParams = {
         'userId': userId,
@@ -968,7 +936,6 @@ export default class UsersApi {
         });
     }
 
-
     /**
      * getCarts
      * Lists all customer carts.  Security: Permitted only for non-anonymous users. 
@@ -985,7 +952,6 @@ export default class UsersApi {
       if (userId === undefined || userId === null) {
         throw new Error("Missing the required parameter 'userId' when calling getCarts");
       }
-
 
       let pathParams = {
         'userId': userId
@@ -1025,7 +991,6 @@ export default class UsersApi {
         });
     }
 
-
     /**
      * getCarts
      * Creates a new cart or restores an anonymous cart as a user&#39;s cart (if an old Cart Id is given in the request)  Security: Cart may be created by everybody. Restoring anonymous carts is permitted only for non anonymous users. 
@@ -1044,7 +1009,6 @@ export default class UsersApi {
       if (userId === undefined || userId === null) {
         throw new Error("Missing the required parameter 'userId' when calling postCart");
       }
-
 
       let pathParams = {
         'userId': userId
@@ -1088,7 +1052,6 @@ export default class UsersApi {
         });
     }
 
-
     /**
      * getCart
      * Returns the cart with a given identifier.  Security: Anonymous user may access cart by its guid. Customer may access only own cart by its id. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
@@ -1111,7 +1074,6 @@ export default class UsersApi {
       if (cartId === undefined || cartId === null) {
         throw new Error("Missing the required parameter 'cartId' when calling getCart");
       }
-
 
       let pathParams = {
         'userId': userId,
@@ -1153,7 +1115,6 @@ export default class UsersApi {
         });
     }
 
-
     /**
      * getCart
      * Deletes a cart with a given cart id.  Security: Anonymous user may access cart by its guid. Customer may access only own cart by its id. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
@@ -1173,7 +1134,6 @@ export default class UsersApi {
       if (cartId === undefined || cartId === null) {
         throw new Error("Missing the required parameter 'cartId' when calling deleteCart");
       }
-
 
       let pathParams = {
         'userId': userId,
@@ -1212,7 +1172,6 @@ export default class UsersApi {
         });
     }
 
-
     /**
      * postCartClonesavedcart
      * Explicitly clones a cart 
@@ -1237,7 +1196,6 @@ export default class UsersApi {
       if (cartId === undefined || cartId === null) {
         throw new Error("Missing the required parameter 'cartId' when calling postCartClonesavedcart");
       }
-
 
       let pathParams = {
         'userId': userId,
@@ -1283,7 +1241,6 @@ export default class UsersApi {
         });
     }
 
-
     /**
      * getCartDeliverymode
      * Returns the delivery mode selected for the cart.  Security: Permitted only for customers, guests, customer managers or trusted clients. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
@@ -1306,7 +1263,6 @@ export default class UsersApi {
       if (cartId === undefined || cartId === null) {
         throw new Error("Missing the required parameter 'cartId' when calling getCartDeliverymode");
       }
-
 
       let pathParams = {
         'userId': userId,
@@ -1348,7 +1304,6 @@ export default class UsersApi {
         });
     }
 
-
     /**
      * getCartDeliverymode
      * Sets the delivery mode with a given identifier for the cart.  Security: Permitted only for customers, guests, customer managers or trusted clients. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
@@ -1374,7 +1329,6 @@ export default class UsersApi {
       if (deliveryModeId === undefined || deliveryModeId === null) {
         throw new Error("Missing the required parameter 'deliveryModeId' when calling putCartDeliverymode");
       }
-
 
       let pathParams = {
         'userId': userId,
@@ -1415,7 +1369,6 @@ export default class UsersApi {
         });
     }
 
-
     /**
      * getCartDeliverymode
      * Removes the delivery mode from the cart.  Security: Permitted only for customers, guests, customer managers or trusted clients. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
@@ -1435,7 +1388,6 @@ export default class UsersApi {
       if (cartId === undefined || cartId === null) {
         throw new Error("Missing the required parameter 'cartId' when calling deleteCartDeliverymode");
       }
-
 
       let pathParams = {
         'userId': userId,
@@ -1474,7 +1426,6 @@ export default class UsersApi {
         });
     }
 
-
     /**
      * getCartDeliverymodes
      * Returns all delivery modes supported for the current base store and cart delivery address. A delivery address must be set for the cart, otherwise an empty list will be returned.  Security: Permitted only for customers, guests, customer managers or trusted clients. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
@@ -1497,7 +1448,6 @@ export default class UsersApi {
       if (cartId === undefined || cartId === null) {
         throw new Error("Missing the required parameter 'cartId' when calling getCartDeliverymodes");
       }
-
 
       let pathParams = {
         'userId': userId,
@@ -1539,7 +1489,6 @@ export default class UsersApi {
         });
     }
 
-
     /**
      * putCartEmail
      * Assigns an email to the cart. This step is required to make a guest checkout.  Security: Permitted only for client or trusted client 
@@ -1562,7 +1511,6 @@ export default class UsersApi {
       if (cartId === undefined || cartId === null) {
         throw new Error("Missing the required parameter 'cartId' when calling putCartEmail");
       }
-
 
       let pathParams = {
         'userId': userId,
@@ -1604,7 +1552,6 @@ export default class UsersApi {
         });
     }
 
-
     /**
      * getCartEntries
      * Returns cart entries.  Security: Anonymous user may access cart by its guid. Customer may access only own cart by its id. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
@@ -1627,7 +1574,6 @@ export default class UsersApi {
       if (cartId === undefined || cartId === null) {
         throw new Error("Missing the required parameter 'cartId' when calling getCartEntries");
       }
-
 
       let pathParams = {
         'userId': userId,
@@ -1669,7 +1615,6 @@ export default class UsersApi {
         });
     }
 
-
     /**
      * getCartEntries
      * Adds a product to the cart.  Security: Anonymous user may access cart by its guid. Customer may access only own cart by its id. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
@@ -1698,7 +1643,6 @@ export default class UsersApi {
       if (body === undefined || body === null) {
         throw new Error("Missing the required parameter 'body' when calling postCartEntries");
       }
-
 
       let pathParams = {
         'userId': userId,
@@ -1741,7 +1685,6 @@ export default class UsersApi {
         });
     }
 
-
     /**
      * getCartEntry
      * Returns the details of the cart entries.  Security: Anonymous user may access cart by its guid. Customer may access only own cart by its id. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
@@ -1770,7 +1713,6 @@ export default class UsersApi {
       if (entryNumber === undefined || entryNumber === null) {
         throw new Error("Missing the required parameter 'entryNumber' when calling getCartEntry");
       }
-
 
       let pathParams = {
         'userId': userId,
@@ -1814,7 +1756,6 @@ export default class UsersApi {
         });
     }
 
-
     /**
      * getCartEntry
      * Updates the quantity of a single cart entry and details of the store where the cart entry will be picked. Attributes not provided in request will be defined again (set to null or default)  Security: Anonymous user may access cart by its guid. Customer may access only own cart by its id. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
@@ -1849,7 +1790,6 @@ export default class UsersApi {
       if (body === undefined || body === null) {
         throw new Error("Missing the required parameter 'body' when calling putCartEntry");
       }
-
 
       let pathParams = {
         'userId': userId,
@@ -1894,7 +1834,6 @@ export default class UsersApi {
         });
     }
 
-
     /**
      * getCartEntry
      * Updates the quantity of a single cart entry and details of the store where the cart entry will be picked.  Security: Anonymous user may access cart by its guid. Customer may access only own cart by its id. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
@@ -1929,7 +1868,6 @@ export default class UsersApi {
       if (body === undefined || body === null) {
         throw new Error("Missing the required parameter 'body' when calling patchCartEntry");
       }
-
 
       let pathParams = {
         'userId': userId,
@@ -1974,7 +1912,6 @@ export default class UsersApi {
         });
     }
 
-
     /**
      * getCartEntry
      * Deletes cart entry.  Security: Anonymous user may access cart by its guid. Customer may access only own cart by its id. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
@@ -2000,7 +1937,6 @@ export default class UsersApi {
       if (entryNumber === undefined || entryNumber === null) {
         throw new Error("Missing the required parameter 'entryNumber' when calling deleteCartEntry");
       }
-
 
       let pathParams = {
         'userId': userId,
@@ -2041,7 +1977,6 @@ export default class UsersApi {
         });
     }
 
-
     /**
      * patchCartFlagForDeletion
      * Flags a cart for deletion (the cart doesn&#39;t have corresponding save cart attributes anymore). The cart is not actually deleted from the database. But with the removal of the saved cart attributes, this cart will be taken care of by the cart removal job just like any other cart. 
@@ -2064,7 +1999,6 @@ export default class UsersApi {
       if (cartId === undefined || cartId === null) {
         throw new Error("Missing the required parameter 'cartId' when calling patchCartFlagForDeletion");
       }
-
 
       let pathParams = {
         'userId': userId,
@@ -2106,7 +2040,6 @@ export default class UsersApi {
         });
     }
 
-
     /**
      * postCartPaymentdetail
      * Defines details of a new credit card payment details and assigns the payment to the cart.  Security: Permitted only for customers, guests, customer managers or trusted clients. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
@@ -2135,7 +2068,6 @@ export default class UsersApi {
       if (body === undefined || body === null) {
         throw new Error("Missing the required parameter 'body' when calling postCartPaymentdetail");
       }
-
 
       let pathParams = {
         'userId': userId,
@@ -2178,7 +2110,6 @@ export default class UsersApi {
         });
     }
 
-
     /**
      * postCartPaymentdetail
      * Sets credit card payment details for the cart.  Security: Permitted only for customers, guests, customer managers or trusted clients. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
@@ -2204,7 +2135,6 @@ export default class UsersApi {
       if (paymentDetailsId === undefined || paymentDetailsId === null) {
         throw new Error("Missing the required parameter 'paymentDetailsId' when calling putCartPaymentdetail");
       }
-
 
       let pathParams = {
         'userId': userId,
@@ -2245,7 +2175,6 @@ export default class UsersApi {
         });
     }
 
-
     /**
      * getCartPromotions
      * Return information about promotions applied on cart. Requests pertaining to promotions have been developed for the previous version of promotions and vouchers and therefore some of them are currently not compatible with the new promotion engine.  Security: Permitted only for non anonymous users or clients. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
@@ -2268,7 +2197,6 @@ export default class UsersApi {
       if (cartId === undefined || cartId === null) {
         throw new Error("Missing the required parameter 'cartId' when calling getCartPromotions");
       }
-
 
       let pathParams = {
         'userId': userId,
@@ -2310,7 +2238,6 @@ export default class UsersApi {
         });
     }
 
-
     /**
      * getCartPromotions
      * Enables the promotion for the order based on the promotionId defined for the cart. Requests pertaining to promotions have been developed for the previous version of promotions and vouchers and therefore some of them are currently not compatible with the new promotion engine.  Security: Anonymous user may access cart by its guid. Customer may access only own cart by its id. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
@@ -2336,7 +2263,6 @@ export default class UsersApi {
       if (promotionId === undefined || promotionId === null) {
         throw new Error("Missing the required parameter 'promotionId' when calling postCartPromotion");
       }
-
 
       let pathParams = {
         'userId': userId,
@@ -2377,7 +2303,6 @@ export default class UsersApi {
         });
     }
 
-
     /**
      * getCartPromotion
      * Return information about promotion with given id, applied on cart. Requests pertaining to promotions have been developed for the previous version of promotions and vouchers and therefore some of them are currently not compatible with the new promotion engine.  Security: Permitted only for non anonymous users or clients. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
@@ -2406,7 +2331,6 @@ export default class UsersApi {
       if (promotionId === undefined || promotionId === null) {
         throw new Error("Missing the required parameter 'promotionId' when calling getCartPromotion");
       }
-
 
       let pathParams = {
         'userId': userId,
@@ -2450,7 +2374,6 @@ export default class UsersApi {
         });
     }
 
-
     /**
      * getCartPromotion
      * Disables the promotion for the order based on the promotionId defined for the cart. Requests pertaining to promotions have been developed for the previous version of promotions and vouchers and therefore some of them are currently not compatible with the new promotion engine.  Security: Permitted only for trusted clients 
@@ -2476,7 +2399,6 @@ export default class UsersApi {
       if (promotionId === undefined || promotionId === null) {
         throw new Error("Missing the required parameter 'promotionId' when calling deleteCartPromotion");
       }
-
 
       let pathParams = {
         'userId': userId,
@@ -2517,7 +2439,6 @@ export default class UsersApi {
         });
     }
 
-
     /**
      * patchCartRestoresavedcart
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
@@ -2536,7 +2457,6 @@ export default class UsersApi {
       if (cartId === undefined || cartId === null) {
         throw new Error("Missing the required parameter 'cartId' when calling patchCartRestoresavedcart");
       }
-
 
       let pathParams = {
         'userId': userId,
@@ -2574,7 +2494,6 @@ export default class UsersApi {
         });
     }
 
-
     /**
      * patchSavedCart
      * Explicitly saves a cart 
@@ -2599,7 +2518,6 @@ export default class UsersApi {
       if (cartId === undefined || cartId === null) {
         throw new Error("Missing the required parameter 'cartId' when calling patchSavedCart");
       }
-
 
       let pathParams = {
         'userId': userId,
@@ -2645,7 +2563,6 @@ export default class UsersApi {
         });
     }
 
-
     /**
      * getSavedCart
      * Returns saved cart by it id for authenticated user 
@@ -2668,7 +2585,6 @@ export default class UsersApi {
       if (cartId === undefined || cartId === null) {
         throw new Error("Missing the required parameter 'cartId' when calling getSavedCart");
       }
-
 
       let pathParams = {
         'userId': userId,
@@ -2710,7 +2626,6 @@ export default class UsersApi {
         });
     }
 
-
     /**
      * getCartVouchers
      * Returns list of vouchers applied to the cart.  Security: Permitted only for non anonymous users or clients. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
@@ -2733,7 +2648,6 @@ export default class UsersApi {
       if (cartId === undefined || cartId === null) {
         throw new Error("Missing the required parameter 'cartId' when calling getCartVouchers");
       }
-
 
       let pathParams = {
         'userId': userId,
@@ -2775,7 +2689,6 @@ export default class UsersApi {
         });
     }
 
-
     /**
      * getCartVouchers
      * Applies a voucher based on the voucherId defined for the cart.  Security: Permitted only for non anonymous users or clients. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
@@ -2801,7 +2714,6 @@ export default class UsersApi {
       if (voucherId === undefined || voucherId === null) {
         throw new Error("Missing the required parameter 'voucherId' when calling postCartVoucher");
       }
-
 
       let pathParams = {
         'userId': userId,
@@ -2842,7 +2754,6 @@ export default class UsersApi {
         });
     }
 
-
     /**
      * deleteCartVouchers
      * Removes a voucher based on the voucherId defined for the current cart.  Security: Permitted only for non anonymous users or clients. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
@@ -2868,7 +2779,6 @@ export default class UsersApi {
       if (voucherId === undefined || voucherId === null) {
         throw new Error("Missing the required parameter 'voucherId' when calling deleteCartVouchers");
       }
-
 
       let pathParams = {
         'userId': userId,
@@ -2909,7 +2819,6 @@ export default class UsersApi {
         });
     }
 
-
     /**
      * getCustomergroups
      * Returns all customer groups of a customer.  Security: Permitted for customers, customer managers or trusted client. Trusted client or customer manager is able to impersonate as any other user and access data on their behalf. 
@@ -2926,7 +2835,6 @@ export default class UsersApi {
       if (userId === undefined || userId === null) {
         throw new Error("Missing the required parameter 'userId' when calling getCustomergroups");
       }
-
 
       let pathParams = {
         'userId': userId
@@ -2966,7 +2874,6 @@ export default class UsersApi {
         });
     }
 
-
     /**
      * putLogin
      * Changes customer&#39;s login.  Security: Permitted for trusted clients, customers and customer managers. Trusted client or customer manager is able to impersonate as any other user and change login on their behalf. 
@@ -2984,7 +2891,6 @@ export default class UsersApi {
       if (userId === undefined || userId === null) {
         throw new Error("Missing the required parameter 'userId' when calling putLogin");
       }
-
 
       let pathParams = {
         'userId': userId
@@ -3026,7 +2932,6 @@ export default class UsersApi {
         });
     }
 
-
     /**
      * UsersOrdersByUserId
      * Returns order history data for all orders placed by the specific user for the specific base store. Response contains orders search result displayed in several pages if needed.  Security: Allowed only for customers, customer managers, trusted clients Trusted client is able to impersonate as any customer and access their orders. 
@@ -3047,7 +2952,6 @@ export default class UsersApi {
       if (userId === undefined || userId === null) {
         throw new Error("Missing the required parameter 'userId' when calling getOrders");
       }
-
 
       let pathParams = {
         'userId': userId
@@ -3095,7 +2999,6 @@ export default class UsersApi {
         });
     }
 
-
     /**
      * UsersOrdersByUserId
      * Authorizes cart and places the order. Response contains the new order data.  Security: Allowed only for customers, customer managers, clients or trusted clients. Trusted client is able to impersonate as any customer and place order on his behalf 
@@ -3119,7 +3022,6 @@ export default class UsersApi {
       if (cartId === undefined || cartId === null) {
         throw new Error("Missing the required parameter 'cartId' when calling postOrder");
       }
-
 
       let pathParams = {
         'userId': userId
@@ -3163,7 +3065,6 @@ export default class UsersApi {
         });
     }
 
-
     /**
      * getOrder
      * Returns specific order details based on a specific order code. The response contains detailed order information.  Security: Allowed only for customers, customer managers, clients or trusted clients. Trusted client is able to impersonate as any customer and access their orders. 
@@ -3186,7 +3087,6 @@ export default class UsersApi {
       if (code === undefined || code === null) {
         throw new Error("Missing the required parameter 'code' when calling getOrder");
       }
-
 
       let pathParams = {
         'userId': userId,
@@ -3228,7 +3128,6 @@ export default class UsersApi {
         });
     }
 
-
     /**
      * putPassword
      * Changes customer&#39;s password.  Security: Permitted for trusted clients, customers and customer managers. Trusted client or customer manager may change someone&#39;s else password without knowing the old one. 
@@ -3246,7 +3145,6 @@ export default class UsersApi {
       if (userId === undefined || userId === null) {
         throw new Error("Missing the required parameter 'userId' when calling putPassword");
       }
-
 
       let pathParams = {
         'userId': userId
@@ -3288,7 +3186,6 @@ export default class UsersApi {
         });
     }
 
-
     /**
      * getPaymentdetail
      * Returns customer&#39;s credit card payment details for a given id.  Security: Permitted for customers, customer managers or trusted client. Trusted client or customer manager is able to impersonate as any other user and access data on their behalf. 
@@ -3311,7 +3208,6 @@ export default class UsersApi {
       if (paymentDetailsId === undefined || paymentDetailsId === null) {
         throw new Error("Missing the required parameter 'paymentDetailsId' when calling getPaymentdetail");
       }
-
 
       let pathParams = {
         'userId': userId,
@@ -3353,7 +3249,6 @@ export default class UsersApi {
         });
     }
 
-
     /**
      * getPaymentdetail
      * Updates existing customer&#39;s credit card payment info based on the payment info ID. Attributes not given in request will be defined again (set to null or default).  Security: Permitted for customers, customer managers or trusted client. Trusted client or customer manager is able to impersonate as any other user and access data on their behalf. 
@@ -3379,7 +3274,6 @@ export default class UsersApi {
       if (body === undefined || body === null) {
         throw new Error("Missing the required parameter 'body' when calling putPaymentdetail");
       }
-
 
       let pathParams = {
         'userId': userId,
@@ -3419,7 +3313,6 @@ export default class UsersApi {
         });
     }
 
-
     /**
      * getPaymentdetail
      * Updates existing customer&#39;s credit card payment details based on its ID. Only attributes given in request will be changed.  Security: Permitted for customers, customer managers or trusted client. Trusted client or customer manager is able to impersonate as any other user and access data on their behalf. 
@@ -3445,7 +3338,6 @@ export default class UsersApi {
       if (body === undefined || body === null) {
         throw new Error("Missing the required parameter 'body' when calling patchPaymentdetail");
       }
-
 
       let pathParams = {
         'userId': userId,
@@ -3485,7 +3377,6 @@ export default class UsersApi {
         });
     }
 
-
     /**
      * getPaymentdetail
      * Removes customer&#39;s credit card payment details based on its ID.  Security: Permitted for customers, customer managers or trusted client. Trusted client or customer manager is able to impersonate as any other user and access data on their behalf. 
@@ -3505,7 +3396,6 @@ export default class UsersApi {
       if (paymentDetailsId === undefined || paymentDetailsId === null) {
         throw new Error("Missing the required parameter 'paymentDetailsId' when calling deletePaymentdetail");
       }
-
 
       let pathParams = {
         'userId': userId,
@@ -3544,7 +3434,6 @@ export default class UsersApi {
         });
     }
 
-
     /**
      * getPaymentdetail
      * Return customer&#39;s credit card payment details list.  Security: Permitted for customers, customer managers or trusted client. Trusted client or customer manager is able to impersonate as any other user and access data on their behalf. 
@@ -3562,7 +3451,6 @@ export default class UsersApi {
       if (userId === undefined || userId === null) {
         throw new Error("Missing the required parameter 'userId' when calling getPaymentdetails");
       }
-
 
       let pathParams = {
         'userId': userId
@@ -3603,6 +3491,5 @@ export default class UsersApi {
           return response_and_data.data;
         });
     }
-
 
 }

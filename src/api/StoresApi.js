@@ -11,7 +11,6 @@
  *
  */
 
-
 import ApiClient from "../ApiClient";
 import PointOfServiceWsDTOModel from '../models/PointOfServiceWsDTOModel';
 import StoreFinderSearchPageWsDTOModel from '../models/StoreFinderSearchPageWsDTOModel';
@@ -34,8 +33,6 @@ export default class StoresApi {
         this.apiClient = apiClient || ApiClient.instance;
     }
 
-
-
     /**
      * Stores
      * Lists all store locations that are near the location specified in a query or based on latitude and longitude. 
@@ -54,7 +51,6 @@ export default class StoresApi {
     stores1WithHttpInfo(opts) {
       opts = opts || {};
       let postBody = null;
-
 
       let pathParams = {
       };
@@ -108,7 +104,6 @@ export default class StoresApi {
         });
     }
 
-
     /**
      * getStore
      * Returns store location based on its unique name. 
@@ -125,7 +120,6 @@ export default class StoresApi {
       if (storeId === undefined || storeId === null) {
         throw new Error("Missing the required parameter 'storeId' when calling getStore");
       }
-
 
       let pathParams = {
         'storeId': storeId
@@ -164,6 +158,5 @@ export default class StoresApi {
           return response_and_data.data;
         });
     }
-
 
 }

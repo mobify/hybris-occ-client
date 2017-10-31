@@ -11,7 +11,6 @@
  *
  */
 
-
 import ApiClient from "../ApiClient";
 import PromotionListWsDTOModel from '../models/PromotionListWsDTOModel';
 import PromotionWsDTOModel from '../models/PromotionWsDTOModel';
@@ -34,8 +33,6 @@ export default class PromotionsApi {
         this.apiClient = apiClient || ApiClient.instance;
     }
 
-
-
     /**
      * getPromotions
      * Returns promotions defined for a current base site. Requests pertaining to promotions have been developed for the previous version of promotions and vouchers and therefore some of them are currently not compatible with the new promotion engine.  Security: Permitted only for trusted client 
@@ -48,7 +45,6 @@ export default class PromotionsApi {
     promotionsWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = null;
-
 
       let pathParams = {
       };
@@ -90,7 +86,6 @@ export default class PromotionsApi {
         });
     }
 
-
     /**
      * getPromotion
      * Returns details of a single promotion specified by a promotion code. Requests pertaining to promotions have been developed for the previous version of promotions and vouchers and therefore some of them are currently not compatible with the new promotion engine.  Security: Permitted only for trusted client 
@@ -107,7 +102,6 @@ export default class PromotionsApi {
       if (code === undefined || code === null) {
         throw new Error("Missing the required parameter 'code' when calling getPromotion");
       }
-
 
       let pathParams = {
         'code': code
@@ -146,6 +140,5 @@ export default class PromotionsApi {
           return response_and_data.data;
         });
     }
-
 
 }

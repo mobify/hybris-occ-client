@@ -11,7 +11,6 @@
  *
  */
 
-
 import ApiClient from "../ApiClient";
 import CountryListWsDTOModel from '../models/CountryListWsDTOModel';
 
@@ -33,8 +32,6 @@ export default class DeliverycountriesApi {
         this.apiClient = apiClient || ApiClient.instance;
     }
 
-
-
     /**
      * getDeliverycountries
      * Lists all supported delivery countries for the current store. The list is sorted alphabetically. 
@@ -45,7 +42,6 @@ export default class DeliverycountriesApi {
     deliverycountriesWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = null;
-
 
       let pathParams = {
       };
@@ -82,6 +78,5 @@ export default class DeliverycountriesApi {
           return response_and_data.data;
         });
     }
-
 
 }
