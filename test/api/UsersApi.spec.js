@@ -618,10 +618,10 @@
     });
     
     
-    describe('getCustomergroups', function() {
-      it('should call getCustomergroups successfully', function(done) {
-        //uncomment below and update the code to test getCustomergroups
-        //instance.getCustomergroups(function(error) {
+    describe('getCustomerGroups', function() {
+      it('should call getCustomerGroups successfully', function(done) {
+        //uncomment below and update the code to test getCustomerGroups
+        //instance.getCustomerGroups(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

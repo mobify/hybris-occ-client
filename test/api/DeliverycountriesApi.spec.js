@@ -49,9 +49,9 @@
   }
 
   describe('DeliverycountriesApi', function() {
-    describe('getDeliverycountries', function() {
-      it('should call getDeliverycountries successfully', function(done) {
-        instance.getDeliverycountries()
+    describe('getDeliveryCountries', function() {
+      it('should call getDeliveryCountries successfully', function(done) {
+        instance.getDeliveryCountries()
           .then((res) => {
             expect(res.countries).to.eql(deliveryCountries);
             done();

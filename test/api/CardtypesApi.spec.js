@@ -48,9 +48,9 @@
   }
 
   describe('CardtypesApi', function() {
-    describe('getCardtypes', function() {
-      it('should call getCardtypes successfully', function(done) {
-        instance.getCardtypes()
+    describe('getCardTypes', function() {
+      it('should call getCardTypes successfully', function(done) {
+        instance.getCardTypes()
           .then((res) => {
             expect(res).to.have.property('cardTypes');
             done();

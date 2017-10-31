@@ -84,19 +84,19 @@ All URIs are relative to *http://api-example.hybris.com/rest/v2/DefaultParameter
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*Occ.CardtypesApi* | [**getCardtypes**](docs/CardtypesApi.md#getCardtypes) | **GET** /cardtypes | getCardtypes
+*Occ.CardtypesApi* | [**getCardTypes**](docs/CardtypesApi.md#getCardTypes) | **GET** /cardtypes | getCardTypes
 *Occ.CatalogsApi* | [**getCatalogs**](docs/CatalogsApi.md#getCatalogs) | **GET** /catalogs | getCatalogs
 *Occ.CatalogsApi* | [**getCatalog**](docs/CatalogsApi.md#getCatalog) | **GET** /catalogs/{catalogId} | getCatalog
 *Occ.CatalogsApi* | [**getCatalogsByCatalogIdAndCatalogVersionId**](docs/CatalogsApi.md#getCatalogsByCatalogIdAndCatalogVersionId) | **GET** /catalogs/{catalogId}/{catalogVersionId} | CatalogsByCatalogIdAndCatalogVersionId
 *Occ.CatalogsApi* | [**getCategory**](docs/CatalogsApi.md#getCategory) | **GET** /catalogs/{catalogId}/{catalogVersionId}/categories/{categoryId} | getCategory
 *Occ.CurrenciesApi* | [**getCurrencies**](docs/CurrenciesApi.md#currencies) | **GET** /currencies | getCurrencies
-*Occ.CustomergroupsApi* | [**getCustomergroups**](docs/CustomergroupsApi.md#getCustomergroups) | **GET** /customergroups | getCustomergroups
-*Occ.CustomergroupsApi* | [**postCustomergroup**](docs/CustomergroupsApi.md#postCustomergroup) | **POST** /customergroups | Customergroups
-*Occ.CustomergroupsApi* | [**getCustomergroup**](docs/CustomergroupsApi.md#getCustomergroup) | **GET** /customergroups/{groupId} | getCustomergroup
-*Occ.CustomergroupsApi* | [**putCustomergroupsMembers**](docs/CustomergroupsApi.md#putCustomergroupsMembers) | **PUT** /customergroups/{groupId}/members | putCustomergroupsMembers
-*Occ.CustomergroupsApi* | [**patchCustomergroupsMembers**](docs/CustomergroupsApi.md#patchCustomergroupsMembers) | **PATCH** /customergroups/{groupId}/members | patchCustomergroupsMembers
-*Occ.CustomergroupsApi* | [**deleteCustomergroupsMember**](docs/CustomergroupsApi.md#deleteCustomergroupsMember) | **DELETE** /customergroups/{groupId}/members/{userId} | deleteCustomergroupsMember
-*Occ.DeliverycountriesApi* | [**getDeliverycountries**](docs/DeliverycountriesApi.md#getDeliverycountries) | **GET** /deliverycountries | getDeliverycountries
+*Occ.CustomergroupsApi* | [**getCustomerGroups**](docs/CustomergroupsApi.md#getCustomerGroups) | **GET** /customergroups | getCustomerGroups
+*Occ.CustomergroupsApi* | [**postCustomerGroup**](docs/CustomergroupsApi.md#postCustomerGroup) | **POST** /customergroups | Customergroups
+*Occ.CustomergroupsApi* | [**getCustomerGroup**](docs/CustomergroupsApi.md#getCustomerGroup) | **GET** /customergroups/{groupId} | getCustomerGroup
+*Occ.CustomergroupsApi* | [**putCustomerGroupsMembers**](docs/CustomergroupsApi.md#putCustomerGroupsMembers) | **PUT** /customergroups/{groupId}/members | putCustomerGroupsMembers
+*Occ.CustomergroupsApi* | [**patchCustomerGroupsMembers**](docs/CustomergroupsApi.md#patchCustomerGroupsMembers) | **PATCH** /customergroups/{groupId}/members | patchCustomerGroupsMembers
+*Occ.CustomergroupsApi* | [**deleteCustomerGroupsMember**](docs/CustomergroupsApi.md#deleteCustomerGroupsMember) | **DELETE** /customergroups/{groupId}/members/{userId} | deleteCustomerGroupsMember
+*Occ.DeliverycountriesApi* | [**getDeliveryCountries**](docs/DeliverycountriesApi.md#getDeliveryCountries) | **GET** /deliverycountries | getDeliveryCountries
 *Occ.ExportApi* | [**exportProducts**](docs/ExportApi.md#exportProducts) | **GET** /export/products | ExportProducts
 *Occ.FeedsApi* | [**getOrdersStatusfeed**](docs/FeedsApi.md#getOrdersStatusfeed) | **GET** /feeds/orders/statusfeed | getOrdersStatusfeed
 *Occ.ForgottenpasswordtokensApi* | [**postForgottenPasswordToken**](docs/ForgottenpasswordtokensApi.md#postForgottenPasswordToken) | **POST** /forgottenpasswordtokens | postForgottenPasswordToken
@@ -160,7 +160,7 @@ Class | Method | HTTP request | Description
 *Occ.UsersApi* | [**getCartVouchers**](docs/UsersApi.md#getCartVouchers) | **GET** /users/{userId}/carts/{cartId}/vouchers | getCartVouchers
 *Occ.UsersApi* | [**postCartVoucher**](docs/UsersApi.md#postCartVoucher) | **POST** /users/{userId}/carts/{cartId}/vouchers | getCartVouchers
 *Occ.UsersApi* | [**deleteCartVouchers**](docs/UsersApi.md#deleteCartVouchers) | **DELETE** /users/{userId}/carts/{cartId}/vouchers/{voucherId} | deleteCartVouchers
-*Occ.UsersApi* | [**getCustomergroups*](docs/UsersApi.md#getCustomergroups) | **GET** /users/{userId}/customergroups | getCustomergroups
+*Occ.UsersApi* | [**getCustomerGroups*](docs/UsersApi.md#getCustomerGroups) | **GET** /users/{userId}/customergroups | getCustomerGroups
 *Occ.UsersApi* | [**putLogin**](docs/UsersApi.md#putLogin) | **PUT** /users/{userId}/login | putLogin
 *Occ.UsersApi* | [**getOrders**](docs/UsersApi.md#getOrders) | **GET** /users/{userId}/orders | UsersOrdersByUserId
 *Occ.UsersApi* | [**postOrder**](docs/UsersApi.md#postOrder) | **POST** /users/{userId}/orders | UsersOrdersByUserId

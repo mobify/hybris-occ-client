@@ -2911,7 +2911,7 @@ export default class UsersApi {
 
 
     /**
-     * getCustomergroups
+     * getCustomerGroups
      * Returns all customer groups of a customer.  Security: Permitted for customers, customer managers or trusted client. Trusted client or customer manager is able to impersonate as any other user and access data on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {Object} opts Optional parameters
@@ -2924,7 +2924,7 @@ export default class UsersApi {
 
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling getCustomergroups");
+        throw new Error("Missing the required parameter 'userId' when calling getCustomerGroups");
       }
 
 
@@ -2952,14 +2952,14 @@ export default class UsersApi {
     }
 
     /**
-     * getCustomergroups
+     * getCustomerGroups
      * Returns all customer groups of a customer.  Security: Permitted for customers, customer managers or trusted client. Trusted client or customer manager is able to impersonate as any other user and access data on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in the response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/UserGroupListWsDTOModel}
      */
-    getCustomergroups(userId, opts) {
+    getCustomerGroups(userId, opts) {
       return this.usersCustomergroupsByUserIdWithHttpInfo(userId, opts)
         .then(function(response_and_data) {
           return response_and_data.data;

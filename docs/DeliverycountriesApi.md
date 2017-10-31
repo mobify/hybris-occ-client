@@ -4,7 +4,7 @@ All URIs are relative to *http://api-example.hybris.com/rest/v2/DefaultParameter
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getDeliverycountries**](DeliverycountriesApi.md#getDeliverycountries) | **GET** /deliverycountries | getDeliverycountries
+[**getDeliveryCountries**](DeliverycountriesApi.md#getDeliveryCountries) | **GET** /deliverycountries | getDeliveryCountries
 
 
 <a name="deliverycountries"></a>
@@ -29,7 +29,7 @@ let apiInstance = new Occ.DeliverycountriesApi();
 let opts = { 
   'fields': "fields_example" // String | Response configuration (list of fields, which should be returned in response)
 };
-apiInstance.getDeliverycountries(opts).then((data) => {
+apiInstance.getDeliveryCountries(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);

@@ -48,7 +48,7 @@ Method | HTTP request | Description
 [**getCartVouchers**](UsersApi.md#getCartVouchers) | **GET** /users/{userId}/carts/{cartId}/vouchers | getCartVouchers
 [**postCartVoucher**](UsersApi.md#postCartVoucher) | **POST** /users/{userId}/carts/{cartId}/vouchers | getCartVouchers
 [**deleteCartVouchers**](UsersApi.md#deleteCartVouchers) | **DELETE** /users/{userId}/carts/{cartId}/vouchers/{voucherId} | deleteCartVouchers
-[**getCustomergroups**](UsersApi.md#getCustomergroups) | **GET** /users/{userId}/customergroups | getCustomergroups
+[**getCustomerGroups**](UsersApi.md#getCustomerGroups) | **GET** /users/{userId}/customergroups | getCustomerGroups
 [**putLogin**](UsersApi.md#putLogin) | **PUT** /users/{userId}/login | putLogin
 [**getOrders**](UsersApi.md#getOrders) | **GET** /users/{userId}/orders | UsersOrdersByUserId
 [**postOrder**](UsersApi.md#postOrder) | **POST** /users/{userId}/orders | UsersOrdersByUserId
@@ -2454,11 +2454,11 @@ null (empty response body)
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="getCustomergroups"></a>
-# **getCustomergroups**
-> UserGroupListWsDTOModel getCustomergroups(userId, opts)
+<a name="getCustomerGroups"></a>
+# **getCustomerGroups**
+> UserGroupListWsDTOModel getCustomerGroups(userId, opts)
 
-getCustomergroups
+getCustomerGroups
 
 Returns all customer groups of a customer.  Security: Permitted for customers, customer managers or trusted client. Trusted client or customer manager is able to impersonate as any other user and access data on their behalf. 
 
@@ -2478,7 +2478,7 @@ let userId = "userId_example"; // String | User identifier or one of the literal
 let opts = { 
   'fields': "fields_example" // String | Response configuration (list of fields, which should be returned in the response)
 };
-apiInstance.getCustomergroups(userId, opts).then((data) => {
+apiInstance.getCustomerGroups(userId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
