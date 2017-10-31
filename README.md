@@ -148,13 +148,13 @@ Class | Method | HTTP request | Description
 *Occ.UsersApi* | [**patchCartEntry**](docs/UsersApi.md#patchCartEntry) | **PATCH** /users/{userId}/carts/{cartId}/entries/{entryNumber} | getCartEntry
 *Occ.UsersApi* | [**deleteCartEntry**](docs/UsersApi.md#deleteCartEntry) | **DELETE** /users/{userId}/carts/{cartId}/entries/{entryNumber} | getCartEntry
 *Occ.UsersApi* | [**patchCartFlagForDeletion**](docs/UsersApi.md#patchCartFlagForDeletion) | **PATCH** /users/{userId}/carts/{cartId}/flagForDeletion | patchCartFlagForDeletion
-*Occ.UsersApi* | [**postCartPaymentdetail**](docs/UsersApi.md#postCartPaymentdetail) | **POST** /users/{userId}/carts/{cartId}/paymentdetails | postCartPaymentdetail
-*Occ.UsersApi* | [**putCartPaymentdetail**](docs/UsersApi.md#putCartPaymentdetail) | **PUT** /users/{userId}/carts/{cartId}/paymentdetails | postCartPaymentdetail
+*Occ.UsersApi* | [**postCartPaymentDetail**](docs/UsersApi.md#postCartPaymentDetail) | **POST** /users/{userId}/carts/{cartId}/paymentdetails | postCartPaymentDetail
+*Occ.UsersApi* | [**putCartPaymentDetail**](docs/UsersApi.md#putCartPaymentDetail) | **PUT** /users/{userId}/carts/{cartId}/paymentdetails | postCartPaymentDetail
 *Occ.UsersApi* | [**getCartPromotions**](docs/UsersApi.md#getCartPromotions) | **GET** /users/{userId}/carts/{cartId}/promotions | getCartPromotions
 *Occ.UsersApi* | [**postCartPromotion**](docs/UsersApi.md#postCartPromotion) | **POST** /users/{userId}/carts/{cartId}/promotions | getCartPromotions
 *Occ.UsersApi* | [**getCartPromotion**](docs/UsersApi.md#getCartPromotion) | **GET** /users/{userId}/carts/{cartId}/promotions/{promotionId} | getCartPromotion
 *Occ.UsersApi* | [**deleteCartPromotion**](docs/UsersApi.md#deleteCartPromotion) | **DELETE** /users/{userId}/carts/{cartId}/promotions/{promotionId} | getCartPromotion
-*Occ.UsersApi* | [**patchCartRestoresavedcart**](docs/UsersApi.md#patchCartRestoresavedcart) | **PATCH** /users/{userId}/carts/{cartId}/restoresavedcart | patchCartRestoresavedcart
+*Occ.UsersApi* | [**patchCartRestoreSavedCart**](docs/UsersApi.md#patchCartRestoreSavedCart) | **PATCH** /users/{userId}/carts/{cartId}/restoresavedcart | patchCartRestoreSavedCart
 *Occ.UsersApi* | [**patchSavedCart**](docs/UsersApi.md#patchSavedCart) | **PATCH** /users/{userId}/carts/{cartId}/save | patchSavedCart
 *Occ.UsersApi* | [**getSavedCart**](docs/UsersApi.md#getSavedCart) | **GET** /users/{userId}/carts/{cartId}/savedcart | getSavedCart
 *Occ.UsersApi* | [**getCartVouchers**](docs/UsersApi.md#getCartVouchers) | **GET** /users/{userId}/carts/{cartId}/vouchers | getCartVouchers
@@ -166,11 +166,11 @@ Class | Method | HTTP request | Description
 *Occ.UsersApi* | [**postOrder**](docs/UsersApi.md#postOrder) | **POST** /users/{userId}/orders | UsersOrdersByUserId
 *Occ.UsersApi* | [**getOrder**](docs/UsersApi.md#getOrder) | **GET** /users/{userId}/orders/{code} | getOrder
 *Occ.UsersApi* | [**putPassword**](docs/UsersApi.md#putPassword) | **PUT** /users/{userId}/password | putPassword
-*Occ.UsersApi* | [**getPaymentdetail**](docs/UsersApi.md#getPaymentdetail) | **GET** /users/{userId}/paymentdetails/{paymentDetailsId} | getPaymentdetail
-*Occ.UsersApi* | [**putPaymentdetail**](docs/UsersApi.md#putPaymentdetail) | **PUT** /users/{userId}/paymentdetails/{paymentDetailsId} | getPaymentdetail
-*Occ.UsersApi* | [**patchPaymentdetail**](docs/UsersApi.md#patchPaymentdetail) | **PATCH** /users/{userId}/paymentdetails/{paymentDetailsId} | getPaymentdetail
-*Occ.UsersApi* | [**deletePaymentdetail**](docs/UsersApi.md#deletePaymentdetail) | **DELETE** /users/{userId}/paymentdetails/{paymentDetailsId} | getPaymentdetail
-*Occ.UsersApi* | [**getPaymentdetails**](docs/UsersApi.md#getPaymentdetails) | **GET** /users/{userId}/paymentdetails | getPaymentdetail
+*Occ.UsersApi* | [**getPaymentDetail**](docs/UsersApi.md#getPaymentDetail) | **GET** /users/{userId}/paymentdetails/{paymentDetailsId} | getPaymentDetail
+*Occ.UsersApi* | [**putPaymentDetail**](docs/UsersApi.md#putPaymentDetail) | **PUT** /users/{userId}/paymentdetails/{paymentDetailsId} | getPaymentDetail
+*Occ.UsersApi* | [**patchPaymentDetail**](docs/UsersApi.md#patchPaymentDetail) | **PATCH** /users/{userId}/paymentdetails/{paymentDetailsId} | getPaymentDetail
+*Occ.UsersApi* | [**deletePaymentDetail**](docs/UsersApi.md#deletePaymentDetail) | **DELETE** /users/{userId}/paymentdetails/{paymentDetailsId} | getPaymentDetail
+*Occ.UsersApi* | [**getPaymentDetails**](docs/UsersApi.md#getPaymentDetails) | **GET** /users/{userId}/paymentdetails | getPaymentDetail
 *Occ.VouchersApi* | [**getVoucher**](docs/VouchersApi.md#getVoucher) | **GET** /vouchers/{code} | getVoucher
 
 

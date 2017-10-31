@@ -401,10 +401,10 @@
 
     // // POST new credit card add to cart
     // // payment info is invalid?
-    // describe('postCartPaymentdetail', function() {
-    //   it('should call postCartPaymentdetail successfully', function(done) {
+    // describe('postCartPaymentDetail', function() {
+    //   it('should call postCartPaymentDetail successfully', function(done) {
     //     console.log(payment)
-    //     instance.postCartPaymentdetail(user.uid, cartId, payment)
+    //     instance.postCartPaymentDetail(user.uid, cartId, payment)
     //       .then((res) => {
     //         console.log(res)
     //         expect(res.quantity).to.equal(updatedQuantity)
@@ -415,10 +415,10 @@
     // });
 
     // // PUT set payment details
-    // describe('putCartPaymentdetail', function() {
-    //   it('should call putCartPaymentdetail successfully', function(done) {
-    //     //uncomment below and update the code to test putCartPaymentdetail
-    //     //instance.putCartPaymentdetail(function(error) {
+    // describe('putCartPaymentDetail', function() {
+    //   it('should call putCartPaymentDetail successfully', function(done) {
+    //     //uncomment below and update the code to test putCartPaymentDetail
+    //     //instance.putCartPaymentDetail(function(error) {
     //     //  if (error) throw error;
     //     //expect().to.be();
     //     //});
@@ -586,10 +586,10 @@
         done();
       });
     });
-    describe('patchCartRestoresavedcart', function() {
-      it('should call patchCartRestoresavedcart successfully', function(done) {
-        //uncomment below and update the code to test patchCartRestoresavedcart
-        //instance.patchCartRestoresavedcart(function(error) {
+    describe('patchCartRestoreSavedCart', function() {
+      it('should call patchCartRestoreSavedCart successfully', function(done) {
+        //uncomment below and update the code to test patchCartRestoreSavedCart
+        //instance.patchCartRestoreSavedCart(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -639,50 +639,50 @@
       });
     });
 
-    // describe('getPaymentdetail', function() {
-    //   it('should call getPaymentdetail successfully', function(done) {
-    //     //uncomment below and update the code to test getPaymentdetail
-    //     //instance.getPaymentdetail(function(error) {
+    // describe('getPaymentDetail', function() {
+    //   it('should call getPaymentDetail successfully', function(done) {
+    //     //uncomment below and update the code to test getPaymentDetail
+    //     //instance.getPaymentDetail(function(error) {
     //     //  if (error) throw error;
     //     //expect().to.be();
     //     //});
     //     done();
     //   });
     // });
-    // describe('putPaymentdetail', function() {
-    //   it('should call putPaymentdetail successfully', function(done) {
-    //     //uncomment below and update the code to test putPaymentdetail
-    //     //instance.putPaymentdetail(function(error) {
+    // describe('putPaymentDetail', function() {
+    //   it('should call putPaymentDetail successfully', function(done) {
+    //     //uncomment below and update the code to test putPaymentDetail
+    //     //instance.putPaymentDetail(function(error) {
     //     //  if (error) throw error;
     //     //expect().to.be();
     //     //});
     //     done();
     //   });
     // });
-    // describe('patchPaymentdetail', function() {
-    //   it('should call patchPaymentdetail successfully', function(done) {
-    //     //uncomment below and update the code to test patchPaymentdetail
-    //     //instance.patchPaymentdetail(function(error) {
+    // describe('patchPaymentDetail', function() {
+    //   it('should call patchPaymentDetail successfully', function(done) {
+    //     //uncomment below and update the code to test patchPaymentDetail
+    //     //instance.patchPaymentDetail(function(error) {
     //     //  if (error) throw error;
     //     //expect().to.be();
     //     //});
     //     done();
     //   });
     // });
-    // describe('deletePaymentdetail', function() {
-    //   it('should call deletePaymentdetail successfully', function(done) {
-    //     //uncomment below and update the code to test deletePaymentdetail
-    //     //instance.deletePaymentdetail(function(error) {
+    // describe('deletePaymentDetail', function() {
+    //   it('should call deletePaymentDetail successfully', function(done) {
+    //     //uncomment below and update the code to test deletePaymentDetail
+    //     //instance.deletePaymentDetail(function(error) {
     //     //  if (error) throw error;
     //     //expect().to.be();
     //     //});
     //     done();
     //   });
     // });
-    // describe('getPaymentdetails', function() {
-    //   it('should call getPaymentdetails successfully', function(done) {
-    //     //uncomment below and update the code to test getPaymentdetails
-    //     //instance.getPaymentdetails(function(error) {
+    // describe('getPaymentDetails', function() {
+    //   it('should call getPaymentDetails successfully', function(done) {
+    //     //uncomment below and update the code to test getPaymentDetails
+    //     //instance.getPaymentDetails(function(error) {
     //     //  if (error) throw error;
     //     //expect().to.be();
     //     //});
