@@ -11,13 +11,8 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
 import ProductWsDTOModel from './ProductWsDTOModel';
-
-
-
-
 
 /**
 * The ProductListWsDTOModel model module.
@@ -33,13 +28,6 @@ export default class ProductListWsDTOModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -52,10 +40,6 @@ export default class ProductListWsDTOModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new ProductListWsDTOModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('products')) {
                 obj['products'] = ApiClient.convertToType(data['products'], [ProductWsDTOModel]);
@@ -110,13 +94,4 @@ export default class ProductListWsDTOModel {
     */
     currentPage = undefined;
 
-
-
-
-
-
-
-
 }
-
-

@@ -11,13 +11,8 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
 import AddressWsDTOModel from './AddressWsDTOModel';
-
-
-
-
 
 /**
 * The AddressListWsDTOModel model module.
@@ -33,13 +28,6 @@ export default class AddressListWsDTOModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -52,10 +40,6 @@ export default class AddressListWsDTOModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new AddressListWsDTOModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('addresses')) {
                 obj['addresses'] = ApiClient.convertToType(data['addresses'], [AddressWsDTOModel]);
@@ -70,13 +54,4 @@ export default class AddressListWsDTOModel {
     */
     addresses = undefined;
 
-
-
-
-
-
-
-
 }
-
-

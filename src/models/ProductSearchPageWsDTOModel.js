@@ -11,7 +11,6 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
 import BreadcrumbWsDTOModel from './BreadcrumbWsDTOModel';
 import FacetWsDTOModel from './FacetWsDTOModel';
@@ -20,10 +19,6 @@ import ProductWsDTOModel from './ProductWsDTOModel';
 import SearchStateWsDTOModel from './SearchStateWsDTOModel';
 import SortWsDTOModel from './SortWsDTOModel';
 import SpellingSuggestionWsDTOModel from './SpellingSuggestionWsDTOModel';
-
-
-
-
 
 /**
 * The ProductSearchPageWsDTOModel model module.
@@ -40,13 +35,6 @@ export default class ProductSearchPageWsDTOModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -59,10 +47,6 @@ export default class ProductSearchPageWsDTOModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new ProductSearchPageWsDTOModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('freeTextSearch')) {
                 obj['freeTextSearch'] = ApiClient.convertToType(data['freeTextSearch'], 'String');
@@ -146,13 +130,4 @@ export default class ProductSearchPageWsDTOModel {
     */
     facets = undefined;
 
-
-
-
-
-
-
-
 }
-
-

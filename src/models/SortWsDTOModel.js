@@ -11,12 +11,7 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
-
-
-
-
 
 /**
 * The SortWsDTOModel model module.
@@ -32,13 +27,6 @@ export default class SortWsDTOModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -51,10 +39,6 @@ export default class SortWsDTOModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new SortWsDTOModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('code')) {
                 obj['code'] = ApiClient.convertToType(data['code'], 'String');
@@ -85,13 +69,4 @@ export default class SortWsDTOModel {
     */
     selected = undefined;
 
-
-
-
-
-
-
-
 }
-
-

@@ -11,15 +11,10 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
 import AddressWsDTOModel from './AddressWsDTOModel';
 import CurrencyWsDTOModel from './CurrencyWsDTOModel';
 import LanguageWsDTOModel from './LanguageWsDTOModel';
-
-
-
-
 
 /**
 * The UserWsDTOModel model module.
@@ -35,13 +30,6 @@ export default class UserWsDTOModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -54,10 +42,6 @@ export default class UserWsDTOModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new UserWsDTOModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('defaultAddress')) {
                 obj['defaultAddress'] = AddressWsDTOModel.constructFromObject(data['defaultAddress']);
@@ -141,13 +125,4 @@ export default class UserWsDTOModel {
     */
     name = undefined;
 
-
-
-
-
-
-
-
 }
-
-

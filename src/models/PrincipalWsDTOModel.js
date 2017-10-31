@@ -11,12 +11,7 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
-
-
-
-
 
 /**
 * The PrincipalWsDTOModel model module.
@@ -32,13 +27,6 @@ export default class PrincipalWsDTOModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -51,10 +39,6 @@ export default class PrincipalWsDTOModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new PrincipalWsDTOModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('uid')) {
                 obj['uid'] = ApiClient.convertToType(data['uid'], 'String');
@@ -77,13 +61,4 @@ export default class PrincipalWsDTOModel {
     */
     name = undefined;
 
-
-
-
-
-
-
-
 }
-
-

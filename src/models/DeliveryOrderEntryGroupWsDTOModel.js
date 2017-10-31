@@ -11,15 +11,10 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
 import AddressWsDTOModel from './AddressWsDTOModel';
 import OrderEntryWsDTOModel from './OrderEntryWsDTOModel';
 import PriceWsDTOModel from './PriceWsDTOModel';
-
-
-
-
 
 /**
 * The DeliveryOrderEntryGroupWsDTOModel model module.
@@ -35,13 +30,6 @@ export default class DeliveryOrderEntryGroupWsDTOModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -54,10 +42,6 @@ export default class DeliveryOrderEntryGroupWsDTOModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new DeliveryOrderEntryGroupWsDTOModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('deliveryAddress')) {
                 obj['deliveryAddress'] = AddressWsDTOModel.constructFromObject(data['deliveryAddress']);
@@ -94,13 +78,4 @@ export default class DeliveryOrderEntryGroupWsDTOModel {
     */
     quantity = undefined;
 
-
-
-
-
-
-
-
 }
-
-

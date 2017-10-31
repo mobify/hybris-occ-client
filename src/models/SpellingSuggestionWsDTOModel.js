@@ -11,12 +11,7 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
-
-
-
-
 
 /**
 * The SpellingSuggestionWsDTOModel model module.
@@ -32,13 +27,6 @@ export default class SpellingSuggestionWsDTOModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -51,10 +39,6 @@ export default class SpellingSuggestionWsDTOModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new SpellingSuggestionWsDTOModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('suggestion')) {
                 obj['suggestion'] = ApiClient.convertToType(data['suggestion'], 'String');
@@ -77,13 +61,4 @@ export default class SpellingSuggestionWsDTOModel {
     */
     query = undefined;
 
-
-
-
-
-
-
-
 }
-
-

@@ -11,13 +11,8 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
 import CartWsDTOModel from './CartWsDTOModel';
-
-
-
-
 
 /**
 * The SaveCartResultWsDTOModel model module.
@@ -33,13 +28,6 @@ export default class SaveCartResultWsDTOModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -53,10 +41,6 @@ export default class SaveCartResultWsDTOModel {
         if (data) {
             obj = obj || new SaveCartResultWsDTOModel();
 
-            
-            
-            
-
             if (data.hasOwnProperty('savedCartData')) {
                 obj['savedCartData'] = CartWsDTOModel.constructFromObject(data['savedCartData']);
             }
@@ -69,13 +53,4 @@ export default class SaveCartResultWsDTOModel {
     */
     savedCartData = undefined;
 
-
-
-
-
-
-
-
 }
-
-

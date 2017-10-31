@@ -11,12 +11,7 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
-
-
-
-
 
 /**
 * The MemberModel model module.
@@ -32,13 +27,6 @@ export default class MemberModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -51,10 +39,6 @@ export default class MemberModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new MemberModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('uid')) {
                 obj['uid'] = ApiClient.convertToType(data['uid'], 'String');
@@ -69,13 +53,4 @@ export default class MemberModel {
     */
     uid = undefined;
 
-
-
-
-
-
-
-
 }
-
-

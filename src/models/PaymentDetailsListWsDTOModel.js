@@ -11,13 +11,8 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
 import PaymentDetailsWsDTOModel from './PaymentDetailsWsDTOModel';
-
-
-
-
 
 /**
 * The PaymentDetailsListWsDTOModel model module.
@@ -33,13 +28,6 @@ export default class PaymentDetailsListWsDTOModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -52,10 +40,6 @@ export default class PaymentDetailsListWsDTOModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new PaymentDetailsListWsDTOModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('payments')) {
                 obj['payments'] = ApiClient.convertToType(data['payments'], [PaymentDetailsWsDTOModel]);
@@ -70,13 +54,4 @@ export default class PaymentDetailsListWsDTOModel {
     */
     payments = undefined;
 
-
-
-
-
-
-
-
 }
-
-

@@ -11,15 +11,10 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
 import OrderEntryWsDTOModel from './OrderEntryWsDTOModel';
 import PointOfServiceWsDTOModel from './PointOfServiceWsDTOModel';
 import PriceWsDTOModel from './PriceWsDTOModel';
-
-
-
-
 
 /**
 * The PickupOrderEntryGroupWsDTOModel model module.
@@ -35,13 +30,6 @@ export default class PickupOrderEntryGroupWsDTOModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -54,10 +42,6 @@ export default class PickupOrderEntryGroupWsDTOModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new PickupOrderEntryGroupWsDTOModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('deliveryPointOfService')) {
                 obj['deliveryPointOfService'] = PointOfServiceWsDTOModel.constructFromObject(data['deliveryPointOfService']);
@@ -102,13 +86,4 @@ export default class PickupOrderEntryGroupWsDTOModel {
     */
     quantity = undefined;
 
-
-
-
-
-
-
-
 }
-
-

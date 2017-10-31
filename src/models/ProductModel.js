@@ -11,12 +11,7 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
-
-
-
-
 
 /**
 * The ProductModel model module.
@@ -32,13 +27,6 @@ export default class ProductModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -51,10 +39,6 @@ export default class ProductModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new ProductModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('code')) {
                 obj['code'] = ApiClient.convertToType(data['code'], 'String');
@@ -69,13 +53,4 @@ export default class ProductModel {
     */
     code = undefined;
 
-
-
-
-
-
-
-
 }
-
-

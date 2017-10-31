@@ -11,7 +11,6 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
 import BaseOptionWsDTOModel from './BaseOptionWsDTOModel';
 import CategoryWsDTOModel from './CategoryWsDTOModel';
@@ -23,10 +22,6 @@ import PromotionWsDTOModel from './PromotionWsDTOModel';
 import ReviewWsDTOModel from './ReviewWsDTOModel';
 import StockWsDTOModel from './StockWsDTOModel';
 import VariantOptionWsDTOModel from './VariantOptionWsDTOModel';
-
-
-
-
 
 /**
 * The ProductWsDTOModel model module.
@@ -42,13 +37,6 @@ export default class ProductWsDTOModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -61,10 +49,6 @@ export default class ProductWsDTOModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new ProductWsDTOModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('code')) {
                 obj['code'] = ApiClient.convertToType(data['code'], 'String');
@@ -261,13 +245,4 @@ export default class ProductWsDTOModel {
     */
     volumePrices = undefined;
 
-
-
-
-
-
-
-
 }
-
-

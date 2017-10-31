@@ -11,14 +11,9 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
 import CurrencyModel from './CurrencyModel';
 import LanguageModel from './LanguageModel';
-
-
-
-
 
 /**
 * The UserWsDTO286Model model module.
@@ -34,13 +29,6 @@ export default class UserWsDTO286Model {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -53,10 +41,6 @@ export default class UserWsDTO286Model {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new UserWsDTO286Model();
-
-            
-            
-            
 
             if (data.hasOwnProperty('titleCode')) {
                 obj['titleCode'] = ApiClient.convertToType(data['titleCode'], 'String');
@@ -101,13 +85,4 @@ export default class UserWsDTO286Model {
     */
     language = undefined;
 
-
-
-
-
-
-
-
 }
-
-

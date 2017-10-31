@@ -11,12 +11,7 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
-
-
-
-
 
 /**
 * The VariantCategoryWsDTOModel model module.
@@ -32,13 +27,6 @@ export default class VariantCategoryWsDTOModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -51,10 +39,6 @@ export default class VariantCategoryWsDTOModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new VariantCategoryWsDTOModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
@@ -85,13 +69,4 @@ export default class VariantCategoryWsDTOModel {
     */
     priority = undefined;
 
-
-
-
-
-
-
-
 }
-
-

@@ -11,15 +11,10 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
 import PaginationWsDTOModel from './PaginationWsDTOModel';
 import PointOfServiceWsDTOModel from './PointOfServiceWsDTOModel';
 import SortWsDTOModel from './SortWsDTOModel';
-
-
-
-
 
 /**
 * The StoreFinderSearchPageWsDTOModel model module.
@@ -35,13 +30,6 @@ export default class StoreFinderSearchPageWsDTOModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -54,10 +42,6 @@ export default class StoreFinderSearchPageWsDTOModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new StoreFinderSearchPageWsDTOModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('stores')) {
                 obj['stores'] = ApiClient.convertToType(data['stores'], [PointOfServiceWsDTOModel]);
@@ -143,13 +127,4 @@ export default class StoreFinderSearchPageWsDTOModel {
     */
     boundWestLongitude = undefined;
 
-
-
-
-
-
-
-
 }
-
-

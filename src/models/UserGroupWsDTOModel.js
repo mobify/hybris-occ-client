@@ -11,13 +11,8 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
 import MemberModel from './MemberModel';
-
-
-
-
 
 /**
 * The UserGroupWsDTOModel model module.
@@ -33,13 +28,6 @@ export default class UserGroupWsDTOModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -52,10 +40,6 @@ export default class UserGroupWsDTOModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new UserGroupWsDTOModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('members')) {
                 obj['members'] = ApiClient.convertToType(data['members'], [MemberModel]);
@@ -86,13 +70,4 @@ export default class UserGroupWsDTOModel {
     */
     name = undefined;
 
-
-
-
-
-
-
-
 }
-
-

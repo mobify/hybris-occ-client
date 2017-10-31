@@ -11,12 +11,7 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
-
-
-
-
 
 /**
 * The TimeWsDTOModel model module.
@@ -32,13 +27,6 @@ export default class TimeWsDTOModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -51,10 +39,6 @@ export default class TimeWsDTOModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new TimeWsDTOModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('hour')) {
                 obj['hour'] = ApiClient.convertToType(data['hour'], 'String');
@@ -85,13 +69,4 @@ export default class TimeWsDTOModel {
     */
     formattedHour = undefined;
 
-
-
-
-
-
-
-
 }
-
-

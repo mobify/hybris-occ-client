@@ -11,14 +11,9 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
 import CountryModel from './CountryModel';
 import RegionModel from './RegionModel';
-
-
-
-
 
 /**
 * The BillingAddressModel model module.
@@ -34,13 +29,6 @@ export default class BillingAddressModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -53,10 +41,6 @@ export default class BillingAddressModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new BillingAddressModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('titleCode')) {
                 obj['titleCode'] = ApiClient.convertToType(data['titleCode'], 'String');
@@ -133,13 +117,4 @@ export default class BillingAddressModel {
     */
     country = undefined;
 
-
-
-
-
-
-
-
 }
-
-

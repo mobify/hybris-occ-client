@@ -11,13 +11,8 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
 import CountryWsDTOModel from './CountryWsDTOModel';
-
-
-
-
 
 /**
 * The CountryListWsDTOModel model module.
@@ -33,13 +28,6 @@ export default class CountryListWsDTOModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -52,10 +40,6 @@ export default class CountryListWsDTOModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new CountryListWsDTOModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('countries')) {
                 obj['countries'] = ApiClient.convertToType(data['countries'], [CountryWsDTOModel]);
@@ -70,13 +54,4 @@ export default class CountryListWsDTOModel {
     */
     countries = undefined;
 
-
-
-
-
-
-
-
 }
-
-

@@ -11,12 +11,7 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
-
-
-
-
 
 /**
 * The ReviewWsDTO208Model model module.
@@ -32,13 +27,6 @@ export default class ReviewWsDTO208Model {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -51,10 +39,6 @@ export default class ReviewWsDTO208Model {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new ReviewWsDTO208Model();
-
-            
-            
-            
 
             if (data.hasOwnProperty('headline')) {
                 obj['headline'] = ApiClient.convertToType(data['headline'], 'String');
@@ -101,13 +85,4 @@ export default class ReviewWsDTO208Model {
     */
     alias = undefined;
 
-
-
-
-
-
-
-
 }
-
-

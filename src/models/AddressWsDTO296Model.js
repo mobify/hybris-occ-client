@@ -11,14 +11,9 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
 import CountryModel from './CountryModel';
 import RegionModel from './RegionModel';
-
-
-
-
 
 /**
 * The AddressWsDTO296Model model module.
@@ -34,13 +29,6 @@ export default class AddressWsDTO296Model {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -53,10 +41,6 @@ export default class AddressWsDTO296Model {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new AddressWsDTO296Model();
-
-            
-            
-            
 
             if (data.hasOwnProperty('titleCode')) {
                 obj['titleCode'] = ApiClient.convertToType(data['titleCode'], 'String');
@@ -133,13 +117,4 @@ export default class AddressWsDTO296Model {
     */
     country = undefined;
 
-
-
-
-
-
-
-
 }
-
-

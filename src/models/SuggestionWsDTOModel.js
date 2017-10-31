@@ -11,12 +11,7 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
-
-
-
-
 
 /**
 * The SuggestionWsDTOModel model module.
@@ -32,13 +27,6 @@ export default class SuggestionWsDTOModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -51,10 +39,6 @@ export default class SuggestionWsDTOModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new SuggestionWsDTOModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('value')) {
                 obj['value'] = ApiClient.convertToType(data['value'], 'String');
@@ -69,13 +53,4 @@ export default class SuggestionWsDTOModel {
     */
     value = undefined;
 
-
-
-
-
-
-
-
 }
-
-

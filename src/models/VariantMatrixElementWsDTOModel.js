@@ -11,15 +11,10 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
 import VariantCategoryWsDTOModel from './VariantCategoryWsDTOModel';
 import VariantOptionWsDTOModel from './VariantOptionWsDTOModel';
 import VariantValueCategoryWsDTOModel from './VariantValueCategoryWsDTOModel';
-
-
-
-
 
 /**
 * The VariantMatrixElementWsDTOModel model module.
@@ -35,13 +30,6 @@ export default class VariantMatrixElementWsDTOModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -54,10 +42,6 @@ export default class VariantMatrixElementWsDTOModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new VariantMatrixElementWsDTOModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('variantValueCategory')) {
                 obj['variantValueCategory'] = VariantValueCategoryWsDTOModel.constructFromObject(data['variantValueCategory']);
@@ -85,13 +69,4 @@ export default class VariantMatrixElementWsDTOModel {
     */
     variantOption = undefined;
 
-
-
-
-
-
-
-
 }
-
-

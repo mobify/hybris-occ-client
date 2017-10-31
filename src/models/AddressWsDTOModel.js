@@ -11,14 +11,9 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
 import CountryWsDTOModel from './CountryWsDTOModel';
 import RegionWsDTOModel from './RegionWsDTOModel';
-
-
-
-
 
 /**
 * The AddressWsDTOModel model module.
@@ -34,13 +29,6 @@ export default class AddressWsDTOModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -53,10 +41,6 @@ export default class AddressWsDTOModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new AddressWsDTOModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
@@ -197,13 +181,4 @@ export default class AddressWsDTOModel {
     */
     formattedAddress = undefined;
 
-
-
-
-
-
-
-
 }
-
-

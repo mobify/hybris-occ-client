@@ -11,13 +11,8 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
 import OrderEntryWsDTOModel from './OrderEntryWsDTOModel';
-
-
-
-
 
 /**
 * The ConsignmentEntryWsDTOModel model module.
@@ -33,13 +28,6 @@ export default class ConsignmentEntryWsDTOModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -52,10 +40,6 @@ export default class ConsignmentEntryWsDTOModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new ConsignmentEntryWsDTOModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('orderEntry')) {
                 obj['orderEntry'] = OrderEntryWsDTOModel.constructFromObject(data['orderEntry']);
@@ -85,13 +69,4 @@ export default class ConsignmentEntryWsDTOModel {
     */
     shippedQuantity = undefined;
 
-
-
-
-
-
-
-
 }
-
-

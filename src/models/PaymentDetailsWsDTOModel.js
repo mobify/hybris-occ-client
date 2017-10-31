@@ -11,14 +11,9 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
 import AddressWsDTOModel from './AddressWsDTOModel';
 import CardTypeWsDTOModel from './CardTypeWsDTOModel';
-
-
-
-
 
 /**
 * The PaymentDetailsWsDTOModel model module.
@@ -34,13 +29,6 @@ export default class PaymentDetailsWsDTOModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -53,10 +41,6 @@ export default class PaymentDetailsWsDTOModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new PaymentDetailsWsDTOModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
@@ -165,13 +149,4 @@ export default class PaymentDetailsWsDTOModel {
     */
     billingAddress = undefined;
 
-
-
-
-
-
-
-
 }
-
-

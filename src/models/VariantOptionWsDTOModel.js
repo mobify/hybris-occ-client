@@ -11,15 +11,10 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
 import PriceWsDTOModel from './PriceWsDTOModel';
 import StockWsDTOModel from './StockWsDTOModel';
 import VariantOptionQualifierWsDTOModel from './VariantOptionQualifierWsDTOModel';
-
-
-
-
 
 /**
 * The VariantOptionWsDTOModel model module.
@@ -35,13 +30,6 @@ export default class VariantOptionWsDTOModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -54,10 +42,6 @@ export default class VariantOptionWsDTOModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new VariantOptionWsDTOModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('code')) {
                 obj['code'] = ApiClient.convertToType(data['code'], 'String');
@@ -102,13 +86,4 @@ export default class VariantOptionWsDTOModel {
     */
     variantOptionQualifiers = undefined;
 
-
-
-
-
-
-
-
 }
-
-

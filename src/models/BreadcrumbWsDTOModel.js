@@ -11,13 +11,8 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
 import SearchStateWsDTOModel from './SearchStateWsDTOModel';
-
-
-
-
 
 /**
 * The BreadcrumbWsDTOModel model module.
@@ -33,13 +28,6 @@ export default class BreadcrumbWsDTOModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -52,10 +40,6 @@ export default class BreadcrumbWsDTOModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new BreadcrumbWsDTOModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('facetCode')) {
                 obj['facetCode'] = ApiClient.convertToType(data['facetCode'], 'String');
@@ -108,13 +92,4 @@ export default class BreadcrumbWsDTOModel {
     */
     truncateQuery = undefined;
 
-
-
-
-
-
-
-
 }
-
-

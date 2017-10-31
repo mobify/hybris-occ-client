@@ -11,13 +11,8 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
 import VariantCategoryWsDTOModel from './VariantCategoryWsDTOModel';
-
-
-
-
 
 /**
 * The VariantValueCategoryWsDTOModel model module.
@@ -33,13 +28,6 @@ export default class VariantValueCategoryWsDTOModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -52,10 +40,6 @@ export default class VariantValueCategoryWsDTOModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new VariantValueCategoryWsDTOModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
@@ -86,13 +70,4 @@ export default class VariantValueCategoryWsDTOModel {
     */
     superCategories = undefined;
 
-
-
-
-
-
-
-
 }
-
-

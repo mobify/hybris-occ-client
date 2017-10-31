@@ -11,12 +11,7 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
-
-
-
-
 
 /**
 * The ProductExpressUpdateElementWsDTOModel model module.
@@ -32,13 +27,6 @@ export default class ProductExpressUpdateElementWsDTOModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -51,10 +39,6 @@ export default class ProductExpressUpdateElementWsDTOModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new ProductExpressUpdateElementWsDTOModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('code')) {
                 obj['code'] = ApiClient.convertToType(data['code'], 'String');
@@ -85,13 +69,4 @@ export default class ProductExpressUpdateElementWsDTOModel {
     */
     catalogVersion = undefined;
 
-
-
-
-
-
-
-
 }
-
-

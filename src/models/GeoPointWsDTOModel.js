@@ -11,12 +11,7 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
-
-
-
-
 
 /**
 * The GeoPointWsDTOModel model module.
@@ -32,13 +27,6 @@ export default class GeoPointWsDTOModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -51,10 +39,6 @@ export default class GeoPointWsDTOModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new GeoPointWsDTOModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('latitude')) {
                 obj['latitude'] = ApiClient.convertToType(data['latitude'], 'Number');
@@ -77,13 +61,4 @@ export default class GeoPointWsDTOModel {
     */
     longitude = undefined;
 
-
-
-
-
-
-
-
 }
-
-

@@ -11,12 +11,7 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
-
-
-
-
 
 /**
 * The PaginationWsDTOModel model module.
@@ -32,13 +27,6 @@ export default class PaginationWsDTOModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -51,10 +39,6 @@ export default class PaginationWsDTOModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new PaginationWsDTOModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('totalPages')) {
                 obj['totalPages'] = ApiClient.convertToType(data['totalPages'], 'Number');
@@ -101,13 +85,4 @@ export default class PaginationWsDTOModel {
     */
     sort = undefined;
 
-
-
-
-
-
-
-
 }
-
-

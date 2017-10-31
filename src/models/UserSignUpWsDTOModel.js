@@ -11,12 +11,7 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
-
-
-
-
 
 /**
 * The UserSignUpWsDTOModel model module.
@@ -32,13 +27,6 @@ export default class UserSignUpWsDTOModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -51,10 +39,6 @@ export default class UserSignUpWsDTOModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new UserSignUpWsDTOModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('uid')) {
                 obj['uid'] = ApiClient.convertToType(data['uid'], 'String');
@@ -101,13 +85,4 @@ export default class UserSignUpWsDTOModel {
     */
     password = undefined;
 
-
-
-
-
-
-
-
 }
-
-

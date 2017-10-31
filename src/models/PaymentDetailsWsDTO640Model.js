@@ -11,13 +11,8 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
 import BillingAddressModel from './BillingAddressModel';
-
-
-
-
 
 /**
 * The PaymentDetailsWsDTO640Model model module.
@@ -33,13 +28,6 @@ export default class PaymentDetailsWsDTO640Model {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -52,10 +40,6 @@ export default class PaymentDetailsWsDTO640Model {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new PaymentDetailsWsDTO640Model();
-
-            
-            
-            
 
             if (data.hasOwnProperty('accountHolderName')) {
                 obj['accountHolderName'] = ApiClient.convertToType(data['accountHolderName'], 'String');
@@ -149,13 +133,4 @@ export default class PaymentDetailsWsDTO640Model {
     */
     billingAddress = undefined;
 
-
-
-
-
-
-
-
 }
-
-

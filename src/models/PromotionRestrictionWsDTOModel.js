@@ -11,12 +11,7 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
-
-
-
-
 
 /**
 * The PromotionRestrictionWsDTOModel model module.
@@ -32,13 +27,6 @@ export default class PromotionRestrictionWsDTOModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -51,10 +39,6 @@ export default class PromotionRestrictionWsDTOModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new PromotionRestrictionWsDTOModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('restrictionType')) {
                 obj['restrictionType'] = ApiClient.convertToType(data['restrictionType'], 'String');
@@ -77,13 +61,4 @@ export default class PromotionRestrictionWsDTOModel {
     */
     description = undefined;
 
-
-
-
-
-
-
-
 }
-
-

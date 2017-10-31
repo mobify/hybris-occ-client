@@ -11,13 +11,8 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
 import VariantOptionWsDTOModel from './VariantOptionWsDTOModel';
-
-
-
-
 
 /**
 * The BaseOptionWsDTOModel model module.
@@ -33,13 +28,6 @@ export default class BaseOptionWsDTOModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -52,10 +40,6 @@ export default class BaseOptionWsDTOModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new BaseOptionWsDTOModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('variantType')) {
                 obj['variantType'] = ApiClient.convertToType(data['variantType'], 'String');
@@ -85,13 +69,4 @@ export default class BaseOptionWsDTOModel {
     */
     selected = undefined;
 
-
-
-
-
-
-
-
 }
-
-

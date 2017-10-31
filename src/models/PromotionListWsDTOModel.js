@@ -11,13 +11,8 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
 import PromotionWsDTOModel from './PromotionWsDTOModel';
-
-
-
-
 
 /**
 * The PromotionListWsDTOModel model module.
@@ -33,13 +28,6 @@ export default class PromotionListWsDTOModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -52,10 +40,6 @@ export default class PromotionListWsDTOModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new PromotionListWsDTOModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('promotions')) {
                 obj['promotions'] = ApiClient.convertToType(data['promotions'], [PromotionWsDTOModel]);
@@ -70,13 +54,4 @@ export default class PromotionListWsDTOModel {
     */
     promotions = undefined;
 
-
-
-
-
-
-
-
 }
-
-

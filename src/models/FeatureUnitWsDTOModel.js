@@ -11,12 +11,7 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
-
-
-
-
 
 /**
 * The FeatureUnitWsDTOModel model module.
@@ -32,13 +27,6 @@ export default class FeatureUnitWsDTOModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -51,10 +39,6 @@ export default class FeatureUnitWsDTOModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new FeatureUnitWsDTOModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('symbol')) {
                 obj['symbol'] = ApiClient.convertToType(data['symbol'], 'String');
@@ -85,13 +69,4 @@ export default class FeatureUnitWsDTOModel {
     */
     unitType = undefined;
 
-
-
-
-
-
-
-
 }
-
-

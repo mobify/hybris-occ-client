@@ -11,12 +11,7 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
-
-
-
-
 
 /**
 * The CardTypeWsDTOModel model module.
@@ -32,13 +27,6 @@ export default class CardTypeWsDTOModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -51,10 +39,6 @@ export default class CardTypeWsDTOModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new CardTypeWsDTOModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('code')) {
                 obj['code'] = ApiClient.convertToType(data['code'], 'String');
@@ -77,13 +61,4 @@ export default class CardTypeWsDTOModel {
     */
     name = undefined;
 
-
-
-
-
-
-
-
 }
-
-

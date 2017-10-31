@@ -11,14 +11,9 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
 import FeatureUnitWsDTOModel from './FeatureUnitWsDTOModel';
 import FeatureValueWsDTOModel from './FeatureValueWsDTOModel';
-
-
-
-
 
 /**
 * The FeatureWsDTOModel model module.
@@ -34,13 +29,6 @@ export default class FeatureWsDTOModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -53,10 +41,6 @@ export default class FeatureWsDTOModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new FeatureWsDTOModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('code')) {
                 obj['code'] = ApiClient.convertToType(data['code'], 'String');
@@ -126,13 +110,4 @@ export default class FeatureWsDTOModel {
     */
     featureValues = undefined;
 
-
-
-
-
-
-
-
 }
-
-

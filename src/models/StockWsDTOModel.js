@@ -11,12 +11,7 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
-
-
-
-
 
 /**
 * The StockWsDTOModel model module.
@@ -32,13 +27,6 @@ export default class StockWsDTOModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -51,10 +39,6 @@ export default class StockWsDTOModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new StockWsDTOModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('stockLevelStatus')) {
                 obj['stockLevelStatus'] = ApiClient.convertToType(data['stockLevelStatus'], 'String');
@@ -77,13 +61,4 @@ export default class StockWsDTOModel {
     */
     stockLevel = undefined;
 
-
-
-
-
-
-
-
 }
-
-

@@ -11,13 +11,8 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
 import StockWsDTOModel from './StockWsDTOModel';
-
-
-
-
 
 /**
 * The FutureStockWsDTOModel model module.
@@ -33,13 +28,6 @@ export default class FutureStockWsDTOModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -52,10 +40,6 @@ export default class FutureStockWsDTOModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new FutureStockWsDTOModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('stock')) {
                 obj['stock'] = StockWsDTOModel.constructFromObject(data['stock']);
@@ -85,13 +69,4 @@ export default class FutureStockWsDTOModel {
     */
     formattedDate = undefined;
 
-
-
-
-
-
-
-
 }
-
-

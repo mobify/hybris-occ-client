@@ -11,12 +11,7 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
-
-
-
-
 
 /**
 * The SearchQueryWsDTOModel model module.
@@ -32,13 +27,6 @@ export default class SearchQueryWsDTOModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -51,10 +39,6 @@ export default class SearchQueryWsDTOModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new SearchQueryWsDTOModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('value')) {
                 obj['value'] = ApiClient.convertToType(data['value'], 'String');
@@ -69,13 +53,4 @@ export default class SearchQueryWsDTOModel {
     */
     value = undefined;
 
-
-
-
-
-
-
-
 }
-
-

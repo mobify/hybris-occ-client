@@ -11,13 +11,8 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
 import UserWsDTOModel from './UserWsDTOModel';
-
-
-
-
 
 /**
 * The ReviewWsDTOModel model module.
@@ -33,13 +28,6 @@ export default class ReviewWsDTOModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -52,10 +40,6 @@ export default class ReviewWsDTOModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new ReviewWsDTOModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
@@ -117,13 +101,4 @@ export default class ReviewWsDTOModel {
     */
     principal = undefined;
 
-
-
-
-
-
-
-
 }
-
-

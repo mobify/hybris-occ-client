@@ -11,13 +11,8 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
 import ProductExpressUpdateElementWsDTOModel from './ProductExpressUpdateElementWsDTOModel';
-
-
-
-
 
 /**
 * The ProductExpressUpdateElementListWsDTOModel model module.
@@ -33,13 +28,6 @@ export default class ProductExpressUpdateElementListWsDTOModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -52,10 +40,6 @@ export default class ProductExpressUpdateElementListWsDTOModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new ProductExpressUpdateElementListWsDTOModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('productExpressUpdateElements')) {
                 obj['productExpressUpdateElements'] = ApiClient.convertToType(data['productExpressUpdateElements'], [ProductExpressUpdateElementWsDTOModel]);
@@ -70,13 +54,4 @@ export default class ProductExpressUpdateElementListWsDTOModel {
     */
     productExpressUpdateElements = undefined;
 
-
-
-
-
-
-
-
 }
-
-

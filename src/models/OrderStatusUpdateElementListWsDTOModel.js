@@ -11,13 +11,8 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
 import OrderStatusUpdateElementWsDTOModel from './OrderStatusUpdateElementWsDTOModel';
-
-
-
-
 
 /**
 * The OrderStatusUpdateElementListWsDTOModel model module.
@@ -33,13 +28,6 @@ export default class OrderStatusUpdateElementListWsDTOModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -52,10 +40,6 @@ export default class OrderStatusUpdateElementListWsDTOModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new OrderStatusUpdateElementListWsDTOModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('orderStatusUpdateElements')) {
                 obj['orderStatusUpdateElements'] = ApiClient.convertToType(data['orderStatusUpdateElements'], [OrderStatusUpdateElementWsDTOModel]);
@@ -70,13 +54,4 @@ export default class OrderStatusUpdateElementListWsDTOModel {
     */
     orderStatusUpdateElements = undefined;
 
-
-
-
-
-
-
-
 }
-
-

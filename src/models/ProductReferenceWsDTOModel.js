@@ -11,13 +11,8 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
 import ProductWsDTOModel from './ProductWsDTOModel';
-
-
-
-
 
 /**
 * The ProductReferenceWsDTOModel model module.
@@ -33,13 +28,6 @@ export default class ProductReferenceWsDTOModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -52,10 +40,6 @@ export default class ProductReferenceWsDTOModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new ProductReferenceWsDTOModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('preselected')) {
                 obj['preselected'] = ApiClient.convertToType(data['preselected'], 'Boolean');
@@ -101,13 +85,4 @@ export default class ProductReferenceWsDTOModel {
     */
     target = undefined;
 
-
-
-
-
-
-
-
 }
-
-

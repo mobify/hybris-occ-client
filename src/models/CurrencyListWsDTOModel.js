@@ -11,13 +11,8 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
 import CurrencyWsDTOModel from './CurrencyWsDTOModel';
-
-
-
-
 
 /**
 * The CurrencyListWsDTOModel model module.
@@ -33,13 +28,6 @@ export default class CurrencyListWsDTOModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -52,10 +40,6 @@ export default class CurrencyListWsDTOModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new CurrencyListWsDTOModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('currencies')) {
                 obj['currencies'] = ApiClient.convertToType(data['currencies'], [CurrencyWsDTOModel]);
@@ -70,13 +54,4 @@ export default class CurrencyListWsDTOModel {
     */
     currencies = undefined;
 
-
-
-
-
-
-
-
 }
-
-

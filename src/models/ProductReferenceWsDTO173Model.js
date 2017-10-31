@@ -11,12 +11,7 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
-
-
-
-
 
 /**
 * The ProductReferenceWsDTO173Model model module.
@@ -32,13 +27,6 @@ export default class ProductReferenceWsDTO173Model {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -51,10 +39,6 @@ export default class ProductReferenceWsDTO173Model {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new ProductReferenceWsDTO173Model();
-
-            
-            
-            
 
             if (data.hasOwnProperty('preselected')) {
                 obj['preselected'] = ApiClient.convertToType(data['preselected'], 'Boolean');
@@ -93,13 +77,4 @@ export default class ProductReferenceWsDTO173Model {
     */
     quantity = undefined;
 
-
-
-
-
-
-
-
 }
-
-

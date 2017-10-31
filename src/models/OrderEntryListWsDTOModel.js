@@ -11,13 +11,8 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
 import OrderEntryWsDTOModel from './OrderEntryWsDTOModel';
-
-
-
-
 
 /**
 * The OrderEntryListWsDTOModel model module.
@@ -33,13 +28,6 @@ export default class OrderEntryListWsDTOModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -52,10 +40,6 @@ export default class OrderEntryListWsDTOModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new OrderEntryListWsDTOModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('orderEntries')) {
                 obj['orderEntries'] = ApiClient.convertToType(data['orderEntries'], [OrderEntryWsDTOModel]);
@@ -70,13 +54,4 @@ export default class OrderEntryListWsDTOModel {
     */
     orderEntries = undefined;
 
-
-
-
-
-
-
-
 }
-
-

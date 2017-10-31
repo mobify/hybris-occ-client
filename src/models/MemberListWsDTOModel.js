@@ -11,13 +11,8 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
 import MemberModel from './MemberModel';
-
-
-
-
 
 /**
 * The MemberListWsDTOModel model module.
@@ -33,13 +28,6 @@ export default class MemberListWsDTOModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -52,10 +40,6 @@ export default class MemberListWsDTOModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new MemberListWsDTOModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('members')) {
                 obj['members'] = ApiClient.convertToType(data['members'], [MemberModel]);
@@ -70,13 +54,4 @@ export default class MemberListWsDTOModel {
     */
     members = undefined;
 
-
-
-
-
-
-
-
 }
-
-

@@ -11,13 +11,8 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
 import ReviewWsDTOModel from './ReviewWsDTOModel';
-
-
-
-
 
 /**
 * The ReviewListWsDTOModel model module.
@@ -33,13 +28,6 @@ export default class ReviewListWsDTOModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -52,10 +40,6 @@ export default class ReviewListWsDTOModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new ReviewListWsDTOModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('reviews')) {
                 obj['reviews'] = ApiClient.convertToType(data['reviews'], [ReviewWsDTOModel]);
@@ -70,13 +54,4 @@ export default class ReviewListWsDTOModel {
     */
     reviews = undefined;
 
-
-
-
-
-
-
-
 }
-
-

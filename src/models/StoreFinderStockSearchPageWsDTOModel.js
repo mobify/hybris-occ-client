@@ -11,16 +11,11 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
 import PaginationWsDTOModel from './PaginationWsDTOModel';
 import PointOfServiceStockWsDTOModel from './PointOfServiceStockWsDTOModel';
 import ProductWsDTOModel from './ProductWsDTOModel';
 import SortWsDTOModel from './SortWsDTOModel';
-
-
-
-
 
 /**
 * The StoreFinderStockSearchPageWsDTOModel model module.
@@ -36,13 +31,6 @@ export default class StoreFinderStockSearchPageWsDTOModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -55,10 +43,6 @@ export default class StoreFinderStockSearchPageWsDTOModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new StoreFinderStockSearchPageWsDTOModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('stores')) {
                 obj['stores'] = ApiClient.convertToType(data['stores'], [PointOfServiceStockWsDTOModel]);
@@ -151,13 +135,4 @@ export default class StoreFinderStockSearchPageWsDTOModel {
     */
     product = undefined;
 
-
-
-
-
-
-
-
 }
-
-

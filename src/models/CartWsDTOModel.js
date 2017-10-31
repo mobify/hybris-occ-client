@@ -11,7 +11,6 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
 import AddressWsDTOModel from './AddressWsDTOModel';
 import DeliveryModeWsDTOModel from './DeliveryModeWsDTOModel';
@@ -23,10 +22,6 @@ import PriceWsDTOModel from './PriceWsDTOModel';
 import PrincipalWsDTOModel from './PrincipalWsDTOModel';
 import PromotionResultWsDTOModel from './PromotionResultWsDTOModel';
 import VoucherWsDTOModel from './VoucherWsDTOModel';
-
-
-
-
 
 /**
 * The CartWsDTOModel model module.
@@ -42,13 +37,6 @@ export default class CartWsDTOModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -61,10 +49,6 @@ export default class CartWsDTOModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new CartWsDTOModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('totalUnitCount')) {
                 obj['totalUnitCount'] = ApiClient.convertToType(data['totalUnitCount'], 'Number');
@@ -338,13 +322,4 @@ export default class CartWsDTOModel {
     */
     deliveryItemsQuantity = undefined;
 
-
-
-
-
-
-
-
 }
-
-

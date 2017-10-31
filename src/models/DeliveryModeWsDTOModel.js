@@ -11,13 +11,8 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
 import PriceWsDTOModel from './PriceWsDTOModel';
-
-
-
-
 
 /**
 * The DeliveryModeWsDTOModel model module.
@@ -33,13 +28,6 @@ export default class DeliveryModeWsDTOModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -52,10 +40,6 @@ export default class DeliveryModeWsDTOModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new DeliveryModeWsDTOModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('code')) {
                 obj['code'] = ApiClient.convertToType(data['code'], 'String');
@@ -93,13 +77,4 @@ export default class DeliveryModeWsDTOModel {
     */
     deliveryCost = undefined;
 
-
-
-
-
-
-
-
 }
-
-

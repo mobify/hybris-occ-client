@@ -11,14 +11,9 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
 import SpecialOpeningDayWsDTOModel from './SpecialOpeningDayWsDTOModel';
 import WeekdayOpeningDayWsDTOModel from './WeekdayOpeningDayWsDTOModel';
-
-
-
-
 
 /**
 * The OpeningScheduleWsDTOModel model module.
@@ -34,13 +29,6 @@ export default class OpeningScheduleWsDTOModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -53,10 +41,6 @@ export default class OpeningScheduleWsDTOModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new OpeningScheduleWsDTOModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
@@ -95,13 +79,4 @@ export default class OpeningScheduleWsDTOModel {
     */
     specialDayOpeningList = undefined;
 
-
-
-
-
-
-
-
 }
-
-

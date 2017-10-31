@@ -11,13 +11,8 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
 import ImageWsDTOModel from './ImageWsDTOModel';
-
-
-
-
 
 /**
 * The VariantOptionQualifierWsDTOModel model module.
@@ -33,13 +28,6 @@ export default class VariantOptionQualifierWsDTOModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -52,10 +40,6 @@ export default class VariantOptionQualifierWsDTOModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new VariantOptionQualifierWsDTOModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('qualifier')) {
                 obj['qualifier'] = ApiClient.convertToType(data['qualifier'], 'String');
@@ -93,13 +77,4 @@ export default class VariantOptionQualifierWsDTOModel {
     */
     image = undefined;
 
-
-
-
-
-
-
-
 }
-
-

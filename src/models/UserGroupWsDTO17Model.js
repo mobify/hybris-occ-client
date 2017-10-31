@@ -11,13 +11,8 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
 import PrincipalWsDTOModel from './PrincipalWsDTOModel';
-
-
-
-
 
 /**
 * The UserGroupWsDTO17Model model module.
@@ -33,13 +28,6 @@ export default class UserGroupWsDTO17Model {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -52,10 +40,6 @@ export default class UserGroupWsDTO17Model {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new UserGroupWsDTO17Model();
-
-            
-            
-            
 
             if (data.hasOwnProperty('members')) {
                 obj['members'] = ApiClient.convertToType(data['members'], [PrincipalWsDTOModel]);
@@ -70,13 +54,4 @@ export default class UserGroupWsDTO17Model {
     */
     members = undefined;
 
-
-
-
-
-
-
-
 }
-
-

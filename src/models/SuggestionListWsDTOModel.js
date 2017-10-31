@@ -11,13 +11,8 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
 import SuggestionWsDTOModel from './SuggestionWsDTOModel';
-
-
-
-
 
 /**
 * The SuggestionListWsDTOModel model module.
@@ -33,13 +28,6 @@ export default class SuggestionListWsDTOModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -52,10 +40,6 @@ export default class SuggestionListWsDTOModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new SuggestionListWsDTOModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('suggestions')) {
                 obj['suggestions'] = ApiClient.convertToType(data['suggestions'], [SuggestionWsDTOModel]);
@@ -70,13 +54,4 @@ export default class SuggestionListWsDTOModel {
     */
     suggestions = undefined;
 
-
-
-
-
-
-
-
 }
-
-

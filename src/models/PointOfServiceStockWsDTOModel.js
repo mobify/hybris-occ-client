@@ -11,17 +11,12 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
 import AddressWsDTOModel from './AddressWsDTOModel';
 import GeoPointWsDTOModel from './GeoPointWsDTOModel';
 import ImageWsDTOModel from './ImageWsDTOModel';
 import OpeningScheduleWsDTOModel from './OpeningScheduleWsDTOModel';
 import StockWsDTOModel from './StockWsDTOModel';
-
-
-
-
 
 /**
 * The PointOfServiceStockWsDTOModel model module.
@@ -37,13 +32,6 @@ export default class PointOfServiceStockWsDTOModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -56,10 +44,6 @@ export default class PointOfServiceStockWsDTOModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new PointOfServiceStockWsDTOModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('stockInfo')) {
                 obj['stockInfo'] = StockWsDTOModel.constructFromObject(data['stockInfo']);
@@ -173,13 +157,4 @@ export default class PointOfServiceStockWsDTOModel {
     */
     storeImages = undefined;
 
-
-
-
-
-
-
-
 }
-
-

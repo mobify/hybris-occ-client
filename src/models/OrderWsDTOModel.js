@@ -11,7 +11,6 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
 import AddressWsDTOModel from './AddressWsDTOModel';
 import ConsignmentWsDTOModel from './ConsignmentWsDTOModel';
@@ -24,10 +23,6 @@ import PriceWsDTOModel from './PriceWsDTOModel';
 import PrincipalWsDTOModel from './PrincipalWsDTOModel';
 import PromotionResultWsDTOModel from './PromotionResultWsDTOModel';
 import VoucherWsDTOModel from './VoucherWsDTOModel';
-
-
-
-
 
 /**
 * The OrderWsDTOModel model module.
@@ -43,13 +38,6 @@ export default class OrderWsDTOModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -62,10 +50,6 @@ export default class OrderWsDTOModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new OrderWsDTOModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('created')) {
                 obj['created'] = ApiClient.convertToType(data['created'], 'String');
@@ -340,13 +324,4 @@ export default class OrderWsDTOModel {
     */
     deliveryItemsQuantity = undefined;
 
-
-
-
-
-
-
-
 }
-
-

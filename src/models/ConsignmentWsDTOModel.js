@@ -11,15 +11,10 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
 import AddressWsDTOModel from './AddressWsDTOModel';
 import ConsignmentEntryWsDTOModel from './ConsignmentEntryWsDTOModel';
 import PointOfServiceWsDTOModel from './PointOfServiceWsDTOModel';
-
-
-
-
 
 /**
 * The ConsignmentWsDTOModel model module.
@@ -35,13 +30,6 @@ export default class ConsignmentWsDTOModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -54,10 +42,6 @@ export default class ConsignmentWsDTOModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new ConsignmentWsDTOModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('code')) {
                 obj['code'] = ApiClient.convertToType(data['code'], 'String');
@@ -118,13 +102,4 @@ export default class ConsignmentWsDTOModel {
     */
     deliveryPointOfService = undefined;
 
-
-
-
-
-
-
-
 }
-
-

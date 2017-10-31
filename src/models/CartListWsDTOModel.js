@@ -11,13 +11,8 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
 import CartWsDTOModel from './CartWsDTOModel';
-
-
-
-
 
 /**
 * The CartListWsDTOModel model module.
@@ -33,13 +28,6 @@ export default class CartListWsDTOModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -52,10 +40,6 @@ export default class CartListWsDTOModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new CartListWsDTOModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('carts')) {
                 obj['carts'] = ApiClient.convertToType(data['carts'], [CartWsDTOModel]);
@@ -70,13 +54,4 @@ export default class CartListWsDTOModel {
     */
     carts = undefined;
 
-
-
-
-
-
-
-
 }
-
-

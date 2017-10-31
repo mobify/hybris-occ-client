@@ -11,13 +11,8 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
 import VoucherWsDTOModel from './VoucherWsDTOModel';
-
-
-
-
 
 /**
 * The VoucherListWsDTOModel model module.
@@ -33,13 +28,6 @@ export default class VoucherListWsDTOModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -52,10 +40,6 @@ export default class VoucherListWsDTOModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new VoucherListWsDTOModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('vouchers')) {
                 obj['vouchers'] = ApiClient.convertToType(data['vouchers'], [VoucherWsDTOModel]);
@@ -70,13 +54,4 @@ export default class VoucherListWsDTOModel {
     */
     vouchers = undefined;
 
-
-
-
-
-
-
-
 }
-
-

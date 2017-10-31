@@ -11,13 +11,8 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
 import PriceWsDTOModel from './PriceWsDTOModel';
-
-
-
-
 
 /**
 * The OrderHistoryWsDTOModel model module.
@@ -33,13 +28,6 @@ export default class OrderHistoryWsDTOModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -52,10 +40,6 @@ export default class OrderHistoryWsDTOModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new OrderHistoryWsDTOModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('code')) {
                 obj['code'] = ApiClient.convertToType(data['code'], 'String');
@@ -109,13 +93,4 @@ export default class OrderHistoryWsDTOModel {
     */
     total = undefined;
 
-
-
-
-
-
-
-
 }
-
-

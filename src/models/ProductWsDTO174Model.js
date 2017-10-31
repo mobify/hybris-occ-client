@@ -11,7 +11,6 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
 import BaseOptionWsDTOModel from './BaseOptionWsDTOModel';
 import CategoryWsDTOModel from './CategoryWsDTOModel';
@@ -27,10 +26,6 @@ import StockWsDTOModel from './StockWsDTOModel';
 import VariantMatrixElementWsDTOModel from './VariantMatrixElementWsDTOModel';
 import VariantOptionWsDTOModel from './VariantOptionWsDTOModel';
 
-
-
-
-
 /**
 * The ProductWsDTO174Model model module.
 * @module models/ProductWsDTO174Model
@@ -45,13 +40,6 @@ export default class ProductWsDTO174Model {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -64,10 +52,6 @@ export default class ProductWsDTO174Model {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new ProductWsDTO174Model();
-
-            
-            
-            
 
             if (data.hasOwnProperty('code')) {
                 obj['code'] = ApiClient.convertToType(data['code'], 'String');
@@ -295,13 +279,4 @@ export default class ProductWsDTO174Model {
     */
     multidimensional = undefined;
 
-
-
-
-
-
-
-
 }
-
-

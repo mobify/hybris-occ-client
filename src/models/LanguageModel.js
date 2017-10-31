@@ -11,12 +11,7 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
-
-
-
-
 
 /**
 * The LanguageModel model module.
@@ -32,13 +27,6 @@ export default class LanguageModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -51,10 +39,6 @@ export default class LanguageModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new LanguageModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('isocode')) {
                 obj['isocode'] = ApiClient.convertToType(data['isocode'], 'String');
@@ -69,13 +53,4 @@ export default class LanguageModel {
     */
     isocode = undefined;
 
-
-
-
-
-
-
-
 }
-
-

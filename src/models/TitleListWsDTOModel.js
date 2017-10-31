@@ -11,13 +11,8 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
 import TitleWsDTOModel from './TitleWsDTOModel';
-
-
-
-
 
 /**
 * The TitleListWsDTOModel model module.
@@ -33,13 +28,6 @@ export default class TitleListWsDTOModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -52,10 +40,6 @@ export default class TitleListWsDTOModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new TitleListWsDTOModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('titles')) {
                 obj['titles'] = ApiClient.convertToType(data['titles'], [TitleWsDTOModel]);
@@ -70,13 +54,4 @@ export default class TitleListWsDTOModel {
     */
     titles = undefined;
 
-
-
-
-
-
-
-
 }
-
-

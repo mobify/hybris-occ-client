@@ -11,13 +11,8 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
 import CatalogWsDTOModel from './CatalogWsDTOModel';
-
-
-
-
 
 /**
 * The CatalogListWsDTOModel model module.
@@ -33,13 +28,6 @@ export default class CatalogListWsDTOModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -52,10 +40,6 @@ export default class CatalogListWsDTOModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new CatalogListWsDTOModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('catalogs')) {
                 obj['catalogs'] = ApiClient.convertToType(data['catalogs'], [CatalogWsDTOModel]);
@@ -70,13 +54,4 @@ export default class CatalogListWsDTOModel {
     */
     catalogs = undefined;
 
-
-
-
-
-
-
-
 }
-
-

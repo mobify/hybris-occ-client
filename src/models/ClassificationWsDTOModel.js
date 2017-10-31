@@ -11,13 +11,8 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
 import FeatureWsDTOModel from './FeatureWsDTOModel';
-
-
-
-
 
 /**
 * The ClassificationWsDTOModel model module.
@@ -33,13 +28,6 @@ export default class ClassificationWsDTOModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -52,10 +40,6 @@ export default class ClassificationWsDTOModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new ClassificationWsDTOModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('code')) {
                 obj['code'] = ApiClient.convertToType(data['code'], 'String');
@@ -86,13 +70,4 @@ export default class ClassificationWsDTOModel {
     */
     features = undefined;
 
-
-
-
-
-
-
-
 }
-
-

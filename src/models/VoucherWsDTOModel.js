@@ -11,14 +11,9 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
 import CurrencyWsDTOModel from './CurrencyWsDTOModel';
 import PriceWsDTOModel from './PriceWsDTOModel';
-
-
-
-
 
 /**
 * The VoucherWsDTOModel model module.
@@ -34,13 +29,6 @@ export default class VoucherWsDTOModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -53,10 +41,6 @@ export default class VoucherWsDTOModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new VoucherWsDTOModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('code')) {
                 obj['code'] = ApiClient.convertToType(data['code'], 'String');
@@ -141,13 +125,4 @@ export default class VoucherWsDTOModel {
     */
     appliedValue = undefined;
 
-
-
-
-
-
-
-
 }
-
-

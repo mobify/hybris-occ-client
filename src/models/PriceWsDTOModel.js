@@ -11,12 +11,7 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
-
-
-
-
 
 /**
 * The PriceWsDTOModel model module.
@@ -32,13 +27,6 @@ export default class PriceWsDTOModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -51,10 +39,6 @@ export default class PriceWsDTOModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new PriceWsDTOModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('currencyIso')) {
                 obj['currencyIso'] = ApiClient.convertToType(data['currencyIso'], 'String');
@@ -109,13 +93,4 @@ export default class PriceWsDTOModel {
     */
     maxQuantity = undefined;
 
-
-
-
-
-
-
-
 }
-
-

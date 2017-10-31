@@ -11,12 +11,7 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
-
-
-
-
 
 /**
 * The CurrencyModel model module.
@@ -32,13 +27,6 @@ export default class CurrencyModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -51,10 +39,6 @@ export default class CurrencyModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new CurrencyModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('isocode')) {
                 obj['isocode'] = ApiClient.convertToType(data['isocode'], 'String');
@@ -69,13 +53,4 @@ export default class CurrencyModel {
     */
     isocode = undefined;
 
-
-
-
-
-
-
-
 }
-
-

@@ -11,13 +11,8 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
 import CategoryHierarchyWsDTOModel from './CategoryHierarchyWsDTOModel';
-
-
-
-
 
 /**
 * The CatalogVersionWsDTOModel model module.
@@ -33,13 +28,6 @@ export default class CatalogVersionWsDTOModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -52,10 +40,6 @@ export default class CatalogVersionWsDTOModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new CatalogVersionWsDTOModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('categories')) {
                 obj['categories'] = ApiClient.convertToType(data['categories'], [CategoryHierarchyWsDTOModel]);
@@ -102,13 +86,4 @@ export default class CatalogVersionWsDTOModel {
     */
     url = undefined;
 
-
-
-
-
-
-
-
 }
-
-

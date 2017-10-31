@@ -11,15 +11,10 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
 import OrderHistoryWsDTOModel from './OrderHistoryWsDTOModel';
 import PaginationWsDTOModel from './PaginationWsDTOModel';
 import SortWsDTOModel from './SortWsDTOModel';
-
-
-
-
 
 /**
 * The OrderHistoryListWsDTOModel model module.
@@ -35,13 +30,6 @@ export default class OrderHistoryListWsDTOModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -54,10 +42,6 @@ export default class OrderHistoryListWsDTOModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new OrderHistoryListWsDTOModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('orders')) {
                 obj['orders'] = ApiClient.convertToType(data['orders'], [OrderHistoryWsDTOModel]);
@@ -87,13 +71,4 @@ export default class OrderHistoryListWsDTOModel {
     */
     pagination = undefined;
 
-
-
-
-
-
-
-
 }
-
-

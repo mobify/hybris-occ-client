@@ -11,12 +11,7 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
-
-
-
-
 
 /**
 * The CategoryHierarchyWsDTOModel model module.
@@ -32,13 +27,6 @@ export default class CategoryHierarchyWsDTOModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -52,22 +40,8 @@ export default class CategoryHierarchyWsDTOModel {
         if (data) {
             obj = obj || new CategoryHierarchyWsDTOModel();
 
-            
-            
-            
-
         }
         return obj;
     }
 
-
-
-
-
-
-
-
-
 }
-
-

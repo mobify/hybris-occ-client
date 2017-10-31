@@ -11,13 +11,8 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
 import LanguageWsDTOModel from './LanguageWsDTOModel';
-
-
-
-
 
 /**
 * The LanguageListWsDTOModel model module.
@@ -33,13 +28,6 @@ export default class LanguageListWsDTOModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -52,10 +40,6 @@ export default class LanguageListWsDTOModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new LanguageListWsDTOModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('languages')) {
                 obj['languages'] = ApiClient.convertToType(data['languages'], [LanguageWsDTOModel]);
@@ -70,13 +54,4 @@ export default class LanguageListWsDTOModel {
     */
     languages = undefined;
 
-
-
-
-
-
-
-
 }
-
-

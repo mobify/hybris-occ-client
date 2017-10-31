@@ -11,12 +11,7 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
-
-
-
-
 
 /**
 * The OrderStatusUpdateElementWsDTOModel model module.
@@ -32,13 +27,6 @@ export default class OrderStatusUpdateElementWsDTOModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -51,10 +39,6 @@ export default class OrderStatusUpdateElementWsDTOModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new OrderStatusUpdateElementWsDTOModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('code')) {
                 obj['code'] = ApiClient.convertToType(data['code'], 'String');
@@ -85,13 +69,4 @@ export default class OrderStatusUpdateElementWsDTOModel {
     */
     baseSiteId = undefined;
 
-
-
-
-
-
-
-
 }
-
-

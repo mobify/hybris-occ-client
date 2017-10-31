@@ -11,12 +11,7 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
-
-
-
-
 
 /**
 * The DeliveryPointOfServiceModel model module.
@@ -32,13 +27,6 @@ export default class DeliveryPointOfServiceModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -51,10 +39,6 @@ export default class DeliveryPointOfServiceModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new DeliveryPointOfServiceModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
@@ -69,13 +53,4 @@ export default class DeliveryPointOfServiceModel {
     */
     name = undefined;
 
-
-
-
-
-
-
-
 }
-
-

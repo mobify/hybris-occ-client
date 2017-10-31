@@ -11,13 +11,8 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
 import PriceWsDTOModel from './PriceWsDTOModel';
-
-
-
-
 
 /**
 * The PriceRangeWsDTOModel model module.
@@ -33,13 +28,6 @@ export default class PriceRangeWsDTOModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -52,10 +40,6 @@ export default class PriceRangeWsDTOModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new PriceRangeWsDTOModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('maxPrice')) {
                 obj['maxPrice'] = PriceWsDTOModel.constructFromObject(data['maxPrice']);
@@ -76,13 +60,4 @@ export default class PriceRangeWsDTOModel {
     */
     minPrice = undefined;
 
-
-
-
-
-
-
-
 }
-
-

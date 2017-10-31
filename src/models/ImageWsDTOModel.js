@@ -11,12 +11,7 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
-
-
-
-
 
 /**
 * The ImageWsDTOModel model module.
@@ -32,13 +27,6 @@ export default class ImageWsDTOModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -51,10 +39,6 @@ export default class ImageWsDTOModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new ImageWsDTOModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('imageType')) {
                 obj['imageType'] = ApiClient.convertToType(data['imageType'], 'String');
@@ -101,13 +85,4 @@ export default class ImageWsDTOModel {
     */
     galleryIndex = undefined;
 
-
-
-
-
-
-
-
 }
-
-

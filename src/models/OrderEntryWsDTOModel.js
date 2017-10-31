@@ -11,16 +11,11 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
 import DeliveryModeWsDTOModel from './DeliveryModeWsDTOModel';
 import PointOfServiceWsDTOModel from './PointOfServiceWsDTOModel';
 import PriceWsDTOModel from './PriceWsDTOModel';
 import ProductWsDTOModel from './ProductWsDTOModel';
-
-
-
-
 
 /**
 * The OrderEntryWsDTOModel model module.
@@ -36,13 +31,6 @@ export default class OrderEntryWsDTOModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -55,10 +43,6 @@ export default class OrderEntryWsDTOModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new OrderEntryWsDTOModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('entryNumber')) {
                 obj['entryNumber'] = ApiClient.convertToType(data['entryNumber'], 'Number');
@@ -124,13 +108,4 @@ export default class OrderEntryWsDTOModel {
     */
     deliveryPointOfService = undefined;
 
-
-
-
-
-
-
-
 }
-
-

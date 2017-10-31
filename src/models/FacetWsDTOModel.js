@@ -11,13 +11,8 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
 import FacetValueWsDTOModel from './FacetValueWsDTOModel';
-
-
-
-
 
 /**
 * The FacetWsDTOModel model module.
@@ -33,13 +28,6 @@ export default class FacetWsDTOModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -52,10 +40,6 @@ export default class FacetWsDTOModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new FacetWsDTOModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
@@ -118,13 +102,4 @@ export default class FacetWsDTOModel {
     */
     values = undefined;
 
-
-
-
-
-
-
-
 }
-
-

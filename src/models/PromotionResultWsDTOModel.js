@@ -11,14 +11,9 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
 import PromotionOrderEntryConsumedWsDTOModel from './PromotionOrderEntryConsumedWsDTOModel';
 import PromotionWsDTOModel from './PromotionWsDTOModel';
-
-
-
-
 
 /**
 * The PromotionResultWsDTOModel model module.
@@ -34,13 +29,6 @@ export default class PromotionResultWsDTOModel {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -53,10 +41,6 @@ export default class PromotionResultWsDTOModel {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new PromotionResultWsDTOModel();
-
-            
-            
-            
 
             if (data.hasOwnProperty('description')) {
                 obj['description'] = ApiClient.convertToType(data['description'], 'String');
@@ -86,13 +70,4 @@ export default class PromotionResultWsDTOModel {
     */
     consumedEntries = undefined;
 
-
-
-
-
-
-
-
 }
-
-

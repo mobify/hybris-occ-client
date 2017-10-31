@@ -11,14 +11,9 @@
  *
  */
 
-
 import ApiClient from '../ApiClient';
 import DeliveryPointOfServiceModel from './DeliveryPointOfServiceModel';
 import ProductModel from './ProductModel';
-
-
-
-
 
 /**
 * The OrderEntryWsDTO542Model model module.
@@ -34,13 +29,6 @@ export default class OrderEntryWsDTO542Model {
 
     constructor() {
         
-
-        
-        
-
-        
-
-        
     }
 
     /**
@@ -53,10 +41,6 @@ export default class OrderEntryWsDTO542Model {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new OrderEntryWsDTO542Model();
-
-            
-            
-            
 
             if (data.hasOwnProperty('quantity')) {
                 obj['quantity'] = ApiClient.convertToType(data['quantity'], 'Number');
@@ -85,13 +69,4 @@ export default class OrderEntryWsDTO542Model {
     */
     deliveryPointOfService = undefined;
 
-
-
-
-
-
-
-
 }
-
-
