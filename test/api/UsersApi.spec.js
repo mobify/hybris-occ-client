@@ -37,9 +37,8 @@
       .then(done)
   })
 
-  after((done) => {
+  after(() => {
     Occ.default.ApiClient.instance.clearAccessToken()
-    done();
   })
 
   beforeEach(function() {
@@ -267,7 +266,6 @@
       });
     });
     
-    
     // GET applied voucher
     describe('getCartVouchers', function() {
       it('should call getCartVouchers successfully', function(done) {
@@ -486,7 +484,6 @@
       });
     });
     
-
     // // POST clone a cart
     // // TODO: fix 'cannot clone a saved cart'
     // describe('postCartCloneSavedcart', function() {
@@ -555,7 +552,6 @@
       });
     });
   
-    
     describe('postCartPromotion', function() {
       it('should call postCartPromotion successfully', function(done) {
         //uncomment below and update the code to test postCartPromotion
@@ -616,7 +612,6 @@
         done();
       });
     });
-    
     
     describe('getCustomerGroups', function() {
       it('should call getCustomerGroups successfully', function(done) {

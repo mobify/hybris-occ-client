@@ -33,9 +33,8 @@
       .then(done)
   })
 
-  after((done) => {
+  after(() => {
     Occ.default.ApiClient.instance.clearAccessToken()
-    done();
   })
 
   beforeEach(function() {
