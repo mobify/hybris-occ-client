@@ -9,7 +9,7 @@ const testWrapper = (occ) => {
             const basePath = `${process.env.baseUrl}/${process.env.baseSite}`
             occ.ApiClient.instance = new occ.ApiClient(basePath, process.env.authorizationUrl)
         } else {
-            throw new Error(err)
+            throw new Error('Cannot find env.json, is the file missing in the test directory?')
         }
     }
 
