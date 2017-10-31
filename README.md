@@ -135,11 +135,11 @@ Class | Method | HTTP request | Description
 *Occ.UsersApi* | [**postCart**](docs/UsersApi.md#postCart) | **POST** /users/{userId}/carts | getCarts
 *Occ.UsersApi* | [**getCart**](docs/UsersApi.md#getCart) | **GET** /users/{userId}/carts/{cartId} | getCart
 *Occ.UsersApi* | [**deleteCart**](docs/UsersApi.md#deleteCart) | **DELETE** /users/{userId}/carts/{cartId} | getCart
-*Occ.UsersApi* | [**postCartClonesavedcart**](docs/UsersApi.md#postCartClonesavedcart) | **POST** /users/{userId}/carts/{cartId}/clonesavedcart | postCartClonesavedcart
-*Occ.UsersApi* | [**getCartDeliverymode**](docs/UsersApi.md#getCartDeliverymode) | **GET** /users/{userId}/carts/{cartId}/deliverymode | getCartDeliverymode
-*Occ.UsersApi* | [**putCartDeliverymode**](docs/UsersApi.md#putCartDeliverymode) | **PUT** /users/{userId}/carts/{cartId}/deliverymode | getCartDeliverymode
-*Occ.UsersApi* | [**deleteCartDeliverymode**](docs/UsersApi.md#deleteCartDeliverymode) | **DELETE** /users/{userId}/carts/{cartId}/deliverymode | getCartDeliverymode
-*Occ.UsersApi* | [**getCartDeliverymodes**](docs/UsersApi.md#getCartDeliverymodes) | **GET** /users/{userId}/carts/{cartId}/deliverymodes | getCartDeliverymodes
+*Occ.UsersApi* | [**postCartCloneSavedcart**](docs/UsersApi.md#postCartCloneSavedcart) | **POST** /users/{userId}/carts/{cartId}/clonesavedcart | postCartCloneSavedcart
+*Occ.UsersApi* | [**getCartDeliveryMode**](docs/UsersApi.md#getCartDeliveryMode) | **GET** /users/{userId}/carts/{cartId}/deliverymode | getCartDeliveryMode
+*Occ.UsersApi* | [**putCartDeliveryMode**](docs/UsersApi.md#putCartDeliveryMode) | **PUT** /users/{userId}/carts/{cartId}/deliverymode | getCartDeliveryMode
+*Occ.UsersApi* | [**deleteCartDeliveryMode**](docs/UsersApi.md#deleteCartDeliveryMode) | **DELETE** /users/{userId}/carts/{cartId}/deliverymode | getCartDeliveryMode
+*Occ.UsersApi* | [**getCartDeliveryModes**](docs/UsersApi.md#getCartDeliveryModes) | **GET** /users/{userId}/carts/{cartId}/deliverymodes | getCartDeliveryModes
 *Occ.UsersApi* | [**putCartEmail**](docs/UsersApi.md#putCartEmail) | **PUT** /users/{userId}/carts/{cartId}/email | putCartEmail
 *Occ.UsersApi* | [**getCartEntries**](docs/UsersApi.md#getCartEntries) | **GET** /users/{userId}/carts/{cartId}/entries | getCartEntries
 *Occ.UsersApi* | [**postCartEntries**](docs/UsersApi.md#postCartEntries) | **POST** /users/{userId}/carts/{cartId}/entries | getCartEntries

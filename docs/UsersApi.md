@@ -23,11 +23,11 @@ Method | HTTP request | Description
 [**postCart**](UsersApi.md#postCart) | **POST** /users/{userId}/carts | getCarts
 [**getCart**](UsersApi.md#getCart) | **GET** /users/{userId}/carts/{cartId} | getCart
 [**deleteCart**](UsersApi.md#deleteCart) | **DELETE** /users/{userId}/carts/{cartId} | getCart
-[**postCartClonesavedcart**](UsersApi.md#postCartClonesavedcart) | **POST** /users/{userId}/carts/{cartId}/clonesavedcart | postCartClonesavedcart
-[**getCartDeliverymode**](UsersApi.md#getCartDeliverymode) | **GET** /users/{userId}/carts/{cartId}/deliverymode | getCartDeliverymode
-[**putCartDeliverymode**](UsersApi.md#putCartDeliverymode) | **PUT** /users/{userId}/carts/{cartId}/deliverymode | getCartDeliverymode
-[**deleteCartDeliverymode**](UsersApi.md#deleteCartDeliverymode) | **DELETE** /users/{userId}/carts/{cartId}/deliverymode | getCartDeliverymode
-[**getCartDeliverymodes**](UsersApi.md#getCartDeliverymodes) | **GET** /users/{userId}/carts/{cartId}/deliverymodes | getCartDeliverymodes
+[**postCartCloneSavedcart**](UsersApi.md#postCartCloneSavedcart) | **POST** /users/{userId}/carts/{cartId}/clonesavedcart | postCartCloneSavedcart
+[**getCartDeliveryMode**](UsersApi.md#getCartDeliveryMode) | **GET** /users/{userId}/carts/{cartId}/deliverymode | getCartDeliveryMode
+[**putCartDeliveryMode**](UsersApi.md#putCartDeliveryMode) | **PUT** /users/{userId}/carts/{cartId}/deliverymode | getCartDeliveryMode
+[**deleteCartDeliveryMode**](UsersApi.md#deleteCartDeliveryMode) | **DELETE** /users/{userId}/carts/{cartId}/deliverymode | getCartDeliveryMode
+[**getCartDeliveryModes**](UsersApi.md#getCartDeliveryModes) | **GET** /users/{userId}/carts/{cartId}/deliverymodes | getCartDeliveryModes
 [**putCartEmail**](UsersApi.md#putCartEmail) | **PUT** /users/{userId}/carts/{cartId}/email | putCartEmail
 [**getCartEntries**](UsersApi.md#getCartEntries) | **GET** /users/{userId}/carts/{cartId}/entries | getCartEntries
 [**postCartEntries**](UsersApi.md#postCartEntries) | **POST** /users/{userId}/carts/{cartId}/entries | getCartEntries
@@ -1064,11 +1064,11 @@ null (empty response body)
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="postCartClonesavedcart"></a>
-# **postCartClonesavedcart**
-> SaveCartResultWsDTOModel postCartClonesavedcart(userId, cartId, opts)
+<a name="postCartCloneSavedcart"></a>
+# **postCartCloneSavedcart**
+> SaveCartResultWsDTOModel postCartCloneSavedcart(userId, cartId, opts)
 
-postCartClonesavedcart
+postCartCloneSavedcart
 
 Explicitly clones a cart 
 
@@ -1092,7 +1092,7 @@ let opts = {
   'name': "name_example", // String | the name that should be applied to the cloned cart
   'description': "description_example" // String | the description that should be applied to the cloned cart
 };
-apiInstance.postCartClonesavedcart(userId, cartId, opts).then((data) => {
+apiInstance.postCartCloneSavedcart(userId, cartId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -1123,11 +1123,11 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: application/json
 
-<a name="getCartDeliverymode"></a>
-# **getCartDeliverymode**
-> DeliveryModeWsDTOModel getCartDeliverymode(userId, cartId, opts)
+<a name="getCartDeliveryMode"></a>
+# **getCartDeliveryMode**
+> DeliveryModeWsDTOModel getCartDeliveryMode(userId, cartId, opts)
 
-getCartDeliverymode
+getCartDeliveryMode
 
 Returns the delivery mode selected for the cart.  Security: Permitted only for customers, guests, customer managers or trusted clients. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
 
@@ -1149,7 +1149,7 @@ let cartId = "cartId_example"; // String | Cart identifier <ul> <li>cart code fo
 let opts = { 
   'fields': "fields_example" // String | Response configuration (list of fields, which should be returned in response)
 };
-apiInstance.getCartDeliverymode(userId, cartId, opts).then((data) => {
+apiInstance.getCartDeliveryMode(userId, cartId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -1178,11 +1178,11 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="putCartDeliverymode"></a>
-# **putCartDeliverymode**
-> putCartDeliverymode(userId, cartId, deliveryModeId)
+<a name="putCartDeliveryMode"></a>
+# **putCartDeliveryMode**
+> putCartDeliveryMode(userId, cartId, deliveryModeId)
 
-getCartDeliverymode
+getCartDeliveryMode
 
 Sets the delivery mode with a given identifier for the cart.  Security: Permitted only for customers, guests, customer managers or trusted clients. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
 
@@ -1203,7 +1203,7 @@ let cartId = "cartId_example"; // String | Cart identifier <ul> <li>cart code fo
 
 let deliveryModeId = "deliveryModeId_example"; // String | Delivery mode identifier (code)
 
-apiInstance.putCartDeliverymode(userId, cartId, deliveryModeId).then(() => {
+apiInstance.putCartDeliveryMode(userId, cartId, deliveryModeId).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -1232,11 +1232,11 @@ null (empty response body)
  - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: application/json
 
-<a name="deleteCartDeliverymode"></a>
-# **deleteCartDeliverymode**
-> deleteCartDeliverymode(userId, cartId)
+<a name="deleteCartDeliveryMode"></a>
+# **deleteCartDeliveryMode**
+> deleteCartDeliveryMode(userId, cartId)
 
-getCartDeliverymode
+getCartDeliveryMode
 
 Removes the delivery mode from the cart.  Security: Permitted only for customers, guests, customer managers or trusted clients. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
 
@@ -1255,7 +1255,7 @@ let userId = "userId_example"; // String | User identifier or one of the literal
 
 let cartId = "cartId_example"; // String | Cart identifier <ul> <li>cart code for logged in user</li> <li>cart guid for anonymous user</li> <li>'current' for the last modified cart</li> </ul>
 
-apiInstance.deleteCartDeliverymode(userId, cartId).then(() => {
+apiInstance.deleteCartDeliveryMode(userId, cartId).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -1283,11 +1283,11 @@ null (empty response body)
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="getCartDeliverymodes"></a>
-# **getCartDeliverymodes**
-> DeliveryModeListWsDTOModel getCartDeliverymodes(userId, cartId, opts)
+<a name="getCartDeliveryModes"></a>
+# **getCartDeliveryModes**
+> DeliveryModeListWsDTOModel getCartDeliveryModes(userId, cartId, opts)
 
-getCartDeliverymodes
+getCartDeliveryModes
 
 Returns all delivery modes supported for the current base store and cart delivery address. A delivery address must be set for the cart, otherwise an empty list will be returned.  Security: Permitted only for customers, guests, customer managers or trusted clients. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
 
@@ -1309,7 +1309,7 @@ let cartId = "cartId_example"; // String | Cart identifier <ul> <li>cart code fo
 let opts = { 
   'fields': "fields_example" // String | Response configuration (list of fields, which should be returned in response)
 };
-apiInstance.getCartDeliverymodes(userId, cartId, opts).then((data) => {
+apiInstance.getCartDeliveryModes(userId, cartId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);

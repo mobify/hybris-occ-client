@@ -346,9 +346,9 @@
     });
 
     // GET all delivery modes for cart
-    describe('getCartDeliverymodes', function() {
-      it('should call getCartDeliverymodes successfully', function(done) {
-        instance.getCartDeliverymodes(user.uid, cartId)
+    describe('getCartDeliveryModes', function() {
+      it('should call getCartDeliveryModes successfully', function(done) {
+        instance.getCartDeliveryModes(user.uid, cartId)
           .then((res) => {
             expect(res).to.have.property('deliveryModes')
             done();
@@ -357,9 +357,9 @@
     });
 
     // PUT set delivery mode to cart
-    describe('putCartDeliverymode', function() {
-      it('should call putCartDeliverymode successfully', function(done) {
-        instance.putCartDeliverymode(user.uid, cartId, 'standard-gross')
+    describe('putCartDeliveryMode', function() {
+      it('should call putCartDeliveryMode successfully', function(done) {
+        instance.putCartDeliveryMode(user.uid, cartId, 'standard-gross')
           .then((res) => {
             done();
           })
@@ -368,9 +368,9 @@
     });
 
     // GET selected delivery mode of cart
-    describe('getCartDeliverymode', function() {
-      it('should call getCartDeliverymode successfully', function(done) {
-        instance.getCartDeliverymode(user.uid, cartId)
+    describe('getCartDeliveryMode', function() {
+      it('should call getCartDeliveryMode successfully', function(done) {
+        instance.getCartDeliveryMode(user.uid, cartId)
           .then((res) => {
             expect(res).to.have.property('deliveryCost')
             expect(res.code).to.equal('standard-gross')
@@ -489,9 +489,9 @@
 
     // // POST clone a cart
     // // TODO: fix 'cannot clone a saved cart'
-    // describe('postCartClonesavedcart', function() {
-    //   it('should call postCartClonesavedcart successfully', function(done) {
-    //     instance.postCartClonesavedcart(user.uid, '00002110')
+    // describe('postCartCloneSavedcart', function() {
+    //   it('should call postCartCloneSavedcart successfully', function(done) {
+    //     instance.postCartCloneSavedcart(user.uid, '00002110')
     //       .then((res) => {
     //         console.log(res)
     //         console.log(cartId)
@@ -503,9 +503,9 @@
     // });
 
     // DELETE cart delivery mode
-    describe('deleteCartDeliverymode', function() {
-      it('should call deleteCartDeliverymode successfully', function(done) {
-        instance.deleteCartDeliverymode(user.uid, cartId)
+    describe('deleteCartDeliveryMode', function() {
+      it('should call deleteCartDeliveryMode successfully', function(done) {
+        instance.deleteCartDeliveryMode(user.uid, cartId)
           .then(done)
       });
     });

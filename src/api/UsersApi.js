@@ -1214,7 +1214,7 @@ export default class UsersApi {
 
 
     /**
-     * postCartClonesavedcart
+     * postCartCloneSavedcart
      * Explicitly clones a cart 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
@@ -1230,12 +1230,12 @@ export default class UsersApi {
 
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling postCartClonesavedcart");
+        throw new Error("Missing the required parameter 'userId' when calling postCartCloneSavedcart");
       }
 
       // verify the required parameter 'cartId' is set
       if (cartId === undefined || cartId === null) {
-        throw new Error("Missing the required parameter 'cartId' when calling postCartClonesavedcart");
+        throw new Error("Missing the required parameter 'cartId' when calling postCartCloneSavedcart");
       }
 
 
@@ -1266,7 +1266,7 @@ export default class UsersApi {
     }
 
     /**
-     * postCartClonesavedcart
+     * postCartCloneSavedcart
      * Explicitly clones a cart 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
@@ -1276,7 +1276,7 @@ export default class UsersApi {
      * @param {String} opts.description the description that should be applied to the cloned cart
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/SaveCartResultWsDTOModel}
      */
-    postCartClonesavedcart(userId, cartId, opts) {
+    postCartCloneSavedcart(userId, cartId, opts) {
       return this.usersCartsClonesavedcartByUserIdWithHttpInfo(userId, cartId, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
@@ -1285,7 +1285,7 @@ export default class UsersApi {
 
 
     /**
-     * getCartDeliverymode
+     * getCartDeliveryMode
      * Returns the delivery mode selected for the cart.  Security: Permitted only for customers, guests, customer managers or trusted clients. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
@@ -1299,12 +1299,12 @@ export default class UsersApi {
 
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling getCartDeliverymode");
+        throw new Error("Missing the required parameter 'userId' when calling getCartDeliveryMode");
       }
 
       // verify the required parameter 'cartId' is set
       if (cartId === undefined || cartId === null) {
-        throw new Error("Missing the required parameter 'cartId' when calling getCartDeliverymode");
+        throw new Error("Missing the required parameter 'cartId' when calling getCartDeliveryMode");
       }
 
 
@@ -1333,7 +1333,7 @@ export default class UsersApi {
     }
 
     /**
-     * getCartDeliverymode
+     * getCartDeliveryMode
      * Returns the delivery mode selected for the cart.  Security: Permitted only for customers, guests, customer managers or trusted clients. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
@@ -1341,7 +1341,7 @@ export default class UsersApi {
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/DeliveryModeWsDTOModel}
      */
-    getCartDeliverymode(userId, cartId, opts) {
+    getCartDeliveryMode(userId, cartId, opts) {
       return this.usersCartsDeliverymodeByUserIdAndCartIdWithHttpInfo(userId, cartId, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
@@ -1350,7 +1350,7 @@ export default class UsersApi {
 
 
     /**
-     * getCartDeliverymode
+     * getCartDeliveryMode
      * Sets the delivery mode with a given identifier for the cart.  Security: Permitted only for customers, guests, customer managers or trusted clients. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
@@ -1362,17 +1362,17 @@ export default class UsersApi {
 
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling putCartDeliverymode");
+        throw new Error("Missing the required parameter 'userId' when calling putCartDeliveryMode");
       }
 
       // verify the required parameter 'cartId' is set
       if (cartId === undefined || cartId === null) {
-        throw new Error("Missing the required parameter 'cartId' when calling putCartDeliverymode");
+        throw new Error("Missing the required parameter 'cartId' when calling putCartDeliveryMode");
       }
 
       // verify the required parameter 'deliveryModeId' is set
       if (deliveryModeId === undefined || deliveryModeId === null) {
-        throw new Error("Missing the required parameter 'deliveryModeId' when calling putCartDeliverymode");
+        throw new Error("Missing the required parameter 'deliveryModeId' when calling putCartDeliveryMode");
       }
 
 
@@ -1401,14 +1401,14 @@ export default class UsersApi {
     }
 
     /**
-     * getCartDeliverymode
+     * getCartDeliveryMode
      * Sets the delivery mode with a given identifier for the cart.  Security: Permitted only for customers, guests, customer managers or trusted clients. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
      * @param {String} deliveryModeId Delivery mode identifier (code)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    putCartDeliverymode(userId, cartId, deliveryModeId) {
+    putCartDeliveryMode(userId, cartId, deliveryModeId) {
       return this.usersCartsDeliverymodeByUserIdAndCartId1WithHttpInfo(userId, cartId, deliveryModeId)
         .then(function(response_and_data) {
           return response_and_data.data;
@@ -1417,7 +1417,7 @@ export default class UsersApi {
 
 
     /**
-     * getCartDeliverymode
+     * getCartDeliveryMode
      * Removes the delivery mode from the cart.  Security: Permitted only for customers, guests, customer managers or trusted clients. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
@@ -1428,12 +1428,12 @@ export default class UsersApi {
 
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling deleteCartDeliverymode");
+        throw new Error("Missing the required parameter 'userId' when calling deleteCartDeliveryMode");
       }
 
       // verify the required parameter 'cartId' is set
       if (cartId === undefined || cartId === null) {
-        throw new Error("Missing the required parameter 'cartId' when calling deleteCartDeliverymode");
+        throw new Error("Missing the required parameter 'cartId' when calling deleteCartDeliveryMode");
       }
 
 
@@ -1461,13 +1461,13 @@ export default class UsersApi {
     }
 
     /**
-     * getCartDeliverymode
+     * getCartDeliveryMode
      * Removes the delivery mode from the cart.  Security: Permitted only for customers, guests, customer managers or trusted clients. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    deleteCartDeliverymode(userId, cartId) {
+    deleteCartDeliveryMode(userId, cartId) {
       return this.usersCartsDeliverymodeByUserIdAndCartId2WithHttpInfo(userId, cartId)
         .then(function(response_and_data) {
           return response_and_data.data;
@@ -1476,7 +1476,7 @@ export default class UsersApi {
 
 
     /**
-     * getCartDeliverymodes
+     * getCartDeliveryModes
      * Returns all delivery modes supported for the current base store and cart delivery address. A delivery address must be set for the cart, otherwise an empty list will be returned.  Security: Permitted only for customers, guests, customer managers or trusted clients. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
@@ -1490,12 +1490,12 @@ export default class UsersApi {
 
       // verify the required parameter 'userId' is set
       if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling getCartDeliverymodes");
+        throw new Error("Missing the required parameter 'userId' when calling getCartDeliveryModes");
       }
 
       // verify the required parameter 'cartId' is set
       if (cartId === undefined || cartId === null) {
-        throw new Error("Missing the required parameter 'cartId' when calling getCartDeliverymodes");
+        throw new Error("Missing the required parameter 'cartId' when calling getCartDeliveryModes");
       }
 
 
@@ -1524,7 +1524,7 @@ export default class UsersApi {
     }
 
     /**
-     * getCartDeliverymodes
+     * getCartDeliveryModes
      * Returns all delivery modes supported for the current base store and cart delivery address. A delivery address must be set for the cart, otherwise an empty list will be returned.  Security: Permitted only for customers, guests, customer managers or trusted clients. Trusted client or customer manager may impersonate as any user and access cart on their behalf. 
      * @param {String} userId User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} cartId Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt;
@@ -1532,7 +1532,7 @@ export default class UsersApi {
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/DeliveryModeListWsDTOModel}
      */
-    getCartDeliverymodes(userId, cartId, opts) {
+    getCartDeliveryModes(userId, cartId, opts) {
       return this.usersCartsDeliverymodesByUserIdAndCartIdWithHttpInfo(userId, cartId, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
