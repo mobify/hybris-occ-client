@@ -11,76 +11,54 @@
  *
  */
 
-(function(root, factory) {
-    if (typeof define === 'function' && define.amd) {
-    // AMD.
-        define(['expect.js', '../config'], factory)
-    } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-        factory(require('expect.js'), require('../config'))
-    } else {
-    // Browser globals (root is window)
-        factory(root.expect, root.Occ)
-    }
-}(this, (expect, Occ) => {
-    'use strict'
+import expect from 'expect.js'
+import Occ from '../config'
 
-    let instance
-    const {catalogId, catalogName, catalogVersionId} = Occ.default
+let instance
 
-    beforeEach(() => {
-        instance = new Occ.default.CatalogsApi()
-    })
+const {catalogId, catalogName, catalogVersionId} = Occ
 
-    const getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-        if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
-    }
+beforeEach(() => {
+    instance = new Occ.CatalogsApi()
+})
 
-    const setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-        if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
-    }
-
-    describe('CatalogsApi', () => {
-        describe('getCatalogs', () => {
-            it('should call getCatalogs successfully', (done) => {
-                instance.getCatalogs()
-                    .then((res) => {
-                        expect(res).to.have.property('catalogs')
-                        expect(res.catalogs).to.be.an('array')
-                        expect(res.catalogs.length).to.be.ok()
-                        done()
-                    })
-            })
-        })
-        describe('getCatalog', () => {
-            it('should call getCatalog successfully', (done) => {
-                instance.getCatalog(catalogId)
-                    .then((res) => {
-                        expect(res.name).to.be(catalogName)
-                        done()
-                    })
-            })
-        })
-        describe('getCatalogsByCatalogIdAndCatalogVersionId', () => {
-            it('should call getCatalogsByCatalogIdAndCatalogVersionId successfully', (done) => {
-                instance.getCatalogsByCatalogIdAndCatalogVersionId(catalogId, catalogVersionId)
-                    .then((res) => {
-                        expect(res.id).to.be(catalogVersionId)
-                        done()
-                    })
-            })
-        })
-        describe('getCategory', () => {
-            it('should call getCategory successfully', (done) => {
-                instance.getCatalogsByCatalogIdAndCatalogVersionId(catalogId, catalogVersionId)
-                    .then((res) => {
-                        expect(res.id).to.be(catalogVersionId)
-                        done()
-                    })
-            })
+describe('CatalogsApi', () => {
+    describe('getCatalogs', () => {
+        it('should call getCatalogs successfully', (done) => {
+            instance.getCatalogs()
+                .then((res) => {
+                    expect(res).to.have.property('catalogs')
+                    expect(res.catalogs).to.be.an('array')
+                    expect(res.catalogs.length).to.be.ok()
+                    done()
+                })
         })
     })
-
-}))
+    describe('getCatalog', () => {
+        it('should call getCatalog successfully', (done) => {
+            instance.getCatalog(catalogId)
+                .then((res) => {
+                    expect(res.name).to.be(catalogName)
+                    done()
+                })
+        })
+    })
+    describe('getCatalogsByCatalogIdAndCatalogVersionId', () => {
+        it('should call getCatalogsByCatalogIdAndCatalogVersionId successfully', (done) => {
+            instance.getCatalogsByCatalogIdAndCatalogVersionId(catalogId, catalogVersionId)
+                .then((res) => {
+                    expect(res.id).to.be(catalogVersionId)
+                    done()
+                })
+        })
+    })
+    describe('getCategory', () => {
+        it('should call getCategory successfully', (done) => {
+            instance.getCatalogsByCatalogIdAndCatalogVersionId(catalogId, catalogVersionId)
+                .then((res) => {
+                    expect(res.id).to.be(catalogVersionId)
+                    done()
+                })
+        })
+    })
+})

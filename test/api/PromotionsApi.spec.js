@@ -11,56 +11,33 @@
  *
  */
 
-(function(root, factory) {
-    if (typeof define === 'function' && define.amd) {
-    // AMD.
-        define(['expect.js', '../config'], factory)
-    } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-        factory(require('expect.js'), require('../config'))
-    } else {
-    // Browser globals (root is window)
-        factory(root.expect, root.Occ)
-    }
-}(this, (expect, Occ) => {
-    'use strict'
+import expect from 'expect.js'
+import Occ from '../config'
 
-    let instance
-    const {promotion} = Occ.default
+let instance
+const {promotion} = Occ
 
-    beforeEach(() => {
-        instance = new Occ.default.PromotionsApi()
-    })
+beforeEach(() => {
+    instance = new Occ.PromotionsApi()
+})
 
-    const getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-        if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
-    }
-
-    const setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-        if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
-    }
-
-    describe('PromotionsApi', () => {
-        describe('getPromotions', () => {
-            it('should call getPromotions successfully', (done) => {
-                instance.getPromotions({promotionGroup: promotion.group, type: 'all'})
-                    .then((res) => {
-                        expect(res).to.have.property('promotions')
-                        done()
-                    })
-            })
-        })
-        describe('getPromotion', () => {
-            it('should call getPromotion successfully', (done) => {
-                instance.getPromotion(promotion.code)
-                    .then((res) => {
-                        expect(res.code).to.equal(promotion.code)
-                        done()
-                    })
-            })
+describe('PromotionsApi', () => {
+    describe('getPromotions', () => {
+        it('should call getPromotions successfully', (done) => {
+            instance.getPromotions({promotionGroup: promotion.group, type: 'all'})
+                .then((res) => {
+                    expect(res).to.have.property('promotions')
+                    done()
+                })
         })
     })
-
-}))
+    describe('getPromotion', () => {
+        it('should call getPromotion successfully', (done) => {
+            instance.getPromotion(promotion.code)
+                .then((res) => {
+                    expect(res.code).to.equal(promotion.code)
+                    done()
+                })
+        })
+    })
+})

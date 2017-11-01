@@ -11,47 +11,25 @@
  *
  */
 
-(function(root, factory) {
-    if (typeof define === 'function' && define.amd) {
-    // AMD.
-        define(['expect.js', '../config'], factory)
-    } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-        factory(require('expect.js'), require('../config'))
-    } else {
-    // Browser globals (root is window)
-        factory(root.expect, root.Occ)
-    }
-}(this, (expect, Occ) => {
-    'use strict'
+import expect from 'expect.js'
+import Occ from '../config'
 
-    let instance
-    const currencies = Occ.default.currencies
+let instance
 
-    beforeEach(() => {
-        instance = new Occ.default.CurrenciesApi()
-    })
+const currencies = Occ.currencies
 
-    const getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-        if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
-    }
+beforeEach(() => {
+    instance = new Occ.CurrenciesApi()
+})
 
-    const setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-        if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
-    }
-
-    describe('CurrenciesApi', () => {
-        describe('getCurrencies', () => {
-            it('should call getCurrencies successfully', (done) => {
-                instance.getCurrencies()
-                    .then((res) => {
-                        expect(res.currencies[0]).to.eql(currencies)
-                        done()
-                    })
-            })
+describe('CurrenciesApi', () => {
+    describe('getCurrencies', () => {
+        it('should call getCurrencies successfully', (done) => {
+            instance.getCurrencies()
+                .then((res) => {
+                    expect(res.currencies[0]).to.eql(currencies)
+                    done()
+                })
         })
     })
-
-}))
+})

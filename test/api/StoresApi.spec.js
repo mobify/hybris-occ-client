@@ -11,56 +11,33 @@
  *
  */
 
-(function(root, factory) {
-    if (typeof define === 'function' && define.amd) {
-    // AMD.
-        define(['expect.js', '../config'], factory)
-    } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-        factory(require('expect.js'), require('../config'))
-    } else {
-    // Browser globals (root is window)
-        factory(root.expect, root.Occ)
-    }
-}(this, (expect, Occ) => {
-    'use strict'
+import expect from 'expect.js'
+import Occ from '../config'
 
-    let instance
-    const {store} = Occ.default
+let instance
+const {store} = Occ
 
-    beforeEach(() => {
-        instance = new Occ.default.StoresApi()
-    })
+beforeEach(() => {
+    instance = new Occ.StoresApi()
+})
 
-    const getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-        if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
-    }
-
-    const setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-        if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
-    }
-
-    describe('StoresApi', () => {
-        describe('getStores', () => {
-            it('should call getStores successfully', (done) => {
-                instance.getStores({query: store.name})
-                    .then((res) => {
-                        expect(res.stores[0].name).to.equal(store.name)
-                        done()
-                    })
-            })
-        })
-        describe('getStore', () => {
-            it('should call getStore successfully', (done) => {
-                instance.getStore(store.name)
-                    .then((res) => {
-                        expect(res.geoPoint).to.eql(store.geoPoint)
-                        done()
-                    })
-            })
+describe('StoresApi', () => {
+    describe('getStores', () => {
+        it('should call getStores successfully', (done) => {
+            instance.getStores({query: store.name})
+                .then((res) => {
+                    expect(res.stores[0].name).to.equal(store.name)
+                    done()
+                })
         })
     })
-
-}))
+    describe('getStore', () => {
+        it('should call getStore successfully', (done) => {
+            instance.getStore(store.name)
+                .then((res) => {
+                    expect(res.geoPoint).to.eql(store.geoPoint)
+                    done()
+                })
+        })
+    })
+})

@@ -11,132 +11,108 @@
  *
  */
 
-(function(root, factory) {
-    if (typeof define === 'function' && define.amd) {
-    // AMD.
-        define(['expect.js', '../config'], factory)
-    } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-        factory(require('expect.js'), require('../config'))
-    } else {
-    // Browser globals (root is window)
-        factory(root.expect, root.Occ)
-    }
-}(this, (expect, Occ) => {
-    'use strict'
+import expect from 'expect.js'
+import Occ from '../config'
 
-    let instance
-    const {
-        product,
-        search,
-        searchResults,
-        sampleProduct,
-        store,
-        productSuggestion,
-        productReview
-    } = Occ.default
+let instance
+const {
+    search,
+    searchResults,
+    sampleProduct,
+    store,
+    productSuggestion,
+    productReview
+} = Occ
 
-    beforeEach(() => {
-        instance = new Occ.default.ProductsApi()
-    })
+beforeEach(() => {
+    instance = new Occ.ProductsApi()
+})
 
-    const getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-        if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
-    }
-
-    const setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-        if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
-    }
-
-    describe('ProductsApi', () => {
-        describe('getProduct', () => {
-            it('should call getProduct successfully', (done) => {
-                instance.getProduct(sampleProduct.code)
-                    .then((res) => {
-                        expect(res.name).to.equal(sampleProduct.name)
-                        done()
-                    })
-            })
-        })
-        describe('getProductExpressupdate', () => {
-            it('should call getProductExpressupdate successfully', (done) => {
-                // unsupported
-                done()
-            })
-        })
-        describe('getProductReferences', () => {
-            it('should call getProductReferences successfully', (done) => {
-                // Need information: referenceType enum
-                // instance.getProductReferences(sampleProduct.code, {referenceType: 'a'})
-                //   .then((res) => {
-                //     done();
-                //   })
-                //   .catch((err) => {
-                //     console.log(err)
-                //   })
-                done()
-            })
-        })
-        describe('getProductReviews', () => {
-            it('should call getProductReviews successfully', (done) => {
-                instance.getProductReviews(sampleProduct.code)
-                    .then((res) => {
-                        expect(res).to.have.property('reviews')
-                        done()
-                    })
-            })
-        })
-        describe('postProductReview', () => {
-            it('should call postProductReview successfully', (done) => {
-                instance.postProductReview(sampleProduct.code, productReview)
-                    .then((res) => {
-                        expect(res.headline).to.equal(productReview.headline)
-                        done()
-                    })
-            })
-        })
-        describe('getProductSearch', () => {
-            it('should call getProductSearch successfully', (done) => {
-                instance.getProductSearch(search)
-                    .then((res) => {
-                        expect(res.freeTextSearch).to.equal(searchResults.freeTextSearch)
-                        expect(res.sorts).to.eql(searchResults.sorts)
-                        expect(res.products[0].code).to.equal(sampleProduct.code)
-                        done()
-                    })
-            })
-        })
-        describe('getProductStock', () => {
-            it('should call getProductStock successfully', (done) => {
-                instance.getProductStock(sampleProduct.code, {location: store.name})
-                    .then((res) => {
-                        expect(res.stores[0].name).to.equal(store.name)
-                        expect(res.product.code).to.equal(sampleProduct.code)
-                        done()
-                    })
-            })
-        })
-        describe('getProductsStockByProductCodeAndStoreName', () => {
-            it('should call getProductsStockByProductCodeAndStoreName successfully', (done) => {
-                instance.getProductsStockByProductCodeAndStoreName(sampleProduct.code, store.name)
-                    .then((res) => {
-                        expect(res.stockLevelStatus).to.equal(store.stockLevelStatus)
-                        expect(res.stockLevel).to.equal(store.stockLevel)
-                        done()
-                    })
-            })
-        })
-        describe('getProductSuggestions', () => {
-            it('should call getProductSuggestions successfully', (done) => {
-                instance.getProductSuggestions(productSuggestion.max, productSuggestion.term)
-                    .then((res) => {
-                        expect(res.suggestions).to.eql(productSuggestion.answer)
-                        done()
-                    })
-            })
+describe('ProductsApi', () => {
+    describe('getProduct', () => {
+        it('should call getProduct successfully', (done) => {
+            instance.getProduct(sampleProduct.code)
+                .then((res) => {
+                    expect(res.name).to.equal(sampleProduct.name)
+                    done()
+                })
         })
     })
-
-}))
+    describe('getProductExpressupdate', () => {
+        it('should call getProductExpressupdate successfully', (done) => {
+            // unsupported
+            done()
+        })
+    })
+    describe('getProductReferences', () => {
+        it('should call getProductReferences successfully', (done) => {
+            // Need information: referenceType enum
+            // instance.getProductReferences(sampleProduct.code, {referenceType: 'a'})
+            //   .then((res) => {
+            //     done();
+            //   })
+            //   .catch((err) => {
+            //     console.log(err)
+            //   })
+            done()
+        })
+    })
+    describe('getProductReviews', () => {
+        it('should call getProductReviews successfully', (done) => {
+            instance.getProductReviews(sampleProduct.code)
+                .then((res) => {
+                    expect(res).to.have.property('reviews')
+                    done()
+                })
+        })
+    })
+    describe('postProductReview', () => {
+        it('should call postProductReview successfully', (done) => {
+            instance.postProductReview(sampleProduct.code, productReview)
+                .then((res) => {
+                    expect(res.headline).to.equal(productReview.headline)
+                    done()
+                })
+        })
+    })
+    describe('getProductSearch', () => {
+        it('should call getProductSearch successfully', (done) => {
+            instance.getProductSearch(search)
+                .then((res) => {
+                    expect(res.freeTextSearch).to.equal(searchResults.freeTextSearch)
+                    expect(res.sorts).to.eql(searchResults.sorts)
+                    expect(res.products[0].code).to.equal(sampleProduct.code)
+                    done()
+                })
+        })
+    })
+    describe('getProductStock', () => {
+        it('should call getProductStock successfully', (done) => {
+            instance.getProductStock(sampleProduct.code, {location: store.name})
+                .then((res) => {
+                    expect(res.stores[0].name).to.equal(store.name)
+                    expect(res.product.code).to.equal(sampleProduct.code)
+                    done()
+                })
+        })
+    })
+    describe('getProductsStockByProductCodeAndStoreName', () => {
+        it('should call getProductsStockByProductCodeAndStoreName successfully', (done) => {
+            instance.getProductsStockByProductCodeAndStoreName(sampleProduct.code, store.name)
+                .then((res) => {
+                    expect(res.stockLevelStatus).to.equal(store.stockLevelStatus)
+                    expect(res.stockLevel).to.equal(store.stockLevel)
+                    done()
+                })
+        })
+    })
+    describe('getProductSuggestions', () => {
+        it('should call getProductSuggestions successfully', (done) => {
+            instance.getProductSuggestions(productSuggestion.max, productSuggestion.term)
+                .then((res) => {
+                    expect(res.suggestions).to.eql(productSuggestion.answer)
+                    done()
+                })
+        })
+    })
+})

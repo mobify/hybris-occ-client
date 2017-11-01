@@ -11,47 +11,24 @@
  *
  */
 
-(function(root, factory) {
-    if (typeof define === 'function' && define.amd) {
-    // AMD.
-        define(['expect.js', '../config'], factory)
-    } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-        factory(require('expect.js'), require('../config'))
-    } else {
-    // Browser globals (root is window)
-        factory(root.expect, root.Occ)
-    }
-}(this, (expect, Occ) => {
-    'use strict'
+import expect from 'expect.js'
+import Occ from '../config'
 
-    let instance
+let instance
 
-    beforeEach(() => {
-        instance = new Occ.default.FeedsApi()
-    })
+beforeEach(() => {
+    instance = new Occ.FeedsApi()
+})
 
-    const getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-        if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
-    }
-
-    const setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-        if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
-    }
-
-    describe('FeedsApi', () => {
-        describe('getOrdersStatusfeed', () => {
-            it('should call getOrdersStatusfeed successfully', (done) => {
-                const timestamp = '2017-07-23T17:00:00Z'
-                instance.getOrdersStatusfeed({timestamp})
-                    .then((res) => {
-                        expect(res).to.have.property('orderStatusUpdateElements')
-                        done()
-                    })
-            })
+describe('FeedsApi', () => {
+    describe('getOrdersStatusfeed', () => {
+        it('should call getOrdersStatusfeed successfully', (done) => {
+            const timestamp = '2017-07-23T17:00:00Z'
+            instance.getOrdersStatusfeed({timestamp})
+                .then((res) => {
+                    expect(res).to.have.property('orderStatusUpdateElements')
+                    done()
+                })
         })
     })
-
-}))
+})

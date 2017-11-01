@@ -11,54 +11,30 @@
  *
  */
 
-(function(root, factory) {
-    if (typeof define === 'function' && define.amd) {
-    // AMD.
-        define(['expect.js', '../config'], factory)
-    } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-        factory(require('expect.js'), require('../config'))
-    } else {
-    // Browser globals (root is window)
-        factory(root.expect, root.Occ)
-    }
-}(this, (expect, Occ) => {
-    'use strict'
+import expect from 'expect.js'
+import Occ from '../config'
 
-    let instance
+let instance
 
-    beforeEach((done) => {
-        instance = new Occ.default.VouchersApi()
-        Occ.default.ApiClient.instance.requestAccessToken()
-            .then(done)
-    })
+beforeEach((done) => {
+    instance = new Occ.VouchersApi()
+    Occ.ApiClient.instance.requestAccessToken()
+        .then(done)
+})
 
-    afterEach((done) => {
-        Occ.default.ApiClient.instance.clearAccessToken()
-        done()
-    })
+afterEach(() => {
+    Occ.ApiClient.instance.clearAccessToken()
+})
 
-    const getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-        if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
-    }
-
-    const setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-        if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
-    }
-
-    describe('VouchersApi', () => {
-        describe('getVoucher', () => {
-            it('should call getVoucher successfully', (done) => {
-                const code = 'MAGIC'
-                instance.getVoucher(code)
-                    .then((res) => {
-                        expect(res.code).to.equal(code)
-                        done()
-                    })
-            })
+describe('VouchersApi', () => {
+    describe('getVoucher', () => {
+        it('should call getVoucher successfully', (done) => {
+            const code = 'MAGIC'
+            instance.getVoucher(code)
+                .then((res) => {
+                    expect(res.code).to.equal(code)
+                    done()
+                })
         })
     })
-
-}))
+})

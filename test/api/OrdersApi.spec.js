@@ -11,53 +11,30 @@
  *
  */
 
-(function(root, factory) {
-    if (typeof define === 'function' && define.amd) {
-    // AMD.
-        define(['expect.js', '../config'], factory)
-    } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-        factory(require('expect.js'), require('../config'))
-    } else {
-    // Browser globals (root is window)
-        factory(root.expect, root.Occ)
-    }
-}(this, (expect, Occ) => {
-    'use strict'
+import expect from 'expect.js'
+import Occ from '../config'
 
-    let instance
-    const {order} = Occ.default
+let instance
+const {order} = Occ
 
-    beforeEach(() => {
-        instance = new Occ.default.OrdersApi()
-    })
+beforeEach(() => {
+    instance = new Occ.OrdersApi()
+})
 
-    const getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-        if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
-    }
-
-    const setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-        if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
-    }
-
-    describe('OrdersApi', () => {
-        describe('getOrder', () => {
-            it('should call getOrder successfully', function(done) {
-                instance.getOrder(order.code)
-                    .then((res) => {
-                        expect(res.code).to.equal(order.code)
-                        expect(res.status).to.equal(order.status)
-                        expect(res.guestCustomer).to.equal(order.guestCustomer)
-                        expect(res.deliveryStatus).to.equal(order.deliveryStatus)
-                        order.fields.forEach((element) => {
-                            expect(res).to.have.property(element)
-                        }, this)
-                        done()
-                    })
-            })
+describe('OrdersApi', () => {
+    describe('getOrder', () => {
+        it('should call getOrder successfully', function(done) {
+            instance.getOrder(order.code)
+                .then((res) => {
+                    expect(res.code).to.equal(order.code)
+                    expect(res.status).to.equal(order.status)
+                    expect(res.guestCustomer).to.equal(order.guestCustomer)
+                    expect(res.deliveryStatus).to.equal(order.deliveryStatus)
+                    order.fields.forEach((element) => {
+                        expect(res).to.have.property(element)
+                    }, this)
+                    done()
+                })
         })
     })
-
-}))
+})

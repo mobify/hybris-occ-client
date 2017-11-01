@@ -10,98 +10,75 @@
  * Do not edit the class manually.
  *
  */
+/* eslint-disable */
+import expect from 'expect.js'
+import Occ from '../config'
 
-(function(root, factory) {
-    if (typeof define === 'function' && define.amd) {
-    // AMD.
-        define(['expect.js', '../config'], factory)
-    } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-        factory(require('expect.js'), require('../config'))
-    } else {
-    // Browser globals (root is window)
-        factory(root.expect, root.Occ)
-    }
-}(this, (expect, Occ) => {
-    'use strict'
+let instance
 
-    let instance
+beforeEach(() => {
+    instance = new Occ.CustomergroupsApi()
+})
 
-    beforeEach(() => {
-        instance = new Occ.default.CustomergroupsApi()
-    })
-
-    const getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-        if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
-    }
-
-    const setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-        if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
-    }
-
-    describe('CustomergroupsApi', () => {
-        describe('getCustomerGroups', () => {
-            it('should call getCustomerGroups successfully', (done) => {
-                // uncomment below and update the code to test customergroups
-                // instance.getCustomerGroups(function(error) {
-                //  if (error) throw error;
-                // expect().to.be();
-                // });
-                done()
-            })
-        })
-        describe('postCustomerGroup', () => {
-            it('should call postCustomerGroup successfully', (done) => {
-                // uncomment below and update the code to test postCustomerGroup
-                // instance.postCustomerGroup(function(error) {
-                //  if (error) throw error;
-                // expect().to.be();
-                // });
-                done()
-            })
-        })
-        describe('getCustomerGroup', () => {
-            it('should call getCustomerGroup successfully', (done) => {
-                // uncomment below and update the code to test getCustomerGroup
-                // instance.getCustomerGroup(function(error) {
-                //  if (error) throw error;
-                // expect().to.be();
-                // });
-                done()
-            })
-        })
-        describe('putCustomerGroupsMembers', () => {
-            it('should call putCustomerGroupsMembers successfully', (done) => {
-                // uncomment below and update the code to test putCustomerGroupsMembers
-                // instance.putCustomerGroupsMembers(function(error) {
-                //  if (error) throw error;
-                // expect().to.be();
-                // });
-                done()
-            })
-        })
-        describe('patchCustomerGroupsMembers', () => {
-            it('should call patchCustomerGroupsMembers successfully', (done) => {
-                // uncomment below and update the code to test patchCustomerGroupsMembers
-                // instance.patchCustomerGroupsMembers(function(error) {
-                //  if (error) throw error;
-                // expect().to.be();
-                // });
-                done()
-            })
-        })
-        describe('deleteCustomerGroupsMember', () => {
-            it('should call deleteCustomerGroupsMember successfully', (done) => {
-                // uncomment below and update the code to test deleteCustomerGroupsMember
-                // instance.deleteCustomerGroupsMember(function(error) {
-                //  if (error) throw error;
-                // expect().to.be();
-                // });
-                done()
-            })
+describe('CustomergroupsApi', () => {
+    describe('getCustomerGroups', () => {
+        it('should call getCustomerGroups successfully', (done) => {
+            // uncomment below and update the code to test customergroups
+            // instance.getCustomerGroups(function(error) {
+            //  if (error) throw error;
+            // expect().to.be();
+            // });
+            done()
         })
     })
-
-}))
+    describe('postCustomerGroup', () => {
+        it('should call postCustomerGroup successfully', (done) => {
+            // uncomment below and update the code to test postCustomerGroup
+            // instance.postCustomerGroup(function(error) {
+            //  if (error) throw error;
+            // expect().to.be();
+            // });
+            done()
+        })
+    })
+    describe('getCustomerGroup', () => {
+        it('should call getCustomerGroup successfully', (done) => {
+            // uncomment below and update the code to test getCustomerGroup
+            // instance.getCustomerGroup(function(error) {
+            //  if (error) throw error;
+            // expect().to.be();
+            // });
+            done()
+        })
+    })
+    describe('putCustomerGroupsMembers', () => {
+        it('should call putCustomerGroupsMembers successfully', (done) => {
+            // uncomment below and update the code to test putCustomerGroupsMembers
+            // instance.putCustomerGroupsMembers(function(error) {
+            //  if (error) throw error;
+            // expect().to.be();
+            // });
+            done()
+        })
+    })
+    describe('patchCustomerGroupsMembers', () => {
+        it('should call patchCustomerGroupsMembers successfully', (done) => {
+            // uncomment below and update the code to test patchCustomerGroupsMembers
+            // instance.patchCustomerGroupsMembers(function(error) {
+            //  if (error) throw error;
+            // expect().to.be();
+            // });
+            done()
+        })
+    })
+    describe('deleteCustomerGroupsMember', () => {
+        it('should call deleteCustomerGroupsMember successfully', (done) => {
+            // uncomment below and update the code to test deleteCustomerGroupsMember
+            // instance.deleteCustomerGroupsMember(function(error) {
+            //  if (error) throw error;
+            // expect().to.be();
+            // });
+            done()
+        })
+    })
+})

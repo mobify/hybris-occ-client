@@ -11,55 +11,29 @@
  *
  */
 
-(function(root, factory) {
-    if (typeof define === 'function' && define.amd) {
-    // AMD.
-        define(['expect.js', '../config'], factory)
-    } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-        factory(require('expect.js'), require('../config'))
-    } else {
-    // Browser globals (root is window)
-        factory(root.expect, root.Occ)
-    }
-}(this, (expect, Occ) => {
-    'use strict'
+import Occ from '../config'
 
-    let instance
-    const {user} = Occ.default
+let instance
+const {user} = Occ
 
-    before((done) => {
-        Occ.default.ApiClient.instance.requestAccessToken()
-            .then(done)
-    })
+before((done) => {
+    Occ.ApiClient.instance.requestAccessToken()
+        .then(done)
+})
 
-    after(() => {
-        Occ.default.ApiClient.instance.clearAccessToken()
-    })
+after(() => {
+    Occ.ApiClient.instance.clearAccessToken()
+})
 
-    beforeEach(() => {
-        instance = new Occ.default.ForgottenpasswordtokensApi()
-    })
+beforeEach(() => {
+    instance = new Occ.ForgottenpasswordtokensApi()
+})
 
-    const getProperty = function(object, getter, property) {
-    // Use getter method if present; otherwise, get the property directly.
-        if (typeof object[getter] === 'function') { return object[getter]() } else { return object[property] }
-    }
-
-    const setProperty = function(object, setter, property, value) {
-    // Use setter method if present; otherwise, set the property directly.
-        if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
-    }
-
-    describe('ForgottenpasswordtokensApi', () => {
-        describe('postForgottenPasswordToken', () => {
-            it('should call postForgottenPasswordToken successfully', (done) => {
-                instance.postForgottenPasswordToken({userId: user.uid})
-                    .then((res) => {
-                        done()
-                    })
-            })
+describe('ForgottenpasswordtokensApi', () => {
+    describe('postForgottenPasswordToken', () => {
+        it('should call postForgottenPasswordToken successfully', (done) => {
+            instance.postForgottenPasswordToken({userId: user.uid})
+                .then(done)
         })
     })
-
-}))
+})
