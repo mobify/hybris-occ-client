@@ -107,8 +107,8 @@ export default class UsersApi {
      */
     postUsers(body) {
         return this.usersWithHttpInfo(body)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 
@@ -177,8 +177,8 @@ export default class UsersApi {
      */
     getUserAddresses(userId, opts) {
         return this.usersAddressesByUserIdWithHttpInfo(userId, opts)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 
@@ -254,8 +254,8 @@ export default class UsersApi {
      */
     postUserAddress(userId, body, opts) {
         return this.usersAddressesByUserId1WithHttpInfo(userId, body, opts)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 
@@ -332,8 +332,8 @@ export default class UsersApi {
      */
     getUserAddress(userId, addressId, opts) {
         return this.usersAddressesByUserIdAndAddressIdWithHttpInfo(userId, addressId, opts)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 
@@ -409,8 +409,8 @@ export default class UsersApi {
      */
     putUserAddress(userId, addressId, body) {
         return this.usersAddressesByUserIdAndAddressId1WithHttpInfo(userId, addressId, body)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 
@@ -484,8 +484,8 @@ export default class UsersApi {
      */
     patchUserAddress(userId, addressId, body) {
         return this.usersAddressesByUserIdAndAddressId2WithHttpInfo(userId, addressId, body)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 
@@ -552,8 +552,8 @@ export default class UsersApi {
      */
     deleteUserAddress(userId, addressId) {
         return this.usersAddressesByUserIdAndAddressId3WithHttpInfo(userId, addressId)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 
@@ -629,8 +629,8 @@ export default class UsersApi {
      */
     postUserAddressesVerification(userId, body, opts) {
         return this.usersAddressesVerificationByUserIdWithHttpInfo(userId, body, opts)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 
@@ -695,8 +695,8 @@ export default class UsersApi {
      */
     getUser(userId, opts) {
         return this.usersByUserIdWithHttpInfo(userId, opts)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 
@@ -764,8 +764,8 @@ export default class UsersApi {
      */
     putUser(userId, body) {
         return this.usersByUserId1WithHttpInfo(userId, body)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 
@@ -831,8 +831,8 @@ export default class UsersApi {
      */
     patchUser(userId, body) {
         return this.usersByUserId2WithHttpInfo(userId, body)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 
@@ -889,8 +889,8 @@ export default class UsersApi {
      */
     deleteUser(userId) {
         return this.usersByUserId3WithHttpInfo(userId)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 
@@ -982,8 +982,8 @@ export default class UsersApi {
      */
     postCartDeliveryAddress(userId, cartId, body, opts) {
         return this.usersCartsAddressesDeliveryByUserIdWithHttpInfo(userId, cartId, body, opts)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 
@@ -1066,8 +1066,8 @@ export default class UsersApi {
      */
     putCartDeliveryAddress(userId, cartId, addressId) {
         return this.usersCartsAddressesDeliveryByUserId1WithHttpInfo(userId, cartId, addressId)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 
@@ -1140,8 +1140,8 @@ export default class UsersApi {
      */
     deleteCartDeliveryAddress(userId, cartId) {
         return this.usersCartsAddressesDeliveryByUserId2WithHttpInfo(userId, cartId)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 
@@ -1206,8 +1206,8 @@ export default class UsersApi {
      */
     getCarts(userId, opts) {
         return this.usersCartsByUserIdWithHttpInfo(userId, opts)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 
@@ -1284,8 +1284,8 @@ export default class UsersApi {
      */
     postCart(userId, opts) {
         return this.usersCartsByUserId1WithHttpInfo(userId, opts)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 
@@ -1368,8 +1368,8 @@ export default class UsersApi {
      */
     getCart(userId, cartId, opts) {
         return this.usersCartsByUserIdAndCartIdWithHttpInfo(userId, cartId, opts)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 
@@ -1442,8 +1442,8 @@ export default class UsersApi {
      */
     deleteCart(userId, cartId) {
         return this.usersCartsByUserIdAndCartId1WithHttpInfo(userId, cartId)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 
@@ -1530,8 +1530,8 @@ export default class UsersApi {
      */
     postCartCloneSavedcart(userId, cartId, opts) {
         return this.usersCartsClonesavedcartByUserIdWithHttpInfo(userId, cartId, opts)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 
@@ -1614,8 +1614,8 @@ export default class UsersApi {
      */
     getCartDeliveryMode(userId, cartId, opts) {
         return this.usersCartsDeliverymodeByUserIdAndCartIdWithHttpInfo(userId, cartId, opts)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 
@@ -1696,8 +1696,8 @@ export default class UsersApi {
      */
     putCartDeliveryMode(userId, cartId, deliveryModeId) {
         return this.usersCartsDeliverymodeByUserIdAndCartId1WithHttpInfo(userId, cartId, deliveryModeId)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 
@@ -1770,8 +1770,8 @@ export default class UsersApi {
      */
     deleteCartDeliveryMode(userId, cartId) {
         return this.usersCartsDeliverymodeByUserIdAndCartId2WithHttpInfo(userId, cartId)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 
@@ -1858,8 +1858,8 @@ export default class UsersApi {
      */
     getCartDeliveryModes(userId, cartId, opts) {
         return this.usersCartsDeliverymodesByUserIdAndCartIdWithHttpInfo(userId, cartId, opts)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 
@@ -1936,8 +1936,8 @@ export default class UsersApi {
      */
     putCartEmail(userId, cartId, opts) {
         return this.usersCartsEmailByUserIdAndCartIdWithHttpInfo(userId, cartId, opts)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 
@@ -2020,8 +2020,8 @@ export default class UsersApi {
      */
     getCartEntries(userId, cartId, opts) {
         return this.usersCartsEntriesByUserIdAndCartIdWithHttpInfo(userId, cartId, opts)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 
@@ -2111,8 +2111,8 @@ export default class UsersApi {
      */
     postCartEntries(userId, cartId, body, opts) {
         return this.usersCartsEntriesByUserIdAndCartId1WithHttpInfo(userId, cartId, body, opts)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 
@@ -2203,8 +2203,8 @@ export default class UsersApi {
      */
     getCartEntry(userId, cartId, entryNumber, opts) {
         return this.usersCartsEntriesEntryNumberByUserIdWithHttpInfo(userId, cartId, entryNumber, opts)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 
@@ -2306,8 +2306,8 @@ export default class UsersApi {
      */
     putCartEntry(userId, cartId, entryNumber, body, opts) {
         return this.usersCartsEntriesEntryNumberByUserId1WithHttpInfo(userId, cartId, entryNumber, body, opts)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 
@@ -2407,8 +2407,8 @@ export default class UsersApi {
      */
     patchCartEntry(userId, cartId, entryNumber, body, opts) {
         return this.usersCartsEntriesEntryNumberByUserId2WithHttpInfo(userId, cartId, entryNumber, body, opts)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 
@@ -2489,8 +2489,8 @@ export default class UsersApi {
      */
     deleteCartEntry(userId, cartId, entryNumber) {
         return this.usersCartsEntriesEntryNumberByUserId3WithHttpInfo(userId, cartId, entryNumber)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 
@@ -2575,8 +2575,8 @@ export default class UsersApi {
      */
     patchCartFlagForDeletion(userId, cartId, opts) {
         return this.usersCartsFlagForDeletionByUserIdWithHttpInfo(userId, cartId, opts)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 
@@ -2668,8 +2668,8 @@ export default class UsersApi {
      */
     postCartPaymentDetail(userId, cartId, body, opts) {
         return this.usersCartsPaymentdetailsByUserIdWithHttpInfo(userId, cartId, body, opts)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 
@@ -2750,8 +2750,8 @@ export default class UsersApi {
      */
     putCartPaymentDetail(userId, cartId, paymentDetailsId) {
         return this.usersCartsPaymentdetailsByUserId1WithHttpInfo(userId, cartId, paymentDetailsId)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 
@@ -2840,8 +2840,8 @@ export default class UsersApi {
      */
     getCartPromotions(userId, cartId, opts) {
         return this.usersCartsPromotionsByUserIdAndCartIdWithHttpInfo(userId, cartId, opts)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 
@@ -2928,8 +2928,8 @@ export default class UsersApi {
      */
     postCartPromotion(userId, cartId, promotionId) {
         return this.usersCartsPromotionsByUserIdAndCartId1WithHttpInfo(userId, cartId, promotionId)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 
@@ -3026,8 +3026,8 @@ export default class UsersApi {
      */
     getCartPromotion(userId, cartId, promotionId, opts) {
         return this.usersCartsPromotionsPromotionIdByUserIdWithHttpInfo(userId, cartId, promotionId, opts)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 
@@ -3110,8 +3110,8 @@ export default class UsersApi {
      */
     deleteCartPromotion(userId, cartId, promotionId) {
         return this.usersCartsPromotionsPromotionIdByUserId1WithHttpInfo(userId, cartId, promotionId)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 
@@ -3180,8 +3180,8 @@ export default class UsersApi {
      */
     patchCartRestoreSavedCart(userId, cartId) {
         return this.usersCartsRestoresavedcartByUserIdWithHttpInfo(userId, cartId)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 
@@ -3268,8 +3268,8 @@ export default class UsersApi {
      */
     patchSavedCart(userId, cartId, opts) {
         return this.usersCartsSaveByUserIdAndCartIdWithHttpInfo(userId, cartId, opts)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 
@@ -3346,8 +3346,8 @@ export default class UsersApi {
      */
     getSavedCart(userId, cartId, opts) {
         return this.usersCartsSavedcartByUserIdAndCartIdWithHttpInfo(userId, cartId, opts)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 
@@ -3430,8 +3430,8 @@ export default class UsersApi {
      */
     getCartVouchers(userId, cartId, opts) {
         return this.usersCartsVouchersByUserIdAndCartIdWithHttpInfo(userId, cartId, opts)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 
@@ -3512,8 +3512,8 @@ export default class UsersApi {
      */
     postCartVoucher(userId, cartId, voucherId) {
         return this.usersCartsVouchersByUserIdAndCartId1WithHttpInfo(userId, cartId, voucherId)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 
@@ -3594,8 +3594,8 @@ export default class UsersApi {
      */
     deleteCartVouchers(userId, cartId, voucherId) {
         return this.usersCartsVouchersVoucherIdByUserIdWithHttpInfo(userId, cartId, voucherId)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 
@@ -3664,8 +3664,8 @@ export default class UsersApi {
      */
     getCustomerGroups(userId, opts) {
         return this.usersCustomergroupsByUserIdWithHttpInfo(userId, opts)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 
@@ -3735,8 +3735,8 @@ export default class UsersApi {
      */
     putLogin(userId, opts) {
         return this.usersLoginByUserIdWithHttpInfo(userId, opts)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 
@@ -3823,8 +3823,8 @@ export default class UsersApi {
      */
     getOrders(userId, opts) {
         return this.usersOrdersByUserId1WithHttpInfo(userId, opts)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 
@@ -3906,8 +3906,8 @@ export default class UsersApi {
      */
     postOrder(userId, cartId, opts) {
         return this.usersOrdersByUserId2WithHttpInfo(userId, cartId, opts)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 
@@ -3986,8 +3986,8 @@ export default class UsersApi {
      */
     getOrder(userId, code, opts) {
         return this.usersOrdersByUserIdAndCodeWithHttpInfo(userId, code, opts)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 
@@ -4057,8 +4057,8 @@ export default class UsersApi {
      */
     putPassword(userId, opts) {
         return this.usersPasswordByUserIdWithHttpInfo(userId, opts)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 
@@ -4135,8 +4135,8 @@ export default class UsersApi {
      */
     getPaymentDetail(userId, paymentDetailsId, opts) {
         return this.usersPaymentdetailsByUserIdWithHttpInfo(userId, paymentDetailsId, opts)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 
@@ -4214,8 +4214,8 @@ export default class UsersApi {
      */
     putPaymentDetail(userId, paymentDetailsId, body) {
         return this.usersPaymentdetailsByUserId1WithHttpInfo(userId, paymentDetailsId, body)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 
@@ -4291,8 +4291,8 @@ export default class UsersApi {
      */
     patchPaymentDetail(userId, paymentDetailsId, body) {
         return this.usersPaymentdetailsByUserId2WithHttpInfo(userId, paymentDetailsId, body)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 
@@ -4359,8 +4359,8 @@ export default class UsersApi {
      */
     deletePaymentDetail(userId, paymentDetailsId) {
         return this.usersPaymentdetailsByUserId3WithHttpInfo(userId, paymentDetailsId)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 
@@ -4432,8 +4432,8 @@ export default class UsersApi {
      */
     getPaymentDetails(userId, opts) {
         return this.usersPaymentdetailsByUserId4WithHttpInfo(userId, opts)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 

@@ -90,8 +90,8 @@ export default class CustomergroupsApi {
      */
     getCustomerGroups(opts) {
         return this.customergroupsWithHttpInfo(opts)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 
@@ -139,8 +139,8 @@ export default class CustomergroupsApi {
      */
     postCustomerGroup(body) {
         return this.customergroups1WithHttpInfo(body)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 
@@ -199,8 +199,8 @@ export default class CustomergroupsApi {
      */
     getCustomerGroup(groupId, opts) {
         return this.customergroupsByGroupIdWithHttpInfo(groupId, opts)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 
@@ -258,8 +258,8 @@ export default class CustomergroupsApi {
      */
     putCustomerGroupsMembers(groupId, body) {
         return this.customergroupsMembersByGroupIdWithHttpInfo(groupId, body)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 
@@ -315,8 +315,8 @@ export default class CustomergroupsApi {
      */
     patchCustomerGroupsMembers(groupId, body) {
         return this.customergroupsMembersByGroupId1WithHttpInfo(groupId, body)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 
@@ -373,8 +373,8 @@ export default class CustomergroupsApi {
      */
     deleteCustomerGroupsMember(groupId, userId) {
         return this.customergroupsMembersByGroupIdAndUserIdWithHttpInfo(groupId, userId)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 

@@ -80,8 +80,8 @@ export default class CatalogsApi {
      */
     getCatalogs(opts) {
         return this.catalogsWithHttpInfo(opts)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 
@@ -140,8 +140,8 @@ export default class CatalogsApi {
      */
     getCatalog(catalogId, opts) {
         return this.catalogsByCatalogIdWithHttpInfo(catalogId, opts)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 
@@ -208,8 +208,8 @@ export default class CatalogsApi {
      */
     getCatalogsByCatalogIdAndCatalogVersionId(catalogId, catalogVersionId, opts) {
         return this.catalogsByCatalogIdAndCatalogVersionIdWithHttpInfo(catalogId, catalogVersionId, opts)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 
@@ -290,8 +290,8 @@ export default class CatalogsApi {
      */
     getCategory(catalogId, catalogVersionId, categoryId, opts) {
         return this.catalogsCategoriesCategoryIdByCatalogIdWithHttpInfo(catalogId, catalogVersionId, categoryId, opts)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 

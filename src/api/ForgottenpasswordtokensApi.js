@@ -76,8 +76,8 @@ export default class ForgottenpasswordtokensApi {
      */
     postForgottenPasswordToken(opts) {
         return this.forgottenpasswordtokensWithHttpInfo(opts)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 

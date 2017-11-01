@@ -77,8 +77,8 @@ export default class TitlesApi {
      */
     getTitles(opts) {
         return this.titlesWithHttpInfo(opts)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 

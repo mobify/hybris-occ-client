@@ -104,8 +104,8 @@ export default class ExportApi {
      */
     exportProducts(opts) {
         return this.exportProductsWithHttpInfo(opts)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 

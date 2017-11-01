@@ -91,8 +91,8 @@ export default class OrdersApi {
      */
     getOrder(code, opts) {
         return this.ordersByCodeWithHttpInfo(code, opts)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 

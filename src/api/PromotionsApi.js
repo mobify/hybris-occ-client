@@ -104,8 +104,8 @@ export default class PromotionsApi {
      */
     getPromotions(opts) {
         return this.promotionsWithHttpInfo(opts)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 
@@ -170,8 +170,8 @@ export default class PromotionsApi {
      */
     getPromotion(code, opts) {
         return this.promotionsByCodeWithHttpInfo(code, opts)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 

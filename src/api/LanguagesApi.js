@@ -81,8 +81,8 @@ export default class LanguagesApi {
      */
     getLanguages(opts) {
         return this.languagesWithHttpInfo(opts)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 

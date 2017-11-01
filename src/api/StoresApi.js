@@ -112,8 +112,8 @@ export default class StoresApi {
      */
     getStores(opts) {
         return this.stores1WithHttpInfo(opts)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 
@@ -170,8 +170,8 @@ export default class StoresApi {
      */
     getStore(storeId, opts) {
         return this.storesByStoreIdWithHttpInfo(storeId, opts)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 

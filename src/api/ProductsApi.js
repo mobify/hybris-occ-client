@@ -95,8 +95,8 @@ export default class ProductsApi {
      */
     getProduct(productCode, opts) {
         return this.productsByProductCodeWithHttpInfo(productCode, opts)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 
@@ -164,8 +164,8 @@ export default class ProductsApi {
      */
     getProductExpressupdate(opts) {
         return this.productsExpressupdateWithHttpInfo(opts)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 
@@ -234,8 +234,8 @@ export default class ProductsApi {
      */
     getProductReferences(productCode, opts) {
         return this.productsReferencesByProductCodeWithHttpInfo(productCode, opts)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 
@@ -286,8 +286,8 @@ export default class ProductsApi {
      */
     getProductReviews(productCode) {
         return this.productsReviewsByProductCodeWithHttpInfo(productCode)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 
@@ -351,8 +351,8 @@ export default class ProductsApi {
      */
     postProductReview(productCode, body, opts) {
         return this.productsReviewsByProductCode1WithHttpInfo(productCode, body, opts)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 
@@ -431,8 +431,8 @@ export default class ProductsApi {
      */
     getProductSearch(opts) {
         return this.productsSearch1WithHttpInfo(opts)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 
@@ -516,8 +516,8 @@ export default class ProductsApi {
      */
     getProductStock(productCode, opts) {
         return this.productsStockByProductCode1WithHttpInfo(productCode, opts)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 
@@ -584,8 +584,8 @@ export default class ProductsApi {
      */
     getProductsStockByProductCodeAndStoreName(productCode, storeName, opts) {
         return this.productsStockByProductCodeAndStoreNameWithHttpInfo(productCode, storeName, opts)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 
@@ -654,8 +654,8 @@ export default class ProductsApi {
      */
     getProductSuggestions(max, term, opts) {
         return this.productsSuggestionsWithHttpInfo(max, term, opts)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 

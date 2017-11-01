@@ -77,8 +77,8 @@ export default class CardtypesApi {
      */
     getCardTypes(opts) {
         return this.cardtypesWithHttpInfo(opts)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 

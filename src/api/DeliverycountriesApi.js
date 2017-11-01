@@ -79,8 +79,8 @@ export default class DeliverycountriesApi {
      */
     getDeliveryCountries(opts) {
         return this.deliverycountriesWithHttpInfo(opts)
-            .then((response_and_data) => {
-                return response_and_data.data
+            .then((response) => {
+                return response.data
             })
     }
 
