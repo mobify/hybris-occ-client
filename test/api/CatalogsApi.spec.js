@@ -26,6 +26,7 @@
   'use strict';
 
   var instance;
+  const {catalogId, catalogName, catalogVersionId} = Occ.default
 
   beforeEach(function() {
     instance = new Occ.default.CatalogsApi();
@@ -48,44 +49,42 @@
   }
 
   describe('CatalogsApi', function() {
-    describe('catalogs', function() {
-      it('should call catalogs successfully', function(done) {
-        //uncomment below and update the code to test catalogs
-        //instance.catalogs(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
+    describe('getCatalogs', function() {
+      it('should call getCatalogs successfully', function(done) {
+        instance.getCatalogs()
+          .then((res) => {
+            expect(res).to.have.property('catalogs');
+            expect(res.catalogs).to.be.an('array');
+            expect(res.catalogs.length).to.be.ok();
+            done();
+          })
       });
     });
-    describe('catalogsByCatalogId', function() {
-      it('should call catalogsByCatalogId successfully', function(done) {
-        //uncomment below and update the code to test catalogsByCatalogId
-        //instance.catalogsByCatalogId(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
+    describe('getCatalog', function() {
+      it('should call getCatalog successfully', function(done) {
+        instance.getCatalog(catalogId)
+          .then((res) => {
+            expect(res.name).to.be(catalogName);
+            done();
+          })
       });
     });
-    describe('catalogsByCatalogIdAndCatalogVersionId', function() {
-      it('should call catalogsByCatalogIdAndCatalogVersionId successfully', function(done) {
-        //uncomment below and update the code to test catalogsByCatalogIdAndCatalogVersionId
-        //instance.catalogsByCatalogIdAndCatalogVersionId(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
+    describe('getCatalogsByCatalogIdAndCatalogVersionId', function() {
+      it('should call getCatalogsByCatalogIdAndCatalogVersionId successfully', function(done) {
+        instance.getCatalogsByCatalogIdAndCatalogVersionId(catalogId, catalogVersionId)
+          .then((res) => {
+            expect(res.id).to.be(catalogVersionId);
+            done();
+          })
       });
     });
-    describe('catalogsCategoriesCategoryIdByCatalogId', function() {
-      it('should call catalogsCategoriesCategoryIdByCatalogId successfully', function(done) {
-        //uncomment below and update the code to test catalogsCategoriesCategoryIdByCatalogId
-        //instance.catalogsCategoriesCategoryIdByCatalogId(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
+    describe('getCategory', function() {
+      it('should call getCategory successfully', function(done) {
+        instance.getCatalogsByCatalogIdAndCatalogVersionId(catalogId, catalogVersionId)
+          .then((res) => {
+            expect(res.id).to.be(catalogVersionId);
+            done();
+          })
       });
     });
   });

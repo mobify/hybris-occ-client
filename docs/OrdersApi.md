@@ -4,14 +4,14 @@ All URIs are relative to *http://api-example.hybris.com/rest/v2/DefaultParameter
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ordersByCode**](OrdersApi.md#ordersByCode) | **GET** /orders/{code} | OrdersByCode
+[**getOrder**](OrdersApi.md#getOrder) | **GET** /orders/{code} | getOrder
 
 
-<a name="ordersByCode"></a>
-# **ordersByCode**
-> OrderWsDTOModel ordersByCode(code, opts)
+<a name="getOrder"></a>
+# **getOrder**
+> OrderWsDTOModel getOrder(code, opts)
 
-OrdersByCode
+getOrder
 
 Returns details of a specific order based on order GUID (Globally Unique Identifier) or order CODE. The response contains a detailed order information.  Security: Allowed only for trusted client 
 
@@ -31,7 +31,7 @@ let code = "code_example"; // String | Order GUID (Globally Unique Identifier) o
 let opts = { 
   'fields': "fields_example" // String | Response configuration (list of fields, which should be returned in response)
 };
-apiInstance.ordersByCode(code, opts).then((data) => {
+apiInstance.getOrder(code, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);

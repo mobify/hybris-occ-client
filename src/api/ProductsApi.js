@@ -44,7 +44,7 @@ export default class ProductsApi {
 
 
     /**
-     * ProductsByProductCode
+     * getProduct
      * Returns details of a single product according to a product code. 
      * @param {String} productCode Product identifier
      * @param {Object} opts Optional parameters
@@ -57,7 +57,7 @@ export default class ProductsApi {
 
       // verify the required parameter 'productCode' is set
       if (productCode === undefined || productCode === null) {
-        throw new Error("Missing the required parameter 'productCode' when calling productsByProductCode");
+        throw new Error("Missing the required parameter 'productCode' when calling getProduct");
       }
 
 
@@ -85,14 +85,14 @@ export default class ProductsApi {
     }
 
     /**
-     * ProductsByProductCode
+     * getProduct
      * Returns details of a single product according to a product code. 
      * @param {String} productCode Product identifier
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/ProductWsDTOModel}
      */
-    productsByProductCode(productCode, opts) {
+    getProduct(productCode, opts) {
       return this.productsByProductCodeWithHttpInfo(productCode, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
@@ -101,7 +101,7 @@ export default class ProductsApi {
 
 
     /**
-     * ProductsExpressupdate
+     * getProductExpressupdate
      * Returns products added to the express update feed. Returns only elements updated after the provided timestamp.The queue is cleared using a defined cronjob.  Security: Permitted only for trusted client 
      * @param {Object} opts Optional parameters
      * @param {String} opts.catalog Only products from this catalog are returned. Format: &lt;b&gt;catalogId:catalogVersion&lt;/b&gt;
@@ -139,7 +139,7 @@ export default class ProductsApi {
     }
 
     /**
-     * ProductsExpressupdate
+     * getProductExpressupdate
      * Returns products added to the express update feed. Returns only elements updated after the provided timestamp.The queue is cleared using a defined cronjob.  Security: Permitted only for trusted client 
      * @param {Object} opts Optional parameters
      * @param {String} opts.catalog Only products from this catalog are returned. Format: &lt;b&gt;catalogId:catalogVersion&lt;/b&gt;
@@ -147,7 +147,7 @@ export default class ProductsApi {
      * @param {String} opts.timestamp Only items newer than the given parameter are retrieved from the queue. This parameter should be in RFC-8601 format.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/ProductExpressUpdateElementListWsDTOModel}
      */
-    productsExpressupdate(opts) {
+    getProductExpressupdate(opts) {
       return this.productsExpressupdateWithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;
@@ -156,7 +156,7 @@ export default class ProductsApi {
 
 
     /**
-     * ProductsReferencesByProductCode
+     * getProductReferences
      * Returns references for a product with a given product code. Reference type specifies which references to return.  Security: Permitted only for trusted client 
      * @param {String} productCode Product identifier
      * @param {Object} opts Optional parameters
@@ -171,7 +171,7 @@ export default class ProductsApi {
 
       // verify the required parameter 'productCode' is set
       if (productCode === undefined || productCode === null) {
-        throw new Error("Missing the required parameter 'productCode' when calling productsReferencesByProductCode");
+        throw new Error("Missing the required parameter 'productCode' when calling getProductReferences");
       }
 
 
@@ -201,7 +201,7 @@ export default class ProductsApi {
     }
 
     /**
-     * ProductsReferencesByProductCode
+     * getProductReferences
      * Returns references for a product with a given product code. Reference type specifies which references to return.  Security: Permitted only for trusted client 
      * @param {String} productCode Product identifier
      * @param {Object} opts Optional parameters
@@ -210,7 +210,7 @@ export default class ProductsApi {
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/ProductReferenceListWsDTOModel}
      */
-    productsReferencesByProductCode(productCode, opts) {
+    getProductReferences(productCode, opts) {
       return this.productsReferencesByProductCodeWithHttpInfo(productCode, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
@@ -219,7 +219,7 @@ export default class ProductsApi {
 
 
     /**
-     * ProductsReviewsByProductCode
+     * getProductReviews
      * Returns the reviews for a product with a given product code. 
      * @param {String} productCode Product identifier
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/ReviewListWsDTOModel} and HTTP response
@@ -229,7 +229,7 @@ export default class ProductsApi {
 
       // verify the required parameter 'productCode' is set
       if (productCode === undefined || productCode === null) {
-        throw new Error("Missing the required parameter 'productCode' when calling productsReviewsByProductCode");
+        throw new Error("Missing the required parameter 'productCode' when calling getProductReviews");
       }
 
 
@@ -256,12 +256,12 @@ export default class ProductsApi {
     }
 
     /**
-     * ProductsReviewsByProductCode
+     * getProductReviews
      * Returns the reviews for a product with a given product code. 
      * @param {String} productCode Product identifier
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/ReviewListWsDTOModel}
      */
-    productsReviewsByProductCode(productCode) {
+    getProductReviews(productCode) {
       return this.productsReviewsByProductCodeWithHttpInfo(productCode)
         .then(function(response_and_data) {
           return response_and_data.data;
@@ -270,7 +270,7 @@ export default class ProductsApi {
 
 
     /**
-     * ProductsReviewsByProductCode
+     * postProductReview
      * Creates a new customer review as an anonymous user. 
      * @param {String} productCode Product identifier
      * @param {module:models/ReviewWsDTO208Model} body 
@@ -284,12 +284,12 @@ export default class ProductsApi {
 
       // verify the required parameter 'productCode' is set
       if (productCode === undefined || productCode === null) {
-        throw new Error("Missing the required parameter 'productCode' when calling productsReviewsByProductCode1");
+        throw new Error("Missing the required parameter 'productCode' when calling postProductReview");
       }
 
       // verify the required parameter 'body' is set
       if (body === undefined || body === null) {
-        throw new Error("Missing the required parameter 'body' when calling productsReviewsByProductCode1");
+        throw new Error("Missing the required parameter 'body' when calling postProductReview");
       }
 
 
@@ -317,7 +317,7 @@ export default class ProductsApi {
     }
 
     /**
-     * ProductsReviewsByProductCode
+     * postProductReview
      * Creates a new customer review as an anonymous user. 
      * @param {String} productCode Product identifier
      * @param {module:models/ReviewWsDTO208Model} body 
@@ -325,7 +325,7 @@ export default class ProductsApi {
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/ReviewWsDTO208Model}
      */
-    productsReviewsByProductCode1(productCode, body, opts) {
+    postProductReview(productCode, body, opts) {
       return this.productsReviewsByProductCode1WithHttpInfo(productCode, body, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
@@ -386,7 +386,7 @@ export default class ProductsApi {
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/ProductSearchPageWsDTOModel}
      */
-    productsSearch1(opts) {
+    getProductSearch(opts) {
       return this.productsSearch1WithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;
@@ -413,7 +413,7 @@ export default class ProductsApi {
 
       // verify the required parameter 'productCode' is set
       if (productCode === undefined || productCode === null) {
-        throw new Error("Missing the required parameter 'productCode' when calling productsStockByProductCode1");
+        throw new Error("Missing the required parameter 'productCode' when calling getProductStock");
       }
 
 
@@ -458,7 +458,7 @@ export default class ProductsApi {
      * @param {String} opts.longitude Latitude location parameter.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/StoreFinderStockSearchPageWsDTOModel}
      */
-    productsStockByProductCode1(productCode, opts) {
+    getProductStock(productCode, opts) {
       return this.productsStockByProductCode1WithHttpInfo(productCode, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
@@ -467,7 +467,7 @@ export default class ProductsApi {
 
 
     /**
-     * ProductsStockByProductCodeAndStoreName
+     * getProductsStockByProductCodeAndStoreName
      * Returns product&#39;s stock level for a particular store (POS). 
      * @param {String} productCode Product identifier
      * @param {String} storeName Store identifier
@@ -481,12 +481,12 @@ export default class ProductsApi {
 
       // verify the required parameter 'productCode' is set
       if (productCode === undefined || productCode === null) {
-        throw new Error("Missing the required parameter 'productCode' when calling productsStockByProductCodeAndStoreName");
+        throw new Error("Missing the required parameter 'productCode' when calling getProductsStockByProductCodeAndStoreName");
       }
 
       // verify the required parameter 'storeName' is set
       if (storeName === undefined || storeName === null) {
-        throw new Error("Missing the required parameter 'storeName' when calling productsStockByProductCodeAndStoreName");
+        throw new Error("Missing the required parameter 'storeName' when calling getProductsStockByProductCodeAndStoreName");
       }
 
 
@@ -515,7 +515,7 @@ export default class ProductsApi {
     }
 
     /**
-     * ProductsStockByProductCodeAndStoreName
+     * getProductsStockByProductCodeAndStoreName
      * Returns product&#39;s stock level for a particular store (POS). 
      * @param {String} productCode Product identifier
      * @param {String} storeName Store identifier
@@ -523,7 +523,7 @@ export default class ProductsApi {
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/StockWsDTOModel}
      */
-    productsStockByProductCodeAndStoreName(productCode, storeName, opts) {
+    getProductsStockByProductCodeAndStoreName(productCode, storeName, opts) {
       return this.productsStockByProductCodeAndStoreNameWithHttpInfo(productCode, storeName, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
@@ -532,7 +532,7 @@ export default class ProductsApi {
 
 
     /**
-     * ProductsSuggestions
+     * getProductSuggestions
      * Returns a list of all available suggestions related to a given term and limits the results to a specific value of the max parameter. 
      * @param {String} max Specifies the limit of results.
      * @param {String} term Specified term
@@ -546,12 +546,12 @@ export default class ProductsApi {
 
       // verify the required parameter 'max' is set
       if (max === undefined || max === null) {
-        throw new Error("Missing the required parameter 'max' when calling productsSuggestions");
+        throw new Error("Missing the required parameter 'max' when calling getProductSuggestions");
       }
 
       // verify the required parameter 'term' is set
       if (term === undefined || term === null) {
-        throw new Error("Missing the required parameter 'term' when calling productsSuggestions");
+        throw new Error("Missing the required parameter 'term' when calling getProductSuggestions");
       }
 
 
@@ -580,7 +580,7 @@ export default class ProductsApi {
     }
 
     /**
-     * ProductsSuggestions
+     * getProductSuggestions
      * Returns a list of all available suggestions related to a given term and limits the results to a specific value of the max parameter. 
      * @param {String} max Specifies the limit of results.
      * @param {String} term Specified term
@@ -588,7 +588,7 @@ export default class ProductsApi {
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/SuggestionListWsDTOModel}
      */
-    productsSuggestions(max, term, opts) {
+    getProductSuggestions(max, term, opts) {
       return this.productsSuggestionsWithHttpInfo(max, term, opts)
         .then(function(response_and_data) {
           return response_and_data.data;

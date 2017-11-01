@@ -4,7 +4,7 @@ All URIs are relative to *http://api-example.hybris.com/rest/v2/DefaultParameter
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**cardtypes**](CardtypesApi.md#cardtypes) | **GET** /cardtypes | Cardtypes
+[**getCardTypes**](CardtypesApi.md#getCardTypes) | **GET** /cardtypes | Cardtypes
 
 
 <a name="cardtypes"></a>
@@ -29,7 +29,7 @@ let apiInstance = new Occ.CardtypesApi();
 let opts = { 
   'fields': "fields_example" // String | Response configuration (list of fields, which should be returned in response)
 };
-apiInstance.cardtypes(opts).then((data) => {
+apiInstance.getCardTypes(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);

@@ -36,7 +36,7 @@ export default class CurrenciesApi {
 
 
     /**
-     * Currencies
+     * getCurrencies
      * Lists all available currencies (all usable currencies for the current store).If the list of currencies for stores is empty, a list of all currencies available in the system is returned. 
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
@@ -76,7 +76,7 @@ export default class CurrenciesApi {
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/CurrencyListWsDTOModel}
      */
-    currencies(opts) {
+    getCurrencies(opts) {
       return this.currenciesWithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;

@@ -26,6 +26,7 @@
   'use strict';
 
   var instance;
+  const languages = Occ.default.languages
 
   beforeEach(function() {
     instance = new Occ.default.LanguagesApi();
@@ -48,14 +49,13 @@
   }
 
   describe('LanguagesApi', function() {
-    describe('languages', function() {
-      it('should call languages successfully', function(done) {
-        //uncomment below and update the code to test languages
-        //instance.languages(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
+    describe('getLanguages', function() {
+      it('should call getLanguages successfully', function(done) {
+        instance.getLanguages()
+          .then((res) => {
+            expect(res.languages[0]).to.eql(languages);
+            done();
+          })
       });
     });
   });

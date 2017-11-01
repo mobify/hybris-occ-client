@@ -76,7 +76,7 @@ export default class CardtypesApi {
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/CardTypeListWsDTOModel}
      */
-    cardtypes(opts) {
+    getCardTypes(opts) {
       return this.cardtypesWithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;

@@ -35,7 +35,7 @@ export default class ForgottenpasswordtokensApi {
 
 
     /**
-     * Forgottenpasswordtokens
+     * postForgottenPasswordToken
      * Generates a token to restore customer&#39;s forgotten password.  Security: Allowed only for client or trusted client 
      * @param {Object} opts Optional parameters
      * @param {String} opts.userId Customer&#39;s user id. Customer user id is case insensitive.
@@ -59,7 +59,7 @@ export default class ForgottenpasswordtokensApi {
       let authNames = ['auth'];
       let contentTypes = ['application/x-www-form-urlencoded'];
       let accepts = ['application/json'];
-      let returnType = null;
+      let returnType = 'string';
 
       return this.apiClient.callApi(
         '/forgottenpasswordtokens', 'POST',
@@ -69,13 +69,13 @@ export default class ForgottenpasswordtokensApi {
     }
 
     /**
-     * Forgottenpasswordtokens
+     * postForgottenPasswordToken
      * Generates a token to restore customer&#39;s forgotten password.  Security: Allowed only for client or trusted client 
      * @param {Object} opts Optional parameters
      * @param {String} opts.userId Customer&#39;s user id. Customer user id is case insensitive.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    forgottenpasswordtokens(opts) {
+    postForgottenPasswordToken(opts) {
       return this.forgottenpasswordtokensWithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;

@@ -36,7 +36,7 @@ export default class VouchersApi {
 
 
     /**
-     * VouchersByCode
+     * getVoucher
      * Returns details of a single voucher according to a voucher code.  Security: Permitted only for trusted client 
      * @param {String} code Voucher identifier (code)
      * @param {Object} opts Optional parameters
@@ -49,7 +49,7 @@ export default class VouchersApi {
 
       // verify the required parameter 'code' is set
       if (code === undefined || code === null) {
-        throw new Error("Missing the required parameter 'code' when calling vouchersByCode");
+        throw new Error("Missing the required parameter 'code' when calling getVoucher");
       }
 
 
@@ -77,14 +77,14 @@ export default class VouchersApi {
     }
 
     /**
-     * VouchersByCode
+     * getVoucher
      * Returns details of a single voucher according to a voucher code.  Security: Permitted only for trusted client 
      * @param {String} code Voucher identifier (code)
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/VoucherWsDTOModel}
      */
-    vouchersByCode(code, opts) {
+    getVoucher(code, opts) {
       return this.vouchersByCodeWithHttpInfo(code, opts)
         .then(function(response_and_data) {
           return response_and_data.data;

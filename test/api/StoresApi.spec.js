@@ -26,6 +26,7 @@
   'use strict';
 
   var instance;
+  const { store } = Occ.default
 
   beforeEach(function() {
     instance = new Occ.default.StoresApi();
@@ -48,24 +49,22 @@
   }
 
   describe('StoresApi', function() {
-    describe('stores1', function() {
-      it('should call stores1 successfully', function(done) {
-        //uncomment below and update the code to test stores1
-        //instance.stores1(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
+    describe('getStores', function() {
+      it('should call getStores successfully', function(done) {
+        instance.getStores({query: store.name})
+          .then((res) => {
+            expect(res.stores[0].name).to.equal(store.name);
+            done();
+          })
       });
     });
-    describe('storesByStoreId', function() {
-      it('should call storesByStoreId successfully', function(done) {
-        //uncomment below and update the code to test storesByStoreId
-        //instance.storesByStoreId(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
+    describe('getStore', function() {
+      it('should call getStore successfully', function(done) {
+        instance.getStore(store.name)
+          .then((res) => {
+            expect(res.geoPoint).to.eql(store.geoPoint);
+            done();
+          })
       });
     });
   });

@@ -37,7 +37,7 @@ export default class PromotionsApi {
 
 
     /**
-     * Promotions
+     * getPromotions
      * Returns promotions defined for a current base site. Requests pertaining to promotions have been developed for the previous version of promotions and vouchers and therefore some of them are currently not compatible with the new promotion engine.  Security: Permitted only for trusted client 
      * @param {Object} opts Optional parameters
      * @param {String} opts.promotionGroup Only promotions from this group are returned
@@ -75,7 +75,7 @@ export default class PromotionsApi {
     }
 
     /**
-     * Promotions
+     * getPromotions
      * Returns promotions defined for a current base site. Requests pertaining to promotions have been developed for the previous version of promotions and vouchers and therefore some of them are currently not compatible with the new promotion engine.  Security: Permitted only for trusted client 
      * @param {Object} opts Optional parameters
      * @param {String} opts.promotionGroup Only promotions from this group are returned
@@ -83,7 +83,7 @@ export default class PromotionsApi {
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/PromotionListWsDTOModel}
      */
-    promotions(opts) {
+    getPromotions(opts) {
       return this.promotionsWithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;
@@ -92,7 +92,7 @@ export default class PromotionsApi {
 
 
     /**
-     * PromotionsByCode
+     * getPromotion
      * Returns details of a single promotion specified by a promotion code. Requests pertaining to promotions have been developed for the previous version of promotions and vouchers and therefore some of them are currently not compatible with the new promotion engine.  Security: Permitted only for trusted client 
      * @param {String} code Promotion identifier (code)
      * @param {Object} opts Optional parameters
@@ -105,7 +105,7 @@ export default class PromotionsApi {
 
       // verify the required parameter 'code' is set
       if (code === undefined || code === null) {
-        throw new Error("Missing the required parameter 'code' when calling promotionsByCode");
+        throw new Error("Missing the required parameter 'code' when calling getPromotion");
       }
 
 
@@ -133,14 +133,14 @@ export default class PromotionsApi {
     }
 
     /**
-     * PromotionsByCode
+     * getPromotion
      * Returns details of a single promotion specified by a promotion code. Requests pertaining to promotions have been developed for the previous version of promotions and vouchers and therefore some of them are currently not compatible with the new promotion engine.  Security: Permitted only for trusted client 
      * @param {String} code Promotion identifier (code)
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/PromotionWsDTOModel}
      */
-    promotionsByCode(code, opts) {
+    getPromotion(code, opts) {
       return this.promotionsByCodeWithHttpInfo(code, opts)
         .then(function(response_and_data) {
           return response_and_data.data;

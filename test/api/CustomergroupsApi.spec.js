@@ -48,60 +48,60 @@
   }
 
   describe('CustomergroupsApi', function() {
-    describe('customergroups', function() {
-      it('should call customergroups successfully', function(done) {
+    describe('getCustomerGroups', function() {
+      it('should call getCustomerGroups successfully', function(done) {
         //uncomment below and update the code to test customergroups
-        //instance.customergroups(function(error) {
+        //instance.getCustomerGroups(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('customergroups1', function() {
-      it('should call customergroups1 successfully', function(done) {
-        //uncomment below and update the code to test customergroups1
-        //instance.customergroups1(function(error) {
+    describe('postCustomerGroup', function() {
+      it('should call postCustomerGroup successfully', function(done) {
+        //uncomment below and update the code to test postCustomerGroup
+        //instance.postCustomerGroup(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('customergroupsByGroupId', function() {
-      it('should call customergroupsByGroupId successfully', function(done) {
-        //uncomment below and update the code to test customergroupsByGroupId
-        //instance.customergroupsByGroupId(function(error) {
+    describe('getCustomerGroup', function() {
+      it('should call getCustomerGroup successfully', function(done) {
+        //uncomment below and update the code to test getCustomerGroup
+        //instance.getCustomerGroup(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('customergroupsMembersByGroupId', function() {
-      it('should call customergroupsMembersByGroupId successfully', function(done) {
-        //uncomment below and update the code to test customergroupsMembersByGroupId
-        //instance.customergroupsMembersByGroupId(function(error) {
+    describe('putCustomerGroupsMembers', function() {
+      it('should call putCustomerGroupsMembers successfully', function(done) {
+        //uncomment below and update the code to test putCustomerGroupsMembers
+        //instance.putCustomerGroupsMembers(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('customergroupsMembersByGroupId1', function() {
-      it('should call customergroupsMembersByGroupId1 successfully', function(done) {
-        //uncomment below and update the code to test customergroupsMembersByGroupId1
-        //instance.customergroupsMembersByGroupId1(function(error) {
+    describe('patchCustomerGroupsMembers', function() {
+      it('should call patchCustomerGroupsMembers successfully', function(done) {
+        //uncomment below and update the code to test patchCustomerGroupsMembers
+        //instance.patchCustomerGroupsMembers(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('customergroupsMembersByGroupIdAndUserId', function() {
-      it('should call customergroupsMembersByGroupIdAndUserId successfully', function(done) {
-        //uncomment below and update the code to test customergroupsMembersByGroupIdAndUserId
-        //instance.customergroupsMembersByGroupIdAndUserId(function(error) {
+    describe('deleteCustomerGroupsMember', function() {
+      it('should call deleteCustomerGroupsMember successfully', function(done) {
+        //uncomment below and update the code to test deleteCustomerGroupsMember
+        //instance.deleteCustomerGroupsMember(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
