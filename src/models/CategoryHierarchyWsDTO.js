@@ -11,24 +11,12 @@
  *
  */
 
-import ApiClient from '../ApiClient'
-
 /**
 * The CategoryHierarchyWsDTO model module.
 * @module models/CategoryHierarchyWsDTO
 * @version v2
 */
 export default class CategoryHierarchyWsDTO {
-    /**
-    * Constructs a new <code>CategoryHierarchyWsDTO</code>.
-    * @alias module:models/CategoryHierarchyWsDTO
-    * @class
-    */
-
-    constructor() {
-
-    }
-
     /**
     * Constructs a <code>CategoryHierarchyWsDTO</code> from a plain JavaScript
     * object, optionally creating a new instance. Copies all relevant properties

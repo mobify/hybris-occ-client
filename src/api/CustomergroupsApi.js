@@ -12,10 +12,8 @@
  */
 
 import ApiClient from '../ApiClient'
-import MemberListWsDTO from '../models/MemberListWsDTO'
 import UserGroupListWsDTO from '../models/UserGroupListWsDTO'
 import UserGroupWsDTO17 from '../models/UserGroupWsDTO17'
-import UserGroupWsDTO from '../models/UserGroupWsDTO'
 
 /**
 * Customergroups service.

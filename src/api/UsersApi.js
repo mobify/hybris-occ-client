@@ -30,8 +30,6 @@ import PaymentDetailsWsDTO from '../models/PaymentDetailsWsDTO'
 import PromotionResultListWsDTO from '../models/PromotionResultListWsDTO'
 import SaveCartResultWsDTO from '../models/SaveCartResultWsDTO'
 import UserGroupListWsDTO from '../models/UserGroupListWsDTO'
-import UserSignUpWsDTO from '../models/UserSignUpWsDTO'
-import UserWsDTO286 from '../models/UserWsDTO286'
 import UserWsDTO from '../models/UserWsDTO'
 import VoucherListWsDTO from '../models/VoucherListWsDTO'
 

@@ -94,6 +94,4 @@ export default class BreadcrumbWsDTO {
         return obj
     }
 
-
-
 }
