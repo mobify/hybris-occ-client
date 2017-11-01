@@ -1,0 +1,6 @@
+extends:
+  - '../.eslintrc.yml'
+rules:
+  max-nested-callbacks: off
+env:
+  mocha: true
