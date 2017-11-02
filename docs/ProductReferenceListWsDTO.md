@@ -3,6 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**references** | [**[ProductReferenceWsDTO173]**](ProductReferenceWsDTO173.md) |  | [optional] 
+**references** | [**[ProductReferenceOCC]**](ProductReferenceOCC.md) |  | [optional] 
 
 

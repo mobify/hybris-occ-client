@@ -241,7 +241,7 @@ Class | Method | HTTP request | Description
  - [Occ.ProductListWsDTO](docs/ProductListWsDTO.md)
  - [Occ.Product](docs/Product.md)
  - [Occ.ProductReferenceListWsDTO](docs/ProductReferenceListWsDTO.md)
- - [Occ.ProductReferenceWsDTO173](docs/ProductReferenceWsDTO173.md)
+ - [Occ.ProductReferenceOCC](docs/ProductReferenceOCC.md)
  - [Occ.ProductReferenceWsDTO](docs/ProductReferenceWsDTO.md)
  - [Occ.ProductSearchPageWsDTO](docs/ProductSearchPageWsDTO.md)
  - [Occ.ProductWsDTO174](docs/ProductWsDTO174.md)

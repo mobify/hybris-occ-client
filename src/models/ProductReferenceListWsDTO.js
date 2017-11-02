@@ -16,7 +16,7 @@
  */
 
 import ApiClient from '../ApiClient'
-import ProductReferenceWsDTO173 from './ProductReferenceWsDTO173'
+import ProductReferenceOCC from './ProductReferenceOCC'
 
 /**
 * The ProductReferenceListWsDTO model module.
@@ -33,7 +33,7 @@ export default class ProductReferenceListWsDTO {
     constructor() {
         /**
     *
-    * @member {Array.<module:models/ProductReferenceWsDTO173>} references
+    * @member {Array.<module:models/ProductReferenceOCC>} references
     */
         this.references = undefined
     }
@@ -55,7 +55,7 @@ export default class ProductReferenceListWsDTO {
             obj = obj || new ProductReferenceListWsDTO()
 
             if (data.hasOwnProperty('references')) {
-                obj.references = ApiClient.convertToType(data.references, [ProductReferenceWsDTO173])
+                obj.references = ApiClient.convertToType(data.references, [ProductReferenceOCC])
             }
         }
         return obj

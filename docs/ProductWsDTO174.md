@@ -27,7 +27,7 @@ Name | Type | Description | Notes
 **baseOptions** | [**[BaseOptionWsDTO]**](BaseOptionWsDTO.md) |  | [optional] 
 **volumePricesFlag** | **Boolean** |  | [optional] 
 **volumePrices** | [**[PriceWsDTO]**](PriceWsDTO.md) |  | [optional] 
-**productReferences** | [**[ProductReferenceWsDTO173]**](ProductReferenceWsDTO173.md) |  | [optional] 
+**productReferences** | [**[ProductReferenceOCC]**](ProductReferenceOCC.md) |  | [optional] 
 **variantMatrix** | [**[VariantMatrixElementWsDTO]**](VariantMatrixElementWsDTO.md) |  | [optional] 
 **priceRange** | [**PriceRangeWsDTO**](PriceRangeWsDTO.md) |  | [optional] 
 **multidimensional** | **Boolean** |  | [optional] 

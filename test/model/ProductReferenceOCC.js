@@ -32,7 +32,7 @@
     let instance
 
     beforeEach(() => {
-        instance = new Occ.ProductReferenceWsDTO173()
+        instance = new Occ.ProductReferenceOCC()
     })
 
     const getProperty = function(object, getter, property) {
@@ -45,34 +45,34 @@
         if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
     }
 
-    describe('ProductReferenceWsDTO173', () => {
-        it('should create an instance of ProductReferenceWsDTO173', () => {
-            // uncomment below and update the code to test ProductReferenceWsDTO173
-            // var instane = new Occ.ProductReferenceWsDTO173();
-            // expect(instance).to.be.a(Occ.ProductReferenceWsDTO173);
+    describe('ProductReferenceOCC', () => {
+        it('should create an instance of ProductReferenceOCC', () => {
+            // uncomment below and update the code to test ProductReferenceOCC
+            // var instane = new Occ.ProductReferenceOCC();
+            // expect(instance).to.be.a(Occ.ProductReferenceOCC);
         })
 
         it('should have the property preselected (base name: "preselected")', () => {
             // uncomment below and update the code to test the property preselected
-            // var instane = new Occ.ProductReferenceWsDTO173();
+            // var instane = new Occ.ProductReferenceOCC();
             // expect(instance).to.be();
         })
 
         it('should have the property referenceType (base name: "referenceType")', () => {
             // uncomment below and update the code to test the property referenceType
-            // var instane = new Occ.ProductReferenceWsDTO173();
+            // var instane = new Occ.ProductReferenceOCC();
             // expect(instance).to.be();
         })
 
         it('should have the property description (base name: "description")', () => {
             // uncomment below and update the code to test the property description
-            // var instane = new Occ.ProductReferenceWsDTO173();
+            // var instane = new Occ.ProductReferenceOCC();
             // expect(instance).to.be();
         })
 
         it('should have the property quantity (base name: "quantity")', () => {
             // uncomment below and update the code to test the property quantity
-            // var instane = new Occ.ProductReferenceWsDTO173();
+            // var instane = new Occ.ProductReferenceOCC();
             // expect(instance).to.be();
         })
 

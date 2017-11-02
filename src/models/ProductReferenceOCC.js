@@ -18,14 +18,14 @@
 import ApiClient from '../ApiClient'
 
 /**
-* The ProductReferenceWsDTO173 model module.
-* @module models/ProductReferenceWsDTO173
+* The ProductReferenceOCC model module.
+* @module models/ProductReferenceOCC
 * @version v2
 */
-export default class ProductReferenceWsDTO173 {
+export default class ProductReferenceOCC {
     /**
-    * Constructs a new <code>ProductReferenceWsDTO173</code>.
-    * @alias module:models/ProductReferenceWsDTO173
+    * Constructs a new <code>ProductReferenceOCC</code>.
+    * @alias module:models/ProductReferenceOCC
     * @class
     */
 
@@ -53,20 +53,20 @@ export default class ProductReferenceWsDTO173 {
     }
 
     /**
-    * Constructs a <code>ProductReferenceWsDTO173</code> from a plain JavaScript
+    * Constructs a <code>ProductReferenceOCC</code> from a plain JavaScript
     * object, optionally creating a new instance. Copies all relevant properties
     * from <code>data</code> to <code>obj</code> if supplied or a new instance
     * if not.
     * @param {Object} data The plain JavaScript object bearing properties of
     * interest.
-    * @param {module:models/ProductReferenceWsDTO173} obj Optional instance to
+    * @param {module:models/ProductReferenceOCC} obj Optional instance to
     * populate.
-    * @return {module:models/ProductReferenceWsDTO173} The populated
-    * <code>ProductReferenceWsDTO173</code> instance.
+    * @return {module:models/ProductReferenceOCC} The populated
+    * <code>ProductReferenceOCC</code> instance.
     */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new ProductReferenceWsDTO173()
+            obj = obj || new ProductReferenceOCC()
 
             if (data.hasOwnProperty('preselected')) {
                 obj.preselected = ApiClient.convertToType(data.preselected, 'Boolean')
@@ -83,7 +83,5 @@ export default class ProductReferenceWsDTO173 {
         }
         return obj
     }
-
-
 
 }

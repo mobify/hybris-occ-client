@@ -23,7 +23,7 @@ import FutureStockWsDTO from './FutureStockWsDTO'
 import ImageWsDTO from './ImageWsDTO'
 import PriceRangeWsDTO from './PriceRangeWsDTO'
 import PriceWsDTO from './PriceWsDTO'
-import ProductReferenceWsDTO173 from './ProductReferenceWsDTO173'
+import ProductReferenceOCC from './ProductReferenceOCC'
 import PromotionWsDTO from './PromotionWsDTO'
 import ReviewWsDTO from './ReviewWsDTO'
 import StockWsDTO from './StockWsDTO'
@@ -163,7 +163,7 @@ export default class ProductWsDTO174 {
         this.volumePrices = undefined
         /**
     *
-    * @member {Array.<module:models/ProductReferenceWsDTO173>} productReferences
+    * @member {Array.<module:models/ProductReferenceOCC>} productReferences
     */
         this.productReferences = undefined
         /**
@@ -270,7 +270,7 @@ export default class ProductWsDTO174 {
                 obj.volumePrices = ApiClient.convertToType(data.volumePrices, [PriceWsDTO])
             }
             if (data.hasOwnProperty('productReferences')) {
-                obj.productReferences = ApiClient.convertToType(data.productReferences, [ProductReferenceWsDTO173])
+                obj.productReferences = ApiClient.convertToType(data.productReferences, [ProductReferenceOCC])
             }
             if (data.hasOwnProperty('variantMatrix')) {
                 obj.variantMatrix = ApiClient.convertToType(data.variantMatrix, [VariantMatrixElementWsDTO])
