@@ -199,7 +199,7 @@ Class | Method | HTTP request | Description
  - [Occ.CountryOCC](docs/CountryOCC.md)
  - [Occ.CurrencyListWsDTO](docs/CurrencyListWsDTO.md)
  - [Occ.Currency](docs/Currency.md)
- - [Occ.CurrencyWsDTO](docs/CurrencyWsDTO.md)
+ - [Occ.CurrencyOCC](docs/CurrencyOCC.md)
  - [Occ.DeliveryModeListWsDTO](docs/DeliveryModeListWsDTO.md)
  - [Occ.DeliveryModeWsDTO](docs/DeliveryModeWsDTO.md)
  - [Occ.DeliveryOrderEntryGroupWsDTO](docs/DeliveryOrderEntryGroupWsDTO.md)

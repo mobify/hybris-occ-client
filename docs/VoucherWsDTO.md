@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **valueFormatted** | **String** |  | [optional] 
 **valueString** | **String** |  | [optional] 
 **freeShipping** | **Boolean** |  | [optional] 
-**currency** | [**CurrencyWsDTO**](CurrencyWsDTO.md) |  | [optional] 
+**currency** | [**CurrencyOCC**](CurrencyOCC.md) |  | [optional] 
 **appliedValue** | [**PriceWsDTO**](PriceWsDTO.md) |  | [optional] 
 
 

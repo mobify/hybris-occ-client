@@ -16,7 +16,7 @@
  */
 
 import ApiClient from '../ApiClient'
-import CurrencyWsDTO from './CurrencyWsDTO'
+import CurrencyOCC from './CurrencyOCC'
 
 /**
 * The CurrencyListWsDTO model module.
@@ -33,7 +33,7 @@ export default class CurrencyListWsDTO {
     constructor() {
         /**
     *
-    * @member {Array.<module:models/CurrencyWsDTO>} currencies
+    * @member {Array.<module:models/CurrencyOCC>} currencies
     */
         this.currencies = undefined
     }
@@ -55,7 +55,7 @@ export default class CurrencyListWsDTO {
             obj = obj || new CurrencyListWsDTO()
 
             if (data.hasOwnProperty('currencies')) {
-                obj.currencies = ApiClient.convertToType(data.currencies, [CurrencyWsDTO])
+                obj.currencies = ApiClient.convertToType(data.currencies, [CurrencyOCC])
             }
         }
         return obj

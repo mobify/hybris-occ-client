@@ -3,6 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**currencies** | [**[CurrencyWsDTO]**](CurrencyWsDTO.md) |  | [optional] 
+**currencies** | [**[CurrencyOCC]**](CurrencyOCC.md) |  | [optional] 
 
 

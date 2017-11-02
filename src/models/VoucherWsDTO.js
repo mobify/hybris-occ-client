@@ -16,7 +16,7 @@
  */
 
 import ApiClient from '../ApiClient'
-import CurrencyWsDTO from './CurrencyWsDTO'
+import CurrencyOCC from './CurrencyOCC'
 import PriceWsDTO from './PriceWsDTO'
 
 /**
@@ -73,7 +73,7 @@ export default class VoucherWsDTO {
     */
         this.freeShipping = undefined
         /**
-    * @member {module:models/CurrencyWsDTO} currency
+    * @member {module:models/CurrencyOCC} currency
     */
         this.currency = undefined
         /**
@@ -122,7 +122,7 @@ export default class VoucherWsDTO {
                 obj.freeShipping = ApiClient.convertToType(data.freeShipping, 'Boolean')
             }
             if (data.hasOwnProperty('currency')) {
-                obj.currency = CurrencyWsDTO.constructFromObject(data.currency)
+                obj.currency = CurrencyOCC.constructFromObject(data.currency)
             }
             if (data.hasOwnProperty('appliedValue')) {
                 obj.appliedValue = PriceWsDTO.constructFromObject(data.appliedValue)

@@ -20,7 +20,7 @@ const testWrapper = (occ) => {
     occ.catalogName = 'Apparel Product Catalog'
     occ.catalogId = 'apparelProductCatalog'
     occ.catalogVersionId = 'Online'
-    occ.currencies = occ.CurrencyWsDTO.constructFromObject({
+    occ.currencies = occ.CurrencyOCC.constructFromObject({
         isocode: 'GBP',
         name: 'Pound',
         active: false,

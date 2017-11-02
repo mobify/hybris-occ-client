@@ -32,7 +32,7 @@
     let instance
 
     beforeEach(() => {
-        instance = new Occ.CurrencyWsDTO()
+        instance = new Occ.CurrencyOCC()
     })
 
     const getProperty = function(object, getter, property) {
@@ -45,34 +45,34 @@
         if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
     }
 
-    describe('CurrencyWsDTO', () => {
-        it('should create an instance of CurrencyWsDTO', () => {
-            // uncomment below and update the code to test CurrencyWsDTO
-            // var instane = new Occ.CurrencyWsDTO();
-            // expect(instance).to.be.a(Occ.CurrencyWsDTO);
+    describe('CurrencyOCC', () => {
+        it('should create an instance of CurrencyOCC', () => {
+            // uncomment below and update the code to test CurrencyOCC
+            // var instane = new Occ.CurrencyOCC();
+            // expect(instance).to.be.a(Occ.CurrencyOCC);
         })
 
         it('should have the property isocode (base name: "isocode")', () => {
             // uncomment below and update the code to test the property isocode
-            // var instane = new Occ.CurrencyWsDTO();
+            // var instane = new Occ.CurrencyOCC();
             // expect(instance).to.be();
         })
 
         it('should have the property name (base name: "name")', () => {
             // uncomment below and update the code to test the property name
-            // var instane = new Occ.CurrencyWsDTO();
+            // var instane = new Occ.CurrencyOCC();
             // expect(instance).to.be();
         })
 
         it('should have the property active (base name: "active")', () => {
             // uncomment below and update the code to test the property active
-            // var instane = new Occ.CurrencyWsDTO();
+            // var instane = new Occ.CurrencyOCC();
             // expect(instance).to.be();
         })
 
         it('should have the property symbol (base name: "symbol")', () => {
             // uncomment below and update the code to test the property symbol
-            // var instane = new Occ.CurrencyWsDTO();
+            // var instane = new Occ.CurrencyOCC();
             // expect(instance).to.be();
         })
 

@@ -18,14 +18,14 @@
 import ApiClient from '../ApiClient'
 
 /**
-* The CurrencyWsDTO model module.
-* @module models/CurrencyWsDTO
+* The CurrencyOCC model module.
+* @module models/CurrencyOCC
 * @version v2
 */
-export default class CurrencyWsDTO {
+export default class CurrencyOCC {
     /**
-    * Constructs a new <code>CurrencyWsDTO</code>.
-    * @alias module:models/CurrencyWsDTO
+    * Constructs a new <code>CurrencyOCC</code>.
+    * @alias module:models/CurrencyOCC
     * @class
     */
 
@@ -53,19 +53,19 @@ export default class CurrencyWsDTO {
     }
 
     /**
-    * Constructs a <code>CurrencyWsDTO</code> from a plain JavaScript object,
+    * Constructs a <code>CurrencyOCC</code> from a plain JavaScript object,
     * optionally creating a new instance. Copies all relevant properties from
     * <code>data</code> to <code>obj</code> if supplied or a new instance if
     * not.
     * @param {Object} data The plain JavaScript object bearing properties of
     * interest.
-    * @param {module:models/CurrencyWsDTO} obj Optional instance to populate.
-    * @return {module:models/CurrencyWsDTO} The populated
-    * <code>CurrencyWsDTO</code> instance.
+    * @param {module:models/CurrencyOCC} obj Optional instance to populate.
+    * @return {module:models/CurrencyOCC} The populated
+    * <code>CurrencyOCC</code> instance.
     */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new CurrencyWsDTO()
+            obj = obj || new CurrencyOCC()
 
             if (data.hasOwnProperty('isocode')) {
                 obj.isocode = ApiClient.convertToType(data.isocode, 'String')

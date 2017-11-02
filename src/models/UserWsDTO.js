@@ -17,7 +17,7 @@
 
 import ApiClient from '../ApiClient'
 import AddressWsDTO from './AddressWsDTO'
-import CurrencyWsDTO from './CurrencyWsDTO'
+import CurrencyOCC from './CurrencyOCC'
 import LanguageWsDTO from './LanguageWsDTO'
 
 /**
@@ -58,7 +58,7 @@ export default class UserWsDTO {
     */
         this.lastName = undefined
         /**
-    * @member {module:models/CurrencyWsDTO} currency
+    * @member {module:models/CurrencyOCC} currency
     */
         this.currency = undefined
         /**
@@ -113,7 +113,7 @@ export default class UserWsDTO {
                 obj.lastName = ApiClient.convertToType(data.lastName, 'String')
             }
             if (data.hasOwnProperty('currency')) {
-                obj.currency = CurrencyWsDTO.constructFromObject(data.currency)
+                obj.currency = CurrencyOCC.constructFromObject(data.currency)
             }
             if (data.hasOwnProperty('language')) {
                 obj.language = LanguageWsDTO.constructFromObject(data.language)

@@ -39,7 +39,7 @@ import Country from './models/Country'
 import CountryOCC from './models/CountryOCC'
 import CurrencyListWsDTO from './models/CurrencyListWsDTO'
 import Currency from './models/Currency'
-import CurrencyWsDTO from './models/CurrencyWsDTO'
+import CurrencyOCC from './models/CurrencyOCC'
 import DeliveryModeListWsDTO from './models/DeliveryModeListWsDTO'
 import DeliveryModeWsDTO from './models/DeliveryModeWsDTO'
 import DeliveryOrderEntryGroupWsDTO from './models/DeliveryOrderEntryGroupWsDTO'
@@ -319,10 +319,10 @@ export {
     Currency,
 
     /**
-     * The CurrencyWsDTO model constructor.
-     * @property {module:models/CurrencyWsDTO}
+     * The CurrencyOCC model constructor.
+     * @property {module:models/CurrencyOCC}
      */
-    CurrencyWsDTO,
+    CurrencyOCC,
 
     /**
      * The DeliveryModeListWsDTO model constructor.

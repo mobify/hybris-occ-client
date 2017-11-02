@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **title** | **String** |  | [optional] 
 **firstName** | **String** |  | [optional] 
 **lastName** | **String** |  | [optional] 
-**currency** | [**CurrencyWsDTO**](CurrencyWsDTO.md) |  | [optional] 
+**currency** | [**CurrencyOCC**](CurrencyOCC.md) |  | [optional] 
 **language** | [**LanguageWsDTO**](LanguageWsDTO.md) |  | [optional] 
 **displayUid** | **String** |  | [optional] 
 **uid** | **String** |  | [optional] 

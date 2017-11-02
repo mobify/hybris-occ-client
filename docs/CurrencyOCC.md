@@ -1,4 +1,4 @@
-# Occ.CurrencyWsDTO
+# Occ.CurrencyOCC
 
 ## Properties
 Name | Type | Description | Notes
