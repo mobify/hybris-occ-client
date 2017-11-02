@@ -275,7 +275,7 @@ Class | Method | HTTP request | Description
  - [Occ.UserGroupOCC](docs/UserGroupOCC.md)
  - [Occ.UserGroupWsDTO](docs/UserGroupWsDTO.md)
  - [Occ.UserSignUpWsDTO](docs/UserSignUpWsDTO.md)
- - [Occ.UserWsDTO286](docs/UserWsDTO286.md)
+ - [Occ.UserOCC](docs/UserOCC.md)
  - [Occ.UserWsDTO](docs/UserWsDTO.md)
  - [Occ.VariantCategoryWsDTO](docs/VariantCategoryWsDTO.md)
  - [Occ.VariantMatrixElementWsDTO](docs/VariantMatrixElementWsDTO.md)

@@ -115,7 +115,7 @@ import UserGroupListWsDTO from './models/UserGroupListWsDTO'
 import UserGroupOCC from './models/UserGroupOCC'
 import UserGroupWsDTO from './models/UserGroupWsDTO'
 import UserSignUpWsDTO from './models/UserSignUpWsDTO'
-import UserWsDTO286 from './models/UserWsDTO286'
+import UserOCC from './models/UserOCC'
 import UserWsDTO from './models/UserWsDTO'
 import VariantCategoryWsDTO from './models/VariantCategoryWsDTO'
 import VariantMatrixElementWsDTO from './models/VariantMatrixElementWsDTO'
@@ -775,10 +775,10 @@ export {
     UserSignUpWsDTO,
 
     /**
-     * The UserWsDTO286 model constructor.
-     * @property {module:models/UserWsDTO286}
+     * The UserOCC model constructor.
+     * @property {module:models/UserOCC}
      */
-    UserWsDTO286,
+    UserOCC,
 
     /**
      * The UserWsDTO model constructor.

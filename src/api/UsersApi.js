@@ -712,7 +712,7 @@ export default class UsersApi {
      * &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated
      * user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous
      * user&lt;/li&gt; &lt;/ul&gt;
-     * @param {module:models/UserWsDTO286} body
+     * @param {module:models/UserOCC} body
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an
      * object containing HTTP response
      */
@@ -761,7 +761,7 @@ export default class UsersApi {
      * &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated
      * user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous
      * user&lt;/li&gt; &lt;/ul&gt;
-     * @param {module:models/UserWsDTO286} body
+     * @param {module:models/UserOCC} body
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     putUser(userId, body) {
@@ -780,7 +780,7 @@ export default class UsersApi {
      * &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated
      * user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous
      * user&lt;/li&gt; &lt;/ul&gt;
-     * @param {module:models/UserWsDTO286} body
+     * @param {module:models/UserOCC} body
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an
      * object containing HTTP response
      */
@@ -828,7 +828,7 @@ export default class UsersApi {
      * &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated
      * user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous
      * user&lt;/li&gt; &lt;/ul&gt;
-     * @param {module:models/UserWsDTO286} body
+     * @param {module:models/UserOCC} body
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     patchUser(userId, body) {

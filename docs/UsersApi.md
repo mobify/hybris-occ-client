@@ -558,7 +558,7 @@ let apiInstance = new Occ.UsersApi();
 
 let userId = "userId_example"; // String | User identifier or one of the literals below : <ul> <li>'current' for currently authenticated user</li> <li>'anonymous' for anonymous user</li> </ul>
 
-let body = new Occ.UserWsDTO286(); // UserWsDTO286 | 
+let body = new Occ.UserOCC(); // UserOCC | 
 
 apiInstance.putUser(userId, body).then(() => {
   console.log('API called successfully.');
@@ -573,7 +573,7 @@ apiInstance.putUser(userId, body).then(() => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **userId** | **String**| User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt; | 
- **body** | [**UserWsDTO286**](UserWsDTO286.md)|  | 
+ **body** | [**UserOCC**](UserOCC.md)|  | 
 
 ### Return type
 
@@ -609,7 +609,7 @@ let apiInstance = new Occ.UsersApi();
 
 let userId = "userId_example"; // String | User identifier or one of the literals below : <ul> <li>'current' for currently authenticated user</li> <li>'anonymous' for anonymous user</li> </ul>
 
-let body = new Occ.UserWsDTO286(); // UserWsDTO286 | 
+let body = new Occ.UserOCC(); // UserOCC | 
 
 apiInstance.patchUser(userId, body).then(() => {
   console.log('API called successfully.');
@@ -624,7 +624,7 @@ apiInstance.patchUser(userId, body).then(() => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **userId** | **String**| User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt; | 
- **body** | [**UserWsDTO286**](UserWsDTO286.md)|  | 
+ **body** | [**UserOCC**](UserOCC.md)|  | 
 
 ### Return type
 

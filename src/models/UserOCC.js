@@ -20,14 +20,14 @@ import Currency from './Currency'
 import Language from './Language'
 
 /**
-* The UserWsDTO286 model module.
-* @module models/UserWsDTO286
+* The UserOCC model module.
+* @module models/UserOCC
 * @version v2
 */
-export default class UserWsDTO286 {
+export default class UserOCC {
     /**
-    * Constructs a new <code>UserWsDTO286</code>.
-    * @alias module:models/UserWsDTO286
+    * Constructs a new <code>UserOCC</code>.
+    * @alias module:models/UserOCC
     * @class
     */
 
@@ -58,19 +58,19 @@ export default class UserWsDTO286 {
     }
 
     /**
-    * Constructs a <code>UserWsDTO286</code> from a plain JavaScript object,
+    * Constructs a <code>UserOCC</code> from a plain JavaScript object,
     * optionally creating a new instance. Copies all relevant properties from
     * <code>data</code> to <code>obj</code> if supplied or a new instance if
     * not.
     * @param {Object} data The plain JavaScript object bearing properties of
     * interest.
-    * @param {module:models/UserWsDTO286} obj Optional instance to populate.
-    * @return {module:models/UserWsDTO286} The populated
-    * <code>UserWsDTO286</code> instance.
+    * @param {module:models/UserOCC} obj Optional instance to populate.
+    * @return {module:models/UserOCC} The populated
+    * <code>UserOCC</code> instance.
     */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new UserWsDTO286()
+            obj = obj || new UserOCC()
 
             if (data.hasOwnProperty('titleCode')) {
                 obj.titleCode = ApiClient.convertToType(data.titleCode, 'String')
@@ -90,7 +90,5 @@ export default class UserWsDTO286 {
         }
         return obj
     }
-
-
 
 }

@@ -1,4 +1,4 @@
-# Occ.UserWsDTO286
+# Occ.UserOCC
 
 ## Properties
 Name | Type | Description | Notes
