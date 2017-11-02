@@ -80,7 +80,7 @@ auth.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new Occ.UsersApi();
 
-let body = new Occ.UserSignUpWsDTO(); // UserSignUpWsDTO | 
+let body = new Occ.UserSignUp(); // UserSignUp | 
 
 apiInstance.postUsers(body).then(() => {
   console.log('API called successfully.');
@@ -94,7 +94,7 @@ apiInstance.postUsers(body).then(() => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**UserSignUpWsDTO**](UserSignUpWsDTO.md)|  | 
+ **body** | [**UserSignUp**](UserSignUp.md)|  | 
 
 ### Return type
 
@@ -111,7 +111,7 @@ null (empty response body)
 
 <a name="getUserAddresses"></a>
 # **getUserAddresses**
-> AddressListWsDTO getUserAddresses(userId, opts)
+> AddressList getUserAddresses(userId, opts)
 
 getUserAddresses
 
@@ -150,7 +150,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AddressListWsDTO**](AddressListWsDTO.md)
+[**AddressList**](AddressList.md)
 
 ### Authorization
 
@@ -218,7 +218,7 @@ Name | Type | Description  | Notes
 
 <a name="getUserAddress"></a>
 # **getUserAddress**
-> AddressWsDTO getUserAddress(userId, addressId, opts)
+> Address getUserAddress(userId, addressId, opts)
 
 getUserAddress
 
@@ -260,7 +260,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AddressWsDTO**](AddressWsDTO.md)
+[**Address**](Address.md)
 
 ### Authorization
 
@@ -487,7 +487,7 @@ Name | Type | Description  | Notes
 
 <a name="getUser"></a>
 # **getUser**
-> UserWsDTO getUser(userId, opts)
+> User getUser(userId, opts)
 
 getUser
 
@@ -526,7 +526,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**UserWsDTO**](UserWsDTO.md)
+[**User**](User.md)
 
 ### Authorization
 
@@ -852,7 +852,7 @@ null (empty response body)
 
 <a name="getCarts"></a>
 # **getCarts**
-> CartListWsDTO getCarts(userId, opts)
+> CartList getCarts(userId, opts)
 
 getCarts
 
@@ -891,7 +891,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CartListWsDTO**](CartListWsDTO.md)
+[**CartList**](CartList.md)
 
 ### Authorization
 
@@ -904,7 +904,7 @@ Name | Type | Description  | Notes
 
 <a name="postCart"></a>
 # **postCart**
-> CartWsDTO postCart(userId, opts)
+> Cart postCart(userId, opts)
 
 getCarts
 
@@ -947,7 +947,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CartWsDTO**](CartWsDTO.md)
+[**Cart**](Cart.md)
 
 ### Authorization
 
@@ -960,7 +960,7 @@ Name | Type | Description  | Notes
 
 <a name="getCart"></a>
 # **getCart**
-> CartWsDTO getCart(userId, cartId, opts)
+> Cart getCart(userId, cartId, opts)
 
 getCart
 
@@ -1002,7 +1002,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CartWsDTO**](CartWsDTO.md)
+[**Cart**](Cart.md)
 
 ### Authorization
 
@@ -1066,7 +1066,7 @@ null (empty response body)
 
 <a name="postCartCloneSavedcart"></a>
 # **postCartCloneSavedcart**
-> SaveCartResultWsDTO postCartCloneSavedcart(userId, cartId, opts)
+> SaveCartResult postCartCloneSavedcart(userId, cartId, opts)
 
 postCartCloneSavedcart
 
@@ -1112,7 +1112,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SaveCartResultWsDTO**](SaveCartResultWsDTO.md)
+[**SaveCartResult**](SaveCartResult.md)
 
 ### Authorization
 
@@ -1125,7 +1125,7 @@ Name | Type | Description  | Notes
 
 <a name="getCartDeliveryMode"></a>
 # **getCartDeliveryMode**
-> DeliveryModeWsDTO getCartDeliveryMode(userId, cartId, opts)
+> DeliveryMode getCartDeliveryMode(userId, cartId, opts)
 
 getCartDeliveryMode
 
@@ -1167,7 +1167,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DeliveryModeWsDTO**](DeliveryModeWsDTO.md)
+[**DeliveryMode**](DeliveryMode.md)
 
 ### Authorization
 
@@ -1285,7 +1285,7 @@ null (empty response body)
 
 <a name="getCartDeliveryModes"></a>
 # **getCartDeliveryModes**
-> DeliveryModeListWsDTO getCartDeliveryModes(userId, cartId, opts)
+> DeliveryModeList getCartDeliveryModes(userId, cartId, opts)
 
 getCartDeliveryModes
 
@@ -1327,7 +1327,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DeliveryModeListWsDTO**](DeliveryModeListWsDTO.md)
+[**DeliveryModeList**](DeliveryModeList.md)
 
 ### Authorization
 
@@ -1395,7 +1395,7 @@ null (empty response body)
 
 <a name="getCartEntries"></a>
 # **getCartEntries**
-> OrderEntryListWsDTO getCartEntries(userId, cartId, opts)
+> OrderEntryList getCartEntries(userId, cartId, opts)
 
 getCartEntries
 
@@ -1437,7 +1437,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**OrderEntryListWsDTO**](OrderEntryListWsDTO.md)
+[**OrderEntryList**](OrderEntryList.md)
 
 ### Authorization
 
@@ -1508,7 +1508,7 @@ Name | Type | Description  | Notes
 
 <a name="getCartEntry"></a>
 # **getCartEntry**
-> OrderEntryWsDTO getCartEntry(userId, cartId, entryNumber, opts)
+> OrderEntry getCartEntry(userId, cartId, entryNumber, opts)
 
 getCartEntry
 
@@ -1553,7 +1553,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**OrderEntryWsDTO**](OrderEntryWsDTO.md)
+[**OrderEntry**](OrderEntry.md)
 
 ### Authorization
 
@@ -1742,7 +1742,7 @@ null (empty response body)
 
 <a name="patchCartFlagForDeletion"></a>
 # **patchCartFlagForDeletion**
-> SaveCartResultWsDTO patchCartFlagForDeletion(userId, cartId, opts)
+> SaveCartResult patchCartFlagForDeletion(userId, cartId, opts)
 
 patchCartFlagForDeletion
 
@@ -1784,7 +1784,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SaveCartResultWsDTO**](SaveCartResultWsDTO.md)
+[**SaveCartResult**](SaveCartResult.md)
 
 ### Authorization
 
@@ -1909,7 +1909,7 @@ null (empty response body)
 
 <a name="getCartPromotions"></a>
 # **getCartPromotions**
-> PromotionResultListWsDTO getCartPromotions(userId, cartId, opts)
+> PromotionResultList getCartPromotions(userId, cartId, opts)
 
 getCartPromotions
 
@@ -1951,7 +1951,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PromotionResultListWsDTO**](PromotionResultListWsDTO.md)
+[**PromotionResultList**](PromotionResultList.md)
 
 ### Authorization
 
@@ -2018,7 +2018,7 @@ null (empty response body)
 
 <a name="getCartPromotion"></a>
 # **getCartPromotion**
-> PromotionResultListWsDTO getCartPromotion(userId, cartId, promotionId, opts)
+> PromotionResultList getCartPromotion(userId, cartId, promotionId, opts)
 
 getCartPromotion
 
@@ -2063,7 +2063,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PromotionResultListWsDTO**](PromotionResultListWsDTO.md)
+[**PromotionResultList**](PromotionResultList.md)
 
 ### Authorization
 
@@ -2130,7 +2130,7 @@ null (empty response body)
 
 <a name="patchCartRestoreSavedCart"></a>
 # **patchCartRestoreSavedCart**
-> SaveCartResultWsDTO patchCartRestoreSavedCart(userId, cartId)
+> SaveCartResult patchCartRestoreSavedCart(userId, cartId)
 
 patchCartRestoreSavedCart
 
@@ -2166,7 +2166,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SaveCartResultWsDTO**](SaveCartResultWsDTO.md)
+[**SaveCartResult**](SaveCartResult.md)
 
 ### Authorization
 
@@ -2179,7 +2179,7 @@ Name | Type | Description  | Notes
 
 <a name="patchSavedCart"></a>
 # **patchSavedCart**
-> SaveCartResultWsDTO patchSavedCart(userId, cartId, opts)
+> SaveCartResult patchSavedCart(userId, cartId, opts)
 
 patchSavedCart
 
@@ -2225,7 +2225,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SaveCartResultWsDTO**](SaveCartResultWsDTO.md)
+[**SaveCartResult**](SaveCartResult.md)
 
 ### Authorization
 
@@ -2238,7 +2238,7 @@ Name | Type | Description  | Notes
 
 <a name="getSavedCart"></a>
 # **getSavedCart**
-> SaveCartResultWsDTO getSavedCart(userId, cartId, opts)
+> SaveCartResult getSavedCart(userId, cartId, opts)
 
 getSavedCart
 
@@ -2280,7 +2280,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SaveCartResultWsDTO**](SaveCartResultWsDTO.md)
+[**SaveCartResult**](SaveCartResult.md)
 
 ### Authorization
 
@@ -2293,7 +2293,7 @@ Name | Type | Description  | Notes
 
 <a name="getCartVouchers"></a>
 # **getCartVouchers**
-> VoucherListWsDTO getCartVouchers(userId, cartId, opts)
+> VoucherList getCartVouchers(userId, cartId, opts)
 
 getCartVouchers
 
@@ -2335,7 +2335,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VoucherListWsDTO**](VoucherListWsDTO.md)
+[**VoucherList**](VoucherList.md)
 
 ### Authorization
 
@@ -2456,7 +2456,7 @@ null (empty response body)
 
 <a name="getCustomerGroups"></a>
 # **getCustomerGroups**
-> UserGroupListWsDTO getCustomerGroups(userId, opts)
+> UserGroupList getCustomerGroups(userId, opts)
 
 getCustomerGroups
 
@@ -2495,7 +2495,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**UserGroupListWsDTO**](UserGroupListWsDTO.md)
+[**UserGroupList**](UserGroupList.md)
 
 ### Authorization
 
@@ -2562,7 +2562,7 @@ null (empty response body)
 
 <a name="getOrders"></a>
 # **getOrders**
-> OrderHistoryListWsDTO getOrders(userId, opts)
+> OrderHistoryList getOrders(userId, opts)
 
 UsersOrdersByUserId
 
@@ -2609,7 +2609,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**OrderHistoryListWsDTO**](OrderHistoryListWsDTO.md)
+[**OrderHistoryList**](OrderHistoryList.md)
 
 ### Authorization
 
@@ -2622,7 +2622,7 @@ Name | Type | Description  | Notes
 
 <a name="postOrder"></a>
 # **postOrder**
-> OrderWsDTO postOrder(userId, cartId, opts)
+> Order postOrder(userId, cartId, opts)
 
 UsersOrdersByUserId
 
@@ -2666,7 +2666,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**OrderWsDTO**](OrderWsDTO.md)
+[**Order**](Order.md)
 
 ### Authorization
 
@@ -2679,7 +2679,7 @@ Name | Type | Description  | Notes
 
 <a name="getOrder"></a>
 # **getOrder**
-> OrderWsDTO getOrder(userId, code, opts)
+> Order getOrder(userId, code, opts)
 
 getOrder
 
@@ -2721,7 +2721,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**OrderWsDTO**](OrderWsDTO.md)
+[**Order**](Order.md)
 
 ### Authorization
 
@@ -2788,7 +2788,7 @@ null (empty response body)
 
 <a name="getPaymentDetail"></a>
 # **getPaymentDetail**
-> PaymentDetailsWsDTO getPaymentDetail(userId, paymentDetailsId, opts)
+> PaymentDetails getPaymentDetail(userId, paymentDetailsId, opts)
 
 getPaymentDetail
 
@@ -2830,7 +2830,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PaymentDetailsWsDTO**](PaymentDetailsWsDTO.md)
+[**PaymentDetails**](PaymentDetails.md)
 
 ### Authorization
 
@@ -3002,7 +3002,7 @@ null (empty response body)
 
 <a name="getPaymentDetails"></a>
 # **getPaymentDetails**
-> PaymentDetailsListWsDTO getPaymentDetails(userId, opts)
+> PaymentDetailsList getPaymentDetails(userId, opts)
 
 getPaymentDetail
 
@@ -3043,7 +3043,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PaymentDetailsListWsDTO**](PaymentDetailsListWsDTO.md)
+[**PaymentDetailsList**](PaymentDetailsList.md)
 
 ### Authorization
 

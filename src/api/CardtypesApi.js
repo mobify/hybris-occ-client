@@ -16,7 +16,7 @@
  */
 
 import ApiClient from '../ApiClient'
-import CardTypeListWsDTO from '../models/CardTypeListWsDTO'
+import CardTypeList from '../models/CardTypeList'
 
 /**
 * Cardtypes service.
@@ -42,7 +42,7 @@ export default class CardtypesApi {
      * @param {String} opts.fields Response configuration (list of fields, which
      * should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an
-     * object containing data of type {@link module:models/CardTypeListWsDTO}
+     * object containing data of type {@link module:models/CardTypeList}
      * and HTTP response
      */
     cardtypesWithHttpInfo(opts) {
@@ -62,7 +62,7 @@ export default class CardtypesApi {
         const authNames = ['auth']
         const contentTypes = ['application/json']
         const accepts = ['application/json']
-        const returnType = CardTypeListWsDTO
+        const returnType = CardTypeList
 
         return this.apiClient.callApi(
             '/cardtypes', 'GET',
@@ -77,7 +77,7 @@ export default class CardtypesApi {
      * @param {String} opts.fields Response configuration (list of fields, which
      * should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data
-     * of type {@link module:models/CardTypeListWsDTO}
+     * of type {@link module:models/CardTypeList}
      */
     getCardTypes(opts) {
         return this.cardtypesWithHttpInfo(opts)

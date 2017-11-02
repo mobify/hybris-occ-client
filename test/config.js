@@ -199,7 +199,7 @@ const testWrapper = (occ) => {
         code: 'mobify_promotion_test'
     }
 
-    occ.user = occ.UserSignUpWsDTO.constructFromObject({
+    occ.user = occ.UserSignUp.constructFromObject({
         firstName: 'Mobify',
         lastName: 'Automation',
         titleCode: occ.titles[0].code,
@@ -223,7 +223,7 @@ const testWrapper = (occ) => {
         defaultAddress: true
     })
 
-    occ.payment = occ.PaymentDetailsWsDTO.constructFromObject({
+    occ.payment = occ.PaymentDetails.constructFromObject({
         id: '',
         billingAddress: occ.address,
         cardType: {code: 'visa', name: 'Visa'},

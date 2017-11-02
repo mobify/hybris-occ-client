@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="exportProducts"></a>
 # **exportProducts**
-> ProductListWsDTO exportProducts(opts)
+> ProductList exportProducts(opts)
 
 ExportProducts
 
@@ -55,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProductListWsDTO**](ProductListWsDTO.md)
+[**ProductList**](ProductList.md)
 
 ### Authorization
 

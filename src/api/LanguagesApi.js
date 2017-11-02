@@ -16,7 +16,7 @@
  */
 
 import ApiClient from '../ApiClient'
-import LanguageListWsDTO from '../models/LanguageListWsDTO'
+import LanguageList from '../models/LanguageList'
 
 /**
 * Languages service.
@@ -44,7 +44,7 @@ export default class LanguagesApi {
      * @param {String} opts.fields Response configuration (list of fields, which
      * should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an
-     * object containing data of type {@link module:models/LanguageListWsDTO}
+     * object containing data of type {@link module:models/LanguageList}
      * and HTTP response
      */
     languagesWithHttpInfo(opts) {
@@ -64,7 +64,7 @@ export default class LanguagesApi {
         const authNames = ['auth']
         const contentTypes = ['application/json']
         const accepts = ['application/json']
-        const returnType = LanguageListWsDTO
+        const returnType = LanguageList
 
         return this.apiClient.callApi(
             '/languages', 'GET',
@@ -81,7 +81,7 @@ export default class LanguagesApi {
      * @param {String} opts.fields Response configuration (list of fields, which
      * should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data
-     * of type {@link module:models/LanguageListWsDTO}
+     * of type {@link module:models/LanguageList}
      */
     getLanguages(opts) {
         return this.languagesWithHttpInfo(opts)

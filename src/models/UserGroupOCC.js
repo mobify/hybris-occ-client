@@ -16,7 +16,7 @@
  */
 
 import ApiClient from '../ApiClient'
-import PrincipalWsDTO from './PrincipalWsDTO'
+import Principal from './Principal'
 
 /**
 * The UserGroupOCC model module.
@@ -33,7 +33,7 @@ export default class UserGroupOCC {
     constructor() {
         /**
     *
-    * @member {Array.<module:models/PrincipalWsDTO>} members
+    * @member {Array.<module:models/Principal>} members
     */
         this.members = undefined
     }
@@ -54,7 +54,7 @@ export default class UserGroupOCC {
             obj = obj || new UserGroupOCC()
 
             if (data.hasOwnProperty('members')) {
-                obj.members = ApiClient.convertToType(data.members, [PrincipalWsDTO])
+                obj.members = ApiClient.convertToType(data.members, [Principal])
             }
         }
         return obj

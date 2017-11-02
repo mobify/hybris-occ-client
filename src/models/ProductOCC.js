@@ -16,19 +16,19 @@
  */
 
 import ApiClient from '../ApiClient'
-import BaseOptionWsDTO from './BaseOptionWsDTO'
-import CategoryWsDTO from './CategoryWsDTO'
-import ClassificationWsDTO from './ClassificationWsDTO'
-import FutureStockWsDTO from './FutureStockWsDTO'
-import ImageWsDTO from './ImageWsDTO'
-import PriceRangeWsDTO from './PriceRangeWsDTO'
-import PriceWsDTO from './PriceWsDTO'
+import BaseOption from './BaseOption'
+import Category from './Category'
+import Classification from './Classification'
+import FutureStock from './FutureStock'
+import Image from './Image'
+import PriceRange from './PriceRange'
+import Price from './Price'
 import ProductReferenceOCC from './ProductReferenceOCC'
-import PromotionWsDTO from './PromotionWsDTO'
-import ReviewWsDTO from './ReviewWsDTO'
-import StockWsDTO from './StockWsDTO'
-import VariantMatrixElementWsDTO from './VariantMatrixElementWsDTO'
-import VariantOptionWsDTO from './VariantOptionWsDTO'
+import Promotion from './Promotion'
+import Review from './Review'
+import Stock from './Stock'
+import VariantMatrixElement from './VariantMatrixElement'
+import VariantOption from './VariantOption'
 
 /**
 * The ProductOCC model module.
@@ -69,12 +69,12 @@ export default class ProductOCC {
     */
         this.purchasable = undefined
         /**
-    * @member {module:models/StockWsDTO} stock
+    * @member {module:models/Stock} stock
     */
         this.stock = undefined
         /**
     *
-    * @member {Array.<module:models/FutureStockWsDTO>} futureStocks
+    * @member {Array.<module:models/FutureStock>} futureStocks
     */
         this.futureStocks = undefined
         /**
@@ -108,7 +108,7 @@ export default class ProductOCC {
     */
         this.variantType = undefined
         /**
-    * @member {module:models/PriceWsDTO} price
+    * @member {module:models/Price} price
     */
         this.price = undefined
         /**
@@ -118,37 +118,37 @@ export default class ProductOCC {
         this.baseProduct = undefined
         /**
     *
-    * @member {Array.<module:models/ImageWsDTO>} images
+    * @member {Array.<module:models/Image>} images
     */
         this.images = undefined
         /**
     *
-    * @member {Array.<module:models/CategoryWsDTO>} categories
+    * @member {Array.<module:models/Category>} categories
     */
         this.categories = undefined
         /**
     *
-    * @member {Array.<module:models/ReviewWsDTO>} reviews
+    * @member {Array.<module:models/Review>} reviews
     */
         this.reviews = undefined
         /**
     *
-    * @member {Array.<module:models/ClassificationWsDTO>} classifications
+    * @member {Array.<module:models/Classification>} classifications
     */
         this.classifications = undefined
         /**
     *
-    * @member {Array.<module:models/PromotionWsDTO>} potentialPromotions
+    * @member {Array.<module:models/Promotion>} potentialPromotions
     */
         this.potentialPromotions = undefined
         /**
     *
-    * @member {Array.<module:models/VariantOptionWsDTO>} variantOptions
+    * @member {Array.<module:models/VariantOption>} variantOptions
     */
         this.variantOptions = undefined
         /**
     *
-    * @member {Array.<module:models/BaseOptionWsDTO>} baseOptions
+    * @member {Array.<module:models/BaseOption>} baseOptions
     */
         this.baseOptions = undefined
         /**
@@ -158,7 +158,7 @@ export default class ProductOCC {
         this.volumePricesFlag = undefined
         /**
     *
-    * @member {Array.<module:models/PriceWsDTO>} volumePrices
+    * @member {Array.<module:models/Price>} volumePrices
     */
         this.volumePrices = undefined
         /**
@@ -168,11 +168,11 @@ export default class ProductOCC {
         this.productReferences = undefined
         /**
     *
-    * @member {Array.<module:models/VariantMatrixElementWsDTO>} variantMatrix
+    * @member {Array.<module:models/VariantMatrixElement>} variantMatrix
     */
         this.variantMatrix = undefined
         /**
-    * @member {module:models/PriceRangeWsDTO} priceRange
+    * @member {module:models/PriceRange} priceRange
     */
         this.priceRange = undefined
         /**
@@ -213,10 +213,10 @@ export default class ProductOCC {
                 obj.purchasable = ApiClient.convertToType(data.purchasable, 'Boolean')
             }
             if (data.hasOwnProperty('stock')) {
-                obj.stock = StockWsDTO.constructFromObject(data.stock)
+                obj.stock = Stock.constructFromObject(data.stock)
             }
             if (data.hasOwnProperty('futureStocks')) {
-                obj.futureStocks = ApiClient.convertToType(data.futureStocks, [FutureStockWsDTO])
+                obj.futureStocks = ApiClient.convertToType(data.futureStocks, [FutureStock])
             }
             if (data.hasOwnProperty('availableForPickup')) {
                 obj.availableForPickup = ApiClient.convertToType(data.availableForPickup, 'Boolean')
@@ -237,46 +237,46 @@ export default class ProductOCC {
                 obj.variantType = ApiClient.convertToType(data.variantType, 'String')
             }
             if (data.hasOwnProperty('price')) {
-                obj.price = PriceWsDTO.constructFromObject(data.price)
+                obj.price = Price.constructFromObject(data.price)
             }
             if (data.hasOwnProperty('baseProduct')) {
                 obj.baseProduct = ApiClient.convertToType(data.baseProduct, 'String')
             }
             if (data.hasOwnProperty('images')) {
-                obj.images = ApiClient.convertToType(data.images, [ImageWsDTO])
+                obj.images = ApiClient.convertToType(data.images, [Image])
             }
             if (data.hasOwnProperty('categories')) {
-                obj.categories = ApiClient.convertToType(data.categories, [CategoryWsDTO])
+                obj.categories = ApiClient.convertToType(data.categories, [Category])
             }
             if (data.hasOwnProperty('reviews')) {
-                obj.reviews = ApiClient.convertToType(data.reviews, [ReviewWsDTO])
+                obj.reviews = ApiClient.convertToType(data.reviews, [Review])
             }
             if (data.hasOwnProperty('classifications')) {
-                obj.classifications = ApiClient.convertToType(data.classifications, [ClassificationWsDTO])
+                obj.classifications = ApiClient.convertToType(data.classifications, [Classification])
             }
             if (data.hasOwnProperty('potentialPromotions')) {
-                obj.potentialPromotions = ApiClient.convertToType(data.potentialPromotions, [PromotionWsDTO])
+                obj.potentialPromotions = ApiClient.convertToType(data.potentialPromotions, [Promotion])
             }
             if (data.hasOwnProperty('variantOptions')) {
-                obj.variantOptions = ApiClient.convertToType(data.variantOptions, [VariantOptionWsDTO])
+                obj.variantOptions = ApiClient.convertToType(data.variantOptions, [VariantOption])
             }
             if (data.hasOwnProperty('baseOptions')) {
-                obj.baseOptions = ApiClient.convertToType(data.baseOptions, [BaseOptionWsDTO])
+                obj.baseOptions = ApiClient.convertToType(data.baseOptions, [BaseOption])
             }
             if (data.hasOwnProperty('volumePricesFlag')) {
                 obj.volumePricesFlag = ApiClient.convertToType(data.volumePricesFlag, 'Boolean')
             }
             if (data.hasOwnProperty('volumePrices')) {
-                obj.volumePrices = ApiClient.convertToType(data.volumePrices, [PriceWsDTO])
+                obj.volumePrices = ApiClient.convertToType(data.volumePrices, [Price])
             }
             if (data.hasOwnProperty('productReferences')) {
                 obj.productReferences = ApiClient.convertToType(data.productReferences, [ProductReferenceOCC])
             }
             if (data.hasOwnProperty('variantMatrix')) {
-                obj.variantMatrix = ApiClient.convertToType(data.variantMatrix, [VariantMatrixElementWsDTO])
+                obj.variantMatrix = ApiClient.convertToType(data.variantMatrix, [VariantMatrixElement])
             }
             if (data.hasOwnProperty('priceRange')) {
-                obj.priceRange = PriceRangeWsDTO.constructFromObject(data.priceRange)
+                obj.priceRange = PriceRange.constructFromObject(data.priceRange)
             }
             if (data.hasOwnProperty('multidimensional')) {
                 obj.multidimensional = ApiClient.convertToType(data.multidimensional, 'Boolean')

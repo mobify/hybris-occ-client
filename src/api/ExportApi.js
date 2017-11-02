@@ -16,7 +16,7 @@
  */
 
 import ApiClient from '../ApiClient'
-import ProductListWsDTO from '../models/ProductListWsDTO'
+import ProductList from '../models/ProductList'
 
 /**
 * Export service.
@@ -53,7 +53,7 @@ export default class ExportApi {
      * modified after given time will be returned.This parameter should be in
      * RFC-8601 format.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an
-     * object containing data of type {@link module:models/ProductListWsDTO} and
+     * object containing data of type {@link module:models/ProductList} and
      * HTTP response
      */
     exportProductsWithHttpInfo(opts) {
@@ -78,7 +78,7 @@ export default class ExportApi {
         const authNames = ['auth']
         const contentTypes = ['application/json']
         const accepts = ['application/json']
-        const returnType = ProductListWsDTO
+        const returnType = ProductList
 
         return this.apiClient.callApi(
             '/export/products', 'GET',
@@ -104,7 +104,7 @@ export default class ExportApi {
      * modified after given time will be returned.This parameter should be in
      * RFC-8601 format.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data
-     * of type {@link module:models/ProductListWsDTO}
+     * of type {@link module:models/ProductList}
      */
     exportProducts(opts) {
         return this.exportProductsWithHttpInfo(opts)

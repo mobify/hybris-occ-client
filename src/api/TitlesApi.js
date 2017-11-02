@@ -16,7 +16,7 @@
  */
 
 import ApiClient from '../ApiClient'
-import TitleListWsDTO from '../models/TitleListWsDTO'
+import TitleList from '../models/TitleList'
 
 /**
 * Titles service.
@@ -42,7 +42,7 @@ export default class TitlesApi {
      * @param {String} opts.fields Response configuration (list of fields, which
      * should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an
-     * object containing data of type {@link module:models/TitleListWsDTO} and
+     * object containing data of type {@link module:models/TitleList} and
      * HTTP response
      */
     titlesWithHttpInfo(opts) {
@@ -62,7 +62,7 @@ export default class TitlesApi {
         const authNames = ['auth']
         const contentTypes = ['application/json']
         const accepts = ['application/json']
-        const returnType = TitleListWsDTO
+        const returnType = TitleList
 
         return this.apiClient.callApi(
             '/titles', 'GET',
@@ -77,7 +77,7 @@ export default class TitlesApi {
      * @param {String} opts.fields Response configuration (list of fields, which
      * should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data
-     * of type {@link module:models/TitleListWsDTO}
+     * of type {@link module:models/TitleList}
      */
     getTitles(opts) {
         return this.titlesWithHttpInfo(opts)

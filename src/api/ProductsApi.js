@@ -16,15 +16,15 @@
  */
 
 import ApiClient from '../ApiClient'
-import ProductExpressUpdateElementListWsDTO from '../models/ProductExpressUpdateElementListWsDTO'
-import ProductReferenceListWsDTO from '../models/ProductReferenceListWsDTO'
-import ProductSearchPageWsDTO from '../models/ProductSearchPageWsDTO'
+import ProductExpressUpdateElementList from '../models/ProductExpressUpdateElementList'
+import ProductReferenceList from '../models/ProductReferenceList'
+import ProductSearchPage from '../models/ProductSearchPage'
 import ProductOCC1 from '../models/ProductOCC1'
-import ReviewListWsDTO from '../models/ReviewListWsDTO'
+import ReviewList from '../models/ReviewList'
 import ReviewOCC from '../models/ReviewOCC'
-import StockWsDTO from '../models/StockWsDTO'
-import StoreFinderStockSearchPageWsDTO from '../models/StoreFinderStockSearchPageWsDTO'
-import SuggestionListWsDTO from '../models/SuggestionListWsDTO'
+import Stock from '../models/Stock'
+import StoreFinderStockSearchPage from '../models/StoreFinderStockSearchPage'
+import SuggestionList from '../models/SuggestionList'
 
 /**
 * Products service.
@@ -119,7 +119,7 @@ export default class ProductsApi {
      * format.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an
      * object containing data of type
-     * {@link module:models/ProductExpressUpdateElementListWsDTO} and HTTP
+     * {@link module:models/ProductExpressUpdateElementList} and HTTP
      * response
      */
     productsExpressupdateWithHttpInfo(opts) {
@@ -141,7 +141,7 @@ export default class ProductsApi {
         const authNames = ['auth']
         const contentTypes = ['application/json']
         const accepts = ['application/json']
-        const returnType = ProductExpressUpdateElementListWsDTO
+        const returnType = ProductExpressUpdateElementList
 
         return this.apiClient.callApi(
             '/products/expressupdate', 'GET',
@@ -164,7 +164,7 @@ export default class ProductsApi {
      * are retrieved from the queue. This parameter should be in RFC-8601
      * format.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data
-     * of type {@link module:models/ProductExpressUpdateElementListWsDTO}
+     * of type {@link module:models/ProductExpressUpdateElementList}
      */
     getProductExpressupdate(opts) {
         return this.productsExpressupdateWithHttpInfo(opts)
@@ -186,7 +186,7 @@ export default class ProductsApi {
      * should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an
      * object containing data of type
-     * {@link module:models/ProductReferenceListWsDTO} and HTTP response
+     * {@link module:models/ProductReferenceList} and HTTP response
      */
     productsReferencesByProductCodeWithHttpInfo(productCode, opts) {
         opts = opts || {}
@@ -213,7 +213,7 @@ export default class ProductsApi {
         const authNames = ['auth']
         const contentTypes = ['application/json']
         const accepts = ['application/json']
-        const returnType = ProductReferenceListWsDTO
+        const returnType = ProductReferenceList
 
         return this.apiClient.callApi(
             '/products/{productCode}/references', 'GET',
@@ -234,7 +234,7 @@ export default class ProductsApi {
      * @param {String} opts.fields Response configuration (list of fields, which
      * should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data
-     * of type {@link module:models/ProductReferenceListWsDTO}
+     * of type {@link module:models/ProductReferenceList}
      */
     getProductReferences(productCode, opts) {
         return this.productsReferencesByProductCodeWithHttpInfo(productCode, opts)
@@ -248,7 +248,7 @@ export default class ProductsApi {
      * code.
      * @param {String} productCode Product identifier
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an
-     * object containing data of type {@link module:models/ReviewListWsDTO} and
+     * object containing data of type {@link module:models/ReviewList} and
      * HTTP response
      */
     productsReviewsByProductCodeWithHttpInfo(productCode) {
@@ -272,7 +272,7 @@ export default class ProductsApi {
         const authNames = ['auth']
         const contentTypes = ['application/json']
         const accepts = ['application/json']
-        const returnType = ReviewListWsDTO
+        const returnType = ReviewList
 
         return this.apiClient.callApi(
             '/products/{productCode}/reviews', 'GET',
@@ -286,7 +286,7 @@ export default class ProductsApi {
      * code.
      * @param {String} productCode Product identifier
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data
-     * of type {@link module:models/ReviewListWsDTO}
+     * of type {@link module:models/ReviewList}
      */
     getProductReviews(productCode) {
         return this.productsReviewsByProductCodeWithHttpInfo(productCode)
@@ -380,7 +380,7 @@ export default class ProductsApi {
      * should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an
      * object containing data of type
-     * {@link module:models/ProductSearchPageWsDTO} and HTTP response
+     * {@link module:models/ProductSearchPage} and HTTP response
      */
     productsSearch1WithHttpInfo(opts) {
         opts = opts || {}
@@ -403,7 +403,7 @@ export default class ProductsApi {
         const authNames = ['auth']
         const contentTypes = ['application/json']
         const accepts = ['application/json']
-        const returnType = ProductSearchPageWsDTO
+        const returnType = ProductSearchPage
 
         return this.apiClient.callApi(
             '/products/search', 'GET',
@@ -431,7 +431,7 @@ export default class ProductsApi {
      * @param {String} opts.fields Response configuration (list of fields, which
      * should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data
-     * of type {@link module:models/ProductSearchPageWsDTO}
+     * of type {@link module:models/ProductSearchPage}
      */
     getProductSearch(opts) {
         return this.productsSearch1WithHttpInfo(opts)
@@ -459,7 +459,7 @@ export default class ProductsApi {
      * @param {String} opts.longitude Latitude location parameter.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an
      * object containing data of type
-     * {@link module:models/StoreFinderStockSearchPageWsDTO} and HTTP response
+     * {@link module:models/StoreFinderStockSearchPage} and HTTP response
      */
     productsStockByProductCode1WithHttpInfo(productCode, opts) {
         opts = opts || {}
@@ -489,7 +489,7 @@ export default class ProductsApi {
         const authNames = ['auth']
         const contentTypes = ['application/json']
         const accepts = ['application/json']
-        const returnType = StoreFinderStockSearchPageWsDTO
+        const returnType = StoreFinderStockSearchPage
 
         return this.apiClient.callApi(
             '/products/{productCode}/stock', 'GET',
@@ -516,7 +516,7 @@ export default class ProductsApi {
      * should be returned in response)
      * @param {String} opts.longitude Latitude location parameter.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data
-     * of type {@link module:models/StoreFinderStockSearchPageWsDTO}
+     * of type {@link module:models/StoreFinderStockSearchPage}
      */
     getProductStock(productCode, opts) {
         return this.productsStockByProductCode1WithHttpInfo(productCode, opts)
@@ -534,7 +534,7 @@ export default class ProductsApi {
      * @param {String} opts.fields Response configuration (list of fields, which
      * should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an
-     * object containing data of type {@link module:models/StockWsDTO} and HTTP
+     * object containing data of type {@link module:models/Stock} and HTTP
      * response
      */
     productsStockByProductCodeAndStoreNameWithHttpInfo(productCode, storeName, opts) {
@@ -566,7 +566,7 @@ export default class ProductsApi {
         const authNames = ['auth']
         const contentTypes = ['application/json']
         const accepts = ['application/json']
-        const returnType = StockWsDTO
+        const returnType = Stock
 
         return this.apiClient.callApi(
             '/products/{productCode}/stock/{storeName}', 'GET',
@@ -584,7 +584,7 @@ export default class ProductsApi {
      * @param {String} opts.fields Response configuration (list of fields, which
      * should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data
-     * of type {@link module:models/StockWsDTO}
+     * of type {@link module:models/Stock}
      */
     getProductsStockByProductCodeAndStoreName(productCode, storeName, opts) {
         return this.productsStockByProductCodeAndStoreNameWithHttpInfo(productCode, storeName, opts)
@@ -603,7 +603,7 @@ export default class ProductsApi {
      * @param {String} opts.fields Response configuration (list of fields, which
      * should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an
-     * object containing data of type {@link module:models/SuggestionListWsDTO}
+     * object containing data of type {@link module:models/SuggestionList}
      * and HTTP response
      */
     productsSuggestionsWithHttpInfo(max, term, opts) {
@@ -635,7 +635,7 @@ export default class ProductsApi {
         const authNames = ['auth']
         const contentTypes = ['application/json']
         const accepts = ['application/json']
-        const returnType = SuggestionListWsDTO
+        const returnType = SuggestionList
 
         return this.apiClient.callApi(
             '/products/suggestions', 'GET',
@@ -654,7 +654,7 @@ export default class ProductsApi {
      * @param {String} opts.fields Response configuration (list of fields, which
      * should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data
-     * of type {@link module:models/SuggestionListWsDTO}
+     * of type {@link module:models/SuggestionList}
      */
     getProductSuggestions(max, term, opts) {
         return this.productsSuggestionsWithHttpInfo(max, term, opts)

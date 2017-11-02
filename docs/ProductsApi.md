@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 
 <a name="getProductExpressupdate"></a>
 # **getProductExpressupdate**
-> ProductExpressUpdateElementListWsDTO getProductExpressupdate(opts)
+> ProductExpressUpdateElementList getProductExpressupdate(opts)
 
 getProductExpressupdate
 
@@ -109,7 +109,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProductExpressUpdateElementListWsDTO**](ProductExpressUpdateElementListWsDTO.md)
+[**ProductExpressUpdateElementList**](ProductExpressUpdateElementList.md)
 
 ### Authorization
 
@@ -122,7 +122,7 @@ Name | Type | Description  | Notes
 
 <a name="getProductReferences"></a>
 # **getProductReferences**
-> ProductReferenceListWsDTO getProductReferences(productCode, opts)
+> ProductReferenceList getProductReferences(productCode, opts)
 
 getProductReferences
 
@@ -165,7 +165,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProductReferenceListWsDTO**](ProductReferenceListWsDTO.md)
+[**ProductReferenceList**](ProductReferenceList.md)
 
 ### Authorization
 
@@ -178,7 +178,7 @@ Name | Type | Description  | Notes
 
 <a name="getProductReviews"></a>
 # **getProductReviews**
-> ReviewListWsDTO getProductReviews(productCode)
+> ReviewList getProductReviews(productCode)
 
 getProductReviews
 
@@ -213,7 +213,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ReviewListWsDTO**](ReviewListWsDTO.md)
+[**ReviewList**](ReviewList.md)
 
 ### Authorization
 
@@ -281,7 +281,7 @@ Name | Type | Description  | Notes
 
 <a name="getProductSearch"></a>
 # **getProductSearch**
-> ProductSearchPageWsDTO getProductSearch(opts)
+> ProductSearchPage getProductSearch(opts)
 
 ProductsSearch
 
@@ -325,7 +325,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProductSearchPageWsDTO**](ProductSearchPageWsDTO.md)
+[**ProductSearchPage**](ProductSearchPage.md)
 
 ### Authorization
 
@@ -338,7 +338,7 @@ Name | Type | Description  | Notes
 
 <a name="getProductStock"></a>
 # **getProductStock**
-> StoreFinderStockSearchPageWsDTO getProductStock(productCode, opts)
+> StoreFinderStockSearchPage getProductStock(productCode, opts)
 
 ProductsStockByProductCode
 
@@ -387,7 +387,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**StoreFinderStockSearchPageWsDTO**](StoreFinderStockSearchPageWsDTO.md)
+[**StoreFinderStockSearchPage**](StoreFinderStockSearchPage.md)
 
 ### Authorization
 
@@ -400,7 +400,7 @@ Name | Type | Description  | Notes
 
 <a name="getProductsStockByProductCodeAndStoreName"></a>
 # **getProductsStockByProductCodeAndStoreName**
-> StockWsDTO getProductsStockByProductCodeAndStoreName(productCode, storeName, opts)
+> Stock getProductsStockByProductCodeAndStoreName(productCode, storeName, opts)
 
 getProductsStockByProductCodeAndStoreName
 
@@ -442,7 +442,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**StockWsDTO**](StockWsDTO.md)
+[**Stock**](Stock.md)
 
 ### Authorization
 
@@ -455,7 +455,7 @@ Name | Type | Description  | Notes
 
 <a name="getProductSuggestions"></a>
 # **getProductSuggestions**
-> SuggestionListWsDTO getProductSuggestions(max, term, opts)
+> SuggestionList getProductSuggestions(max, term, opts)
 
 getProductSuggestions
 
@@ -497,7 +497,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SuggestionListWsDTO**](SuggestionListWsDTO.md)
+[**SuggestionList**](SuggestionList.md)
 
 ### Authorization
 

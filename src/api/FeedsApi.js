@@ -16,7 +16,7 @@
  */
 
 import ApiClient from '../ApiClient'
-import OrderStatusUpdateElementListWsDTO from '../models/OrderStatusUpdateElementListWsDTO'
+import OrderStatusUpdateElementList from '../models/OrderStatusUpdateElementList'
 
 /**
 * Feeds service.
@@ -47,7 +47,7 @@ export default class FeedsApi {
      * are retrieved. This parameter should be in RFC-8601 format.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an
      * object containing data of type
-     * {@link module:models/OrderStatusUpdateElementListWsDTO} and HTTP response
+     * {@link module:models/OrderStatusUpdateElementList} and HTTP response
      */
     feedsOrdersStatusfeedWithHttpInfo(opts) {
         opts = opts || {}
@@ -67,7 +67,7 @@ export default class FeedsApi {
         const authNames = ['auth']
         const contentTypes = ['application/json']
         const accepts = ['application/json']
-        const returnType = OrderStatusUpdateElementListWsDTO
+        const returnType = OrderStatusUpdateElementList
 
         return this.apiClient.callApi(
             '/feeds/orders/statusfeed', 'GET',
@@ -86,7 +86,7 @@ export default class FeedsApi {
      * @param {String} opts.timestamp Only items newer than the given parameter
      * are retrieved. This parameter should be in RFC-8601 format.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data
-     * of type {@link module:models/OrderStatusUpdateElementListWsDTO}
+     * of type {@link module:models/OrderStatusUpdateElementList}
      */
     getOrdersStatusfeed(opts) {
         return this.feedsOrdersStatusfeedWithHttpInfo(opts)

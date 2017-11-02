@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="getTitles"></a>
 # **getTitles**
-> TitleListWsDTO getTitles(opts)
+> TitleList getTitles(opts)
 
 getTitles
 
@@ -45,7 +45,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**TitleListWsDTO**](TitleListWsDTO.md)
+[**TitleList**](TitleList.md)
 
 ### Authorization
 

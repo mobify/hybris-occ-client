@@ -16,115 +16,115 @@
  */
 
 import ApiClient from './ApiClient'
-import AddressListWsDTO from './models/AddressListWsDTO'
+import AddressList from './models/AddressList'
 import AddressOCC from './models/AddressOCC'
-import AddressWsDTO from './models/AddressWsDTO'
-import BaseOptionWsDTO from './models/BaseOptionWsDTO'
+import Address from './models/Address'
+import BaseOption from './models/BaseOption'
 import BillingAddress from './models/BillingAddress'
-import BreadcrumbWsDTO from './models/BreadcrumbWsDTO'
-import CardTypeListWsDTO from './models/CardTypeListWsDTO'
-import CardTypeWsDTO from './models/CardTypeWsDTO'
-import CartListWsDTO from './models/CartListWsDTO'
-import CartWsDTO from './models/CartWsDTO'
-import CatalogListWsDTO from './models/CatalogListWsDTO'
-import CatalogVersionWsDTO from './models/CatalogVersionWsDTO'
-import CatalogWsDTO from './models/CatalogWsDTO'
-import CategoryHierarchyWsDTO from './models/CategoryHierarchyWsDTO'
-import CategoryWsDTO from './models/CategoryWsDTO'
-import ClassificationWsDTO from './models/ClassificationWsDTO'
-import ConsignmentEntryWsDTO from './models/ConsignmentEntryWsDTO'
-import ConsignmentWsDTO from './models/ConsignmentWsDTO'
-import CountryListWsDTO from './models/CountryListWsDTO'
+import Breadcrumb from './models/Breadcrumb'
+import CardTypeList from './models/CardTypeList'
+import CardType from './models/CardType'
+import CartList from './models/CartList'
+import Cart from './models/Cart'
+import CatalogList from './models/CatalogList'
+import CatalogVersion from './models/CatalogVersion'
+import Catalog from './models/Catalog'
+import CategoryHierarchy from './models/CategoryHierarchy'
+import Category from './models/Category'
+import Classification from './models/Classification'
+import ConsignmentEntry from './models/ConsignmentEntry'
+import Consignment from './models/Consignment'
+import CountryList from './models/CountryList'
 import Country from './models/Country'
 import CountryOCC from './models/CountryOCC'
-import CurrencyListWsDTO from './models/CurrencyListWsDTO'
+import CurrencyList from './models/CurrencyList'
 import Currency from './models/Currency'
 import CurrencyOCC from './models/CurrencyOCC'
-import DeliveryModeListWsDTO from './models/DeliveryModeListWsDTO'
-import DeliveryModeWsDTO from './models/DeliveryModeWsDTO'
-import DeliveryOrderEntryGroupWsDTO from './models/DeliveryOrderEntryGroupWsDTO'
+import DeliveryModeList from './models/DeliveryModeList'
+import DeliveryMode from './models/DeliveryMode'
+import DeliveryOrderEntryGroup from './models/DeliveryOrderEntryGroup'
 import DeliveryPointOfService from './models/DeliveryPointOfService'
-import FacetValueWsDTO from './models/FacetValueWsDTO'
-import FacetWsDTO from './models/FacetWsDTO'
-import FeatureUnitWsDTO from './models/FeatureUnitWsDTO'
-import FeatureValueWsDTO from './models/FeatureValueWsDTO'
-import FeatureWsDTO from './models/FeatureWsDTO'
-import FutureStockWsDTO from './models/FutureStockWsDTO'
-import GeoPointWsDTO from './models/GeoPointWsDTO'
-import ImageWsDTO from './models/ImageWsDTO'
-import LanguageListWsDTO from './models/LanguageListWsDTO'
+import FacetValue from './models/FacetValue'
+import Facet from './models/Facet'
+import FeatureUnit from './models/FeatureUnit'
+import FeatureValue from './models/FeatureValue'
+import Feature from './models/Feature'
+import FutureStock from './models/FutureStock'
+import GeoPoint from './models/GeoPoint'
+import Image from './models/Image'
+import LanguageList from './models/LanguageList'
 import Language from './models/Language'
 import LanguageOCC from './models/LanguageOCC'
-import MemberListWsDTO from './models/MemberListWsDTO'
+import MemberList from './models/MemberList'
 import Member from './models/Member'
-import OpeningScheduleWsDTO from './models/OpeningScheduleWsDTO'
-import OrderEntryListWsDTO from './models/OrderEntryListWsDTO'
+import OpeningSchedule from './models/OpeningSchedule'
+import OrderEntryList from './models/OrderEntryList'
 import OrderEntryOCC from './models/OrderEntryOCC'
-import OrderEntryWsDTO from './models/OrderEntryWsDTO'
-import OrderHistoryListWsDTO from './models/OrderHistoryListWsDTO'
-import OrderHistoryWsDTO from './models/OrderHistoryWsDTO'
-import OrderStatusUpdateElementListWsDTO from './models/OrderStatusUpdateElementListWsDTO'
-import OrderStatusUpdateElementWsDTO from './models/OrderStatusUpdateElementWsDTO'
-import OrderWsDTO from './models/OrderWsDTO'
-import PaginationWsDTO from './models/PaginationWsDTO'
-import PaymentDetailsListWsDTO from './models/PaymentDetailsListWsDTO'
+import OrderEntry from './models/OrderEntry'
+import OrderHistoryList from './models/OrderHistoryList'
+import OrderHistory from './models/OrderHistory'
+import OrderStatusUpdateElementList from './models/OrderStatusUpdateElementList'
+import OrderStatusUpdateElement from './models/OrderStatusUpdateElement'
+import Order from './models/Order'
+import Pagination from './models/Pagination'
+import PaymentDetailsList from './models/PaymentDetailsList'
 import PaymentDetailsOCC from './models/PaymentDetailsOCC'
-import PaymentDetailsWsDTO from './models/PaymentDetailsWsDTO'
-import PickupOrderEntryGroupWsDTO from './models/PickupOrderEntryGroupWsDTO'
-import PointOfServiceStockWsDTO from './models/PointOfServiceStockWsDTO'
-import PointOfServiceWsDTO from './models/PointOfServiceWsDTO'
-import PriceRangeWsDTO from './models/PriceRangeWsDTO'
-import PriceWsDTO from './models/PriceWsDTO'
-import PrincipalWsDTO from './models/PrincipalWsDTO'
-import ProductExpressUpdateElementListWsDTO from './models/ProductExpressUpdateElementListWsDTO'
-import ProductExpressUpdateElementWsDTO from './models/ProductExpressUpdateElementWsDTO'
-import ProductListWsDTO from './models/ProductListWsDTO'
+import PaymentDetails from './models/PaymentDetails'
+import PickupOrderEntryGroup from './models/PickupOrderEntryGroup'
+import PointOfServiceStock from './models/PointOfServiceStock'
+import PointOfService from './models/PointOfService'
+import PriceRange from './models/PriceRange'
+import Price from './models/Price'
+import Principal from './models/Principal'
+import ProductExpressUpdateElementList from './models/ProductExpressUpdateElementList'
+import ProductExpressUpdateElement from './models/ProductExpressUpdateElement'
+import ProductList from './models/ProductList'
 import Product from './models/Product'
-import ProductReferenceListWsDTO from './models/ProductReferenceListWsDTO'
+import ProductReferenceList from './models/ProductReferenceList'
 import ProductReferenceOCC from './models/ProductReferenceOCC'
-import ProductReferenceWsDTO from './models/ProductReferenceWsDTO'
-import ProductSearchPageWsDTO from './models/ProductSearchPageWsDTO'
+import ProductReference from './models/ProductReference'
+import ProductSearchPage from './models/ProductSearchPage'
 import ProductOCC from './models/ProductOCC'
 import ProductOCC1 from './models/ProductOCC1'
-import PromotionListWsDTO from './models/PromotionListWsDTO'
-import PromotionOrderEntryConsumedWsDTO from './models/PromotionOrderEntryConsumedWsDTO'
-import PromotionRestrictionWsDTO from './models/PromotionRestrictionWsDTO'
-import PromotionResultListWsDTO from './models/PromotionResultListWsDTO'
-import PromotionResultWsDTO from './models/PromotionResultWsDTO'
-import PromotionWsDTO from './models/PromotionWsDTO'
+import PromotionList from './models/PromotionList'
+import PromotionOrderEntryConsumed from './models/PromotionOrderEntryConsumed'
+import PromotionRestriction from './models/PromotionRestriction'
+import PromotionResultList from './models/PromotionResultList'
+import PromotionResult from './models/PromotionResult'
+import Promotion from './models/Promotion'
 import Region from './models/Region'
 import RegionOCC from './models/RegionOCC'
-import ReviewListWsDTO from './models/ReviewListWsDTO'
+import ReviewList from './models/ReviewList'
 import ReviewOCC from './models/ReviewOCC'
-import ReviewWsDTO from './models/ReviewWsDTO'
-import SaveCartResultWsDTO from './models/SaveCartResultWsDTO'
-import SearchQueryWsDTO from './models/SearchQueryWsDTO'
-import SearchStateWsDTO from './models/SearchStateWsDTO'
-import SortWsDTO from './models/SortWsDTO'
-import SpecialOpeningDayWsDTO from './models/SpecialOpeningDayWsDTO'
-import SpellingSuggestionWsDTO from './models/SpellingSuggestionWsDTO'
-import StockWsDTO from './models/StockWsDTO'
-import StoreFinderSearchPageWsDTO from './models/StoreFinderSearchPageWsDTO'
-import StoreFinderStockSearchPageWsDTO from './models/StoreFinderStockSearchPageWsDTO'
-import SuggestionListWsDTO from './models/SuggestionListWsDTO'
-import SuggestionWsDTO from './models/SuggestionWsDTO'
-import TimeWsDTO from './models/TimeWsDTO'
-import TitleListWsDTO from './models/TitleListWsDTO'
-import TitleWsDTO from './models/TitleWsDTO'
-import UserGroupListWsDTO from './models/UserGroupListWsDTO'
+import Review from './models/Review'
+import SaveCartResult from './models/SaveCartResult'
+import SearchQuery from './models/SearchQuery'
+import SearchState from './models/SearchState'
+import Sort from './models/Sort'
+import SpecialOpeningDay from './models/SpecialOpeningDay'
+import SpellingSuggestion from './models/SpellingSuggestion'
+import Stock from './models/Stock'
+import StoreFinderSearchPage from './models/StoreFinderSearchPage'
+import StoreFinderStockSearchPage from './models/StoreFinderStockSearchPage'
+import SuggestionList from './models/SuggestionList'
+import Suggestion from './models/Suggestion'
+import Time from './models/Time'
+import TitleList from './models/TitleList'
+import Title from './models/Title'
+import UserGroupList from './models/UserGroupList'
 import UserGroupOCC from './models/UserGroupOCC'
-import UserGroupWsDTO from './models/UserGroupWsDTO'
-import UserSignUpWsDTO from './models/UserSignUpWsDTO'
+import UserGroup from './models/UserGroup'
+import UserSignUp from './models/UserSignUp'
 import UserOCC from './models/UserOCC'
-import UserWsDTO from './models/UserWsDTO'
-import VariantCategoryWsDTO from './models/VariantCategoryWsDTO'
-import VariantMatrixElementWsDTO from './models/VariantMatrixElementWsDTO'
-import VariantOptionQualifierWsDTO from './models/VariantOptionQualifierWsDTO'
-import VariantOptionWsDTO from './models/VariantOptionWsDTO'
-import VariantValueCategoryWsDTO from './models/VariantValueCategoryWsDTO'
-import VoucherListWsDTO from './models/VoucherListWsDTO'
-import VoucherWsDTO from './models/VoucherWsDTO'
-import WeekdayOpeningDayWsDTO from './models/WeekdayOpeningDayWsDTO'
+import User from './models/User'
+import VariantCategory from './models/VariantCategory'
+import VariantMatrixElement from './models/VariantMatrixElement'
+import VariantOptionQualifier from './models/VariantOptionQualifier'
+import VariantOption from './models/VariantOption'
+import VariantValueCategory from './models/VariantValueCategory'
+import VoucherList from './models/VoucherList'
+import Voucher from './models/Voucher'
+import WeekdayOpeningDay from './models/WeekdayOpeningDay'
 import CardtypesApi from './api/CardtypesApi'
 import CatalogsApi from './api/CatalogsApi'
 import CurrenciesApi from './api/CurrenciesApi'
@@ -181,10 +181,10 @@ export {
     ApiClient,
 
     /**
-     * The AddressListWsDTO model constructor.
-     * @property {module:models/AddressListWsDTO}
+     * The AddressList model constructor.
+     * @property {module:models/AddressList}
      */
-    AddressListWsDTO,
+    AddressList,
 
     /**
      * The AddressOCC model constructor.
@@ -193,16 +193,16 @@ export {
     AddressOCC,
 
     /**
-     * The AddressWsDTO model constructor.
-     * @property {module:models/AddressWsDTO}
+     * The Address model constructor.
+     * @property {module:models/Address}
      */
-    AddressWsDTO,
+    Address,
 
     /**
-     * The BaseOptionWsDTO model constructor.
-     * @property {module:models/BaseOptionWsDTO}
+     * The BaseOption model constructor.
+     * @property {module:models/BaseOption}
      */
-    BaseOptionWsDTO,
+    BaseOption,
 
     /**
      * The BillingAddress model constructor.
@@ -211,88 +211,88 @@ export {
     BillingAddress,
 
     /**
-     * The BreadcrumbWsDTO model constructor.
-     * @property {module:models/BreadcrumbWsDTO}
+     * The Breadcrumb model constructor.
+     * @property {module:models/Breadcrumb}
      */
-    BreadcrumbWsDTO,
+    Breadcrumb,
 
     /**
-     * The CardTypeListWsDTO model constructor.
-     * @property {module:models/CardTypeListWsDTO}
+     * The CardTypeList model constructor.
+     * @property {module:models/CardTypeList}
      */
-    CardTypeListWsDTO,
+    CardTypeList,
 
     /**
-     * The CardTypeWsDTO model constructor.
-     * @property {module:models/CardTypeWsDTO}
+     * The CardType model constructor.
+     * @property {module:models/CardType}
      */
-    CardTypeWsDTO,
+    CardType,
 
     /**
-     * The CartListWsDTO model constructor.
-     * @property {module:models/CartListWsDTO}
+     * The CartList model constructor.
+     * @property {module:models/CartList}
      */
-    CartListWsDTO,
+    CartList,
 
     /**
-     * The CartWsDTO model constructor.
-     * @property {module:models/CartWsDTO}
+     * The Cart model constructor.
+     * @property {module:models/Cart}
      */
-    CartWsDTO,
+    Cart,
 
     /**
-     * The CatalogListWsDTO model constructor.
-     * @property {module:models/CatalogListWsDTO}
+     * The CatalogList model constructor.
+     * @property {module:models/CatalogList}
      */
-    CatalogListWsDTO,
+    CatalogList,
 
     /**
-     * The CatalogVersionWsDTO model constructor.
-     * @property {module:models/CatalogVersionWsDTO}
+     * The CatalogVersion model constructor.
+     * @property {module:models/CatalogVersion}
      */
-    CatalogVersionWsDTO,
+    CatalogVersion,
 
     /**
-     * The CatalogWsDTO model constructor.
-     * @property {module:models/CatalogWsDTO}
+     * The Catalog model constructor.
+     * @property {module:models/Catalog}
      */
-    CatalogWsDTO,
+    Catalog,
 
     /**
-     * The CategoryHierarchyWsDTO model constructor.
-     * @property {module:models/CategoryHierarchyWsDTO}
+     * The CategoryHierarchy model constructor.
+     * @property {module:models/CategoryHierarchy}
      */
-    CategoryHierarchyWsDTO,
+    CategoryHierarchy,
 
     /**
-     * The CategoryWsDTO model constructor.
-     * @property {module:models/CategoryWsDTO}
+     * The Category model constructor.
+     * @property {module:models/Category}
      */
-    CategoryWsDTO,
+    Category,
 
     /**
-     * The ClassificationWsDTO model constructor.
-     * @property {module:models/ClassificationWsDTO}
+     * The Classification model constructor.
+     * @property {module:models/Classification}
      */
-    ClassificationWsDTO,
+    Classification,
 
     /**
-     * The ConsignmentEntryWsDTO model constructor.
-     * @property {module:models/ConsignmentEntryWsDTO}
+     * The ConsignmentEntry model constructor.
+     * @property {module:models/ConsignmentEntry}
      */
-    ConsignmentEntryWsDTO,
+    ConsignmentEntry,
 
     /**
-     * The ConsignmentWsDTO model constructor.
-     * @property {module:models/ConsignmentWsDTO}
+     * The Consignment model constructor.
+     * @property {module:models/Consignment}
      */
-    ConsignmentWsDTO,
+    Consignment,
 
     /**
-     * The CountryListWsDTO model constructor.
-     * @property {module:models/CountryListWsDTO}
+     * The CountryList model constructor.
+     * @property {module:models/CountryList}
      */
-    CountryListWsDTO,
+    CountryList,
 
     /**
      * The Country model constructor.
@@ -307,10 +307,10 @@ export {
     CountryOCC,
 
     /**
-     * The CurrencyListWsDTO model constructor.
-     * @property {module:models/CurrencyListWsDTO}
+     * The CurrencyList model constructor.
+     * @property {module:models/CurrencyList}
      */
-    CurrencyListWsDTO,
+    CurrencyList,
 
     /**
      * The Currency model constructor.
@@ -325,22 +325,22 @@ export {
     CurrencyOCC,
 
     /**
-     * The DeliveryModeListWsDTO model constructor.
-     * @property {module:models/DeliveryModeListWsDTO}
+     * The DeliveryModeList model constructor.
+     * @property {module:models/DeliveryModeList}
      */
-    DeliveryModeListWsDTO,
+    DeliveryModeList,
 
     /**
-     * The DeliveryModeWsDTO model constructor.
-     * @property {module:models/DeliveryModeWsDTO}
+     * The DeliveryMode model constructor.
+     * @property {module:models/DeliveryMode}
      */
-    DeliveryModeWsDTO,
+    DeliveryMode,
 
     /**
-     * The DeliveryOrderEntryGroupWsDTO model constructor.
-     * @property {module:models/DeliveryOrderEntryGroupWsDTO}
+     * The DeliveryOrderEntryGroup model constructor.
+     * @property {module:models/DeliveryOrderEntryGroup}
      */
-    DeliveryOrderEntryGroupWsDTO,
+    DeliveryOrderEntryGroup,
 
     /**
      * The DeliveryPointOfService model constructor.
@@ -349,58 +349,58 @@ export {
     DeliveryPointOfService,
 
     /**
-     * The FacetValueWsDTO model constructor.
-     * @property {module:models/FacetValueWsDTO}
+     * The FacetValue model constructor.
+     * @property {module:models/FacetValue}
      */
-    FacetValueWsDTO,
+    FacetValue,
 
     /**
-     * The FacetWsDTO model constructor.
-     * @property {module:models/FacetWsDTO}
+     * The Facet model constructor.
+     * @property {module:models/Facet}
      */
-    FacetWsDTO,
+    Facet,
 
     /**
-     * The FeatureUnitWsDTO model constructor.
-     * @property {module:models/FeatureUnitWsDTO}
+     * The FeatureUnit model constructor.
+     * @property {module:models/FeatureUnit}
      */
-    FeatureUnitWsDTO,
+    FeatureUnit,
 
     /**
-     * The FeatureValueWsDTO model constructor.
-     * @property {module:models/FeatureValueWsDTO}
+     * The FeatureValue model constructor.
+     * @property {module:models/FeatureValue}
      */
-    FeatureValueWsDTO,
+    FeatureValue,
 
     /**
-     * The FeatureWsDTO model constructor.
-     * @property {module:models/FeatureWsDTO}
+     * The Feature model constructor.
+     * @property {module:models/Feature}
      */
-    FeatureWsDTO,
+    Feature,
 
     /**
-     * The FutureStockWsDTO model constructor.
-     * @property {module:models/FutureStockWsDTO}
+     * The FutureStock model constructor.
+     * @property {module:models/FutureStock}
      */
-    FutureStockWsDTO,
+    FutureStock,
 
     /**
-     * The GeoPointWsDTO model constructor.
-     * @property {module:models/GeoPointWsDTO}
+     * The GeoPoint model constructor.
+     * @property {module:models/GeoPoint}
      */
-    GeoPointWsDTO,
+    GeoPoint,
 
     /**
-     * The ImageWsDTO model constructor.
-     * @property {module:models/ImageWsDTO}
+     * The Image model constructor.
+     * @property {module:models/Image}
      */
-    ImageWsDTO,
+    Image,
 
     /**
-     * The LanguageListWsDTO model constructor.
-     * @property {module:models/LanguageListWsDTO}
+     * The LanguageList model constructor.
+     * @property {module:models/LanguageList}
      */
-    LanguageListWsDTO,
+    LanguageList,
 
     /**
      * The Language model constructor.
@@ -415,10 +415,10 @@ export {
     LanguageOCC,
 
     /**
-     * The MemberListWsDTO model constructor.
-     * @property {module:models/MemberListWsDTO}
+     * The MemberList model constructor.
+     * @property {module:models/MemberList}
      */
-    MemberListWsDTO,
+    MemberList,
 
     /**
      * The Member model constructor.
@@ -427,16 +427,16 @@ export {
     Member,
 
     /**
-     * The OpeningScheduleWsDTO model constructor.
-     * @property {module:models/OpeningScheduleWsDTO}
+     * The OpeningSchedule model constructor.
+     * @property {module:models/OpeningSchedule}
      */
-    OpeningScheduleWsDTO,
+    OpeningSchedule,
 
     /**
-     * The OrderEntryListWsDTO model constructor.
-     * @property {module:models/OrderEntryListWsDTO}
+     * The OrderEntryList model constructor.
+     * @property {module:models/OrderEntryList}
      */
-    OrderEntryListWsDTO,
+    OrderEntryList,
 
     /**
      * The OrderEntryOCC model constructor.
@@ -445,52 +445,52 @@ export {
     OrderEntryOCC,
 
     /**
-     * The OrderEntryWsDTO model constructor.
-     * @property {module:models/OrderEntryWsDTO}
+     * The OrderEntry model constructor.
+     * @property {module:models/OrderEntry}
      */
-    OrderEntryWsDTO,
+    OrderEntry,
 
     /**
-     * The OrderHistoryListWsDTO model constructor.
-     * @property {module:models/OrderHistoryListWsDTO}
+     * The OrderHistoryList model constructor.
+     * @property {module:models/OrderHistoryList}
      */
-    OrderHistoryListWsDTO,
+    OrderHistoryList,
 
     /**
-     * The OrderHistoryWsDTO model constructor.
-     * @property {module:models/OrderHistoryWsDTO}
+     * The OrderHistory model constructor.
+     * @property {module:models/OrderHistory}
      */
-    OrderHistoryWsDTO,
+    OrderHistory,
 
     /**
-     * The OrderStatusUpdateElementListWsDTO model constructor.
-     * @property {module:models/OrderStatusUpdateElementListWsDTO}
+     * The OrderStatusUpdateElementList model constructor.
+     * @property {module:models/OrderStatusUpdateElementList}
      */
-    OrderStatusUpdateElementListWsDTO,
+    OrderStatusUpdateElementList,
 
     /**
-     * The OrderStatusUpdateElementWsDTO model constructor.
-     * @property {module:models/OrderStatusUpdateElementWsDTO}
+     * The OrderStatusUpdateElement model constructor.
+     * @property {module:models/OrderStatusUpdateElement}
      */
-    OrderStatusUpdateElementWsDTO,
+    OrderStatusUpdateElement,
 
     /**
-     * The OrderWsDTO model constructor.
-     * @property {module:models/OrderWsDTO}
+     * The Order model constructor.
+     * @property {module:models/Order}
      */
-    OrderWsDTO,
+    Order,
 
     /**
-     * The PaginationWsDTO model constructor.
-     * @property {module:models/PaginationWsDTO}
+     * The Pagination model constructor.
+     * @property {module:models/Pagination}
      */
-    PaginationWsDTO,
+    Pagination,
 
     /**
-     * The PaymentDetailsListWsDTO model constructor.
-     * @property {module:models/PaymentDetailsListWsDTO}
+     * The PaymentDetailsList model constructor.
+     * @property {module:models/PaymentDetailsList}
      */
-    PaymentDetailsListWsDTO,
+    PaymentDetailsList,
 
     /**
      * The PaymentDetailsOCC model constructor.
@@ -499,64 +499,64 @@ export {
     PaymentDetailsOCC,
 
     /**
-     * The PaymentDetailsWsDTO model constructor.
-     * @property {module:models/PaymentDetailsWsDTO}
+     * The PaymentDetails model constructor.
+     * @property {module:models/PaymentDetails}
      */
-    PaymentDetailsWsDTO,
+    PaymentDetails,
 
     /**
-     * The PickupOrderEntryGroupWsDTO model constructor.
-     * @property {module:models/PickupOrderEntryGroupWsDTO}
+     * The PickupOrderEntryGroup model constructor.
+     * @property {module:models/PickupOrderEntryGroup}
      */
-    PickupOrderEntryGroupWsDTO,
+    PickupOrderEntryGroup,
 
     /**
-     * The PointOfServiceStockWsDTO model constructor.
-     * @property {module:models/PointOfServiceStockWsDTO}
+     * The PointOfServiceStock model constructor.
+     * @property {module:models/PointOfServiceStock}
      */
-    PointOfServiceStockWsDTO,
+    PointOfServiceStock,
 
     /**
-     * The PointOfServiceWsDTO model constructor.
-     * @property {module:models/PointOfServiceWsDTO}
+     * The PointOfService model constructor.
+     * @property {module:models/PointOfService}
      */
-    PointOfServiceWsDTO,
+    PointOfService,
 
     /**
-     * The PriceRangeWsDTO model constructor.
-     * @property {module:models/PriceRangeWsDTO}
+     * The PriceRange model constructor.
+     * @property {module:models/PriceRange}
      */
-    PriceRangeWsDTO,
+    PriceRange,
 
     /**
-     * The PriceWsDTO model constructor.
-     * @property {module:models/PriceWsDTO}
+     * The Price model constructor.
+     * @property {module:models/Price}
      */
-    PriceWsDTO,
+    Price,
 
     /**
-     * The PrincipalWsDTO model constructor.
-     * @property {module:models/PrincipalWsDTO}
+     * The Principal model constructor.
+     * @property {module:models/Principal}
      */
-    PrincipalWsDTO,
+    Principal,
 
     /**
-     * The ProductExpressUpdateElementListWsDTO model constructor.
-     * @property {module:models/ProductExpressUpdateElementListWsDTO}
+     * The ProductExpressUpdateElementList model constructor.
+     * @property {module:models/ProductExpressUpdateElementList}
      */
-    ProductExpressUpdateElementListWsDTO,
+    ProductExpressUpdateElementList,
 
     /**
-     * The ProductExpressUpdateElementWsDTO model constructor.
-     * @property {module:models/ProductExpressUpdateElementWsDTO}
+     * The ProductExpressUpdateElement model constructor.
+     * @property {module:models/ProductExpressUpdateElement}
      */
-    ProductExpressUpdateElementWsDTO,
+    ProductExpressUpdateElement,
 
     /**
-     * The ProductListWsDTO model constructor.
-     * @property {module:models/ProductListWsDTO}
+     * The ProductList model constructor.
+     * @property {module:models/ProductList}
      */
-    ProductListWsDTO,
+    ProductList,
 
     /**
      * The Product model constructor.
@@ -565,10 +565,10 @@ export {
     Product,
 
     /**
-     * The ProductReferenceListWsDTO model constructor.
-     * @property {module:models/ProductReferenceListWsDTO}
+     * The ProductReferenceList model constructor.
+     * @property {module:models/ProductReferenceList}
      */
-    ProductReferenceListWsDTO,
+    ProductReferenceList,
 
     /**
      * The ProductReferenceOCC model constructor.
@@ -577,16 +577,16 @@ export {
     ProductReferenceOCC,
 
     /**
-     * The ProductReferenceWsDTO model constructor.
-     * @property {module:models/ProductReferenceWsDTO}
+     * The ProductReference model constructor.
+     * @property {module:models/ProductReference}
      */
-    ProductReferenceWsDTO,
+    ProductReference,
 
     /**
-     * The ProductSearchPageWsDTO model constructor.
-     * @property {module:models/ProductSearchPageWsDTO}
+     * The ProductSearchPage model constructor.
+     * @property {module:models/ProductSearchPage}
      */
-    ProductSearchPageWsDTO,
+    ProductSearchPage,
 
     /**
      * The ProductOCC model constructor.
@@ -601,40 +601,40 @@ export {
     ProductOCC1,
 
     /**
-     * The PromotionListWsDTO model constructor.
-     * @property {module:models/PromotionListWsDTO}
+     * The PromotionList model constructor.
+     * @property {module:models/PromotionList}
      */
-    PromotionListWsDTO,
+    PromotionList,
 
     /**
-     * The PromotionOrderEntryConsumedWsDTO model constructor.
-     * @property {module:models/PromotionOrderEntryConsumedWsDTO}
+     * The PromotionOrderEntryConsumed model constructor.
+     * @property {module:models/PromotionOrderEntryConsumed}
      */
-    PromotionOrderEntryConsumedWsDTO,
+    PromotionOrderEntryConsumed,
 
     /**
-     * The PromotionRestrictionWsDTO model constructor.
-     * @property {module:models/PromotionRestrictionWsDTO}
+     * The PromotionRestriction model constructor.
+     * @property {module:models/PromotionRestriction}
      */
-    PromotionRestrictionWsDTO,
+    PromotionRestriction,
 
     /**
-     * The PromotionResultListWsDTO model constructor.
-     * @property {module:models/PromotionResultListWsDTO}
+     * The PromotionResultList model constructor.
+     * @property {module:models/PromotionResultList}
      */
-    PromotionResultListWsDTO,
+    PromotionResultList,
 
     /**
-     * The PromotionResultWsDTO model constructor.
-     * @property {module:models/PromotionResultWsDTO}
+     * The PromotionResult model constructor.
+     * @property {module:models/PromotionResult}
      */
-    PromotionResultWsDTO,
+    PromotionResult,
 
     /**
-     * The PromotionWsDTO model constructor.
-     * @property {module:models/PromotionWsDTO}
+     * The Promotion model constructor.
+     * @property {module:models/Promotion}
      */
-    PromotionWsDTO,
+    Promotion,
 
     /**
      * The Region model constructor.
@@ -649,10 +649,10 @@ export {
     RegionOCC,
 
     /**
-     * The ReviewListWsDTO model constructor.
-     * @property {module:models/ReviewListWsDTO}
+     * The ReviewList model constructor.
+     * @property {module:models/ReviewList}
      */
-    ReviewListWsDTO,
+    ReviewList,
 
     /**
      * The ReviewOCC model constructor.
@@ -661,100 +661,100 @@ export {
     ReviewOCC,
 
     /**
-     * The ReviewWsDTO model constructor.
-     * @property {module:models/ReviewWsDTO}
+     * The Review model constructor.
+     * @property {module:models/Review}
      */
-    ReviewWsDTO,
+    Review,
 
     /**
-     * The SaveCartResultWsDTO model constructor.
-     * @property {module:models/SaveCartResultWsDTO}
+     * The SaveCartResult model constructor.
+     * @property {module:models/SaveCartResult}
      */
-    SaveCartResultWsDTO,
+    SaveCartResult,
 
     /**
-     * The SearchQueryWsDTO model constructor.
-     * @property {module:models/SearchQueryWsDTO}
+     * The SearchQuery model constructor.
+     * @property {module:models/SearchQuery}
      */
-    SearchQueryWsDTO,
+    SearchQuery,
 
     /**
-     * The SearchStateWsDTO model constructor.
-     * @property {module:models/SearchStateWsDTO}
+     * The SearchState model constructor.
+     * @property {module:models/SearchState}
      */
-    SearchStateWsDTO,
+    SearchState,
 
     /**
-     * The SortWsDTO model constructor.
-     * @property {module:models/SortWsDTO}
+     * The Sort model constructor.
+     * @property {module:models/Sort}
      */
-    SortWsDTO,
+    Sort,
 
     /**
-     * The SpecialOpeningDayWsDTO model constructor.
-     * @property {module:models/SpecialOpeningDayWsDTO}
+     * The SpecialOpeningDay model constructor.
+     * @property {module:models/SpecialOpeningDay}
      */
-    SpecialOpeningDayWsDTO,
+    SpecialOpeningDay,
 
     /**
-     * The SpellingSuggestionWsDTO model constructor.
-     * @property {module:models/SpellingSuggestionWsDTO}
+     * The SpellingSuggestion model constructor.
+     * @property {module:models/SpellingSuggestion}
      */
-    SpellingSuggestionWsDTO,
+    SpellingSuggestion,
 
     /**
-     * The StockWsDTO model constructor.
-     * @property {module:models/StockWsDTO}
+     * The Stock model constructor.
+     * @property {module:models/Stock}
      */
-    StockWsDTO,
+    Stock,
 
     /**
-     * The StoreFinderSearchPageWsDTO model constructor.
-     * @property {module:models/StoreFinderSearchPageWsDTO}
+     * The StoreFinderSearchPage model constructor.
+     * @property {module:models/StoreFinderSearchPage}
      */
-    StoreFinderSearchPageWsDTO,
+    StoreFinderSearchPage,
 
     /**
-     * The StoreFinderStockSearchPageWsDTO model constructor.
-     * @property {module:models/StoreFinderStockSearchPageWsDTO}
+     * The StoreFinderStockSearchPage model constructor.
+     * @property {module:models/StoreFinderStockSearchPage}
      */
-    StoreFinderStockSearchPageWsDTO,
+    StoreFinderStockSearchPage,
 
     /**
-     * The SuggestionListWsDTO model constructor.
-     * @property {module:models/SuggestionListWsDTO}
+     * The SuggestionList model constructor.
+     * @property {module:models/SuggestionList}
      */
-    SuggestionListWsDTO,
+    SuggestionList,
 
     /**
-     * The SuggestionWsDTO model constructor.
-     * @property {module:models/SuggestionWsDTO}
+     * The Suggestion model constructor.
+     * @property {module:models/Suggestion}
      */
-    SuggestionWsDTO,
+    Suggestion,
 
     /**
-     * The TimeWsDTO model constructor.
-     * @property {module:models/TimeWsDTO}
+     * The Time model constructor.
+     * @property {module:models/Time}
      */
-    TimeWsDTO,
+    Time,
 
     /**
-     * The TitleListWsDTO model constructor.
-     * @property {module:models/TitleListWsDTO}
+     * The TitleList model constructor.
+     * @property {module:models/TitleList}
      */
-    TitleListWsDTO,
+    TitleList,
 
     /**
-     * The TitleWsDTO model constructor.
-     * @property {module:models/TitleWsDTO}
+     * The Title model constructor.
+     * @property {module:models/Title}
      */
-    TitleWsDTO,
+    Title,
 
     /**
-     * The UserGroupListWsDTO model constructor.
-     * @property {module:models/UserGroupListWsDTO}
+     * The UserGroupList model constructor.
+     * @property {module:models/UserGroupList}
      */
-    UserGroupListWsDTO,
+    UserGroupList,
 
     /**
      * The UserGroupOCC model constructor.
@@ -763,16 +763,16 @@ export {
     UserGroupOCC,
 
     /**
-     * The UserGroupWsDTO model constructor.
-     * @property {module:models/UserGroupWsDTO}
+     * The UserGroup model constructor.
+     * @property {module:models/UserGroup}
      */
-    UserGroupWsDTO,
+    UserGroup,
 
     /**
-     * The UserSignUpWsDTO model constructor.
-     * @property {module:models/UserSignUpWsDTO}
+     * The UserSignUp model constructor.
+     * @property {module:models/UserSignUp}
      */
-    UserSignUpWsDTO,
+    UserSignUp,
 
     /**
      * The UserOCC model constructor.
@@ -781,58 +781,58 @@ export {
     UserOCC,
 
     /**
-     * The UserWsDTO model constructor.
-     * @property {module:models/UserWsDTO}
+     * The User model constructor.
+     * @property {module:models/User}
      */
-    UserWsDTO,
+    User,
 
     /**
-     * The VariantCategoryWsDTO model constructor.
-     * @property {module:models/VariantCategoryWsDTO}
+     * The VariantCategory model constructor.
+     * @property {module:models/VariantCategory}
      */
-    VariantCategoryWsDTO,
+    VariantCategory,
 
     /**
-     * The VariantMatrixElementWsDTO model constructor.
-     * @property {module:models/VariantMatrixElementWsDTO}
+     * The VariantMatrixElement model constructor.
+     * @property {module:models/VariantMatrixElement}
      */
-    VariantMatrixElementWsDTO,
+    VariantMatrixElement,
 
     /**
-     * The VariantOptionQualifierWsDTO model constructor.
-     * @property {module:models/VariantOptionQualifierWsDTO}
+     * The VariantOptionQualifier model constructor.
+     * @property {module:models/VariantOptionQualifier}
      */
-    VariantOptionQualifierWsDTO,
+    VariantOptionQualifier,
 
     /**
-     * The VariantOptionWsDTO model constructor.
-     * @property {module:models/VariantOptionWsDTO}
+     * The VariantOption model constructor.
+     * @property {module:models/VariantOption}
      */
-    VariantOptionWsDTO,
+    VariantOption,
 
     /**
-     * The VariantValueCategoryWsDTO model constructor.
-     * @property {module:models/VariantValueCategoryWsDTO}
+     * The VariantValueCategory model constructor.
+     * @property {module:models/VariantValueCategory}
      */
-    VariantValueCategoryWsDTO,
+    VariantValueCategory,
 
     /**
-     * The VoucherListWsDTO model constructor.
-     * @property {module:models/VoucherListWsDTO}
+     * The VoucherList model constructor.
+     * @property {module:models/VoucherList}
      */
-    VoucherListWsDTO,
+    VoucherList,
 
     /**
-     * The VoucherWsDTO model constructor.
-     * @property {module:models/VoucherWsDTO}
+     * The Voucher model constructor.
+     * @property {module:models/Voucher}
      */
-    VoucherWsDTO,
+    Voucher,
 
     /**
-     * The WeekdayOpeningDayWsDTO model constructor.
-     * @property {module:models/WeekdayOpeningDayWsDTO}
+     * The WeekdayOpeningDay model constructor.
+     * @property {module:models/WeekdayOpeningDay}
      */
-    WeekdayOpeningDayWsDTO,
+    WeekdayOpeningDay,
 
     /**
     * The CardtypesApi service constructor.

@@ -1,4 +1,4 @@
-# Occ.AddressWsDTO296
+# Occ.AddressOCC
 
 ## Properties
 Name | Type | Description | Notes

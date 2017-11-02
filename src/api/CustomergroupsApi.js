@@ -16,7 +16,7 @@
  */
 
 import ApiClient from '../ApiClient'
-import UserGroupListWsDTO from '../models/UserGroupListWsDTO'
+import UserGroupList from '../models/UserGroupList'
 import UserGroupOCC from '../models/UserGroupOCC'
 
 /**
@@ -47,7 +47,7 @@ export default class CustomergroupsApi {
      * @param {String} opts.fields Response configuration (list of fields, which
      * should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an
-     * object containing data of type {@link module:models/UserGroupListWsDTO}
+     * object containing data of type {@link module:models/UserGroupList}
      * and HTTP response
      */
     customergroupsWithHttpInfo(opts) {
@@ -69,7 +69,7 @@ export default class CustomergroupsApi {
         const authNames = ['auth']
         const contentTypes = ['application/json']
         const accepts = ['application/json']
-        const returnType = UserGroupListWsDTO
+        const returnType = UserGroupList
 
         return this.apiClient.callApi(
             '/customergroups', 'GET',
@@ -88,7 +88,7 @@ export default class CustomergroupsApi {
      * @param {String} opts.fields Response configuration (list of fields, which
      * should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data
-     * of type {@link module:models/UserGroupListWsDTO}
+     * of type {@link module:models/UserGroupList}
      */
     getCustomerGroups(opts) {
         return this.customergroupsWithHttpInfo(opts)
@@ -100,7 +100,7 @@ export default class CustomergroupsApi {
     /**
      * Customergroups Creates a new customer group that is a direct subgroup of
      * a customergroup.  Security: Permitted only for customer managers
-     * @param {module:models/UserGroupWsDTO} body
+     * @param {module:models/UserGroup} body
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an
      * object containing HTTP response
      */
@@ -136,7 +136,7 @@ export default class CustomergroupsApi {
     /**
      * Customergroups Creates a new customer group that is a direct subgroup of
      * a customergroup.  Security: Permitted only for customer managers
-     * @param {module:models/UserGroupWsDTO} body
+     * @param {module:models/UserGroup} body
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     postCustomerGroup(body) {
@@ -211,7 +211,7 @@ export default class CustomergroupsApi {
      * existing members is overwritten with a new one.  Security: Permitted only
      * for customer managers
      * @param {String} groupId Group identifier
-     * @param {module:models/MemberListWsDTO} body
+     * @param {module:models/MemberList} body
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an
      * object containing HTTP response
      */
@@ -255,7 +255,7 @@ export default class CustomergroupsApi {
      * existing members is overwritten with a new one.  Security: Permitted only
      * for customer managers
      * @param {String} groupId Group identifier
-     * @param {module:models/MemberListWsDTO} body
+     * @param {module:models/MemberList} body
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     putCustomerGroupsMembers(groupId, body) {
@@ -269,7 +269,7 @@ export default class CustomergroupsApi {
      * patchCustomerGroupsMembers Assigns user(s) to a customer group.
      * Security: Permitted only for customer managers
      * @param {String} groupId Group identifier
-     * @param {module:models/MemberListWsDTO} body
+     * @param {module:models/MemberList} body
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an
      * object containing HTTP response
      */
@@ -312,7 +312,7 @@ export default class CustomergroupsApi {
      * patchCustomerGroupsMembers Assigns user(s) to a customer group.
      * Security: Permitted only for customer managers
      * @param {String} groupId Group identifier
-     * @param {module:models/MemberListWsDTO} body
+     * @param {module:models/MemberList} body
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     patchCustomerGroupsMembers(groupId, body) {

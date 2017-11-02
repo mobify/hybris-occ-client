@@ -3,6 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**members** | [**[PrincipalWsDTO]**](PrincipalWsDTO.md) |  | [optional] 
+**members** | [**[Principal]**](Principal.md) |  | [optional] 
 
 

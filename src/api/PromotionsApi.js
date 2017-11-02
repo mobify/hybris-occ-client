@@ -16,8 +16,8 @@
  */
 
 import ApiClient from '../ApiClient'
-import PromotionListWsDTO from '../models/PromotionListWsDTO'
-import PromotionWsDTO from '../models/PromotionWsDTO'
+import PromotionList from '../models/PromotionList'
+import Promotion from '../models/Promotion'
 
 /**
 * Promotions service.
@@ -55,7 +55,7 @@ export default class PromotionsApi {
      * @param {String} opts.fields Response configuration (list of fields, which
      * should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an
-     * object containing data of type {@link module:models/PromotionListWsDTO}
+     * object containing data of type {@link module:models/PromotionList}
      * and HTTP response
      */
     promotionsWithHttpInfo(opts) {
@@ -77,7 +77,7 @@ export default class PromotionsApi {
         const authNames = ['auth']
         const contentTypes = ['application/json']
         const accepts = ['application/json']
-        const returnType = PromotionListWsDTO
+        const returnType = PromotionList
 
         return this.apiClient.callApi(
             '/promotions', 'GET',
@@ -104,7 +104,7 @@ export default class PromotionsApi {
      * @param {String} opts.fields Response configuration (list of fields, which
      * should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data
-     * of type {@link module:models/PromotionListWsDTO}
+     * of type {@link module:models/PromotionList}
      */
     getPromotions(opts) {
         return this.promotionsWithHttpInfo(opts)
@@ -124,7 +124,7 @@ export default class PromotionsApi {
      * @param {String} opts.fields Response configuration (list of fields, which
      * should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an
-     * object containing data of type {@link module:models/PromotionWsDTO} and
+     * object containing data of type {@link module:models/Promotion} and
      * HTTP response
      */
     promotionsByCodeWithHttpInfo(code, opts) {
@@ -150,7 +150,7 @@ export default class PromotionsApi {
         const authNames = ['auth']
         const contentTypes = ['application/json']
         const accepts = ['application/json']
-        const returnType = PromotionWsDTO
+        const returnType = Promotion
 
         return this.apiClient.callApi(
             '/promotions/{code}', 'GET',
@@ -170,7 +170,7 @@ export default class PromotionsApi {
      * @param {String} opts.fields Response configuration (list of fields, which
      * should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data
-     * of type {@link module:models/PromotionWsDTO}
+     * of type {@link module:models/Promotion}
      */
     getPromotion(code, opts) {
         return this.promotionsByCodeWithHttpInfo(code, opts)

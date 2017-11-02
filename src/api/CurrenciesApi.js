@@ -16,7 +16,7 @@
  */
 
 import ApiClient from '../ApiClient'
-import CurrencyListWsDTO from '../models/CurrencyListWsDTO'
+import CurrencyList from '../models/CurrencyList'
 
 /**
 * Currencies service.
@@ -44,7 +44,7 @@ export default class CurrenciesApi {
      * @param {String} opts.fields Response configuration (list of fields, which
      * should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an
-     * object containing data of type {@link module:models/CurrencyListWsDTO}
+     * object containing data of type {@link module:models/CurrencyList}
      * and HTTP response
      */
     currenciesWithHttpInfo(opts) {
@@ -64,7 +64,7 @@ export default class CurrenciesApi {
         const authNames = ['auth']
         const contentTypes = ['application/json']
         const accepts = ['application/json']
-        const returnType = CurrencyListWsDTO
+        const returnType = CurrencyList
 
         return this.apiClient.callApi(
             '/currencies', 'GET',
@@ -81,7 +81,7 @@ export default class CurrenciesApi {
      * @param {String} opts.fields Response configuration (list of fields, which
      * should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data
-     * of type {@link module:models/CurrencyListWsDTO}
+     * of type {@link module:models/CurrencyList}
      */
     getCurrencies(opts) {
         return this.currenciesWithHttpInfo(opts)

@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="currencies"></a>
 # **currencies**
-> CurrencyListWsDTO currencies(opts)
+> CurrencyList currencies(opts)
 
 Currencies
 
@@ -45,7 +45,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CurrencyListWsDTO**](CurrencyListWsDTO.md)
+[**CurrencyList**](CurrencyList.md)
 
 ### Authorization
 

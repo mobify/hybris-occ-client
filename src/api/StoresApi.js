@@ -16,8 +16,8 @@
  */
 
 import ApiClient from '../ApiClient'
-import PointOfServiceWsDTO from '../models/PointOfServiceWsDTO'
-import StoreFinderSearchPageWsDTO from '../models/StoreFinderSearchPageWsDTO'
+import PointOfService from '../models/PointOfService'
+import StoreFinderSearchPage from '../models/StoreFinderSearchPage'
 
 /**
 * Stores service.
@@ -57,7 +57,7 @@ export default class StoresApi {
      * position of a point on the Earth&#39;s surface.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an
      * object containing data of type
-     * {@link module:models/StoreFinderSearchPageWsDTO} and HTTP response
+     * {@link module:models/StoreFinderSearchPage} and HTTP response
      */
     stores1WithHttpInfo(opts) {
         opts = opts || {}
@@ -84,7 +84,7 @@ export default class StoresApi {
         const authNames = ['auth']
         const contentTypes = ['application/json']
         const accepts = ['application/json']
-        const returnType = StoreFinderSearchPageWsDTO
+        const returnType = StoreFinderSearchPage
 
         return this.apiClient.callApi(
             '/stores', 'GET',
@@ -112,7 +112,7 @@ export default class StoresApi {
      * @param {String} opts.longitude Coordinate that specifies the east-west
      * position of a point on the Earth&#39;s surface.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data
-     * of type {@link module:models/StoreFinderSearchPageWsDTO}
+     * of type {@link module:models/StoreFinderSearchPage}
      */
     getStores(opts) {
         return this.stores1WithHttpInfo(opts)
@@ -128,7 +128,7 @@ export default class StoresApi {
      * @param {String} opts.fields Response configuration (list of fields, which
      * should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an
-     * object containing data of type {@link module:models/PointOfServiceWsDTO}
+     * object containing data of type {@link module:models/PointOfService}
      * and HTTP response
      */
     storesByStoreIdWithHttpInfo(storeId, opts) {
@@ -154,7 +154,7 @@ export default class StoresApi {
         const authNames = ['auth']
         const contentTypes = ['application/json']
         const accepts = ['application/json']
-        const returnType = PointOfServiceWsDTO
+        const returnType = PointOfService
 
         return this.apiClient.callApi(
             '/stores/{storeId}', 'GET',
@@ -170,7 +170,7 @@ export default class StoresApi {
      * @param {String} opts.fields Response configuration (list of fields, which
      * should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data
-     * of type {@link module:models/PointOfServiceWsDTO}
+     * of type {@link module:models/PointOfService}
      */
     getStore(storeId, opts) {
         return this.storesByStoreIdWithHttpInfo(storeId, opts)
