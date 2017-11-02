@@ -32,7 +32,7 @@
     let instance
 
     beforeEach(() => {
-        instance = new Occ.ProductWsDTO174()
+        instance = new Occ.ProductOCC()
     })
 
     const getProperty = function(object, getter, property) {
@@ -45,178 +45,178 @@
         if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
     }
 
-    describe('ProductWsDTO174', () => {
-        it('should create an instance of ProductWsDTO174', () => {
-            // uncomment below and update the code to test ProductWsDTO174
-            // var instane = new Occ.ProductWsDTO174();
-            // expect(instance).to.be.a(Occ.ProductWsDTO174);
+    describe('ProductOCC', () => {
+        it('should create an instance of ProductOCC', () => {
+            // uncomment below and update the code to test ProductOCC
+            // var instane = new Occ.ProductOCC();
+            // expect(instance).to.be.a(Occ.ProductOCC);
         })
 
         it('should have the property code (base name: "code")', () => {
             // uncomment below and update the code to test the property code
-            // var instane = new Occ.ProductWsDTO174();
+            // var instane = new Occ.ProductOCC();
             // expect(instance).to.be();
         })
 
         it('should have the property name (base name: "name")', () => {
             // uncomment below and update the code to test the property name
-            // var instane = new Occ.ProductWsDTO174();
+            // var instane = new Occ.ProductOCC();
             // expect(instance).to.be();
         })
 
         it('should have the property url (base name: "url")', () => {
             // uncomment below and update the code to test the property url
-            // var instane = new Occ.ProductWsDTO174();
+            // var instane = new Occ.ProductOCC();
             // expect(instance).to.be();
         })
 
         it('should have the property description (base name: "description")', () => {
             // uncomment below and update the code to test the property description
-            // var instane = new Occ.ProductWsDTO174();
+            // var instane = new Occ.ProductOCC();
             // expect(instance).to.be();
         })
 
         it('should have the property purchasable (base name: "purchasable")', () => {
             // uncomment below and update the code to test the property purchasable
-            // var instane = new Occ.ProductWsDTO174();
+            // var instane = new Occ.ProductOCC();
             // expect(instance).to.be();
         })
 
         it('should have the property stock (base name: "stock")', () => {
             // uncomment below and update the code to test the property stock
-            // var instane = new Occ.ProductWsDTO174();
+            // var instane = new Occ.ProductOCC();
             // expect(instance).to.be();
         })
 
         it('should have the property futureStocks (base name: "futureStocks")', () => {
             // uncomment below and update the code to test the property futureStocks
-            // var instane = new Occ.ProductWsDTO174();
+            // var instane = new Occ.ProductOCC();
             // expect(instance).to.be();
         })
 
         it('should have the property availableForPickup (base name: "availableForPickup")', () => {
             // uncomment below and update the code to test the property availableForPickup
-            // var instane = new Occ.ProductWsDTO174();
+            // var instane = new Occ.ProductOCC();
             // expect(instance).to.be();
         })
 
         it('should have the property averageRating (base name: "averageRating")', () => {
             // uncomment below and update the code to test the property averageRating
-            // var instane = new Occ.ProductWsDTO174();
+            // var instane = new Occ.ProductOCC();
             // expect(instance).to.be();
         })
 
         it('should have the property numberOfReviews (base name: "numberOfReviews")', () => {
             // uncomment below and update the code to test the property numberOfReviews
-            // var instane = new Occ.ProductWsDTO174();
+            // var instane = new Occ.ProductOCC();
             // expect(instance).to.be();
         })
 
         it('should have the property summary (base name: "summary")', () => {
             // uncomment below and update the code to test the property summary
-            // var instane = new Occ.ProductWsDTO174();
+            // var instane = new Occ.ProductOCC();
             // expect(instance).to.be();
         })
 
         it('should have the property manufacturer (base name: "manufacturer")', () => {
             // uncomment below and update the code to test the property manufacturer
-            // var instane = new Occ.ProductWsDTO174();
+            // var instane = new Occ.ProductOCC();
             // expect(instance).to.be();
         })
 
         it('should have the property variantType (base name: "variantType")', () => {
             // uncomment below and update the code to test the property variantType
-            // var instane = new Occ.ProductWsDTO174();
+            // var instane = new Occ.ProductOCC();
             // expect(instance).to.be();
         })
 
         it('should have the property price (base name: "price")', () => {
             // uncomment below and update the code to test the property price
-            // var instane = new Occ.ProductWsDTO174();
+            // var instane = new Occ.ProductOCC();
             // expect(instance).to.be();
         })
 
         it('should have the property baseProduct (base name: "baseProduct")', () => {
             // uncomment below and update the code to test the property baseProduct
-            // var instane = new Occ.ProductWsDTO174();
+            // var instane = new Occ.ProductOCC();
             // expect(instance).to.be();
         })
 
         it('should have the property images (base name: "images")', () => {
             // uncomment below and update the code to test the property images
-            // var instane = new Occ.ProductWsDTO174();
+            // var instane = new Occ.ProductOCC();
             // expect(instance).to.be();
         })
 
         it('should have the property categories (base name: "categories")', () => {
             // uncomment below and update the code to test the property categories
-            // var instane = new Occ.ProductWsDTO174();
+            // var instane = new Occ.ProductOCC();
             // expect(instance).to.be();
         })
 
         it('should have the property reviews (base name: "reviews")', () => {
             // uncomment below and update the code to test the property reviews
-            // var instane = new Occ.ProductWsDTO174();
+            // var instane = new Occ.ProductOCC();
             // expect(instance).to.be();
         })
 
         it('should have the property classifications (base name: "classifications")', () => {
             // uncomment below and update the code to test the property classifications
-            // var instane = new Occ.ProductWsDTO174();
+            // var instane = new Occ.ProductOCC();
             // expect(instance).to.be();
         })
 
         it('should have the property potentialPromotions (base name: "potentialPromotions")', () => {
             // uncomment below and update the code to test the property potentialPromotions
-            // var instane = new Occ.ProductWsDTO174();
+            // var instane = new Occ.ProductOCC();
             // expect(instance).to.be();
         })
 
         it('should have the property variantOptions (base name: "variantOptions")', () => {
             // uncomment below and update the code to test the property variantOptions
-            // var instane = new Occ.ProductWsDTO174();
+            // var instane = new Occ.ProductOCC();
             // expect(instance).to.be();
         })
 
         it('should have the property baseOptions (base name: "baseOptions")', () => {
             // uncomment below and update the code to test the property baseOptions
-            // var instane = new Occ.ProductWsDTO174();
+            // var instane = new Occ.ProductOCC();
             // expect(instance).to.be();
         })
 
         it('should have the property volumePricesFlag (base name: "volumePricesFlag")', () => {
             // uncomment below and update the code to test the property volumePricesFlag
-            // var instane = new Occ.ProductWsDTO174();
+            // var instane = new Occ.ProductOCC();
             // expect(instance).to.be();
         })
 
         it('should have the property volumePrices (base name: "volumePrices")', () => {
             // uncomment below and update the code to test the property volumePrices
-            // var instane = new Occ.ProductWsDTO174();
+            // var instane = new Occ.ProductOCC();
             // expect(instance).to.be();
         })
 
         it('should have the property productReferences (base name: "productReferences")', () => {
             // uncomment below and update the code to test the property productReferences
-            // var instane = new Occ.ProductWsDTO174();
+            // var instane = new Occ.ProductOCC();
             // expect(instance).to.be();
         })
 
         it('should have the property variantMatrix (base name: "variantMatrix")', () => {
             // uncomment below and update the code to test the property variantMatrix
-            // var instane = new Occ.ProductWsDTO174();
+            // var instane = new Occ.ProductOCC();
             // expect(instance).to.be();
         })
 
         it('should have the property priceRange (base name: "priceRange")', () => {
             // uncomment below and update the code to test the property priceRange
-            // var instane = new Occ.ProductWsDTO174();
+            // var instane = new Occ.ProductOCC();
             // expect(instance).to.be();
         })
 
         it('should have the property multidimensional (base name: "multidimensional")', () => {
             // uncomment below and update the code to test the property multidimensional
-            // var instane = new Occ.ProductWsDTO174();
+            // var instane = new Occ.ProductOCC();
             // expect(instance).to.be();
         })
 

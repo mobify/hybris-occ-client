@@ -84,7 +84,7 @@ import ProductReferenceListWsDTO from './models/ProductReferenceListWsDTO'
 import ProductReferenceOCC from './models/ProductReferenceOCC'
 import ProductReferenceWsDTO from './models/ProductReferenceWsDTO'
 import ProductSearchPageWsDTO from './models/ProductSearchPageWsDTO'
-import ProductWsDTO174 from './models/ProductWsDTO174'
+import ProductOCC from './models/ProductOCC'
 import ProductWsDTO from './models/ProductWsDTO'
 import PromotionListWsDTO from './models/PromotionListWsDTO'
 import PromotionOrderEntryConsumedWsDTO from './models/PromotionOrderEntryConsumedWsDTO'
@@ -589,10 +589,10 @@ export {
     ProductSearchPageWsDTO,
 
     /**
-     * The ProductWsDTO174 model constructor.
-     * @property {module:models/ProductWsDTO174}
+     * The ProductOCC model constructor.
+     * @property {module:models/ProductOCC}
      */
-    ProductWsDTO174,
+    ProductOCC,
 
     /**
      * The ProductWsDTO model constructor.
