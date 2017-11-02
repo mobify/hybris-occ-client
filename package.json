@@ -5,6 +5,8 @@
   "license": "SEE LICENSE IN LICENSE",
   "main": "src/index.js",
   "scripts": {
+    "copyright:lint": "copyright 'src/**/*.js' 'bin/**/*.js' 'test/**/*.js'",
+    "copyright:fix": "copyright --fix --update 'src/*.js' 'src/**/*.js' 'test/*.js' 'test/**/*.js'",
     "test": "BABEL_ENV=test mocha --compilers js:babel-core/register $(find test -name '*Api.spec.js')",
     "lint:js": "eslint '**/*.js'",
     "lint:fix": "npm run lint:js -- --fix",

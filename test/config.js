@@ -1,3 +1,7 @@
+/* * *  *  * *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  * */
+/* Copyright (c) 2017 Mobify Research & Development Inc. All rights reserved. */
+/* * *  *  * *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  * */
+
 import * as OCC from '../src/index'
 
 const testWrapper = (occ) => {
