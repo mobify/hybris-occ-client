@@ -1,4 +1,4 @@
-# hybris-api-js-client
+# hybris-occ-client
 
 Hybris OCC API JavaScript Client library.
 
