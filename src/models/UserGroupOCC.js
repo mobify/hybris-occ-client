@@ -19,14 +19,14 @@ import ApiClient from '../ApiClient'
 import PrincipalWsDTO from './PrincipalWsDTO'
 
 /**
-* The UserGroupWsDTO17 model module.
-* @module models/UserGroupWsDTO17
+* The UserGroupOCC model module.
+* @module models/UserGroupOCC
 * @version v2
 */
-export default class UserGroupWsDTO17 {
+export default class UserGroupOCC {
     /**
-    * Constructs a new <code>UserGroupWsDTO17</code>.
-    * @alias module:models/UserGroupWsDTO17
+    * Constructs a new <code>UserGroupOCC</code>.
+    * @alias module:models/UserGroupOCC
     * @class
     */
 
@@ -39,19 +39,19 @@ export default class UserGroupWsDTO17 {
     }
 
     /**
-    * Constructs a <code>UserGroupWsDTO17</code> from a plain JavaScript object,
+    * Constructs a <code>UserGroupOCC</code> from a plain JavaScript object,
     * optionally creating a new instance. Copies all relevant properties from
     * <code>data</code> to <code>obj</code> if supplied or a new instance if
     * not.
     * @param {Object} data The plain JavaScript object bearing properties of
     * interest.
-    * @param {module:models/UserGroupWsDTO17} obj Optional instance to populate.
-    * @return {module:models/UserGroupWsDTO17} The populated
-    * <code>UserGroupWsDTO17</code> instance.
+    * @param {module:models/UserGroupOCC} obj Optional instance to populate.
+    * @return {module:models/UserGroupOCC} The populated
+    * <code>UserGroupOCC</code> instance.
     */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new UserGroupWsDTO17()
+            obj = obj || new UserGroupOCC()
 
             if (data.hasOwnProperty('members')) {
                 obj.members = ApiClient.convertToType(data.members, [PrincipalWsDTO])
@@ -59,7 +59,5 @@ export default class UserGroupWsDTO17 {
         }
         return obj
     }
-
-
 
 }

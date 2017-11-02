@@ -32,7 +32,7 @@
     let instance
 
     beforeEach(() => {
-        instance = new Occ.UserGroupWsDTO17()
+        instance = new Occ.UserGroupOCC()
     })
 
     const getProperty = function(object, getter, property) {
@@ -45,16 +45,16 @@
         if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
     }
 
-    describe('UserGroupWsDTO17', () => {
-        it('should create an instance of UserGroupWsDTO17', () => {
-            // uncomment below and update the code to test UserGroupWsDTO17
-            // var instane = new Occ.UserGroupWsDTO17();
-            // expect(instance).to.be.a(Occ.UserGroupWsDTO17);
+    describe('UserGroupOCC', () => {
+        it('should create an instance of UserGroupOCC', () => {
+            // uncomment below and update the code to test UserGroupOCC
+            // var instane = new Occ.UserGroupOCC();
+            // expect(instance).to.be.a(Occ.UserGroupOCC);
         })
 
         it('should have the property members (base name: "members")', () => {
             // uncomment below and update the code to test the property members
-            // var instane = new Occ.UserGroupWsDTO17();
+            // var instane = new Occ.UserGroupOCC();
             // expect(instance).to.be();
         })
 

@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**userGroups** | [**[UserGroupWsDTO17]**](UserGroupWsDTO17.md) |  | [optional] 
+**userGroups** | [**[UserGroupOCC]**](UserGroupOCC.md) |  | [optional] 
 **totalNumber** | **Number** |  | [optional] 
 **pageSize** | **Number** |  | [optional] 
 **numberOfPages** | **Number** |  | [optional] 

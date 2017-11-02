@@ -115,7 +115,7 @@ null (empty response body)
 
 <a name="getCustomerGroup"></a>
 # **getCustomerGroup**
-> UserGroupWsDTO17 getCustomerGroup(groupId, opts)
+> UserGroupOCC getCustomerGroup(groupId, opts)
 
 getCustomerGroup
 
@@ -154,7 +154,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**UserGroupWsDTO17**](UserGroupWsDTO17.md)
+[**UserGroupOCC**](UserGroupOCC.md)
 
 ### Authorization
 

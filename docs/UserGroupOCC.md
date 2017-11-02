@@ -1,4 +1,4 @@
-# Occ.UserGroupWsDTO17
+# Occ.UserGroupOCC
 
 ## Properties
 Name | Type | Description | Notes

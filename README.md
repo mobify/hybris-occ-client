@@ -272,7 +272,7 @@ Class | Method | HTTP request | Description
  - [Occ.TitleListWsDTO](docs/TitleListWsDTO.md)
  - [Occ.TitleWsDTO](docs/TitleWsDTO.md)
  - [Occ.UserGroupListWsDTO](docs/UserGroupListWsDTO.md)
- - [Occ.UserGroupWsDTO17](docs/UserGroupWsDTO17.md)
+ - [Occ.UserGroupOCC](docs/UserGroupOCC.md)
  - [Occ.UserGroupWsDTO](docs/UserGroupWsDTO.md)
  - [Occ.UserSignUpWsDTO](docs/UserSignUpWsDTO.md)
  - [Occ.UserWsDTO286](docs/UserWsDTO286.md)

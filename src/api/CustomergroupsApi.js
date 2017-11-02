@@ -17,7 +17,7 @@
 
 import ApiClient from '../ApiClient'
 import UserGroupListWsDTO from '../models/UserGroupListWsDTO'
-import UserGroupWsDTO17 from '../models/UserGroupWsDTO17'
+import UserGroupOCC from '../models/UserGroupOCC'
 
 /**
 * Customergroups service.
@@ -154,7 +154,7 @@ export default class CustomergroupsApi {
      * @param {String} opts.fields Response configuration (list of fields, which
      * should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an
-     * object containing data of type {@link module:models/UserGroupWsDTO17} and
+     * object containing data of type {@link module:models/UserGroupOCC} and
      * HTTP response
      */
     customergroupsByGroupIdWithHttpInfo(groupId, opts) {
@@ -180,7 +180,7 @@ export default class CustomergroupsApi {
         const authNames = ['auth']
         const contentTypes = ['application/json']
         const accepts = ['application/json']
-        const returnType = UserGroupWsDTO17
+        const returnType = UserGroupOCC
 
         return this.apiClient.callApi(
             '/customergroups/{groupId}', 'GET',
@@ -197,7 +197,7 @@ export default class CustomergroupsApi {
      * @param {String} opts.fields Response configuration (list of fields, which
      * should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data
-     * of type {@link module:models/UserGroupWsDTO17}
+     * of type {@link module:models/UserGroupOCC}
      */
     getCustomerGroup(groupId, opts) {
         return this.customergroupsByGroupIdWithHttpInfo(groupId, opts)

@@ -112,7 +112,7 @@ import TimeWsDTO from './models/TimeWsDTO'
 import TitleListWsDTO from './models/TitleListWsDTO'
 import TitleWsDTO from './models/TitleWsDTO'
 import UserGroupListWsDTO from './models/UserGroupListWsDTO'
-import UserGroupWsDTO17 from './models/UserGroupWsDTO17'
+import UserGroupOCC from './models/UserGroupOCC'
 import UserGroupWsDTO from './models/UserGroupWsDTO'
 import UserSignUpWsDTO from './models/UserSignUpWsDTO'
 import UserWsDTO286 from './models/UserWsDTO286'
@@ -757,10 +757,10 @@ export {
     UserGroupListWsDTO,
 
     /**
-     * The UserGroupWsDTO17 model constructor.
-     * @property {module:models/UserGroupWsDTO17}
+     * The UserGroupOCC model constructor.
+     * @property {module:models/UserGroupOCC}
      */
-    UserGroupWsDTO17,
+    UserGroupOCC,
 
     /**
      * The UserGroupWsDTO model constructor.

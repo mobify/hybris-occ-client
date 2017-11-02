@@ -16,7 +16,7 @@
  */
 
 import ApiClient from '../ApiClient'
-import UserGroupWsDTO17 from './UserGroupWsDTO17'
+import UserGroupOCC from './UserGroupOCC'
 
 /**
 * The UserGroupListWsDTO model module.
@@ -33,7 +33,7 @@ export default class UserGroupListWsDTO {
     constructor() {
         /**
     *
-    * @member {Array.<module:models/UserGroupWsDTO17>} userGroups
+    * @member {Array.<module:models/UserGroupOCC>} userGroups
     */
         this.userGroups = undefined
         /**
@@ -76,7 +76,7 @@ export default class UserGroupListWsDTO {
             obj = obj || new UserGroupListWsDTO()
 
             if (data.hasOwnProperty('userGroups')) {
-                obj.userGroups = ApiClient.convertToType(data.userGroups, [UserGroupWsDTO17])
+                obj.userGroups = ApiClient.convertToType(data.userGroups, [UserGroupOCC])
             }
             if (data.hasOwnProperty('totalNumber')) {
                 obj.totalNumber = ApiClient.convertToType(data.totalNumber, 'Number')
