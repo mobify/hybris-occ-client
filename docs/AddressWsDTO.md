@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **line1** | **String** |  | [optional] 
 **line2** | **String** |  | [optional] 
 **town** | **String** |  | [optional] 
-**region** | [**RegionWsDTO**](RegionWsDTO.md) |  | [optional] 
+**region** | [**RegionOCC**](RegionOCC.md) |  | [optional] 
 **postalCode** | **String** |  | [optional] 
 **phone** | **String** |  | [optional] 
 **email** | **String** |  | [optional] 

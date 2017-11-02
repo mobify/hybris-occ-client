@@ -18,14 +18,14 @@
 import ApiClient from '../ApiClient'
 
 /**
-* The RegionWsDTO model module.
-* @module models/RegionWsDTO
+* The RegionOCC model module.
+* @module models/RegionOCC
 * @version v2
 */
-export default class RegionWsDTO {
+export default class RegionOCC {
     /**
-    * Constructs a new <code>RegionWsDTO</code>.
-    * @alias module:models/RegionWsDTO
+    * Constructs a new <code>RegionOCC</code>.
+    * @alias module:models/RegionOCC
     * @class
     */
 
@@ -53,19 +53,19 @@ export default class RegionWsDTO {
     }
 
     /**
-    * Constructs a <code>RegionWsDTO</code> from a plain JavaScript object,
+    * Constructs a <code>RegionOCC</code> from a plain JavaScript object,
     * optionally creating a new instance. Copies all relevant properties from
     * <code>data</code> to <code>obj</code> if supplied or a new instance if
     * not.
     * @param {Object} data The plain JavaScript object bearing properties of
     * interest.
-    * @param {module:models/RegionWsDTO} obj Optional instance to populate.
-    * @return {module:models/RegionWsDTO} The populated <code>RegionWsDTO</code>
+    * @param {module:models/RegionOCC} obj Optional instance to populate.
+    * @return {module:models/RegionOCC} The populated <code>RegionOCC</code>
     * instance.
     */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new RegionWsDTO()
+            obj = obj || new RegionOCC()
 
             if (data.hasOwnProperty('isocode')) {
                 obj.isocode = ApiClient.convertToType(data.isocode, 'String')
@@ -82,7 +82,5 @@ export default class RegionWsDTO {
         }
         return obj
     }
-
-
 
 }

@@ -1,4 +1,4 @@
-# Occ.RegionWsDTO
+# Occ.RegionOCC
 
 ## Properties
 Name | Type | Description | Notes

@@ -253,7 +253,7 @@ Class | Method | HTTP request | Description
  - [Occ.PromotionResultWsDTO](docs/PromotionResultWsDTO.md)
  - [Occ.PromotionWsDTO](docs/PromotionWsDTO.md)
  - [Occ.Region](docs/Region.md)
- - [Occ.RegionWsDTO](docs/RegionWsDTO.md)
+ - [Occ.RegionOCC](docs/RegionOCC.md)
  - [Occ.ReviewListWsDTO](docs/ReviewListWsDTO.md)
  - [Occ.ReviewWsDTO208](docs/ReviewWsDTO208.md)
  - [Occ.ReviewWsDTO](docs/ReviewWsDTO.md)

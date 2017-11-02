@@ -32,7 +32,7 @@
     let instance
 
     beforeEach(() => {
-        instance = new Occ.RegionWsDTO()
+        instance = new Occ.RegionOCC()
     })
 
     const getProperty = function(object, getter, property) {
@@ -45,34 +45,34 @@
         if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
     }
 
-    describe('RegionWsDTO', () => {
-        it('should create an instance of RegionWsDTO', () => {
-            // uncomment below and update the code to test RegionWsDTO
-            // var instane = new Occ.RegionWsDTO();
-            // expect(instance).to.be.a(Occ.RegionWsDTO);
+    describe('RegionOCC', () => {
+        it('should create an instance of RegionOCC', () => {
+            // uncomment below and update the code to test RegionOCC
+            // var instane = new Occ.RegionOCC();
+            // expect(instance).to.be.a(Occ.RegionOCC);
         })
 
         it('should have the property isocode (base name: "isocode")', () => {
             // uncomment below and update the code to test the property isocode
-            // var instane = new Occ.RegionWsDTO();
+            // var instane = new Occ.RegionOCC();
             // expect(instance).to.be();
         })
 
         it('should have the property isocodeShort (base name: "isocodeShort")', () => {
             // uncomment below and update the code to test the property isocodeShort
-            // var instane = new Occ.RegionWsDTO();
+            // var instane = new Occ.RegionOCC();
             // expect(instance).to.be();
         })
 
         it('should have the property countryIso (base name: "countryIso")', () => {
             // uncomment below and update the code to test the property countryIso
-            // var instane = new Occ.RegionWsDTO();
+            // var instane = new Occ.RegionOCC();
             // expect(instance).to.be();
         })
 
         it('should have the property name (base name: "name")', () => {
             // uncomment below and update the code to test the property name
-            // var instane = new Occ.RegionWsDTO();
+            // var instane = new Occ.RegionOCC();
             // expect(instance).to.be();
         })
 

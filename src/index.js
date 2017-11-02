@@ -93,7 +93,7 @@ import PromotionResultListWsDTO from './models/PromotionResultListWsDTO'
 import PromotionResultWsDTO from './models/PromotionResultWsDTO'
 import PromotionWsDTO from './models/PromotionWsDTO'
 import Region from './models/Region'
-import RegionWsDTO from './models/RegionWsDTO'
+import RegionOCC from './models/RegionOCC'
 import ReviewListWsDTO from './models/ReviewListWsDTO'
 import ReviewWsDTO208 from './models/ReviewWsDTO208'
 import ReviewWsDTO from './models/ReviewWsDTO'
@@ -643,10 +643,10 @@ export {
     Region,
 
     /**
-     * The RegionWsDTO model constructor.
-     * @property {module:models/RegionWsDTO}
+     * The RegionOCC model constructor.
+     * @property {module:models/RegionOCC}
      */
-    RegionWsDTO,
+    RegionOCC,
 
     /**
      * The ReviewListWsDTO model constructor.
