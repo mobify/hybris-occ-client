@@ -19,7 +19,7 @@ import ApiClient from '../ApiClient'
 import DeliveryModeWsDTO from './DeliveryModeWsDTO'
 import PointOfServiceWsDTO from './PointOfServiceWsDTO'
 import PriceWsDTO from './PriceWsDTO'
-import ProductWsDTO from './ProductWsDTO'
+import ProductOCC1 from './ProductOCC1'
 
 /**
 * The OrderEntryWsDTO model module.
@@ -53,7 +53,7 @@ export default class OrderEntryWsDTO {
     */
         this.totalPrice = undefined
         /**
-    * @member {module:models/ProductWsDTO} product
+    * @member {module:models/ProductOCC1} product
     */
         this.product = undefined
         /**
@@ -99,7 +99,7 @@ export default class OrderEntryWsDTO {
                 obj.totalPrice = PriceWsDTO.constructFromObject(data.totalPrice)
             }
             if (data.hasOwnProperty('product')) {
-                obj.product = ProductWsDTO.constructFromObject(data.product)
+                obj.product = ProductOCC1.constructFromObject(data.product)
             }
             if (data.hasOwnProperty('updateable')) {
                 obj.updateable = ApiClient.convertToType(data.updateable, 'Boolean')

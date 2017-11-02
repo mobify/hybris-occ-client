@@ -16,7 +16,7 @@
  */
 
 import ApiClient from '../ApiClient'
-import ProductWsDTO from './ProductWsDTO'
+import ProductOCC1 from './ProductOCC1'
 
 /**
 * The ProductReferenceWsDTO model module.
@@ -52,7 +52,7 @@ export default class ProductReferenceWsDTO {
     */
         this.quantity = undefined
         /**
-    * @member {module:models/ProductWsDTO} target
+    * @member {module:models/ProductOCC1} target
     */
         this.target = undefined
     }
@@ -86,7 +86,7 @@ export default class ProductReferenceWsDTO {
                 obj.quantity = ApiClient.convertToType(data.quantity, 'Number')
             }
             if (data.hasOwnProperty('target')) {
-                obj.target = ProductWsDTO.constructFromObject(data.target)
+                obj.target = ProductOCC1.constructFromObject(data.target)
             }
         }
         return obj

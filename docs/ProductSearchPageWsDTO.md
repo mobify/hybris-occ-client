@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **categoryCode** | **String** |  | [optional] 
 **keywordRedirectUrl** | **String** |  | [optional] 
 **spellingSuggestion** | [**SpellingSuggestionWsDTO**](SpellingSuggestionWsDTO.md) |  | [optional] 
-**products** | [**[ProductWsDTO]**](ProductWsDTO.md) |  | [optional] 
+**products** | [**[ProductOCC1]**](ProductOCC1.md) |  | [optional] 
 **sorts** | [**[SortWsDTO]**](SortWsDTO.md) |  | [optional] 
 **pagination** | [**PaginationWsDTO**](PaginationWsDTO.md) |  | [optional] 
 **currentQuery** | [**SearchStateWsDTO**](SearchStateWsDTO.md) |  | [optional] 

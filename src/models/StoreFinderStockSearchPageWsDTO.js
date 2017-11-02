@@ -18,7 +18,7 @@
 import ApiClient from '../ApiClient'
 import PaginationWsDTO from './PaginationWsDTO'
 import PointOfServiceStockWsDTO from './PointOfServiceStockWsDTO'
-import ProductWsDTO from './ProductWsDTO'
+import ProductOCC1 from './ProductOCC1'
 import SortWsDTO from './SortWsDTO'
 
 /**
@@ -84,7 +84,7 @@ export default class StoreFinderStockSearchPageWsDTO {
     */
         this.boundWestLongitude = undefined
         /**
-    * @member {module:models/ProductWsDTO} product
+    * @member {module:models/ProductOCC1} product
     */
         this.product = undefined
     }
@@ -136,7 +136,7 @@ export default class StoreFinderStockSearchPageWsDTO {
                 obj.boundWestLongitude = ApiClient.convertToType(data.boundWestLongitude, 'Number')
             }
             if (data.hasOwnProperty('product')) {
-                obj.product = ProductWsDTO.constructFromObject(data.product)
+                obj.product = ProductOCC1.constructFromObject(data.product)
             }
         }
         return obj

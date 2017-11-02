@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 <a name="getProduct"></a>
 # **getProduct**
-> ProductWsDTO getProduct(productCode, opts)
+> ProductOCC1 getProduct(productCode, opts)
 
 getProduct
 
@@ -56,7 +56,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProductWsDTO**](ProductWsDTO.md)
+[**ProductOCC1**](ProductOCC1.md)
 
 ### Authorization
 

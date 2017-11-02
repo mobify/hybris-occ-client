@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **quantity** | **Number** |  | [optional] 
 **basePrice** | [**PriceWsDTO**](PriceWsDTO.md) |  | [optional] 
 **totalPrice** | [**PriceWsDTO**](PriceWsDTO.md) |  | [optional] 
-**product** | [**ProductWsDTO**](ProductWsDTO.md) |  | [optional] 
+**product** | [**ProductOCC1**](ProductOCC1.md) |  | [optional] 
 **updateable** | **Boolean** |  | [optional] 
 **deliveryMode** | [**DeliveryModeWsDTO**](DeliveryModeWsDTO.md) |  | [optional] 
 **deliveryPointOfService** | [**PointOfServiceWsDTO**](PointOfServiceWsDTO.md) |  | [optional] 

@@ -7,6 +7,6 @@ Name | Type | Description | Notes
 **referenceType** | **String** |  | [optional] 
 **description** | **String** |  | [optional] 
 **quantity** | **Number** |  | [optional] 
-**target** | [**ProductWsDTO**](ProductWsDTO.md) |  | [optional] 
+**target** | [**ProductOCC1**](ProductOCC1.md) |  | [optional] 
 
 

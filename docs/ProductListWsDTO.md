@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**products** | [**[ProductWsDTO]**](ProductWsDTO.md) |  | [optional] 
+**products** | [**[ProductOCC1]**](ProductOCC1.md) |  | [optional] 
 **catalog** | **String** |  | [optional] 
 **version** | **String** |  | [optional] 
 **totalProductCount** | **Number** |  | [optional] 

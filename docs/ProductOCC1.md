@@ -1,4 +1,4 @@
-# Occ.ProductWsDTO
+# Occ.ProductOCC1
 
 ## Properties
 Name | Type | Description | Notes

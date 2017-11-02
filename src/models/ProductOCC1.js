@@ -28,14 +28,14 @@ import StockWsDTO from './StockWsDTO'
 import VariantOptionWsDTO from './VariantOptionWsDTO'
 
 /**
-* The ProductWsDTO model module.
-* @module models/ProductWsDTO
+* The ProductOCC1 model module.
+* @module models/ProductOCC1
 * @version v2
 */
-export default class ProductWsDTO {
+export default class ProductOCC1 {
     /**
-    * Constructs a new <code>ProductWsDTO</code>.
-    * @alias module:models/ProductWsDTO
+    * Constructs a new <code>ProductOCC1</code>.
+    * @alias module:models/ProductOCC1
     * @class
     */
 
@@ -161,19 +161,19 @@ export default class ProductWsDTO {
     }
 
     /**
-    * Constructs a <code>ProductWsDTO</code> from a plain JavaScript object,
+    * Constructs a <code>ProductOCC1</code> from a plain JavaScript object,
     * optionally creating a new instance. Copies all relevant properties from
     * <code>data</code> to <code>obj</code> if supplied or a new instance if
     * not.
     * @param {Object} data The plain JavaScript object bearing properties of
     * interest.
-    * @param {module:models/ProductWsDTO} obj Optional instance to populate.
-    * @return {module:models/ProductWsDTO} The populated
-    * <code>ProductWsDTO</code> instance.
+    * @param {module:models/ProductOCC1} obj Optional instance to populate.
+    * @return {module:models/ProductOCC1} The populated
+    * <code>ProductOCC1</code> instance.
     */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new ProductWsDTO()
+            obj = obj || new ProductOCC1()
 
             if (data.hasOwnProperty('code')) {
                 obj.code = ApiClient.convertToType(data.code, 'String')
@@ -250,7 +250,5 @@ export default class ProductWsDTO {
         }
         return obj
     }
-
-
 
 }

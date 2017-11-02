@@ -245,7 +245,7 @@ Class | Method | HTTP request | Description
  - [Occ.ProductReferenceWsDTO](docs/ProductReferenceWsDTO.md)
  - [Occ.ProductSearchPageWsDTO](docs/ProductSearchPageWsDTO.md)
  - [Occ.ProductOCC](docs/ProductOCC.md)
- - [Occ.ProductWsDTO](docs/ProductWsDTO.md)
+ - [Occ.ProductOCC1](docs/ProductOCC1.md)
  - [Occ.PromotionListWsDTO](docs/PromotionListWsDTO.md)
  - [Occ.PromotionOrderEntryConsumedWsDTO](docs/PromotionOrderEntryConsumedWsDTO.md)
  - [Occ.PromotionRestrictionWsDTO](docs/PromotionRestrictionWsDTO.md)

@@ -19,7 +19,7 @@ import ApiClient from '../ApiClient'
 import ProductExpressUpdateElementListWsDTO from '../models/ProductExpressUpdateElementListWsDTO'
 import ProductReferenceListWsDTO from '../models/ProductReferenceListWsDTO'
 import ProductSearchPageWsDTO from '../models/ProductSearchPageWsDTO'
-import ProductWsDTO from '../models/ProductWsDTO'
+import ProductOCC1 from '../models/ProductOCC1'
 import ReviewListWsDTO from '../models/ReviewListWsDTO'
 import ReviewWsDTO208 from '../models/ReviewWsDTO208'
 import StockWsDTO from '../models/StockWsDTO'
@@ -52,7 +52,7 @@ export default class ProductsApi {
      * @param {String} opts.fields Response configuration (list of fields, which
      * should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an
-     * object containing data of type {@link module:models/ProductWsDTO} and
+     * object containing data of type {@link module:models/ProductOCC1} and
      * HTTP response
      */
     productsByProductCodeWithHttpInfo(productCode, opts) {
@@ -78,7 +78,7 @@ export default class ProductsApi {
         const authNames = ['auth']
         const contentTypes = ['application/json']
         const accepts = ['application/json']
-        const returnType = ProductWsDTO
+        const returnType = ProductOCC1
 
         return this.apiClient.callApi(
             '/products/{productCode}', 'GET',
@@ -95,7 +95,7 @@ export default class ProductsApi {
      * @param {String} opts.fields Response configuration (list of fields, which
      * should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data
-     * of type {@link module:models/ProductWsDTO}
+     * of type {@link module:models/ProductOCC1}
      */
     getProduct(productCode, opts) {
         return this.productsByProductCodeWithHttpInfo(productCode, opts)

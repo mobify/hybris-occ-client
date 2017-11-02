@@ -16,7 +16,7 @@
  */
 
 import ApiClient from '../ApiClient'
-import ProductWsDTO from './ProductWsDTO'
+import ProductOCC1 from './ProductOCC1'
 
 /**
 * The ProductListWsDTO model module.
@@ -33,7 +33,7 @@ export default class ProductListWsDTO {
     constructor() {
         /**
     *
-    * @member {Array.<module:models/ProductWsDTO>} products
+    * @member {Array.<module:models/ProductOCC1>} products
     */
         this.products = undefined
         /**
@@ -79,7 +79,7 @@ export default class ProductListWsDTO {
             obj = obj || new ProductListWsDTO()
 
             if (data.hasOwnProperty('products')) {
-                obj.products = ApiClient.convertToType(data.products, [ProductWsDTO])
+                obj.products = ApiClient.convertToType(data.products, [ProductOCC1])
             }
             if (data.hasOwnProperty('catalog')) {
                 obj.catalog = ApiClient.convertToType(data.catalog, 'String')

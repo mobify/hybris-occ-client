@@ -19,7 +19,7 @@ import ApiClient from '../ApiClient'
 import BreadcrumbWsDTO from './BreadcrumbWsDTO'
 import FacetWsDTO from './FacetWsDTO'
 import PaginationWsDTO from './PaginationWsDTO'
-import ProductWsDTO from './ProductWsDTO'
+import ProductOCC1 from './ProductOCC1'
 import SearchStateWsDTO from './SearchStateWsDTO'
 import SortWsDTO from './SortWsDTO'
 import SpellingSuggestionWsDTO from './SpellingSuggestionWsDTO'
@@ -59,7 +59,7 @@ export default class ProductSearchPageWsDTO {
         this.spellingSuggestion = undefined
         /**
     *
-    * @member {Array.<module:models/ProductWsDTO>} products
+    * @member {Array.<module:models/ProductOCC1>} products
     */
         this.products = undefined
         /**
@@ -116,7 +116,7 @@ export default class ProductSearchPageWsDTO {
                 obj.spellingSuggestion = SpellingSuggestionWsDTO.constructFromObject(data.spellingSuggestion)
             }
             if (data.hasOwnProperty('products')) {
-                obj.products = ApiClient.convertToType(data.products, [ProductWsDTO])
+                obj.products = ApiClient.convertToType(data.products, [ProductOCC1])
             }
             if (data.hasOwnProperty('sorts')) {
                 obj.sorts = ApiClient.convertToType(data.sorts, [SortWsDTO])

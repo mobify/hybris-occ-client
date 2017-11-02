@@ -13,6 +13,6 @@ Name | Type | Description | Notes
 **boundEastLongitude** | **Number** |  | [optional] 
 **boundSouthLatitude** | **Number** |  | [optional] 
 **boundWestLongitude** | **Number** |  | [optional] 
-**product** | [**ProductWsDTO**](ProductWsDTO.md) |  | [optional] 
+**product** | [**ProductOCC1**](ProductOCC1.md) |  | [optional] 
 
 
