@@ -4,12 +4,12 @@ All URIs are relative to *http://api-example.hybris.com/rest/v2/DefaultParameter
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**deliverycountries**](DeliverycountriesApi.md#deliverycountries) | **GET** /deliverycountries | Deliverycountries
+[**getDeliveryCountries**](DeliverycountriesApi.md#getDeliveryCountries) | **GET** /deliverycountries | getDeliveryCountries
 
 
 <a name="deliverycountries"></a>
 # **deliverycountries**
-> CountryListWsDTOModel deliverycountries(opts)
+> CountryList deliverycountries(opts)
 
 Deliverycountries
 
@@ -29,7 +29,7 @@ let apiInstance = new Occ.DeliverycountriesApi();
 let opts = { 
   'fields': "fields_example" // String | Response configuration (list of fields, which should be returned in response)
 };
-apiInstance.deliverycountries(opts).then((data) => {
+apiInstance.getDeliveryCountries(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -45,7 +45,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CountryListWsDTOModel**](CountryListWsDTOModel.md)
+[**CountryList**](CountryList.md)
 
 ### Authorization
 

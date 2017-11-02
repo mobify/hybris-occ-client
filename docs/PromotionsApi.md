@@ -4,13 +4,13 @@ All URIs are relative to *http://api-example.hybris.com/rest/v2/DefaultParameter
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**promotions**](PromotionsApi.md#promotions) | **GET** /promotions | Promotions
-[**promotionsByCode**](PromotionsApi.md#promotionsByCode) | **GET** /promotions/{code} | PromotionsByCode
+[**getPromotions**](PromotionsApi.md#getPromotions) | **GET** /promotions | getPromotions
+[**getPromotion**](PromotionsApi.md#getPromotion) | **GET** /promotions/{code} | getPromotion
 
 
 <a name="promotions"></a>
 # **promotions**
-> PromotionListWsDTOModel promotions(opts)
+> PromotionList promotions(opts)
 
 Promotions
 
@@ -32,7 +32,7 @@ let opts = {
   'type': "type_example", // String | Defines what type of promotions should be returned. Values supported for that parameter are: <ul> <li>all: All available promotions are returned</li> <li>product: Only product promotions are returned</li> <li>order: Only order promotions are returned</li> </ul>
   'fields': "fields_example" // String | Response configuration (list of fields, which should be returned in response)
 };
-apiInstance.promotions(opts).then((data) => {
+apiInstance.getPromotions(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PromotionListWsDTOModel**](PromotionListWsDTOModel.md)
+[**PromotionList**](PromotionList.md)
 
 ### Authorization
 
@@ -61,11 +61,11 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="promotionsByCode"></a>
-# **promotionsByCode**
-> PromotionWsDTOModel promotionsByCode(code, opts)
+<a name="getPromotion"></a>
+# **getPromotion**
+> Promotion getPromotion(code, opts)
 
-PromotionsByCode
+getPromotion
 
 Returns details of a single promotion specified by a promotion code. Requests pertaining to promotions have been developed for the previous version of promotions and vouchers and therefore some of them are currently not compatible with the new promotion engine.  Security: Permitted only for trusted client 
 
@@ -85,7 +85,7 @@ let code = "code_example"; // String | Promotion identifier (code)
 let opts = { 
   'fields': "fields_example" // String | Response configuration (list of fields, which should be returned in response)
 };
-apiInstance.promotionsByCode(code, opts).then((data) => {
+apiInstance.getPromotion(code, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -102,7 +102,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PromotionWsDTOModel**](PromotionWsDTOModel.md)
+[**Promotion**](Promotion.md)
 
 ### Authorization
 

@@ -4,12 +4,12 @@ All URIs are relative to *http://api-example.hybris.com/rest/v2/DefaultParameter
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**languages**](LanguagesApi.md#languages) | **GET** /languages | Languages
+[**getLanguages**](LanguagesApi.md#getLanguages) | **GET** /languages | getLanguages
 
 
 <a name="languages"></a>
 # **languages**
-> LanguageListWsDTOModel languages(opts)
+> LanguageList languages(opts)
 
 Languages
 
@@ -29,7 +29,7 @@ let apiInstance = new Occ.LanguagesApi();
 let opts = { 
   'fields': "fields_example" // String | Response configuration (list of fields, which should be returned in response)
 };
-apiInstance.languages(opts).then((data) => {
+apiInstance.getLanguages(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -45,7 +45,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LanguageListWsDTOModel**](LanguageListWsDTOModel.md)
+[**LanguageList**](LanguageList.md)
 
 ### Authorization
 

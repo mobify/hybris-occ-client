@@ -4,14 +4,14 @@ All URIs are relative to *http://api-example.hybris.com/rest/v2/DefaultParameter
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**feedsOrdersStatusfeed**](FeedsApi.md#feedsOrdersStatusfeed) | **GET** /feeds/orders/statusfeed | FeedsOrdersStatusfeed
+[**getOrdersStatusfeed**](FeedsApi.md#getOrdersStatusfeed) | **GET** /feeds/orders/statusfeed | getOrdersStatusfeed
 
 
-<a name="feedsOrdersStatusfeed"></a>
-# **feedsOrdersStatusfeed**
-> OrderStatusUpdateElementListWsDTOModel feedsOrdersStatusfeed(opts)
+<a name="getOrdersStatusfeed"></a>
+# **getOrdersStatusfeed**
+> OrderStatusUpdateElementList getOrdersStatusfeed(opts)
 
-FeedsOrdersStatusfeed
+getOrdersStatusfeed
 
 Returns the orders the status has changed for. Returns only the elements from the current baseSite, updated after the provided timestamp.  Security: Allowed only for trusted client 
 
@@ -30,7 +30,7 @@ let opts = {
   'fields': "fields_example", // String | Response configuration (list of fields, which should be returned in response)
   'timestamp': "timestamp_example" // String | Only items newer than the given parameter are retrieved. This parameter should be in RFC-8601 format.
 };
-apiInstance.feedsOrdersStatusfeed(opts).then((data) => {
+apiInstance.getOrdersStatusfeed(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -47,7 +47,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**OrderStatusUpdateElementListWsDTOModel**](OrderStatusUpdateElementListWsDTOModel.md)
+[**OrderStatusUpdateElementList**](OrderStatusUpdateElementList.md)
 
 ### Authorization
 

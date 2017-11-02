@@ -1,0 +1,4946 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Class: module:api/ProductsApi</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Class: module:api/ProductsApi</h1>
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        <h2><span class="attribs"><span class="type-signature"></span></span>module:api/ProductsApi<span class="signature">(apiClient)</span><span class="type-signature"></span></h2>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+    
+
+    
+    <h4 class="name" id="module:api/ProductsApi"><span class="type-signature"></span>new module:api/ProductsApi<span class="signature">(apiClient)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Constructs a new ProductsApi.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>apiClient</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-ApiClient.html">module:ApiClient</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Optional API client implementation to
+use, default to module:ApiClient#instance if unspecified.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="api_ProductsApi.js.html">api/ProductsApi.js</a>, <a href="api_ProductsApi.js.html#line43">line 43</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="getProduct"><span class="type-signature"></span>getProduct<span class="signature">(productCode, opts)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>getProduct Returns details of a single product according to a product
+code.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>productCode</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Product identifier</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>opts</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Optional parameters</p>
+                <h6>Properties</h6>
+                
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>fields</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Response configuration (list of fields, which
+should be returned in response)</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="api_ProductsApi.js.html">api/ProductsApi.js</a>, <a href="api_ProductsApi.js.html#line100">line 100</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>a <a href="https://www.promisejs.org/">Promise</a>, with data
+of type <a href="module-models_ProductOCC1.html">module:models/ProductOCC1</a></p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="getProductExpressupdate"><span class="type-signature"></span>getProductExpressupdate<span class="signature">(opts)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>getProductExpressupdate Returns products added to the express update
+feed. Returns only elements updated after the provided timestamp.The
+queue is cleared using a defined cronjob.  Security: Permitted only for
+trusted client</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>opts</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Optional parameters</p>
+                <h6>Properties</h6>
+                
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>catalog</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Only products from this catalog are
+returned. Format: &lt;b&gt;catalogId:catalogVersion&lt;/b&gt;</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>fields</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Response configuration (list of fields, which
+should be returned in response)</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>timestamp</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Only items newer than the given parameter
+are retrieved from the queue. This parameter should be in RFC-8601
+format.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="api_ProductsApi.js.html">api/ProductsApi.js</a>, <a href="api_ProductsApi.js.html#line169">line 169</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>a <a href="https://www.promisejs.org/">Promise</a>, with data
+of type <a href="module-models_ProductExpressUpdateElementList.html">module:models/ProductExpressUpdateElementList</a></p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="getProductReferences"><span class="type-signature"></span>getProductReferences<span class="signature">(productCode, opts)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>getProductReferences Returns references for a product with a given
+product code. Reference type specifies which references to return.
+Security: Permitted only for trusted client</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>productCode</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Product identifier</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>opts</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Optional parameters</p>
+                <h6>Properties</h6>
+                
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>pageSize</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Maximum size of returned results.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>referenceType</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Reference type according to enum
+ProductReferenceTypeEnum</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>fields</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Response configuration (list of fields, which
+should be returned in response)</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="api_ProductsApi.js.html">api/ProductsApi.js</a>, <a href="api_ProductsApi.js.html#line239">line 239</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>a <a href="https://www.promisejs.org/">Promise</a>, with data
+of type <a href="module-models_ProductReferenceList.html">module:models/ProductReferenceList</a></p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="getProductReviews"><span class="type-signature"></span>getProductReviews<span class="signature">(productCode)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>getProductReviews Returns the reviews for a product with a given product
+code.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>productCode</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Product identifier</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="api_ProductsApi.js.html">api/ProductsApi.js</a>, <a href="api_ProductsApi.js.html#line291">line 291</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>a <a href="https://www.promisejs.org/">Promise</a>, with data
+of type <a href="module-models_ReviewList.html">module:models/ReviewList</a></p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="getProductSearch"><span class="type-signature"></span>getProductSearch<span class="signature">(opts)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>ProductsSearch Returns a list of products and additional data such as:
+available facets, available sorting and pagination options. It can
+include spelling suggestions.To make spelling suggestions work you need
+to: &lt;ul&gt; &lt;li&gt;Make sure enableSpellCheck on the SearchQuery is
+set to true. By default it should be already set to true. &lt;/li&gt;
+&lt;li&gt;Have indexed properties configured to be used for
+spellchecking.&lt;/li&gt; &lt;/ul&gt;</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>opts</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Optional parameters</p>
+                <h6>Properties</h6>
+                
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>query</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Serialized query, free text search,
+facets.&lt;br&gt; The format of a serialized query:
+&lt;b&gt;freeTextSearch:sort:facetKey1:facetValue1:facetKey2:facetValue2&lt;/b&gt;</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>pageSize</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The number of results returned per page.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>sort</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Sorting method applied to the display search
+results.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>currentPage</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The current result page requested.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>fields</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Response configuration (list of fields, which
+should be returned in response)</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="api_ProductsApi.js.html">api/ProductsApi.js</a>, <a href="api_ProductsApi.js.html#line436">line 436</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>a <a href="https://www.promisejs.org/">Promise</a>, with data
+of type <a href="module-models_ProductSearchPage.html">module:models/ProductSearchPage</a></p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="getProductsStockByProductCodeAndStoreName"><span class="type-signature"></span>getProductsStockByProductCodeAndStoreName<span class="signature">(productCode, storeName, opts)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>getProductsStockByProductCodeAndStoreName Returns product's stock
+level for a particular store (POS).</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>productCode</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Product identifier</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>storeName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Store identifier</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>opts</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Optional parameters</p>
+                <h6>Properties</h6>
+                
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>fields</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Response configuration (list of fields, which
+should be returned in response)</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="api_ProductsApi.js.html">api/ProductsApi.js</a>, <a href="api_ProductsApi.js.html#line589">line 589</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>a <a href="https://www.promisejs.org/">Promise</a>, with data
+of type <a href="module-models_Stock.html">module:models/Stock</a></p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="getProductStock"><span class="type-signature"></span>getProductStock<span class="signature">(productCode, opts)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>ProductsStockByProductCode Returns product's stock levels sorted by
+distance from specific location passed by free-text parameter or
+longitude and latitude parameters. The following two sets of parameters
+are available: &lt;ul&gt; &lt;li&gt;location (required), currentPage
+(optional), pageSize (optional) or&lt;/li&gt;&gt; &lt;li&gt;longitude
+(required), latitude (required), currentPage (optional),
+pageSize(optional).&lt;/li&gt; &lt;/ul&gt;</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>productCode</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Product identifier</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>opts</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Optional parameters</p>
+                <h6>Properties</h6>
+                
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>latitude</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Longitude location parameter.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>pageSize</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The number of results returned per page.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>location</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Free-text location</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>currentPage</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The current result page requested.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>fields</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Response configuration (list of fields, which
+should be returned in response)</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>longitude</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Latitude location parameter.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="api_ProductsApi.js.html">api/ProductsApi.js</a>, <a href="api_ProductsApi.js.html#line521">line 521</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>a <a href="https://www.promisejs.org/">Promise</a>, with data
+of type <a href="module-models_StoreFinderStockSearchPage.html">module:models/StoreFinderStockSearchPage</a></p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="getProductSuggestions"><span class="type-signature"></span>getProductSuggestions<span class="signature">(max, term, opts)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>getProductSuggestions Returns a list of all available suggestions related
+to a given term and limits the results to a specific value of the max
+parameter.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>max</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Specifies the limit of results.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>term</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Specified term</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>opts</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Optional parameters</p>
+                <h6>Properties</h6>
+                
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>fields</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Response configuration (list of fields, which
+should be returned in response)</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="api_ProductsApi.js.html">api/ProductsApi.js</a>, <a href="api_ProductsApi.js.html#line659">line 659</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>a <a href="https://www.promisejs.org/">Promise</a>, with data
+of type <a href="module-models_SuggestionList.html">module:models/SuggestionList</a></p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="postProductReview"><span class="type-signature"></span>postProductReview<span class="signature">(productCode, body, opts)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>postProductReview Creates a new customer review as an anonymous user.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>productCode</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Product identifier</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>body</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-models_ReviewOCC.html">module:models/ReviewOCC</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>opts</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Optional parameters</p>
+                <h6>Properties</h6>
+                
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>fields</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Response configuration (list of fields, which
+should be returned in response)</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="api_ProductsApi.js.html">api/ProductsApi.js</a>, <a href="api_ProductsApi.js.html#line356">line 356</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>a <a href="https://www.promisejs.org/">Promise</a>, with data
+of type <a href="module-models_ReviewOCC.html">module:models/ReviewOCC</a></p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="productsByProductCodeWithHttpInfo"><span class="type-signature"></span>productsByProductCodeWithHttpInfo<span class="signature">(productCode, opts)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>getProduct Returns details of a single product according to a product
+code.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>productCode</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Product identifier</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>opts</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Optional parameters</p>
+                <h6>Properties</h6>
+                
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>fields</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Response configuration (list of fields, which
+should be returned in response)</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="api_ProductsApi.js.html">api/ProductsApi.js</a>, <a href="api_ProductsApi.js.html#line58">line 58</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>a <a href="https://www.promisejs.org/">Promise</a>, with an
+object containing data of type <a href="module-models_ProductOCC1.html">module:models/ProductOCC1</a> and
+HTTP response</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="productsExpressupdateWithHttpInfo"><span class="type-signature"></span>productsExpressupdateWithHttpInfo<span class="signature">(opts)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>getProductExpressupdate Returns products added to the express update
+feed. Returns only elements updated after the provided timestamp.The
+queue is cleared using a defined cronjob.  Security: Permitted only for
+trusted client</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>opts</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Optional parameters</p>
+                <h6>Properties</h6>
+                
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>catalog</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Only products from this catalog are
+returned. Format: &lt;b&gt;catalogId:catalogVersion&lt;/b&gt;</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>fields</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Response configuration (list of fields, which
+should be returned in response)</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>timestamp</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Only items newer than the given parameter
+are retrieved from the queue. This parameter should be in RFC-8601
+format.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="api_ProductsApi.js.html">api/ProductsApi.js</a>, <a href="api_ProductsApi.js.html#line125">line 125</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>a <a href="https://www.promisejs.org/">Promise</a>, with an
+object containing data of type
+<a href="module-models_ProductExpressUpdateElementList.html">module:models/ProductExpressUpdateElementList</a> and HTTP
+response</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="productsReferencesByProductCodeWithHttpInfo"><span class="type-signature"></span>productsReferencesByProductCodeWithHttpInfo<span class="signature">(productCode, opts)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>getProductReferences Returns references for a product with a given
+product code. Reference type specifies which references to return.
+Security: Permitted only for trusted client</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>productCode</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Product identifier</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>opts</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Optional parameters</p>
+                <h6>Properties</h6>
+                
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>pageSize</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Maximum size of returned results.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>referenceType</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Reference type according to enum
+ProductReferenceTypeEnum</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>fields</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Response configuration (list of fields, which
+should be returned in response)</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="api_ProductsApi.js.html">api/ProductsApi.js</a>, <a href="api_ProductsApi.js.html#line191">line 191</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>a <a href="https://www.promisejs.org/">Promise</a>, with an
+object containing data of type
+<a href="module-models_ProductReferenceList.html">module:models/ProductReferenceList</a> and HTTP response</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="productsReviewsByProductCode1WithHttpInfo"><span class="type-signature"></span>productsReviewsByProductCode1WithHttpInfo<span class="signature">(productCode, body, opts)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>postProductReview Creates a new customer review as an anonymous user.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>productCode</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Product identifier</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>body</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-models_ReviewOCC.html">module:models/ReviewOCC</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>opts</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Optional parameters</p>
+                <h6>Properties</h6>
+                
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>fields</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Response configuration (list of fields, which
+should be returned in response)</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="api_ProductsApi.js.html">api/ProductsApi.js</a>, <a href="api_ProductsApi.js.html#line309">line 309</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>a <a href="https://www.promisejs.org/">Promise</a>, with an
+object containing data of type <a href="module-models_ReviewOCC.html">module:models/ReviewOCC</a> and
+HTTP response</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="productsReviewsByProductCodeWithHttpInfo"><span class="type-signature"></span>productsReviewsByProductCodeWithHttpInfo<span class="signature">(productCode)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>getProductReviews Returns the reviews for a product with a given product
+code.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>productCode</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Product identifier</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="api_ProductsApi.js.html">api/ProductsApi.js</a>, <a href="api_ProductsApi.js.html#line254">line 254</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>a <a href="https://www.promisejs.org/">Promise</a>, with an
+object containing data of type <a href="module-models_ReviewList.html">module:models/ReviewList</a> and
+HTTP response</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="productsSearch1WithHttpInfo"><span class="type-signature"></span>productsSearch1WithHttpInfo<span class="signature">(opts)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>ProductsSearch Returns a list of products and additional data such as:
+available facets, available sorting and pagination options. It can
+include spelling suggestions.To make spelling suggestions work you need
+to: &lt;ul&gt; &lt;li&gt;Make sure enableSpellCheck on the SearchQuery is
+set to true. By default it should be already set to true. &lt;/li&gt;
+&lt;li&gt;Have indexed properties configured to be used for
+spellchecking.&lt;/li&gt; &lt;/ul&gt;</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>opts</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Optional parameters</p>
+                <h6>Properties</h6>
+                
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>query</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Serialized query, free text search,
+facets.&lt;br&gt; The format of a serialized query:
+&lt;b&gt;freeTextSearch:sort:facetKey1:facetValue1:facetKey2:facetValue2&lt;/b&gt;</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>pageSize</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The number of results returned per page.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>sort</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Sorting method applied to the display search
+results.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>currentPage</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The current result page requested.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>fields</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Response configuration (list of fields, which
+should be returned in response)</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="api_ProductsApi.js.html">api/ProductsApi.js</a>, <a href="api_ProductsApi.js.html#line385">line 385</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>a <a href="https://www.promisejs.org/">Promise</a>, with an
+object containing data of type
+<a href="module-models_ProductSearchPage.html">module:models/ProductSearchPage</a> and HTTP response</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="productsStockByProductCode1WithHttpInfo"><span class="type-signature"></span>productsStockByProductCode1WithHttpInfo<span class="signature">(productCode, opts)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>ProductsStockByProductCode Returns product's stock levels sorted by
+distance from specific location passed by free-text parameter or
+longitude and latitude parameters. The following two sets of parameters
+are available: &lt;ul&gt; &lt;li&gt;location (required), currentPage
+(optional), pageSize (optional) or&lt;/li&gt;&gt; &lt;li&gt;longitude
+(required), latitude (required), currentPage (optional),
+pageSize(optional).&lt;/li&gt; &lt;/ul&gt;</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>productCode</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Product identifier</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>opts</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Optional parameters</p>
+                <h6>Properties</h6>
+                
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>latitude</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Longitude location parameter.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>pageSize</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The number of results returned per page.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>location</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Free-text location</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>currentPage</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The current result page requested.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>fields</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Response configuration (list of fields, which
+should be returned in response)</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>longitude</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Latitude location parameter.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="api_ProductsApi.js.html">api/ProductsApi.js</a>, <a href="api_ProductsApi.js.html#line464">line 464</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>a <a href="https://www.promisejs.org/">Promise</a>, with an
+object containing data of type
+<a href="module-models_StoreFinderStockSearchPage.html">module:models/StoreFinderStockSearchPage</a> and HTTP response</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="productsStockByProductCodeAndStoreNameWithHttpInfo"><span class="type-signature"></span>productsStockByProductCodeAndStoreNameWithHttpInfo<span class="signature">(productCode, storeName, opts)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>getProductsStockByProductCodeAndStoreName Returns product's stock
+level for a particular store (POS).</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>productCode</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Product identifier</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>storeName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Store identifier</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>opts</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Optional parameters</p>
+                <h6>Properties</h6>
+                
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>fields</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Response configuration (list of fields, which
+should be returned in response)</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="api_ProductsApi.js.html">api/ProductsApi.js</a>, <a href="api_ProductsApi.js.html#line540">line 540</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>a <a href="https://www.promisejs.org/">Promise</a>, with an
+object containing data of type <a href="module-models_Stock.html">module:models/Stock</a> and HTTP
+response</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="productsSuggestionsWithHttpInfo"><span class="type-signature"></span>productsSuggestionsWithHttpInfo<span class="signature">(max, term, opts)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>getProductSuggestions Returns a list of all available suggestions related
+to a given term and limits the results to a specific value of the max
+parameter.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>max</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Specifies the limit of results.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>term</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Specified term</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>opts</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Optional parameters</p>
+                <h6>Properties</h6>
+                
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>fields</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Response configuration (list of fields, which
+should be returned in response)</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="api_ProductsApi.js.html">api/ProductsApi.js</a>, <a href="api_ProductsApi.js.html#line609">line 609</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>a <a href="https://www.promisejs.org/">Promise</a>, with an
+object containing data of type <a href="module-models_SuggestionList.html">module:models/SuggestionList</a>
+and HTTP response</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-api_CardtypesApi.html">api/CardtypesApi</a></li><li><a href="module-api_CatalogsApi.html">api/CatalogsApi</a></li><li><a href="module-api_CurrenciesApi.html">api/CurrenciesApi</a></li><li><a href="module-api_CustomergroupsApi.html">api/CustomergroupsApi</a></li><li><a href="module-api_DeliverycountriesApi.html">api/DeliverycountriesApi</a></li><li><a href="module-api_ExportApi.html">api/ExportApi</a></li><li><a href="module-api_FeedsApi.html">api/FeedsApi</a></li><li><a href="module-api_ForgottenpasswordtokensApi.html">api/ForgottenpasswordtokensApi</a></li><li><a href="module-api_LanguagesApi.html">api/LanguagesApi</a></li><li><a href="module-api_OrdersApi.html">api/OrdersApi</a></li><li><a href="module-api_ProductsApi.html">api/ProductsApi</a></li><li><a href="module-api_PromotionsApi.html">api/PromotionsApi</a></li><li><a href="module-api_StoresApi.html">api/StoresApi</a></li><li><a href="module-api_TitlesApi.html">api/TitlesApi</a></li><li><a href="module-api_UsersApi.html">api/UsersApi</a></li><li><a href="module-api_VouchersApi.html">api/VouchersApi</a></li><li><a href="module-ApiClient.html">ApiClient</a></li><li><a href="module-index.html">index</a></li><li><a href="module-models_Address.html">models/Address</a></li><li><a href="module-models_AddressList.html">models/AddressList</a></li><li><a href="module-models_AddressOCC.html">models/AddressOCC</a></li><li><a href="module-models_BaseOption.html">models/BaseOption</a></li><li><a href="module-models_BillingAddress.html">models/BillingAddress</a></li><li><a href="module-models_Breadcrumb.html">models/Breadcrumb</a></li><li><a href="module-models_CardType.html">models/CardType</a></li><li><a href="module-models_CardTypeList.html">models/CardTypeList</a></li><li><a href="module-models_Cart.html">models/Cart</a></li><li><a href="module-models_CartList.html">models/CartList</a></li><li><a href="module-models_Catalog.html">models/Catalog</a></li><li><a href="module-models_CatalogList.html">models/CatalogList</a></li><li><a href="module-models_CatalogVersion.html">models/CatalogVersion</a></li><li><a href="module-models_Category.html">models/Category</a></li><li><a href="module-models_CategoryHierarchy.html">models/CategoryHierarchy</a></li><li><a href="module-models_Classification.html">models/Classification</a></li><li><a href="module-models_Consignment.html">models/Consignment</a></li><li><a href="module-models_ConsignmentEntry.html">models/ConsignmentEntry</a></li><li><a href="module-models_Country.html">models/Country</a></li><li><a href="module-models_CountryList.html">models/CountryList</a></li><li><a href="module-models_CountryOCC.html">models/CountryOCC</a></li><li><a href="module-models_Currency.html">models/Currency</a></li><li><a href="module-models_CurrencyList.html">models/CurrencyList</a></li><li><a href="module-models_CurrencyOCC.html">models/CurrencyOCC</a></li><li><a href="module-models_DeliveryMode.html">models/DeliveryMode</a></li><li><a href="module-models_DeliveryModeList.html">models/DeliveryModeList</a></li><li><a href="module-models_DeliveryOrderEntryGroup.html">models/DeliveryOrderEntryGroup</a></li><li><a href="module-models_DeliveryPointOfService.html">models/DeliveryPointOfService</a></li><li><a href="module-models_Facet.html">models/Facet</a></li><li><a href="module-models_FacetValue.html">models/FacetValue</a></li><li><a href="module-models_Feature.html">models/Feature</a></li><li><a href="module-models_FeatureUnit.html">models/FeatureUnit</a></li><li><a href="module-models_FeatureValue.html">models/FeatureValue</a></li><li><a href="module-models_FutureStock.html">models/FutureStock</a></li><li><a href="module-models_GeoPoint.html">models/GeoPoint</a></li><li><a href="module-models_Image.html">models/Image</a></li><li><a href="module-models_Language.html">models/Language</a></li><li><a href="module-models_LanguageList.html">models/LanguageList</a></li><li><a href="module-models_LanguageOCC.html">models/LanguageOCC</a></li><li><a href="module-models_Member.html">models/Member</a></li><li><a href="module-models_MemberList.html">models/MemberList</a></li><li><a href="module-models_OpeningSchedule.html">models/OpeningSchedule</a></li><li><a href="module-models_Order.html">models/Order</a></li><li><a href="module-models_OrderEntry.html">models/OrderEntry</a></li><li><a href="module-models_OrderEntryList.html">models/OrderEntryList</a></li><li><a href="module-models_OrderEntryOCC.html">models/OrderEntryOCC</a></li><li><a href="module-models_OrderHistory.html">models/OrderHistory</a></li><li><a href="module-models_OrderHistoryList.html">models/OrderHistoryList</a></li><li><a href="module-models_OrderStatusUpdateElement.html">models/OrderStatusUpdateElement</a></li><li><a href="module-models_OrderStatusUpdateElementList.html">models/OrderStatusUpdateElementList</a></li><li><a href="module-models_Pagination.html">models/Pagination</a></li><li><a href="module-models_PaymentDetails.html">models/PaymentDetails</a></li><li><a href="module-models_PaymentDetailsList.html">models/PaymentDetailsList</a></li><li><a href="module-models_PaymentDetailsOCC.html">models/PaymentDetailsOCC</a></li><li><a href="module-models_PickupOrderEntryGroup.html">models/PickupOrderEntryGroup</a></li><li><a href="module-models_PointOfService.html">models/PointOfService</a></li><li><a href="module-models_PointOfServiceStock.html">models/PointOfServiceStock</a></li><li><a href="module-models_Price.html">models/Price</a></li><li><a href="module-models_PriceRange.html">models/PriceRange</a></li><li><a href="module-models_Principal.html">models/Principal</a></li><li><a href="module-models_Product.html">models/Product</a></li><li><a href="module-models_ProductExpressUpdateElement.html">models/ProductExpressUpdateElement</a></li><li><a href="module-models_ProductExpressUpdateElementList.html">models/ProductExpressUpdateElementList</a></li><li><a href="module-models_ProductList.html">models/ProductList</a></li><li><a href="module-models_ProductOCC.html">models/ProductOCC</a></li><li><a href="module-models_ProductOCC1.html">models/ProductOCC1</a></li><li><a href="module-models_ProductReference.html">models/ProductReference</a></li><li><a href="module-models_ProductReferenceList.html">models/ProductReferenceList</a></li><li><a href="module-models_ProductReferenceOCC.html">models/ProductReferenceOCC</a></li><li><a href="module-models_ProductSearchPage.html">models/ProductSearchPage</a></li><li><a href="module-models_Promotion.html">models/Promotion</a></li><li><a href="module-models_PromotionList.html">models/PromotionList</a></li><li><a href="module-models_PromotionOrderEntryConsumed.html">models/PromotionOrderEntryConsumed</a></li><li><a href="module-models_PromotionRestriction.html">models/PromotionRestriction</a></li><li><a href="module-models_PromotionResult.html">models/PromotionResult</a></li><li><a href="module-models_PromotionResultList.html">models/PromotionResultList</a></li><li><a href="module-models_Region.html">models/Region</a></li><li><a href="module-models_RegionOCC.html">models/RegionOCC</a></li><li><a href="module-models_Review.html">models/Review</a></li><li><a href="module-models_ReviewList.html">models/ReviewList</a></li><li><a href="module-models_ReviewOCC.html">models/ReviewOCC</a></li><li><a href="module-models_SaveCartResult.html">models/SaveCartResult</a></li><li><a href="module-models_SearchQuery.html">models/SearchQuery</a></li><li><a href="module-models_SearchState.html">models/SearchState</a></li><li><a href="module-models_Sort.html">models/Sort</a></li><li><a href="module-models_SpecialOpeningDay.html">models/SpecialOpeningDay</a></li><li><a href="module-models_SpellingSuggestion.html">models/SpellingSuggestion</a></li><li><a href="module-models_Stock.html">models/Stock</a></li><li><a href="module-models_StoreFinderSearchPage.html">models/StoreFinderSearchPage</a></li><li><a href="module-models_StoreFinderStockSearchPage.html">models/StoreFinderStockSearchPage</a></li><li><a href="module-models_Suggestion.html">models/Suggestion</a></li><li><a href="module-models_SuggestionList.html">models/SuggestionList</a></li><li><a href="module-models_Time.html">models/Time</a></li><li><a href="module-models_Title.html">models/Title</a></li><li><a href="module-models_TitleList.html">models/TitleList</a></li><li><a href="module-models_User.html">models/User</a></li><li><a href="module-models_UserGroup.html">models/UserGroup</a></li><li><a href="module-models_UserGroupList.html">models/UserGroupList</a></li><li><a href="module-models_UserGroupOCC.html">models/UserGroupOCC</a></li><li><a href="module-models_UserOCC.html">models/UserOCC</a></li><li><a href="module-models_UserSignUp.html">models/UserSignUp</a></li><li><a href="module-models_VariantCategory.html">models/VariantCategory</a></li><li><a href="module-models_VariantMatrixElement.html">models/VariantMatrixElement</a></li><li><a href="module-models_VariantOption.html">models/VariantOption</a></li><li><a href="module-models_VariantOptionQualifier.html">models/VariantOptionQualifier</a></li><li><a href="module-models_VariantValueCategory.html">models/VariantValueCategory</a></li><li><a href="module-models_Voucher.html">models/Voucher</a></li><li><a href="module-models_VoucherList.html">models/VoucherList</a></li><li><a href="module-models_WeekdayOpeningDay.html">models/WeekdayOpeningDay</a></li></ul><h3>Classes</h3><ul><li><a href="module-api_CardtypesApi.html">api/CardtypesApi</a></li><li><a href="module-api_CatalogsApi.html">api/CatalogsApi</a></li><li><a href="module-api_CurrenciesApi.html">api/CurrenciesApi</a></li><li><a href="module-api_CustomergroupsApi.html">api/CustomergroupsApi</a></li><li><a href="module-api_DeliverycountriesApi.html">api/DeliverycountriesApi</a></li><li><a href="module-api_ExportApi.html">api/ExportApi</a></li><li><a href="module-api_FeedsApi.html">api/FeedsApi</a></li><li><a href="module-api_ForgottenpasswordtokensApi.html">api/ForgottenpasswordtokensApi</a></li><li><a href="module-api_LanguagesApi.html">api/LanguagesApi</a></li><li><a href="module-api_OrdersApi.html">api/OrdersApi</a></li><li><a href="module-api_ProductsApi.html">api/ProductsApi</a></li><li><a href="module-api_PromotionsApi.html">api/PromotionsApi</a></li><li><a href="module-api_StoresApi.html">api/StoresApi</a></li><li><a href="module-api_TitlesApi.html">api/TitlesApi</a></li><li><a href="module-api_UsersApi.html">api/UsersApi</a></li><li><a href="module-api_VouchersApi.html">api/VouchersApi</a></li><li><a href="module-ApiClient.html">ApiClient</a></li><li><a href="module-models_Address.html">models/Address</a></li><li><a href="module-models_AddressList.html">models/AddressList</a></li><li><a href="module-models_AddressOCC.html">models/AddressOCC</a></li><li><a href="module-models_BaseOption.html">models/BaseOption</a></li><li><a href="module-models_BillingAddress.html">models/BillingAddress</a></li><li><a href="module-models_Breadcrumb.html">models/Breadcrumb</a></li><li><a href="module-models_CardType.html">models/CardType</a></li><li><a href="module-models_CardTypeList.html">models/CardTypeList</a></li><li><a href="module-models_Cart.html">models/Cart</a></li><li><a href="module-models_CartList.html">models/CartList</a></li><li><a href="module-models_Catalog.html">models/Catalog</a></li><li><a href="module-models_CatalogList.html">models/CatalogList</a></li><li><a href="module-models_CatalogVersion.html">models/CatalogVersion</a></li><li><a href="module-models_Category.html">models/Category</a></li><li><a href="module-models_Classification.html">models/Classification</a></li><li><a href="module-models_Consignment.html">models/Consignment</a></li><li><a href="module-models_ConsignmentEntry.html">models/ConsignmentEntry</a></li><li><a href="module-models_Country.html">models/Country</a></li><li><a href="module-models_CountryList.html">models/CountryList</a></li><li><a href="module-models_CountryOCC.html">models/CountryOCC</a></li><li><a href="module-models_Currency.html">models/Currency</a></li><li><a href="module-models_CurrencyList.html">models/CurrencyList</a></li><li><a href="module-models_CurrencyOCC.html">models/CurrencyOCC</a></li><li><a href="module-models_DeliveryMode.html">models/DeliveryMode</a></li><li><a href="module-models_DeliveryModeList.html">models/DeliveryModeList</a></li><li><a href="module-models_DeliveryOrderEntryGroup.html">models/DeliveryOrderEntryGroup</a></li><li><a href="module-models_DeliveryPointOfService.html">models/DeliveryPointOfService</a></li><li><a href="module-models_Facet.html">models/Facet</a></li><li><a href="module-models_FacetValue.html">models/FacetValue</a></li><li><a href="module-models_Feature.html">models/Feature</a></li><li><a href="module-models_FeatureUnit.html">models/FeatureUnit</a></li><li><a href="module-models_FeatureValue.html">models/FeatureValue</a></li><li><a href="module-models_FutureStock.html">models/FutureStock</a></li><li><a href="module-models_GeoPoint.html">models/GeoPoint</a></li><li><a href="module-models_Image.html">models/Image</a></li><li><a href="module-models_Language.html">models/Language</a></li><li><a href="module-models_LanguageList.html">models/LanguageList</a></li><li><a href="module-models_LanguageOCC.html">models/LanguageOCC</a></li><li><a href="module-models_Member.html">models/Member</a></li><li><a href="module-models_MemberList.html">models/MemberList</a></li><li><a href="module-models_OpeningSchedule.html">models/OpeningSchedule</a></li><li><a href="module-models_Order.html">models/Order</a></li><li><a href="module-models_OrderEntry.html">models/OrderEntry</a></li><li><a href="module-models_OrderEntryList.html">models/OrderEntryList</a></li><li><a href="module-models_OrderEntryOCC.html">models/OrderEntryOCC</a></li><li><a href="module-models_OrderHistory.html">models/OrderHistory</a></li><li><a href="module-models_OrderHistoryList.html">models/OrderHistoryList</a></li><li><a href="module-models_OrderStatusUpdateElement.html">models/OrderStatusUpdateElement</a></li><li><a href="module-models_OrderStatusUpdateElementList.html">models/OrderStatusUpdateElementList</a></li><li><a href="module-models_Pagination.html">models/Pagination</a></li><li><a href="module-models_PaymentDetails.html">models/PaymentDetails</a></li><li><a href="module-models_PaymentDetailsList.html">models/PaymentDetailsList</a></li><li><a href="module-models_PaymentDetailsOCC.html">models/PaymentDetailsOCC</a></li><li><a href="module-models_PickupOrderEntryGroup.html">models/PickupOrderEntryGroup</a></li><li><a href="module-models_PointOfService.html">models/PointOfService</a></li><li><a href="module-models_PointOfServiceStock.html">models/PointOfServiceStock</a></li><li><a href="module-models_Price.html">models/Price</a></li><li><a href="module-models_PriceRange.html">models/PriceRange</a></li><li><a href="module-models_Principal.html">models/Principal</a></li><li><a href="module-models_Product.html">models/Product</a></li><li><a href="module-models_ProductExpressUpdateElement.html">models/ProductExpressUpdateElement</a></li><li><a href="module-models_ProductExpressUpdateElementList.html">models/ProductExpressUpdateElementList</a></li><li><a href="module-models_ProductList.html">models/ProductList</a></li><li><a href="module-models_ProductOCC.html">models/ProductOCC</a></li><li><a href="module-models_ProductOCC1.html">models/ProductOCC1</a></li><li><a href="module-models_ProductReference.html">models/ProductReference</a></li><li><a href="module-models_ProductReferenceList.html">models/ProductReferenceList</a></li><li><a href="module-models_ProductReferenceOCC.html">models/ProductReferenceOCC</a></li><li><a href="module-models_ProductSearchPage.html">models/ProductSearchPage</a></li><li><a href="module-models_Promotion.html">models/Promotion</a></li><li><a href="module-models_PromotionList.html">models/PromotionList</a></li><li><a href="module-models_PromotionOrderEntryConsumed.html">models/PromotionOrderEntryConsumed</a></li><li><a href="module-models_PromotionRestriction.html">models/PromotionRestriction</a></li><li><a href="module-models_PromotionResult.html">models/PromotionResult</a></li><li><a href="module-models_PromotionResultList.html">models/PromotionResultList</a></li><li><a href="module-models_Region.html">models/Region</a></li><li><a href="module-models_RegionOCC.html">models/RegionOCC</a></li><li><a href="module-models_Review.html">models/Review</a></li><li><a href="module-models_ReviewList.html">models/ReviewList</a></li><li><a href="module-models_ReviewOCC.html">models/ReviewOCC</a></li><li><a href="module-models_SaveCartResult.html">models/SaveCartResult</a></li><li><a href="module-models_SearchQuery.html">models/SearchQuery</a></li><li><a href="module-models_SearchState.html">models/SearchState</a></li><li><a href="module-models_Sort.html">models/Sort</a></li><li><a href="module-models_SpecialOpeningDay.html">models/SpecialOpeningDay</a></li><li><a href="module-models_SpellingSuggestion.html">models/SpellingSuggestion</a></li><li><a href="module-models_Stock.html">models/Stock</a></li><li><a href="module-models_StoreFinderSearchPage.html">models/StoreFinderSearchPage</a></li><li><a href="module-models_StoreFinderStockSearchPage.html">models/StoreFinderStockSearchPage</a></li><li><a href="module-models_Suggestion.html">models/Suggestion</a></li><li><a href="module-models_SuggestionList.html">models/SuggestionList</a></li><li><a href="module-models_Time.html">models/Time</a></li><li><a href="module-models_Title.html">models/Title</a></li><li><a href="module-models_TitleList.html">models/TitleList</a></li><li><a href="module-models_User.html">models/User</a></li><li><a href="module-models_UserGroup.html">models/UserGroup</a></li><li><a href="module-models_UserGroupList.html">models/UserGroupList</a></li><li><a href="module-models_UserGroupOCC.html">models/UserGroupOCC</a></li><li><a href="module-models_UserOCC.html">models/UserOCC</a></li><li><a href="module-models_UserSignUp.html">models/UserSignUp</a></li><li><a href="module-models_VariantCategory.html">models/VariantCategory</a></li><li><a href="module-models_VariantMatrixElement.html">models/VariantMatrixElement</a></li><li><a href="module-models_VariantOption.html">models/VariantOption</a></li><li><a href="module-models_VariantOptionQualifier.html">models/VariantOptionQualifier</a></li><li><a href="module-models_VariantValueCategory.html">models/VariantValueCategory</a></li><li><a href="module-models_Voucher.html">models/Voucher</a></li><li><a href="module-models_VoucherList.html">models/VoucherList</a></li><li><a href="module-models_WeekdayOpeningDay.html">models/WeekdayOpeningDay</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Thu Nov 02 2017 11:37:57 GMT-0700 (PDT)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

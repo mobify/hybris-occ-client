@@ -4,13 +4,13 @@ All URIs are relative to *http://api-example.hybris.com/rest/v2/DefaultParameter
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**stores1**](StoresApi.md#stores1) | **GET** /stores | Stores
-[**storesByStoreId**](StoresApi.md#storesByStoreId) | **GET** /stores/{storeId} | StoresByStoreId
+[**getStores**](StoresApi.md#getStores) | **GET** /stores | Stores
+[**getStore**](StoresApi.md#getStore) | **GET** /stores/{storeId} | getStore
 
 
-<a name="stores1"></a>
-# **stores1**
-> StoreFinderSearchPageWsDTOModel stores1(opts)
+<a name="getStores"></a>
+# **getStores**
+> StoreFinderSearchPage getStores(opts)
 
 Stores
 
@@ -38,7 +38,7 @@ let opts = {
   'fields': "fields_example", // String | Response configuration (list of fields, which should be returned in response)
   'longitude': "longitude_example" // String | Coordinate that specifies the east-west position of a point on the Earth's surface.
 };
-apiInstance.stores1(opts).then((data) => {
+apiInstance.getStores(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**StoreFinderSearchPageWsDTOModel**](StoreFinderSearchPageWsDTOModel.md)
+[**StoreFinderSearchPage**](StoreFinderSearchPage.md)
 
 ### Authorization
 
@@ -73,11 +73,11 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="storesByStoreId"></a>
-# **storesByStoreId**
-> PointOfServiceWsDTOModel storesByStoreId(storeId, opts)
+<a name="getStore"></a>
+# **getStore**
+> PointOfService getStore(storeId, opts)
 
-StoresByStoreId
+getStore
 
 Returns store location based on its unique name. 
 
@@ -97,7 +97,7 @@ let storeId = "storeId_example"; // String | Store identifier (currently store n
 let opts = { 
   'fields': "fields_example" // String | Response configuration (list of fields, which should be returned in response)
 };
-apiInstance.storesByStoreId(storeId, opts).then((data) => {
+apiInstance.getStore(storeId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -114,7 +114,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PointOfServiceWsDTOModel**](PointOfServiceWsDTOModel.md)
+[**PointOfService**](PointOfService.md)
 
 ### Authorization
 

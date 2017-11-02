@@ -4,15 +4,15 @@ All URIs are relative to *http://api-example.hybris.com/rest/v2/DefaultParameter
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**catalogs**](CatalogsApi.md#catalogs) | **GET** /catalogs | Catalogs
-[**catalogsByCatalogId**](CatalogsApi.md#catalogsByCatalogId) | **GET** /catalogs/{catalogId} | CatalogsByCatalogId
-[**catalogsByCatalogIdAndCatalogVersionId**](CatalogsApi.md#catalogsByCatalogIdAndCatalogVersionId) | **GET** /catalogs/{catalogId}/{catalogVersionId} | CatalogsByCatalogIdAndCatalogVersionId
-[**catalogsCategoriesCategoryIdByCatalogId**](CatalogsApi.md#catalogsCategoriesCategoryIdByCatalogId) | **GET** /catalogs/{catalogId}/{catalogVersionId}/categories/{categoryId} | CatalogsCategoriesCategoryIdByCatalogId
+[**getCatalogs**](CatalogsApi.md#getCatalogs) | **GET** /catalogs | getCatalogs
+[**getCatalog**](CatalogsApi.md#getCatalog) | **GET** /catalogs/{catalogId} | getCatalog
+[**getCatalogsByCatalogIdAndCatalogVersionId**](CatalogsApi.md#getCatalogsByCatalogIdAndCatalogVersionId) | **GET** /catalogs/{catalogId}/{catalogVersionId} | CatalogsByCatalogIdAndCatalogVersionId
+[**getCategory**](CatalogsApi.md#getCategory) | **GET** /catalogs/{catalogId}/{catalogVersionId}/categories/{categoryId} | getCategory
 
 
 <a name="catalogs"></a>
 # **catalogs**
-> CatalogListWsDTOModel catalogs(opts)
+> CatalogList catalogs(opts)
 
 Catalogs
 
@@ -32,7 +32,7 @@ let apiInstance = new Occ.CatalogsApi();
 let opts = { 
   'fields': "fields_example" // String | Response configuration (list of fields, which should be returned in response)
 };
-apiInstance.catalogs(opts).then((data) => {
+apiInstance.getCatalogs(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -48,7 +48,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CatalogListWsDTOModel**](CatalogListWsDTOModel.md)
+[**CatalogList**](CatalogList.md)
 
 ### Authorization
 
@@ -59,11 +59,11 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="catalogsByCatalogId"></a>
-# **catalogsByCatalogId**
-> CatalogWsDTOModel catalogsByCatalogId(catalogId, opts)
+<a name="getCatalog"></a>
+# **getCatalog**
+> Catalog getCatalog(catalogId, opts)
 
-CatalogsByCatalogId
+getCatalog
 
 Returns a information about a catalog based on its ID, along with versions defined for the current base store. 
 
@@ -83,7 +83,7 @@ let catalogId = "catalogId_example"; // String | Catalog identifier
 let opts = { 
   'fields': "fields_example" // String | Response configuration (list of fields, which should be returned in response)
 };
-apiInstance.catalogsByCatalogId(catalogId, opts).then((data) => {
+apiInstance.getCatalog(catalogId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -100,7 +100,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CatalogWsDTOModel**](CatalogWsDTOModel.md)
+[**Catalog**](Catalog.md)
 
 ### Authorization
 
@@ -111,9 +111,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="catalogsByCatalogIdAndCatalogVersionId"></a>
-# **catalogsByCatalogIdAndCatalogVersionId**
-> CatalogVersionWsDTOModel catalogsByCatalogIdAndCatalogVersionId(catalogId, catalogVersionId, opts)
+<a name="getCatalogsByCatalogIdAndCatalogVersionId"></a>
+# **getCatalogsByCatalogIdAndCatalogVersionId**
+> CatalogVersion getCatalogsByCatalogIdAndCatalogVersionId(catalogId, catalogVersionId, opts)
 
 CatalogsByCatalogIdAndCatalogVersionId
 
@@ -137,7 +137,7 @@ let catalogVersionId = "catalogVersionId_example"; // String | Catalog version i
 let opts = { 
   'fields': "fields_example" // String | Response configuration (list of fields, which should be returned in response)
 };
-apiInstance.catalogsByCatalogIdAndCatalogVersionId(catalogId, catalogVersionId, opts).then((data) => {
+apiInstance.getCatalogsByCatalogIdAndCatalogVersionId(catalogId, catalogVersionId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -155,7 +155,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CatalogVersionWsDTOModel**](CatalogVersionWsDTOModel.md)
+[**CatalogVersion**](CatalogVersion.md)
 
 ### Authorization
 
@@ -166,11 +166,11 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="catalogsCategoriesCategoryIdByCatalogId"></a>
-# **catalogsCategoriesCategoryIdByCatalogId**
-> CategoryHierarchyWsDTOModel catalogsCategoriesCategoryIdByCatalogId(catalogId, catalogVersionId, categoryId, opts)
+<a name="getCategory"></a>
+# **getCategory**
+> CategoryHierarchy getCategory(catalogId, catalogVersionId, categoryId, opts)
 
-CatalogsCategoriesCategoryIdByCatalogId
+getCategory
 
 Returns information about category that exists in a catalog version available for the current base store. 
 
@@ -196,7 +196,7 @@ let opts = {
   'currentPage': "currentPage_example", // String | The current result page requested.
   'fields': "fields_example" // String | Response configuration (list of fields, which should be returned in response)
 };
-apiInstance.catalogsCategoriesCategoryIdByCatalogId(catalogId, catalogVersionId, categoryId, opts).then((data) => {
+apiInstance.getCategory(catalogId, catalogVersionId, categoryId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -217,7 +217,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CategoryHierarchyWsDTOModel**](CategoryHierarchyWsDTOModel.md)
+[**CategoryHierarchy**](CategoryHierarchy.md)
 
 ### Authorization
 

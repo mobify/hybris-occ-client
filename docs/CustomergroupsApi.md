@@ -4,17 +4,17 @@ All URIs are relative to *http://api-example.hybris.com/rest/v2/DefaultParameter
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**customergroups**](CustomergroupsApi.md#customergroups) | **GET** /customergroups | Customergroups
-[**customergroups1**](CustomergroupsApi.md#customergroups1) | **POST** /customergroups | Customergroups
-[**customergroupsByGroupId**](CustomergroupsApi.md#customergroupsByGroupId) | **GET** /customergroups/{groupId} | CustomergroupsByGroupId
-[**customergroupsMembersByGroupId**](CustomergroupsApi.md#customergroupsMembersByGroupId) | **PUT** /customergroups/{groupId}/members | CustomergroupsMembersByGroupId
-[**customergroupsMembersByGroupId1**](CustomergroupsApi.md#customergroupsMembersByGroupId1) | **PATCH** /customergroups/{groupId}/members | CustomergroupsMembersByGroupId
-[**customergroupsMembersByGroupIdAndUserId**](CustomergroupsApi.md#customergroupsMembersByGroupIdAndUserId) | **DELETE** /customergroups/{groupId}/members/{userId} | CustomergroupsMembersByGroupIdAndUserId
+[**getCustomerGroups**](CustomergroupsApi.md#getCustomerGroups) | **GET** /customergroups | getCustomerGroups
+[**postCustomerGroup**](CustomergroupsApi.md#postCustomerGroup) | **POST** /customergroups | Customergroups
+[**getCustomerGroup**](CustomergroupsApi.md#getCustomerGroup) | **GET** /customergroups/{groupId} | getCustomerGroup
+[**putCustomerGroupsMembers**](CustomergroupsApi.md#putCustomerGroupsMembers) | **PUT** /customergroups/{groupId}/members | putCustomerGroupsMembers
+[**patchCustomerGroupsMembers**](CustomergroupsApi.md#patchCustomerGroupsMembers) | **PATCH** /customergroups/{groupId}/members | patchCustomerGroupsMembers
+[**deleteCustomerGroupsMember**](CustomergroupsApi.md#deleteCustomerGroupsMember) | **DELETE** /customergroups/{groupId}/members/{userId} | deleteCustomerGroupsMember
 
 
 <a name="customergroups"></a>
 # **customergroups**
-> UserGroupListWsDTOModel customergroups(opts)
+> UserGroupList customergroups(opts)
 
 Customergroups
 
@@ -36,7 +36,7 @@ let opts = {
   'currentPage': "currentPage_example", // String | Current page number (starts with 0)
   'fields': "fields_example" // String | Response configuration (list of fields, which should be returned in response)
 };
-apiInstance.customergroups(opts).then((data) => {
+apiInstance.getCustomerGroups(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**UserGroupListWsDTOModel**](UserGroupListWsDTOModel.md)
+[**UserGroupList**](UserGroupList.md)
 
 ### Authorization
 
@@ -65,9 +65,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="customergroups1"></a>
-# **customergroups1**
-> customergroups1(body)
+<a name="postCustomerGroup"></a>
+# **postCustomerGroup**
+> postCustomerGroup(body)
 
 Customergroups
 
@@ -84,9 +84,9 @@ auth.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new Occ.CustomergroupsApi();
 
-let body = new Occ.UserGroupWsDTOModel(); // UserGroupWsDTOModel | 
+let body = new Occ.UserGroup(); // UserGroup | 
 
-apiInstance.customergroups1(body).then(() => {
+apiInstance.postCustomerGroup(body).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -98,7 +98,7 @@ apiInstance.customergroups1(body).then(() => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**UserGroupWsDTOModel**](UserGroupWsDTOModel.md)|  | 
+ **body** | [**UserGroup**](UserGroup.md)|  | 
 
 ### Return type
 
@@ -113,11 +113,11 @@ null (empty response body)
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="customergroupsByGroupId"></a>
-# **customergroupsByGroupId**
-> UserGroupWsDTO17Model customergroupsByGroupId(groupId, opts)
+<a name="getCustomerGroup"></a>
+# **getCustomerGroup**
+> UserGroupOCC getCustomerGroup(groupId, opts)
 
-CustomergroupsByGroupId
+getCustomerGroup
 
 Returns a customer group with a specific groupId.  Security: Permitted only for customer managers 
 
@@ -137,7 +137,7 @@ let groupId = "groupId_example"; // String | Group identifier
 let opts = { 
   'fields': "fields_example" // String | Response configuration (list of fields, which should be returned in response)
 };
-apiInstance.customergroupsByGroupId(groupId, opts).then((data) => {
+apiInstance.getCustomerGroup(groupId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -154,7 +154,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**UserGroupWsDTO17Model**](UserGroupWsDTO17Model.md)
+[**UserGroupOCC**](UserGroupOCC.md)
 
 ### Authorization
 
@@ -165,11 +165,11 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="customergroupsMembersByGroupId"></a>
-# **customergroupsMembersByGroupId**
-> customergroupsMembersByGroupId(groupId, body)
+<a name="putCustomerGroupsMembers"></a>
+# **putCustomerGroupsMembers**
+> putCustomerGroupsMembers(groupId, body)
 
-CustomergroupsMembersByGroupId
+putCustomerGroupsMembers
 
 Sets members for a user group. The list of existing members is overwritten with a new one.  Security: Permitted only for customer managers 
 
@@ -186,9 +186,9 @@ let apiInstance = new Occ.CustomergroupsApi();
 
 let groupId = "groupId_example"; // String | Group identifier
 
-let body = new Occ.MemberListWsDTOModel(); // MemberListWsDTOModel | 
+let body = new Occ.MemberList(); // MemberList | 
 
-apiInstance.customergroupsMembersByGroupId(groupId, body).then(() => {
+apiInstance.putCustomerGroupsMembers(groupId, body).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -201,7 +201,7 @@ apiInstance.customergroupsMembersByGroupId(groupId, body).then(() => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **groupId** | **String**| Group identifier | 
- **body** | [**MemberListWsDTOModel**](MemberListWsDTOModel.md)|  | 
+ **body** | [**MemberList**](MemberList.md)|  | 
 
 ### Return type
 
@@ -216,11 +216,11 @@ null (empty response body)
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="customergroupsMembersByGroupId1"></a>
-# **customergroupsMembersByGroupId1**
-> customergroupsMembersByGroupId1(groupId, body)
+<a name="patchCustomerGroupsMembers"></a>
+# **patchCustomerGroupsMembers**
+> patchCustomerGroupsMembers(groupId, body)
 
-CustomergroupsMembersByGroupId
+putCustomerGroupsMembers
 
 Assigns user(s) to a customer group.  Security: Permitted only for customer managers 
 
@@ -237,9 +237,9 @@ let apiInstance = new Occ.CustomergroupsApi();
 
 let groupId = "groupId_example"; // String | Group identifier
 
-let body = new Occ.MemberListWsDTOModel(); // MemberListWsDTOModel | 
+let body = new Occ.MemberList(); // MemberList | 
 
-apiInstance.customergroupsMembersByGroupId1(groupId, body).then(() => {
+apiInstance.patchCustomerGroupsMembers(groupId, body).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -252,7 +252,7 @@ apiInstance.customergroupsMembersByGroupId1(groupId, body).then(() => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **groupId** | **String**| Group identifier | 
- **body** | [**MemberListWsDTOModel**](MemberListWsDTOModel.md)|  | 
+ **body** | [**MemberList**](MemberList.md)|  | 
 
 ### Return type
 
@@ -267,11 +267,11 @@ null (empty response body)
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="customergroupsMembersByGroupIdAndUserId"></a>
-# **customergroupsMembersByGroupIdAndUserId**
-> customergroupsMembersByGroupIdAndUserId(groupId, userId)
+<a name="deleteCustomerGroupsMember"></a>
+# **deleteCustomerGroupsMember**
+> deleteCustomerGroupsMember(groupId, userId)
 
-CustomergroupsMembersByGroupIdAndUserId
+deleteCustomerGroupsMember
 
 Removes user from a customer group.  Security: Permitted only for customer managers 
 
@@ -290,7 +290,7 @@ let groupId = "groupId_example"; // String | Group identifier
 
 let userId = "userId_example"; // String | User identifier
 
-apiInstance.customergroupsMembersByGroupIdAndUserId(groupId, userId).then(() => {
+apiInstance.deleteCustomerGroupsMember(groupId, userId).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
