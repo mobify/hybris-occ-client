@@ -5,9 +5,10 @@
   "license": "SEE LICENSE IN LICENSE",
   "main": "src/index.js",
   "scripts": {
-    "test": "mocha --compilers js:babel-core/register $(find test -name '*Api.spec.js')",
+    "test": "BABEL_ENV=test mocha --compilers js:babel-core/register $(find test -name '*Api.spec.js')",
     "lint:js": "eslint '**/*.js'",
-    "lint:fix": "npm run lint:js -- --fix"
+    "lint:fix": "npm run lint:js -- --fix",
+    "build": "BABEL_ENV=production rollup -c"
   },
   "browser": {
     "fs": false
@@ -15,10 +16,14 @@
   "dependencies": {
     "babel": "^6.23.0",
     "babel-cli": "^6.24.1",
+    "querystring": "^0.2.0",
     "superagent": "3.5.2"
   },
   "devDependencies": {
     "babel-core": "6.18.0",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-transform-es2015-function-name": "^6.24.1",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "eslint": "^4.10.0",
@@ -27,6 +32,9 @@
     "expect.js": "~0.3.1",
     "mobify-code-style": "^2.8.4",
     "mocha": "^4.0.1",
+    "rollup": "^0.50.0",
+    "rollup-plugin-babel": "^3.0.2",
+    "rollup-plugin-uglify": "^2.0.1",
     "sinon": "1.17.3"
   }
 }
