@@ -214,7 +214,7 @@ Class | Method | HTTP request | Description
  - [Occ.ImageWsDTO](docs/ImageWsDTO.md)
  - [Occ.LanguageListWsDTO](docs/LanguageListWsDTO.md)
  - [Occ.Language](docs/Language.md)
- - [Occ.LanguageWsDTO](docs/LanguageWsDTO.md)
+ - [Occ.LanguageOCC](docs/LanguageOCC.md)
  - [Occ.MemberListWsDTO](docs/MemberListWsDTO.md)
  - [Occ.Member](docs/Member.md)
  - [Occ.OpeningScheduleWsDTO](docs/OpeningScheduleWsDTO.md)

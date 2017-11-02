@@ -18,14 +18,14 @@
 import ApiClient from '../ApiClient'
 
 /**
-* The LanguageWsDTO model module.
-* @module models/LanguageWsDTO
+* The LanguageOCC model module.
+* @module models/LanguageOCC
 * @version v2
 */
-export default class LanguageWsDTO {
+export default class LanguageOCC {
     /**
-    * Constructs a new <code>LanguageWsDTO</code>.
-    * @alias module:models/LanguageWsDTO
+    * Constructs a new <code>LanguageOCC</code>.
+    * @alias module:models/LanguageOCC
     * @class
     */
 
@@ -53,19 +53,19 @@ export default class LanguageWsDTO {
     }
 
     /**
-    * Constructs a <code>LanguageWsDTO</code> from a plain JavaScript object,
+    * Constructs a <code>LanguageOCC</code> from a plain JavaScript object,
     * optionally creating a new instance. Copies all relevant properties from
     * <code>data</code> to <code>obj</code> if supplied or a new instance if
     * not.
     * @param {Object} data The plain JavaScript object bearing properties of
     * interest.
-    * @param {module:models/LanguageWsDTO} obj Optional instance to populate.
-    * @return {module:models/LanguageWsDTO} The populated
-    * <code>LanguageWsDTO</code> instance.
+    * @param {module:models/LanguageOCC} obj Optional instance to populate.
+    * @return {module:models/LanguageOCC} The populated
+    * <code>LanguageOCC</code> instance.
     */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new LanguageWsDTO()
+            obj = obj || new LanguageOCC()
 
             if (data.hasOwnProperty('isocode')) {
                 obj.isocode = ApiClient.convertToType(data.isocode, 'String')
@@ -82,7 +82,5 @@ export default class LanguageWsDTO {
         }
         return obj
     }
-
-
 
 }

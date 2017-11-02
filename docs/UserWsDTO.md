@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **firstName** | **String** |  | [optional] 
 **lastName** | **String** |  | [optional] 
 **currency** | [**CurrencyOCC**](CurrencyOCC.md) |  | [optional] 
-**language** | [**LanguageWsDTO**](LanguageWsDTO.md) |  | [optional] 
+**language** | [**LanguageOCC**](LanguageOCC.md) |  | [optional] 
 **displayUid** | **String** |  | [optional] 
 **uid** | **String** |  | [optional] 
 **name** | **String** |  | [optional] 

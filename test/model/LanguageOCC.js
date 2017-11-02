@@ -32,7 +32,7 @@
     let instance
 
     beforeEach(() => {
-        instance = new Occ.LanguageWsDTO()
+        instance = new Occ.LanguageOCC()
     })
 
     const getProperty = function(object, getter, property) {
@@ -45,34 +45,34 @@
         if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
     }
 
-    describe('LanguageWsDTO', () => {
-        it('should create an instance of LanguageWsDTO', () => {
-            // uncomment below and update the code to test LanguageWsDTO
-            // var instane = new Occ.LanguageWsDTO();
-            // expect(instance).to.be.a(Occ.LanguageWsDTO);
+    describe('LanguageOCC', () => {
+        it('should create an instance of LanguageOCC', () => {
+            // uncomment below and update the code to test LanguageOCC
+            // var instane = new Occ.LanguageOCC();
+            // expect(instance).to.be.a(Occ.LanguageOCC);
         })
 
         it('should have the property isocode (base name: "isocode")', () => {
             // uncomment below and update the code to test the property isocode
-            // var instane = new Occ.LanguageWsDTO();
+            // var instane = new Occ.LanguageOCC();
             // expect(instance).to.be();
         })
 
         it('should have the property name (base name: "name")', () => {
             // uncomment below and update the code to test the property name
-            // var instane = new Occ.LanguageWsDTO();
+            // var instane = new Occ.LanguageOCC();
             // expect(instance).to.be();
         })
 
         it('should have the property nativeName (base name: "nativeName")', () => {
             // uncomment below and update the code to test the property nativeName
-            // var instane = new Occ.LanguageWsDTO();
+            // var instane = new Occ.LanguageOCC();
             // expect(instance).to.be();
         })
 
         it('should have the property active (base name: "active")', () => {
             // uncomment below and update the code to test the property active
-            // var instane = new Occ.LanguageWsDTO();
+            // var instane = new Occ.LanguageOCC();
             // expect(instance).to.be();
         })
 

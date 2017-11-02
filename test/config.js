@@ -51,7 +51,7 @@ const testWrapper = (occ) => {
         name: 'United States'
     }
     ]
-    occ.languages = occ.LanguageWsDTO.constructFromObject({
+    occ.languages = occ.LanguageOCC.constructFromObject({
         isocode: 'en',
         name: 'English',
         nativeName: 'English',

@@ -54,7 +54,7 @@ import GeoPointWsDTO from './models/GeoPointWsDTO'
 import ImageWsDTO from './models/ImageWsDTO'
 import LanguageListWsDTO from './models/LanguageListWsDTO'
 import Language from './models/Language'
-import LanguageWsDTO from './models/LanguageWsDTO'
+import LanguageOCC from './models/LanguageOCC'
 import MemberListWsDTO from './models/MemberListWsDTO'
 import Member from './models/Member'
 import OpeningScheduleWsDTO from './models/OpeningScheduleWsDTO'
@@ -409,10 +409,10 @@ export {
     Language,
 
     /**
-     * The LanguageWsDTO model constructor.
-     * @property {module:models/LanguageWsDTO}
+     * The LanguageOCC model constructor.
+     * @property {module:models/LanguageOCC}
      */
-    LanguageWsDTO,
+    LanguageOCC,
 
     /**
      * The MemberListWsDTO model constructor.

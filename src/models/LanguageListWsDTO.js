@@ -16,7 +16,7 @@
  */
 
 import ApiClient from '../ApiClient'
-import LanguageWsDTO from './LanguageWsDTO'
+import LanguageOCC from './LanguageOCC'
 
 /**
 * The LanguageListWsDTO model module.
@@ -33,7 +33,7 @@ export default class LanguageListWsDTO {
     constructor() {
         /**
     *
-    * @member {Array.<module:models/LanguageWsDTO>} languages
+    * @member {Array.<module:models/LanguageOCC>} languages
     */
         this.languages = undefined
     }
@@ -55,7 +55,7 @@ export default class LanguageListWsDTO {
             obj = obj || new LanguageListWsDTO()
 
             if (data.hasOwnProperty('languages')) {
-                obj.languages = ApiClient.convertToType(data.languages, [LanguageWsDTO])
+                obj.languages = ApiClient.convertToType(data.languages, [LanguageOCC])
             }
         }
         return obj

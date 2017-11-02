@@ -1,4 +1,4 @@
-# Occ.LanguageWsDTO
+# Occ.LanguageOCC
 
 ## Properties
 Name | Type | Description | Notes
