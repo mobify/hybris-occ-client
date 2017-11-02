@@ -1450,7 +1450,7 @@ Name | Type | Description  | Notes
 
 <a name="postCartEntries"></a>
 # **postCartEntries**
-> OrderEntryWsDTO542 postCartEntries(userId, cartId, body, opts)
+> OrderEntryOCC postCartEntries(userId, cartId, body, opts)
 
 getCartEntries
 
@@ -1471,7 +1471,7 @@ let userId = "userId_example"; // String | User identifier or one of the literal
 
 let cartId = "cartId_example"; // String | Cart identifier <ul> <li>cart code for logged in user</li> <li>cart guid for anonymous user</li> <li>'current' for the last modified cart</li> </ul>
 
-let body = new Occ.OrderEntryWsDTO542(); // OrderEntryWsDTO542 | 
+let body = new Occ.OrderEntryOCC(); // OrderEntryOCC | 
 
 let opts = { 
   'fields': "fields_example" // String | Response configuration (list of fields, which should be returned in response)
@@ -1490,12 +1490,12 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **userId** | **String**| User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt; | 
  **cartId** | **String**| Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt; | 
- **body** | [**OrderEntryWsDTO542**](OrderEntryWsDTO542.md)|  | 
+ **body** | [**OrderEntryOCC**](OrderEntryOCC.md)|  | 
  **fields** | **String**| Response configuration (list of fields, which should be returned in response) | [optional] 
 
 ### Return type
 
-[**OrderEntryWsDTO542**](OrderEntryWsDTO542.md)
+[**OrderEntryOCC**](OrderEntryOCC.md)
 
 ### Authorization
 
@@ -1566,7 +1566,7 @@ Name | Type | Description  | Notes
 
 <a name="putCartEntry"></a>
 # **putCartEntry**
-> OrderEntryWsDTO542 putCartEntry(userId, cartId, entryNumber, body, opts)
+> OrderEntryOCC putCartEntry(userId, cartId, entryNumber, body, opts)
 
 getCartEntry
 
@@ -1589,7 +1589,7 @@ let cartId = "cartId_example"; // String | Cart identifier <ul> <li>cart code fo
 
 let entryNumber = "entryNumber_example"; // String | Entry number. Zero-based numbering.
 
-let body = new Occ.OrderEntryWsDTO542(); // OrderEntryWsDTO542 | 
+let body = new Occ.OrderEntryOCC(); // OrderEntryOCC | 
 
 let opts = { 
   'fields': "fields_example" // String | Response configuration (list of fields, which should be returned in response)
@@ -1609,12 +1609,12 @@ Name | Type | Description  | Notes
  **userId** | **String**| User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt; | 
  **cartId** | **String**| Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt; | 
  **entryNumber** | **String**| Entry number. Zero-based numbering. | 
- **body** | [**OrderEntryWsDTO542**](OrderEntryWsDTO542.md)|  | 
+ **body** | [**OrderEntryOCC**](OrderEntryOCC.md)|  | 
  **fields** | **String**| Response configuration (list of fields, which should be returned in response) | [optional] 
 
 ### Return type
 
-[**OrderEntryWsDTO542**](OrderEntryWsDTO542.md)
+[**OrderEntryOCC**](OrderEntryOCC.md)
 
 ### Authorization
 
@@ -1627,7 +1627,7 @@ Name | Type | Description  | Notes
 
 <a name="patchCartEntry"></a>
 # **patchCartEntry**
-> OrderEntryWsDTO542 patchCartEntry(userId, cartId, entryNumber, body, opts)
+> OrderEntryOCC patchCartEntry(userId, cartId, entryNumber, body, opts)
 
 getCartEntry
 
@@ -1650,7 +1650,7 @@ let cartId = "cartId_example"; // String | Cart identifier <ul> <li>cart code fo
 
 let entryNumber = "entryNumber_example"; // String | Entry number. Zero-based numbering.
 
-let body = new Occ.OrderEntryWsDTO542(); // OrderEntryWsDTO542 | 
+let body = new Occ.OrderEntryOCC(); // OrderEntryOCC | 
 
 let opts = { 
   'fields': "fields_example" // String | Response configuration (list of fields, which should be returned in response)
@@ -1670,12 +1670,12 @@ Name | Type | Description  | Notes
  **userId** | **String**| User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt; | 
  **cartId** | **String**| Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt; | 
  **entryNumber** | **String**| Entry number. Zero-based numbering. | 
- **body** | [**OrderEntryWsDTO542**](OrderEntryWsDTO542.md)|  | 
+ **body** | [**OrderEntryOCC**](OrderEntryOCC.md)|  | 
  **fields** | **String**| Response configuration (list of fields, which should be returned in response) | [optional] 
 
 ### Return type
 
-[**OrderEntryWsDTO542**](OrderEntryWsDTO542.md)
+[**OrderEntryOCC**](OrderEntryOCC.md)
 
 ### Authorization
 

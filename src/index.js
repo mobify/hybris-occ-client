@@ -59,7 +59,7 @@ import MemberListWsDTO from './models/MemberListWsDTO'
 import Member from './models/Member'
 import OpeningScheduleWsDTO from './models/OpeningScheduleWsDTO'
 import OrderEntryListWsDTO from './models/OrderEntryListWsDTO'
-import OrderEntryWsDTO542 from './models/OrderEntryWsDTO542'
+import OrderEntryOCC from './models/OrderEntryOCC'
 import OrderEntryWsDTO from './models/OrderEntryWsDTO'
 import OrderHistoryListWsDTO from './models/OrderHistoryListWsDTO'
 import OrderHistoryWsDTO from './models/OrderHistoryWsDTO'
@@ -439,10 +439,10 @@ export {
     OrderEntryListWsDTO,
 
     /**
-     * The OrderEntryWsDTO542 model constructor.
-     * @property {module:models/OrderEntryWsDTO542}
+     * The OrderEntryOCC model constructor.
+     * @property {module:models/OrderEntryOCC}
      */
-    OrderEntryWsDTO542,
+    OrderEntryOCC,
 
     /**
      * The OrderEntryWsDTO model constructor.

@@ -1,4 +1,4 @@
-# Occ.OrderEntryWsDTO542
+# Occ.OrderEntryOCC
 
 ## Properties
 Name | Type | Description | Notes

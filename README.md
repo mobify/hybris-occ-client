@@ -219,7 +219,7 @@ Class | Method | HTTP request | Description
  - [Occ.Member](docs/Member.md)
  - [Occ.OpeningScheduleWsDTO](docs/OpeningScheduleWsDTO.md)
  - [Occ.OrderEntryListWsDTO](docs/OrderEntryListWsDTO.md)
- - [Occ.OrderEntryWsDTO542](docs/OrderEntryWsDTO542.md)
+ - [Occ.OrderEntryOCC](docs/OrderEntryOCC.md)
  - [Occ.OrderEntryWsDTO](docs/OrderEntryWsDTO.md)
  - [Occ.OrderHistoryListWsDTO](docs/OrderHistoryListWsDTO.md)
  - [Occ.OrderHistoryWsDTO](docs/OrderHistoryWsDTO.md)

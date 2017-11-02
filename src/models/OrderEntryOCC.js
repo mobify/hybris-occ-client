@@ -20,14 +20,14 @@ import DeliveryPointOfService from './DeliveryPointOfService'
 import Product from './Product'
 
 /**
-* The OrderEntryWsDTO542 model module.
-* @module models/OrderEntryWsDTO542
+* The OrderEntryOCC model module.
+* @module models/OrderEntryOCC
 * @version v2
 */
-export default class OrderEntryWsDTO542 {
+export default class OrderEntryOCC {
     /**
-    * Constructs a new <code>OrderEntryWsDTO542</code>.
-    * @alias module:models/OrderEntryWsDTO542
+    * Constructs a new <code>OrderEntryOCC</code>.
+    * @alias module:models/OrderEntryOCC
     * @class
     */
 
@@ -48,20 +48,20 @@ export default class OrderEntryWsDTO542 {
     }
 
     /**
-    * Constructs a <code>OrderEntryWsDTO542</code> from a plain JavaScript
+    * Constructs a <code>OrderEntryOCC</code> from a plain JavaScript
     * object, optionally creating a new instance. Copies all relevant properties
     * from <code>data</code> to <code>obj</code> if supplied or a new instance
     * if not.
     * @param {Object} data The plain JavaScript object bearing properties of
     * interest.
-    * @param {module:models/OrderEntryWsDTO542} obj Optional instance to
+    * @param {module:models/OrderEntryOCC} obj Optional instance to
     * populate.
-    * @return {module:models/OrderEntryWsDTO542} The populated
-    * <code>OrderEntryWsDTO542</code> instance.
+    * @return {module:models/OrderEntryOCC} The populated
+    * <code>OrderEntryOCC</code> instance.
     */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new OrderEntryWsDTO542()
+            obj = obj || new OrderEntryOCC()
 
             if (data.hasOwnProperty('quantity')) {
                 obj.quantity = ApiClient.convertToType(data.quantity, 'Number')
@@ -75,7 +75,5 @@ export default class OrderEntryWsDTO542 {
         }
         return obj
     }
-
-
 
 }

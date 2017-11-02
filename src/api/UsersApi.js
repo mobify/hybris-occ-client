@@ -24,7 +24,7 @@ import CartWsDTO from '../models/CartWsDTO'
 import DeliveryModeListWsDTO from '../models/DeliveryModeListWsDTO'
 import DeliveryModeWsDTO from '../models/DeliveryModeWsDTO'
 import OrderEntryListWsDTO from '../models/OrderEntryListWsDTO'
-import OrderEntryWsDTO542 from '../models/OrderEntryWsDTO542'
+import OrderEntryOCC from '../models/OrderEntryOCC'
 import OrderEntryWsDTO from '../models/OrderEntryWsDTO'
 import OrderHistoryListWsDTO from '../models/OrderHistoryListWsDTO'
 import OrderWsDTO from '../models/OrderWsDTO'
@@ -2040,12 +2040,12 @@ export default class UsersApi {
      * logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous
      * user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified
      * cart&lt;/li&gt; &lt;/ul&gt;
-     * @param {module:models/OrderEntryWsDTO542} body
+     * @param {module:models/OrderEntryOCC} body
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which
      * should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an
-     * object containing data of type {@link module:models/OrderEntryWsDTO542}
+     * object containing data of type {@link module:models/OrderEntryOCC}
      * and HTTP response
      */
     usersCartsEntriesByUserIdAndCartId1WithHttpInfo(userId, cartId, body, opts) {
@@ -2082,7 +2082,7 @@ export default class UsersApi {
         const authNames = ['auth']
         const contentTypes = ['application/json']
         const accepts = ['application/json']
-        const returnType = OrderEntryWsDTO542
+        const returnType = OrderEntryOCC
 
         return this.apiClient.callApi(
             '/users/{userId}/carts/{cartId}/entries', 'POST',
@@ -2104,12 +2104,12 @@ export default class UsersApi {
      * logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous
      * user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified
      * cart&lt;/li&gt; &lt;/ul&gt;
-     * @param {module:models/OrderEntryWsDTO542} body
+     * @param {module:models/OrderEntryOCC} body
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which
      * should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data
-     * of type {@link module:models/OrderEntryWsDTO542}
+     * of type {@link module:models/OrderEntryOCC}
      */
     postCartEntries(userId, cartId, body, opts) {
         return this.usersCartsEntriesByUserIdAndCartId1WithHttpInfo(userId, cartId, body, opts)
@@ -2226,12 +2226,12 @@ export default class UsersApi {
      * user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified
      * cart&lt;/li&gt; &lt;/ul&gt;
      * @param {String} entryNumber Entry number. Zero-based numbering.
-     * @param {module:models/OrderEntryWsDTO542} body
+     * @param {module:models/OrderEntryOCC} body
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which
      * should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an
-     * object containing data of type {@link module:models/OrderEntryWsDTO542}
+     * object containing data of type {@link module:models/OrderEntryOCC}
      * and HTTP response
      */
     usersCartsEntriesEntryNumberByUserId1WithHttpInfo(userId, cartId, entryNumber, body, opts) {
@@ -2274,7 +2274,7 @@ export default class UsersApi {
         const authNames = ['auth']
         const contentTypes = ['application/json']
         const accepts = ['application/json']
-        const returnType = OrderEntryWsDTO542
+        const returnType = OrderEntryOCC
 
         return this.apiClient.callApi(
             '/users/{userId}/carts/{cartId}/entries/{entryNumber}', 'PUT',
@@ -2299,12 +2299,12 @@ export default class UsersApi {
      * user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified
      * cart&lt;/li&gt; &lt;/ul&gt;
      * @param {String} entryNumber Entry number. Zero-based numbering.
-     * @param {module:models/OrderEntryWsDTO542} body
+     * @param {module:models/OrderEntryOCC} body
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which
      * should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data
-     * of type {@link module:models/OrderEntryWsDTO542}
+     * of type {@link module:models/OrderEntryOCC}
      */
     putCartEntry(userId, cartId, entryNumber, body, opts) {
         return this.usersCartsEntriesEntryNumberByUserId1WithHttpInfo(userId, cartId, entryNumber, body, opts)
@@ -2328,12 +2328,12 @@ export default class UsersApi {
      * user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified
      * cart&lt;/li&gt; &lt;/ul&gt;
      * @param {String} entryNumber Entry number. Zero-based numbering.
-     * @param {module:models/OrderEntryWsDTO542} body
+     * @param {module:models/OrderEntryOCC} body
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which
      * should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an
-     * object containing data of type {@link module:models/OrderEntryWsDTO542}
+     * object containing data of type {@link module:models/OrderEntryOCC}
      * and HTTP response
      */
     usersCartsEntriesEntryNumberByUserId2WithHttpInfo(userId, cartId, entryNumber, body, opts) {
@@ -2376,7 +2376,7 @@ export default class UsersApi {
         const authNames = ['auth']
         const contentTypes = ['application/json']
         const accepts = ['application/json']
-        const returnType = OrderEntryWsDTO542
+        const returnType = OrderEntryOCC
 
         return this.apiClient.callApi(
             '/users/{userId}/carts/{cartId}/entries/{entryNumber}', 'PATCH',
@@ -2400,12 +2400,12 @@ export default class UsersApi {
      * user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified
      * cart&lt;/li&gt; &lt;/ul&gt;
      * @param {String} entryNumber Entry number. Zero-based numbering.
-     * @param {module:models/OrderEntryWsDTO542} body
+     * @param {module:models/OrderEntryOCC} body
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which
      * should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data
-     * of type {@link module:models/OrderEntryWsDTO542}
+     * of type {@link module:models/OrderEntryOCC}
      */
     patchCartEntry(userId, cartId, entryNumber, body, opts) {
         return this.usersCartsEntriesEntryNumberByUserId2WithHttpInfo(userId, cartId, entryNumber, body, opts)

@@ -32,7 +32,7 @@
     let instance
 
     beforeEach(() => {
-        instance = new Occ.OrderEntryWsDTO542()
+        instance = new Occ.OrderEntryOCC()
     })
 
     const getProperty = function(object, getter, property) {
@@ -45,28 +45,28 @@
         if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
     }
 
-    describe('OrderEntryWsDTO542', () => {
-        it('should create an instance of OrderEntryWsDTO542', () => {
-            // uncomment below and update the code to test OrderEntryWsDTO542
-            // var instane = new Occ.OrderEntryWsDTO542();
-            // expect(instance).to.be.a(Occ.OrderEntryWsDTO542);
+    describe('OrderEntryOCC', () => {
+        it('should create an instance of OrderEntryOCC', () => {
+            // uncomment below and update the code to test OrderEntryOCC
+            // var instane = new Occ.OrderEntryOCC();
+            // expect(instance).to.be.a(Occ.OrderEntryOCC);
         })
 
         it('should have the property quantity (base name: "quantity")', () => {
             // uncomment below and update the code to test the property quantity
-            // var instane = new Occ.OrderEntryWsDTO542();
+            // var instane = new Occ.OrderEntryOCC();
             // expect(instance).to.be();
         })
 
         it('should have the property product (base name: "product")', () => {
             // uncomment below and update the code to test the property product
-            // var instane = new Occ.OrderEntryWsDTO542();
+            // var instane = new Occ.OrderEntryOCC();
             // expect(instance).to.be();
         })
 
         it('should have the property deliveryPointOfService (base name: "deliveryPointOfService")', () => {
             // uncomment below and update the code to test the property deliveryPointOfService
-            // var instane = new Occ.OrderEntryWsDTO542();
+            // var instane = new Occ.OrderEntryOCC();
             // expect(instance).to.be();
         })
 
