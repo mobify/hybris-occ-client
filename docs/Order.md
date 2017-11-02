@@ -1,0 +1,42 @@
+# Occ.Order
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**created** | **String** |  | [optional] 
+**status** | **String** |  | [optional] 
+**statusDisplay** | **String** |  | [optional] 
+**guestCustomer** | **Boolean** |  | [optional] 
+**consignments** | [**[Consignment]**](Consignment.md) |  | [optional] 
+**deliveryStatus** | **String** |  | [optional] 
+**deliveryStatusDisplay** | **String** |  | [optional] 
+**unconsignedEntries** | [**[OrderEntry]**](OrderEntry.md) |  | [optional] 
+**code** | **String** |  | [optional] 
+**net** | **Boolean** |  | [optional] 
+**totalPriceWithTax** | [**Price**](Price.md) |  | [optional] 
+**totalPrice** | [**Price**](Price.md) |  | [optional] 
+**totalTax** | [**Price**](Price.md) |  | [optional] 
+**subTotal** | [**Price**](Price.md) |  | [optional] 
+**deliveryCost** | [**Price**](Price.md) |  | [optional] 
+**entries** | [**[OrderEntry]**](OrderEntry.md) |  | [optional] 
+**totalItems** | **Number** |  | [optional] 
+**deliveryMode** | [**DeliveryMode**](DeliveryMode.md) |  | [optional] 
+**deliveryAddress** | [**Address**](Address.md) |  | [optional] 
+**paymentInfo** | [**PaymentDetails**](PaymentDetails.md) |  | [optional] 
+**appliedOrderPromotions** | [**[PromotionResult]**](PromotionResult.md) |  | [optional] 
+**appliedProductPromotions** | [**[PromotionResult]**](PromotionResult.md) |  | [optional] 
+**productDiscounts** | [**Price**](Price.md) |  | [optional] 
+**orderDiscounts** | [**Price**](Price.md) |  | [optional] 
+**totalDiscounts** | [**Price**](Price.md) |  | [optional] 
+**site** | **String** |  | [optional] 
+**store** | **String** |  | [optional] 
+**guid** | **String** |  | [optional] 
+**calculated** | **Boolean** |  | [optional] 
+**appliedVouchers** | [**[Voucher]**](Voucher.md) |  | [optional] 
+**user** | [**Principal**](Principal.md) |  | [optional] 
+**pickupOrderGroups** | [**[PickupOrderEntryGroup]**](PickupOrderEntryGroup.md) |  | [optional] 
+**deliveryOrderGroups** | [**[DeliveryOrderEntryGroup]**](DeliveryOrderEntryGroup.md) |  | [optional] 
+**pickupItemsQuantity** | **Number** |  | [optional] 
+**deliveryItemsQuantity** | **Number** |  | [optional] 
+
+

@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="deliverycountries"></a>
 # **deliverycountries**
-> CountryListWsDTOModel deliverycountries(opts)
+> CountryList deliverycountries(opts)
 
 Deliverycountries
 
@@ -45,7 +45,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CountryListWsDTOModel**](CountryListWsDTOModel.md)
+[**CountryList**](CountryList.md)
 
 ### Authorization
 

@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="getVoucher"></a>
 # **getVoucher**
-> VoucherWsDTOModel getVoucher(code, opts)
+> Voucher getVoucher(code, opts)
 
 getVoucher
 
@@ -48,7 +48,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VoucherWsDTOModel**](VoucherWsDTOModel.md)
+[**Voucher**](Voucher.md)
 
 ### Authorization
 

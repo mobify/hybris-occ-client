@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 <a name="catalogs"></a>
 # **catalogs**
-> CatalogListWsDTOModel catalogs(opts)
+> CatalogList catalogs(opts)
 
 Catalogs
 
@@ -48,7 +48,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CatalogListWsDTOModel**](CatalogListWsDTOModel.md)
+[**CatalogList**](CatalogList.md)
 
 ### Authorization
 
@@ -61,7 +61,7 @@ Name | Type | Description  | Notes
 
 <a name="getCatalog"></a>
 # **getCatalog**
-> CatalogWsDTOModel getCatalog(catalogId, opts)
+> Catalog getCatalog(catalogId, opts)
 
 getCatalog
 
@@ -100,7 +100,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CatalogWsDTOModel**](CatalogWsDTOModel.md)
+[**Catalog**](Catalog.md)
 
 ### Authorization
 
@@ -113,7 +113,7 @@ Name | Type | Description  | Notes
 
 <a name="getCatalogsByCatalogIdAndCatalogVersionId"></a>
 # **getCatalogsByCatalogIdAndCatalogVersionId**
-> CatalogVersionWsDTOModel getCatalogsByCatalogIdAndCatalogVersionId(catalogId, catalogVersionId, opts)
+> CatalogVersion getCatalogsByCatalogIdAndCatalogVersionId(catalogId, catalogVersionId, opts)
 
 CatalogsByCatalogIdAndCatalogVersionId
 
@@ -155,7 +155,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CatalogVersionWsDTOModel**](CatalogVersionWsDTOModel.md)
+[**CatalogVersion**](CatalogVersion.md)
 
 ### Authorization
 
@@ -168,7 +168,7 @@ Name | Type | Description  | Notes
 
 <a name="getCategory"></a>
 # **getCategory**
-> CategoryHierarchyWsDTOModel getCategory(catalogId, catalogVersionId, categoryId, opts)
+> CategoryHierarchy getCategory(catalogId, catalogVersionId, categoryId, opts)
 
 getCategory
 
@@ -217,7 +217,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CategoryHierarchyWsDTOModel**](CategoryHierarchyWsDTOModel.md)
+[**CategoryHierarchy**](CategoryHierarchy.md)
 
 ### Authorization
 

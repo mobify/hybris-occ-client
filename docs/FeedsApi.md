@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="getOrdersStatusfeed"></a>
 # **getOrdersStatusfeed**
-> OrderStatusUpdateElementListWsDTOModel getOrdersStatusfeed(opts)
+> OrderStatusUpdateElementList getOrdersStatusfeed(opts)
 
 getOrdersStatusfeed
 
@@ -47,7 +47,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**OrderStatusUpdateElementListWsDTOModel**](OrderStatusUpdateElementListWsDTOModel.md)
+[**OrderStatusUpdateElementList**](OrderStatusUpdateElementList.md)
 
 ### Authorization
 

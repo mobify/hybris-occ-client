@@ -41,4 +41,3 @@ raml.split('\n')
             }
         })
     }, raml)
-

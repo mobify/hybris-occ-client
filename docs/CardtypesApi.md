@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="cardtypes"></a>
 # **cardtypes**
-> CardTypeListWsDTOModel cardtypes(opts)
+> CardTypeList cardtypes(opts)
 
 Cardtypes
 
@@ -45,7 +45,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CardTypeListWsDTOModel**](CardTypeListWsDTOModel.md)
+[**CardTypeList**](CardTypeList.md)
 
 ### Authorization
 
