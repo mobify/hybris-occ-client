@@ -1797,7 +1797,7 @@ Name | Type | Description  | Notes
 
 <a name="postCartPaymentDetail"></a>
 # **postCartPaymentDetail**
-> PaymentDetailsWsDTO640 postCartPaymentDetail(userId, cartId, body, opts)
+> PaymentDetailsOCC postCartPaymentDetail(userId, cartId, body, opts)
 
 postCartPaymentDetail
 
@@ -1818,7 +1818,7 @@ let userId = "userId_example"; // String | User identifier or one of the literal
 
 let cartId = "cartId_example"; // String | Cart identifier <ul> <li>cart code for logged in user</li> <li>cart guid for anonymous user</li> <li>'current' for the last modified cart</li> </ul>
 
-let body = new Occ.PaymentDetailsWsDTO640(); // PaymentDetailsWsDTO640 | 
+let body = new Occ.PaymentDetailsOCC(); // PaymentDetailsOCC | 
 
 let opts = { 
   'fields': "fields_example" // String | Response configuration (list of fields, which should be returned in response)
@@ -1837,12 +1837,12 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **userId** | **String**| User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt; | 
  **cartId** | **String**| Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt; | 
- **body** | [**PaymentDetailsWsDTO640**](PaymentDetailsWsDTO640.md)|  | 
+ **body** | [**PaymentDetailsOCC**](PaymentDetailsOCC.md)|  | 
  **fields** | **String**| Response configuration (list of fields, which should be returned in response) | [optional] 
 
 ### Return type
 
-[**PaymentDetailsWsDTO640**](PaymentDetailsWsDTO640.md)
+[**PaymentDetailsOCC**](PaymentDetailsOCC.md)
 
 ### Authorization
 
@@ -2864,7 +2864,7 @@ let userId = "userId_example"; // String | User identifier or one of the literal
 
 let paymentDetailsId = "paymentDetailsId_example"; // String | - Payment details identifier
 
-let body = new Occ.PaymentDetailsWsDTO640(); // PaymentDetailsWsDTO640 | 
+let body = new Occ.PaymentDetailsOCC(); // PaymentDetailsOCC | 
 
 apiInstance.putPaymentDetail(userId, paymentDetailsId, body).then(() => {
   console.log('API called successfully.');
@@ -2880,7 +2880,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **userId** | **String**| User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt; | 
  **paymentDetailsId** | **String**| - Payment details identifier | 
- **body** | [**PaymentDetailsWsDTO640**](PaymentDetailsWsDTO640.md)|  | 
+ **body** | [**PaymentDetailsOCC**](PaymentDetailsOCC.md)|  | 
 
 ### Return type
 
@@ -2918,7 +2918,7 @@ let userId = "userId_example"; // String | User identifier or one of the literal
 
 let paymentDetailsId = "paymentDetailsId_example"; // String | - Payment details identifier
 
-let body = new Occ.PaymentDetailsWsDTO640(); // PaymentDetailsWsDTO640 | 
+let body = new Occ.PaymentDetailsOCC(); // PaymentDetailsOCC | 
 
 apiInstance.patchPaymentDetail(userId, paymentDetailsId, body).then(() => {
   console.log('API called successfully.');
@@ -2934,7 +2934,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **userId** | **String**| User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt; | 
  **paymentDetailsId** | **String**| - Payment details identifier | 
- **body** | [**PaymentDetailsWsDTO640**](PaymentDetailsWsDTO640.md)|  | 
+ **body** | [**PaymentDetailsOCC**](PaymentDetailsOCC.md)|  | 
 
 ### Return type
 

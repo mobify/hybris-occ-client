@@ -1,4 +1,4 @@
-# Occ.PaymentDetailsWsDTO640
+# Occ.PaymentDetailsOCC
 
 ## Properties
 Name | Type | Description | Notes

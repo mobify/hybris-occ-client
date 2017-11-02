@@ -68,7 +68,7 @@ import OrderStatusUpdateElementWsDTO from './models/OrderStatusUpdateElementWsDT
 import OrderWsDTO from './models/OrderWsDTO'
 import PaginationWsDTO from './models/PaginationWsDTO'
 import PaymentDetailsListWsDTO from './models/PaymentDetailsListWsDTO'
-import PaymentDetailsWsDTO640 from './models/PaymentDetailsWsDTO640'
+import PaymentDetailsOCC from './models/PaymentDetailsOCC'
 import PaymentDetailsWsDTO from './models/PaymentDetailsWsDTO'
 import PickupOrderEntryGroupWsDTO from './models/PickupOrderEntryGroupWsDTO'
 import PointOfServiceStockWsDTO from './models/PointOfServiceStockWsDTO'
@@ -493,10 +493,10 @@ export {
     PaymentDetailsListWsDTO,
 
     /**
-     * The PaymentDetailsWsDTO640 model constructor.
-     * @property {module:models/PaymentDetailsWsDTO640}
+     * The PaymentDetailsOCC model constructor.
+     * @property {module:models/PaymentDetailsOCC}
      */
-    PaymentDetailsWsDTO640,
+    PaymentDetailsOCC,
 
     /**
      * The PaymentDetailsWsDTO model constructor.

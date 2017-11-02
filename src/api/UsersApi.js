@@ -29,7 +29,7 @@ import OrderEntryWsDTO from '../models/OrderEntryWsDTO'
 import OrderHistoryListWsDTO from '../models/OrderHistoryListWsDTO'
 import OrderWsDTO from '../models/OrderWsDTO'
 import PaymentDetailsListWsDTO from '../models/PaymentDetailsListWsDTO'
-import PaymentDetailsWsDTO640 from '../models/PaymentDetailsWsDTO640'
+import PaymentDetailsOCC from '../models/PaymentDetailsOCC'
 import PaymentDetailsWsDTO from '../models/PaymentDetailsWsDTO'
 import PromotionResultListWsDTO from '../models/PromotionResultListWsDTO'
 import SaveCartResultWsDTO from '../models/SaveCartResultWsDTO'
@@ -2596,13 +2596,13 @@ export default class UsersApi {
      * logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous
      * user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified
      * cart&lt;/li&gt; &lt;/ul&gt;
-     * @param {module:models/PaymentDetailsWsDTO640} body
+     * @param {module:models/PaymentDetailsOCC} body
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which
      * should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an
      * object containing data of type
-     * {@link module:models/PaymentDetailsWsDTO640} and HTTP response
+     * {@link module:models/PaymentDetailsOCC} and HTTP response
      */
     usersCartsPaymentdetailsByUserIdWithHttpInfo(userId, cartId, body, opts) {
         opts = opts || {}
@@ -2638,7 +2638,7 @@ export default class UsersApi {
         const authNames = ['auth']
         const contentTypes = ['application/json']
         const accepts = ['application/json']
-        const returnType = PaymentDetailsWsDTO640
+        const returnType = PaymentDetailsOCC
 
         return this.apiClient.callApi(
             '/users/{userId}/carts/{cartId}/paymentdetails', 'POST',
@@ -2661,12 +2661,12 @@ export default class UsersApi {
      * logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous
      * user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified
      * cart&lt;/li&gt; &lt;/ul&gt;
-     * @param {module:models/PaymentDetailsWsDTO640} body
+     * @param {module:models/PaymentDetailsOCC} body
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which
      * should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data
-     * of type {@link module:models/PaymentDetailsWsDTO640}
+     * of type {@link module:models/PaymentDetailsOCC}
      */
     postCartPaymentDetail(userId, cartId, body, opts) {
         return this.usersCartsPaymentdetailsByUserIdWithHttpInfo(userId, cartId, body, opts)
@@ -4154,7 +4154,7 @@ export default class UsersApi {
      * user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous
      * user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} paymentDetailsId - Payment details identifier
-     * @param {module:models/PaymentDetailsWsDTO640} body
+     * @param {module:models/PaymentDetailsOCC} body
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an
      * object containing HTTP response
      */
@@ -4211,7 +4211,7 @@ export default class UsersApi {
      * user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous
      * user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} paymentDetailsId - Payment details identifier
-     * @param {module:models/PaymentDetailsWsDTO640} body
+     * @param {module:models/PaymentDetailsOCC} body
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     putPaymentDetail(userId, paymentDetailsId, body) {
@@ -4232,7 +4232,7 @@ export default class UsersApi {
      * user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous
      * user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} paymentDetailsId - Payment details identifier
-     * @param {module:models/PaymentDetailsWsDTO640} body
+     * @param {module:models/PaymentDetailsOCC} body
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an
      * object containing HTTP response
      */
@@ -4288,7 +4288,7 @@ export default class UsersApi {
      * user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous
      * user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} paymentDetailsId - Payment details identifier
-     * @param {module:models/PaymentDetailsWsDTO640} body
+     * @param {module:models/PaymentDetailsOCC} body
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     patchPaymentDetail(userId, paymentDetailsId, body) {

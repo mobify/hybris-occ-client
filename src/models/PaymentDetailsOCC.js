@@ -19,14 +19,14 @@ import ApiClient from '../ApiClient'
 import BillingAddress from './BillingAddress'
 
 /**
-* The PaymentDetailsWsDTO640 model module.
-* @module models/PaymentDetailsWsDTO640
+* The PaymentDetailsOCC model module.
+* @module models/PaymentDetailsOCC
 * @version v2
 */
-export default class PaymentDetailsWsDTO640 {
+export default class PaymentDetailsOCC {
     /**
-    * Constructs a new <code>PaymentDetailsWsDTO640</code>.
-    * @alias module:models/PaymentDetailsWsDTO640
+    * Constructs a new <code>PaymentDetailsOCC</code>.
+    * @alias module:models/PaymentDetailsOCC
     * @class
     */
 
@@ -88,20 +88,20 @@ export default class PaymentDetailsWsDTO640 {
     }
 
     /**
-    * Constructs a <code>PaymentDetailsWsDTO640</code> from a plain JavaScript
+    * Constructs a <code>PaymentDetailsOCC</code> from a plain JavaScript
     * object, optionally creating a new instance. Copies all relevant properties
     * from <code>data</code> to <code>obj</code> if supplied or a new instance
     * if not.
     * @param {Object} data The plain JavaScript object bearing properties of
     * interest.
-    * @param {module:models/PaymentDetailsWsDTO640} obj Optional instance to
+    * @param {module:models/PaymentDetailsOCC} obj Optional instance to
     * populate.
-    * @return {module:models/PaymentDetailsWsDTO640} The populated
-    * <code>PaymentDetailsWsDTO640</code> instance.
+    * @return {module:models/PaymentDetailsOCC} The populated
+    * <code>PaymentDetailsOCC</code> instance.
     */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new PaymentDetailsWsDTO640()
+            obj = obj || new PaymentDetailsOCC()
 
             if (data.hasOwnProperty('accountHolderName')) {
                 obj.accountHolderName = ApiClient.convertToType(data.accountHolderName, 'String')
@@ -139,7 +139,5 @@ export default class PaymentDetailsWsDTO640 {
         }
         return obj
     }
-
-
 
 }

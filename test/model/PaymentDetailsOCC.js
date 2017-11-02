@@ -32,7 +32,7 @@
     let instance
 
     beforeEach(() => {
-        instance = new Occ.PaymentDetailsWsDTO640()
+        instance = new Occ.PaymentDetailsOCC()
     })
 
     const getProperty = function(object, getter, property) {
@@ -45,76 +45,76 @@
         if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
     }
 
-    describe('PaymentDetailsWsDTO640', () => {
-        it('should create an instance of PaymentDetailsWsDTO640', () => {
-            // uncomment below and update the code to test PaymentDetailsWsDTO640
-            // var instane = new Occ.PaymentDetailsWsDTO640();
-            // expect(instance).to.be.a(Occ.PaymentDetailsWsDTO640);
+    describe('PaymentDetailsOCC', () => {
+        it('should create an instance of PaymentDetailsOCC', () => {
+            // uncomment below and update the code to test PaymentDetailsOCC
+            // var instane = new Occ.PaymentDetailsOCC();
+            // expect(instance).to.be.a(Occ.PaymentDetailsOCC);
         })
 
         it('should have the property accountHolderName (base name: "accountHolderName")', () => {
             // uncomment below and update the code to test the property accountHolderName
-            // var instane = new Occ.PaymentDetailsWsDTO640();
+            // var instane = new Occ.PaymentDetailsOCC();
             // expect(instance).to.be();
         })
 
         it('should have the property cardType (base name: "cardType")', () => {
             // uncomment below and update the code to test the property cardType
-            // var instane = new Occ.PaymentDetailsWsDTO640();
+            // var instane = new Occ.PaymentDetailsOCC();
             // expect(instance).to.be();
         })
 
         it('should have the property cardNumber (base name: "cardNumber")', () => {
             // uncomment below and update the code to test the property cardNumber
-            // var instane = new Occ.PaymentDetailsWsDTO640();
+            // var instane = new Occ.PaymentDetailsOCC();
             // expect(instance).to.be();
         })
 
         it('should have the property startMonth (base name: "startMonth")', () => {
             // uncomment below and update the code to test the property startMonth
-            // var instane = new Occ.PaymentDetailsWsDTO640();
+            // var instane = new Occ.PaymentDetailsOCC();
             // expect(instance).to.be();
         })
 
         it('should have the property startYear (base name: "startYear")', () => {
             // uncomment below and update the code to test the property startYear
-            // var instane = new Occ.PaymentDetailsWsDTO640();
+            // var instane = new Occ.PaymentDetailsOCC();
             // expect(instance).to.be();
         })
 
         it('should have the property expiryMonth (base name: "expiryMonth")', () => {
             // uncomment below and update the code to test the property expiryMonth
-            // var instane = new Occ.PaymentDetailsWsDTO640();
+            // var instane = new Occ.PaymentDetailsOCC();
             // expect(instance).to.be();
         })
 
         it('should have the property expiryYear (base name: "expiryYear")', () => {
             // uncomment below and update the code to test the property expiryYear
-            // var instane = new Occ.PaymentDetailsWsDTO640();
+            // var instane = new Occ.PaymentDetailsOCC();
             // expect(instance).to.be();
         })
 
         it('should have the property issueNumber (base name: "issueNumber")', () => {
             // uncomment below and update the code to test the property issueNumber
-            // var instane = new Occ.PaymentDetailsWsDTO640();
+            // var instane = new Occ.PaymentDetailsOCC();
             // expect(instance).to.be();
         })
 
         it('should have the property subscriptionId (base name: "subscriptionId")', () => {
             // uncomment below and update the code to test the property subscriptionId
-            // var instane = new Occ.PaymentDetailsWsDTO640();
+            // var instane = new Occ.PaymentDetailsOCC();
             // expect(instance).to.be();
         })
 
         it('should have the property saved (base name: "saved")', () => {
             // uncomment below and update the code to test the property saved
-            // var instane = new Occ.PaymentDetailsWsDTO640();
+            // var instane = new Occ.PaymentDetailsOCC();
             // expect(instance).to.be();
         })
 
         it('should have the property billingAddress (base name: "billingAddress")', () => {
             // uncomment below and update the code to test the property billingAddress
-            // var instane = new Occ.PaymentDetailsWsDTO640();
+            // var instane = new Occ.PaymentDetailsOCC();
             // expect(instance).to.be();
         })
 

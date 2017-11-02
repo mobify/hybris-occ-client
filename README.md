@@ -228,7 +228,7 @@ Class | Method | HTTP request | Description
  - [Occ.OrderWsDTO](docs/OrderWsDTO.md)
  - [Occ.PaginationWsDTO](docs/PaginationWsDTO.md)
  - [Occ.PaymentDetailsListWsDTO](docs/PaymentDetailsListWsDTO.md)
- - [Occ.PaymentDetailsWsDTO640](docs/PaymentDetailsWsDTO640.md)
+ - [Occ.PaymentDetailsOCC](docs/PaymentDetailsOCC.md)
  - [Occ.PaymentDetailsWsDTO](docs/PaymentDetailsWsDTO.md)
  - [Occ.PickupOrderEntryGroupWsDTO](docs/PickupOrderEntryGroupWsDTO.md)
  - [Occ.PointOfServiceStockWsDTO](docs/PointOfServiceStockWsDTO.md)
