@@ -1,4 +1,4 @@
-## To be released
+## v0.1.0 (November 2, 2017)
 - Added tests for most of the endpoints [#1](https://github.com/mobify/hybris-api-js-client/pull/1)
     - Renamed methods so they are more intuitive
     - Upgraded Mocha version to 4.0.1
