@@ -11,7 +11,8 @@
     "lint:js": "eslint '**/*.js'",
     "lint:fix": "npm run lint:js -- --fix",
     "docs": "jsdoc -c .jsdocrc",
-    "build": "BABEL_ENV=production rollup -c"
+    "build": "BABEL_ENV=production rollup -c",
+    "prepack": "npm run build"
   },
   "browser": {
     "fs": false
