@@ -18,14 +18,14 @@
 import ApiClient from '../ApiClient'
 
 /**
-* The ReviewWsDTO208 model module.
-* @module models/ReviewWsDTO208
+* The ReviewOCC model module.
+* @module models/ReviewOCC
 * @version v2
 */
-export default class ReviewWsDTO208 {
+export default class ReviewOCC {
     /**
-    * Constructs a new <code>ReviewWsDTO208</code>.
-    * @alias module:models/ReviewWsDTO208
+    * Constructs a new <code>ReviewOCC</code>.
+    * @alias module:models/ReviewOCC
     * @class
     */
 
@@ -58,19 +58,19 @@ export default class ReviewWsDTO208 {
     }
 
     /**
-    * Constructs a <code>ReviewWsDTO208</code> from a plain JavaScript object,
+    * Constructs a <code>ReviewOCC</code> from a plain JavaScript object,
     * optionally creating a new instance. Copies all relevant properties from
     * <code>data</code> to <code>obj</code> if supplied or a new instance if
     * not.
     * @param {Object} data The plain JavaScript object bearing properties of
     * interest.
-    * @param {module:models/ReviewWsDTO208} obj Optional instance to populate.
-    * @return {module:models/ReviewWsDTO208} The populated
-    * <code>ReviewWsDTO208</code> instance.
+    * @param {module:models/ReviewOCC} obj Optional instance to populate.
+    * @return {module:models/ReviewOCC} The populated
+    * <code>ReviewOCC</code> instance.
     */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new ReviewWsDTO208()
+            obj = obj || new ReviewOCC()
 
             if (data.hasOwnProperty('headline')) {
                 obj.headline = ApiClient.convertToType(data.headline, 'String')
@@ -90,7 +90,5 @@ export default class ReviewWsDTO208 {
         }
         return obj
     }
-
-
 
 }

@@ -95,7 +95,7 @@ import PromotionWsDTO from './models/PromotionWsDTO'
 import Region from './models/Region'
 import RegionOCC from './models/RegionOCC'
 import ReviewListWsDTO from './models/ReviewListWsDTO'
-import ReviewWsDTO208 from './models/ReviewWsDTO208'
+import ReviewOCC from './models/ReviewOCC'
 import ReviewWsDTO from './models/ReviewWsDTO'
 import SaveCartResultWsDTO from './models/SaveCartResultWsDTO'
 import SearchQueryWsDTO from './models/SearchQueryWsDTO'
@@ -655,10 +655,10 @@ export {
     ReviewListWsDTO,
 
     /**
-     * The ReviewWsDTO208 model constructor.
-     * @property {module:models/ReviewWsDTO208}
+     * The ReviewOCC model constructor.
+     * @property {module:models/ReviewOCC}
      */
-    ReviewWsDTO208,
+    ReviewOCC,
 
     /**
      * The ReviewWsDTO model constructor.

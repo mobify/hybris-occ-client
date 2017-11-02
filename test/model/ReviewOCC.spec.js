@@ -32,7 +32,7 @@
     let instance
 
     beforeEach(() => {
-        instance = new Occ.ReviewWsDTO208()
+        instance = new Occ.ReviewOCC()
     })
 
     const getProperty = function(object, getter, property) {
@@ -45,40 +45,40 @@
         if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
     }
 
-    describe('ReviewWsDTO208', () => {
-        it('should create an instance of ReviewWsDTO208', () => {
-            // uncomment below and update the code to test ReviewWsDTO208
-            // var instane = new Occ.ReviewWsDTO208();
-            // expect(instance).to.be.a(Occ.ReviewWsDTO208);
+    describe('ReviewOCC', () => {
+        it('should create an instance of ReviewOCC', () => {
+            // uncomment below and update the code to test ReviewOCC
+            // var instane = new Occ.ReviewOCC();
+            // expect(instance).to.be.a(Occ.ReviewOCC);
         })
 
         it('should have the property headline (base name: "headline")', () => {
             // uncomment below and update the code to test the property headline
-            // var instane = new Occ.ReviewWsDTO208();
+            // var instane = new Occ.ReviewOCC();
             // expect(instance).to.be();
         })
 
         it('should have the property comment (base name: "comment")', () => {
             // uncomment below and update the code to test the property comment
-            // var instane = new Occ.ReviewWsDTO208();
+            // var instane = new Occ.ReviewOCC();
             // expect(instance).to.be();
         })
 
         it('should have the property rating (base name: "rating")', () => {
             // uncomment below and update the code to test the property rating
-            // var instane = new Occ.ReviewWsDTO208();
+            // var instane = new Occ.ReviewOCC();
             // expect(instance).to.be();
         })
 
         it('should have the property _date (base name: "date")', () => {
             // uncomment below and update the code to test the property _date
-            // var instane = new Occ.ReviewWsDTO208();
+            // var instane = new Occ.ReviewOCC();
             // expect(instance).to.be();
         })
 
         it('should have the property alias (base name: "alias")', () => {
             // uncomment below and update the code to test the property alias
-            // var instane = new Occ.ReviewWsDTO208();
+            // var instane = new Occ.ReviewOCC();
             // expect(instance).to.be();
         })
 

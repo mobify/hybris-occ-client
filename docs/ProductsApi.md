@@ -226,7 +226,7 @@ Name | Type | Description  | Notes
 
 <a name="postProductReview"></a>
 # **postProductReview**
-> ReviewWsDTO208 postProductReview(productCode, body, opts)
+> ReviewOCC postProductReview(productCode, body, opts)
 
 getProductReviews
 
@@ -245,7 +245,7 @@ let apiInstance = new Occ.ProductsApi();
 
 let productCode = "productCode_example"; // String | Product identifier
 
-let body = new Occ.ReviewWsDTO208(); // ReviewWsDTO208 | 
+let body = new Occ.ReviewOCC(); // ReviewOCC | 
 
 let opts = { 
   'fields': "fields_example" // String | Response configuration (list of fields, which should be returned in response)
@@ -263,12 +263,12 @@ apiInstance.postProductReview(productCode, body, opts).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **productCode** | **String**| Product identifier | 
- **body** | [**ReviewWsDTO208**](ReviewWsDTO208.md)|  | 
+ **body** | [**ReviewOCC**](ReviewOCC.md)|  | 
  **fields** | **String**| Response configuration (list of fields, which should be returned in response) | [optional] 
 
 ### Return type
 
-[**ReviewWsDTO208**](ReviewWsDTO208.md)
+[**ReviewOCC**](ReviewOCC.md)
 
 ### Authorization
 

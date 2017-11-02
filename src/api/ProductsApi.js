@@ -21,7 +21,7 @@ import ProductReferenceListWsDTO from '../models/ProductReferenceListWsDTO'
 import ProductSearchPageWsDTO from '../models/ProductSearchPageWsDTO'
 import ProductOCC1 from '../models/ProductOCC1'
 import ReviewListWsDTO from '../models/ReviewListWsDTO'
-import ReviewWsDTO208 from '../models/ReviewWsDTO208'
+import ReviewOCC from '../models/ReviewOCC'
 import StockWsDTO from '../models/StockWsDTO'
 import StoreFinderStockSearchPageWsDTO from '../models/StoreFinderStockSearchPageWsDTO'
 import SuggestionListWsDTO from '../models/SuggestionListWsDTO'
@@ -298,12 +298,12 @@ export default class ProductsApi {
     /**
      * postProductReview Creates a new customer review as an anonymous user.
      * @param {String} productCode Product identifier
-     * @param {module:models/ReviewWsDTO208} body
+     * @param {module:models/ReviewOCC} body
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which
      * should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an
-     * object containing data of type {@link module:models/ReviewWsDTO208} and
+     * object containing data of type {@link module:models/ReviewOCC} and
      * HTTP response
      */
     productsReviewsByProductCode1WithHttpInfo(productCode, body, opts) {
@@ -334,7 +334,7 @@ export default class ProductsApi {
         const authNames = ['auth']
         const contentTypes = ['application/json']
         const accepts = ['application/json']
-        const returnType = ReviewWsDTO208
+        const returnType = ReviewOCC
 
         return this.apiClient.callApi(
             '/products/{productCode}/reviews', 'POST',
@@ -346,12 +346,12 @@ export default class ProductsApi {
     /**
      * postProductReview Creates a new customer review as an anonymous user.
      * @param {String} productCode Product identifier
-     * @param {module:models/ReviewWsDTO208} body
+     * @param {module:models/ReviewOCC} body
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which
      * should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data
-     * of type {@link module:models/ReviewWsDTO208}
+     * of type {@link module:models/ReviewOCC}
      */
     postProductReview(productCode, body, opts) {
         return this.productsReviewsByProductCode1WithHttpInfo(productCode, body, opts)

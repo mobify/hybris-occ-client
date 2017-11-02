@@ -255,7 +255,7 @@ Class | Method | HTTP request | Description
  - [Occ.Region](docs/Region.md)
  - [Occ.RegionOCC](docs/RegionOCC.md)
  - [Occ.ReviewListWsDTO](docs/ReviewListWsDTO.md)
- - [Occ.ReviewWsDTO208](docs/ReviewWsDTO208.md)
+ - [Occ.ReviewOCC](docs/ReviewOCC.md)
  - [Occ.ReviewWsDTO](docs/ReviewWsDTO.md)
  - [Occ.SaveCartResultWsDTO](docs/SaveCartResultWsDTO.md)
  - [Occ.SearchQueryWsDTO](docs/SearchQueryWsDTO.md)
