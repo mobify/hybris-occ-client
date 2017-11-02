@@ -4,6 +4,9 @@
   "description": "Hybris OCC API JavaScript Client library",
   "license": "SEE LICENSE IN LICENSE",
   "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
   "scripts": {
     "copyright:lint": "copyright 'src/**/*.js' 'bin/**/*.js' 'test/**/*.js'",
     "copyright:fix": "copyright --fix --update 'src/*.js' 'src/**/*.js' 'test/*.js' 'test/**/*.js'",
