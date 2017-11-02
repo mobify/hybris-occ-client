@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **postalCode** | **String** |  | [optional] 
 **phone** | **String** |  | [optional] 
 **email** | **String** |  | [optional] 
-**country** | [**CountryWsDTO**](CountryWsDTO.md) |  | [optional] 
+**country** | [**CountryOCC**](CountryOCC.md) |  | [optional] 
 **shippingAddress** | **Boolean** |  | [optional] 
 **visibleInAddressBook** | **Boolean** |  | [optional] 
 **formattedAddress** | **String** |  | [optional] 

@@ -17,7 +17,7 @@
 
 import ApiClient from './ApiClient'
 import AddressListWsDTO from './models/AddressListWsDTO'
-import AddressWsDTO296 from './models/AddressWsDTO296'
+import AddressOCC from './models/AddressOCC'
 import AddressWsDTO from './models/AddressWsDTO'
 import BaseOptionWsDTO from './models/BaseOptionWsDTO'
 import BillingAddress from './models/BillingAddress'
@@ -36,7 +36,7 @@ import ConsignmentEntryWsDTO from './models/ConsignmentEntryWsDTO'
 import ConsignmentWsDTO from './models/ConsignmentWsDTO'
 import CountryListWsDTO from './models/CountryListWsDTO'
 import Country from './models/Country'
-import CountryWsDTO from './models/CountryWsDTO'
+import CountryOCC from './models/CountryOCC'
 import CurrencyListWsDTO from './models/CurrencyListWsDTO'
 import Currency from './models/Currency'
 import CurrencyWsDTO from './models/CurrencyWsDTO'
@@ -187,10 +187,10 @@ export {
     AddressListWsDTO,
 
     /**
-     * The AddressWsDTO296 model constructor.
-     * @property {module:models/AddressWsDTO296}
+     * The AddressOCC model constructor.
+     * @property {module:models/AddressOCC}
      */
-    AddressWsDTO296,
+    AddressOCC,
 
     /**
      * The AddressWsDTO model constructor.
@@ -301,10 +301,10 @@ export {
     Country,
 
     /**
-     * The CountryWsDTO model constructor.
-     * @property {module:models/CountryWsDTO}
+     * The CountryOCC model constructor.
+     * @property {module:models/CountryOCC}
      */
-    CountryWsDTO,
+    CountryOCC,
 
     /**
      * The CurrencyListWsDTO model constructor.

@@ -18,14 +18,14 @@
 import ApiClient from '../ApiClient'
 
 /**
-* The CountryWsDTO model module.
-* @module models/CountryWsDTO
+* The CountryOCC model module.
+* @module models/CountryOCC
 * @version v2
 */
-export default class CountryWsDTO {
+export default class CountryOCC {
     /**
-    * Constructs a new <code>CountryWsDTO</code>.
-    * @alias module:models/CountryWsDTO
+    * Constructs a new <code>CountryOCC</code>.
+    * @alias module:models/CountryOCC
     * @class
     */
 
@@ -43,19 +43,19 @@ export default class CountryWsDTO {
     }
 
     /**
-    * Constructs a <code>CountryWsDTO</code> from a plain JavaScript object,
+    * Constructs a <code>CountryOCC</code> from a plain JavaScript object,
     * optionally creating a new instance. Copies all relevant properties from
     * <code>data</code> to <code>obj</code> if supplied or a new instance if
     * not.
     * @param {Object} data The plain JavaScript object bearing properties of
     * interest.
-    * @param {module:models/CountryWsDTO} obj Optional instance to populate.
-    * @return {module:models/CountryWsDTO} The populated
-    * <code>CountryWsDTO</code> instance.
+    * @param {module:models/CountryOCC} obj Optional instance to populate.
+    * @return {module:models/CountryOCC} The populated
+    * <code>CountryOCC</code> instance.
     */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new CountryWsDTO()
+            obj = obj || new CountryOCC()
 
             if (data.hasOwnProperty('isocode')) {
                 obj.isocode = ApiClient.convertToType(data.isocode, 'String')

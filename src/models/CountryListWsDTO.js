@@ -16,7 +16,7 @@
  */
 
 import ApiClient from '../ApiClient'
-import CountryWsDTO from './CountryWsDTO'
+import CountryOCC from './CountryOCC'
 
 /**
 * The CountryListWsDTO model module.
@@ -33,7 +33,7 @@ export default class CountryListWsDTO {
     constructor() {
         /**
     *
-    * @member {Array.<module:models/CountryWsDTO>} countries
+    * @member {Array.<module:models/CountryOCC>} countries
     */
         this.countries = undefined
     }
@@ -54,7 +54,7 @@ export default class CountryListWsDTO {
             obj = obj || new CountryListWsDTO()
 
             if (data.hasOwnProperty('countries')) {
-                obj.countries = ApiClient.convertToType(data.countries, [CountryWsDTO])
+                obj.countries = ApiClient.convertToType(data.countries, [CountryOCC])
             }
         }
         return obj

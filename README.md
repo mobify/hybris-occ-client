@@ -177,7 +177,7 @@ Class | Method | HTTP request | Description
 ## Documentation for s
 
  - [Occ.AddressListWsDTO](docs/AddressListWsDTO.md)
- - [Occ.AddressWsDTO296](docs/AddressWsDTO296.md)
+ - [Occ.AddressOCC](docs/AddressOCC.md)
  - [Occ.AddressWsDTO](docs/AddressWsDTO.md)
  - [Occ.BaseOptionWsDTO](docs/BaseOptionWsDTO.md)
  - [Occ.BillingAddress](docs/BillingAddress.md)
@@ -196,7 +196,7 @@ Class | Method | HTTP request | Description
  - [Occ.ConsignmentWsDTO](docs/ConsignmentWsDTO.md)
  - [Occ.CountryListWsDTO](docs/CountryListWsDTO.md)
  - [Occ.Country](docs/Country.md)
- - [Occ.CountryWsDTO](docs/CountryWsDTO.md)
+ - [Occ.CountryOCC](docs/CountryOCC.md)
  - [Occ.CurrencyListWsDTO](docs/CurrencyListWsDTO.md)
  - [Occ.Currency](docs/Currency.md)
  - [Occ.CurrencyWsDTO](docs/CurrencyWsDTO.md)

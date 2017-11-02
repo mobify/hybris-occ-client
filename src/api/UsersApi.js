@@ -17,7 +17,7 @@
 
 import ApiClient from '../ApiClient'
 import AddressListWsDTO from '../models/AddressListWsDTO'
-import AddressWsDTO296 from '../models/AddressWsDTO296'
+import AddressOCC from '../models/AddressOCC'
 import AddressWsDTO from '../models/AddressWsDTO'
 import CartListWsDTO from '../models/CartListWsDTO'
 import CartWsDTO from '../models/CartWsDTO'
@@ -193,12 +193,12 @@ export default class UsersApi {
      * &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated
      * user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous
      * user&lt;/li&gt; &lt;/ul&gt;
-     * @param {module:models/AddressWsDTO296} body
+     * @param {module:models/AddressOCC} body
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which
      * should be returned in the response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an
-     * object containing data of type {@link module:models/AddressWsDTO296} and
+     * object containing data of type {@link module:models/AddressOCC} and
      * HTTP response
      */
     usersAddressesByUserId1WithHttpInfo(userId, body, opts) {
@@ -229,7 +229,7 @@ export default class UsersApi {
         const authNames = ['auth']
         const contentTypes = ['application/json']
         const accepts = ['application/json']
-        const returnType = AddressWsDTO296
+        const returnType = AddressOCC
 
         return this.apiClient.callApi(
             '/users/{userId}/addresses', 'POST',
@@ -247,12 +247,12 @@ export default class UsersApi {
      * &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated
      * user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous
      * user&lt;/li&gt; &lt;/ul&gt;
-     * @param {module:models/AddressWsDTO296} body
+     * @param {module:models/AddressOCC} body
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which
      * should be returned in the response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data
-     * of type {@link module:models/AddressWsDTO296}
+     * of type {@link module:models/AddressOCC}
      */
     postUserAddress(userId, body, opts) {
         return this.usersAddressesByUserId1WithHttpInfo(userId, body, opts)
@@ -350,7 +350,7 @@ export default class UsersApi {
      * user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous
      * user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} addressId Address identifier
-     * @param {module:models/AddressWsDTO296} body
+     * @param {module:models/AddressOCC} body
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an
      * object containing HTTP response
      */
@@ -406,7 +406,7 @@ export default class UsersApi {
      * user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous
      * user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} addressId Address identifier
-     * @param {module:models/AddressWsDTO296} body
+     * @param {module:models/AddressOCC} body
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     putUserAddress(userId, addressId, body) {
@@ -426,7 +426,7 @@ export default class UsersApi {
      * user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous
      * user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} addressId Address identifier
-     * @param {module:models/AddressWsDTO296} body
+     * @param {module:models/AddressOCC} body
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an
      * object containing HTTP response
      */
@@ -481,7 +481,7 @@ export default class UsersApi {
      * user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous
      * user&lt;/li&gt; &lt;/ul&gt;
      * @param {String} addressId Address identifier
-     * @param {module:models/AddressWsDTO296} body
+     * @param {module:models/AddressOCC} body
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     patchUserAddress(userId, addressId, body) {
@@ -568,12 +568,12 @@ export default class UsersApi {
      * &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated
      * user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous
      * user&lt;/li&gt; &lt;/ul&gt;
-     * @param {module:models/AddressWsDTO296} body
+     * @param {module:models/AddressOCC} body
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which
      * should be returned in the response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an
-     * object containing data of type {@link module:models/AddressWsDTO296} and
+     * object containing data of type {@link module:models/AddressOCC} and
      * HTTP response
      */
     usersAddressesVerificationByUserIdWithHttpInfo(userId, body, opts) {
@@ -604,7 +604,7 @@ export default class UsersApi {
         const authNames = ['auth']
         const contentTypes = ['application/json']
         const accepts = ['application/json']
-        const returnType = AddressWsDTO296
+        const returnType = AddressOCC
 
         return this.apiClient.callApi(
             '/users/{userId}/addresses/verification', 'POST',
@@ -622,12 +622,12 @@ export default class UsersApi {
      * &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated
      * user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous
      * user&lt;/li&gt; &lt;/ul&gt;
-     * @param {module:models/AddressWsDTO296} body
+     * @param {module:models/AddressOCC} body
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which
      * should be returned in the response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data
-     * of type {@link module:models/AddressWsDTO296}
+     * of type {@link module:models/AddressOCC}
      */
     postUserAddressesVerification(userId, body, opts) {
         return this.usersAddressesVerificationByUserIdWithHttpInfo(userId, body, opts)
@@ -910,12 +910,12 @@ export default class UsersApi {
      * logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous
      * user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified
      * cart&lt;/li&gt; &lt;/ul&gt;
-     * @param {module:models/AddressWsDTO296} body
+     * @param {module:models/AddressOCC} body
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which
      * should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an
-     * object containing data of type {@link module:models/AddressWsDTO296} and
+     * object containing data of type {@link module:models/AddressOCC} and
      * HTTP response
      */
     usersCartsAddressesDeliveryByUserIdWithHttpInfo(userId, cartId, body, opts) {
@@ -952,7 +952,7 @@ export default class UsersApi {
         const authNames = ['auth']
         const contentTypes = ['application/json']
         const accepts = ['application/json']
-        const returnType = AddressWsDTO296
+        const returnType = AddressOCC
 
         return this.apiClient.callApi(
             '/users/{userId}/carts/{cartId}/addresses/delivery', 'POST',
@@ -975,12 +975,12 @@ export default class UsersApi {
      * logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous
      * user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified
      * cart&lt;/li&gt; &lt;/ul&gt;
-     * @param {module:models/AddressWsDTO296} body
+     * @param {module:models/AddressOCC} body
      * @param {Object} opts Optional parameters
      * @param {String} opts.fields Response configuration (list of fields, which
      * should be returned in response)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data
-     * of type {@link module:models/AddressWsDTO296}
+     * of type {@link module:models/AddressOCC}
      */
     postCartDeliveryAddress(userId, cartId, body, opts) {
         return this.usersCartsAddressesDeliveryByUserIdWithHttpInfo(userId, cartId, body, opts)

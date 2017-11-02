@@ -32,7 +32,7 @@
     let instance
 
     beforeEach(() => {
-        instance = new Occ.CountryWsDTO()
+        instance = new Occ.CountryOCC()
     })
 
     const getProperty = function(object, getter, property) {
@@ -45,22 +45,22 @@
         if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
     }
 
-    describe('CountryWsDTO', () => {
-        it('should create an instance of CountryWsDTO', () => {
-            // uncomment below and update the code to test CountryWsDTO
-            // var instane = new Occ.CountryWsDTO();
-            // expect(instance).to.be.a(Occ.CountryWsDTO);
+    describe('CountryOCC', () => {
+        it('should create an instance of CountryOCC', () => {
+            // uncomment below and update the code to test CountryOCC
+            // var instane = new Occ.CountryOCC();
+            // expect(instance).to.be.a(Occ.CountryOCC);
         })
 
         it('should have the property isocode (base name: "isocode")', () => {
             // uncomment below and update the code to test the property isocode
-            // var instane = new Occ.CountryWsDTO();
+            // var instane = new Occ.CountryOCC();
             // expect(instance).to.be();
         })
 
         it('should have the property name (base name: "name")', () => {
             // uncomment below and update the code to test the property name
-            // var instane = new Occ.CountryWsDTO();
+            // var instane = new Occ.CountryOCC();
             // expect(instance).to.be();
         })
 

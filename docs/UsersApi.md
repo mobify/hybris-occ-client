@@ -163,7 +163,7 @@ Name | Type | Description  | Notes
 
 <a name="postUserAddress"></a>
 # **postUserAddress**
-> AddressWsDTO296 postUserAddress(userId, body, opts)
+> AddressOCC postUserAddress(userId, body, opts)
 
 getUserAddresses
 
@@ -182,7 +182,7 @@ let apiInstance = new Occ.UsersApi();
 
 let userId = "userId_example"; // String | User identifier or one of the literals below : <ul> <li>'current' for currently authenticated user</li> <li>'anonymous' for anonymous user</li> </ul>
 
-let body = new Occ.AddressWsDTO296(); // AddressWsDTO296 | 
+let body = new Occ.AddressOCC(); // AddressOCC | 
 
 let opts = { 
   'fields': "fields_example" // String | Response configuration (list of fields, which should be returned in the response)
@@ -200,12 +200,12 @@ apiInstance.postUserAddress(userId, body, opts).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **userId** | **String**| User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt; | 
- **body** | [**AddressWsDTO296**](AddressWsDTO296.md)|  | 
+ **body** | [**AddressOCC**](AddressOCC.md)|  | 
  **fields** | **String**| Response configuration (list of fields, which should be returned in the response) | [optional] 
 
 ### Return type
 
-[**AddressWsDTO296**](AddressWsDTO296.md)
+[**AddressOCC**](AddressOCC.md)
 
 ### Authorization
 
@@ -294,7 +294,7 @@ let userId = "userId_example"; // String | User identifier or one of the literal
 
 let addressId = "addressId_example"; // String | Address identifier
 
-let body = new Occ.AddressWsDTO296(); // AddressWsDTO296 | 
+let body = new Occ.AddressOCC(); // AddressOCC | 
 
 apiInstance.putUserAddress(userId, addressId, body).then(() => {
   console.log('API called successfully.');
@@ -310,7 +310,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **userId** | **String**| User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt; | 
  **addressId** | **String**| Address identifier | 
- **body** | [**AddressWsDTO296**](AddressWsDTO296.md)|  | 
+ **body** | [**AddressOCC**](AddressOCC.md)|  | 
 
 ### Return type
 
@@ -348,7 +348,7 @@ let userId = "userId_example"; // String | User identifier or one of the literal
 
 let addressId = "addressId_example"; // String | Address identifier
 
-let body = new Occ.AddressWsDTO296(); // AddressWsDTO296 | 
+let body = new Occ.AddressOCC(); // AddressOCC | 
 
 apiInstance.patchUserAddress(userId, addressId, body).then(() => {
   console.log('API called successfully.');
@@ -364,7 +364,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **userId** | **String**| User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt; | 
  **addressId** | **String**| Address identifier | 
- **body** | [**AddressWsDTO296**](AddressWsDTO296.md)|  | 
+ **body** | [**AddressOCC**](AddressOCC.md)|  | 
 
 ### Return type
 
@@ -432,7 +432,7 @@ null (empty response body)
 
 <a name="postUserAddressesVerification"></a>
 # **postUserAddressesVerification**
-> AddressWsDTO296 postUserAddressesVerification(userId, body, opts)
+> AddressOCC postUserAddressesVerification(userId, body, opts)
 
 postUserAddressesVerification
 
@@ -451,7 +451,7 @@ let apiInstance = new Occ.UsersApi();
 
 let userId = "userId_example"; // String | User identifier or one of the literals below : <ul> <li>'current' for currently authenticated user</li> <li>'anonymous' for anonymous user</li> </ul>
 
-let body = new Occ.AddressWsDTO296(); // AddressWsDTO296 | 
+let body = new Occ.AddressOCC(); // AddressOCC | 
 
 let opts = { 
   'fields': "fields_example" // String | Response configuration (list of fields, which should be returned in the response)
@@ -469,12 +469,12 @@ apiInstance.postUserAddressesVerification(userId, body, opts).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **userId** | **String**| User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt; | 
- **body** | [**AddressWsDTO296**](AddressWsDTO296.md)|  | 
+ **body** | [**AddressOCC**](AddressOCC.md)|  | 
  **fields** | **String**| Response configuration (list of fields, which should be returned in the response) | [optional] 
 
 ### Return type
 
-[**AddressWsDTO296**](AddressWsDTO296.md)
+[**AddressOCC**](AddressOCC.md)
 
 ### Authorization
 
@@ -689,7 +689,7 @@ null (empty response body)
 
 <a name="postCartDeliveryAddress"></a>
 # **postCartDeliveryAddress**
-> AddressWsDTO296 postCartDeliveryAddress(userId, cartId, body, opts)
+> AddressOCC postCartDeliveryAddress(userId, cartId, body, opts)
 
 postCartDeliveryAddress
 
@@ -710,7 +710,7 @@ let userId = "userId_example"; // String | User identifier or one of the literal
 
 let cartId = "cartId_example"; // String | Cart identifier <ul> <li>cart code for logged in user</li> <li>cart guid for anonymous user</li> <li>'current' for the last modified cart</li> </ul>
 
-let body = new Occ.AddressWsDTO296(); // AddressWsDTO296 | 
+let body = new Occ.AddressOCC(); // AddressOCC | 
 
 let opts = { 
   'fields': "fields_example" // String | Response configuration (list of fields, which should be returned in response)
@@ -729,12 +729,12 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **userId** | **String**| User identifier or one of the literals below : &lt;ul&gt; &lt;li&gt;&#39;current&#39; for currently authenticated user&lt;/li&gt; &lt;li&gt;&#39;anonymous&#39; for anonymous user&lt;/li&gt; &lt;/ul&gt; | 
  **cartId** | **String**| Cart identifier &lt;ul&gt; &lt;li&gt;cart code for logged in user&lt;/li&gt; &lt;li&gt;cart guid for anonymous user&lt;/li&gt; &lt;li&gt;&#39;current&#39; for the last modified cart&lt;/li&gt; &lt;/ul&gt; | 
- **body** | [**AddressWsDTO296**](AddressWsDTO296.md)|  | 
+ **body** | [**AddressOCC**](AddressOCC.md)|  | 
  **fields** | **String**| Response configuration (list of fields, which should be returned in response) | [optional] 
 
 ### Return type
 
-[**AddressWsDTO296**](AddressWsDTO296.md)
+[**AddressOCC**](AddressOCC.md)
 
 ### Authorization
 

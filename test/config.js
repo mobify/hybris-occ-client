@@ -207,7 +207,7 @@ const testWrapper = (occ) => {
         password: 'Passw0rd!',
     })
 
-    occ.address = occ.AddressWsDTO296.constructFromObject({
+    occ.address = occ.AddressOCC.constructFromObject({
         firstName: 'Mobify',
         lastName: 'automation',
         titleCode: occ.titles[0].code,

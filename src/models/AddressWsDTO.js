@@ -16,7 +16,7 @@
  */
 
 import ApiClient from '../ApiClient'
-import CountryWsDTO from './CountryWsDTO'
+import CountryOCC from './CountryOCC'
 import RegionWsDTO from './RegionWsDTO'
 
 /**
@@ -97,7 +97,7 @@ export default class AddressWsDTO {
     */
         this.email = undefined
         /**
-    * @member {module:models/CountryWsDTO} country
+    * @member {module:models/CountryOCC} country
     */
         this.country = undefined
         /**
@@ -172,7 +172,7 @@ export default class AddressWsDTO {
                 obj.email = ApiClient.convertToType(data.email, 'String')
             }
             if (data.hasOwnProperty('country')) {
-                obj.country = CountryWsDTO.constructFromObject(data.country)
+                obj.country = CountryOCC.constructFromObject(data.country)
             }
             if (data.hasOwnProperty('shippingAddress')) {
                 obj.shippingAddress = ApiClient.convertToType(data.shippingAddress, 'Boolean')

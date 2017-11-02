@@ -20,14 +20,14 @@ import Country from './Country'
 import Region from './Region'
 
 /**
-* The AddressWsDTO296 model module.
-* @module models/AddressWsDTO296
+* The AddressOCC model module.
+* @module models/AddressOCC
 * @version v2
 */
-export default class AddressWsDTO296 {
+export default class AddressOCC {
     /**
-    * Constructs a new <code>AddressWsDTO296</code>.
-    * @alias module:models/AddressWsDTO296
+    * Constructs a new <code>AddressOCC</code>.
+    * @alias module:models/AddressOCC
     * @class
     */
 
@@ -78,19 +78,19 @@ export default class AddressWsDTO296 {
     }
 
     /**
-    * Constructs a <code>AddressWsDTO296</code> from a plain JavaScript object,
+    * Constructs a <code>AddressOCC</code> from a plain JavaScript object,
     * optionally creating a new instance. Copies all relevant properties from
     * <code>data</code> to <code>obj</code> if supplied or a new instance if
     * not.
     * @param {Object} data The plain JavaScript object bearing properties of
     * interest.
-    * @param {module:models/AddressWsDTO296} obj Optional instance to populate.
-    * @return {module:models/AddressWsDTO296} The populated
-    * <code>AddressWsDTO296</code> instance.
+    * @param {module:models/AddressOCC} obj Optional instance to populate.
+    * @return {module:models/AddressOCC} The populated
+    * <code>AddressOCC</code> instance.
     */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new AddressWsDTO296()
+            obj = obj || new AddressOCC()
 
             if (data.hasOwnProperty('titleCode')) {
                 obj.titleCode = ApiClient.convertToType(data.titleCode, 'String')

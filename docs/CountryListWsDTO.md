@@ -3,6 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**countries** | [**[CountryWsDTO]**](CountryWsDTO.md) |  | [optional] 
+**countries** | [**[CountryOCC]**](CountryOCC.md) |  | [optional] 
 
 

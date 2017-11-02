@@ -1,4 +1,4 @@
-# Occ.CountryWsDTO
+# Occ.CountryOCC
 
 ## Properties
 Name | Type | Description | Notes

@@ -32,7 +32,7 @@
     let instance
 
     beforeEach(() => {
-        instance = new Occ.AddressWsDTO296()
+        instance = new Occ.AddressOCC()
     })
 
     const getProperty = function(object, getter, property) {
@@ -45,64 +45,64 @@
         if (typeof object[setter] === 'function') { object[setter](value) } else { object[property] = value }
     }
 
-    describe('AddressWsDTO296', () => {
-        it('should create an instance of AddressWsDTO296', () => {
-            // uncomment below and update the code to test AddressWsDTO296
-            // var instane = new Occ.AddressWsDTO296();
-            // expect(instance).to.be.a(Occ.AddressWsDTO296);
+    describe('AddressOCC', () => {
+        it('should create an instance of AddressOCC', () => {
+            // uncomment below and update the code to test AddressOCC
+            // var instane = new Occ.AddressOCC();
+            // expect(instance).to.be.a(Occ.AddressOCC);
         })
 
         it('should have the property titleCode (base name: "titleCode")', () => {
             // uncomment below and update the code to test the property titleCode
-            // var instane = new Occ.AddressWsDTO296();
+            // var instane = new Occ.AddressOCC();
             // expect(instance).to.be();
         })
 
         it('should have the property firstName (base name: "firstName")', () => {
             // uncomment below and update the code to test the property firstName
-            // var instane = new Occ.AddressWsDTO296();
+            // var instane = new Occ.AddressOCC();
             // expect(instance).to.be();
         })
 
         it('should have the property lastName (base name: "lastName")', () => {
             // uncomment below and update the code to test the property lastName
-            // var instane = new Occ.AddressWsDTO296();
+            // var instane = new Occ.AddressOCC();
             // expect(instance).to.be();
         })
 
         it('should have the property line1 (base name: "line1")', () => {
             // uncomment below and update the code to test the property line1
-            // var instane = new Occ.AddressWsDTO296();
+            // var instane = new Occ.AddressOCC();
             // expect(instance).to.be();
         })
 
         it('should have the property line2 (base name: "line2")', () => {
             // uncomment below and update the code to test the property line2
-            // var instane = new Occ.AddressWsDTO296();
+            // var instane = new Occ.AddressOCC();
             // expect(instance).to.be();
         })
 
         it('should have the property town (base name: "town")', () => {
             // uncomment below and update the code to test the property town
-            // var instane = new Occ.AddressWsDTO296();
+            // var instane = new Occ.AddressOCC();
             // expect(instance).to.be();
         })
 
         it('should have the property region (base name: "region")', () => {
             // uncomment below and update the code to test the property region
-            // var instane = new Occ.AddressWsDTO296();
+            // var instane = new Occ.AddressOCC();
             // expect(instance).to.be();
         })
 
         it('should have the property postalCode (base name: "postalCode")', () => {
             // uncomment below and update the code to test the property postalCode
-            // var instane = new Occ.AddressWsDTO296();
+            // var instane = new Occ.AddressOCC();
             // expect(instance).to.be();
         })
 
         it('should have the property country (base name: "country")', () => {
             // uncomment below and update the code to test the property country
-            // var instane = new Occ.AddressWsDTO296();
+            // var instane = new Occ.AddressOCC();
             // expect(instance).to.be();
         })
 
