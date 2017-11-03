@@ -7,11 +7,17 @@ import * as OCC from '../src/index'
 const testWrapper = (occ) => {
     try {
         const config = require('./env.json')
-        occ.ApiClient.instance = new occ.ApiClient(`${config.baseUrl}/${config.baseSite}`, config.authorizationUrl)
+        occ.ApiClient.instance = new occ.ApiClient({basePath: config.basePath})
+        occ.authentication = new occ.OAuth(config.OAuth)
     } catch (err) {
         if (process.env.CIRCLE) {
-            const basePath = `${process.env.baseUrl}/${process.env.baseSite}`
-            occ.ApiClient.instance = new occ.ApiClient(basePath, process.env.authorizationUrl)
+            occ.ApiClient.instance = new occ.ApiClient({basePath: process.env.basePath})
+            occ.authentication = {
+                authorizationUrl: process.env.authorizationUrl,
+                client_id: process.env.clientId,
+                client_secret: process.env.clientSecret,
+                grant_type: process.env.clientSecret
+            }
         } else {
             throw 'Cannot find env.json, is the file missing in the test directory?'
         }

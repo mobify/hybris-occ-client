@@ -20,14 +20,14 @@ import Occ from '../config'
 
 let instance
 
-const {user, address, titles, sampleProduct} = Occ
+const {user, address, titles, sampleProduct, authentication} = Occ
 const entryNumber = 0
 let addressId
 let cartId
 let orderEntry
 
 before((done) => {
-    Occ.ApiClient.instance.requestAccessToken()
+    Occ.ApiClient.instance.requestAccessToken(authentication)
         .then(done)
 })
 

@@ -583,6 +583,9 @@ export default class ApiClient {
             })
     }
 
+    /**
+    * Remove stored access token
+    */
     clearAccessToken() {
         this.authentications.auth.accessToken = null
     }

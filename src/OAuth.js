@@ -19,7 +19,7 @@ const defaultConfig = {
     authorizationUrl: 'https://api-example.hybris.com/authorizationserver/oauth/token',
     client_id: 'mobile_android',
     client_secret: 'secret',
-    grant_type: 'password',
+    grant_type: 'client_credentials',
 }
 
 /**

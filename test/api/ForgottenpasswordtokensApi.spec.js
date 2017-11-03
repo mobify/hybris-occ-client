@@ -18,10 +18,10 @@
 import Occ from '../config'
 
 let instance
-const {user} = Occ
+const {user, authentication} = Occ
 
 before((done) => {
-    Occ.ApiClient.instance.requestAccessToken()
+    Occ.ApiClient.instance.requestAccessToken(authentication)
         .then(done)
 })
 

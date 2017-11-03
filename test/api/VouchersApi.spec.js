@@ -22,7 +22,7 @@ let instance
 
 beforeEach((done) => {
     instance = new Occ.VouchersApi()
-    Occ.ApiClient.instance.requestAccessToken()
+    Occ.ApiClient.instance.requestAccessToken(Occ.authentication)
         .then(done)
 })
 
