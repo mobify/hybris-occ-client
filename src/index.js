@@ -141,6 +141,7 @@ import StoresApi from './api/StoresApi'
 import TitlesApi from './api/TitlesApi'
 import UsersApi from './api/UsersApi'
 import VouchersApi from './api/VouchersApi'
+import OAuth from './OAuth'
 
 /**
 * ERROR_UNKNOWN.<br>
@@ -928,5 +929,11 @@ export {
     * The VouchersApi service constructor.
     * @property {module:api/VouchersApi}
     */
-    VouchersApi
+    VouchersApi,
+
+    /**
+    * The OAuth object constructor.
+    * @property {module:api/OAuth}
+    */
+    OAuth
 }
