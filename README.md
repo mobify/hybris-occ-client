@@ -10,6 +10,7 @@
        /____/                                                                                        
 
 ```
+[![NPM](https://nodei.co/npm/hybris-occ-client.png)](https://nodei.co/npm/hybris-occ-client/)
 [![CircleCI](https://circleci.com/gh/mobify/hybris-occ-client/tree/develop.svg?style=svg)](https://circleci.com/gh/mobify/hybris-occ-client/tree/develop)
 
 > A JavaScript Client library crafted for Hybris Commerce OCC API.
