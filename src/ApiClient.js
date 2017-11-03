@@ -23,6 +23,14 @@ import querystring from 'querystring'
 * @version v2
 */
 
+const defaultConfig = {
+    basePath: 'http://api-example.hybris.com/rest/v2/DefaultParameterValue',
+    defaultHeaders: {},
+    timeout: 60000,
+    cache: true,
+    enableCookies: false
+}
+
 /**
 * Manages low level client-server communications, parameter marshalling, etc. There should not be any need for an
 * application to use this class directly - the *Api and model classes provide the public API for the service. The
@@ -31,15 +39,16 @@ import querystring from 'querystring'
 * @class
 */
 export default class ApiClient {
-    constructor(
-        basePath = 'http://api-example.hybris.com/rest/v2/DefaultParameterValue',
-        authorizationUrl = 'http://api-example.hybris.com/rest/authorizationserver/authorize',
-        oauth = {
-            client_id: 'client-side',
-            grant_type: 'client_credentials',
-            client_secret: 'secret'
-        }
-    ) {
+    constructor(config = defaultConfig) {
+        const {
+            basePath,
+            defaultHeaders,
+            timeout,
+            cache,
+            enableCookies,
+            accessToken
+        } = Object.assign({}, defaultConfig, config)
+
         /**
          * The base URL against which to resolve every API call's (relative) path.
          * @type {String}
@@ -48,29 +57,14 @@ export default class ApiClient {
         this.basePath = basePath.replace(/\/+$/, '')
 
         /**
-         * The authorization URL that grant user with oauth2 access token
-         * @type {String}
-         * @default http://api-example.hybris.com/rest/authorizationserver/authorize
-         */
-        this.authorizationUrl = authorizationUrl
-
-        /**
-         * The oauth2 information used to request access token
-         * @type {object}
-         * @default {
-         *      client_id:'client-side',
-         *      grant_type:'client_credentials',
-         *      client_secret:'secret'
-         *  }
-         */
-        this.oauth = oauth
-
-        /**
          * The authentication methods to be included for all API calls.
          * @type {Array.<String>}
          */
         this.authentications = {
-            auth: {type: 'oauth2'}
+            auth: {
+                type: 'oauth2',
+                accessToken
+            }
         }
 
         /**
@@ -78,14 +72,14 @@ export default class ApiClient {
          * @type {Array.<String>}
          * @default {}
          */
-        this.defaultHeaders = {}
+        this.defaultHeaders = defaultHeaders
 
         /**
          * The default HTTP timeout for all API calls.
          * @type {Number}
          * @default 60000
          */
-        this.timeout = 60000
+        this.timeout = timeout
 
         /**
          * If set to false an additional timestamp parameter is added to all API GET calls to
@@ -93,14 +87,14 @@ export default class ApiClient {
          * @type {Boolean}
          * @default true
          */
-        this.cache = true
+        this.cache = cache
 
         /**
          * If set to true, the client will save the cookies from each server
          * response, and return them in the next request.
          * @default false
          */
-        this.enableCookies = false
+        this.enableCookies = enableCookies
 
         /*
          * Used to save and return cookies in a node.js (non-browser) setting,
@@ -543,22 +537,6 @@ export default class ApiClient {
                 if (data.hasOwnProperty(k)) { obj[k] = ApiClient.convertToType(data[k], itemType) }
             }
         }
-    }
-
-    requestAccessToken() {
-        return superagent.post(this.authorizationUrl)
-            .set('Content-Type', 'application/x-www-form-urlencoded')
-            .send(this.oauth)
-            .then((res) => {
-                this.authentications.auth.accessToken = res.body.access_token
-            })
-            .catch((err) => {
-                throw new Error(err)
-            })
-    }
-
-    clearAccessToken() {
-        this.authentications.auth.accessToken = null
     }
 }
 

@@ -16,17 +16,18 @@
  */
 
 import Occ from '../config'
+import {requestAccessToken, clearAccessToken} from '../utils'
 
 let instance
-const {user} = Occ
+const {user, authentication} = Occ
 
 before((done) => {
-    Occ.ApiClient.instance.requestAccessToken()
+    requestAccessToken(Occ.ApiClient.instance, authentication)
         .then(done)
 })
 
 after(() => {
-    Occ.ApiClient.instance.clearAccessToken()
+    clearAccessToken(Occ.ApiClient.instance)
 })
 
 beforeEach(() => {

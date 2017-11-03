@@ -10,6 +10,7 @@
        /____/                                                                                        
 
 ```
+[![NPM](https://nodei.co/npm/hybris-occ-client.png)](https://nodei.co/npm/hybris-occ-client/)
 [![CircleCI](https://circleci.com/gh/mobify/hybris-occ-client/tree/develop.svg?style=svg)](https://circleci.com/gh/mobify/hybris-occ-client/tree/develop)
 
 > A JavaScript Client library crafted for Hybris Commerce OCC API.
@@ -22,35 +23,23 @@ npm install hybris-occ-client --save
 
 ## Usage
 
-### Single Instance
-Example: fetch supported titles from Hybris OCC API
+### Example: create your hybris client instance
 
 ```javascript
-import * as cilent from 'hybris-occ-client'
+import * as hybris from 'hybris-occ-client'
 
 const config = {
-    baseSite: "apparel-uk",
-    baseUrl: "https://<Your Hybris Instance>/rest/v2",
-    authorizationUrl: "https://<Your Hybris Instance>/authorizationserver/oauth/token"
-    oauth: {
-      client_id: 'client-side',
-      grant_type: 'client_credentials',
-      client_secret: 'secret'
-  }
+    basePath: "https://api-example.hybris.com/rest/v2/apparel-uk",
+    defaultHeaders: {},
+    timeout: 60000,
+    cache: true,
+    enableCookies: false
+    access_token: your_OAuth_access_token
 }
 
-// This client instance will be the default instance
-client.ApiClient.instance = new client.ApiClient(
-    `${config.baseUrl}/${config.baseSite}`,
-    config.authorizationUrl,
-    config.oauth
-  )
-
-const titleApi = new client.TitlesApi()
-
-titleApi.getTitles()
-  .then((res) => console.log(titles))
-
+// Override the default instance with your configuration
+hybris.ApiClient.instance = new hybris.ApiClient(config)
+const client = hybris.ApiClient.instance
 ```
 
 ## API documentation
@@ -64,9 +53,13 @@ Because Hybris OCC is not public available, you need to have a running instance 
 Example: 
 ```json
 {
-    "baseSite": "apparel-uk",
-    "baseUrl": "https://<Your Hybris Instance>/rest/v2",
-    "authorizationUrl": "https://<Your Hybris Instance>/authorizationserver/oauth/token"
+  "basePath": "https://<Your Hybris Instance>/rest/v2/apparel-uk",
+  "OAuth": {
+    "authorizationUrl": "https://<Your Hybris Instance>/authorizationserver/oauth/token",
+    "client_id": "mobile_android",
+    "client_secret": "secret",
+    "grant_type": "client_credentials"
+  }
 }
 ```
 
