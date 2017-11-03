@@ -29,7 +29,6 @@ import * as hybris from 'hybris-occ-client'
 
 const config = {
     basePath: "https://api-example.hybris.com/rest/v2/apparel-uk",
-    basePath: 'http://api-example.hybris.com/rest/v2/DefaultParameterValue',
     defaultHeaders: {},
     timeout: 60000,
     cache: true,
@@ -45,6 +44,10 @@ const client = hybris.ApiClient.instance
 
 ```javascript
 import * as hybris from 'hybris-occ-client'
+
+const config = {
+    basePath: "https://api-example.hybris.com/rest/v2/apparel-uk"
+}
 
 const authentications = new hybris.OAuth({
         "authorizationUrl": "https://api-example.hybris.com/authorizationserver/oauth/token",
