@@ -1,8 +1,7 @@
 ## To be released
 - Authentication update [#4](https://github.com/mobify/hybris-api-js-client/pull/4)
     - Allowed the client to accept access token, and several other options as parameters
-    - Added OAuth Model
-    - Updated utility function `requestAccessToken`
+    - Moved requestAccessToken and clearAccessToken to `/test/utils.js`
 
 ## v0.1.0 (November 2, 2017)
 - Added tests for most of the endpoints [#1](https://github.com/mobify/hybris-api-js-client/pull/1)

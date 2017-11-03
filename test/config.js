@@ -8,16 +8,16 @@ const testWrapper = (occ) => {
     try {
         const config = require('./env.json')
         occ.ApiClient.instance = new occ.ApiClient({basePath: config.basePath})
-        occ.authentication = new occ.OAuth(config.OAuth)
+        occ.authentication = config.OAuth
     } catch (err) {
         if (process.env.CIRCLE) {
             occ.ApiClient.instance = new occ.ApiClient({basePath: process.env.basePath})
-            occ.authentication = new occ.OAuth({
+            occ.authentication = {
                 authorizationUrl: process.env.authorizationUrl,
                 client_id: process.env.clientId,
                 client_secret: process.env.clientSecret,
                 grant_type: process.env.grantType
-            })
+            }
         } else {
             throw 'Cannot find env.json, is the file missing in the test directory?'
         }

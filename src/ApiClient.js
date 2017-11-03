@@ -14,7 +14,7 @@
  * Do not edit the class manually.
  *
  */
-/* eslint-disable camelcase */
+
 import superagent from 'superagent'
 import querystring from 'querystring'
 
@@ -47,7 +47,7 @@ export default class ApiClient {
             cache,
             enableCookies,
             accessToken
-        } = Object.assign(defaultConfig, config)
+        } = Object.assign({}, defaultConfig, config)
 
         /**
          * The base URL against which to resolve every API call's (relative) path.
@@ -537,57 +537,6 @@ export default class ApiClient {
                 if (data.hasOwnProperty(k)) { obj[k] = ApiClient.convertToType(data[k], itemType) }
             }
         }
-    }
-
-    /**
-    * Request the access token from authrization server
-    * @param oauth {Object} The OAuth object
-    */
-    requestAccessToken(oauth, payload) {
-        const {
-            authorizationUrl,
-            client_id,
-            client_secret,
-            grant_type
-        } = oauth
-
-        const body = {
-            client_id,
-            client_secret,
-            grant_type
-        }
-
-        switch (grant_type) {
-            case 'client_credentials':
-                break
-            case 'refresh_token':
-                body.refresh_token = payload
-                break
-            case 'password':
-                body.username = payload.username
-                body.password = payload.password
-                break
-            default:
-                throw new Error(`Unknown grant type: ${grant_type}`)
-        }
-
-        return superagent.post(authorizationUrl)
-            .set('Content-Type', 'application/x-www-form-urlencoded')
-            .send(body)
-            .then((res) => {
-                this.authentications.auth.accessToken = res.body.access_token
-                Promise.resolve(res)
-            })
-            .catch((err) => {
-                throw new Error(err)
-            })
-    }
-
-    /**
-    * Remove stored access token
-    */
-    clearAccessToken() {
-        this.authentications.auth.accessToken = null
     }
 }
 

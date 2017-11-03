@@ -33,35 +33,13 @@ const config = {
     timeout: 60000,
     cache: true,
     enableCookies: false
+    access_token: your_OAuth_access_token
 }
 
 // Override the default instance with your configuration
 hybris.ApiClient.instance = new hybris.ApiClient(config)
 const client = hybris.ApiClient.instance
 ```
-
-### Example: OAuth2 support
-
-```javascript
-import * as hybris from 'hybris-occ-client'
-
-const config = {
-    basePath: "https://api-example.hybris.com/rest/v2/apparel-uk"
-}
-
-const authentications = new hybris.OAuth({
-        "authorizationUrl": "https://api-example.hybris.com/authorizationserver/oauth/token",
-        "client_id": "mobile_android",
-        "client_secret": "secret",
-        "grant_type": "client_credentials"
-    })
-
-const client = hybris.ApiClient.instance
-
-// the access token will be stored in the client
-client.requestAccessToken(authentications)
-```
-
 
 ## API documentation
 
@@ -74,13 +52,13 @@ Because Hybris OCC is not public available, you need to have a running instance 
 Example: 
 ```json
 {
-    "basePath": "https://<Your Hybris Instance>/rest/v2/apparel-uk",
-    "OAuth": {
-        "authorizationUrl": "https://<Your Hybris Instance>/authorizationserver/oauth/token",
-        "client_id": "mobile_android",
-        "client_secret": "secret",
-        "grant_type": "client_credentials"
-    }
+  "basePath": "https://<Your Hybris Instance>/rest/v2/apparel-uk",
+  "OAuth": {
+    "authorizationUrl": "https://<Your Hybris Instance>/authorizationserver/oauth/token",
+    "client_id": "mobile_android",
+    "client_secret": "secret",
+    "grant_type": "client_credentials"
+  }
 }
 ```
 

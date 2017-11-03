@@ -17,6 +17,7 @@
 
 import expect from 'expect.js'
 import Occ from '../config'
+import {requestAccessToken, clearAccessToken} from '../utils'
 
 let instance
 
@@ -27,12 +28,12 @@ let cartId
 let orderEntry
 
 before((done) => {
-    Occ.ApiClient.instance.requestAccessToken(authentication)
+    requestAccessToken(Occ.ApiClient.instance, authentication)
         .then(done)
 })
 
 after(() => {
-    Occ.ApiClient.instance.clearAccessToken()
+    requestAccessToken(Occ.ApiClient.instance)
 })
 
 beforeEach(() => {
