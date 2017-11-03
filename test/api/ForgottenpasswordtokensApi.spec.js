@@ -27,7 +27,7 @@ before((done) => {
 })
 
 after(() => {
-    requestAccessToken(Occ.ApiClient.instance)
+    clearAccessToken(Occ.ApiClient.instance)
 })
 
 beforeEach(() => {
