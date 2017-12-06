@@ -42,7 +42,7 @@ hybris.ApiClient.instance = new hybris.ApiClient(config)
 const client = hybris.ApiClient.instance
 ```
 
-## 📖 documentation
+## 📖 Documentation
 
 You can find the complete documentation for endpoints and models at [here](https://mobify.github.io/hybris-occ-client/)
 
