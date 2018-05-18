@@ -15,13 +15,13 @@
 
 > A JavaScript Client library crafted for Hybris Commerce OCC API.
 
-## Installation
-This library is distrbuted on `npm`, In order to add it as a dependency, run the following command:
+## ⚒ Installation
+This library is distributed on `npm`, in order to add it as a dependency, run the following command:
 ```shell
 npm install hybris-occ-client --save
 ```
 
-## Usage
+## 💡 Usage
 
 ### Example: create your hybris client instance
 
@@ -42,11 +42,11 @@ hybris.ApiClient.instance = new hybris.ApiClient(config)
 const client = hybris.ApiClient.instance
 ```
 
-## API documentation
+## 📖 Documentation
 
 You can find the complete documentation for endpoints and models at [here](https://mobify.github.io/hybris-occ-client/)
 
-## Testing
+## ✅ Testing
 
 Because Hybris OCC is not public available, you need to have a running instance that you can test against. In the test folder, there is a file `example.env.json` that has the example configuration for your environment. Simply create a file `env.json`, and fill out the required fields.
 
@@ -63,13 +63,14 @@ Example:
 }
 ```
 
-## Owner
+## 👥 Owner
 
 This project is open sourced and actively maintained by [Mobify](https://github.com/mobify).
 We will make an effort to support the library, but we reserve the right to make incompatible changes when necessary.
 
 
-## Contributors
+## 🏅 Contributors
 
-- [@jeremywiebe](https://github.com/jeremywiebeh)
+- [@jeremywiebe](https://github.com/jeremywiebe)
+- [@bendvc](https://github.com/bendvc)
 - [@kevinxh](https://github.com/kevinxh)

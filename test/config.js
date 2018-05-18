@@ -29,7 +29,7 @@ const testWrapper = (occ) => {
     occ.currencies = occ.CurrencyOCC.constructFromObject({
         isocode: 'GBP',
         name: 'Pound',
-        active: false,
+        active: true,
         symbol: '£'
     })
     occ.deliveryCountries = [{
