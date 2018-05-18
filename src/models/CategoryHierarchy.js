@@ -67,7 +67,7 @@ export default class CategoryHierarchy {
     * @param {module:models/CategoryHierarchy} obj Optional instance to
     * populate.
     * @return {module:models/CategoryHierarchy} The populated
-    * <code>CatalogVersion</code> instance.
+    * <code>CategoryHierarchy</code> instance.
     */
     static constructFromObject(data, obj) {
         if (data) {
