@@ -1,3 +1,6 @@
+## To be released
+- Fix superagent `attachCookies` and `saveCookies` usage
+
 ## v0.1.1 (November 3, 2017)
 - Authentication update [#4](https://github.com/mobify/hybris-api-js-client/pull/4)
     - Allowed the client to accept access token, and several other options as parameters
