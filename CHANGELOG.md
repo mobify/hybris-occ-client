@@ -1,7 +1,7 @@
 ## To be released
 - Fix OrderEntryOCC model [#9] (https://github.com/mobify/hybris-occ-client/pull/9)
 
-## v.0.1.3 (June 21, 2018)
+## v0.1.3 (June 21, 2018)
 - Fix superagent `attachCookies` and `saveCookies` usage
 
 ## v0.1.2 (May 18, 2018)
