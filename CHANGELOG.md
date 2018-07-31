@@ -1,11 +1,13 @@
-## to be released
+## To be released
+- Fix OrderEntryOCC model [#9] (https://github.com/mobify/hybris-occ-client/pull/9)
 - Fix AddressOCC model [#10] (https://github.com/mobify/hybris-occ-client/pull/10)
+- Fix PaymentDetailOCC model [#11] (https://github.com/mobify/hybris-occ-client/pull/11)
 
 ## v0.1.3 (June 21, 2018)
 - Fix superagent `attachCookies` and `saveCookies` usage
 
-## v0.1.2 (May 18, 20178)
-- Fix CategoryHierarchy modal [#5](https://github.com/mobify/hybris-occ-client/pull/5)
+## v0.1.2 (May 18, 2018)
+- Fix CategoryHierarchy model [#5](https://github.com/mobify/hybris-occ-client/pull/5)
 
 ## v0.1.1 (November 3, 2017)
 - Authentication update [#4](https://github.com/mobify/hybris-api-js-client/pull/4)
