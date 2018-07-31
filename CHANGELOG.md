@@ -1,5 +1,5 @@
 ## to be released
-- Fix PaymentDetailOCC model
+- Fix PaymentDetailOCC model [#11] (https://github.com/mobify/hybris-occ-client/pull/11)
 
 ## v0.1.3 (June 21, 2018)
 - Fix superagent `attachCookies` and `saveCookies` usage
