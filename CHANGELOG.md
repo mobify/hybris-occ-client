@@ -1,3 +1,6 @@
+## to be released
+- Fix PaymentDetailOCC model
+
 ## v0.1.3 (June 21, 2018)
 - Fix superagent `attachCookies` and `saveCookies` usage
 
