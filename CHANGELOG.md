@@ -1,4 +1,4 @@
-## To be released
+## v0.1.4 (July 31, 2018)
 - Fix OrderEntryOCC model [#9] (https://github.com/mobify/hybris-occ-client/pull/9)
 - Fix AddressOCC model [#10] (https://github.com/mobify/hybris-occ-client/pull/10)
 - Fix PaymentDetailOCC model [#11] (https://github.com/mobify/hybris-occ-client/pull/11)
