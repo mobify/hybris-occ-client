@@ -1,5 +1,5 @@
 ## to be released
-- Fix AddressOCC model
+- Fix AddressOCC model [#10] (https://github.com/mobify/hybris-occ-client/pull/10)
 
 ## v0.1.3 (June 21, 2018)
 - Fix superagent `attachCookies` and `saveCookies` usage
