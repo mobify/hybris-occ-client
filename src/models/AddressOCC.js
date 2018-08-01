@@ -32,8 +32,11 @@ export default class AddressOCC {
     */
 
     constructor() {
+    /**
+    * @member {String} id
+    */
+        this.id = undefined
         /**
-    *
     * @member {String} titleCode
     */
         this.titleCode = undefined
@@ -92,6 +95,9 @@ export default class AddressOCC {
         if (data) {
             obj = obj || new AddressOCC()
 
+            if (data.hasOwnProperty('id')) {
+                obj.id = ApiClient.convertToType(data.id, 'String')
+            }
             if (data.hasOwnProperty('titleCode')) {
                 obj.titleCode = ApiClient.convertToType(data.titleCode, 'String')
             }

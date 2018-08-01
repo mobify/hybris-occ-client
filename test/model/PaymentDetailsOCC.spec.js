@@ -52,6 +52,12 @@
             // expect(instance).to.be.a(Occ.PaymentDetailsOCC);
         })
 
+        it('should have the property id (base name: "id")', () => {
+            // uncomment below and update the code to test the property id
+            // var instane = new Occ.PaymentDetailsOCC();
+            // expect(instance).to.be();
+        })
+
         it('should have the property accountHolderName (base name: "accountHolderName")', () => {
             // uncomment below and update the code to test the property accountHolderName
             // var instane = new Occ.PaymentDetailsOCC();

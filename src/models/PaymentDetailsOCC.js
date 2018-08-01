@@ -33,6 +33,11 @@ export default class PaymentDetailsOCC {
     constructor() {
         /**
     *
+    * @member {String} id
+    */
+        this.id = undefined
+        /**
+    *
     * @member {String} accountHolderName
     */
         this.accountHolderName = undefined
@@ -103,6 +108,9 @@ export default class PaymentDetailsOCC {
         if (data) {
             obj = obj || new PaymentDetailsOCC()
 
+            if (data.hasOwnProperty('id')) {
+                obj.id = ApiClient.convertToType(data.id, 'String')
+            }
             if (data.hasOwnProperty('accountHolderName')) {
                 obj.accountHolderName = ApiClient.convertToType(data.accountHolderName, 'String')
             }

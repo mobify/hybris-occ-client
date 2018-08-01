@@ -52,6 +52,13 @@
             // expect(instance).to.be.a(Occ.AddressOCC);
         })
 
+        it('should have the property id (base name: "id")', () => {
+            // uncomment below and update the code to test the property id
+            // var instane = new Occ.AddressOCC();
+            // expect(instance).to.be();
+        })
+
+
         it('should have the property titleCode (base name: "titleCode")', () => {
             // uncomment below and update the code to test the property titleCode
             // var instane = new Occ.AddressOCC();
