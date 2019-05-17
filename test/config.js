@@ -202,7 +202,7 @@ const testWrapper = (occ) => {
     }
     occ.promotion = {
         group: 'apparelUKPromoGrp',
-        code: 'mobify_promotion_test'
+        code: 'mobify_promotion_test2'
     }
 
     occ.user = occ.UserSignUp.constructFromObject({
