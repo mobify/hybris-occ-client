@@ -1,6 +1,6 @@
 {
   "name": "hybris-occ-client",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Hybris OCC API JavaScript Client library",
   "license": "SEE LICENSE IN LICENSE",
   "main": "lib/index.js",
@@ -21,12 +21,11 @@
     "fs": false
   },
   "dependencies": {
-    "babel": "^6.23.0",
-    "babel-cli": "^6.24.1",
     "querystring": "^0.2.0",
     "superagent": "3.5.2"
   },
   "devDependencies": {
+    "babel-cli": "^6.24.1",
     "babel-core": "6.18.0",
     "babel-plugin-external-helpers": "^6.22.0",
     "babel-plugin-transform-es2015-function-name": "^6.24.1",

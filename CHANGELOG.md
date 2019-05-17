@@ -1,3 +1,6 @@
+## v0.1.5 (May 17, 2019)
+- Fix `babel` usage [#12](https://github.com/mobify/hybris-occ-client/pull/12)
+
 ## v0.1.4 (July 31, 2018)
 - Fix OrderEntryOCC model [#9] (https://github.com/mobify/hybris-occ-client/pull/9)
 - Fix AddressOCC model [#10] (https://github.com/mobify/hybris-occ-client/pull/10)
