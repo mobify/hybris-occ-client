@@ -1,4 +1,4 @@
-## To be released
+## v0.1.5 (May 17, 2019)
 - Fix `babel` usage [#12](https://github.com/mobify/hybris-occ-client/pull/12)
 
 ## v0.1.4 (July 31, 2018)
