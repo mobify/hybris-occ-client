@@ -1,6 +1,6 @@
 {
   "name": "hybris-occ-client",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Hybris OCC API JavaScript Client library",
   "license": "SEE LICENSE IN LICENSE",
   "main": "lib/index.js",
